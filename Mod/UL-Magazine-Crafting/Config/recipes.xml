@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+    <append xpath="/recipes">
+        <recipe name="bookArtOfMiningPallets" count="1" time="20" area="ulmStationCarpenter_2">
+            <ingredient name="ulmResourceResearchTools" count="500"/>
+            <ingredient name="ulmResourceBook" count="20"/>
+            <ingredient name="resourcePaper" count="300"/>
+            <ingredient name="resourceGlue" count="20"/>
+        </recipe>
+    </append>
+</configs>
