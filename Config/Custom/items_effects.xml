@@ -1,0 +1,1111 @@
+<Subquake>
+
+<insertAfter xpath="/items//effect_group[@type='SalvageTool']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="AttacksPerMinute"	value="50"/>
+		<passive_effect operation="base_set" name="MaxRange"			value="2.4"/>
+		<passive_effect operation="base_set" name="BlockRange"			value="3.5"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="earth"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.7"			tags="ore,stone,wood"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.9"			tags="secureLoot,oreTitanium"/>
+		<passive_effect operation="base_set" name="HarvestCount"		value="1"			tags="salvageHarvest"/>
+		<passive_effect operation="base_add" name="HarvestCount"		value="1"			tags="ulmHarvestSalvage"/>
+	</effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@type='Hammer']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="AttacksPerMinute"	value="65"/>
+		<passive_effect operation="base_set" name="MaxRange"			value="2.2"/>
+		<passive_effect operation="base_set" name="BlockRange"			value="3.5"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.7"			tags="wood"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="earth,ore,stone,metal"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.9"			tags="secureLoot,oreTitanium"/>
+		<passive_effect operation="base_add" name="HarvestCount"		value="-.8"			tags="allHarvest,allToolsHarvest,oreHarvest,woodHarvest"/>
+		<passive_effect operation="base_add" name="HarvestCount"		value="1"			tags="ulmHarvestBlunt"/>
+	</effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@type='Club']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="AttacksPerMinute"	value="55"/>
+		<passive_effect operation="base_set" name="MaxRange"			value="2.4"/>
+		<passive_effect operation="base_set" name="BlockRange"			value="3.0"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.7"			tags="wood"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="earth"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="ore"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="stone"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="metal"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.9"			tags="secureLoot"/>
+		<passive_effect operation="base_add" name="HarvestCount"		value="-.8"			tags="allHarvest"/>
+		<passive_effect operation="base_add" name="HarvestCount"		value="-.8"			tags="allToolsHarvest"/>
+		<passive_effect operation="base_add" name="HarvestCount"		value="-.8"			tags="oreHarvest,woodHarvest"/>
+		<passive_effect operation="base_add" name="HarvestCount"		value="1"			tags="ulmHarvestBlunt"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='LongClub']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="AttacksPerMinute"	value="55"/>
+		<passive_effect operation="base_set" name="MaxRange"			value="2.8"/>
+		<passive_effect operation="base_set" name="BlockRange"			value="3.4"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.7"			tags="wood"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="earth"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="ore"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="stone"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="metal"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.9"			tags="secureLoot"/>
+		<passive_effect operation="base_add" name="HarvestCount"		value="-.8"			tags="allHarvest"/>
+		<passive_effect operation="base_add" name="HarvestCount"		value="-.8"			tags="allToolsHarvest"/>
+		<passive_effect operation="base_add" name="HarvestCount"		value="-.8"			tags="oreHarvest,woodHarvest"/>
+		<passive_effect operation="base_add" name="HarvestCount"		value="1"			tags="ulmHarvestBlunt"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='Sledge']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="AttacksPerMinute"		value="35"/>
+		<passive_effect operation="base_set" name="MaxRange"				value="2.6"/>
+		<passive_effect operation="base_set" name="BlockRange"				value="3.5"/>
+		<passive_effect operation="base_add" name="DismemberChance"			value=".1"/>
+		<passive_effect operation="perc_add" name="EntityDamage"			value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="BlockDamage"				value="1"			tags="secondary"/>
+		<passive_effect operation="base_set" name="GrazeDamageMultiplier"	value=".1"			tags="secondary"/>
+		<passive_effect operation="base_add" name="DismemberChance"			value=".15"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="DamageModifier"			value="-.8"			tags="earth"/>
+		<passive_effect operation="perc_add" name="DamageModifier"			value="-.9"			tags="secureLoot"/>
+		<passive_effect operation="base_add" name="HarvestCount"			value="-.8"			tags="allHarvest"/>
+		<passive_effect operation="base_add" name="HarvestCount"			value="-.8"			tags="allToolsHarvest"/>
+		<passive_effect operation="base_add" name="HarvestCount"			value="-.8"			tags="oreHarvest,woodHarvest"/>
+	</effect_group>
+	<effect_group tiered="false" name="crippled morale"><!-- SLEDGE_SAGA_VOLUME_03_CRIPPLED_MORALE -->
+		<!-- initialize metadata for "sledge2ndHit" on sledges, don't change value if already exists -->
+		<triggered_effect trigger="onSelfEquipStart" action="SetItemMetaFloat" change="0" relative="true" key="sledge2ndHit"/>
+
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="SetItemMetaFloat" change="1" relative="false" key="sledge2ndHit">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+		</triggered_effect>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='Polearm']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="MaxRange"			value="3.2"/>
+		<passive_effect operation="base_set" name="BlockRange"			value="3.5"/>
+		<passive_effect operation="base_set" name="AttacksPerMinute"	value="55"			tags="primary"/>
+		<passive_effect operation="base_set" name="AttacksPerMinute"	value="35"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.7"			tags="wood,ore,stone,metal"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="earth"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.9"			tags="secureLoot,oreTitanium"/>
+		<passive_effect operation="base_add" name="HarvestCount"		value="-.75"		tags="allHarvest"/>
+		<passive_effect operation="base_add" name="HarvestCount"		value="-.75"		tags="allToolsHarvest"/>
+		<passive_effect operation="base_add" name="HarvestCount"		value="-.75"		tags="oreHarvest,woodHarvest"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='Knife']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="AttacksPerMinute"	value="120"/>
+		<passive_effect operation="base_add" name="AttacksPerMinute"	value="-55"			tags="secondary"/>
+		<passive_effect operation="base_set" name="MaxRange"			value="2"/>
+		<passive_effect operation="base_set" name="BlockRange"			value="2.5"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value=".6"			tags="organic"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="earth,stone,metal"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.9"			tags="secureLoot,oreTitanium"/>
+		<passive_effect operation="base_set" name="HarvestCount"		value="1"			tags="butcherHarvest,ulmHarvestBlade"/>
+	</effect_group>
+	<effect_group name="Sneak Damage Bonus">
+		<requirement	operation="Equals"	 name="CVarCompare" cvar="_crouching"	value="1"/>
+		<requirement	operation="GT"		 name="CVarCompare" cvar="_notAlerted"	value="0"	target="other"/>
+		<passive_effect operation="base_add" name="DamageBonus"						value="4"/>
+		<passive_effect operation="perc_add" name="EntityDamage"					value="4"	tags="perkDeepCuts"/>
+		<display_value						 name="dEntityDamageSneak"				value="4"/>
+	</effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@type='Cleaver']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="AttacksPerMinute"	value="60"/>
+		<passive_effect operation="base_add" name="AttacksPerMinute"	value="-10"			tags="secondary"/>
+		<passive_effect operation="base_set" name="MaxRange"			value="2"/>
+		<passive_effect operation="base_set" name="BlockRange"			value="2.5"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value=".6"			tags="organic"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="earth,stone,metal"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.9"			tags="secureLoot,oreTitanium"/>
+		<passive_effect operation="base_set" name="HarvestCount"		value=".9"			tags="butcherHarvest,ulmHarvestBlade"/>
+	</effect_group>
+	<effect_group name="Sneak Damage Bonus">
+		<requirement	operation="Equals"	 name="CVarCompare" cvar="_crouching"	value="1"/>
+		<requirement	operation="GT"		 name="CVarCompare" cvar="_notAlerted"	value="0"	target="other"/>
+		<passive_effect operation="base_add" name="DamageBonus"						value="4"/>
+		<passive_effect operation="perc_add" name="EntityDamage"					value="4"	tags="perkDeepCuts"/>
+		<display_value						 name="dEntityDamageSneak"				value="4"/>
+	</effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@type='Machete']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="AttacksPerMinute"	value="55"/>
+		<passive_effect operation="base_set" name="MaxRange"			value="2.3"/>
+		<passive_effect operation="base_set" name="BlockRange"			value="3"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value="1"			tags="secondary"/>
+		<passive_effect operation="base_add" name="AttacksPerMinute"	value="-5"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value=".6"			tags="organic"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="earth,stone,metal"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.9"			tags="secureLoot,oreTitanium"/>
+		<passive_effect operation="base_set" name="HarvestCount"		value=".8"			tags="butcherHarvest,ulmHarvestBlade"/>
+	</effect_group>
+	<effect_group name="Sneak Damage Bonus">
+		<requirement	operation="Equals"	 name="CVarCompare" cvar="_crouching"	value="1"/>
+		<requirement	operation="GT"		 name="CVarCompare" cvar="_notAlerted"	value="0"	target="other"/>
+		<passive_effect operation="base_add" name="DamageBonus"						value="2"/>
+		<passive_effect operation="perc_add" name="EntityDamage"					value="2"	tags="perkDeepCuts"/>
+		<display_value						 name="dEntityDamageSneak"				value="2"/>
+	</effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@type='Sickle']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="AttacksPerMinute"	value="55"/>
+		<passive_effect operation="base_set" name="MaxRange"			value="2.3"/>
+		<passive_effect operation="base_set" name="BlockRange"			value="3"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value="1"			tags="secondary"/>
+		<passive_effect operation="base_add" name="AttacksPerMinute"	value="-5"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value=".6"			tags="organic"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="earth,stone,metal"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.9"			tags="secureLoot,oreTitanium"/>
+		<passive_effect operation="base_set" name="HarvestCount"		value=".8"			tags="butcherHarvest,ulmHarvestBlade"/>
+	</effect_group>
+	<effect_group name="Sneak Damage Bonus">
+		<requirement	operation="Equals"	 name="CVarCompare" cvar="_crouching"	value="1"/>
+		<requirement	operation="GT"		 name="CVarCompare" cvar="_notAlerted"	value="0"	target="other"/>
+		<passive_effect operation="base_add" name="DamageBonus"						value="2"/>
+		<passive_effect operation="perc_add" name="EntityDamage"					value="2"	tags="perkDeepCuts"/>
+		<display_value						 name="dEntityDamageSneak"				value="2"/>
+	</effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@type='Sword']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="MaxRange"			value="2.6"/>
+		<passive_effect operation="base_set" name="BlockRange"			value="3.5"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value="1"			tags="secondary"/>
+		<passive_effect operation="base_set" name="AttacksPerMinute"	value="60"			tags="primary"/>
+		<passive_effect operation="base_set" name="AttacksPerMinute"	value="30"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value=".6"			tags="organic"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="earth,stone,metal"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.9"			tags="secureLoot,oreTitanium"/>
+		<passive_effect operation="base_set" name="HarvestCount"		value=".6"			tags="butcherHarvest,ulmHarvestBlade"/>
+	</effect_group>
+	<effect_group name="Sneak Damage Bonus">
+		<requirement	operation="Equals"	 name="CVarCompare" cvar="_crouching"	value="1"/>
+		<requirement	operation="GT"		 name="CVarCompare" cvar="_notAlerted"	value="0"	target="other"/>
+		<passive_effect operation="base_add" name="DamageBonus"						value="2"/>
+		<passive_effect operation="perc_add" name="EntityDamage"					value="2"	tags="perkDeepCuts"/>
+		<display_value						 name="dEntityDamageSneak"				value="2"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='LongSword']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="MaxRange"			value="2.8"/>
+		<passive_effect operation="base_set" name="BlockRange"			value="3.5"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value="1"			tags="secondary"/>
+		<passive_effect operation="base_set" name="AttacksPerMinute"	value="60"			tags="primary"/>
+		<passive_effect operation="base_set" name="AttacksPerMinute"	value="30"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value=".6"			tags="organic"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="earth,stone,metal"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.9"			tags="secureLoot,oreTitanium"/>
+		<passive_effect operation="base_set" name="HarvestCount"		value=".6"			tags="butcherHarvest,ulmHarvestBlade"/>
+	</effect_group>
+	<effect_group name="Sneak Damage Bonus">
+		<requirement	operation="Equals"	 name="CVarCompare" cvar="_crouching"	value="1"/>
+		<requirement	operation="GT"		 name="CVarCompare" cvar="_notAlerted"	value="0"	target="other"/>
+		<passive_effect operation="base_add" name="DamageBonus"						value="2"/>
+		<passive_effect operation="perc_add" name="EntityDamage"					value="2"	tags="perkDeepCuts"/>
+		<display_value						 name="dEntityDamageSneak"				value="2"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='Knuckles']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="AttacksPerMinute"	value="100"/>
+		<passive_effect operation="base_set" name="MaxRange"			value="2"/>
+		<passive_effect operation="base_set" name="BlockRange"			value="3"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value="1"			tags="secondary"/>
+		<passive_effect operation="base_add" name="AttacksPerMinute"	value="-.3"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.6"			tags="earth,stone,metal"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.9"			tags="secureLoot,oreTitanium"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='Axe']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="AttacksPerMinute"	value="45"/>
+		<passive_effect operation="perc_add" name="AttacksPerMinute"	value="-.3"			tags="secondary"/>
+		<passive_effect operation="base_set" name="MaxRange"			value="2.4"/>
+		<passive_effect operation="base_set" name="BlockRange"			value="3"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value="1.25"		tags="secondary"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value="1.25"		tags="secondary"/>
+		<passive_effect operation="base_set" name="DismemberChance"		value=".05"			tags="toolAxe"/>
+		<passive_effect operation="base_set" name="DamageModifier"		value="1"			tags="head,toolAxe" match_all_tags="true"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.7"			tags="ore,stone,metal"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="earth"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.9"			tags="secureLoot,oreTitanium"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="2"			tags="tree"/>
+		<passive_effect operation="base_set" name="HarvestCount"		value=".5"			tags="butcherHarvest"/>
+		<passive_effect operation="base_add" name="HarvestCount"		value="1"			tags="woodHarvest"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='Shovel']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="AttacksPerMinute"	value="55"/>
+		<passive_effect operation="base_set" name="MaxRange"			value="2.6"/>
+		<passive_effect operation="base_set" name="BlockRange"			value="3.5"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value="1"			tags="secondary"/>
+		<passive_effect operation="base_add" name="HarvestCount"		value="1"			tags="oreHarvest,ulmHarvestShovel"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.8"			tags="wood,ore,stone,metal"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.9"			tags="secureLoot,oreTitanium"/>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".shovelToolMultiplier" operation="set" value="1"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='Generic']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="MaxRange"			value="2.4"/>
+		<passive_effect operation="base_set" name="BlockRange"			value="3.5"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value="1"			tags="secondary"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='MotoTool']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="MagazineSize"				value="500"/>
+		<passive_effect operation="base_set" name="ReloadSpeedMultiplier"		value="1"/> <!-- 3.5s -->
+		<passive_effect operation="base_set" name="WeaponHandling"				value="5"/>
+		<passive_effect operation="base_set" name="SpreadDegreesVertical"		value=".5"/>
+		<passive_effect operation="base_set" name="SpreadDegreesHorizontal"		value=".5"/>
+		<passive_effect operation="base_set" name="MaxRange"					value="2.35"/>
+		<passive_effect operation="base_set" name="BlockRange"					value="3.5"/>
+		<passive_effect operation="base_set" name="DamageFalloffRange"			value="35"/>
+		<passive_effect operation="base_set" name="BurstRoundCount"				value="1000"/>
+		<passive_effect operation="perc_add" name="RoundsPerMinute"				value="-.1,.1"/>
+		<passive_effect operation="perc_add" name="WeaponHandling"				value="-.1,.1"/>
+		<passive_effect operation="base_set" name="SphereCastRadius"			value=".1"/>
+		<passive_effect	operation="base_set" name="IncrementalSpreadMultiplier"	value="1"/>
+		<passive_effect operation="base_set" name="KickDegreesVerticalMin"		value="-.35"/>
+		<passive_effect operation="base_set" name="KickDegreesVerticalMax"		value=".35"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMin"	value="-.35"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMax"	value=".35"/>
+		<passive_effect operation="perc_add" name="EntityDamage"				value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="BlockDamage"					value="1"			tags="secondary"/>
+		<passive_effect operation="perc_add" name="PlayerExpGain"				value="-.3"			tags="Harvesting"/>
+		<passive_effect operation="perc_add" name="DamageModifier"				value="-.9"			tags="secureLoot"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='Bow']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="RoundsPerMinute"				value="75"/>
+		<passive_effect operation="base_set" name="MagazineSize"				value="1"/>
+		<passive_effect operation="base_set" name="BurstRoundCount"				value="1"/>
+		<passive_effect operation="base_set" name="MaxRange"					value="100"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierAiming"		value=".2"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierCrouching"	value=".8"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierWalking"		value="1.5"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierRunning"		value="2.2"/>
+		<passive_effect operation="base_set" name="KickDegreesVerticalMin"		value="2"/>
+		<passive_effect operation="base_set" name="KickDegreesVerticalMax"		value="2"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMin"	value="-1"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMax"	value="1"/>
+		<passive_effect operation="base_set" name="IncrementalSpreadMultiplier"	value="2"/>
+		<passive_effect operation="perc_set" name="DamageModifier"				value="0"			tags="earth,metal,cloth"/>
+	</effect_group>
+	<effect_group name="Sneak Damage">
+		<requirement operation="Equals" name="CVarCompare"				value="1"	cvar="_crouching"/>
+		<requirement operation="GT"		name="CVarCompare"				value="0"	cvar="_notAlerted"	target="other"/>
+			<display_value				name="dEntityDamageSneak"		value="2"/>
+			<passive_effect operation="base_add" name="DamageBonus"		value="2"/>
+			<passive_effect operation="perc_add" name="EntityDamage"	value="2"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='LightPistol']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="BlockDamage"					value="1"/>
+		<passive_effect operation="base_set" name="MaxRange"					value="45"/>
+		<passive_effect operation="base_set" name="DamageFalloffRange"			value="20"/>
+		<passive_effect operation="base_set" name="BurstRoundCount"				value="1"/>
+		<passive_effect operation="base_set" name="ReloadSpeedMultiplier"		value="1"/>
+		<passive_effect operation="base_set" name="WeaponHandling"				value=".9"/>
+		
+		<passive_effect operation="base_set" name="SpreadDegreesVertical"		value="1.5"/>
+		<passive_effect operation="base_set" name="SpreadDegreesHorizontal"		value="1.5"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierAiming"		value=".4"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierCrouching"	value=".8"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierWalking"		value="1.5"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierRunning"		value="2.2"/>
+		<passive_effect operation="base_set" name="IncrementalSpreadMultiplier"	value="2"/>
+		
+		<passive_effect operation="base_set" name="KickDegreesVerticalMin"		value=".7"/>
+		<passive_effect operation="base_set" name="KickDegreesVerticalMax"		value=".9"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMin"	value="-.2"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMax"	value=".2"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='HeavyPistol']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="BlockDamage"					value="1"/>
+		<passive_effect operation="base_set" name="MaxRange"					value="50"/>
+		<passive_effect operation="base_set" name="DamageFalloffRange"			value="25"/>
+		<passive_effect operation="base_set" name="BurstRoundCount"				value="1"/>
+		<passive_effect operation="base_set" name="ReloadSpeedMultiplier"		value="1"/>
+		<passive_effect operation="base_set" name="WeaponHandling"				value=".6"/>
+		
+		<passive_effect operation="base_set" name="SpreadDegreesVertical"		value="1.5"/>
+		<passive_effect operation="base_set" name="SpreadDegreesHorizontal"		value="1.5"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierAiming"		value=".35"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierCrouching"	value=".8"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierWalking"		value="1.5"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierRunning"		value="2.2"/>
+		<passive_effect operation="base_set" name="IncrementalSpreadMultiplier"	value="3"/>
+		
+		<passive_effect operation="base_set" name="KickDegreesVerticalMin"		value="1.5"/>
+		<passive_effect operation="base_set" name="KickDegreesVerticalMax"		value="3.0"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMin"	value="-.3"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMax"	value=".3"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='Shotgun']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="BurstRoundCount"				value="1"/>
+		<passive_effect operation="base_set" name="WeaponHandling"				value="1.7"/>
+		<passive_effect operation="base_set" name="ReloadSpeedMultiplier"		value="1"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierAiming"		value=".35"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierCrouching"	value=".8"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierWalking"		value="1.5"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierRunning"		value="2.2"/>
+		<passive_effect operation="base_set" name="IncrementalSpreadMultiplier"	value="2"/>
+		
+		<passive_effect operation="base_set" name="KickDegreesVerticalMin"		value=".5"/>
+		<passive_effect operation="base_set" name="KickDegreesVerticalMax"		value="1"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMin"	value="-.5"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMax"	value=".5"/>
+		<display_value						 name="dStatStunEffect"				value="4"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='SMG']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="BlockDamage"					value="1"/>
+		<passive_effect operation="base_set" name="MaxRange"					value="65"/>
+		<passive_effect operation="base_set" name="DamageFalloffRange"			value="30"/>
+		<passive_effect operation="base_set" name="BurstRoundCount"				value="1000"/>
+		<passive_effect operation="base_set" name="ReloadSpeedMultiplier"		value="1"/>
+		<passive_effect operation="base_set" name="WeaponHandling"				value="0.8"/>
+		
+		<passive_effect operation="base_set" name="SpreadDegreesVertical"		value="1.5"/>
+		<passive_effect operation="base_set" name="SpreadDegreesHorizontal"		value="1.5"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierAiming"		value=".35"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierCrouching"	value=".8"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierWalking"		value="1.5"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierRunning"		value="2.2"/>
+		<passive_effect operation="base_set" name="IncrementalSpreadMultiplier"	value="3"/>
+		
+		<passive_effect operation="base_set" name="KickDegreesVerticalMin"		value=".4"/>
+		<passive_effect operation="base_set" name="KickDegreesVerticalMax"		value=".8"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMin"	value="-.4"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMax"	value=".4"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='AssaultRifle']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="BlockDamage"					value="2"/>
+		<passive_effect operation="base_set" name="MaxRange"					value="90"/>
+		<passive_effect operation="base_set" name="DamageFalloffRange"			value="50"/>
+		<passive_effect operation="base_set" name="BurstRoundCount"				value="1000"/>
+		<passive_effect operation="base_set" name="ReloadSpeedMultiplier"		value="1"/>
+		<passive_effect operation="base_set" name="WeaponHandling"				value=".7"/>
+		
+		<passive_effect operation="base_set" name="SpreadDegreesVertical"		value="3"/>
+		<passive_effect operation="base_set" name="SpreadDegreesHorizontal"		value="3"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierAiming"		value=".4"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierCrouching"	value=".8"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierWalking"		value="1.5"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierRunning"		value="2.2"/>
+		<passive_effect operation="base_set" name="IncrementalSpreadMultiplier"	value="1.2"/>
+		
+		<passive_effect operation="base_set" name="KickDegreesVerticalMin"		value="-.5"/>
+		<passive_effect operation="base_set" name="KickDegreesVerticalMax"		value="1"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMin"	value="-1"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMax"	value="1"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='MachineGun']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="BlockDamage"					value="2"/>
+		<passive_effect operation="base_set" name="MaxRange"					value="90"/>
+		<passive_effect operation="base_set" name="DamageFalloffRange"			value="50"/>
+		<passive_effect operation="base_set" name="BurstRoundCount"				value="1000"/>
+		<passive_effect operation="base_set" name="ReloadSpeedMultiplier"		value="1"/>
+		<passive_effect operation="base_set" name="WeaponHandling"				value=".7"/>
+		
+		<passive_effect operation="base_set" name="SpreadDegreesVertical"		value="3"/>
+		<passive_effect operation="base_set" name="SpreadDegreesHorizontal"		value="3"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierAiming"		value=".4"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierCrouching"	value=".8"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierWalking"		value="1.5"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierRunning"		value="2.2"/>
+		<passive_effect operation="base_set" name="IncrementalSpreadMultiplier"	value="1.6"/>
+		
+		<passive_effect operation="base_set" name="KickDegreesVerticalMin"		value="-.5"/>
+		<passive_effect operation="base_set" name="KickDegreesVerticalMax"		value="1"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMin"	value="-1"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMax"	value="1"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='SniperRifle']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="BlockDamage"					value="5"/>
+		<passive_effect operation="base_set" name="MaxRange"					value="150"/>
+		<passive_effect operation="base_set" name="DamageFalloffRange"			value="75"/>
+		<passive_effect operation="base_set" name="BurstRoundCount"				value="1"/>
+		<passive_effect operation="base_set" name="ReloadSpeedMultiplier"		value="1"/>
+		<passive_effect operation="base_set" name="WeaponHandling"				value=".7"/>
+		
+		<passive_effect operation="base_set" name="SpreadDegreesVertical"		value="6"/>
+		<passive_effect operation="base_set" name="SpreadDegreesHorizontal"		value="6"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierAiming"		value=".07"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierCrouching"	value=".5"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierWalking"		value="1.5"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierRunning"		value="2"/>
+		<passive_effect operation="base_set" name="IncrementalSpreadMultiplier" value="4"/>
+		
+		<passive_effect operation="base_set" name="KickDegreesVerticalMin"		value="1.5"/>
+		<passive_effect operation="base_set" name="KickDegreesVerticalMax"		value="3"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMin"	value="-.25"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMax"	value=".25"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@type='RocketLauncher']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="MaxRange"					value="100"/>
+		<passive_effect operation="base_set" name="DamageFalloffRange"			value="70"/>
+		<passive_effect operation="base_set" name="BurstRoundCount"				value="1"/>
+		<passive_effect operation="base_set" name="WeaponHandling"				value=".4"/>
+		<passive_effect operation="base_set" name="ReloadSpeedMultiplier"		value=".7"/><!-- 2.7s -->
+		<passive_effect operation="base_set" name="RoundsPerMinute"				value="75"/>
+		
+		<passive_effect operation="base_set" name="SpreadDegreesVertical"		value="7"/>
+		<passive_effect operation="base_set" name="SpreadDegreesHorizontal"		value="7"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierAiming"		value=".15"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierCrouching"	value=".8"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierWalking"		value="1.5"/>
+		<passive_effect operation="base_set" name="SpreadMultiplierRunning"		value="2"/>
+		<passive_effect operation="base_set" name="IncrementalSpreadMultiplier"	value="2.2"/>
+		
+		<passive_effect operation="base_set" name="KickDegreesVerticalMin"		value="10"/>
+		<passive_effect operation="base_set" name="KickDegreesVerticalMax"		value="10"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMin"	value="-.5"/>
+		<passive_effect operation="base_set" name="KickDegreesHorizontalMax"	value=".5"/>
+	</effect_group></insertAfter>
+
+<!-- ALL Tools and Weapons -->
+<insertAfter xpath="/items//effect_group[@name='StatsMelee']">
+	<effect_group name="Tier Bonus">
+		<passive_effect operation="base_set" name="ModSlots"			value="1"			tier="1,20"/>
+		<passive_effect operation="base_set" name="ModSlots"			value="2"			tier="21,40"/>
+		<passive_effect operation="base_set" name="ModSlots"			value="3"			tier="41,60"/>
+		<passive_effect operation="base_set" name="ModSlots"			value="4"			tier="61,80"/>
+		<passive_effect operation="base_set" name="ModSlots"			value="5"			tier="81,90"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value=".00667,.6"	tier="2,90"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value=".00667,.6"	tier="2,90"/>
+		<passive_effect operation="perc_add" name="DegradationMax"		value=".00667,.6"	tier="2,90"/>
+	</effect_group>
+	<effect_group name="Random Modifier" tiered="false">
+		<passive_effect operation="perc_add" name="DegradationMax"		value="-.05,.05"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value="-.05,.05"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value="-.05,.05"/>
+		<passive_effect operation="perc_add" name="StaminaLoss"			value="-.05,.05"/>
+	</effect_group>
+	<effect_group name="General" tiered="false">
+		<passive_effect operation="base_add" name="ModPowerBonus"		value="100"			tags="EconomicValue"/>
+		<passive_effect operation="perc_add" name="ModPowerBonus"		value=".1"			tags="EntityDamage,BlockDamage"/>
+		<passive_effect operation="base_set" name="DegradationPerUse"	value="1"			tags="primary"/>
+		<passive_effect operation="base_set" name="DegradationPerUse"	value="2"			tags="secondary"/>
+	</effect_group></insertAfter>
+
+<insertAfter xpath="/items//effect_group[@name='StatsRanged']">
+	<effect_group name="Tier Bonus">
+		<passive_effect operation="base_set" name="ModSlots"			value="1"			tier="1,20"/>
+		<passive_effect operation="base_set" name="ModSlots"			value="2"			tier="21,40"/>
+		<passive_effect operation="base_set" name="ModSlots"			value="3"			tier="41,60"/>
+		<passive_effect operation="base_set" name="ModSlots"			value="4"			tier="61,80"/>
+		<passive_effect operation="base_set" name="ModSlots"			value="5"			tier="81,90"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value=".00667,.6"	tier="2,90"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value=".00667,.6"	tier="2,90"/>
+		<passive_effect operation="perc_add" name="DegradationMax"		value=".00667,.6"	tier="2,90"/>
+	</effect_group>
+	<effect_group name="Random Modifier" tiered="false">
+		<passive_effect operation="perc_add" name="DegradationMax"		value="-.05,.05"/>
+		<passive_effect operation="perc_add" name="EntityDamage"		value="-.05,.05"/>
+		<passive_effect operation="perc_add" name="BlockDamage"			value="-.05,.05"/>
+		<passive_effect operation="perc_add" name="DamageFalloffRange"	value="-.05,.05"/>
+		<passive_effect operation="perc_add" name="ProjectileVelocity"	value="-.05,.05"/>
+		<passive_effect operation="perc_add" name="RoundsPerMinute"		value="-.05,.05"/>
+		<passive_effect operation="perc_add" name="WeaponHandling"		value="-.05,.05"/>
+	</effect_group>
+	<effect_group name="General" tiered="false">
+		<passive_effect operation="base_set" name="DegradationPerUse"	value="1"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"		value="100"			tags="EconomicValue"/>
+		<passive_effect operation="perc_add" name="ModPowerBonus"		value=".1"			tags="EntityDamage,BlockDamage"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="2"			tags="wood"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="5"			tags="glass"/>
+		<passive_effect operation="perc_add" name="DamageModifier"		value="-.9"			tags="earth,secureLoot"/>
+	</effect_group></insertAfter>
+
+<!-- Melee Weapons - Thermal Katana/Blade Effect -->
+<insertAfter xpath="/items//effect_group[@special='ThermalMelee']">
+	<effect_group tiered="false" name="Sets Max Charges">
+		<passive_effect name="ChargeRate" operation="base_set" value="10"/>
+		<passive_effect name="ChargesMax" operation="base_set" value="50"/>
+	</effect_group>
+	<effect_group tiered="false" name="SpecialEffects">
+		<passive_effect name="LightMultiplier" operation="base_add" value=".28"/>
+		<passive_effect name="ResistCold" operation="base_add" value="4">
+			<requirement name="CVarCompare" cvar="_underwater" operation="LT" value="1"/>
+		</passive_effect>
+	</effect_group>
+	<effect_group name="new Fire Proc" tiered="false">
+		<requirement name="ULM_Compare,UndeadLegacy" meta_key="ChargesUsed" operation="LT" passive_effect="ChargesMax"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="10">
+			<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="0"/></triggered_effect>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="11">
+			<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="1"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ULM_Modify,UndeadLegacy" meta_key="ChargesUsed" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ULM_Modify,UndeadLegacy" meta_key="ChargesUsed" operation="add" value="1"/>
+	</effect_group>
+	<effect_group name="always refresh existing Fire Proc" tiered="false">
+		<requirement name="ULM_Compare,UndeadLegacy" meta_key="ChargesUsed" operation="LT" passive_effect="ChargesMax"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+		<requirement name="HasBuff" target="other" buff="buffBurningElement"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+			<!--default duration is 10-->
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="11">
+				<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="1"/></triggered_effect>
+	</effect_group></insertAfter>
+	
+<!-- Melee Weapons - Stun Baton Effect -->
+<insertAfter xpath="/items//effect_group[@special='StunBaton']">
+	<effect_group tiered="false" name="Sets Max Charges">
+		<passive_effect name="ChargeRate" operation="base_set" value="10"/>
+		<passive_effect name="ChargesMax" operation="base_set" value="50"/>
+		<passive_effect name="ChargesMax" operation="perc_add" value=".2">
+			<requirement name="ProgressionLevel" progression_name="perkTechJunkie6BatonCharge" operation="Equals" value="1"/>
+		</passive_effect>
+	</effect_group>
+	<!--
+	<effect_group tiered="false" name="Reload Charges">
+		<requirement name="!HasBuff" buff="ulmBuffStunBatonReloadSuccess"/>
+		<requirement name="ULM_Compare,UndeadLegacy" meta_key="ChargesUsed" operation="GTE" passive_effect="ChargesMax"/>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ULM_RemoveItemFromInventory,UndeadLegacy" name="ulmResourceBatterySmall" buff_on_success="ulmBuffStunBatonReloadSuccess" notify="false"/>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ULM_RemoveItemFromInventory,UndeadLegacy" name="ulmResourceBatterySmall" buff_on_success="ulmBuffStunBatonReloadSuccess" notify="false"/>
+	</effect_group>
+	-->
+	<effect_group name="Consume Charges">
+		<requirement name="ULM_Compare,UndeadLegacy" meta_key="ChargesUsed" operation="LT" passive_effect="ChargesMax"/>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="Ragdoll" target="other" duration="2.5" force="350">
+			<requirement name="HasBuff" buff="buffmodMeleeStunBatonRepulsor"/>
+			<requirement name="!HasBuff" buff="buffDrugNerdTats"/>
+			<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="Ragdoll" target="other" duration="2.5" force="350">
+			<requirement name="HasBuff" buff="buffmodMeleeStunBatonRepulsor"/>
+			<requirement name="!HasBuff" buff="buffDrugNerdTats"/>
+			<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="Ragdoll" target="otherAOE" range="1.1" target_tags="zombie,animal" duration="2.5" force="350">
+			<requirement name="HasBuff" buff="buffmodMeleeStunBatonRepulsor"/>
+			<requirement name="HasBuff" buff="buffDrugNerdTats"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="Ragdoll" target="otherAOE" range="1.1" target_tags="zombie,animal" duration="2.5" force="350">
+			<requirement name="HasBuff" buff="buffmodMeleeStunBatonRepulsor"/>
+			<requirement name="HasBuff" buff="buffDrugNerdTats"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="stunBatonDuration" operation="set" value="1.33">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBatonStun" operation="Equals" value="0"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="stunBatonDuration" operation="set" value="1.60">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBatonStun" operation="Equals" value="1"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="stunBatonDuration" operation="set" value="1.87">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBatonStun" operation="Equals" value="2"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="stunBatonDuration" operation="set" value="2.13">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBatonStun" operation="Equals" value="3"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="stunBatonDuration" operation="set" value="2.40">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBatonStun" operation="Equals" value="4"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="stunBatonDuration" operation="set" value="2.67">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBatonStun" operation="Equals" value="5"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="stunBatonDuration" operation="set" value="2.94">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBatonStun" operation="Equals" value="6"/></triggered_effect>
+			
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="stunBatonDuration" operation="set" value="1.33">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBatonStun" operation="Equals" value="0"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="stunBatonDuration" operation="set" value="1.60">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBatonStun" operation="Equals" value="1"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="stunBatonDuration" operation="set" value="1.87">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBatonStun" operation="Equals" value="2"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="stunBatonDuration" operation="set" value="2.13">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBatonStun" operation="Equals" value="3"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="stunBatonDuration" operation="set" value="2.40">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBatonStun" operation="Equals" value="4"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="stunBatonDuration" operation="set" value="2.67">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBatonStun" operation="Equals" value="5"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="stunBatonDuration" operation="set" value="2.94">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBatonStun" operation="Equals" value="6"/></triggered_effect>
+
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" cvar=".stunBatonCharge" operation="add" value="4"></triggered_effect>
+		
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="PlaySound" sound="stunbaton_hit3"/>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="PlaySound" sound="stunbaton_hit3"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="other" buff="buffShocked" duration="@stunBatonDuration"/>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffShocked" duration="@stunBatonDuration"/>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="otherAOE" range="1.1" target_tags="zombie,animal" buff="buffShocked" duration="@stunBatonDuration">
+			<requirement name="HasBuff" buff="buffDrugNerdTats"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="1.3" target_tags="zombie,animal" buff="buffShocked" duration="@stunBatonDuration">
+			<requirement name="HasBuff" buff="buffDrugNerdTats"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ULM_Modify,UndeadLegacy" meta_key="ChargesUsed" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ULM_Modify,UndeadLegacy" meta_key="ChargesUsed" operation="add" value="1"/>
+	</effect_group>
+	<!-- Old Stun Baton Method of increasing charges -->
+	<!-- 
+	<effect_group name="apply damage buff, meleeWpnBatonT2StunBaton">
+		<requirement name="CVarCompare" cvar=".stunBatonCharge" operation="GTE" value="40"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="Sparks" prefab="ItemModEffects/baton_electricityPrefab" parentTransform="Handle" localPos="0,0,0" localRot="0,0,0"/>
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="Ragdoll" target="other" duration="2.5" force="350">
+				<requirement name="HasBuff" buff="buffmodMeleeStunBatonRepulsor"/>
+				<requirement name="!HasBuff" buff="buffDrugNerdTats"/>
+				<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="Ragdoll" target="other" duration="2.5" force="350">
+				<requirement name="HasBuff" buff="buffmodMeleeStunBatonRepulsor"/>
+				<requirement name="!HasBuff" buff="buffDrugNerdTats"/>
+				<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="Ragdoll" target="otherAOE" range="1.1" target_tags="zombie,animal" duration="2.5" force="350">
+				<requirement name="HasBuff" buff="buffmodMeleeStunBatonRepulsor"/>
+				<requirement name="HasBuff" buff="buffDrugNerdTats"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="Ragdoll" target="otherAOE" range="1.1" target_tags="zombie,animal" duration="2.5" force="350">
+				<requirement name="HasBuff" buff="buffmodMeleeStunBatonRepulsor"/>
+				<requirement name="HasBuff" buff="buffDrugNerdTats"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar=".buffShockedDurationStart" operation="set" value="5">
+				<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar=".buffShockedDurationStart" operation="set" value="6">
+				<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="2"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar=".buffShockedDurationStart" operation="set" value="7">
+				<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="3"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar=".buffShockedDurationStart" operation="set" value="8">
+				<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="4"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar=".buffShockedDurationStart" operation="set" value="9">
+				<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="5"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar=".buffShockedDurationStart" operation="set" value="5">
+				<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar=".buffShockedDurationStart" operation="set" value="6">
+				<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="2"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar=".buffShockedDurationStart" operation="set" value="7">
+				<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="3"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar=".buffShockedDurationStart" operation="set" value="8">
+				<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="4"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar=".buffShockedDurationStart" operation="set" value="9">
+				<requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="5"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="other" buff="buffShocked"/>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffShocked"/>
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="otherAOE" range="1.1" target_tags="zombie,animal" buff="buffShocked">
+				<requirement name="HasBuff" buff="buffDrugNerdTats"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="1.3" target_tags="zombie,animal" buff="buffShocked">
+				<requirement name="HasBuff" buff="buffDrugNerdTats"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="RemovePart" part="Sparks"/>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="RemovePart" part="Sparks"/>
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" cvar=".stunBatonCharge" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" cvar=".stunBatonCharge" operation="set" value="0"/>
+	</effect_group>
+	<effect_group name="increase charges">
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" cvar=".stunBatonCharge" operation="add" value="1">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" cvar=".stunBatonCharge" operation="add" value="2">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" cvar=".stunBatonCharge" operation="add" value="4">
+			<requirement name="ProgressionLevel" progression_name="perkTechJunkie6BatonCharge" operation="Equals" value="1"/>
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" cvar=".stunBatonCharge" operation="add" value="4">
+			<requirement name="ProgressionLevel" progression_name="perkTechJunkie6BatonCharge" operation="Equals" value="1"/>
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddPart" part="Sparks" prefab="ParticleEffects/p_electric_shock_small" parentTransform="Handle" localPos="0,0,0" localRot="0,0,0">
+			<requirement name="CVarCompare" cvar=".stunBatonCharge" operation="GTE" value="4"/>
+			<requirement name="CVarCompare" cvar=".stunBatonCharge" operation="LT" value="40"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddPart" part="Sparks" prefab="ParticleEffects/p_electric_shock_small" parentTransform="Handle" localPos="0,0,0" localRot="0,0,0">
+			<requirement name="CVarCompare" cvar=".stunBatonCharge" operation="GTE" value="4"/>
+			<requirement name="CVarCompare" cvar=".stunBatonCharge" operation="LT" value="40"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".stunBatonCharge" operation="set" value="40">
+			<requirement name="CVarCompare" cvar=".stunBatonCharge" operation="GTE" value="4"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" cvar=".stunBatonCharge" operation="set" value="40">
+			<requirement name="CVarCompare" cvar=".stunBatonCharge" operation="GTE" value="4"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="PlaySound" sound="stunbaton_hit1">
+			<requirement name="CVarCompare" cvar=".stunBatonCharge" operation="Equals" value="0"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="PlaySound" sound="stunbaton_hit2">
+			<requirement name="CVarCompare" cvar=".stunBatonCharge" operation="Equals" value="1"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="PlaySound" sound="stunbaton_hit3">
+			<requirement name="CVarCompare" cvar=".stunBatonCharge" operation="Equals" value="2"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="PlaySound" sound="stunbaton_hit4">
+			<requirement name="CVarCompare" cvar=".stunBatonCharge" operation="Equals" value="3"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="PlaySound" sound="stunbaton_hit5">
+			<requirement name="CVarCompare" cvar=".stunBatonCharge" operation="GTE" value="4"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="PlaySound" sound="stunbaton_hit1">
+			<requirement name="CVarCompare" cvar=".stunBatonCharge" operation="Equals" value="0"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="PlaySound" sound="stunbaton_hit2">
+			<requirement name="CVarCompare" cvar=".stunBatonCharge" operation="Equals" value="1"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="PlaySound" sound="stunbaton_hit3">
+			<requirement name="CVarCompare" cvar=".stunBatonCharge" operation="Equals" value="2"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="PlaySound" sound="stunbaton_hit4">
+			<requirement name="CVarCompare" cvar=".stunBatonCharge" operation="Equals" value="3"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="PlaySound" sound="stunbaton_hit5">
+			<requirement name="CVarCompare" cvar=".stunBatonCharge" operation="GTE" value="4"/></triggered_effect>
+	</effect_group>
+	-->
+</insertAfter>
+
+<!--    
+		# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+			A R M O R   E F F E C T S
+	
+		# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+-->
+
+<set xpath="/items//effect_group[@name='LightArmor' and @level='0']">
+	<passive_effect operation="base_set" name="DegradationMax"			value="300,900"			tier="1,90"/>
+	<passive_effect operation="base_add" name="PhysicalDamageResist"	value="3.125,6.2500"	tier="1,90"/>
+	<passive_effect operation="base_add" name="ElementalDamageResist"	value="3.75,7.5"		tier="1,90"		tags="heat,electrical"/></set>
+	
+<set xpath="/items//effect_group[@name='LightArmor' and @level='1']">
+	<passive_effect operation="base_set" name="DegradationMax"			value="400,1000"		tier="1,90"/>
+	<passive_effect operation="base_add" name="PhysicalDamageResist"	value="3.750,7.5000"	tier="1,90"/>
+	<passive_effect operation="base_add" name="ElementalDamageResist"	value="5,10"			tier="1,90"		tags="heat,electrical"/></set>
+	
+<set xpath="/items//effect_group[@name='LightArmor' and @level='2']">
+	<passive_effect operation="base_set" name="DegradationMax"			value="500,1100"		tier="1,90"/>
+	<passive_effect operation="base_add" name="PhysicalDamageResist"	value="4.375,8.1250"	tier="1,90"/>
+	<passive_effect operation="base_add" name="ElementalDamageResist"	value="7.5,12.5"		tier="1,90"		tags="heat,electrical"/></set>
+	
+<set xpath="/items//effect_group[@name='LightArmor' and @level='3']">
+	<passive_effect operation="base_set" name="DegradationMax"			value="600,1200"		tier="1,90"/>
+	<passive_effect operation="base_add" name="PhysicalDamageResist"	value="5.000,8.7500"	tier="1,90"/>
+	<passive_effect operation="base_add" name="ElementalDamageResist"	value="10,15"			tier="1,90"		tags="heat,electrical"/></set>
+	
+<set xpath="/items//effect_group[@name='LightArmor' and @level='4']">
+	<passive_effect operation="base_set" name="DegradationMax"			value="700,1300"		tier="1,90"/>
+	<passive_effect operation="base_add" name="PhysicalDamageResist"	value="5.625,9.3750"	tier="1,90"/>
+	<passive_effect operation="base_add" name="ElementalDamageResist"	value="12,5,17.5"		tier="1,90"		tags="heat,electrical"/></set>
+
+<set xpath="/items//effect_group[@name='LightArmor' and @level='5']">
+	<passive_effect operation="base_set" name="DegradationMax"			value="800,1375"		tier="1,90"/>
+	<passive_effect operation="base_add" name="PhysicalDamageResist"	value="6.250,10.0000"	tier="1,90"/>
+	<passive_effect operation="base_add" name="ElementalDamageResist"	value="15,20"			tier="1,90"		tags="heat,electrical"/></set>
+	
+<set xpath="/items//effect_group[@name='MediumArmor' and @level='1']">
+	<passive_effect operation="base_set" name="DegradationMax"			value="875,1125"		tier="1,90"/>
+	<passive_effect operation="base_add" name="PhysicalDamageResist"	value="7.500,10.0000"	tier="1,90"/>
+	<passive_effect operation="base_add" name="ElementalDamageResist"	value="5,10"			tier="1,90"		tags="heat,electrical"/></set>
+	
+<set xpath="/items//effect_group[@name='MediumArmor' and @level='2']">
+	<passive_effect operation="base_set" name="DegradationMax"			value="1000,1250"		tier="1,90"/>
+	<passive_effect operation="base_add" name="PhysicalDamageResist"	value="8.125,10.9375"	tier="1,90"/>
+	<passive_effect operation="base_add" name="ElementalDamageResist"	value="7.5,12.5"		tier="1,90"		tags="heat,electrical"/></set>
+	
+<set xpath="/items//effect_group[@name='MediumArmor' and @level='3']">
+	<passive_effect operation="base_set" name="DegradationMax"			value="1125,1375"		tier="1,90"/>
+	<passive_effect operation="base_add" name="PhysicalDamageResist"	value="8.750,11.8750"	tier="1,90"/>
+	<passive_effect operation="base_add" name="ElementalDamageResist"	value="10,15"			tier="1,90"		tags="heat,electrical"/></set>
+	
+<set xpath="/items//effect_group[@name='MediumArmor' and @level='4']">
+	<passive_effect operation="base_set" name="DegradationMax"			value="1250,1500"		tier="1,90"/>
+	<passive_effect operation="base_add" name="PhysicalDamageResist"	value="9.375,12.8125"	tier="1,90"/>
+	<passive_effect operation="base_add" name="ElementalDamageResist"	value="12,5,17.5"		tier="1,90"		tags="heat,electrical"/></set>
+
+<set xpath="/items//effect_group[@name='MediumArmor' and @level='5']">
+	<passive_effect operation="base_set" name="DegradationMax"			value="1375,1625"		tier="1,90"/>
+	<passive_effect operation="base_add" name="PhysicalDamageResist"	value="10.000,13.7500"	tier="1,90"/>
+	<passive_effect operation="base_add" name="ElementalDamageResist"	value="15,20"			tier="1,90"		tags="heat,electrical"/></set>
+	
+<set xpath="/items//effect_group[@name='HeavyArmor' and @level='1']">
+	<passive_effect operation="base_set" name="DegradationMax"			value="1500,1750"		tier="1,90"/>
+	<passive_effect operation="base_add" name="PhysicalDamageResist"	value="11.000,15.0000"	tier="1,90"/>
+	<passive_effect operation="base_add" name="ElementalDamageResist"	value="5,10"			tier="1,90"		tags="heat,electrical"/></set>
+	
+<set xpath="/items//effect_group[@name='HeavyArmor' and @level='2']">
+	<passive_effect operation="base_set" name="DegradationMax"			value="1625,1875"		tier="1,90"/>
+	<passive_effect operation="base_add" name="PhysicalDamageResist"	value="10.625,15.9375"	tier="1,90"/>
+	<passive_effect operation="base_add" name="ElementalDamageResist"	value="7.5,12.5"		tier="1,90"		tags="heat,electrical"/></set>
+	
+<set xpath="/items//effect_group[@name='HeavyArmor' and @level='3']">
+	<passive_effect operation="base_set" name="DegradationMax"			value="1750,2000"		tier="1,90"/>
+	<passive_effect operation="base_add" name="PhysicalDamageResist"	value="11.250,16.8750"	tier="1,90"/>
+	<passive_effect operation="base_add" name="ResistCold"				value="0.6,1.8"			tier="1,90"/>
+	<passive_effect operation="base_add" name="ResistHeat"				value="0.8,2.4"			tier="1,90"/>
+	<passive_effect operation="base_add" name="ElementalDamageResist"	value="10,15"			tier="1,90"		tags="heat,electrical"/></set>
+	
+<set xpath="/items//effect_group[@name='HeavyArmor' and @level='4']">
+	<passive_effect operation="base_set" name="DegradationMax"			value="1875,2125"		tier="1,90"/>
+	<passive_effect operation="base_add" name="PhysicalDamageResist"	value="11.875,17.8125"	tier="1,90"/>
+	<passive_effect operation="base_add" name="ResistCold"				value="1.8,5.4"			tier="1,90"/>
+	<passive_effect operation="base_add" name="ResistHeat"				value="1.7,5.1"			tier="1,90"/>
+	<passive_effect operation="base_add" name="ElementalDamageResist"	value="12,5,17.5"		tier="1,90"		tags="heat,electrical"/></set>
+	
+<set xpath="/items//effect_group[@name='HeavyArmor' and @level='5']">
+	<passive_effect operation="base_set" name="DegradationMax"			value="2000,2250"		tier="1,90"/>
+	<passive_effect operation="base_add" name="PhysicalDamageResist"	value="12.500,18.7500"	tier="1,90"/>
+	<passive_effect operation="base_add" name="ResistCold"				value="2.0,6.0"			tier="1,90"/>
+	<passive_effect operation="base_add" name="ResistHeat"				value="1.5,3.6"			tier="1,90"/>
+	<passive_effect operation="base_add" name="ElementalDamageResist"	value="15,20"			tier="1,90"		tags="heat,electrical"/></set>
+	
+<insertAfter xpath="/items//effect_group[@thermals='NewsboyHat']">
+	<effect_group name="Thermals">
+		<passive_effect operation="base_add" name="ResistCold" value="2.1,4.2" tier="1,90"/>
+		<passive_effect operation="base_add" name="ResistHeat" value="0.9,1.8" tier="1,90"/></effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@thermals='WoolHat']">
+	<effect_group name="Thermals">
+		<passive_effect operation="base_add" name="ResistCold" value="2.85,5.7" tier="1,90"/>
+		<passive_effect operation="base_add" name="ResistHeat" value="0.3,0.6" tier="1,90"/></effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@thermals='BonnieHat']">
+	<effect_group name="Thermals">
+		<passive_effect operation="base_add" name="ResistCold" value="0.3,0.6" tier="1,90"/>
+		<passive_effect operation="base_add" name="ResistHeat" value="3.0,6.0" tier="1,90"/></effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@thermals='8PCoverHat']">
+	<effect_group name="Thermals">
+		<passive_effect operation="base_add" name="ResistCold" value="0.3,0.6" tier="1,90"/>
+		<passive_effect operation="base_add" name="ResistHeat" value="2.4,4.8" tier="1,90"/></effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@thermals='CowboyHat']">
+	<effect_group name="Thermals">
+		<passive_effect operation="base_add" name="ResistCold" value="0.9,1.8" tier="1,90"/>
+		<passive_effect operation="base_add" name="ResistHeat" value="2.7,5.4" tier="1,90"/></effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@thermals='BaseballCap']">
+	<effect_group name="Thermals">
+		<passive_effect operation="base_add" name="ResistCold" value="0.3,0.6" tier="1,90"/>
+		<passive_effect operation="base_add" name="ResistHeat" value="2.1,4.2" tier="1,90"/></effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@thermals='HardHat']">
+	<effect_group name="Thermals">
+		<passive_effect operation="base_add" name="ResistCold" value="0.6,1.2" tier="1,90"/>
+		<passive_effect operation="base_add" name="ResistHeat" value="1.2,2.4" tier="1,90"/></effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@thermals='BrodieHelmet']">
+	<effect_group name="Thermals">
+		<passive_effect operation="base_add" name="ResistCold" value="0.6,1.2" tier="1,90"/>
+		<passive_effect operation="base_add" name="ResistHeat" value="1.5,3.0" tier="1,90"/></effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@thermals='MotoHelmet']">
+	<effect_group name="Thermals">
+		<passive_effect operation="base_add" name="ResistCold" value="2.7,5.4" tier="1,90"/>
+		<passive_effect operation="base_add" name="ResistHeat" value="0.9,1.8" tier="1,90"/></effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@thermals='FirefighterHelmet']">
+	<effect_group name="Thermals">
+		<passive_effect operation="base_add" name="ResistCold" value="1.0,2.1" tier="1,90"/>
+		<passive_effect operation="base_add" name="ResistHeat" value="2.4,4.8" tier="1,90"/></effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@thermals='ArmyHelmet1']">
+	<effect_group name="Thermals">
+		<passive_effect operation="base_add" name="ResistCold" value="2.25,4.5" tier="1,90"/>
+		<passive_effect operation="base_add" name="ResistHeat" value="1.2,2.4" tier="1,90"/></effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@thermals='ArmyHelmet2']">
+	<effect_group name="Thermals">
+		<passive_effect operation="base_add" name="ResistCold" value="1.8,3.6" tier="1,90"/>
+		<passive_effect operation="base_add" name="ResistHeat" value="0.9,1.8" tier="1,90"/></effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@thermals='ArmyHelmet3']">
+	<effect_group name="Thermals">
+		<passive_effect operation="base_add" name="ResistCold" value="2.4,4.8" tier="1,90"/>
+		<passive_effect operation="base_add" name="ResistHeat" value="0.3,0.6" tier="1,90"/></effect_group></insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@name='LightArmor']">
+	<effect_group>
+		<passive_effect operation="base_add" name="DegradationMax"			value="-50,50"/>
+		<passive_effect operation="base_add" name="PhysicalDamageResist"	value="-.2,.2"/>
+		<passive_effect operation="base_add" name="ElementalDamageResist"	value="-.2,.2"/>
+		<passive_effect operation="base_add" name="ResistCold"				value="-2,2"/>
+		<passive_effect operation="base_add" name="ResistHeat"				value="-2,2"/>
+		<passive_effect operation="base_add" name="BuffResistance"			value="0.025,0.05"		tier="1,90"		tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffAbrasionCatch,buffLaceration,buffInfectionCatch,buffInjuryStunned01,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="1"				tier="1,20"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="2"				tier="21,40"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="3"				tier="41,60"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="4"				tier="61,80"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="5"				tier="81,89"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="6"				tier="90"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100"				tags="EconomicValue"/>
+		<passive_effect operation="base_set" name="DegradationPerUse"		value="1"				tags="armorLight"/>
+	</effect_group>
+</insertAfter>
+	
+<insertAfter xpath="/items//effect_group[@name='MediumArmor']">
+	<effect_group>
+		<passive_effect operation="base_add" name="DegradationMax"			value="-100,100"/>
+		<passive_effect operation="base_add" name="PhysicalDamageResist"	value="-.25,.25"/>
+		<passive_effect operation="base_add" name="ElementalDamageResist"	value="-.25,.25"/>
+		<passive_effect operation="base_add" name="ResistCold"				value="-2,2"/>
+		<passive_effect operation="base_add" name="ResistHeat"				value="-2,2"/>
+		<passive_effect operation="base_add" name="BuffResistance"			value=".05,.075"		tier="1,90"		tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffAbrasionCatch,buffLaceration,buffInfectionCatch,buffInjuryStunned01,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="1"				tier="1,20"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="2"				tier="21,40"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="3"				tier="41,60"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="4"				tier="61,80"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="5"				tier="81,89"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="6"				tier="90"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100"				tags="EconomicValue"/>
+		<passive_effect operation="perc_add" name="StaminaChangeOT"			value="-.0281"			tags="walking"/>
+		<passive_effect operation="perc_add" name="StaminaChangeOT"			value="-.0562"			tags="running"/>
+		<passive_effect operation="base_set" name="DegradationPerUse"		value="1"				tags="armorMedium"/>
+		<passive_effect operation="perc_add" name="Mobility"				value="-.04"/>
+		<passive_effect operation="perc_add" name="NoiseMultiplier"			value=".1"/>
+	</effect_group>
+</insertAfter>
+
+<insertAfter xpath="/items//effect_group[@name='HeavyArmor']">
+	<effect_group>
+		<passive_effect operation="base_add" name="DegradationMax"			value="-200,200"/>
+		<passive_effect operation="base_add" name="PhysicalDamageResist"	value="-.25,.25"/>
+		<passive_effect operation="base_add" name="ElementalDamageResist"	value="-.25,.25"/>
+		<passive_effect operation="base_add" name="ResistCold"				value="-2,2"/>
+		<passive_effect operation="base_add" name="ResistHeat"				value="-2,2"/>
+		<passive_effect operation="base_add" name="BuffResistance"			value=".075,.1"			tier="1,90"		tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffAbrasionCatch,buffLaceration,buffInfectionCatch,buffInjuryStunned01,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="1"				tier="1,20"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="2"				tier="21,40"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="3"				tier="41,60"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="4"				tier="61,80"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="5"				tier="81,89"/>
+		<passive_effect operation="base_set" name="ModSlots"				value="6"				tier="90"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100"				tags="EconomicValue"/>
+		<passive_effect operation="perc_add" name="StaminaChangeOT"			value="-.045"			tags="walking"/>
+		<passive_effect operation="perc_add" name="StaminaChangeOT"			value="-.09"			tags="running"/>
+		<passive_effect operation="base_set" name="DegradationPerUse"		value="1"				tags="armorHeavy"/>
+		<passive_effect operation="perc_add" name="Mobility"				value="-.06"/>
+		<passive_effect operation="perc_add" name="NoiseMultiplier"			value=".2"/>
+	</effect_group>
+</insertAfter>
+
+<!--    
+		# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+			A C C E S S O R Y   E F F E C T S
+	
+		# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+-->
+
+<insertAfter xpath="/items//effect_group[@type='GasMask']">
+	<!-- 1 snow, 8 wasteland, 9 burnt_forest, 5 desert -->
+	<effect_group name="Random Modifier" tiered="false">
+		<passive_effect operation="perc_add" name="FilterMax"			value="-.05,.05"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$ulmHelmetGasMaskEquipped" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveCVar" cvar="$ulmHelmetGasMaskEquipped"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="ulmBuffHelmetGasMaskActive"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirements compare_type="or">
+			<requirement name="InBiome" biome="8"/>
+			<requirement name="InBiome" biome="9"/>
+		</requirements>
+		<triggered_effect trigger="onSelfEnteredBiome" action="AddBuff" buff="ulmBuffHelmetGasMaskStart">
+			<requirement name="!HasBuff" buff="ulmBuffAirPurifierActive"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="ulmBuffHelmetGasMaskStart">
+			<requirement name="!HasBuff" buff="ulmBuffAirPurifierActive"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="ulmBuffHelmetGasMaskStart">
+			<requirement name="!HasBuff" buff="ulmBuffAirPurifierActive"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="!InBiome" biome="8"/>
+		<requirement name="!InBiome" biome="9"/>
+		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="ulmBuffHelmetGasMaskStop"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="ulmBuffHelmetGasMaskStop"/>
+		<triggered_effect trigger="onSelfEnteredBiome" action="AddBuff" buff="ulmBuffHelmetGasMaskStop"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="ulmBuffAirPurifierActive"/>
+		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="ulmBuffHelmetGasMaskStop"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="ulmBuffHelmetGasMaskStop"/>
+		<triggered_effect trigger="onSelfEnteredBiome" action="AddBuff" buff="ulmBuffHelmetGasMaskStop"/>
+	</effect_group>
+</insertAfter>
+
+<insertAfter xpath="/items//effect_group[@has_filter='true']">
+	<property name="RechargeItem" value="ulmResourceGasMaskFilter"/>
+	<property name="RechargeItemActionIcon" value="symbol_hexagons"/>
+	<property name="RechargeItemActionLabel" value="lblContextActionRecharge"/>
+	<property name="RechargeItemActionBuff" value="ulmBuffHelmetGasMaskRecharge"/>
+	<effect_group>
+		<passive_effect operation="base_set" name="FilterMax" value="1000,3000" tier="1,90"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$ulmHelmetGasMaskEquipped" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveCVar" cvar="$ulmHelmetGasMaskEquipped"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="ulmBuffHelmetGasMaskActive"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirements compare_type="or">
+			<requirement name="InBiome" biome="8"/>
+			<requirement name="InBiome" biome="9"/>
+		</requirements>
+		<triggered_effect trigger="onSelfEnteredBiome" action="AddBuff" buff="ulmBuffHelmetGasMaskStart">
+			<requirement name="!HasBuff" buff="ulmBuffAirPurifierActive"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="ulmBuffHelmetGasMaskStart">
+			<requirement name="!HasBuff" buff="ulmBuffAirPurifierActive"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="ulmBuffHelmetGasMaskStart">
+			<requirement name="!HasBuff" buff="ulmBuffAirPurifierActive"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="!InBiome" biome="8"/>
+		<requirement name="!InBiome" biome="9"/>
+		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="ulmBuffHelmetGasMaskStop"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="ulmBuffHelmetGasMaskStop"/>
+		<triggered_effect trigger="onSelfEnteredBiome" action="AddBuff" buff="ulmBuffHelmetGasMaskStop"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="ulmBuffAirPurifierActive"/>
+		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="ulmBuffHelmetGasMaskStop"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="ulmBuffHelmetGasMaskStop"/>
+		<triggered_effect trigger="onSelfEnteredBiome" action="AddBuff" buff="ulmBuffHelmetGasMaskStop"/>
+	</effect_group>
+</insertAfter>
+
+</Subquake>

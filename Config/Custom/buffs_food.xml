@@ -1,0 +1,52 @@
+<Subquake>
+
+<set xpath="/buffs/buff[@name='buffShamChowder']">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<display_value value=".buffShamChowderDisplay"/>
+	<display_value_format value="time"/>
+
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffShamChowderDuration" operation="subtract" value="@$MetabolismDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffShamChowderDisplay" operation="set" value="@$buffShamChowderDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffShamChowderDisplay" operation="divide" value="@$MetabolismDuration"/>
+	</effect_group>
+
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffShamChowder">
+			<requirement name="CVarCompare" cvar="$buffShamChowderDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".buffShamChowderDisplay,$buffShamChowderDuration"/>
+	</effect_group>
+
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="ULM_Modify,UndeadLegacy" progression="fortitude" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ULM_Modify,UndeadLegacy" progression="fortitude" operation="subtract" value="5"/>
+	</effect_group>
+</set>
+
+<set xpath="/buffs/buff[@name='buffDrugRecog']">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<display_value value=".buffDrugRecogDisplay"/>
+	<display_value_format value="time"/>
+	<!-- Increase ranged damage 50% for 2 minutes. -->
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugRecogDuration" operation="subtract" value="@$MetabolismDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRecogDisplay" operation="set" value="@$buffDrugRecogDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugRecogDisplay" operation="divide" value="@$MetabolismDuration"/>
+	</effect_group>
+
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugRecog">
+			<requirement name="CVarCompare" cvar="$buffDrugRecogDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$buffDrugRecogDuration,.buffDrugRecogDisplay"/>
+	</effect_group>
+
+	<effect_group>
+		<passive_effect name="EntityDamage" operation="perc_add" value=".5" tags="ranged"/>
+		<passive_effect name="WaterChangeOT" operation="base_subtract" value=".08"/> <!-- 30/360 -->
+	</effect_group></set>
+
+</Subquake>

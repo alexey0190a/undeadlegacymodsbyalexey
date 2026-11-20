@@ -1,0 +1,317 @@
+<Subquake>
+
+<append xpath="/lootcontainers">
+
+<lootgroup name="groupQuestTest1" loot_quality_template="ulmQuestQuality">
+	<item name="meleeToolRepairT0StoneAxe"/></lootgroup>
+<lootgroup name="groupQuestTest2" loot_quality_template="ulmQuestQuality">
+	<item name="meleeToolSalvageT2Ratchet"/></lootgroup>
+<lootgroup name="groupQuestTest3" loot_quality_template="ulmQuestQuality">
+	<item name="gunMGT3M60"/></lootgroup>
+<lootgroup name="ulmGroupQuestTestLoot">
+	<item group="groupQuestTest1" loot_prob_template="ulmQuestTestProb1"/>
+	<item group="groupQuestTest2" loot_prob_template="ulmQuestTestProb2"/>
+	<item group="groupQuestTest3" loot_prob_template="ulmQuestTestProb3"/></lootgroup>
+
+<lootgroup name="groupQuestFood">
+	<item name="foodCornOnTheCob" count="2,3" loot_prob_template="ProbT0"/>
+	<item name="foodBakedPotato" count="2,3" loot_prob_template="ProbT0"/>
+	<item name="foodCornBread" count="2,3" loot_prob_template="ProbT0"/>
+	<item name="foodCharredMeat" count="2,3" loot_prob_template="ProbT0"/>
+	<item name="foodGrilledMeat" count="2,3" loot_prob_template="ProbT0"/>
+	<item group="groupCannedFood" count="1,2" loot_prob_template="ProbT1"/>
+	<item name="foodBaconAndEggs" count="1" loot_prob_template="ProbT1"/>
+	<item name="foodBlueberryPie" count="1" loot_prob_template="ProbT1"/>
+	<item name="foodVegetableStew" count="1" loot_prob_template="ProbT1"/>
+	<item name="foodMeatStew" count="1" loot_prob_template="ProbT2"/>
+	<item name="foodHoboStew" count="1" loot_prob_template="ProbT2"/>
+	<item name="foodShamChowder" count="1" loot_prob_template="ProbT2"/>
+	<item name="foodMeatStew" count="1" loot_prob_template="ProbT3"/>
+	<item name="foodHoboStew" count="1" loot_prob_template="ProbT3"/>
+	<item name="foodShamChowder" count="1" loot_prob_template="ProbT3"/>
+	<item name="foodChiliDog" count="1" loot_prob_template="ProbT3"/>
+	<item name="foodFishTacos" count="1" loot_prob_template="ProbT3"/>
+	<item name="foodShepardsPie" count="1" loot_prob_template="ProbT3"/></lootgroup>
+
+<lootgroup name="groupQuestResourcesT0">
+	<item name="ulmResourcePlank" count="500"/>
+	<item name="ulmResourceOreStone" count="250"/>
+	<item name="resourceCoal" count="200"/>
+	<item name="resourceGunPowder" count="100"/>
+	<item name="resourceGlue" count="5"/>
+	<item name="resourceLockPick" count="5"/></lootgroup>
+
+<lootgroup name="groupQuestResourcesT1">
+	<item name="resourceCement" count="500"/>
+	<item name="resourceConcreteMix" count="250"/>
+	<item name="resourceGunPowder" count="200"/>
+	<item name="resourceGlue" count="10"/>
+	<item name="resourceDuctTape" count="5"/>
+	<item name="resourceMechanicalParts" count="5"/>
+	<item name="resourceRepairKit" count="5"/>
+	<item name="resourceLockPick" count="10"/></lootgroup>
+
+<lootgroup name="groupQuestArmorHelmetCandle" loot_quality_template="qualBaseTemplate">
+	<item name="ulmArmorHelmetCandle"/></lootgroup>
+
+<lootgroup name="groupQuestArmorHelmetLight" loot_quality_template="qualBaseTemplate">
+	<item name="ulmArmorHelmetLight"/></lootgroup>
+
+<lootgroup name="groupQuestArmorNightVision" loot_quality_template="qualBaseTemplate">
+	<item name="ulmArmorNightVision"/></lootgroup>
+
+<lootgroup name="groupQuestBicycleParts" count="all">
+	<item name="ulmQuestRewardBicyclePartsBundle"/></lootgroup>
+
+<lootgroup name="groupQuestMinibikeParts" count="all">
+	<item name="questRewardMinibikePartsBundle"/></lootgroup>
+
+<lootgroup name="groupQuestMotorcycleParts" count="all">
+	<item name="questRewardMotorcyclePartsBundle"/></lootgroup>
+
+<lootgroup name="groupQuestGyrocopterParts" count="all">
+	<item name="questRewardGyrocopterPartsBundle"/></lootgroup>
+
+<lootgroup name="groupQuest4x4Parts" count="all">
+	<item name="questReward4x4PartsBundle"/>
+	<item name="ulmQuestRewardTruckPartsBundle" loot_prob_template="low"/></lootgroup>
+
+<lootgroup name="groupQuestLockPicks" count="all">
+	<item name="resourceLockPick" count="30,50"/></lootgroup>
+
+<lootgroup name="groupQuestTimedCharges" count="all">
+	<item name="thrownTimedCharge" count="10"/></lootgroup>
+
+<lootgroup name="groupQuestForge" count="all">
+	<item name="ulmStationFurnace_1"/></lootgroup>
+
+<lootgroup name="groupQuestWorkbench" count="all">
+	<item name="ulmStationWorkbench_1"/></lootgroup>
+
+<lootgroup name="groupQuestCementMixer" count="all">
+	<item name="cementMixer"/></lootgroup>
+
+<lootgroup name="groupQuestChemistryStation" count="all">
+	<item name="ulmStationChemistry_1"/></lootgroup>
+
+<lootgroup name="groupQuestForgedIron" count="all">
+	<item name="resourceForgedIron" count="50"/></lootgroup>
+
+<lootgroup name="groupQuestForgedSteel" count="all">
+	<item name="resourceForgedSteel" count="100"/></lootgroup>
+
+<lootgroup name="groupQuestCasinoCoinT1" count="all">
+	<item name="casinoCoin" count="2500"/></lootgroup>
+
+<lootgroup name="groupQuestCasinoCoinT2" count="all">
+	<item name="casinoCoin" count="5000"/></lootgroup>
+
+<lootgroup name="groupQuestCasinoCoinT3" count="all">
+	<item name="casinoCoin" count="7500"/></lootgroup>
+
+<lootgroup name="groupQuestcasinoCoinT4" count="all">
+	<item name="casinoCoin" count="10000"/></lootgroup>
+
+<lootgroup name="groupQuestcasinoCoinT5" count="all">
+	<item name="casinoCoin" count="12500"/></lootgroup>
+
+<lootgroup name="groupQuestFarmPlotsT1" count="all">
+	<item name="questRewardFarmT1Bundle"/></lootgroup>
+
+<lootgroup name="groupQuestFarmPlotsT2" count="all">
+	<item name="questRewardFarmT3Bundle"/></lootgroup>
+
+<lootgroup name="groupQuestFarmPlotsT3" count="all">
+	<item name="questRewardFarmT3Bundle"/></lootgroup>
+
+<lootgroup name="groupAirDropFirearmsT0">
+	<item name="questRewardT0HandgunBundle"/>
+	<item name="questRewardT0RifleBundle"/>
+	<item name="questRewardT0ShotgunBundle"/>
+	<item name="questRewardT0MachineGunBundle"/></lootgroup>
+
+<lootgroup name="groupAirDropFirearmsT1">
+	<item name="questRewardT1HandgunBundle"/>
+	<item name="questRewardT1ShotgunBundle"/>
+	<item name="questRewardT1RifleBundle"/>
+	<item name="questRewardT1MachineGunBundle"/></lootgroup>
+
+<lootgroup name="groupAirDropFirearmsT2">
+	<item name="questRewardT2HandgunBundle"/>
+	<item name="questRewardT2ShotgunBundle"/>
+	<item name="questRewardT2RifleBundle"/>
+	<item name="questRewardT2MachineGunBundle"/></lootgroup>
+
+<lootgroup name="groupAirDropFirearmsT3">
+	<item name="questRewardT3HandgunBundle"/>
+	<item name="questRewardT3SMGBundle"/>
+	<item name="questRewardT3ShotgunBundle"/>
+	<item name="questRewardT3RifleBundle"/>
+	<item name="questRewardT3MachineGunBundle"/></lootgroup>
+
+<lootgroup name="groupQuestWoodShapes" count="all">
+	<item name="ulmResourcePlank" count="200"/></lootgroup>
+
+<lootgroup name="groupQuestCobblestoneShapes" count="all">
+	<item name="ulmResourceOreStone" count="200"/></lootgroup>
+
+<lootgroup name="groupQuestConcreteShapes" count="all">
+	<item name="resourceConcreteMix" count="200"/></lootgroup>
+
+<lootgroup name="groupQuestSteelShapes" count="all">
+	<item name="resourceForgedSteel" count="200"/></lootgroup>
+
+<lootgroup name="groupQuestWrench" count="1" loot_quality_template="ulmQuestQuality">
+	<item name="meleeToolSalvageT1Wrench"/>
+	<item name="meleeToolRepairT1ClawHammer"/></lootgroup>
+
+<lootgroup name="groupQuestNailgun" count="all">
+	<item name="meleeToolRepairT3Nailgun"/></lootgroup>
+
+<lootgroup name="groupQuestT2Food" count="all">
+	<item name="questRewardT2FoodBundle"/></lootgroup>
+
+<lootgroup name="groupQuestT3Food" count="all">
+	<item name="questRewardT3FoodBundle"/></lootgroup>
+
+<lootgroup name="groupQuestT4Food" count="all">
+	<item name="questRewardT4FoodBundle"/></lootgroup>
+
+<lootgroup name="groupQuestT1Books" count="all">
+	<item name="questRewardT1BookBundle"/></lootgroup>
+
+<lootgroup name="groupQuestT2Books" count="all">
+	<item name="questRewardT2BookBundle"/></lootgroup>
+
+<lootgroup name="groupQuestT3Books" count="all">
+	<item name="questRewardT3BookBundle"/></lootgroup>
+
+<lootgroup name="groupQuestT4Books" count="all">
+	<item name="questRewardT4BookBundle"/></lootgroup>
+
+<lootgroup name="groupQuestT5Books" count="all">
+	<item name="questRewardT5BookBundle"/></lootgroup>
+
+<lootgroup name="groupQuestT1Traps" count="all">
+	<item name="questRewardT1TrapsBundle"/></lootgroup>
+
+<lootgroup name="groupQuestT2Traps" count="all">
+	<item name="questRewardT2TrapsBundle"/></lootgroup>
+
+<lootgroup name="groupQuestDartTrap" count="all">
+	<item name="questRewardDartTrapBundle"/></lootgroup>
+
+<lootgroup name="groupQuestBladeTrap" count="all">
+	<item name="questRewardBladeTrapBundle"/></lootgroup>
+
+<lootgroup name="groupQuestShotgunTurret" count="all">
+	<item name="questRewardShotgunTurretBundle"/></lootgroup>
+
+<lootgroup name="groupQuestAutoTurret" count="all">
+	<item name="questRewardAutoTurretBundle"/></lootgroup>
+
+<lootgroup name="groupQuestSecuritySystem" count="all">
+	<item name="questRewardSecuritySystemBundle"/></lootgroup>
+
+<lootgroup name="groupQuestGeneratorBank" count="all">
+	<item name="questRewardGeneratorBankBundle"/></lootgroup>
+
+<lootgroup name="groupQuestBatteryBank" count="all">
+	<item name="questRewardBatteryBankBundle"/></lootgroup>
+
+<lootgroup name="groupQuestSolarBank" count="all">
+	<item name="questRewardSolarBankBundle"/></lootgroup>
+
+<lootgroup name="groupQuestT1MeleeMods" count="all">
+	<item name="questRewardT1MeleeModsBundle"/></lootgroup>
+
+<lootgroup name="groupQuestT2MeleeMods" count="all">
+	<item name="questRewardT2MeleeModsBundle"/></lootgroup>
+
+<lootgroup name="groupQuestT3MeleeMods" count="all">
+	<item name="questRewardT3MeleeModsBundle"/></lootgroup>
+
+<lootgroup name="groupQuestT1RangedMods" count="all">
+	<item name="questRewardT1RangedModsBundle"/></lootgroup>
+
+<lootgroup name="groupQuestT2RangedMods" count="all">
+	<item name="questRewardT2RangedModsBundle"/></lootgroup>
+
+<lootgroup name="groupQuestT3RangedMods" count="all">
+	<item name="questRewardT3RangedModsBundle"/></lootgroup>
+
+<lootgroup name="groupAmmoCraftingBundle" count="all"><!-- Quest -->
+	<item name="questRewardAmmoCraftingBundle"/></lootgroup>
+
+<lootgroup name="groupAirDropT1Bundles">
+	<item group="groupQuestFarmPlotsT1"/>
+	<item group="groupAmmoCraftingBundle"/>
+	<item group="groupAirDropFirearmsT0"/>
+	<item group="groupQuestWoodShapes"/>
+	<item group="groupQuestWrench"/>
+	<item group="groupQuestT2Food"/>
+	<item group="groupQuestT1Books"/>
+	<item group="groupQuestT1MeleeMods"/>
+	<item group="groupQuestT1RangedMods"/></lootgroup>
+
+<lootgroup name="groupAirDropT2Bundles">
+	<item group="groupQuestFarmPlotsT2"/>
+	<item group="groupAirDropFirearmsT1"/>
+	<item group="groupQuestNailgun"/>
+	<item group="groupQuestForgedIron"/>
+	<item group="groupQuestLockPicks"/>
+	<item group="groupQuestT3Food"/>
+	<item group="groupQuestCobblestoneShapes"/>
+	<item group="groupQuestT2MeleeMods"/>
+	<item group="groupQuestT2RangedMods"/></lootgroup>
+
+<lootgroup name="groupAirDropT3Bundles">
+	<item group="groupQuestFarmPlotsT3"/>
+	<item group="groupAirDropFirearmsT2"/>
+	<item group="groupQuestTimedCharges"/>
+	<item group="groupQuestT3MeleeMods"/>
+	<item group="groupQuestT3RangedMods"/></lootgroup>
+
+<lootgroup name="groupAirDropT4Bundles">
+	<item group="groupAirDropFirearmsT3"/>
+	<item group="groupQuestConcreteShapes"/>
+	<item group="groupQuestT4Food"/>
+	<item group="groupQuestT3MeleeMods"/>
+	<item group="groupQuestT3RangedMods"/></lootgroup>
+
+<lootgroup name="groupAirDropT5Bundles">
+	<item group="groupQuestForgedSteel"/>
+	<item group="groupQuestSteelShapes"/>
+	<item group="groupQuestT3MeleeMods"/>
+	<item group="groupQuestT3RangedMods"/>
+	<item group="groupAmmoCraftingBundle"/></lootgroup>
+
+<lootgroup name="groupAirDrop01">
+	<item group="groupAirDropT1Bundles" loot_prob_template="ProbT0"/>
+	<item group="groupAirDropT2Bundles" loot_prob_template="ProbT1"/>
+	<item group="groupAirDropT3Bundles" loot_prob_template="ProbT2"/>
+	<item group="groupAirDropT4Bundles" loot_prob_template="ProbT3"/>
+	<item group="groupAirDropT5Bundles" loot_prob_template="ProbT3"/></lootgroup>
+
+<lootgroup name="groupAirDrop02">
+	<item group="airdropfood" count="1,3"/>
+	<item group="airdropMedicine" count="1,2"/>
+<!--<item group="booksCookingT0" count="1"/>
+	<item group="booksCookingT1" count="1" loot_prob_template="ProbT1"/>
+	<item group="booksCookingT2" count="1" loot_prob_template="ProbT2"/>--></lootgroup>
+
+<lootgroup name="groupAirDrop03">
+	<item group="groupAirDropT1Bundles" loot_prob_template="ProbT0"/>
+	<item group="groupAirDropT2Bundles" loot_prob_template="ProbT1"/>
+	<item group="groupAirDropT3Bundles" loot_prob_template="ProbT2"/>
+	<item group="groupAirDropT4Bundles" loot_prob_template="ProbT3"/>
+	<item group="groupAirDropT5Bundles" loot_prob_template="ProbT3"/></lootgroup>
+
+<lootgroup name="groupAirDrop" count="all">
+	<item group="groupAirDrop01" count="1"/>
+	<item group="groupAirDrop02" count="1"/>
+	<item group="groupAirDrop03" loot_prob_template="veryLow" force_prob="true"/></lootgroup>
+
+</append>
+
+</Subquake>

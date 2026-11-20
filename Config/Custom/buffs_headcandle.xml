@@ -1,0 +1,173 @@
+<Subquake>
+
+<append xpath="/buffs">
+
+<!-- C A N D L E   L I G H T -->
+
+<buff name="buffCandlelight_Update" icon="symbol_candle" icon_color="0,0,255" hidden="true">
+	<stack_type value="replace"/>
+	<duration value=".01"/>
+	<effect_group name="OnStart">
+		<requirement name="IsFPV"/>
+		<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive,UndeadLegacy" parent="Head" transform="candle/lightSource" active="false"/>
+		<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive,UndeadLegacy" parent="Head" transform="candle" active="false"/>
+		<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="CandleMesh" active="false"/>
+	</effect_group>
+	<effect_group name="OnStart">
+		<requirement name="!IsFPV"/>
+		<requirement name="!EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="CandleMesh" active="true"/>
+	</effect_group>
+	<effect_group name="Valid Item">
+		<requirement name="EquipmentHasTags,UndeadLegacy" slot="BiomeBadge" tags="candlelight"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffCandlelight_SelectView"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffCandlelight_Main"/>
+	</effect_group>
+	<effect_group name="Invalid Item">
+		<requirement name="!EquipmentHasTags,UndeadLegacy" slot="BiomeBadge" tags="candlelight"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffCandlelight_Main"/>
+	</effect_group></buff>
+
+<buff name="buffCandlelight_SelectView" icon="symbol_candle" icon_color="0,0,255" hidden="true">
+	<stack_type value="replace"/>
+	<duration value=".02"/>
+	<effect_group name="First Person View">
+		<requirement name="IsFPV"/>
+		<requirement name="EquipmentHasName,UndeadLegacy" slot="BiomeBadge" id="ulmArmorHelmetCandle"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="AddPartFPV" part="CameraLight" prefab="#Mods/UndeadLegacy/Resources/Subquake_Items.ulm?HelmetCandleLight_Subquake_FPV" parentTransform="CameraNode" localPos="0,0.1,0" localRot="0,0,0"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="CameraLight" active="false">
+			<requirement name="!HasBuff" buff="buffCandlelight_Active"/></triggered_effect>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="CameraLight" active="true">
+			<requirement name="HasBuff" buff="buffCandlelight_Active"/></triggered_effect>
+	</effect_group>
+	<effect_group name="Third Person View Default">
+		<requirement name="!IsFPV"/>
+		<requirement name="!EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<requirement name="EquipmentHasName,UndeadLegacy" slot="BiomeBadge" id="ulmArmorHelmetCandle"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="AddPartTPV" part="CandleMesh" prefab="#Mods/UndeadLegacy/Resources/Subquake_Items.ulm?HelmetCandleMesh_Subquake_TPV"  parentTransform="Spotlight" localPos="0, 0.041, 0.008" localRot="345,0,0"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="AddPartTPV" part="LightSource" prefab="#Mods/UndeadLegacy/Resources/Subquake_Items.ulm?HelmetCandleLight_Subquake_TPV" parentTransform="Spotlight" localPos="0, 0.055, -0.006" localRot="0,0,0"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="LightSource" active="false">
+			<requirement name="!HasBuff" buff="buffCandlelight_Active"/></triggered_effect>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="LightSource" active="true">
+			<requirement name="HasBuff" buff="buffCandlelight_Active"/></triggered_effect>
+	</effect_group>
+	<effect_group name="Third Person View With Attachments">
+		<requirement name="!IsFPV"/>
+		<requirement name="EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<requirement name="EquipmentHasName,UndeadLegacy" slot="BiomeBadge" id="ulmArmorHelmetCandle"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="candle" active="true"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="candle/lightSource" active="false">
+			<requirement name="!HasBuff" buff="buffCandlelight_Active"/></triggered_effect>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="candle/lightSource" active="true">
+			<requirement name="HasBuff" buff="buffCandlelight_Active"/></triggered_effect>
+	</effect_group></buff>
+
+<buff name="buffCandlelight_Main" icon="symbol_candle" icon_color="0,255,0" hidden="true">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<update_rate value=".2"/>
+	<effect_group name="General">
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePreview,UndeadLegacy" part="DefaultCandleLight"/>
+	</effect_group>
+	<effect_group name="OnUpdate">
+		<requirement name="EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="SetActiveInPreview,UndeadLegacy" parent="Head" transform="candle" active="false"/>
+	</effect_group>
+	<effect_group name="OnUpdate">
+		<requirement name="CVarCompare" cvar=".IsPreviewVision" operation="Equals" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffCandlelight_Preview"/>
+	</effect_group>
+	<effect_group name="OnRemove - Cleanup">
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePart" part="CameraLight"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePart" part="LightSource"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePart" part="CandleMesh"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="SetPartActive" part="CandleMesh" active="false"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive,UndeadLegacy" parent="Head" transform="candle/lightSource" active="false"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive,UndeadLegacy" parent="Head" transform="candle" active="false"/>
+	</effect_group></buff>
+
+<buff name="buffCandlelight_Preview" hidden="true">
+	<stack_type value="effect"/>
+	<duration value=".02"/>
+	<effect_group>
+		<requirement name="EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfBuffStart" action="SetActiveInPreview,UndeadLegacy" parent="Head" transform="candle" active="true"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemovePreview,UndeadLegacy" part="DefaultCandleLight"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="!EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddPreview,UndeadLegacy" part="DefaultCandleLight" prefab="#Mods/UndeadLegacy/Resources/Subquake_Items.ulm?HelmetCandleMesh_Subquake_TPV" parentTransform="Spotlight" localPos="0, 0.041, 0.008" localRot="345,0,0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="SetActiveInPreview,UndeadLegacy" parent="Head" transform="candle" active="false"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveCVar" cvar=".IsPreviewVision"/>
+	</effect_group></buff>
+
+<buff name="buffCandlelight_Start" hidden="true">
+	<stack_type value="effect"/>
+	<duration value=".1"/>
+	<effect_group name="Check if have enough charges">
+		<requirement name="ULM_Compare,UndeadLegacy" meta_key="ChargesUsed" operation="LT" passive_effect="ChargesMax" target="self" slot="BiomeBadge" tags="hasCharges"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffCandlelight_Start2"/>
+	</effect_group>
+	<effect_group name="Check if have enough charges">
+		<requirement name="ULM_Compare,UndeadLegacy" meta_key="ChargesUsed" operation="GTE" passive_effect="ChargesMax" target="self" slot="BiomeBadge" tags="hasCharges"/>
+		<triggered_effect trigger="onSelfBuffFinish" silent_on_equip="true" action="PlaySound" target="self" sound="ulmErrorSmall" play_in_head="false"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="ULM_SetItemActive,UndeadLegacy" slot="BiomeBadge" active="false"/>
+	</effect_group></buff>
+
+<buff name="buffCandlelight_Start2" hidden="true">
+	<stack_type value="effect"/>
+	<duration value=".1"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="CameraLight" active="@.IsFPV"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="LightSource" active="@!.IsFPV">
+			<requirement name="!EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="candle/lightSource" active="@!.IsFPV">
+			<requirement name="EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffFinish" silent_on_equip="true" action="PlaySound" target="self" sound="ulmLightMatches" play_in_head="false"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffCandlelight_Active"/>
+	</effect_group></buff>
+
+<buff name="buffCandlelight_Stop" hidden="true">
+	<stack_type value="effect"/>
+	<duration value=".1"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffFinish" silent_on_equip="true" action="PlaySound" target="self" sound="ulmLightMatches" play_in_head="false">
+			<requirement name="HasBuff" buff="buffHeadlight_Active"/></triggered_effect>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffCandlelight_Active"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="CameraLight" active="false"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="LightSource" active="false"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="candle/lightSource" active="false">
+			<requirement name="EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		</triggered_effect>
+	</effect_group></buff>
+
+<buff name="buffCandlelight_Active" name_key="ulmBuffHelmetLightActive" icon="symbol_candle" icon_color="255,255,255">
+	<stack_type value="effect"/>
+	<duration value="0"/>
+	<display_value value="ulmBatteryHelmetLight"/>
+	<display_value_key value="{0:0}%"/>
+	<effect_group>
+		<!-- 100 = 100%, duration = 30 min, ticks every 10 seconds = 180 ticks; 0.556 per tick to be subtracted -->
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$ulmBatteryHelmetLightTick" operation="set" value="0.556"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$ulmBatteryHelmetLightEfficiency" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$ulmBatteryHelmetLightTick" operation="multiply" value="@$ulmBatteryHelmetLightEfficiency"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="ulmBatteryHelmetLight" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ULM_Modify,UndeadLegacy" meta_key="ChargesUsed" tags="hasCharges" slot="BiomeBadge" operation="add" value="@$ulmBatteryHelmetLightTick" cvar_out="ulmBatteryHelmetLightInternal"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ULM_Modify,UndeadLegacy" cvar="ulmBatteryHelmetLightInternal" operation="divide" value="ChargesMax" value_type="PassiveEffect"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="ulmBatteryHelmetLight" operation="subtract" value="@ulmBatteryHelmetLightInternal"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="ulmBatteryHelmetLight" operation="multiply" value="100"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffCandlelight_Stop">
+			<requirement name="ULM_Compare,UndeadLegacy" meta_key="ChargesUsed" operation="GT" tags="hasCharges" target="self" slot="BiomeBadge" passive_effect="ChargesMax"/>
+		</triggered_effect>
+
+	</effect_group></buff>
+
+
+</append>
+
+
+</Subquake>

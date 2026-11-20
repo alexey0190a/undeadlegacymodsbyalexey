@@ -1,0 +1,1842 @@
+<Subquake>
+
+<set xpath="//active_buff_entry">
+	<rect size="64,64" style="press2,hover,scroll" controller="ULM_ActiveBuffEntry,UndeadLegacy" tooltip="{buffName}" visible="{hasEntry}">
+		<sprite style="hidden" name="background" pos="29,-29"/>
+		<texture style="ulmBuff" size="62,62"/>
+		<sprite style="ulmBuffFill" size="62,62" fill="{buffTimeFill}" color="{buffColor}"/>
+		<sprite depth="4" size="42,42" pos="32,-32" pivot="center" name="Icon" sprite="{buffIcon}" foregroundlayer="true"/>
+		<label depth="6" pos="0,-34" size="58,28" font_size="20" text="{buffTimeLeft}" justify="right" style="outline" color="[labelColor2]"/>
+		<label depth="6" pos="0,-42" size="58,28" font_size="20" text="{buffText}" justify="right" style="outline" color="[labelColor2]"/>
+	</rect>
+</set>
+    
+<set xpath="//category_icon">
+	<button name="categoryIcon" controller="CategoryEntry" categoryname="${categoryname}" spritename="${spritename}" displayname="${displayname}" displayname_key="${displayname_key}" depth="1" size="28,28" sprite="{categoryicon|once}" tooltip="{categorydisplayname|once}" pivot="center" collider_scale="1.5" sound="[sfx_btn_category]"/>
+</set>
+
+<set xpath="//debugslider">
+	<rect name="${name}" depth="${depth}" controller="Slider" pos="${pos}" width="${width}" height="62" >
+		<label depth="1" pos="0, -6"  width="${width}" height="28" text="{name}: {value}" />
+		<rect pos="-2,-34">
+			<sprite name="bar" controller="SliderBar" depth="1" pos="4, -5" color="[mediumGrey]" width="${width-12}" height="20" type="sliced" style="press, scroll" />
+			<sprite depth="2" pos="4, -5" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" width="${width-12}" height="20" foregroundlayer="true" />
+			<sprite name="thumb" controller="SliderThumb" depth="2" pos="${width-8}, -15" color="[lightGrey]" width="16" height="30" style="press, hover, drag, scroll" pivot="center">
+				<sprite depth="2" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" width="16" height="30" pivot="center"/>
+			</sprite>
+		</rect>
+	</rect>
+</set>
+	
+<set xpath="//forge_material">
+	<rect>
+		<rect size="135,28" on_hover="true" tooltip_key="${name}">
+			<label name="material" style="hidden"/>
+            <sprite style="background" pos="-1,1" size="135,30" atlas="UIBackground" sprite="ui_forge_material"/>
+			<!--<sprite depth="6" size="20,20" pos="4,-4" atlas="ItemIconAtlas" sprite="${icon}" foregroundlayer="true"/>-->
+			<label depth="6" size="124,24" pos="4,-2" text_key="${name}"/>
+			<label depth="6" size="124,24" pos="4,-2" name="weight" justify="right" color="[beige]"/>
+		</rect>
+	</rect>
+</set>
+    
+<set xpath="//material_stack">
+	<rect depth="15" size="92,92" controller="ULM_MaterialStack,UndeadLegacy" style="itemStack, hover, scroll" on_press="true" on_doubleclick="true" collider_scale="1.1" sound="[recipe_click]"
+        hover_background_color="0,255,144" default_background_color="255,255,255" selected_background_color="222,206,163">
+		<sprite name="background" style="hidden"/>
+		<sprite name="backgroundMain" style="hidden"/>
+		<sprite name="highlightOverlay" style="hidden"/>
+		<sprite style="ulmStack90"/>
+		<sprite depth="3" name="hoverBackground" sprite="ui_stack_hover" globalopacity="true"/>
+		<texture depth="4" name="textMaterial" pos="6,-6" size="80,80" material="Materials/Transparent Colored" globalopacity="true"/>
+		<sprite depth="13" name="lockIcon" pos="10,-10" size="20,20" sprite="ui_game_symbol_lock" foregroundlayer="true" visible="{islocked}"/>
+	</rect>
+</set>
+
+<set xpath="//challenge_entry">
+	<rect width="100" height="100" style="itemStack, hover, scroll" collider_scale="1.0" sound_play_on_hover="[default_hover]" controller="ULM_ChallengeEntry,UndeadLegacy" 
+	enabled_color="[labelColor]" disabled_color="[disabledLabelColor]" failed_color="255,0,0,255" row_color="190,190,190,40" selected_color="190,190,190,80" 
+	hover_color="190,190,190,80"
+	icon_hover="255,255,255" icon_enabled="225,225,225" icon_locked="180,180,180,128" icon_tracked="255,180,0" icon_redeemed="41,255,189" icon_redeemable="0,255,0"> <!-- visible="{hasentry}" -->
+		<sprite depth="3" name="background" sprite="ui_fill" width="100" height="100" color="{rowstatecolor}" type="sliced" globalopacity="true" fillcenter="false"/> 
+		<sprite depth="10" name="itemIcon" pos="50,-46" width="84" height="84" sprite="{iconname}" color="{iconcolor}" pivot="center" foregroundlayer="true"/>
+		<rect width="96" height="8" position="2,-90" visible="{fillactive}"> 
+			<sprite depth="2" height="8" name="background" color="0,0,0,200" type="sliced"/>
+			<sprite depth="4" height="7" name="BarContent" color="118,214,161,220" type="filled" fill="{fillamount}"/>
+		</rect>
+	</rect>
+</set>
+	
+<set xpath="//challenge_list_entry">
+	<rect width="650" style="scroll" height="130" controller="ChallengeGroupEntry">
+		<sprite depth="1" style="background" size="1018,26"/>
+		<label depth="4" pos="3,-3" size="1014,22" text="{groupname}" justify="left"/>
+		<label depth="4" pos="210,-8" size="630,40" text="Resets: Day {resetday}" color="[white]" justify="center" visible="{hasreset}"/>
+		<grid depth="6" pos="0,-28" name="newList" rows="1" cols="10" width="650" height="130" cell_width="102" cell_height="102" repeat_content="true" arrangement="horizontal" controller="ChallengeEntryList">
+			<challenge_entry name="0"/>
+		</grid>
+	</rect>
+</set>
+
+<set xpath="//weather_challenge_entry">
+	<rect width="100" height="100" style="itemStack, hover, scroll" collider_scale="1.0" sound_play_on_hover="[default_hover]" controller="ULM_ChallengeEntry,UndeadLegacy" 
+	enabled_color="[labelColor]" disabled_color="[disabledLabelColor]" failed_color="255,0,0,255" row_color="190,190,190,40" selected_color="190,190,190,80" 
+	hover_color="190,190,190,80"
+	icon_hover="255,255,255" icon_enabled="225,225,225" icon_locked="180,180,180,128" icon_tracked="255,180,0" icon_redeemed="41,255,189" icon_redeemable="0,255,0"> <!-- visible="{hasentry}" -->
+		<sprite depth="3" name="background" sprite="ui_fill" width="100" height="100" color="{rowstatecolor}" type="sliced" globalopacity="true" fillcenter="false"/> 
+		<sprite depth="10" name="itemIcon" pos="50,-46" width="84" height="84" sprite="{iconname}" color="{iconcolor}" pivot="center" foregroundlayer="true"/>
+		<rect width="96" height="8" position="2,-90" visible="{fillactive}"> 
+			<sprite depth="2" height="8" name="background" color="0,0,0,200" type="sliced"/>
+			<sprite depth="4" height="7" name="BarContent" color="118,214,161,220" type="filled" fill="{fillamount}"/>
+		</rect>
+	</rect>
+</set>
+
+<set xpath="//weather_challenge_list_entry">
+	<rect width="650" style="scroll" height="130" controller="ChallengeGroupEntry">
+		<sprite depth="1" style="background" size="1018,26"/>
+		<label depth="4" pos="3,-3" size="1014,22" text="{groupname}" justify="left"/>
+		<label depth="4" pos="210,-8" size="630,40" text="Resets: Day {resetday}" color="[white]" justify="center" visible="{hasreset}"/>
+		<grid depth="6" pos="0,-28" name="newList" rows="1" cols="10" width="650" height="130" cell_width="102" cell_height="102" repeat_content="true" arrangement="horizontal" controller="ChallengeEntryList">
+			<weather_challenge_entry name="0"/>
+		</grid>
+	</rect>
+</set>
+	
+<set xpath="//option_selector">
+    <rect depth="3" size="250,26" controller="OptionsSelector">
+	    <label depth="5" name="lblTitle" pos="10,0" text="" justify="center" color="[lightGrey]"/>
+        <rect depth="1" name="textArea" pos="0,-37">
+			<rect name="clickable" pos="0,0" width="270" height="30" gamepad_selectable="true"/>
+			<sprite style="inputOption" width="270" sprite="ui_option_trigger"/>
+			<label depth="5" name="lblText" style="outline" pos="41,-3" size="190,26" font_size="26" text="{val|always}" justify="center" color="[white]"/>
+        </rect>
+		<button pos="20,-50" style="ulmButton30x30" name="leftArrow" sprite="ui_btn_30x30_next_n" hoversprite="ui_btn_30x30_next_h" disabledsprite="ui_btn_30x30_next_n" sound="[sfx_btn_prev]" flip="Horizontally"/>
+		<rect pos="30,0">
+			<button pos="0,-50" style="ulmButton30x30" name="rightArrow" sprite="ui_btn_30x30_next_n" hoversprite="ui_btn_30x30_next_h" disabledsprite="ui_btn_30x30_next_n" sound="[sfx_btn_next]"/>
+		</rect>
+    </rect>
+</set>
+	
+<set xpath="//quest_entry">
+	<rect size="398,40" controller="QuestEntry" style="press2, hover, scroll"
+		enabled_color="[labelColor]" disabled_color="[disabledLabelColor]" row_color="[ulmForeground]" hover_color="[ulmForegroundHover]" 
+		failed_color="255,0,0,255" complete_color="[disabledLabelColor]" finished_color="0,255,0,255" shared_color="[labelColor]"
+		failed_icon="ui_game_symbol_x" complete_icon="ui_game_symbol_check" finished_icon="ui_game_symbol_check" shared_icon="ui_game_symbol_players">
+		<sprite style="background"/>
+		<sprite depth="1" name="background" color="{rowstatecolor}" sprite="{rowstatesprite}" type="sliced"/>
+		<sprite depth="3" name="Icon" pos="10,-9" size="20,20" style="icon32px" foregroundlayer="true" sprite="{questicon}" color="{iconcolor}"/>
+		<sprite depth="3" name="Tracking" pos="-18,9" size="34,56" sprite="ui_entry_active" foregroundlayer="true" visible="{istracking}"/>
+		<label depth="3" name="Name" pos="40,-7" size="270,30" font_size="28" text="{questname}" color="{textstatecolor}"/>
+		<label depth="3" name="Distance" pos="310,-7" size="80,30" font_size="28" text="{distance}" justify="right"/>
+	</rect>
+</set>
+    
+<set xpath="//quest_objective_entry">
+	<rect size="440,40" controller="QuestObjectiveEntry"  complete_icon="symbol_map_ring_filled" incomplete_icon="symbol_map_ring" notstarted_icon="symbol_questionmark" 
+		complete_color="[labelComplete]" incomplete_color="[disabledColor]" notstarted_color="[white]">
+		<rect depth="2" visible="{hasobjective}">
+			<sprite style="background"/>
+			<sprite depth="3" pos="10,-9" size="20,20" style="icon32px" foregroundlayer="true" sprite="{objectivecompletesprite}" color="{objectivecompletecolor}"/>
+			<label depth="3" pos="40,-7" size="300,30" font_size="26" upper_case="true" text="{objectiveoptional}{objectivedescription}" color="{objectivephasecolor}"/>
+			<label depth="3" pos="340,-7" size="90,30" font_size="26" upper_case="true" justify="right" text="{objectivestate}" color="{objectivecompletecolor}"/>
+		</rect>
+	</rect>
+</set>
+    
+<set xpath="//quest_objective_tracker_entry">
+	<rect width="360" height="36" controller="QuestTrackerObjectiveEntry" visible="{hasobjective}">
+		<texture style="ulmQuestTrackEntry"/>
+		<sprite depth="1" pos="355,-9" name="iconTrack" style="icon22px" color="{objectivecompletecolor}" sprite="{objectivecompletesprite}" visible="{objectiveshowicon}"/>
+		<sprite depth="1" pos="10,-21" sprite="ui_quest_tracker" rotation="15" size="34,54" pivot="center" color="{objectivecompletecolor}" foregroundlayer="true" visible="{hasobjective}"/>
+		<label depth="1" pos="30,-5" size="220,28" font_size="28" justify="left" text="{objectiveoptional}{objectivedescription}" visible="{hasobjective}" style="outline"/>
+		<label depth="1" pos="300,-5" size="90,28" font_size="28" justify="center" text="{objectivestate}" color="{objectivecompletecolor}" visible="{hasobjective}" style="outline"/>
+	</rect>
+</set>
+
+<set xpath="//quest_turnin_entry">
+	<rect size="92,92" style="press, hover"  controller="ULM_QuestTurnInEntry,UndeadLegacy" selected_color="[green]" default_color="0,0,0,0" sound="[paging_click]"
+        hover_background_color="0,255,144" default_background_color="0,0,0,0" selected_background_color="222,206,163" visible="{hasreward}">
+		<sprite name="background" style="hidden" pos="0,9999"/>
+		<label name="durabilityValue" style="hidden" pos="0,9999"/>
+		<sprite depth="1" style="ulmStack90"/>
+    <!--<sprite depth="2" sprite="{blueprintOverlay}" type="sliced" globalopacity="true" foregroundlayer="true"/>-->
+		<sprite depth="7" name="hoverBackground" size="92,92" type="sliced" sprite="ui_stack_hover" globalopacity="true" color="0,0,0,0"/>
+		<sprite depth="3" name="windowIcon" style="icon30px" size="70,70" pos="36,-34" pivot="center" sprite="{rewardicon}" visible="{hasotherreward}"/>
+        <rect depth="6" pos="6,-78" visible="{hasdurability}">
+			<sprite depth="1" name="durabilityBackground" size="82,10" pos="-1,1" sprite="ui_durability_solid_bg" type="sliced" color="0,0,0,160"/>
+			<sprite depth="2" name="durabilityBar" size="80,8" sprite="ui_durability_solid" type="filled" fill="{durabilityFill}" color="{durabilitycolor}" foregroundlayer="true"/>
+		</rect>
+		<sprite depth="10" name="ItemIcon" pos="46,-46" size="80,80" atlas="{itemAtlas}" sprite="{rewardicon}" color="{rewardicontint}" pivot="center" foregroundlayer="true" visible="{hasitemreward}"/>
+        <sprite depth="12" name="TypeIcon" pos="5,-5" size="24,24" sprite="ui_game_symbol_{itemtypeicon}" foregroundlayer="true" color="{itemtypeicontint}" visible="{hasitemtypeicon}"/>
+		<sprite depth="15" name="lockTypeIcon" pos="10,-10" size="20,20" atlas="UIAltAtlas" sprite="{lockTypeIcon}" foregroundlayer="true"/>
+		<label depth="15" name="stackValue" pos="80,-72" size="99,28" text="{itemCount}" font_size="24" effect="outline" pivot="right" justify="right"/>
+	</rect>
+</set>
+<!--
+<set xpath="//equipment_weather_stack">
+	<rect depth="1" controller="EquipmentStack" style="itemStack" tooltip="test" allow_remove_item="false">
+		<sprite depth="2" name="backgroundMain" sprite="ui_empty" pos="-3,3" width="83" height="83" color="0,0,0,1" type="sliced" fillcenter="false"/>
+		<sprite depth="3" name="background" sprite="ui_empty" width="78" height="78" color="0,0,0,1" type="sliced" fillcenter="false"/>
+		<sprite depth="2" name="highlightOverlay" width="76" height="76" color="0,0,0,1" pos="1,-1" type="sliced" globalopacity="true"/>
+		<sprite depth="8" name="itemIcon" width="74" height="74" atlas="ItemIconAtlas" sprite="ui_empty" pos="39,-39" pivot="center" foregroundlayer="true"/>
+		<sprite depth="8" name="lockTypeIcon" width="34" height="34" sprite="" pos="2,-12" foregroundlayer="true"/>
+		<sprite depth="3" name="durabilityBackground" width="74" height="10" color="0,0,0,1" type="sliced" pos="2, -66" foregroundlayer="true"/>
+		<sprite depth="4" name="durability" width="74" height="10" color="0,0,0,1" type="filled" pos="2, -66" foregroundlayer="true"/>
+		<label depth="7" name="stackValue" pos="0,-50" width="78" height="28" text="" font_size="26" justify="center"/>
+	</rect>
+</set>
+--> 
+<set xpath="//shape_stack">
+	<rect size="92,92" style="itemStack, hover, scroll" controller="ULM_ShapeStack,UndeadLegacy" on_press="true" on_doubleclick="true" collider_scale="1.0" sound_play_on_hover="[default_hover]"
+        hover_background_color="0,255,144" default_background_color="255,255,255" selected_background_color="222,206,163">
+		<sprite name="background" style="hidden"/>
+		<sprite name="backgroundMain" style="hidden"/>
+		<sprite name="highlightOverlay" style="hidden"/>
+		<sprite style="ulmStack90"/>
+		<sprite depth="3" name="hoverBackground" sprite="ui_stack_hover" globalopacity="true"/>
+		<sprite depth="4" name="itemIcon" pos="46,-46" size="80,80" atlas="ItemIconAtlas" sprite="{itemIcon}" color="{itemIconTint}" pivot="center" foregroundlayer="true"/>
+		<sprite depth="11" pos="10,-10" size="20,20" sprite="ui_game_symbol_{itemTypeIcon}" foregroundlayer="true" visible="{hasItemTypeIcon}"/>
+		<!--<sprite depth="5" pos="16,-16" size="24,24" sprite="symbol_can_upgrade" pivot="center" foregroundlayer="true" visible="{showCanUpgrade}"/>-->
+		<button depth="20" name="btnCopyToClipboard" style="ulmButton30x30" size="22,22" pos="76,-16" sprite="symbol_copy" hoversprite="symbol_copy" defaultcolor="255,255,255,16" hovercolor="41,255,189" disabledsprite="symbol_save" tooltip_key="uiCopyIDToClipboard" pivot="center" hoverscale="1.2" sound="[sfx_btn_next]" visible="{showCopyToClipboard}"/>
+	</rect>
+</set>
+	
+<set xpath="//radial_entry">
+	<rect depth="15" height="75" width="75" style="hover" on_press="true" highlight_color="[lightGrey]" pivot="center" controller="RadialEntry">
+		<sprite name="border" style="hidden"/>
+		<sprite name="background" sprite="ui_empty">
+			<texture name="radial4" style="ulmRadialEntry4"/>
+			<texture name="radial8" style="ulmRadialEntry8"/>
+			<texture name="radial12" style="ulmRadialEntry12"/>
+		</sprite>
+		<rect name="radialOption">
+			<sprite depth="3" size="56,56" name="icon" pivot="center" foregroundlayer="true"/>
+			<label depth="10" name="text" size="60,50" pos="0,-30" font_size="25" justify="right" pivot="center" upper_case="true" style="outline"/>
+		</rect>
+	</rect>
+</set>
+
+<set xpath="//item_action_entry">
+	<rect size="178,30" controller="ULM_ItemActionEntry,UndeadLegacy" disabled_font_color="[disabledLabelColor]" default_font_color="[labelColor]"
+        hover_background_color="0,255,144,128" default_background_color="0,0,0,1">
+		<sprite style="background" size="178,31"/>
+        <rect depth="2" visible="{hasEntry}">
+		    <sprite style="hidden" name="background" color="0,0,0,1"/>
+			<sprite style="backgroundStrong" size="178,30"/>
+		    <sprite depth="2" name="hoverBackground" color="0,0,0,1" type="sliced" sprite="ui_fill" on_press="true" on_hover="true"/>
+		    <texture depth="3" pos="139,1" name="keyboardButtonBackground" type="sliced" style="ulmInfoPanelActionKey" visible="{hasKeyAssigned}"/>
+		    <sprite depth="4" name="Icon" pos="6,-5" size="20,20" sprite="{actionicon}" color="{statuscolor}" foregroundlayer="true"/>
+		    <label depth="4" name="Name" pos="95,-16" size="120,28" text="{actionname}" font_size="24" color="{statuscolor}" style="outline,caps" pivot="center"/>
+		    <gamepad_icon depth="4" name="gamepadIcon" pos="175,-15" pivot="Right" height="18"/>
+		    <label depth="4" name="keyboardButton" pos="175,-15" size="28,24" text="W" font_size="24" color="{statuscolor}" pivot="right" justify="center" upper_case="true"/>
+        </rect>
+	</rect>
+</set>
+
+<set xpath="//recipe_stack">
+	<rect size="92,92" controller="RecipeStack" collider_scale="1.1" rotation="180">
+		<sprite name="backgroundMain" style="hidden"/>
+		<sprite name="highlightOverlay" style="hidden"/>
+		<sprite style="ulmStack90"/>
+		<sprite depth="2" size="60,60" pivot="center" pos="45,-45" type="sliced" color="255,255,255,32" sprite="symbol_loading"/>
+		<sprite depth="3" name="blueprintOverlay" sprite="ui_empty" type="sliced" globalopacity="true" foregroundlayer="true"/>
+		<sprite name="background" sprite="ui_empty" type="sliced" style="press" on_hover="true"/>
+		<sprite depth="6" name="itemIcon" pos="45,-45" size="80,80" atlas="ItemIconAtlas" sprite="{itemicon}" color="{iconcolor}" pivot="center" foregroundlayer="true"/>
+		<sprite depth="8" name="lockIcon" pos="4,-4" size="18,18" sprite="ui_game_symbol_hammer" visible="false" foregroundlayer="true"/>
+		<label depth="8" name="count" pos="1,-61" size="80,26" font_size="22" justify="right" style="outline"/>
+		<label depth="8" name="timer" pos="46,-46" size="90,26" font_size="24" justify="center" pivot="center" color="[beige]" style="outline"/>
+		<sprite depth="6" name="overlay" pos="1,-1" size="90,90" color="64,128,64,30" type="sliced"/>
+		<sprite depth="9" name="cancel" size="92,92" type="sliced" sprite="ui_stack_cancel"/>
+	</rect>
+    <!--
+	<rect controller="RecipeStack" width="72" height="72" collider_scale="1.0">
+		<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="78" height="78" color="[black]" type="sliced" fillcenter="false"/>
+		<sprite name="background" color="[mediumGrey]" type="sliced" style="press" on_hover="true"/>
+		<sprite depth="1" name="itemIcon" width="64" height="64" atlas="ItemIconAtlas" sprite="" pos="36,-35" pivot="center" foregroundlayer="true"/>
+		<sprite depth="4" name="lockIcon" width="24" height="24" sprite="ui_game_symbol_hammer" pos="2,-2" visible="false" foregroundlayer="true"/>
+		<label depth="4" name="count" pos="0,-50" width="70" height="26" text="Test" font_size="24" justify="right" effect="outline"/>
+		<label depth="4" name="timer" pos="36,-36" width="70" height="26" font_size="24" justify="center" pivot="center" color="[beige]"/>
+		<sprite depth="2" name="overlay" width="72" height="72" color="32,32,32,128" type="sliced"/>
+		<sprite depth="3" name="cancel" sprite="ui_game_symbol_x" width="72" height="72" color="255,0,0,0" type="sliced" visible="false" foregroundlayer="true"/>
+	</rect>
+    -->
+</set>
+    
+<set xpath="//recipe_entry">
+	<panel disableautobackground="true" size="90,90" style="press2, hover, scroll" controller="ULM_ItemStackRecipe,UndeadLegacy" visible="{hasRecipe}"
+		hover_background_color="0,255,144" default_background_color="255,255,255" selected_background_color="222,206,163">
+        <sprite sprite="ui_empty" color="200,200,200,220">
+		    <sprite style="ulmStackRecipeKnown" visible="{canCraft}"/>
+		    <sprite style="ulmStackRecipeUnknown" visible="{!canCraft}"/>
+        </sprite>
+		<sprite depth="7" name="background" style="hidden"/>
+		<sprite depth="2" name="backgroundMain" style="hidden"/>
+    <!--<sprite depth="8" sprite="{blueprintOverlay}" type="sliced" globalopacity="true" foregroundlayer="true" color="{recipeIconColor}"/>-->
+		<sprite depth="10" name="hoverBackground" size="90,90" type="sliced" sprite="ui_stack_hover" globalopacity="true"/>
+		<sprite depth="12" name="Icon" pos="45,-45" size="80,80" pivot="center" atlas="{recipeAtlas}" sprite="{recipeIcon}" color="{recipeIconColor}" foregroundlayer="true"/>
+        <sprite depth="13" pos="8,-8" size="26,26" sprite="ui_game_symbol_{itemTypeIcon}" foregroundlayer="true" color="{recipeIconColor}"/>
+        <sprite depth="15" pos="62,-58" sprite="ui_empty" color="255,255,255,128">
+		    <sprite depth="14" name="Unlocked" sprite="{unlockIcon}" size="26,26" foregroundlayer="true" color="255,255,255,128"/>
+        </sprite>
+		<sprite depth="16" pos="8,-8" size="26,26" sprite="symbol_stack_exclamation" visible="{isQuest}"/>
+		<sprite depth="20" name="Favorite" pos="70,-6" size="16,16" sprite="symbol_star" visible="{isFavorite}" color="255,255,255,160" foregroundlayer="true"/>
+    </panel>
+</set>
+    
+<set xpath="//drag_item_stack">
+	<rect size="92,92" controller="ULM_ItemStack,UndeadLegacy" pos="-43,43" disableautobackground="true" hoverscale="1">
+    <!--<sprite depth="0" sprite="{blueprintOverlay}" type="sliced" globalopacity="true" foregroundlayer="true"/>-->
+		<rect depth="4" pos="6,-81" visible="{hasDurability}">
+			<sprite depth="1" size="82,10" pos="-1,1" sprite="ui_durability_solid_bg" type="sliced" color="0,0,0,160"/>
+			<sprite depth="2" size="80,5" sprite="ui_durability_solid" type="filled" fill="{durabilityFill}" color="{qualityColor}" foregroundlayer="true"/>
+		</rect>
+		<rect depth="5" pos="{chargesOffset}" size="80,5" visible="{hasCharges}">
+			<sprite depth="1" pos="6,-74" sprite="ui_durability_solid_bg" color="255,255,255,160" foregroundlayer="true"/>
+			<sprite depth="2" pos="6,-74" sprite="ui_charges_fill" type="filled" fill="{chargesFill}" color="{chargesColor}" foregroundlayer="true"/>
+		</rect>
+		<sprite depth="15" name="itemIcon" pos="46,-46" size="80,80" atlas="{itemAtlas}" sprite="{itemicon}" color="{iconcolor}" pivot="center" foregroundlayer="true"/>
+		<label depth="19" name="stackValue" pos="0,-64" size="84,28" text="{itemCount}" font_size="24" style="outline" justify="right"/>
+	</rect>
+</set>
+	
+<!--<append xpath="/controls">
+<party_entry_dummy>
+	<rect size="168,37">
+		<sprite depth="2" style="ulmHudStatParty" color="255,255,255" fill="1"/>
+		<sprite depth="2" style="ulmHudStatParty" color="0,0,0" fill="1"/>
+		<sprite depth="2" style="ulmHudStatParty" color="0,0,0,128" fill="1"/>
+		<texture depth="3" style="ulmHudStatParty"/>
+		<sprite depth="4" style="ulmHudStatParty" color="200,60,50,220" fill="1"/>
+        <label depth="5" pos="17,6" size="160,24" font_size="22" text="Party Dummy Player" style="outline"/>
+        <label depth="5" pos="120,6" size="120,24" font_size="22" text="100 m" style="outline" justify="right"/>
+		<grid depth="6" rows="1" cols="2" pos="265,-14" width="100" cell_width="36" cell_height="29" repeat_content="false" arrangement="horizontal">
+			<rect>
+				<texture depth="5" style="ulmHudStatPartyArrow"/>
+				<sprite depth="6" name="arrowContent" style="icon22px" size="20,20" sprite="ui_game_symbol_map_player_arrow" pivot="center" color="255,0,0"/>
+			</rect>
+		</grid>
+	</rect>
+</party_entry_dummy></append>-->
+
+<set xpath="//party_entry">
+	<rect size="168,37" controller="PartyEntry" visible="{partyvisible}">
+		<sprite depth="2" style="ulmHudStatParty" color="255,255,255" fill="1"/>
+		<sprite depth="2" style="ulmHudStatParty" color="0,0,0" fill="{healthmodifiedmax}"/>
+		<sprite depth="2" style="ulmHudStatParty" color="0,0,0,128" fill="{healthmodifiedmax}"/>
+		<texture depth="3" style="ulmHudStatParty"/>
+		<sprite depth="4" style="ulmHudStatParty" color="200,60,50,220" fill="{healthfill}"/>
+        <label depth="5" pos="17,6" size="160,24" font_size="22" text="{name}" style="outline"/>
+        <label depth="5" pos="120,6" size="120,24" font_size="22" text="{distance}" style="outline" justify="right" color="{distancecolor}"/>
+		<grid depth="6" rows="1" cols="3" pos="265,-14" width="100" cell_width="36" cell_height="29" repeat_content="false" arrangement="horizontal">
+			<rect visible="{showarrow}">
+				<texture depth="5" style="ulmHudStatPartyArrow"/>
+				<sprite depth="6" name="arrowContent" style="icon22px" size="20,20" sprite="ui_game_symbol_map_player_arrow" pivot="center" color="{arrowcolor}"/>
+			</rect>
+			<rect visible="{showicon2}">
+				<texture depth="5" style="ulmHudStatPartyArrow"/>
+				<sprite depth="7" name="icon2" style="icon22px" size="20,20" sprite="{icon2}" atlas="UIAltAtlas" pivot="center"/>
+			</rect>
+			<rect visible="{showicon1}">
+				<texture depth="5" style="ulmHudStatPartyArrow"/>
+				<sprite depth="7" name="icon1" style="icon22px" size="20,20" sprite="{icon1}" atlas="UIAltAtlas" pivot="center"/>
+			</rect>
+		</grid>
+	</rect>
+</set>
+    
+<set xpath="//response_entry">
+	<rect size="591,44" style="press2, hover, scroll" controller="DialogResponseEntry" sound="[sfx_btn_dialog]"
+		enabled_color="[labelColor]" disabled_color="[disabledLabelColor]" row_color="[labelColor]" hover_color="[hoverColor]">
+		<sprite style="background"/>
+		<rect visible="{showresponse}">
+			<sprite name="Icon" pos="-8,5" sprite="ui_dialog" size="36,52" color="{rowstatecolor}"/>
+			<label name="Text" pos="30,-7" size="560,30" font_size="30" text="{response}" effect="outline" color="{rowstatecolor}"/>
+		</rect>
+	</rect>
+</set>
+	
+<set xpath="//waypoint_entry">
+	<rect size="398,40" controller="MapWaypointListEntry">
+		<sprite style="background"/>
+		<sprite depth="2" style="background,press2,scroll" name="Background" on_hover="true" sound_play_on_hover="[default_hover]"/>
+		<sprite depth="3" name="Tracking" sprite="ui_entry_active" size="34,54" pos="-18,7" foregroundlayer="true"/>
+		<sprite depth="4" name="Icon" sprite="ui_game_symbol_pen" size="20,20" pos="10,-8" foregroundlayer="true"/>
+		<label depth="4" name="Name" pos="40,-7" size="270,30" font_size="28"/>
+		<label depth="4" name="Distance" pos="309,-7" size="80,30" font_size="28" justify="right"/>
+	</rect>
+</set>
+
+<set xpath="//invites_entry">
+	<rect size="398,40" controller="MapInvitesListEntry">
+		<sprite style="background"/>
+		<sprite style="background,press2,scroll" depth="2" name="Background" on_hover="true" sound_play_on_hover="[default_hover]"/>
+		<sprite depth="4" name="Icon" sprite="ui_game_symbol_pen" size="20,20" pos="10,-8" foregroundlayer="true"/>
+		<label depth="4" name="Name" pos="40,-7" size="270,30" font_size="28"/>
+		<label depth="4" name="Distance" pos="309,-7" size="80,30" font_size="28" justify="right"/>
+	</rect>
+</set>
+
+<set xpath="//map_popup_sub_line">
+	<rect depth="3">
+		<sprite depth="3" pos="20,-20"  size="40,40" color="255,255,255,30" type="sliced" style="press" pivot="center" rotation="90" on_hover="true" on_scroll="false" disabled_font_color="148,148,148,255" controller="MapSubPopupEntry" sound="[craft_click]" sound_play_on_hover="[default_hover]"/>
+		<sprite depth="4" name="Icon" sprite="ui_game_symbol_map_waypoint_set" style="icon32px" pos="4,-4"/>
+	</rect>
+</set>
+	
+<set xpath="//prefab_marker_entry">
+	<rect height="${height}" width="${width-3}" style="press, hover, scroll" sound="[recipe_click]" controller="ListEntry`1[XUiC_PrefabMarkerList+PrefabMarkerEntry]"
+		disabled_font_color="[disabledLabelColor]" enabled_font_color="[labelColor]"
+		background_color_unselected="[bgDefault]" background_color_hovered="[bgHover]" background_color_selected="[bgSelected]"
+		background_sprite_unselected="ui_fill" background_sprite_selected="ui_fill">
+		<sprite depth="2" name="background" color="255,255,255,30" width="${width}" height="${height-2}" type="sliced"/>
+		<label depth="4" name="GroupName" pos="38,-15" width="100" height="26" text="{groupname}" font_size="26" justify="left" pivot="left"/>
+		<label depth="4" name="MarkerType" pos="138,-15" width="100" height="26" text="{markertype}" font_size="26" justify="left" pivot="left"/>
+		<label depth="4" name="MarkerSize" pos="244,-15" width="100" height="26" text="{markersize}" font_size="26" justify="left" pivot="left"/>
+		<sprite depth="2" color="{groupcolor}" pos="9,-6" width="20" height="20" type="sliced"/>
+	</rect>
+</set>
+
+<set xpath="//prefab_group_entry">
+	<rect height="${height}" width="${width}" style="press, hover, scroll" sound="[recipe_click]" controller="ListEntry`1[XUiC_PrefabGroupList+PrefabGroupEntry]"
+		disabled_font_color="[disabledLabelColor]" enabled_font_color="[labelColor]"
+		background_color_unselected="[bgDefault]" background_color_hovered="[bgHover]" background_color_selected="[bgSelected]"
+		background_sprite_unselected="ui_fill" background_sprite_selected="ui_fill">
+		<sprite depth="2" name="background" color="255,255,255,30" width="${width}" height="${height-2}" type="sliced"/>
+		<label depth="4" name="Name" pos="4,${Round(-height/2,0)}" width="${width-8}" height="${height-4}" text="{name}" font_size="${height-4}" justify="center" pivot="left" />
+	</rect>
+</set>
+
+<set xpath="//prefab_file_entry">
+	<rect height="${height}" width="${width}" style="press, hover, scroll" on_doubleclick="true" sound="[recipe_click]" controller="ListEntry`1[XUiC_PrefabFileList+PrefabFileEntry]"
+		disabled_font_color="[disabledLabelColor]" enabled_font_color="[labelColor]"
+		background_color_unselected="[bgDefault]" background_color_hovered="[bgHover]" background_color_selected="[bgSelected]"
+		background_sprite_unselected="ui_fill" background_sprite_selected="ui_fill">
+		<sprite depth="2" name="background" color="255,255,255,30" width="${width}" height="${height-2}" type="sliced"/>
+		<label depth="4" name="Name" pos="4,${Round(-height/2,0)}" width="${width-8}" height="${height-4}" text="{name}" font_size="${height-4}" pivot="left"/>
+	</rect>
+</set>
+    
+<append xpath="/controls">
+
+<ulmChallengeCategory depth="3" width="208" height="48" categoryname="" spritename="" sprite="ui_empty" displayname="" displayname_key="">
+	<rect size="42,42" name="categoryButtonContainer">
+		<button style="buttonTab" width="${width}" sprite="ui_btn_tab_208" selectedsprite="ui_btn_tab_208_s" hoversprite="ui_btn_tab_208_h" controller="ULM_CategoryEntry,UndeadLegacy" categoryname="${categoryname}" spritename="${spritename}" displayname="${displayname}" displayname_key="${displayname_key}" sound="[sfx_btn_tab]" static_icon_color="true"
+		icon_color_selected="225,225,225" icon_color_hover="118,214,161" icon_color_default="180,180,180" type="sliced"/>
+		<sprite depth="222" name="categoryIcon" pos="21,-34" pivot="center" size="32,32"/>
+		<label style="buttonTab,outline" width="${width}" name="categoryLabel" upper_case="true"/>
+	</rect>
+</ulmChallengeCategory>
+
+<journal_entry>
+	<rect size="400,40" controller="JournalEntry,UndeadLegacy" style="press2, scroll" on_hover="true" sound_play_on_hover="[default_hover]" read_color="[labelColorRead]" unread_color="[labelColor]" disabled_color="[disabledLabelColor]" failed_color="255,0,0,255" 
+		bg_default_color="[bgDefault]" bg_hover_color="[bgHover]" bg_selected_color="[bgSelected]" failed_icon="ui_game_symbol_x">
+		<rect visible="{hasEntry}">
+			<sprite style="background"/>
+			<sprite depth="1" name="background" color="{rowColor}" sprite="{rowSprite}" type="sliced"/>
+			<sprite depth="6" name="Icon"  size="20,20" pos="10,-8" foregroundlayer="true" sprite="symbol_map_ring_filled" color="{entryColor}"/>
+			<label depth="6" name="Name" pos="220,-20" size="360,28" text="{entryTitle}" color="{entryColor}" pivot="center"/>
+		</rect>
+	</rect>
+</journal_entry>
+
+<ulmPoweredRecipeStack>
+	<rect size="92,92" controller="ULM_PoweredRecipeStack,UndeadLegacy" collider_scale="1.1" rotation="180">
+		<sprite name="backgroundMain" style="hidden"/>
+		<sprite name="highlightOverlay" style="hidden"/>
+		<sprite style="ulmStack90"/>
+		<sprite depth="2" size="60,60" pivot="center" pos="45,-45" type="sliced" color="255,255,255,32" sprite="symbol_loading"/>
+        <sprite depth="3" name="blueprintOverlay" sprite="ui_empty" type="sliced" globalopacity="true" foregroundlayer="true"/>
+		<sprite name="background" sprite="ui_empty" type="sliced" style="press" on_hover="true"/>
+		<sprite depth="6" name="itemIcon" pos="45,-45" size="80,80" atlas="ItemIconAtlas" sprite="{itemicon}" color="{iconcolor}" pivot="center" foregroundlayer="true"/>
+		<sprite depth="8" name="lockIcon" pos="4,-4" size="18,18" sprite="ui_game_symbol_hammer" visible="false" foregroundlayer="true"/>
+		<label depth="8" name="count" pos="1,-61" size="80,26" font_size="22" justify="right" style="outline"/>
+		<label depth="8" name="timer" pos="46,-46" size="90,26" font_size="24" justify="center" pivot="center" color="[beige]" style="outline"/>
+		<sprite depth="6" name="overlay" pos="1,-1" size="90,90" color="64,128,64,30" type="sliced"/>
+		<sprite depth="9" name="cancel" size="92,92" type="sliced" sprite="ui_stack_cancel"/>
+	</rect>
+</ulmPoweredRecipeStack>
+    
+<ulmPoweredRecipeEntry>
+	<panel disableautobackground="true" size="90,90" style="press2, hover, scroll" controller="ULM_PoweredRecipeEntry,UndeadLegacy" visible="{hasRecipe}"
+		hover_background_color="0,255,144" default_background_color="255,255,255" selected_background_color="222,206,163">
+        <sprite sprite="ui_empty" color="200,200,200,220">
+		    <sprite style="ulmStackRecipeKnown" visible="{canCraft}"/>
+		    <sprite style="ulmStackRecipeUnknown" visible="{!canCraft}"/>
+        </sprite>
+		<sprite depth="7" name="background" style="hidden"/>
+		<sprite depth="2" name="backgroundMain" style="hidden"/>
+    <!--<sprite depth="8" sprite="{blueprintOverlay}" type="sliced" globalopacity="true" foregroundlayer="true" color="{recipeIconColor}"/>-->
+		<sprite depth="10" name="hoverBackground" size="90,90" type="sliced" sprite="ui_stack_hover" globalopacity="true"/>
+		<sprite depth="12" name="Icon" pos="45,-45" size="80,80" pivot="center" atlas="{recipeAtlas}" sprite="{recipeIcon}" color="{recipeIconColor}" foregroundlayer="true"/>
+        <sprite depth="13" pos="8,-8" size="26,26" sprite="ui_game_symbol_{itemTypeIcon}" foregroundlayer="true" color="{recipeIconColor}"/>
+        <sprite depth="15" pos="62,-58" sprite="ui_empty" color="255,255,255,128">
+		    <sprite depth="14" name="Unlocked" sprite="{unlockIcon}" size="26,26" foregroundlayer="true" color="255,255,255,128"/>
+        </sprite>
+		<sprite depth="16" pos="8,-8" size="26,26" sprite="symbol_stack_exclamation" visible="{isQuest}"/>
+		<sprite depth="20" name="Favorite" pos="70,-6" size="16,16" sprite="symbol_star" visible="{isFavorite}" color="255,255,255,160" foregroundlayer="true"/>
+    </panel>
+</ulmPoweredRecipeEntry>
+
+<ulmPoweredRecipeIngredient width="78" height="78">
+	<rect name="row" width="${width}" height="${height}" style="press, hover" sound_play_on_press="false" controller="ULM_PoweredIngredientEntry,UndeadLegacy" sound="[recipe_click]" foregroundlayer="true" tooltip_offset_y="12">
+		<label name="name"/>
+		<sprite style="backgroundWeak"/>
+		<rect visible="{isUnlocked}">
+			<sprite depth="3" width="${width}" height="${height}" color="{ingredientBgColor}" sprite="ui_fill" type="sliced"/>
+			<sprite depth="4" name="icon" pos="${Round(width/2,0)},${Round(-height/2,0)}" size="60,60" atlas="ItemIconAtlas" sprite="{itemIcon}" color="{itemIconColor}" pivot="center" foregroundlayer="true"/>
+			<label depth="5" pos="0,${Round(25 - height,0)}" width="${width}" height="24" font_size="24" justify="center" text="{count}" style="outline"/>
+		</rect>
+		<rect visible="{isLocked}">
+			<sprite depth="2" pos="39, -39" size="60,60" sprite="symbol_questionmark" color="255,255,255,128" pivot="center" foregroundlayer="true"/>
+		</rect>
+	</rect>
+</ulmPoweredRecipeIngredient>
+
+<ulmPrefabPartEntry width="300" height="30">
+	<rect controller="ULM_POIPartEntry,UndeadLegacy"
+		background_color_unselected="[bgDefault]" background_color_hovered="[bgHover]" background_color_selected="[bgSelected]">
+		<sprite depth="1" name="background" color="{bgColor}" width="${width}" height="${height-2}" type="sliced" style="press, hover, scroll"/>
+	    <label depth="2" pos="2,-2" width="${width-4}" height="${height-4}" text="{partName}"/>
+    </rect>
+</ulmPrefabPartEntry>
+
+<ulmVehiclePartSlot pos="0,0">
+    <rect>
+	    <rect pos="${pos}" controller="ULM_VehiclePartStack,UndeadLegacy" size="92,92" hover_icon_grow="1.5"
+		    pickup_sound="[pickup_click]" place_sound="[place_click]" sound_volume="0.75" on_press="true" on_hover="true"
+            hover_background_color="0,255,144" default_background_color="255,255,255" selected_background_color="222,206,163">
+		    <sprite name="background" style="hidden"/>
+		    <sprite name="backgroundMain" style="hidden"/>
+		    <sprite style="ulmStack90"/>
+		    <sprite depth="2" name="hoverBackground" sprite="ui_stack_hover"/>
+			<sprite depth="3" type="sliced" sprite="ui_stack_quality" globalopacity="true" visible="{hasQuality}" color="{qualityColor}"/>
+		    <sprite depth="4" name="itemIcon" pos="46,-46" size="80,80" atlas="{partatlas}" sprite="{particon}" pivot="center" foregroundlayer="true" color="{particoncolor}" visible="{partvisible}"/>
+		    <sprite depth="5" pos="46,-46" size="70,70" sprite="symbol_slot_mod" color="255,255,255,32" pivot="center" foregroundlayer="true" visible="{emptyvisible}"/>
+        </rect>
+    </rect>
+</ulmVehiclePartSlot>
+    
+<ulmItemPartSlot pos="0,0" controller="ULM_ItemStackModification,UndeadLegacy">
+	<rect>
+		<rect pos="${pos}" size="92,92" controller="${controller}" hover_icon_grow="1.5"
+			pickup_sound="[pickup_click]" place_sound="[place_click]" sound_volume="0.75" on_press="true" on_hover="true"
+			hover_background_color="0,255,144" default_background_color="255,255,255" selected_background_color="222,206,163">
+			<sprite name="background" style="hidden"/>
+			<sprite name="backgroundMain" style="hidden"/>
+			<sprite style="ulmStack90"/>
+			<sprite depth="2" name="hoverBackground" sprite="ui_stack_hover"/>
+			<sprite depth="3" type="sliced" sprite="ui_stack_quality" globalopacity="true" visible="{hasQuality}" color="{qualityColor}"/>
+			<sprite depth="4" name="itemIcon" pos="46,-46" size="80,80" atlas="{partatlas}" sprite="{particon}" pivot="center" foregroundlayer="true" color="{particoncolor}" visible="{partvisible}"/>
+			<rect depth="5" size="80,5" pos="{chargesOffset}" visible="{hasCharges}">
+				<sprite depth="1" pos="6,-74" sprite="ui_durability_solid_bg" color="255,255,255,160" foregroundlayer="true"/>
+				<sprite depth="5" pos="6,-74" sprite="ui_charges_fill" type="filled" fill="{chargesFill}" color="{chargesColor}" foregroundlayer="true"/>
+			</rect>
+			<!--<sprite depth="6" pos="5,-5" size="20,20" atlas="UIAltAtlas" sprite="ui_game_symbol_assemble" foregroundlayer="true" visible="{partvisible}"/>-->
+			<sprite depth="5" pos="46,-46" size="70,70" sprite="symbol_slot_mod" color="255,255,255,32" pivot="center" foregroundlayer="true" visible="{emptyvisible}"/>
+		</rect>
+	</rect>
+</ulmItemPartSlot>
+
+<ulmItemPartSlotCosmetic pos="0,0">
+	<rect controller="ULM_ItemCosmeticStack,UndeadLegacy" size="92,92" hover_icon_grow="1.5"
+		pickup_sound="[pickup_click]" place_sound="[place_click]" sound_volume="0.75" on_press="true" on_hover="true"
+        hover_background_color="0,255,144" default_background_color="255,255,255" selected_background_color="222,206,163">
+		<sprite name="background" style="hidden"/>
+		<sprite name="backgroundMain" style="hidden"/>
+		<sprite style="ulmStack90"/>
+		<sprite depth="2" name="hoverBackground" sprite="ui_stack_hover"/>
+		<sprite depth="3" name="itemIcon" pos="46,-46" size="80,80" atlas="{partatlas}" sprite="{particon}" pivot="center" foregroundlayer="true" color="{particoncolor}" visible="{partvisible}"/>
+		<sprite depth="3" pos="46,-46" size="70,70" sprite="symbol_slot_cosmetic" color="255,255,255,32" pivot="center" foregroundlayer="true" visible="{emptyvisible}"/>
+	</rect>
+</ulmItemPartSlotCosmetic>
+	
+<ulmTwitchBackground pos="15,3" size="100,100" height_modifier="0">
+	<rect depth="-10" pos="${pos}" size="${size}" controller="ULM_DynamicBG,UndeadLegacy" height_modifier="${height_modifier}">
+		<sprite style="ulmWindowBG" name="BGSP1"/><!--<sprite style="ulmWindowBG" name="BGSP2"/>-->
+		<texture style="ulmWindowTL"/><texture style="ulmWindowTM"/><texture style="ulmWindowTR"/>
+		<texture style="ulmWindowBR"/><texture style="ulmWindowBM"/><texture style="ulmWindowBL"/>
+	</rect>
+</ulmTwitchBackground>
+	
+<ulmTwitchVoteEntry width="230" height="28">
+	<rect width="${width}" height="${height}" controller="TwitchVoteEntry" visible="{hasvote}" positive_color="0,255,144,100" negative_color="255,175,175,100" disabled_color="130,130,130,100">
+		<sprite depth="1" color="${backgroundcolor}" type="sliced"/>
+		<sprite depth="1" name="BarContent" color="{votecolor}" globalopacity="false" type="filled" fill="{votefill}"/>
+		<!--<label depth="3" pos="15,0" width="198" font_size="26" text="{votecount}" justify="left" color="{votecolor}"/>-->
+		<label depth="3" pos="3,-1" width="198" font_size="24" text="{votecommand}" justify="left"/>
+		<label depth="3" pos="30,-1" width="198" font_size="24" text="{votename}" justify="right" color="[selectedColor]"/>
+	</rect>
+</ulmTwitchVoteEntry>
+
+<ulmTwitchCommandEntry depth="3" pos="0,0" width="230" height="28">
+	<rect width="${width}" height="${height}" controller="ULM_TwitchCommandEntry,UndeadLegacy" visible="{hascommand}" positive_color="175,175,255" negative_color="255,175,175" disabled_color="130,130,130" default_cost_color="[white]" special_cost_color="230,100,255">
+		<sprite depth="1" color="${backgroundcolor}" type="sliced"/>
+		<!-- <sprite depth="2" name="iconTrack" style="icon22px" pos="280,2" color="{objectivecompletecolor}" sprite="{objectivecompletesprite}" visible="{objectiveshowicon}"/> -->
+		<label depth="3" pos="5,0" width="198" font_size="26" text="{commandname}" justify="left" color="{commandcolor}"/>
+		<label depth="3" pos="225,0" width="88" font_size="26" text="{commandcost}" justify="right" color="{costcolor}" pivot="topright"/>
+	</rect>
+</ulmTwitchCommandEntry>
+
+<ulmDebugRow visible="true" visible_row="true">
+	<rect visible="${visible_row}">
+		<rect visible="${visible}">
+			<texture pos="-20,9" style="ulmDebugSideRow"/>
+			<label depth="2" size="100,24" text="${label}" text_key="${label}" color="[white]" style="outline"/>
+			<label depth="2" size="900,24" text="[E6C864]${value}[-]" pos="110,0" style="outline"/>
+		</rect>
+	</rect>
+</ulmDebugRow>
+    
+<ulmAnalogTime>
+	<rect>
+        <sprite type="filled" fill="${time}" size="80,80"/>
+        <label depth="1" style="outline" pos="60,-32" size="70,26" text="${time}" justify="center"/>
+	</rect>
+</ulmAnalogTime>
+    
+<ulmMapAreaEntryBtn value="N/A">
+	<rect>
+		<rect pos="${pos}" size="310,40" name="${id_icon}" style="press, hover" tooltip_key="${tooltip}" sound="[paging_click]">
+			<sprite style="background" size="310,40"/>
+			<sprite depth="2" pos="20,-20" size="20,20" pivot="center" style="icon32px" sprite="${sprite}"/>
+			<label depth="2" pos="35,-10" size="265,24" style="outline" text_key="${label}" color="[labelColor]"/>
+			<label depth="2"  name="${id_label}" pos="35,-10" size="267,24" style="outline" text_key="${value}" justify="right" color="[labelColor2]"/>
+		</rect>
+	</rect>
+</ulmMapAreaEntryBtn>
+    
+<ulmMapAreaEntry value="N/A">
+	<rect>
+		<rect pos="${pos}" size="310,40" name="${id_icon}" style="hover" tooltip_key="${tooltip}">
+			<sprite style="background" size="310,40"/>
+			<sprite depth="2" pos="20,-20" size="20,20" pivot="center" style="icon32px" sprite="${sprite}"/>
+			<label depth="2" pos="35,-10" size="265,24" style="outline" text_key="${label}" color="[labelColor]"/>
+			<label depth="2"  name="${id_label}" pos="35,-10" size="267,24" style="outline" text_key="${value}" justify="right" color="[labelColor2]"/>
+		</rect>
+	</rect>
+</ulmMapAreaEntry>
+
+<ulmPlayersHeader width="121" icon="" label="">
+	<rect depth="1">
+		<sprite style="background" width="${width}" height="110"/>
+		<sprite depth="2" pos="${Round(width/2,0)},-26" style="icon32px" sprite="${icon}" pivot="center"/>
+		<label depth="2" pos="${Round(width/2,0)},-78" text_key="${label}" width="${width - 20}" height="54" font_size="24" justify="center" pivot="center"/>
+	</rect>
+</ulmPlayersHeader>
+
+<ulmPlayersEntry width="1591" icon="" label="" col_size="121,38" pos_x="123">
+	<rect height="36" disabled_color="[disabledLabelColor]" alternating_color="[darkestGrey]" controller="PlayersListEntry">
+		<sprite style="hidden" name="background"/>
+		<rect size="244,38" name="playerDetails">
+			<sprite style="background"/>
+			<grid depth="2" pos="10,-6" cols="3" cell_width="20" cell_height="20" repeat_content="false" arrangement="horizontal">
+				<sprite name="admin" size="20,20" color="[selectedColor]" sprite="ui_game_symbol_star" tooltip_key="xuiIsAdmin"/>
+				<sprite name="twitch" size="20,20" color="[selectedColor]" sprite="ui_game_symbol_twitch_actions" tooltip_key="xuiTwitchEnabled"/>
+				<sprite name="twitchDisabled" size="20,20" color="[selectedColor]" sprite="ui_game_symbol_twitch_action_disabled" tooltip_key="xuiTwitchDisabled"/>
+				<ulmPlayerName width="180" height="26" icon_size="20" icon_pos="10,-8"/>
+			</grid>
+		</rect>
+		<rect pos="${pos_x * 2},0" size="${col_size}" name="zombieKills">
+			<sprite style="background"/>
+			<label depth="2" text="" pos="0,-8" height="26" font_size="26" name="zombieKillsText" justify="center"/>
+		</rect>
+		<rect pos="${pos_x * 3},0" size="${col_size}" name="playerKills">
+			<sprite style="background"/>
+			<label depth="2" text="" pos="0,-8" height="26" font_size="26" name="playerKillsText" justify="center"/>
+		</rect>
+		<rect pos="${pos_x * 4},0" size="${col_size}" name="deaths">
+			<sprite style="background"/>
+			<label depth="2" text="" pos="0,-8" height="26" font_size="26" name="deathsText" justify="center"/>
+		</rect>
+		<rect pos="${pos_x * 5},0" size="${col_size}" name="level">
+			<sprite style="background"/>
+			<label depth="2" text="" pos="0,-8" height="26" font_size="26" name="levelText" justify="center"/>
+		</rect>
+		<rect pos="${pos_x * 6},0" size="${col_size}" name="gamestage">
+			<sprite style="background"/>
+			<label depth="2" text="" pos="0,-8" height="26" font_size="26" name="gamestageText" justify="center"/>
+		</rect>
+		<rect pos="${pos_x * 7},0" size="${col_size}" name="ping">
+			<sprite style="background"/>
+			<label depth="2" text="" pos="0,-8" height="26" font_size="26" name="pingText" justify="center"/>
+		</rect>
+		<rect pos="${pos_x * 8},0" size="${col_size}" name="allies">			
+			<sprite style="background"/>
+			<label depth="2" name="labelAllyIcon" font_size="26" justify="center"/>
+			<button depth="2" pos="62,-18" name="iconAllyIcon" style="icon32px, press, hover" size="24,24" pivot="center" sprite="ui_game_symbol_players" color="[lightGrey]" disabledcolor="[disabledLabelColor]" sound="[craft_click]"/>
+		</rect>
+		<rect pos="${pos_x * 9},0" size="${col_size}" name="party">
+			<sprite style="background"/>
+			<label depth="2" text="" font_size="26" name="labelPartyIcon" justify="center"/>
+			<button depth="2" pos="62,-18" name="iconPartyIcon" style="icon32px, press, hover" size="24,24" pivot="center" sprite="ui_game_symbol_party" color="[lightGrey]" disabledcolor="[disabledLabelColor]" sound="[craft_click]"/>
+		</rect>
+		<rect pos="${pos_x * 10},0" size="${col_size}" name="voice">
+			<sprite style="background"/>
+			<button depth="2" name="iconChat" style="icon32px, press, hover" pos="20,-18" size="24,24" sprite="ui_game_symbol_shape_text" pivot="center" color="[lightGrey]" sound="[craft_click]" />
+			<button depth="2" name="iconVoice" style="icon32px, press, hover" pos="62,-18" size="24,24" sprite="ui_game_symbol_mic" pivot="center" color="[lightGrey]" sound="[craft_click]" />
+		</rect>
+		<rect pos="${pos_x * 11},0" size="${col_size}" name="map">
+			<sprite style="background"/>
+			<label depth="2" text="" font_size="26" name="labelShowOnMap" justify="center"/>
+			<button depth="2" pos="62,-18" name="iconShowOnMap" style="icon32px, press, hover" size="24,24" pivot="center" sprite="ui_game_symbol_map" color="[lightGrey]" disabledcolor="[disabledLabelColor]" sound="[craft_click]" tooltip_key="uiShowOnMap"/>
+		</rect>
+		<rect pos="${pos_x * 12},0" size="${col_size}" name="km">
+			<sprite style="background"/>
+			<label depth="2" pos="0,-8" text="" font_size="26" name="labelDistanceWalked" justify="center"/>
+		</rect>
+		<rect pos="${pos_x * 13}" name="report">
+			<label name="labelReportPlayer" style="hidden"/>
+			<button name="btnReportPlayer" style="hidden"/>
+		</rect>
+	</rect>
+</ulmPlayersEntry>
+	
+<ulmBlockedPlayersList name="blockedPlayersList" col_size="121,38">
+	<rect name="blockedPlayersRect" controller="BlockedPlayersList">
+
+		<panel name="noclick" depth="20" createuipanel="true" on_press="true" pos="-4000,4000" width="8000" height="8000" disableautobackground="true" gamepad_selectable="false" enabled="false"/>
+			
+		<grid depth="2" pos="0,0" cols="2" rows="1" cell_width="800" cell_height="43" repeat_content="false" arrangement="horizontal">
+			<rect>
+				<rect size="798,50">
+					<sprite style="background"/>
+					<label depth="2" text="" pos="0,-8" height="26" font_size="26" text_key="xuiBlockedPlayers" justify="center"/>
+				</rect>
+				<rect size="798,50" pos="0,-52">
+					<sprite depth="1" pos="0,0" size="397,50" style="background"/>
+					<label depth="2" pos="10,-12" size="377,26" name="name" text_key="xuiSteamID" font_size="26"/>
+					<sprite depth="1" pos="399,0" size="399,50" style="background"/>
+					<label depth="2" pos="409,-12" size="379,26" name="blockedCounter" text="{blockedCount}" font_size="26" justify="right"/>
+				</rect>
+				<grid name="blockList" rows="16" cols="1" pos="0,-104" width="660" height="598" cell_height="40" repeat_content="true" arrangement="vertical">
+					<rect depth="1" width="798" height="38" pos="0,0" disabled_color="[disabledLabelColor]" alternating_color="[bgDefault]" controller="PlayersBlockedListEntry">
+						<sprite style="background" name="background" color="[bgDefault]"/>
+						<ulmPlayerName pos="10,-6" width="377" height="26"/>
+						<!--
+						<sprite depth="1" pos="720,-20" style="icon32px" sprite="ui_game_symbol_report" pivot="center" color="[lightGrey]"/>
+						<sprite depth="1" pos="770,-20" style="icon32px" sprite="ui_game_symbol_player" pivot="center" color="[lightGrey]"/>
+						-->
+						<button depth="1" name="btnReportPlayer" style="icon32px, press, hover" pos="720,-23" pivot="center" sprite="ui_game_symbol_report" color="[lightGrey]" sound="[craft_click]" tooltip_key="xuiPlayersReportPlayer" />
+						<button depth="1" name="unblockBtn" style="icon32px, press, hover" pivot="center" pos="770,-23" sprite="ui_game_symbol_player" tooltip_key="ttUnblockPlayer" sound="[paging_click]"/>
+					</rect>
+				</grid>
+				<pager name="blockedPager" pos="350,-754" contents_parent="blockList"/>
+			</rect>
+			<rect>
+				<rect size="798,50">
+					<sprite style="background"/>
+					<label depth="2" text="" pos="0,-8" height="26" font_size="26" text_key="xuiRecentPlayers" justify="center"/>
+				</rect>
+				<rect size="798,50" pos="0,-52">
+					<sprite depth="1" pos="0,0" size="264,50" style="background"/>
+					<label depth="2" pos="10,-12" size="244,26" name="name" text_key="xuiSteamID" font_size="26"/>
+					<sprite depth="1" pos="266,0" size="264,50" style="background"/>
+					<label depth="2" pos="276,-12" size="244,26" name="lastSeen" text_key="xuiLastSeen" font_size="26"/>
+					<sprite depth="1" pos="532,0" size="266,50" style="background"/>
+					<label depth="2" pos="542,-12" size="246,26" name="recentCounter" text="{recentCount}" font_size="26" justify="right"/>
+				</rect>
+				<grid name="recentList" rows="16" cols="1" pos="0,-104" width="660" height="598" cell_height="40" repeat_content="true" arrangement="vertical">
+					<rect depth="1" width="798" height="38" pos="0,0" disabled_color="[disabledLabelColor]" alternating_color="[bgDefault]" controller="PlayersRecentListEntry">
+						<sprite style="background" name="background" color="[bgDefault]"/>
+						<ulmPlayerName pos="10,-6" width="244" height="26"/>	
+						<label depth="1" pos="276,-6" size="244,46" name="lastSeen" font_size="26"/>
+						<!--
+						<sprite depth="1" pos="720,-20" style="icon32px" sprite="ui_game_symbol_report" pivot="center" color="[lightGrey]"/>
+						<sprite depth="1" pos="770,-20" style="icon32px" sprite="ui_game_symbol_player_block" pivot="center" color="[lightGrey]"/>
+						<sprite depth="1" pos="770,-20" style="icon32px" sprite="ui_game_symbol_stealth" pivot="center" color="[lightGrey]"/>
+						-->
+						<button depth="1" name="btnReportPlayer" style="icon32px, press, hover" pos="720,-20" pivot="center" sprite="ui_game_symbol_report" color="[lightGrey]" sound="[craft_click]" tooltip_key="xuiPlayersReportPlayer" />
+						<button depth="1" name="blockBtn" style="icon32px, press, hover" pivot="center" pos="770,-20" sprite="ui_game_symbol_player_block" tooltip_key="ttBlockPlayer" sound="[paging_click]" />
+						<button depth="1" name="btnViewProfile" style="icon32px, press, hover" pivot="center" pos="770,-20" sprite="ui_game_symbol_stealth" tooltip_key="ttViewProfile" sound="[paging_click]" />
+					</rect>
+				</grid>
+				<pager name="recentPager" pos="350,-754" contents_parent="recentList"/>
+			</rect>
+		</grid>
+	</rect>
+</ulmBlockedPlayersList>
+
+<ulmStackPinnedIngredient width="60" height="60">
+	<rect name="row" width="${width}" height="${height}" style="press, hover" sound_play_on_press="false" controller="ULM_PinnedIngredientEntry,UndeadLegacy" sound="[recipe_click]" foregroundlayer="true" tooltip="{itemName}">
+		<rect visible="{hasIngredient}">
+			<sprite style="ulmStackToolbelt" width="${width}" height="${height}"/>
+			<rect pos="${width/2},${-height/2}">
+				<sprite style="background" pivot="center" color="{ingredientBgColor}"/>
+				<sprite depth="2" width="${width-10}" height="${height-10}" atlas="ItemIconAtlas" sprite="{itemIcon}" color="{itemIconColor}" pivot="center" foregroundlayer="true"/>
+			</rect>
+			<label depth="5" pos="0,${-height+21}" width="${width}" height="20" font_size="24" justify="center" text="{count}" style="outline"/>
+		</rect>
+	</rect>
+</ulmStackPinnedIngredient>
+
+<ulmStackIngredient width="78" height="78">
+	<rect name="row" width="${width}" height="${height}" style="press, hover" sound_play_on_press="false" controller="ULM_IngredientEntry,UndeadLegacy" sound="[recipe_click]" foregroundlayer="true" tooltip_offset_y="12">
+		<label name="name"/>
+		<sprite style="backgroundWeak"/>
+		<rect visible="{isUnlocked}">
+			<sprite depth="3" width="${width}" height="${height}" color="{ingredientBgColor}" sprite="ui_fill" type="sliced"/>
+			<sprite depth="4" name="icon" pos="${Round(width/2,0)},${Round(-height/2,0)}" size="60,60" atlas="ItemIconAtlas" sprite="{itemIcon}" color="{itemIconColor}" pivot="center" foregroundlayer="true"/>
+			<label depth="5" pos="0,${Round(25 - height,0)}" width="${width}" height="24" font_size="24" justify="center" text="{count}" style="outline"/>
+		</rect>
+		<rect visible="{isLocked}">
+			<sprite depth="2" pos="39, -39" size="60,60" sprite="symbol_questionmark" color="255,255,255,128" pivot="center" foregroundlayer="true"/>
+		</rect>
+	</rect>
+</ulmStackIngredient>
+
+<ulmStackUpgradeRequiredTool width="78" height="78" icon="symbol_hammer" tooltip_key="" has_tool_color="0,0,0,0" atlas="UIAtlas" visible="true">
+	<rect name="row" width="${width}" height="${height}" style="press, hover" sound_play_on_press="false" sound="[recipe_click]" foregroundlayer="true" tooltip_key="${tooltip_key}" visible="${visible}">
+		<sprite style="background"/>
+		<sprite depth="3" width="${width}" height="${height}" color="${has_tool_color}" sprite="ui_fill" type="sliced"/>
+		<sprite depth="4" name="icon" pos="${Round(width/2,0)},${Round(-height/2,0)}" size="60,60" sprite="${icon}" atlas="${atlas}" pivot="center" foregroundlayer="true"/>
+	</rect>
+</ulmStackUpgradeRequiredTool>
+
+<ulmStackUpgradeIngredient width="78" height="78" controller="ULM_ModificationStationIngredient,UndeadLegacy">
+	<rect name="row" width="${width}" height="${height}" style="press, hover" sound_play_on_press="false" controller="${controller}" sound="[recipe_click]" foregroundlayer="true" tooltip_offset_y="12">
+		<label name="name"/>
+		<sprite style="background"/>
+		<sprite depth="3" width="${width}" height="${height}" color="{ingredientBgColor}" sprite="ui_fill" type="sliced"/>
+		<sprite depth="4" name="icon" pos="${Round(width/2,0)},${Round(-height/2,0)}" size="60,60" atlas="ItemIconAtlas" sprite="{itemIcon}" color="{itemIconColor}" pivot="center" foregroundlayer="true"/>
+		<label depth="5" pos="0,${Round(25 - height,0)}" width="${width}" height="24" font_size="24" justify="center" text="{count}" style="outline"/>
+	</rect>
+</ulmStackUpgradeIngredient>
+
+<item_action_input>
+    <rect name="actions" height="31" pos="0,0" controller="${controller}">
+		<button depth="1" type="sliced" size="31,31" name="countDown" hoverscale="1.0" defaultcolor="[bgDefaultStrong]" hovercolor="0,255,144,128" on_press="true" sound="[paging_click]" sound_play_on_press="true" sound_volume="0.75"/>
+        <sprite depth="2" type="sliced" pos="17,-17" size="22,22" pivot="center" sprite="symbol_prev"/>
+		<sprite style="backgroundStrong" pos="32,0" size="80,31"/>
+	    <textfield name="count_input" depth="4" pos="35,-3" width="75" height="25" character_limit="4" backgroundcolor="0,0,0,180" validation="integer" virtual_keyboard_prompt="vkPromptCount" />
+		<rect depth="1" pos="114,0">
+			<button depth="1" type="sliced" size="31,31" name="countUp" hoverscale="1.0" defaultcolor="[bgDefaultStrong]" hovercolor="0,255,144,128" on_press="true" sound="[paging_click]" sound_play_on_press="true" sound_volume="0.75"/>
+            <sprite depth="2" type="sliced" pos="17,-17" size="22,22" pivot="center" sprite="symbol_next"/>
+		</rect>
+		<rect depth="1" pos="146,0">
+			<button depth="1" type="sliced" size="31,31" name="countMax" hoverscale="1.0" defaultcolor="[bgDefaultStrong]" hovercolor="0,255,144,128" on_press="true" sound="[paging_click]" sound_play_on_press="true" sound_volume="0.75"/>
+            <sprite depth="2" type="sliced" pos="17,-17" size="22,22" pivot="center" sprite="symbol_max"/>
+		</rect>
+	</rect>
+</item_action_input>
+
+<ulmButtonChallenge depth="3" pos="0,0" width="200" height="32" sprite_id="btn_sprite" sprite="ui_empty" 
+		enabled_font_color="[labelColor]" disabled_font_color="[disabledLabelColor]" visible="true" enabled="true" bordersprite="menu_empty2px" bordercolor="[black]" pivot="left"
+		defaultsprite="menu_empty" defaultcolor="[mediumGrey]" hoversprite="ui_game_select_row" hovercolor="[white]" selectedsprite="ui_game_select_row" selectedcolor="[mediumGrey]"
+		foregroundlayer="true" tooltip_key="" disabled_tooltip_key="" sound="[default_click]" justify="center" caption="" caption_key="" font_size="28" upper_case="false" hover_color="255,255,255,20" disabled_color="64,64,64,128">
+	<rect name="${name}" depth="${depth}" pos="${pos}" width="${width}" height="${height}" enabled_font_color="${enabled_font_color}" disabled_font_color="${disabled_font_color}" controller="SimpleButton" visible="${visible}" button_enabled="${enabled}">
+		<sprite depth="4" size="16,16" name="${sprite_id}" sprite="${sprite}"/>
+		<sprite style="ulmButton_2x5n"/>
+		<button name="clickable" style="ulmButton_2x5n" hoverscale="1" tooltip_key="${tooltip_key}" enabled="${enabled}"/> 
+		<label name="btnLabel" depth="2" font_size="30" size="220,60" text="${caption}" text_key="${caption_key}" parse_actions="true" pivot="center" justify="center" upper_case="true" style="outline"/>
+	</rect>
+</ulmButtonChallenge>
+
+<ulmButton pos="0,0" name="" depth="1" visible="true" id="clickable" sprite_id="btn_sprite" sprite="ui_empty" sound="[sfx_btn_basic_1]" 
+			hover_color="255,255,255,20" enabled_font_color="[labelColor]" disabled_font_color="128,128,128,256" disabled_color="64,64,64,128"
+			 caption="" caption_key="" tooltip_key="" upper_case="false">
+    <rect name="${name}" depth="${depth}" pos="${pos}" visible="${visible}" enabled_font_color="${enabled_font_color}" disabled_font_color="${disabled_font_color}">
+        <sprite depth="4" size="16,16" name="${sprite_id}" sprite="${sprite}"/>
+        <button style="ulmButton150x32" name="${id}" sound="${sound}" hovercolor="${hover_color}" disabledcolor="${disabled_color}" tooltip_key="${tooltip_key}"/>
+        <label style="ulmButton150x32" text="${caption}" text_key="${caption_key}" upper_case="${upper_case}"/>
+        <texture style="ulmButton150x32"/>
+    </rect>
+</ulmButton>
+
+
+<ulmColorPicker>
+	<rect controller="ColorPicker">
+		<sprite depth="2" name="selectedColor" pos="282,0" style="icon30px" type="sliced"/>
+		<texture depth="2" name="svPicker" pos="0,0" width="276" height="276" on_drag="true" on_press="true">
+			<sprite depth="2" name="selectedColorSVPointer" pos="0,0" style="icon30px" width="21" height="21" type="sliced" pivot="center" sprite="ui_game_symbol_map_cursor"/>
+		</texture>
+		<texture depth="2" name="hPicker" pos="282,-33" width="30" height="243" on_drag="true" on_press="true"/>
+	</rect>
+</ulmColorPicker>
+
+<ulmSimpleButton pos="0,0" depth="3" width="200" height="32" visible="true" enabled="true" upper_case="false" sprite_id="btn_sprite" sprite="ui_empty"
+				 enabled_font_color="[labelColor]" disabled_font_color="[disabledLabelColor]" hover_color="255,255,255,20" disabled_color="64,64,64,128" sound="[sfx_btn_basic_1]"
+				 caption="" caption_key="" tooltip_key="">
+	<rect name="${name}" depth="${depth}" pos="${pos}" width="${width}" height="${height}" enabled_font_color="${enabled_font_color}" disabled_font_color="${disabled_font_color}" controller="SimpleButton" visible="${visible}" button_enabled="${enabled}">
+		<sprite name="border" style="hidden"/>
+		<texture style="ulmButton150x32"/>
+        <button name="clickable" style="ulmButton150x32" sound="${sound}" hovercolor="${hover_color}" disabledcolor="${disabled_color}" tooltip_key="${tooltip_key}"/>
+		<sprite depth="4" size="16,16" name="${sprite_id}" sprite="${sprite}"/>
+		<label name="btnLabel" style="ulmButton150x32" text="${caption}" text_key="${caption_key}" upper_case="${upper_case}"/>
+    </rect>
+</ulmSimpleButton>
+
+<ulmSimpleButton2 visible="true" btn_name="clickable" sound="[sfx_btn_menu_back]" lbl_name="btnLabel" tooltip_key="" pos="0,0">
+	<rect depth="1" name="${name}" size="182,48" btn_name="clickable" pos="${pos}" controller="SimpleButton" visible="${visible}" enabled_font_color="[labelColor]" disabled_font_color="128,128,128,256">
+		<sprite style="inputOption" sprite="option_default" width="190"/>
+		<label style="ulmButton30x30" width="180" pos="95,-13" text_key="${text}" name="${lbl_name}" font_size="22" upper_case="true"/>
+		<button style="ulmButton30x30" width="194" pos="95,-13" hoverscale="1" sprite="ui_btn_160x32" hoversprite="ui_btn_160x32_h" disabledsprite="ui_btn_160x32_n" name="${btn_name}" sound="${sound}" tooltip_key="${tooltip_key}"/>
+	</rect>
+</ulmSimpleButton2>
+
+<ulmButtonCFWCosmetic depth="3" pos="0,0" width="38" height="38" name="" id="clickable" id_sprite="clickableSprite" label_id="btn_lbl" visible="true"
+			  enabled_font_color="[labelColor]" disabled_font_color="[disabledLabelColor]" click_sound="[sfx_btn_tab]"
+			  caption="" caption_key="" tooltip_key=""  upper_case="true" sprite="ui_game_symbol_character">
+	<rect depth="${depth}" pos="${pos}" name="${name}" width="${width}" height="${height}" visible="${visible}"
+			enabled_font_color="${enabled_font_color}" disabled_font_color="${disabled_font_color}">
+		<sprite style="backgroundStrong" sprite="ui_btn_square_round_corners" width="${width}" height="${height}" justify="center" pivot="center"/>
+		<button style="ulmButtonSquareRound" width="${width}" height="${height}" name="${id}" tooltip_key="${tooltip_key}" sound="${click_sound}" pivot="center"/>
+		<sprite depth="10" name="${id_sprite}" style="icon32px" size="30,30" sprite="${sprite}" type="sliced" pivot="center"/>
+	</rect>
+</ulmButtonCFWCosmetic>
+
+<ulmButtonPreviewPlayer depth="3" pos="0,0" width="48" height="48" name="" id="clickable" id_sprite="clickableSprite" label_id="btn_lbl" visible="true"
+			  enabled_font_color="[labelColor]" disabled_font_color="[disabledLabelColor]" click_sound="[sfx_btn_tab]"
+			  caption="" caption_key="" tooltip_key=""  upper_case="true" sprite="ui_game_symbol_character">
+	<rect depth="${depth}" pos="${pos}" name="${name}" width="${width}" height="${height}" visible="${visible}"
+			enabled_font_color="${enabled_font_color}" disabled_font_color="${disabled_font_color}">
+		<sprite style="backgroundStrong" sprite="ui_btn_square_round_corners" width="${width}" height="${height}" justify="center" pivot="center"/>
+		<button style="ulmButtonSquareRound" width="${width}" height="${height}" name="${id}" tooltip_key="${tooltip_key}" sound="${click_sound}" pivot="center"/>
+		<sprite depth="10" name="${id_sprite}" style="icon32px" size="40,40" sprite="${sprite}" type="sliced" pivot="center"/>
+	</rect>
+</ulmButtonPreviewPlayer>
+
+<ulmButtonRotatePreview depth="3" pos="0,0" width="34" height="34" name="" id="clickable" visible="true"
+			  enabled_font_color="[labelColor]" disabled_font_color="[disabledLabelColor]"
+			  caption="" caption_key="" tooltip_key=""  upper_case="true" sprite="ui_game_symbol_character">
+	<rect depth="${depth}" pos="${pos}" name="${name}" width="${width}" height="${height}" visible="${visible}"
+			enabled_font_color="${enabled_font_color}" disabled_font_color="${disabled_font_color}" pivot="center">
+		<button style="ulmButtonSquareRound" width="${width}" height="${height}" name="${id}" tooltip_key="${tooltip_key}" sound="[sfx_btn_silent]" on_held="true" on_press="true" sound_volume="0.1" pivot="center"/>
+		<sprite depth="10" style="icon32px" size="26,26" sprite="${sprite}" type="sliced" pivot="center"/>
+	</rect>
+</ulmButtonRotatePreview>
+
+
+<ulmMoveToStorage visible="true" id="clickable" height="32" width="32" tooltip_key="">
+	<rect depth="1" size="42,42" visible="${visible}">
+		<rect rotation="180">
+			<button style="ulmCategory" name="${id}" tooltip_key="${tooltip_key}"/>
+		</rect>
+		<sprite style="ulmCategory" pos="3,0" sprite="${sprite}"/>
+	</rect>
+</ulmMoveToStorage>
+
+<ulmMoveToBackpack visible="true" id="clickable" tooltip_key="">
+	<rect size="42,42" name="categoryButtonContainer" visible="${visible}">
+		<button style="ulmCategory" name="${id}" tooltip_key="${tooltip_key}"/>
+		<sprite style="ulmCategory" sprite="${sprite}"/>
+	</rect>
+</ulmMoveToBackpack>
+	
+<ulmCategory>
+	<rect size="42,42" name="categoryButtonContainer">
+		<button style="ulmCategory" controller="ULM_CategoryEntry,UndeadLegacy" tooltip="{categorydisplayname}"/>
+		<sprite style="ulmCategory" name="categoryIcon"/>
+	</rect>
+</ulmCategory>
+	
+<ulmCategoryCreative0 categoryname="" spritename="" sprite="ui_empty" displayname="" displayname_key="">
+	<rect size="42,42" name="categoryButtonContainer">
+		<button style="ulmCategory" controller="ULM_CategoryEntry,UndeadLegacy" update_icon_sprite="false" spritename="${spritename}" filtertype="${filtertype}" filtertext="${filtertext}" categoryname="${categoryname}" displayname="${displayname}" displayname_key="${displayname_key}" tooltip="{categorydisplayname|once}"/>
+		<sprite style="ulmCategory" name="categoryIcon" sprite="${sprite}"/>
+	</rect>
+</ulmCategoryCreative0>
+
+<ulmCategoryCreative1 categoryname="" spritename="" displayname="" displayname_key="">
+	<button name="categoryIcon" depth="1" size="30,30" collider_scale="1.5" controller="CategoryEntry" categoryname="${categoryname}" spritename="${spritename}" displayname="${displayname}" displayname_key="${displayname_key}" sprite="{categoryicon|once}" tooltip="{categorydisplayname|once}" pivot="center" sound="[sfx_btn_category]"/>
+</ulmCategoryCreative1>
+	
+<ulmCategoryCreative2 categoryname="" spritename="" displayname="" displayname_key="">
+	<button name="categoryIcon" depth="1" size="30,30" collider_scale="1.5" controller="CategoryEntry" filtertype="${filtertype}" filtertext="${filtertext}" categoryname="${categoryname}" spritename="${spritename}" displayname="${displayname}" displayname_key="${displayname_key}" sprite="{categoryicon|once}" tooltip="{categorydisplayname|once}" pivot="center" sound="[sfx_btn_category]"/>
+</ulmCategoryCreative2>
+	
+<ulmCategoryTrader pos="0,0" id="rent" sprite="ui_game_symbol_vending" tooltip_key="lblContextActionRent">
+	<rect size="42,42" pos="${pos}" name="categoryButtonContainer">
+		<button style="ulmCategory" name="${id}" tooltip_key="${tooltip_key}"/>
+		<sprite style="ulmCategory" sprite="${sprite}"/>
+	</rect>
+</ulmCategoryTrader>
+
+<ulmCategoryTabLeft pos="0,0" id="side_tab_btn" visible="true" sprite="ui_empty" tooltip="" selected="false">
+	<rect depth="1" pos="${pos}" visible="{visible}">
+		<sprite style="ulmCategory"/>
+		<texture style="ulmCategory"/>
+		<button depth="1" name="${id}" pos="34,-30" style="ulmButtonIcon" sprite="${sprite}" tooltip_key="${tooltip}" selected="${selected}"/>
+	</rect>
+</ulmCategoryTabLeft>
+
+<ulmFloatingDamageNumber>
+	<rect visible="{visible}" controller="ULM_HUD_FloatingNumbersEntry,UndeadLegacy" font_size_default="30">
+		<rect name="entry">
+			<label depth="10" size="100,30" pivot="center" text="{text}" height="{font_size}" color="{color}" style="outline" justify="center" font_size="{font_size}"/>
+		</rect>
+	</rect>
+</ulmFloatingDamageNumber>
+	
+<ulmPaging depth="3" pos="0,0" text="1" width="100" height="32" show_max_page="false" separator="/" primary_pager="true">
+	<rect pos="${pos}">
+		<button depth="4" name="pageDown" style="icon30px, press2" pos="${Round(height/2 - 8, 0)},${Round(-height/2, 0)}" sprite="ui_page_prev" disabledcolor="[bgDefault]" pivot="center"/>
+		<rect depth="4" pos="${height},${Round(-height/2, 0)}">
+			<sprite depth="1" pos="20,0" name="background" size="80,36" color="[bgDefault]" sprite="ui_page" type="sliced" pivot="center"/>
+			<label depth="5" pos="20,-2" size="80,32" font_size="28" text="${text}" pivot="center" justify="center"/>
+		</rect>
+		<button depth="4" name="pageUp" style="icon30px, press2" pos="${Round(width - height/2 + 12, 0)},${Round(-height/2, 0)}" sprite="ui_page_next" disabledcolor="[bgDefault]" pivot="center"/>
+	</rect>
+</ulmPaging>
+
+<ulmPlayerStat>
+	<rect size="225,28">
+        <sprite style="background"/>
+		<label depth="2" pos="8,-3" width="150" font_size="22" text_key="stat${id}" justify="left" color="[white]"/>
+		<label depth="2" pos="8,-3" width="209" font_size="22" text="${value}" justify="right" color="[ulmStatColor]"/>
+	</rect>
+</ulmPlayerStat>
+
+<ulmPlayerStatGeneric>
+	<rect size="234,26">
+        <sprite depth="0" type="sliced" color="255,255,255,20"/>
+		<label depth="1" pos="10,-1" size="216,24" text_key="{playerStatTitle${id}}" justify="left" color="[white]"/>
+		<label depth="1" pos="10,-2" size="216,22" text="{playerStat${id}}" justify="right" color="[ulmStatColor]"/>
+	</rect>
+</ulmPlayerStatGeneric>
+
+<ulmPlayerStatArmor>
+	<rect size="60,70" on_hover="true" tooltip_key="stat${id}">
+		<sprite depth="0" atlas="UIBackground" color="[bgDefault]" sprite="ui_character_armor"/>
+		<sprite depth="1" pos="30,-25" size="32,32" pivot="center" sprite="${icon}"/>
+		<label depth="2" pos="0,-48" height="20" font_size="18" text="{player${id}}" justify="center" color="[labelColor]"/>
+	</rect>
+</ulmPlayerStatArmor>
+
+<ulmSearch pos="0,0" character_limit="18">
+    <rect name="searchInput" depth="1" size="200,32" pos="${pos}" controller="TextInput" value="SEARCH"
+        active_text_color="[white]" caret_color="[white]" selection_color="[mediumGrey_half_alpha]"
+        character_limit="${character_limit}" validation="none" on_press="true" snapCursor="true" virtual_keyboard_prompt="vkPromptSearchTerm"
+        search_field="true" type="filled">
+        <sprite depth="2" size="20,20" pos="13,-13" sprite="symbol_search" color="255,255,255,64"/>
+        <label depth="3" name="text" pos="10,-10" size="196,26" justify="center"/>
+    </rect>
+</ulmSearch>
+
+<ulmSearchNew pos="0,0" visible="true" width="240" sprite="ui_input_240x40" focus_on_open="false" name="searchInput">
+	<rect depth="3" name="searchControls" pos="${pos}">
+		<sprite style="background" depth="2" pos="4,-4" width="${width}" height="40" atlas="UIBackground" sprite="${sprite}" color="[bgInput]"/>
+		<sprite depth="3" size="20,20" pos="13,-13" sprite="symbol_search" color="255,255,255,80"/>
+		<panel depth="4" pos="10,-12" width="${width-10}" disableautobackground="true" console_enabled="false">
+			<ulmTextField depth="1" pos="0,0" width="${width-10}" height="26" character_limit="22" name="${name}" focus_on_open="${focus_on_open}" virtual_keyboard_prompt="vkPromptSearchTerm" search_field="true" close_group_on_tab="true" backgroundcolor="0,0,0,1"/>
+		</panel>
+	</rect>
+</ulmSearchNew>
+
+<ulmSearchInventoryOld pos="0,0" visible="true">
+	<rect name="searchInput" depth="10" pos="${pos}" size="235,26" controller="TextInput" value="SEARCH"
+		active_text_color="[white]" caret_color="[white]" selection_color="[mediumGrey_half_alpha]" 
+		character_limit="22" validation="none" on_press="true" snapCursor="true" virtual_keyboard_prompt="vkPromptSearchTerm" 
+		search_field="false" type="filled" visible="${visible}">
+		<sprite style="background" depth="2" size="240,40" atlas="UIBackground" sprite="ui_input_240x40" pos="4,-4" color="[bgInput]"/>
+		<sprite depth="3" size="20,20" pos="13,-13" sprite="symbol_search" color="255,255,255,80"/>
+		<label depth="2" name="text" pos="10,-11" size="230,26" justify="center" style="press, select"/>
+	</rect>
+</ulmSearchInventoryOld>
+
+<ulmSearchInventory depth="3" pos="0,0" width="231" height="30" name="searchInput"
+		value="" active_text_color="[labelColor]" caret_color="[labelColor]" selection_color="[mediumGrey_half_alpha]" 
+		character_limit="0" validation="none" backgroundcolor="[black]" on_hover="false" on_scroll="false" ignore_up_down_keys="false" virtual_keyboard_prompt="" effect="none" effect_distance="1,1" effect_color="[black]"
+		pivot="topleft" enabled="true" visible="true" on_return="submit" select_on_tab="" tooltip_key="" search_field="false" clear_button="false" focus_on_open="false" clear_on_open="false" close_group_on_tab="false" open_vk_on_open="false"
+		foregroundlayer="false" justify="center" overflow="ShrinkContent" max_line_count="0" font_face="ReferenceFont" crispness="Never">
+	<rect name="${name}" depth="${depth}" controller="TextInput" pos="${pos}" width="${width}" height="${height}" value="${value}"
+		active_text_color="${active_text_color}" caret_color="${caret_color}" selection_color="${selection_color}" 
+		character_limit="${character_limit}" validation="${validation}" backgroundcolor="${backgroundcolor}" ignore_up_down_keys="${ignore_up_down_keys}" virtual_keyboard_prompt="${virtual_keyboard_prompt}"
+		disableautobackground="true" pivot="${pivot}" input_enabled="${enabled}" visible="${visible}" on_return="${on_return}" select_on_tab="${select_on_tab}"
+		search_field="${search_field}" clear_button="${clear_button}" focus_on_open="${focus_on_open}" clear_on_open="${clear_on_open}" close_group_on_tab="${close_group_on_tab}" open_vk_on_open="${open_vk_on_open}">
+		<sprite depth="0" style="background" size="240,40" atlas="UIBackground" sprite="ui_input_240x40" pos="-4,4" color="[bgInput]"/>
+		<sprite depth="1" size="20,20" pos="7,-7" sprite="symbol_search" color="255,255,255,80"/>
+		<sprite depth="2" name="background" width="${width}" color="0,0,0,1" type="sliced" pivot="${pivot}" foregroundlayer="${foregroundlayer}"/>
+		<label depth="3" name="text" justify="${justify}" font_size="${height}" pivot="${pivot}" overflow="${overflow}" max_line_count="${max_line_count}" font_face="${font_face}" crispness="${crispness}" width="${width}"  effect="${effect}" effect_distance="${effect_distance}" effect_color="${effect_color}" tooltip_key="${tooltip_key}" style="press, select" on_hover="${on_hover}" on_scroll="${on_scroll}" enabled="${enabled}" />
+	</rect>
+</ulmSearchInventory>
+
+<ulmTransfer pos="0,0" visible="true" text="" tooltip_key="Missing Label" sprite="ui_empty">
+	<rect pos="${pos}" visible="${visible}">
+		<button style="ulmButtonTransfer" name="${id}" tooltip_key="${tooltip_key}"/>
+		<label style="ulmButtonTransfer" text="${text}"/>
+	</rect>
+</ulmTransfer>
+
+<ulmSort pos="0,0" visible="true" tooltip_key="Missing Label" sprite="ui_empty" icon_color="255,255,255">
+	<rect rotation="180" pos="${pos}" visible="${visible}">
+		<button depth="1" pos="-24,-24" style="ulmButton36x36" name="${id}" tooltip_key="${tooltip_key}"/>
+		<sprite depth="2" pos="-24,-24" style="ulmButton36x36" sprite="${sprite}" color="${icon_color}"/>
+	</rect>
+</ulmSort>
+<!--
+<ulmBroadcast pos="0,0" tooltip_key="Missing Label" sprite="ui_empty">
+	<rect rotation="180" pos="${pos}" name="broadcast">
+		<button depth="1" pos="-24,-24" style="ulmButton36x36" name="broadcast_btn" tooltip_key="uiBroadcastStorage"/>
+		<sprite depth="2" pos="-24,-24" style="ulmButton36x36" name="broadcast_icon" sprite="ui_game_symbol_broadcast_on"/>
+	</rect>
+</ulmBroadcast>
+-->
+<ulmNearbyStorage depth="20" pos="1222,90" text="${text}">
+	<rect depth="${depth}" pos="${pos}">
+		<sprite depth="1" size="294,40" atlas="UIBackground" sprite="ui_linked_storage" type="sliced" color="128,128,128,200"/>
+        <label depth="5" pos="110,-22" size="184,40" font_size="30" justify="center" pivot="center" text_key="uiNearbyStorage" upper_case="true"/>
+        <label depth="7" pos="258,-22" size="50,40" font_size="30" justify="center" pivot="center" text="${text}" color="[labelColor2]"/>
+	</rect>
+</ulmNearbyStorage>
+
+<ulmButtonSM depth="5" pos="0,0" visible="true" tooltip_key="Missing Label" sprite="ui_empty" obj_id="" id="clickable">
+	<rect name="${obj_id}" depth="${depth}" pos="${pos}" visible="${visible}">
+		<button depth="1" style="ulmButton36x36" name="${id}" tooltip_key="${tooltip_key}"/>
+		<sprite depth="2" style="ulmButton36x36" sprite="${sprite}"/>
+	</rect>
+</ulmButtonSM>
+
+<ulmButtonLG pos="0,0" visible="true" tooltip_key="Missing Label" sprite="ui_empty" obj_id="" id="clickable">
+	<rect name="${obj_id}" pos="${pos}" visible="${visible}">
+		<button depth="1" style="ulmButton66x66" name="${id}" tooltip_key="${tooltip_key}"/>
+		<sprite depth="2" style="ulmButton66x66" sprite="${sprite}"/>
+	</rect>
+</ulmButtonLG>
+
+<ulmFavorite depth="2" pos="0,0">
+	<rect depth="${depth}" pos="${pos}">
+		<button style="ulmButton36x36" name="favorites" tooltip_key="lblFavorites"/>
+		<sprite style="ulmButton36x36" sprite="symbol_star"/>
+	</rect>
+</ulmFavorite>
+
+<ulmShowIngredients depth="2" pos="0,0" visible="true">
+	<rect depth="${depth}" pos="${pos}" visible="${visible}">
+		<button style="ulmButton36x36" name="showingredients" tooltip_key="lblShowHiddenIngredients"/>
+		<sprite style="ulmButton36x36" sprite="ui_game_symbol_misc_crafting"/>
+	</rect>
+</ulmShowIngredients>
+
+<!--
+<ulmButton32x32 pos="0,0" depth="2" visible="true" label="" sprite="ui_empty" sprite_size="28,28" tooltip="" tooltip_key="" selected="false">
+	<rect depth="${depth}" pos="${pos}" visible="${visible}">
+		<texture style="ulmButton30x30"/>
+		<label style="ulmButton30x30" text="${label}"/>
+		<sprite style="ulmButton30x30" sprite="${sprite}" size="${sprite_size}"/>
+		<button style="ulmButton30x30" name="${id}" tooltip_key="${tooltip_key}" tooltip="${tooltip}" selected="${selected}" sound="[sfx_btn_next]"/>
+	</rect>
+</ulmButton32x32>
+-->
+
+<ulmDynamicStat id="0" width="320" height="35"> <!-- {itemStatTitle0} {itemStatIcon0} {itemStat0} -->
+	<rect name="itemStat${id}" width="${width}" height="${height}">
+		<rect depth="1" pos="0,-${height - 4}" width="${width}" height="4">
+			<sprite depth="2" style="ulmFilled" color="32,32,32,128" foregroundlayer="true"/>
+			<sprite depth="3" style="ulmFilled" sprite="ui_item_stat_fill" color="128,128,128" name="itemStatFill0" foregroundlayer="true"/>
+			<sprite depth="4" style="ulmFilled" sprite="ui_item_stat_fill" color="128,128,128" name="itemStatFill1" foregroundlayer="true"/>
+		</rect>
+		<sprite style="background"/>
+		<sprite depth="10" name="itemStatIcon" pos="5,-5" size="20,20"/>
+		<label depth="10" name="itemStatTitle" pos="33,-6" width="${width - 40}" font_size="20" style="outline" upper_case="true"/>
+		<label depth="10" name="itemStatValue" pos="33,-6" width="${width - 40}" font_size="20" justify="right" style="outline" color="[labelColor2]"/><!--on_hover="true" tooltip="{itemStatDeveloperMode${id}}"-->
+		<!--<label depth="10" pos="-320,-3" font_size="20" text="{itemStatDeveloperMode${id}}" justify="right" style="outline" color="180,180,180"/>-->
+	</rect>
+</ulmDynamicStat>
+
+<ulmStatTextNew tooltip="" id="0" icon="" title="" text="" width="320" height="35" title_color="255,255,255" label_color="[labelColor2]" icon_color="255,255,255">
+	<rect name="itemStat${id}" width="${width}" height="${height}" on_hover="true" tooltip_key="${tooltip}">
+		<sprite style="background"/>
+		<sprite depth="2" pos="0,-${height - 4}" height="4" style="ulmFilled" color="32,32,32,128" foregroundlayer="true"/>
+		<sprite depth="2" pos="5,-5" size="20,20" sprite="${icon}" color="${icon_color}"/>
+		<label depth="2" name="title" pos="33,-6" width="${width - 40}" font_size="20" style="outline" text_key="${title}" upper_case="true" color="${title_color}"/>
+		<label depth="2" name="value" pos="33,-6" width="${width - 40}" font_size="20" style="outline" text="${text}" justify="right" color="${label_color}"/>
+	</rect>
+</ulmStatTextNew>
+
+<ulmStatTextUnlockedBy width="320" height="35">
+	<rect width="${width}" height="${height}" on_press="true" controller="ULM_UnlockByEntry,UndeadLegacy" on_hover="true" tooltip_key="uiUnlockedBy">
+		<rect visible="{hasEntry}">
+			<sprite style="background" color="255,128,128,64" foregroundlayer="true"/>
+			<sprite depth="2" pos="0,-${height - 4}" height="4" style="ulmFilled" color="32,32,32,128" foregroundlayer="true"/>
+			<sprite depth="1" pos="5,-5" size="20,20" sprite="symbol_x" color="255,110,58"/>
+			<sprite depth="1" name="icon" pos="295,-5" size="20,20" atlas="{itemIconAtlas}" sprite="{itemIcon}" color="{itemIconTint}" foregroundlayer="true"/>
+			<!--<label depth="1" pos="37,-4" text_key="uiRequires" font_size="20" style="outline" upper_case="true"/>-->
+			<label depth="2" name="name" pos="5,-6" width="${width - 40}" font_size="20" style="outline" text="{name}" justify="right"/>
+		</rect>
+	</rect>
+</ulmStatTextUnlockedBy>
+
+<ulmStatTextResearchedBy width="320" height="35" sprite="symbol_x" color="255,110,58" bg_color="255,128,128,64">
+	<rect name="unlockedByResearchEntry" width="${width}" height="${height}" on_press="true" on_hover="true" tooltip_offset_x="122" tooltip_offset_y="55">
+		<rect>
+			<sprite style="background" color="${bg_color}" foregroundlayer="true"/>
+			<sprite depth="2" pos="0,-${height - 4}" height="4" style="ulmFilled" color="32,32,32,128" foregroundlayer="true"/>
+			<sprite depth="1" pos="5,-5" size="20,20" sprite="${sprite}" color="${color}"/>
+			<sprite depth="1" name="icon" pos="295,-5" size="20,20" sprite="ui_game_symbol_research" foregroundlayer="true"/>
+			<!--<label depth="1" pos="37,-4" text_key="uiRequires" font_size="20" style="outline" upper_case="true"/>-->
+			<label depth="2" name="unlockedByResearch" pos="5,-6" width="${width - 40}" font_size="20" style="outline" justify="right"/>
+		</rect>
+	</rect>
+</ulmStatTextResearchedBy>
+
+<ulmStatTextRequiredCraftTool tooltip="" title="" width="320" height="35">
+	<rect width="${width}" height="${height}" on_hover="true" tooltip_key="${tooltip}">
+		<sprite style="background"/>
+		<sprite depth="2" pos="0,-${height - 4}" height="4" style="ulmFilled" color="32,32,32,128" foregroundlayer="true"/>
+		<sprite depth="1" pos="5,-5" size="20,20" name="requiredToolCheckmark" sprite="symbol_x" color="255,110,58"/>
+		<label depth="2" pos="33,-6" width="${width - 40}" font_size="20" style="outline" text_key="${title}" upper_case="true"/>
+		<label depth="2" name="newRequiredToolText" pos="33,-6" width="${width - 40}" font_size="20" style="outline" justify="right" color="[labelColor2]"/>
+	</rect>
+</ulmStatTextRequiredCraftTool>
+
+<ulmStatText id="0" visible="false" tooltip="" icon="" title="" value="">
+	<rect name="{itemStat${id}}" size="305,30" visible="${visible}" on_hover="true" tooltip_key="${tooltip}">
+		<sprite depth="0" pos="30,0" size="280,26" style="ulmFilled" color="0,0,0,100"/>
+		<sprite depth="1" pos="0,0" size="26,26" sprite="${icon}"/>
+		<label depth="1" pos="35,-3" font_size="20" text_key="${title}" style="outline" upper_case="true"/>
+		<label depth="1" pos="0,-3" font_size="20" text="${value}" justify="right" style="outline" color="[labelColor2]"/>
+	</rect>
+</ulmStatText>
+
+<ulmStatVehicle visible="true" width="260" height="35" text_key="">
+	<rect width="${width}" height="${height}" visible="${visible}">
+		<sprite style="background"/>
+		<sprite depth="2" pos="0,-${height - 4}" height="4" style="ulmFilled" color="32,32,32,128" foregroundlayer="true"/>
+		<label depth="2" name="title" pos="10,-6" width="${width - 17}" font_size="20" style="outline" text_key="${text_key}" upper_case="true"/>
+		<label depth="2" name="value" pos="10,-6" width="${width - 17}" font_size="20" style="outline" text="${value}" justify="right" color="[labelColor2]"/>
+	</rect>
+</ulmStatVehicle>
+
+<ulmButtonMenuTab depth="3" width="250" height="32" tooltip_key="" visible="true" text="" sprite="ui_btn_tab_248" sprite_s="ui_btn_tab_248_s" sprite_h="ui_btn_tab_248_h" caption_key="">
+    <rect name="${name}" depth="${depth}" width="${width}" height="${height}" enabled_font_color="[labelColor]" disabled_font_color="[disabledLabelColor]" controller="SimpleButton" visible="${visible}">
+        <button style="buttonTab" tooltip_key="${tooltip_key}" width="${width}" sprite="${sprite}" selectedsprite="${sprite_s}" hoversprite="${sprite_h}"/>
+        <label style="buttonTab,outline" width="${width-2}" name="btnLabel" text_key="${caption_key}"/>
+    </rect>
+</ulmButtonMenuTab>
+
+<ulmButtonTab name="" id="clickable" label_id="btn_lbl" depth="3" width="198" height="48" visible="true"
+			  enabled_font_color="[labelColor]" disabled_font_color="[disabledLabelColor]" caption_key="" tooltip_key="">
+	<rect name="${name}" depth="${depth}" width="${width}" height="${height}" visible="${visible}"
+			enabled_font_color="${enabled_font_color}" disabled_font_color="${disabled_font_color}">
+		<button style="buttonTab" width="${width}" height="56" name="${id}" tooltip_key="${tooltip_key}" sprite="ui_btn_tab_198" selectedsprite="ui_btn_tab_198_s" hoversprite="ui_btn_tab_198_h" sound="[sfx_btn_category]"/>
+		<label style="buttonTab,outline" width="${width}" name="${label_id}" text_key="${caption_key}" upper_case="true"/>
+	</rect>
+</ulmButtonTab>
+
+<ulmSkillCategory depth="3" width="208" height="48" categoryname="" spritename="" sprite="ui_empty" displayname="" displayname_key="">
+	<rect size="42,42" name="categoryButtonContainer">
+		<button style="buttonTab" width="${width}" sprite="ui_btn_tab_208" selectedsprite="ui_btn_tab_208_s" hoversprite="ui_btn_tab_208_h" controller="ULM_CategoryEntry,UndeadLegacy" categoryname="${categoryname}" spritename="${spritename}" displayname="${displayname}" displayname_key="${displayname_key}" sound="[sfx_btn_tab]"/>
+		<label style="buttonTab,outline" width="${width}" name="categoryLabel" upper_case="true"/>
+	</rect>
+</ulmSkillCategory>
+
+<ulmAttributeLevel width="350" height="70">
+	<panel disableautobackground="true" controller="ULM_SkillAttributeLevel,UndeadLegacy" width="${width}" height="${height}" style="hover, scroll" visible="{nothiddenbypager}"
+           color_bg_bought="226,210,167,140" color_bg_available="255,255,255,120" color_bg_locked="90,90,90,160"
+           color_lbl_available="255,255,255" color_lbl_locked="255,255,255,100" color_lbl_nerfed="204,17,17" color_lbl_buffed="[labelColorGreen]">
+		<rect visible="{hasentry}">
+		    <sprite style="background" atlas="UIBackground" sprite="ui_attribute_level" width="${width}" height="${height-2}" color="{color_bg}" foregroundlayer="true"/>
+		    <sprite depth="1" pos="3,-3" size="40,50" sprite="symbol_quality" color="{color_fg}" foregroundlayer="true"/>
+		    <label depth="2" pos="22,-27" text="{level}" pivot="center" justify="center" size="40,38" font_size="30" color="{color_fg}" effect="outline" effect_color="0,0,0,128" effect_distance="1,1"/>
+		    <label depth="3" pos="49,-3" text="{text}" width="${width-66}" height="${height-6}" font_size="20" color="{color_fg}" effect="outline" effect_color="0,0,0,128" effect_distance="1,1"/>
+		    <button depth="3" name="btnBuy" pos="${width-22},-${height-24}" size="40,40" style="icon30px, press, hover" atlas="UIAltAtlas" sprite="perk_{buyicon}" pivot="center" tooltip="{buytooltip}" sound="[paging_click]" defaultcolor="{buycolor}" manualcolors="true" visible="{buyvisible}"/>
+        </rect>
+	</panel>
+</ulmAttributeLevel>
+    
+<ulmSkillLevel width="350" height="155">
+	<panel disableautobackground="true" controller="SkillPerkLevel" width="${width}" height="${height}" style="hover, scroll" visible="{nothiddenbypager}" 
+           color_bg_bought="226,210,167,140" color_bg_available="255,255,255,120" color_bg_locked="90,90,90,160"
+           color_lbl_available="255,255,255" color_lbl_locked="255,255,255,100" color_lbl_nerfed="204,17,17" color_lbl_buffed="[labelColorGreen]">
+		<rect visible="{hasentry}"> 
+		    <sprite style="background" atlas="UIBackground" sprite="ui_perk_level" width="${width}" height="${height-2}" color="{color_bg}" foregroundlayer="true"/>
+		    <sprite depth="1" pos="0,-3" size="40,50" sprite="symbol_quality" color="{color_fg}"/>
+		    <label depth="2" pos="0,-8" text="{level}" justify="center" size="40,38" font_size="30" color="{color_fg}" effect="outline" effect_color="0,0,0,128" effect_distance="1,1"/>
+		    <label depth="3" pos="49,-3" text="{text}" width="${width-66}" height="${height-6}" font_size="20" color="{color_fg}" effect="outline" effect_color="0,0,0,128" effect_distance="1,1"/>
+		    <button depth="3" name="btnBuy" pos="${width-22},-${height-24}" size="40,40" style="icon30px, press, hover" atlas="UIAltAtlas" sprite="perk_{buyicon}" pivot="center" tooltip="{buytooltip}" sound="[paging_click]" defaultcolor="{color_fg}" manualcolors="true" visible="{buyvisible}"/>
+	    </rect>
+    </panel>
+</ulmSkillLevel>
+
+<ulmSkillBookLevel width="350" height="97">
+	<panel disableautobackground="true" controller="SkillBookLevel" width="${width}" height="${height}" style="hover" 
+           color_bg_bought="226,210,167,140" color_bg_available="255,255,255,120" color_bg_locked="90,90,90,160"
+           color_lbl_available="255,255,255" color_lbl_locked="255,255,255,100" color_lbl_nerfed="204,17,17" color_lbl_buffed="[labelColorGreen]">
+		<rect visible="{hasentry}">
+		    <sprite style="background" atlas="UIBackground" sprite="ui_skill_level" width="${width}" height="${height-2}" color="{color_bg}" foregroundlayer="true"/>
+		    <sprite depth="1" pos="0,-3" size="40,50" sprite="symbol_quality" color="{color_fg}"/>
+		    <label depth="2" pos="0,-8" text="{level}" justify="center" size="40,38" font_size="30" color="{color_fg}" effect="outline" effect_color="0,0,0,128" effect_distance="1,1"/>
+		    <label depth="3" pos="43,-3" text="{text}" width="${width-46}" height="${height-2}" font_size="19" color="{color_fg}" effect="outline" effect_color="0,0,0,128" effect_distance="1,1"/>
+		    <sprite depth="3" pos="20,-23" style="icon30px" sprite="ui_game_symbol_perk" pivot="center" color="{color_fg}" visible="{iscomplete}"/>
+		    <button style="hidden" name="btnBuy"/>
+        </rect>
+	</panel>
+</ulmSkillBookLevel>
+		
+<ulmActionSkillMilestone width="350" height="95" milestone="1">
+	<panel disableautobackground="true" width="${width}" height="${height}" style="hover">
+		<sprite style="background" atlas="UIBackground" sprite="ui_skill_level" width="${width}" height="${height-2}" color="{bgColorLevel${milestone}}" foregroundlayer="true"/>
+		<sprite depth="1" pos="0,-3" size="40,50" sprite="symbol_quality" color="{fgColorLevel${milestone}}" foregroundlayer="true"/>
+		<label depth="2" pos="0,-8" text="${level}" justify="center" size="40,38" font_size="30" color="{fgColorLevel${milestone}}" effect="outline" effect_color="0,0,0,128" effect_distance="1,1"/>
+		<label depth="3" pos="49,-3" text="{perkDescLevel${milestone}}" width="${width-66}" height="${height-6}" font_size="20" color="{fgColorLevel${milestone}}" effect="outline" effect_color="0,0,0,128" effect_distance="1,1"/>
+	</panel>
+</ulmActionSkillMilestone>
+	
+<ulmSkillEntry width="108" height="108" controller="ULM_SkillEntry,UndeadLegacy">
+	<panel disableautobackground="true" depth="2" width="108" height="132" controller="${controller}" style="press2, hover, scroll" sound_play_on_hover="[default_hover]"
+           first_perks_in_group="actionPerkStrength,actionPerkShotguns,actionPerkHandguns,actionPerkSubmachineGuns,perkDeadEye,perkLivingOffTheLand,perkAnimalTracker,perkBoomstick,perkMachineGunner,ulmPerkSubmachineGuns,perkHeavyArmor,perkMiner69r,perkGunslinger,perkHealingFactor,ulmPerkGiftOfLife,perkLightArmor,perkHiddenStrike,perkBetterBarter,perkSalvageOperations,actionPerkSniperRifles"
+           on_hover="{isSkillContentsVisible}" on_press="{isSkillContentsVisible}" visible="{notSkillGroup}"
+           skill_color="85,85,85,230" attribute_color="95,95,95,230" enabled_color="255,255,255" disabled_color="120,120,120,200" bar_color="200,200,200" bar_color_max="226,210,167" highlight_color="0,255,144" select_color="222,206,163"
+           tooltip_offset_x="10" tooltip_offset_y="-38" group_width="110" max_fill="0.855">
+        <rect depth="1" pos="0,22" visible="{isFirstOfGroup}">
+		    <sprite style="background" width="{groupParentWidth}" height="30" atlas="UIBackground" sprite="{groupCaptionSprite}" color="255,255,255,60"/>
+            <label depth="2" pos="0,-5" width="{groupParentWidth}" height="16" text="{groupParentName}" justify="center" color="200,200,200" spacing_x="4" upper_case="true"/>
+        </rect>
+        <rect depth="1" pos="0,22" visible="{isAttribute}">
+		    <sprite style="background" width="108" height="30" atlas="UIBackground" sprite="ui_skill_caption_1" color="255,255,255,60"/>
+            <label depth="2" width="108" pos="0,-5" height="16" text="{progressionName}" justify="center" color="200,200,200" spacing_x="4" upper_case="true"/>
+        </rect>	
+        <rect depth="5" visible="{notSkillGroup}">
+            <rect width="98" height="98" pos="54,-60" visible="{isSkillContentsVisible}">
+				<sprite style="background" pos="0,-8" size="108,124" atlas="UIBackground" sprite="ui_skill" pivot="center" color="255,255,255,128"/>
+				<rect depth="2" visible="{maxLevel}">
+					<sprite color="255,255,255,128" sprite="ui_empty" foregroundlayer="true">
+						<sprite pivot="center" sprite="ui_skill_max" atlas="UIBackground" color="{barColor}" foregroundlayer="true"/>
+					</sprite>
+					<sprite pivot="center" pos="0,-50" sprite="ui_skill_medal" style="icon32px" foregroundlayer="true" color="{barColor}" visible="{showMedal}"/>
+				</rect>
+				<sprite depth="5" pivot="center" sprite="ui_bar_skill" rotation="-206" foregroundlayer="true" type="filled" filldirection="radial360" fillinvert="true" fill="0.855" color="0,0,0,140"/>
+				<sprite depth="6" pivot="center" sprite="ui_bar_skill" rotation="-206" foregroundlayer="true" type="filled" filldirection="radial360" fillinvert="true" fill="{progressionFill}" color="{barColor}"/>
+				<sprite depth="7" pivot="center" sprite="ui_skill_hover" size="108,124" pos="0,-8" atlas="UIBackground" foregroundlayer="true" color="{selectionColor}"/>
+		        <sprite depth="5" pivot="center" sprite="{groupicon}" style="icon32px" size="60,60" foregroundlayer="true" color="{statusColor}"/>
+		        <sprite depth="20" pivot="center" pos="19,-19" sprite="ui_game_symbol_lock" style="icon32px" color="{statusColor}" foregroundlayer="true" visible="{islocked}"/>
+		        <label depth="5" pivot="center" pos="0,-54" size="78,20" justify="center" text="{progressionLevel}" color="{statusColor}" foregroundlayer="true" upper_case="true" visible="{isnotlocked}"/>
+            </rect>
+        </rect>
+		<sprite style="hidden" name="groupIcon"/>
+		<label style="hidden" name="groupName"/>
+	</panel>
+</ulmSkillEntry>
+
+<ulmRecyclerOutput bg_style="ulmStack90" index="0">
+	<rect>
+		<sprite depth="0" size="50,50" atlas="UIBackground" sprite="ui_stack_90" color="200,200,200,220" type="sliced"/>
+		<rect depth="1" size="40,40" pos="5,-5" name="outputRow${index}" on_hover="true">
+			<sprite name="outputIcon${index}" atlas="ItemIconAtlas" foregroundlayer="true"/>
+			<label depth="2" pos="0,-22" size="40,20" font_size="24" justify="right" style="outline" text="?" color="160,160,160"/>
+		</rect>
+	</rect>
+</ulmRecyclerOutput>
+
+<ulmBuffHud pos="0,0">
+	<rect controller="ULM_HUD_BuffEntry,UndeadLegacy">
+		<rect pos="${pos}" size="66,66" on_hover="true" tooltip="{buffName}" visible="{hasEntry}">
+			<texture style="ulmBuff" size="64,64"/>
+			<sprite style="ulmBuffFill" size="62,62" fill="{buffTimeFill}" color="{buffColor}"/>
+			<sprite depth="4" size="46,46" pos="32,-32" pivot="center" name="Icon" sprite="{buffIcon}" foregroundlayer="true"/>
+			<label depth="6" pos="0,-42" size="58,28" font_size="20" text="{buffText}" justify="right" style="outline" color="[labelColor2]"/>
+		</rect>
+	</rect>
+</ulmBuffHud>
+
+<ulmBuffTarget pos="0,0">
+	<rect controller="ULM_TargetBuffEntry,UndeadLegacy" visible="{hasEntry}">
+		<rect pos="${pos}" size="58,58" on_hover="true" tooltip="{buffName}">
+			<texture style="ulmBuff"/>
+			<sprite style="ulmBuffFill" fill="{buffTimeFill}" color="{buffColor}"/>
+			<sprite depth="4" size="38,38" pos="28,-28" pivot="center" name="Icon" sprite="{buffIcon}" foregroundlayer="true"/>
+			<label depth="6" pos="0,-34" size="50,28" font_size="20" text="{buffText}" justify="right" style="outline" color="[labelColor2]"/>
+			<label depth="6" pos="48,-10" size="26,26" font_size="26" text="{stacks}" justify="center" pivot="center" style="outline" color="[labelColor2]"/>
+			<!--<label rotation="90" depth="6" pos="16,-254" size="200,28" font_size="20" text="{buffName}" justify="right" style="outline" color="[labelColor2]"/>-->
+		</rect>
+	</rect>
+</ulmBuffTarget>
+    
+<ulmVehicleIndicator color="0,0,0,0" visible="false" sprite="ui_empty" tooltip="">
+    <rect rotation="180" size="46,46" on_hover="true" tooltip_key="${tooltip}" visible="${visible}">
+		<texture style="ulmBuff" size="46,46"/>
+		<sprite style="ulmBuffFill" size="46,46" fill="1" color="${color}"/>
+		<sprite depth="4" size="30,30" pos="23,-23" pivot="center" name="Icon" sprite="${sprite}" foregroundlayer="true"/>
+	</rect>
+</ulmVehicleIndicator>
+
+<ulmStackTrader>
+	<rect size="92,92" controller="ULM_ItemStackTrader,UndeadLegacy" style="press, hover, scroll" sound="[paging_click]" fillcenter="false"
+		hover_background_color="0,255,144" default_background_color="255,255,255" selected_background_color="222,206,163">
+		<sprite name="backgroundMain" style="hidden"/>
+		<sprite name="background" style="hidden"/>
+		<label name="Name" style="hidden"/>
+		<sprite style="ulmStack90"/>
+		<rect visible="{hasitem}">
+			<sprite depth="3" name="hoverBackground" type="sliced" sprite="ui_stack_hover" globalopacity="true"/>
+			<sprite sprite="ui_empty" color="{entryColor}" type="sliced" foregroundlayer="true">
+				<sprite depth="1" type="sliced" sprite="ui_stack_quality" globalopacity="true" visible="{hasQuality}" color="{qualityColor}"/>
+			<!--<sprite depth="2" sprite="{blueprintOverlay}" type="sliced" globalopacity="true" foregroundlayer="true"/>-->
+				 <rect depth="4" pos="6,-81" visible="{hasDurability}">
+					<sprite depth="1" size="82,10" pos="-1,1" name="durabilityBackground" sprite="ui_durability_solid_bg" type="sliced" color="0,0,0,160"/>
+					<sprite depth="2" size="80,5" name="durability" sprite="ui_durability_solid" type="filled" foregroundlayer="true" color="{durabilitycolor}" fill="{durabilityfill}"/>
+				</rect>
+				<rect depth="5" pos="{chargesOffset}" size="80,5" visible="{hasCharges}">
+					<sprite depth="1" pos="6,-74" sprite="ui_durability_solid_bg" color="255,255,255,160" foregroundlayer="true"/>
+					<sprite depth="2" pos="6,-74" sprite="ui_charges_fill" type="filled" fill="{chargesFill}" color="{chargesColor}" foregroundlayer="true"/>
+				</rect>
+
+				<sprite depth="10" name="Icon" pos="46,-46" size="80,80" atlas="{itemAtlas}" sprite="{itemicon}" color="{itemicontint}" pivot="center" foregroundlayer="true"/>
+				<sprite depth="11" name="TypeIcon" pos="10,-10" size="20,20" sprite="ui_game_symbol_{itemtypeicon}" foregroundlayer="true" color="{itemtypeicontint}" visible="{hasitemtypeicon}"/>
+				<sprite depth="12" name="lockTypeIcon" pos="5,-5" size="20,20" atlas="UIAltAtlas" sprite="{lockTypeIcon}" foregroundlayer="true"/>
+				<label depth="12" name="stackValue" pos="80,-72" size="99,28" text="{itemCount}" font_size="24" style="outline" pivot="right" justify="right"/>
+			</sprite>
+			<rect visible="{isTraderStageLocked}">
+			<!--<sprite depth="15" size="92,92" atlas="UIStack" sprite="ui_stack_toolbelt" color="0,0,0,200" type="sliced"/>--><!-- c10000 -->
+			<!--<sprite depth="15" pos="46,-46" size="60,60" sprite="symbol_lock" color="100,100,100,200" pivot="center"/>-->
+				<sprite depth="16" pos="61,-7" size="26,26" sprite="ui_game_symbol_secure_shapes" color="160,160,160" foregroundlayer="true"/><!-- symbol_no_trade -->
+			<!--<label depth="15" pos="84,-18" size="99,20" text="{traderStage}" font_size="20" color="222,22,52" style="outline" pivot="right" justify="right"/>-->
+			</rect>
+		</rect>
+	</rect>
+</ulmStackTrader>
+	
+<ulmEquipmentStack empty_icon="ui_empty" empty_tooltip="lblHeadgear" name="0">
+	<rect size="92,92" depth="1" controller="ULM_ItemStackEquipment,UndeadLegacy" empty_icon="${empty_icon}" empty_tooltip="${empty_tooltip}" show_empty="true" style="itemStack, hover" tooltip="" normal_border_color="[transparent]" hover_border_color="0,255,144" selected_border_color="222,206,163" name="${name}">
+		<sprite name="backgroundMain" style="hidden"/>
+		<sprite name="highlightOverlay" style="hidden"/>
+		<sprite style="ulmStack90"/>
+		<sprite depth="2" name="background" type="sliced" sprite="ui_stack_hover" globalopacity="true" color="[transparent]"/>
+		<sprite depth="3" type="sliced" sprite="ui_stack_quality" globalopacity="true" visible="{hasQuality}" color="{qualityColor}"/>
+        <rect depth="4" pos="6,-81" visible="{hasDurability}">
+			<sprite depth="1" size="82,10" pos="-1,1" name="durabilityBackground" sprite="ui_durability_solid_bg" type="sliced" color="0,0,0,160"/>
+			<sprite depth="2" size="80,5" name="durability" sprite="ui_durability_solid" type="filled" foregroundlayer="true"/>
+		</rect>
+		<rect depth="5" pos="{chargesOffset}" size="80,5" visible="{hasCharges}">
+			<sprite depth="1" pos="6,-74" sprite="ui_durability_solid_bg" color="255,255,255,160" foregroundlayer="true"/>
+			<sprite depth="2" pos="6,-74" sprite="ui_charges_fill" type="filled" fill="{chargesFill}" color="{chargesColor}" foregroundlayer="true"/>
+		</rect>
+		<sprite depth="7" name="itemIcon" pos="46,-46" size="80,80" atlas="ItemIconAtlas" pivot="center" foregroundlayer="true"/>
+		<sprite depth="7" pos="46,-46" size="70,70" pivot="center" foregroundlayer="true" sprite="{iconEmpty}" color="128,128,128,128"/>
+		<sprite depth="12" name="lockTypeIcon" pos="5,-5" size="24,24" atlas="UIAltAtlas" foregroundlayer="true"/>
+		<label depth="15" name="stackValue" pos="65,-57" size="99999,28" text="" font_size="24" effect="outline" pivot="right"/>
+		<sprite depth="16" pos="46,-46" size="56,56" pivot="center" sprite="symbol_lock" color="255,255,255,128" foregroundlayer="true" visible="{isLocked}"/>
+	</rect>
+</ulmEquipmentStack>
+	
+<ulmEquipmentStack2 empty_icon="ui_empty" empty_tooltip="lblHeadgear" pos="0,0">
+	<rect size="92,92" depth="1" pos="${pos}" controller="ULM_ItemStackEquipment,UndeadLegacy" empty_icon="${empty_icon}" empty_tooltip="${empty_tooltip}" show_empty="true" style="itemStack, hover" tooltip="" normal_border_color="[transparent]" hover_border_color="0,255,144" selected_border_color="222,206,163" allow_remove_item="true">
+		<sprite name="backgroundMain" style="hidden"/>
+		<sprite name="highlightOverlay" style="hidden"/>
+		<sprite style="ulmStack90"/>
+		<sprite depth="2" name="background" type="sliced" sprite="ui_stack_hover" globalopacity="true" color="[transparent]"/>
+		<sprite depth="3" type="sliced" sprite="ui_stack_quality" globalopacity="true" visible="{hasQuality}" color="{qualityColor}"/>
+        <rect depth="4" pos="6,-81" visible="{hasDurability}">
+			<sprite depth="1" size="82,10" pos="-1,1" name="durabilityBackground" sprite="ui_durability_solid_bg" type="sliced" color="0,0,0,160"/>
+			<sprite depth="2" size="80,5" name="durability" sprite="ui_durability_solid" type="filled" foregroundlayer="true"/>
+		</rect>
+		<rect depth="5" pos="{chargesOffset}" size="80,5" visible="{hasCharges}">
+			<sprite depth="1" pos="6,-74" sprite="ui_durability_solid_bg" color="255,255,255,160" foregroundlayer="true"/>
+			<sprite depth="2" pos="6,-74" sprite="ui_charges_fill" type="filled" fill="{chargesFill}" color="{chargesColor}" foregroundlayer="true"/>
+		</rect>
+		<sprite depth="7" name="itemIcon" pos="46,-46" size="80,80" atlas="ItemIconAtlas" pivot="center" foregroundlayer="true"/>
+		<sprite depth="7" pos="46,-46" size="70,70" pivot="center" foregroundlayer="true" sprite="{iconEmpty}" color="128,128,128,128"/>
+		<sprite depth="12" name="lockTypeIcon" pos="5,-5" size="24,24" atlas="UIAltAtlas" foregroundlayer="true"/>
+		<label depth="15" name="stackValue" pos="65,-57" size="99999,28" text="" font_size="24" effect="outline" pivot="right"/>
+		<sprite depth="16" pos="46,-46" size="56,56" pivot="center" sprite="symbol_lock" color="255,255,255,128" foregroundlayer="true" visible="{isLocked}"/>
+	</rect>
+</ulmEquipmentStack2>
+
+<ulmStackVehicle controller="ULM_ItemStack,UndeadLegacy" stack_type="Backpack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false" tooltip_offset_y="0" bg_style="ulmStack90" visible="true">
+	<rect size="92,92" controller="${controller}" stack_type="${stack_type}" style="itemStack, hover" allow_dropping="${allow_dropping}" prefix_id="${prefix_id}" show_favorites="${show_favorites}" collider_scale="1.1" 
+          background_color="0,0,0,1" highlight_color="0,255,144" select_color="222,206,163" on_scroll="${on_scroll}" tooltip_offset_y="${tooltip_offset_y}">
+		<sprite depth="0" size="92,92" type="sliced" atlas="UIStack" sprite="{backgroundSprite}"/> <!-- color: 200,200,200,220 -->
+		<texture depth="2" name="backgroundTexture" pos="6,-6" size="80,80" material="Materials/Transparent Colored"/>
+		<sprite depth="3" name="selection" type="sliced" sprite="{selectionIcon}" color="{selectionColor}"/>
+        <sprite depth="4" size="92,92" sprite="{durabilitySprite}" atlas="UIStack" type="sliced" color="{durabilitySpriteColor}"/>
+		<sprite depth="5" pos="6,-81" size="80,5" sprite="ui_durability_solid" type="filled" fill="{durabilityFill}" color="{qualityColor}" visible="{hasDurability}" foregroundlayer="true"/>
+		<rect depth="5" pos="{chargesOffset}" visible="{hasCharges}">
+			<sprite depth="5" pos="6,-74" size="80,5" sprite="ui_charges_fill" type="filled" fill="{chargesFill}" color="{chargesColor}" foregroundlayer="true"/>
+		</rect>
+        <sprite depth="15" name="itemIcon" pos="46,-46" size="80,80" atlas="{itemAtlas}" sprite="{itemicon}" color="{iconcolor}" pivot="center" foregroundlayer="true"/>
+		<sprite depth="16" name="TypeIcon" pos="5,-5" size="24,24" sprite="ui_game_symbol_{itemtypeicon}" foregroundlayer="true" color="{itemtypeicontint}" visible="{hasitemtypeicon}"/>
+		<sprite depth="16" name="lockTypeIcon" pos="5,-5" size="24,24" sprite="{locktypeicon}" atlas="UIAltAtlas" foregroundlayer="true"/>
+		<label depth="19" name="stackValue" pos="0,-64" size="84,28" text="{itemCount}" font_size="24" style="outline" justify="right"/>
+		<label depth="20" name="timer" pos="46,-46" size="70,24" font_size="24" justify="center" pivot="center" style="outline" color="[beige]"/>
+	</rect>
+</ulmStackVehicle>
+
+<ulmStackLooting controller="ULM_ItemStack,UndeadLegacy" stack_type="Backpack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false" tooltip_offset_y="0" visible="true">
+	<rect size="92,92" controller="${controller}" stack_type="${stack_type}" style="itemStack, hover" allow_dropping="${allow_dropping}" prefix_id="${prefix_id}" show_favorites="${show_favorites}" collider_scale="1.1" 
+          background_color="0,0,0,1" highlight_color="0,255,144" select_color="222,206,163" on_scroll="${on_scroll}" tooltip_offset_y="${tooltip_offset_y}">
+		<sprite depth="0" size="92,92" type="sliced" atlas="UIStack" sprite="{backgroundSprite}"/> <!-- color: 200,200,200,220 -->
+		<texture depth="2" name="backgroundTexture" pos="6,-6" size="80,80" material="Materials/Transparent Colored"/>
+		<sprite depth="3" name="selection" type="sliced" sprite="{selectionIcon}" color="{selectionColor}"/>
+		<sprite depth="4" size="92,92" sprite="{durabilitySprite}" atlas="UIStack" type="sliced" color="{durabilitySpriteColor}"/>
+		<sprite depth="5" pos="6,-81" size="80,5" sprite="ui_durability_solid" type="filled" fill="{durabilityFill}" color="{qualityColor}" visible="{hasDurability}" foregroundlayer="true"/>
+		<rect depth="5" pos="{chargesOffset}" visible="{hasCharges}">
+			<sprite depth="5" pos="6,-74" size="80,5" sprite="ui_charges_fill" type="filled" fill="{chargesFill}" color="{chargesColor}" foregroundlayer="true"/>
+		</rect>
+		<sprite depth="15" name="itemIcon" pos="46,-46" size="80,80" atlas="{itemAtlas}" sprite="{itemicon}" color="{iconcolor}" pivot="center" foregroundlayer="true"/>
+		<sprite depth="16" name="TypeIcon" pos="5,-5" size="24,24" sprite="ui_game_symbol_{itemtypeicon}" foregroundlayer="true" color="{itemtypeicontint}" visible="{hasitemtypeicon}"/>
+		<sprite depth="16" name="lockTypeIcon" pos="5,-5" size="24,24" sprite="{locktypeicon}" atlas="UIAltAtlas" foregroundlayer="true"/>
+		<label depth="19" name="stackValue" pos="0,-64" size="84,28" text="{itemCount}" font_size="24" style="outline" justify="right"/>
+	</rect>
+</ulmStackLooting>
+
+<ulmStackBackpack controller="ULM_ItemStack,UndeadLegacy" stack_type="Backpack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false" tooltip_offset_y="0" bg_style="ulmStack90" visible="true">
+	<rect size="92,92" controller="${controller}" stack_type="${stack_type}" style="itemStack, hover" allow_dropping="${allow_dropping}" prefix_id="${prefix_id}" show_favorites="${show_favorites}" collider_scale="1.1" 
+          background_color="0,0,0,1" highlight_color="0,255,144" select_color="222,206,163" on_scroll="${on_scroll}" tooltip_offset_y="${tooltip_offset_y}">
+		<sprite depth="0" size="92,92" type="sliced" atlas="UIStack" sprite="{backgroundSprite}"/>
+		<texture depth="3" name="backgroundTexture" pos="6,-6" size="80,80" material="Materials/Transparent Colored" globalopacity="true"/>
+		<sprite depth="4" name="selection" type="sliced" sprite="{selectionIcon}" color="{selectionColor}"/>
+		<sprite depth="5" size="92,92" sprite="{durabilitySprite}" atlas="UIStack" type="sliced" color="{durabilitySpriteColor}"/>
+		<sprite depth="6" pos="6,-81" size="80,5" sprite="ui_durability_solid" type="filled" fill="{durabilityFill}" color="{qualityColor}" visible="{hasDurability}" foregroundlayer="true"/>
+		<rect depth="6" pos="{chargesOffset}" visible="{hasCharges}">
+			<sprite depth="6" pos="6,-74" size="80,5" sprite="ui_charges_fill" type="filled" fill="{chargesFill}" color="{chargesColor}" foregroundlayer="true"/>
+		</rect>
+        <sprite depth="15" name="itemIcon" pos="46,-46" size="80,80" atlas="{itemAtlas}" sprite="{itemicon}" color="{iconcolor}" pivot="center" foregroundlayer="true"/>
+		<sprite depth="16" name="TypeIcon" pos="5,-5" size="24,24" sprite="ui_game_symbol_{itemtypeicon}" foregroundlayer="true" color="{itemtypeicontint}" visible="{hasitemtypeicon}"/>
+		<sprite depth="16" name="lockTypeIcon" pos="5,-5" size="24,24" sprite="{locktypeicon}" atlas="UIAltAtlas" foregroundlayer="true"/>
+		<label depth="19" name="stackValue" pos="0,-64" size="84,28" text="{itemCount}" font_size="24" style="outline" justify="right"/>
+		<sprite depth="21" name="assembleIcon" pos="46,-46" size="48,48" pivot="center" sprite="{stacklockicon}" color="{stacklockcolor}" visible="{isassemblelocked}" foregroundlayer="true"/>
+		<sprite depth="21" pos="73,-19" size="26,26" pivot="center" sprite="symbol_stack_recycle" visible="{isRecyclable}" color="200,200,200,200" foregroundlayer="true"/>
+	</rect>
+</ulmStackBackpack>
+
+<ulmStackToolbelt controller="ULM_ItemStackToolbelt,UndeadLegacy" stack_type="Backpack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false" background_visible="true" tooltip_offset_y="0" visible="true">
+	<rect size="92,92" controller="${controller}" stack_type="${stack_type}" style="itemStack, hover" allow_dropping="${allow_dropping}" prefix_id="${prefix_id}" show_favorites="${show_favorites}" collider_scale="1.1" 
+          background_color="0,0,0,1" highlight_color="0,255,144" select_color="222,206,163" stack_bg_color="64,64,64" on_scroll="${on_scroll}" tooltip_offset_y="${tooltip_offset_y}">
+		<sprite depth="0" size="92,92" atlas="UIStack" sprite="ui_stack_toolbelt" color="{stackBackgroundColor}" type="sliced"/>
+
+		<sprite depth="1" size="0,0" color="{bgColor}" type="sliced" globalopacity="true">
+			<sprite size="92,92" atlas="UIBackground" sprite="ui_stack_locked"/>
+		</sprite>
+		<texture depth="3" name="backgroundTexture" pos="6,-6" size="80,80" material="Materials/Transparent Colored" globalopacity="true"/>
+		<sprite depth="4" sprite="ui_stack_highlight_bg" type="sliced" globalopacity="true" visible="{searchOverlay}"/>
+		<sprite depth="5" sprite="ui_slot_player_locked" type="sliced" color="256,256,256,128" globalopacity="true" visible="{playerLocked}"/><!-- fps loss 0.6-2.6 -->
+		<sprite depth="7" sprite="ui_stack_highlight_bg" type="sliced" color="255,0,0,128" globalopacity="true" visible="{noCarryWeight}"/>
+		<sprite depth="7" type="sliced" sprite="ui_stack_hover" globalopacity="true" color="{selectionColor}"/><!-- fps loss 4 -->
+		<sprite depth="3" type="sliced" sprite="ui_stack_quality" globalopacity="true" visible="{hasQuality}" color="{qualityColor}"/>
+		<!--<sprite depth="1" sprite="stack_legendary" visible="{isLegendary}" type="sliced" globalopacity="true" foregroundlayer="true"/>-->
+		<!--<sprite depth="4" sprite="{blueprintOverlay}" type="sliced" globalopacity="true" foregroundlayer="true"/>-->
+		<rect depth="8" pos="6,-81" visible="{hasDurability}">
+			<sprite depth="9" size="82,10" pos="-1,1" sprite="ui_durability_solid_bg" type="sliced" color="0,0,0,160"/>
+			<sprite depth="10" size="80,5" sprite="ui_durability_solid" type="filled" fill="{durabilityFill}" color="{qualityColor}" foregroundlayer="true"/>
+		</rect>
+		<rect depth="8" pos="{chargesOffset}" size="80,5" visible="{hasCharges}">
+			<sprite depth="9" pos="6,-74" sprite="ui_durability_solid_bg" color="255,255,255,160" foregroundlayer="true"/>
+			<sprite depth="10" pos="6,-74" sprite="ui_charges_fill" type="filled" fill="{chargesFill}" color="{chargesColor}" foregroundlayer="true"/>
+		</rect>
+        <sprite depth="15" name="itemIcon" pos="46,-46" size="80,80" atlas="{itemAtlas}" sprite="{itemicon}" color="{iconcolor}" pivot="center" foregroundlayer="true"/>
+		<sprite depth="16" name="TypeIcon" pos="5,-5" size="24,24" sprite="ui_game_symbol_{itemtypeicon}" foregroundlayer="true" color="{itemtypeicontint}" visible="{hasitemtypeicon}"/>
+		<sprite depth="16" name="lockTypeIcon" pos="5,-5" size="24,24" sprite="{locktypeicon}" atlas="UIAltAtlas" foregroundlayer="true"/>
+	<!--<sprite depth="17" name="disabledOverlay" pos="3,-3" size="90,90" color="0,0,0,1" type="sliced" visible="false"/>-->
+		<sprite depth="18" name="cancel" type="sliced" sprite="ui_stack_cancel" visible="{isCancelVisible}"/>
+		<label depth="19" name="stackValue" pos="0,-64" size="84,28" text="{itemCount}" font_size="24" style="outline" justify="right"/>
+		<label depth="20" name="timer" pos="46,-46" size="70,24" font_size="24" justify="center" pivot="center" style="outline" color="[beige]"/>
+		<sprite depth="21" name="assembleIcon" pos="46,-46" size="48,48" pivot="center" sprite="{stacklockicon}" color="{stacklockcolor}" visible="{isassemblelocked}" foregroundlayer="true"/>
+		<sprite depth="21" pos="73,-19" size="26,26" pivot="center" sprite="symbol_stack_recycle" visible="{isRecyclable}" color="200,200,200,200" foregroundlayer="true"/>
+
+		<sprite depth="31" sprite="symbol_weight" pos="5,-5" size="24,24" type="sliced" color="255,64,0,200" visible="{noCarryWeight}"/>
+		<sprite depth="8" width="24" height="24" sprite="server_favorite" pos="2,-2" foregroundlayer="true" visible="{isFavorite}"/>
+		<sprite depth="0" name="quickswapIcon" size="0,0" sprite="ui_empty"/>
+	</rect>
+</ulmStackToolbelt>
+
+<ulmStack90 controller="ULM_ItemStack,UndeadLegacy" stack_type="Backpack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false" background_visible="true" tooltip_offset_y="0" bg_style="ulmStack90" visible="true">
+	<rect size="92,92" controller="${controller}" stack_type="${stack_type}" style="itemStack, hover" allow_dropping="${allow_dropping}" prefix_id="${prefix_id}" show_favorites="${show_favorites}" collider_scale="1.1" 
+          background_color="0,0,0,1" highlight_color="0,255,144" select_color="222,206,163" on_scroll="${on_scroll}" tooltip_offset_y="${tooltip_offset_y}">
+		<!--
+		<sprite style="${bg_style}" visible="${background_visible}"/>
+		<sprite depth="1" size="0,0" color="{bgColor}" type="sliced" globalopacity="true">
+			<sprite size="92,92" atlas="UIBackground" sprite="ui_stack_locked"/>
+		</sprite>
+		-->
+		<sprite depth="0" size="92,92" type="sliced" atlas="UIStack" sprite="{backgroundSprite}"/>
+		<texture depth="3" name="backgroundTexture" pos="6,-6" size="80,80" material="Materials/Transparent Colored" globalopacity="true"/>
+		<sprite depth="4" sprite="ui_stack_highlight_bg" type="sliced" globalopacity="true" visible="{searchOverlay}"/>
+		<sprite depth="5" sprite="ui_slot_player_locked" type="sliced" color="256,256,256,128" globalopacity="true" visible="{playerLocked}"/><!-- fps loss 0.6-2.6 -->
+		<sprite depth="7" sprite="ui_stack_highlight_bg" type="sliced" color="255,0,0,128" globalopacity="true" visible="{noCarryWeight}"/>
+		<sprite depth="7" type="sliced" sprite="ui_stack_hover" globalopacity="true" color="{selectionColor}"/><!-- fps loss 4 -->
+		<sprite depth="9" sprite="ui_empty" color="{searchOverlayColor}" foregroundlayer="true">
+		   <sprite depth="3" type="sliced" sprite="ui_stack_quality" globalopacity="true" visible="{hasQuality}" color="{qualityColor}"/>
+		    <!--<sprite depth="1" sprite="stack_legendary" visible="{isLegendary}" type="sliced" globalopacity="true" foregroundlayer="true"/>-->
+		    <!--<sprite depth="4" sprite="{blueprintOverlay}" type="sliced" globalopacity="true" foregroundlayer="true"/>-->
+			<rect depth="4" pos="6,-81" visible="{hasDurability}">
+				<sprite depth="1" size="82,10" pos="-1,1" sprite="ui_durability_solid_bg" type="sliced" color="0,0,0,160"/>
+				<sprite depth="2" size="80,5" sprite="ui_durability_solid" type="filled" fill="{durabilityFill}" color="{qualityColor}" foregroundlayer="true"/>
+			</rect>
+			<rect depth="5" pos="{chargesOffset}" size="80,5" visible="{hasCharges}">
+				<sprite depth="1" pos="6,-74" sprite="ui_durability_solid_bg" color="255,255,255,160" foregroundlayer="true"/>
+				<sprite depth="2" pos="6,-74" sprite="ui_charges_fill" type="filled" fill="{chargesFill}" color="{chargesColor}" foregroundlayer="true"/>
+			</rect>
+            <sprite depth="15" name="itemIcon" pos="46,-46" size="80,80" atlas="{itemAtlas}" sprite="{itemicon}" color="{iconcolor}" pivot="center" foregroundlayer="true"/>
+			<sprite depth="16" name="TypeIcon" pos="5,-5" size="24,24" sprite="ui_game_symbol_{itemtypeicon}" foregroundlayer="true" color="{itemtypeicontint}" visible="{hasitemtypeicon}"/>
+			<sprite depth="16" name="lockTypeIcon" pos="5,-5" size="24,24" sprite="{locktypeicon}" atlas="UIAltAtlas" foregroundlayer="true"/>
+		<!--<sprite depth="17" name="disabledOverlay" pos="3,-3" size="90,90" color="0,0,0,1" type="sliced" visible="false"/>-->
+			<sprite depth="18" name="cancel" type="sliced" sprite="ui_stack_cancel" visible="{isCancelVisible}"/>
+			<label depth="19" name="stackValue" pos="0,-64" size="84,28" text="{itemCount}" font_size="24" style="outline" justify="right"/>
+			<label depth="20" name="timer" pos="46,-46" size="70,24" font_size="24" justify="center" pivot="center" style="outline" color="[beige]"/>
+			<sprite depth="21" name="assembleIcon" pos="46,-46" size="48,48" pivot="center" sprite="{stacklockicon}" color="{stacklockcolor}" visible="{isassemblelocked}" foregroundlayer="true"/>
+			<sprite depth="21" pos="73,-19" size="26,26" pivot="center" sprite="symbol_stack_recycle" visible="{isRecyclable}" color="200,200,200,200" foregroundlayer="true"/>
+		</sprite>
+		<sprite depth="31" sprite="symbol_weight" pos="5,-5" size="24,24" type="sliced" color="255,64,0,200" visible="{noCarryWeight}"/>
+		<sprite depth="8" width="24" height="24" sprite="server_favorite" pos="2,-2" foregroundlayer="true" visible="{isFavorite}"/>
+		<sprite depth="0" name="quickswapIcon" size="0,0" sprite="ui_empty"/>
+	</rect>
+</ulmStack90>
+
+<ulmStackNoCancel controller="ULM_ItemStack,UndeadLegacy" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false" background_visible="true" tooltip_offset_y="0" bg_style="ulmStack90">
+	<rect size="92,92" controller="${controller}" style="itemStack, hover" allow_dropping="${allow_dropping}" prefix_id="${prefix_id}" show_favorites="${show_favorites}" collider_scale="1.1" 
+          background_color="0,0,0,1" highlight_color="0,255,144" select_color="222,206,163" on_scroll="${on_scroll}" tooltip_offset_y="${tooltip_offset_y}">
+		<sprite depth="0" size="92,92" type="sliced" atlas="UIStack" sprite="{backgroundSprite}"/>
+		<texture depth="3" name="backgroundTexture" pos="6,-6" size="80,80" material="Materials/Transparent Colored" globalopacity="true"/>
+		<sprite depth="4" sprite="ui_stack_highlight_bg" type="sliced" globalopacity="true" visible="{searchOverlay}"/>
+		<sprite depth="5" sprite="ui_slot_player_locked" type="sliced" color="256,256,256,128" globalopacity="true" visible="{playerLocked}"/>
+		<sprite depth="7" sprite="ui_stack_highlight_bg" type="sliced" color="255,0,0,128" globalopacity="true" visible="{noCarryWeight}"/>
+		<sprite depth="7" type="sliced" sprite="ui_stack_hover" globalopacity="true" color="{selectionColor}"/>
+		<sprite depth="9" sprite="ui_empty" color="{searchOverlayColor}" foregroundlayer="true">
+		   <sprite depth="3" type="sliced" sprite="ui_stack_quality" globalopacity="true" visible="{hasQuality}" color="{qualityColor}"/>
+		    <!--<sprite depth="1" sprite="stack_legendary" visible="{isLegendary}" type="sliced" globalopacity="true" foregroundlayer="true"/>-->
+		    <!--<sprite depth="4" sprite="{blueprintOverlay}" type="sliced" globalopacity="true" foregroundlayer="true"/>-->
+			<rect depth="4" pos="6,-81" visible="{hasDurability}">
+				<sprite depth="1" size="82,10" pos="-1,1" sprite="ui_durability_solid_bg" type="sliced" color="0,0,0,160"/>
+				<sprite depth="2" size="80,5" sprite="ui_durability_solid" type="filled" fill="{durabilityFill}" color="{qualityColor}" foregroundlayer="true"/>
+			</rect>
+			<rect depth="5" pos="{chargesOffset}" size="80,5" visible="{hasCharges}">
+				<sprite depth="1" pos="6,-74" sprite="ui_durability_solid_bg" color="255,255,255,160" foregroundlayer="true"/>
+				<sprite depth="2" pos="6,-74" sprite="ui_charges_fill" type="filled" fill="{chargesFill}" color="{chargesColor}" foregroundlayer="true"/>
+			</rect>
+            <sprite depth="15" name="itemIcon" pos="46,-46" size="80,80" atlas="{itemAtlas}" sprite="{itemicon}" color="{iconcolor}" pivot="center" foregroundlayer="true"/>
+			<sprite depth="16" name="TypeIcon" pos="5,-5" size="24,24" sprite="ui_game_symbol_{itemtypeicon}" foregroundlayer="true" color="{itemtypeicontint}" visible="{hasitemtypeicon}"/>
+			<sprite depth="16" name="lockTypeIcon" pos="5,-5" size="24,24" sprite="{locktypeicon}" atlas="UIAltAtlas" foregroundlayer="true"/>
+			<label depth="19" name="stackValue" pos="0,-64" size="84,28" text="{itemCount}" font_size="24" style="outline" justify="right"/>
+			<label depth="20" name="timer" pos="46,-46" size="70,24" font_size="24" justify="center" pivot="center" style="outline" color="[beige]"/>
+			<sprite depth="21" name="assembleIcon" pos="46,-46" size="48,48" pivot="center" sprite="{stacklockicon}" color="{stacklockcolor}" visible="{isassemblelocked}" foregroundlayer="true"/>
+			<sprite depth="21" pos="73,-19" size="26,26" pivot="center" sprite="symbol_stack_recycle" visible="{isRecyclable}" color="200,200,200,200" foregroundlayer="true"/>
+		</sprite>
+		<sprite depth="8" width="24" height="24" sprite="server_favorite" pos="2,-2" foregroundlayer="true" visible="{isFavorite}"/>
+	</rect>
+</ulmStackNoCancel>
+	
+<ulmToolbeltKey key="0">
+	<rect><label depth="1" size="92,16" justify="center" font_size="16" text="${key}" style="outline"/></rect>
+</ulmToolbeltKey>
+
+<ulmItemMod pos="0,0" width="30" height="30" sprite_empty="ui_slot_mod_empty" visible="true">
+	<rect rotation="180" width="${width}" height="${height}" controller="ULM_ItemStack,UndeadLegacy" style="itemStack, hover" hover_icon_grow="1" hoverscale="1" collider_scale="1.1" background_color="0,0,0,1" tooltip_offset_x="-33" tooltip_offset_y="53" visible="${visible}">
+		<sprite depth="0" width="${width}" height="${height}" sprite="ui_slot_mod" color="160,160,160" visible="{hasEntry}"/>
+		<sprite depth="1" width="${width}" height="${height}" sprite="${sprite_empty}" color="160,160,160" visible="{showEmptyBackground}"/>
+		<sprite depth="2" name="itemIcon" pos="${Round(width/2,0)},-${Round(height/2,0)}" width="${width}" height="${height}" pivot="center" sprite="{itemicon}" color="{iconcolor}" foregroundlayer="true"/>
+	</rect>
+</ulmItemMod>
+
+<ulmQuestTracker>
+	<rect width="360" height="36" controller="QuestTrackerObjectiveEntry" visible="{hasobjective}">
+		<texture style="ulmQuestTrackEntry"/>
+		<sprite depth="1" pos="330,-9" name="iconTrack" style="icon22px" color="{objectivecompletecolor}" sprite="{objectivecompletesprite}" visible="{objectiveshowicon}"/>
+		<sprite depth="1" pos="5,-21" size="34,54" rotation="15" pivot="center" sprite="ui_quest_tracker" color="{objectivecompletecolor}" foregroundlayer="true" visible="{hasobjective}"/>
+		<label depth="1" pos="20,-9" size="290,24" font_size="24" justify="left" text="{objectiveoptional}{objectivedescription}" visible="{hasobjective}" style="outline"/>
+		<label depth="1" pos="300,-9" size="90,24" font_size="24" justify="center" text="{objectivestate}" color="{objectivecompletecolor}" visible="{hasobjective}" style="outline"/>
+	</rect>
+</ulmQuestTracker>
+
+<ulmWorkstationHeader icon="ui_empty" text_key="" desc="" symbol="ui_empty">
+	<rect>
+		<sprite depth="2" pos="2,8" size="145,100" atlas="ItemIconAtlas" foregroundlayer="true" sprite="${icon}"/>
+		<label depth="2" pos="193,-8" size="250,30" font_size="29" color="[labelColor]" text_key="${text_key}" style="outline"/>
+		<label depth="2" pos="166,-52" size="300,70" font_size="22" name="descriptionText" text_key="${desc}"/>
+		<sprite depth="2" pos="166,-12" size="22,22" foregroundlayer="true" sprite="${symbol}"/>
+	</rect>
+</ulmWorkstationHeader>
+
+<ulmResearchEntry controller="ULM_ResearchEntry,UndeadLegacy" node_size_s="90,90" node_size_l="264,126">
+	<rect depth="1">
+		<rect depth="5" controller="${controller}" pivot="center" name="entry" width="90" height="90" visible="{hasEntry}" node_size_s="${node_size_s}" node_size_l="${node_size_l}" pos="{pos}" custom_tip="{tooltip}"
+			hover_color="0,255,144,200" enabled_color="255,255,255" disabled_color="120,120,120,200"
+			research_color_available="255,255,255,120" research_color_learned="222,206,163,200" research_color_locked="100,100,100,32" link_color_default="60,60,60" link_color_available="160,160,160"> <!--  {linkType} {direction} {partyMembers} -->
+			<rect depth="1" visible="{hasParent}">
+				<sprite depth="4" pivot="center" size="60,60" pos="{arrowPos}" sprite="{arrowSprite}" color="{linkColor}" foregroundlayer="true" atlas="UIBackground"/>
+				<sprite depth="2" pivot="center" size="{linkSizeNode}"		pos="{linkPosNode}"   sprite="ui_fill" color="{linkColor}" foregroundlayer="true"/>
+				<sprite depth="3" pivot="center" size="{linkSizeCenter}"	pos="{linkPosCenter}" sprite="ui_fill" color="{linkColor}" foregroundlayer="true"/>
+				<sprite depth="4" pivot="center" size="{linkSizeParent}"	pos="{linkPosParent}" sprite="ui_fill" color="{linkColor}" foregroundlayer="true"/>
+				<!--
+				<sprite depth="2" pivot="center" size="{linkSizeNode}"		pos="{linkPosNode}"   sprite="ui_fill" color="255,0,0" foregroundlayer="true"/>
+				<sprite depth="3" pivot="center" size="{linkSizeCenter}"	pos="{linkPosCenter}" sprite="ui_fill" color="0,255,0" foregroundlayer="true"/>
+				<sprite depth="4" pivot="center" size="{linkSizeParent}"	pos="{linkPosParent}" sprite="ui_fill" color="0,0,255" foregroundlayer="true"/>
+				-->	
+			</rect>
+			<!--<label  depth="5" pos="-224,77" size="208,20" font_size="20" text="notCulled: {notCulled}" style="outline"/>-->	
+			<rect visible="{notCulled}">
+				<sprite depth="3" size="${node_size_s}" color="{nodeColor}" sprite="ui_empty" visible="{isSmallNode}">
+					<sprite depth="1" pivot="center" style="background" atlas="UIBackground" sprite="ui_research" size="110,110" color="255,255,255,28" name="node_s" on_hover="true" on_press="true" on_scroll="true" on_doubleclick="true" tooltip_offset_x="-45" tooltip_offset_y="45" tooltip_zoom_factor_in="-6" tooltip_zoom_factor_out="5"/>
+					<sprite depth="2" pivot="center" style="background" atlas="UIBackground" sprite="ui_research_{state}" size="110,110" color="{researchColor}"/>
+					<sprite depth="4" pivot="center" style="background" atlas="UIBackground" sprite="ui_research_search" size="110,110" color="0,225,0,160" visible="{showSearchMatch}"/>
+					<sprite depth="5" pivot="center" style="background" atlas="UIBackground" sprite="ui_research_hover" size="110,110" color="{hoverColor}"/>
+					<sprite depth="6" pivot="center" size="70,70" atlas="{atlas}" sprite="{icon}" color="{iconColor}" foregroundlayer="true"/>
+					<sprite depth="7" pivot="center" size="32,32" pos="0,-45" sprite="symbol_no_price" color="255,25,25" visible="{noIngredients}"/>
+
+					<sprite depth="8" pivot="center" pos="6,30" size="22,22" sprite="ui_game_symbol_players" color="{labelColor}" on_hover="true" tooltip="{partyMembers}" visible="{isPartyLearned}"/>
+					<sprite depth="8" pivot="center" pos="30,30" size="22,22" sprite="{tierSprite}" color="{tierColor}"/>
+					<button depth="8" pivot="center" pos="52,48" size="22,22" name="btnCopyToClipboard1" style="ulmButton30x30" sprite="symbol_copy" hoversprite="symbol_copy" defaultcolor="255,255,255,64" hovercolor="41,255,189" tooltip_key="uiCopyIDToClipboard" hoverscale="1.2" sound="[sfx_btn_next]" visible="{isDebugOn}"/>
+					
+					<sprite depth="20" pivot="center" style="background" atlas="UIBackground" sprite="ui_research_locked" color="180,180,180,64" visible="{isLocked}"/>
+				</sprite>
+				<sprite depth="3" size="284,146" color="{nodeColor}" sprite="ui_empty" visible="{isLargeNode}">
+					<sprite depth="1" pivot="center" style="background" atlas="UIBackground" sprite="ui_research_large" color="255,255,255,48" name="node_l" on_hover="true" on_press="true" on_scroll="true" on_doubleclick="true" tooltip_offset_x="-45" tooltip_offset_y="24" tooltip_zoom_factor_in="-7" tooltip_zoom_factor_out="6"/>
+					<sprite depth="2" pivot="center" style="background" atlas="UIBackground" sprite="ui_research_large_{state}" color="{researchColor}"/>
+					<sprite depth="3" pivot="center" style="background" atlas="UIBackground" sprite="ui_research_large_hover" color="{hoverColor}"/>
+					<sprite depth="4" pivot="center" style="background" atlas="UIBackground" sprite="ui_research_large_search" color="0,225,0,160" visible="{showSearchMatch}"/>
+					<sprite depth="5" size="70,70" pos="-84,-15" pivot="center" atlas="{atlas}" sprite="{icon}" color="{iconColor}" foregroundlayer="true"/>
+					<sprite depth="6" size="32,32" pos="-84,-60" pivot="center" sprite="symbol_no_price" color="255,25,25" visible="{noIngredients}"/>
+					<label  depth="5" pos="-124,57" size="208,20" font_size="20" text="{name}" color="{labelColor}" style="outline"/>
+					<!--<label  depth="5" pos="-124,97" size="208,20" font_size="20" text="{pos}" style="outline"/>-->
+
+					<sprite depth="8" pivot="center" pos="92,48" size="22,22" sprite="ui_game_symbol_players" color="{labelColor}" on_hover="true" tooltip="{partyMembers}" visible="{isPartyLearned}"/>
+					<sprite depth="8" pivot="center" pos="116,48" size="22,22" sprite="{tierSprite}" color="{tierColor}"/>
+					<button depth="20" pivot="center" pos="138,66" size="22,22" name="btnCopyToClipboard2" style="ulmButton30x30" sprite="symbol_copy" hoversprite="symbol_copy" defaultcolor="255,255,255,64" hovercolor="41,255,189" tooltip_key="uiCopyIDToClipboard" hoverscale="1.2" sound="[sfx_btn_next]" visible="{isDebugOn}"/>
+					
+					<rect depth="5" pos="-35,25">
+						<rect pos="0,0" size="38,38" visible="{hasUnlock1}">
+							<sprite depth="3" atlas="UIBackground" sprite="ui_stack_recipe" color="255,255,255,180"/>
+							<sprite depth="4" pos="4,-4" size="30,30" name="unlock1" atlas="ItemIconAtlas" sprite="{unlockIcon1}" foregroundlayer="true" on_hover="true" on_scroll="true" tooltip_key="{unlockName1}"/>
+						</rect>
+						<rect pos="40,0" size="38,38" visible="{hasUnlock2}">
+							<sprite depth="3" atlas="UIBackground" sprite="ui_stack_recipe" color="255,255,255,180"/>
+							<sprite depth="4" pos="4,-4" size="30,30" name="unlock2" atlas="ItemIconAtlas" sprite="{unlockIcon2}" foregroundlayer="true" on_hover="true" on_scroll="true" tooltip_key="{unlockName2}"/>
+						</rect>
+						<rect pos="80,0" size="38,38" visible="{hasUnlock3}">
+							<sprite depth="3" atlas="UIBackground" sprite="ui_stack_recipe" color="255,255,255,180"/>
+							<sprite depth="4" pos="4,-4" size="30,30" name="unlock3" atlas="ItemIconAtlas" sprite="{unlockIcon3}" foregroundlayer="true" on_hover="true" on_scroll="true" tooltip_key="{unlockName3}"/>
+						</rect>
+						<rect pos="120,0" size="38,38" visible="{hasUnlock4}">
+							<sprite depth="3" atlas="UIBackground" sprite="ui_stack_recipe" color="255,255,255,180"/>
+							<sprite depth="4" pos="4,-4" size="30,30" name="unlock4" atlas="ItemIconAtlas" sprite="{unlockIcon4}" foregroundlayer="true" on_hover="true" on_scroll="true" tooltip_key="{unlockName4}"/>
+						</rect>
+						<rect pos="0,-40" size="38,38" visible="{hasUnlock5}">
+							<sprite depth="3" atlas="UIBackground" sprite="ui_stack_recipe" color="255,255,255,180"/>
+							<sprite depth="4" pos="4,-4" size="30,30" name="unlock5" atlas="ItemIconAtlas" sprite="{unlockIcon5}" foregroundlayer="true" on_hover="true" on_scroll="true" tooltip_key="{unlockName5}"/>
+						</rect>
+						<rect pos="40,-40" size="38,38" visible="{hasUnlock6}">
+							<sprite depth="3" atlas="UIBackground" sprite="ui_stack_recipe" color="255,255,255,180"/>
+							<sprite depth="4" pos="4,-4" size="30,30" name="unlock6" atlas="ItemIconAtlas" sprite="{unlockIcon6}" foregroundlayer="true" on_hover="true" on_scroll="true" tooltip_key="{unlockName6}"/>
+						</rect>
+						<rect pos="80,-40" size="38,38" visible="{hasUnlock7}">
+							<sprite depth="3" atlas="UIBackground" sprite="ui_stack_recipe" color="255,255,255,180"/>
+							<sprite depth="4" pos="4,-4" size="30,30" name="unlock7" atlas="ItemIconAtlas" sprite="{unlockIcon7}" foregroundlayer="true" on_hover="true" on_scroll="true" tooltip_key="{unlockName7}"/>
+						</rect>
+						<rect pos="120,-40" size="38,38" visible="{hasUnlock8}">
+							<sprite depth="3" atlas="UIBackground" sprite="ui_stack_recipe" color="255,255,255,180"/>
+							<sprite depth="4" pos="4,-4" size="30,30" name="unlock8" atlas="ItemIconAtlas" sprite="{unlockIcon8}" foregroundlayer="true" on_hover="true" on_scroll="true" tooltip_key="{unlockName8}"/>
+						</rect>
+					</rect>
+					<!--
+					<grid depth="5" pos="-35,25" rows="2" cols="4" width="240" height="80" cell_height="40" cell_width="40" controller="ULM_ResearchUnlockGrid,UndeadLegacy" arrangement="horizontal" repeat_content="true">
+						<rect depth="2" size="38,38" on_hover="true" controller="ULM_ResearchUnlockEntry,UndeadLegacy" tooltip_offset_x="-20" tooltip_offset_y="50" visible="{hasUnlock}">
+							<sprite depth="3" atlas="UIBackground" sprite="ui_stack_recipe" color="255,255,255,180"/>
+							<sprite depth="4" pos="4,-4" size="30,30" atlas="ItemIconAtlas" sprite="{icon}" foregroundlayer="true"/>
+						</rect>
+					</grid>
+					-->
+					<sprite depth="20" pivot="center" style="background" atlas="UIBackground" sprite="ui_research_locked" pos="87,-18" size="90,90" color="180,180,180,64" visible="{isLocked}"/>
+				</sprite>
+			</rect>
+		</rect>
+	</rect>
+</ulmResearchEntry>
+
+<ulmSkillTreeEntryOld><!--  ({pos})  -->
+	<rect depth="20" controller="ULM_SkillTreeEntry,UndeadLegacy" grid_size="80" custom_tip="{tooltip}" default_background="ui_skill_tree_node"
+		color_border_default="120,120,120" color_border_purchased="222,206,163" color_border_available="110,110,110" color_border_locked="64,64,64"
+		color_icon_default="80,80,80" color_icon_purchased="255,255,255" color_icon_available="160,160,160" color_icon_display_only="255,255,255"
+		color_default="50,50,50" color_purchased="130,130,130" color_available="80,80,80" color_display_only="255,255,255,0"
+		default_icon_size="30" default_node_size="50" search_overlay_size_offset="50" color_search_no_match="255,255,255,160">
+		<sprite depth="1" pos="{pos}" pivot="center" color="{nodeColor}" sprite="ui_empty" visible="{notCulled}">
+			<rect depth="10" pivot="center" visible="{isDisplay}">
+				<sprite depth="1" pivot="center" size="{sizeNode}" atlas="{backgroundAtlas}" sprite="{background}" color="{backgroundColor}" foregroundlayer="true"/>
+				<sprite depth="2" pivot="center" size="{sizeIcon}" sprite="{icon}" color="{iconColor}" atlas="{iconAtlas}" foregroundlayer="true"/>
+			</rect>
+			<rect depth="10" pivot="center" width="40" height="40" style="press, hover, scroll, drag" name="node1" tooltip_offset_x="-45" tooltip_offset_y="68" tooltip_zoom_factor_in="-3" tooltip_zoom_factor_out="3" visible="{isSkill}">
+				<sprite depth="1" pivot="center" size="{sizeNode}" atlas="UIBackground" sprite="{background}" color="{backgroundColor}" foregroundlayer="true"/>
+				<sprite depth="4" pivot="center" size="{sizeNode}" atlas="UIBackground" color="{borderColor}" sprite="ui_skill_tree_node_border"/>
+				<sprite depth="5" pivot="center" size="{sizeNode}" atlas="UIBackground" sprite="ui_skill_tree_node_hover" color="240,240,240,200" name="hoverOverlay" foregroundlayer="true" visible="{isHovered}"/>
+				<sprite depth="6" pivot="center" size="{sizeSearch}" style="background" atlas="UISkills" sprite="hub" color="0,225,0,100" visible="{showSearchMatch}"/>
+				<sprite depth="7" pivot="center" size="{sizeIcon}" sprite="{icon}" color="{iconColor}" atlas="{iconAtlas}" foregroundlayer="true"/>
+			<!--<sprite depth="9" pivot="center" pos="15,-15" size="16,16" sprite="symbol_lock" color="130,130,130" foregroundlayer="true" visible="{isLocked}"/>-->
+			<!--<label depth="5" pos="0,20" size="200,20" font_size="12" text="{name}" style="outline" color="160,160,160" pivot="center" justify="center" visible="{isDebug}"/>-->
+			</rect>
+			<rect depth="10" pivot="center" width="120" height="120" style="press, hover, scroll, drag" name="node2" tooltip_offset_x="-45" tooltip_offset_y="18" tooltip_zoom_factor_in="-12" tooltip_zoom_factor_out="14" visible="{isRoot}">
+				<sprite depth="1" pivot="center" size="{sizeNode}" sprite="{background}" color="{backgroundColor}" atlas="{backgroundAtlas}" foregroundlayer="true"/>
+				<sprite depth="2" pivot="center" size="{sizeIcon}" sprite="{icon}" color="{iconColor}" atlas="{iconAtlas}" foregroundlayer="true"/>
+			</rect>
+		</sprite>
+	</rect>
+</ulmSkillTreeEntryOld>
+
+<ulmSkillTreeEntry>
+	<rect depth="20" controller="ULM_SkillTreeEntry,UndeadLegacy" grid_size="80" custom_tip="{tooltip}" default_background="ui_skill_tree_node"
+		color_border_default="120,120,120" color_border_purchased="222,206,163" color_border_available="110,110,110" color_border_locked="64,64,64"
+		color_icon_default="80,80,80" color_icon_purchased="255,255,255" color_icon_available="160,160,160" color_icon_display_only="255,255,255"
+		color_default="50,50,50" color_purchased="130,130,130" color_available="80,80,80" color_display_only="255,255,255,0"
+		default_icon_size="30" default_node_size="50" search_overlay_size_offset="50" color_search_no_match="255,255,255,160">
+		
+		<sprite depth="1" pos="{pos}" pivot="center" color="{nodeColor}" sprite="ui_empty" visible="{notCulled}">
+			<sprite depth="10" pivot="center" size="{sizeNode}" atlas="UIBackground" sprite="{background}" color="{backgroundColor}" foregroundlayer="true" visible="{isSkill}"/>
+			<sprite depth="11" pivot="center" size="{sizeNode}" atlas="UIBackground" color="{borderColor}" sprite="ui_skill_tree_node_border" visible="{isSkill}"/>
+			
+			<sprite depth="13" pivot="center" size="{overlaySize}" atlas="UISkills" sprite="{overlaySprite}" color="{overlayColor}" foregroundlayer="true" name="hoverOverlay" visible="{showOverlay}"/>
+
+			<sprite depth="14" pivot="center" size="{sizeIcon}" sprite="{icon}" color="{iconColor}" atlas="{iconAtlas}" foregroundlayer="true" name="node1" style="press, hover, scroll, drag" width="40" height="40" tooltip_offset_x="-45" tooltip_offset_y="68" visible="{isSkill}"/>
+
+			<sprite depth="15" pivot="center" size="{sizeNode}" atlas="{backgroundAtlas}" sprite="{background}" color="{backgroundColor}" foregroundlayer="true" visible="{isDisplay}"/>
+			<sprite depth="16" pivot="center" size="{sizeIcon}" sprite="{icon}" color="{iconColor}" atlas="{iconAtlas}" foregroundlayer="true" visible="{isDisplay}"/>
+
+			<sprite depth="17" pivot="center" size="{sizeNode}" sprite="{background}" color="{backgroundColor}" atlas="{backgroundAtlas}" foregroundlayer="true" visible="{isRoot}"/>
+			<sprite depth="18" pivot="center" size="{sizeIcon}" sprite="{icon}" color="{iconColor}" atlas="{iconAtlas}" foregroundlayer="true" name="node2" style="press, hover, scroll, drag" width="120" height="120" tooltip_offset_x="-45" tooltip_offset_y="18" visible="{isRoot}"/>
+		</sprite>
+	</rect>
+</ulmSkillTreeEntry>
+
+<ulmSkillTreeLinkOld>
+	<rect depth="5" controller="ULM_SkillTreeLinksEntry,UndeadLegacy" grid_size="80" pivot="center" margin="0" 
+		color_default="60,60,60" color_purchased="222,206,163" color_available="67,104,130" color_unavailable="0,0,0,0">
+		<rect depth="1" pos="{pos}" pivot="center" name="link">
+			<sprite depth="6" pivot="center" sprite="ui_fill" color="{color}" height="4" width="{width}" foregroundlayer="true"/>
+			<!--<label depth="6" size="200,20" text="W: {width} P: {pos} A: {angle}"/>-->
+		</rect>
+	</rect>
+</ulmSkillTreeLinkOld>
+<ulmSkillTreeLink>
+	<rect depth="5" controller="ULM_SkillTreeLinksEntry,UndeadLegacy" grid_size="80" pivot="center" margin="0" 
+		color_default="60,60,60" color_purchased="222,206,163" color_available="67,104,130" color_unavailable="0,0,0,0" visible="{notCulled}">
+		<sprite depth="6" pos="{pos}" pivot="center" name="link" sprite="ui_fill" color="{color}" height="4" width="{width}" foregroundlayer="true"/>
+	</rect>
+</ulmSkillTreeLink>
+
+<ulmSkillTreeAttribute visible="true" sprite="symbol_microscope" color="255,255,255"  text="n/a" tooltip="">
+	<rect visible="${visible}">
+		<sprite depth="22" size="100,40" style="backgroundStrong" color="70,70,70,245" atlas="UIBackground" sprite="ui_research_resource_entry"/>
+		<sprite depth="23" size="100,40" style="backgroundStrong" color="${color}" atlas="UIBackground" sprite="ui_research_resource_color" on_hover="true" tooltip="${tooltip}"/>
+		<sprite depth="24" pos="20,-20" size="34,34" sprite="${sprite}" pivot="center"/>
+		<label  depth="24" pos="40,-10" size="60,20" font_size="20" text="${text}" justify="center"/>
+	</rect>
+</ulmSkillTreeAttribute>
+
+<ulmResearchUnlockEntry>
+	<rect depth="2" size="78,78" style="hover" sound_play_on_press="false" controller="ULM_ResearchUnlockEntry,UndeadLegacy" foregroundlayer="true" tooltip_offset_y="12">
+		<sprite style="backgroundWeak"/>
+		<rect visible="{hasUnlock}">
+			<sprite depth="4" name="icon" pos="39,-39" size="70,70" atlas="ItemIconAtlas" sprite="{icon}" pivot="center" foregroundlayer="true"/>
+			<button depth="6" pos="68,-12" name="btnCopyToClipboard" style="ulmButton30x30" size="22,22" sprite="symbol_copy" hoversprite="symbol_copy" defaultcolor="255,255,255,64" hovercolor="41,255,189" tooltip_key="uiCopyIDToClipboard" pivot="center" hoverscale="1.2" sound="[sfx_btn_next]" visible="{isDebugOn}"/>
+		</rect>
+	</rect>
+</ulmResearchUnlockEntry>
+
+<ulmResearchUnlockIngredientEntry width="78" height="78" controller="ULM_ItemStackIngredient,UndeadLegacy">
+	<rect name="row" width="${width}" height="${height}" style="press, hover" sound_play_on_press="false" controller="${controller}" sound="[recipe_click]" foregroundlayer="true" tooltip_offset_y="12">
+		<label name="name"/>
+		<sprite style="background"/>
+		<sprite depth="3" width="${width}" height="${height}" color="{ingredientBgColor}" sprite="ui_fill" type="sliced"/>
+		<sprite depth="4" name="icon" pos="${Round(width/2,0)},${Round(-height/2,0)}" size="70,70" atlas="ItemIconAtlas" sprite="{itemIcon}" color="{itemIconColor}" pivot="center" foregroundlayer="true"/>
+		<label depth="5" pos="0,${Round(22 - height,0)}" width="${width}" height="22" font_size="22" justify="center" text="{count}" style="outline"/>
+	</rect>
+</ulmResearchUnlockIngredientEntry>
+
+<ulmResearchResourceEntry visible="true" sprite="symbol_microscope" color="255,255,255"  text="n/a" tooltip_key="">
+	<rect visible="${visible}">
+		<sprite depth="22" size="100,40" style="backgroundStrong" color="70,70,70,245" atlas="UIBackground" sprite="ui_research_resource_entry"/>
+		<sprite depth="23" size="100,40" style="backgroundStrong" color="${color}" atlas="UIBackground" sprite="ui_research_resource_color" on_hover="true" tooltip_key="${tooltip_key}"/>
+		<sprite depth="24" pos="5,-5" size="30,30" sprite="${sprite}"/>
+		<label  depth="24" pos="40,-10" size="60,20" font_size="20" text="${text}" justify="center"/>
+	</rect>
+</ulmResearchResourceEntry>
+
+</append>
+</Subquake>

@@ -1,0 +1,73 @@
+<Subquake>
+
+
+<append xpath="/buffs">
+
+<buff name="ulmBuffFlashlightActivate" hidden="true">
+	<stack_type value="effect"/>
+	<duration value=".1"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="ULM_SetCvarFromItemPassiveEffect,UndeadLegacy" cvar="$FlashlightHandChargesMax" passive_effect="ChargesMax"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ULM_SetCvarFromItemMeta,UndeadLegacy" cvar="$FlashlightHandChargesUsed" meta_key="ChargesUsed"/>
+	</effect_group>
+	<effect_group>	
+		<requirement name="HoldingItemHasTags" tags="meleeToolFlashlight02"/>
+		<requirement name="CVarCompare" cvar="_driving" operation="NotEquals" value="1"/>
+		<requirement name="CVarCompare" cvar="$FlashlightHandChargesUsed" operation="LT" value="@$FlashlightHandChargesMax"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="ulmBuffFlashlightActive"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="HoldingItemHasTags" tags="meleeToolFlashlight02"/>
+		<requirement name="CVarCompare" cvar="$FlashlightHandChargesUsed" operation="GTE" value="@$FlashlightHandChargesMax"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="ulmBuffFlashlightActive"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ULM_NotifyMissingItem,UndeadLegacy" name="ulmResourceBatterySmall"/>
+	</effect_group></buff>
+
+<buff name="ulmBuffFlashlightActive" name_key="ulmBuffFlashlightActive" icon="symbol_flashlight" icon_color="255,255,255">
+	<stack_type value="effect"/>
+	<update_rate value=".1"/>
+	<display_value value="$FlashlightHandChargesDisplay"/>
+	<display_value_key value="{0:0}%"/>
+	<effect_group name="On Start">
+		<requirement name="CVarCompare" cvar="$ulmBuffFlashlightInitialized" operation="Equals" value="0"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$ulmBuffFlashlightInitialized" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$ulmBatteryFlashlightTick" operation="set" value="0.0556"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" parent_transform="#HeldItemRoot" transform_path="flashlight_lightSource" active="true"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" parent_transform="#HeldItemRoot" transform_path="flashlight_lightBeam" active="true">
+			<requirement name="VolumetricLightsEnabled,UndeadLegacy"/></triggered_effect>
+	</effect_group>
+	<effect_group name="On Update - Refreshes Charges From Item">
+		<triggered_effect trigger="onSelfBuffUpdate" action="ULM_SetCvarFromItemMeta,UndeadLegacy" cvar="$FlashlightHandChargesUsed" meta_key="ChargesUsed"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$FlashlightHandChargesDisplay" operation="set" value="@$FlashlightHandChargesMax"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$FlashlightHandChargesDisplay" operation="subtract" value="@$FlashlightHandChargesUsed"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$FlashlightHandChargesDisplay" operation="divide" value="@$FlashlightHandChargesMax"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$FlashlightHandChargesDisplay" operation="multiply" value="100"/>
+		<!-- 100 = 100%, duration = 30 min, ticks every 10 seconds = 180 ticks; 0.556 per tick to be subtracted -->
+		<triggered_effect trigger="onSelfBuffUpdate" action="ULM_Modify,UndeadLegacy" meta_key="ChargesUsed" operation="add" value="@$ulmBatteryFlashlightTick" toolbelt_changed="true"/>
+	</effect_group>
+	<effect_group name ="Stop if Driving, not Flashlight or Depleted">
+		<requirement_group op="or">
+			<requirement name="CVarCompare" cvar="_driving" operation="Equals" value="1"/>
+			<requirement name="!HoldingItemHasTags" tags="meleeToolFlashlight02"/>
+			<requirement name="CVarCompare" cvar="$FlashlightHandChargesUsed" operation="GTE" value="@$FlashlightHandChargesMax"/>
+		</requirement_group>
+		<triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="Removing onSelfBuffStart ulmBuffFlashlightStop"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="ulmBuffFlashlightStop"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="ulmBuffFlashlightStop"/>
+	</effect_group>
+	<effect_group name="Cleanup">
+		<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" parent_transform="#HeldItemRoot" transform_path="flashlight_lightSource" active="false"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" parent_transform="#HeldItemRoot" transform_path="flashlight_lightBeam" active="false"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$FlashlightHandChargesDisplay,$FlashlightHandChargesUsed,$FlashlightHandChargesMax,$ulmBatteryFlashlightTick,$ulmBuffFlashlightInitialized"/>
+	</effect_group></buff>
+
+<buff name="ulmBuffFlashlightStop" hidden="true">
+	<stack_type value="ignore"/>
+	<duration value=".1"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="ulmBuffFlashlightActive"/>
+	</effect_group></buff>
+
+</append>
+
+</Subquake>

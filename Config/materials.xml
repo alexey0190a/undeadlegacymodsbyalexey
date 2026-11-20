@@ -1,0 +1,1123 @@
+﻿<Subquake>
+<!--<remove xpath="//material[@id='MresourceWood']"/>-->
+	
+<set xpath="/materials/material[@id='MtreeWoodSmall']/property[@name='damage_category']/@value">tree</set>
+<set xpath="/materials/material[@id='MtreeWoodLarge']/property[@name='damage_category']/@value">tree</set>
+<set xpath="/materials/material[@id='MtreeWoodMedium']/property[@name='damage_category']/@value">tree</set>
+<set xpath="/materials/material[@id='MtreeWoodFull']/property[@name='damage_category']/@value">tree</set>
+	
+<!--<set xpath="/materials/material[@id='Mgravel']/property[@name='damage_category']/@value">ore</set>-->
+<set xpath="/materials/material[@id='MoreStone']/property[@name='damage_category']/@value">ore</set>
+<set xpath="/materials/material[@id='MoreMetal']/property[@name='damage_category']/@value">ore</set>
+	
+<set xpath="/materials/material[@id='MoreStone']/property[@name='MaxDamage']/@value">500</set>
+<set xpath="/materials/material[@id='Mbrick']/property[@name='MaxDamage']/@value">1500</set>
+
+<append xpath="/materials">
+
+<material id="matAdhesive">
+	<property name="forge_category" value="adhesive"/>
+	<property name="Experience" value="2"/></material>
+    
+<material id="matAluminum">
+	<property name="stepsound" value="stone"/>
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="aluminum"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="120"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="Experience" value="20"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="500"/></material>
+
+<material id="matArmorFiber">
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Experience" value="6"/></material>
+
+<material id="matArmorFabric">
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="forge_category" value="ulmResourceClothFabric"/>
+	<property name="Experience" value="6"/></material>
+
+<material id="matArmorMilitary">
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="forge_category" value="ulmResourceMilitaryFiber"/>
+	<property name="Experience" value="6"/></material>
+
+<material id="matMilitarySteel">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="militarySteel"/>
+	<property name="Experience" value="6"/></material>
+
+<material id="matMilitaryTitanium">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="militaryTitanium"/>
+	<property name="Experience" value="6"/></material>
+
+<material id="matBone">
+	<property name="stepsound" value="wood"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="bone"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="40"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="Experience" value="10"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="200"/></material>
+	
+<material id="matBranch">
+	<property name="stepsound" value="wood"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="branch"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="40"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="300"/></material>
+
+<material id="matBrass">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="brass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="Experience" value="5"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="200"/></material>
+	
+<material id="matBrick">
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="stone"/>
+	<property name="stepsound" value="stone"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="120"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="Experience" value="15"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="2500"/></material>
+
+<material id="matCardboard">
+	<property name="forge_category" value="paper"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="damage_category" value="cloth"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="wood"/>
+	<property name="stability_glue" value="4"/>
+	<property name="Mass" type="int" value="2"/>
+	<property name="Experience" value="5"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="400"/></material>
+    
+<material id="matChitin">
+	<property name="stepsound" value="stone"/>
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="chitin"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="120"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="Experience" value="20"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="500"/></material>
+
+<material id="matClay">
+	<property name="stepsound" value="stone"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="earth"/>
+	<property name="forge_category" value="clay"/>
+	<property name="stability_glue" value="30"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="Experience" value="6"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="200"/></material>
+
+<material id="matCloth">
+	<property name="stepsound" value="cloth"/>
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="forge_category" value="cloth"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="explosionresistance" value="0.01"/>
+	<property name="lightopacity" value="255"/>
+	<property name="stability_glue" value="10"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Experience" value="5"/>
+	<property name="MaxDamage" value="5"/></material>
+
+<material id="matClothStable">
+	<property name="stepsound" value="cloth"/>
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="forge_category" value="cloth"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="explosionresistance" value="0.01"/>
+	<property name="lightopacity" value="255"/>
+	<property name="stability_glue" value="40"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="Experience" value="5"/>
+	<property name="MaxDamage" value="5"/></material>
+	
+<material id="matCoal">
+	<property name="forge_category" value="coal"/>
+	<property name="Experience" value="20"/></material>
+
+<material id="matCobblestone">
+	<property name="stepsound" value="stone"/>
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="stone"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="120"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="explosionresistance" value="1"/>
+	<property name="Experience" value="15"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="1500"/></material>
+	
+<material id="matConcrete">
+	<property name="stepsound" value="stone"/>
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="concrete"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="120"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="explosionresistance" value="1.25"/>
+	<property name="Experience" value="20"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="5000"/></material>
+
+<material id="matCopper">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="copper"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="stability_glue" value="20"/>
+	<property name="Mass" type="int" value="200"/>
+	<property name="Experience" value="20"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="100"/></material>
+
+<material id="matCotton">
+	<property name="stepsound" value="cloth"/>
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="particle_category" value="cloth"/>
+	<property name="forge_category" value="cotton"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="explosionresistance" value="0.01"/>
+	<property name="stability_glue" value="10"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="5"/></material>
+    
+<material id="matDiamond">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="diamond"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="3"/>
+	<property name="Experience" value="30"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="15000"/></material>
+
+<material id="matFeather">
+	<property name="forge_category" value="feather"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/></material>
+
+<material id="matFiber">
+	<property name="stepsound" value="cloth"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/></material>
+
+<material id="matGlass">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="glass"/>
+	<property name="surface_category" value="glass"/>
+	<property name="forge_category" value="glass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="20"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="StabilitySupport" value="true"/>
+	<property name="Experience" value="2"/>
+	<property name="MaxDamage" value="1"/></material>
+
+<material id="matGlassStrong">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="glass"/>
+	<property name="surface_category" value="glass"/>
+	<property name="forge_category" value="glass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="lightopacity" value="2"/>
+	<property name="stability_glue" value="60"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="StabilitySupport" value="true"/>
+	<property name="Experience" value="5"/>
+	<property name="MaxDamage" value="3000"/></material>
+
+<material id="matGold">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="gold"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="stability_glue" value="20"/>
+	<property name="Mass" type="int" value="200"/>
+	<property name="Experience" value="30"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="100"/></material>
+
+<material id="matHay">
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="particle_category" value="xt_tallgrass"/>
+	<property name="particle_destroy_category" value="xt_tallgrass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="leaves"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="Experience" value="0"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="50"/></material>
+
+<material id="matMetal">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="500"/></material>
+
+<material id="matMetalWeak">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="120"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="200"/></material>
+
+<material id="matMetalHard">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="0.4"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="2500"/></material>
+
+<material id="matMetalExplosionResistant">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="explosionresistance" value="1"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="2500"/></material>
+
+<material id="matMilitaryFiber">
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="stepsound" value="cloth"/>
+	<property name="forge_category" value="ulmResourceMilitaryFiber"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="2"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Experience" value="4"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="5"/></material>
+
+<material id="matHide">
+	<property name="stepsound" value="cloth"/>
+	<property name="damage_category" value="organic"/>
+	<property name="surface_category" value="organic"/>
+	<property name="particle_category" value="organic"/>
+	<property name="forge_category" value="hide"/>
+	<property name="Experience" value="5"/>
+	<property name="lightopacity" value="255"/></material>
+
+<material id="matIron">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="500"/></material>
+
+<material id="matIronWeak">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="250"/></material>
+
+<material id="matIronOre">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="Experience" value="20"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="500"/></material>
+
+<material id="matIronBarrel">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="50"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="200"/></material>
+
+<material id="matIronChains">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="250"/></material>
+
+<material id="matIronThin">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="10"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="250"/></material>
+
+<material id="matIronMedium">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="0.3"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="1000"/></material>
+
+<material id="matIronShapes">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="5000"/></material>
+
+<material id="matIronStrong">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="2500"/></material>
+
+<material id="matLead">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="lead"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/></material>
+
+<material id="matLeadOre">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="lead"/>
+	<property name="Experience" value="20"/>
+	<property name="lightopacity" value="255"/></material>
+
+<material id="matLeather">
+	<property name="stepsound" value="cloth"/>
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="forge_category" value="leather"/>
+	<property name="Experience" value="5"/>
+	<property name="lightopacity" value="255"/></material>
+
+<material id="matLeatherScrap">
+	<property name="stepsound" value="cloth"/>
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="forge_category" value="leatherScrap"/>
+	<property name="Experience" value="5"/>
+	<property name="lightopacity" value="255"/></material>
+
+<material id="matMisc">
+	<property name="forge_category" value="misc"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="wood"/>
+	<property name="stability_glue" value="40"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="Experience" value="5"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="200"/></material>
+
+<material id="matOilShale">
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="shale"/>
+	<property name="Experience" value="20"/>
+	<property name="lightopacity" value="255"/></material>
+
+<material id="matOrganic">
+	<property name="stepsound" value="organic"/>
+	<property name="forge_category" value="organic"/>
+	<property name="damage_category" value="organic"/>
+	<property name="surface_category" value="organic"/>
+	<property name="particle_category" value="organic"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="fertile_level" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="movement_factor" value="0.5"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="50"/></material>
+
+<material id="matPaper">
+	<property name="forge_category" value="paper"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="damage_category" value="cloth"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="wood"/>
+	<property name="stability_glue" value="4"/>
+	<property name="Mass" type="int" value="2"/>
+	<property name="Experience" value="5"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="200"/></material>
+
+<material id="matPaint">
+	<property name="damage_category" value="organic"/>
+	<property name="surface_category" value="organic"/>
+	<property name="forge_category" value="resourcePaint"/>
+	<property name="Experience" value="0"/>
+	<property name="lightopacity" value="255"/></material>
+
+<material id="matPlastic">
+	<property name="stepsound" value="wood"/>
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<!--<property name="forge_category" value="plastic"/>-->
+	<property name="forge_category" value="resourceScrapPolymers"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="lightopacity" value="255"/>
+	<property name="stability_glue" value="20"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="Experience" value="2"/>
+	<property name="MaxDamage" value="100"/></material>
+
+<material id="matPlasticItem">
+	<property name="stepsound" value="wood"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="resourceScrapPolymers"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="lightopacity" value="255"/>
+	<property name="stability_glue" value="20"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="Experience" value="2"/>
+	<property name="MaxDamage" value="100"/></material>
+
+<material id="matPlasticTrash">
+	<property name="stepsound" value="trash"/>
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<!--<property name="forge_category" value="plastic"/>-->
+	<property name="forge_category" value="resourceScrapPolymers"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="lightopacity" value="255"/>
+	<property name="stability_glue" value="20"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="Experience" value="2"/>
+	<property name="MaxDamage" value="50"/></material>
+    
+<material id="matPotassiumNitrate">
+	<property name="stepsound" value="stone"/>
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="potassium"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="120"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="Experience" value="20"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="500"/></material>
+	
+<material id="matReinforcedConcrete">
+	<property name="stepsound" value="stone"/>
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="concrete"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="120"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="explosionresistance" value="1.5"/>
+	<property name="Experience" value="2"/>
+	<property name="MaxDamage" value="7500"/></material>
+    
+<material id="matResearch">
+	<property name="forge_category" value="research"/>
+	<property name="Experience" value="1"/></material>
+
+<material id="matResearchArmor">
+	<property name="forge_category" value="ulmResourceResearchArmor"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="Experience" value="1"/></material>
+
+<material id="matResearchChemistry">
+	<property name="forge_category" value="ulmResourceResearchChemistry"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="Experience" value="1"/></material>
+
+<material id="matResearchGuns">
+	<property name="forge_category" value="ulmResourceResearchGuns"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="Experience" value="1"/></material>
+
+<material id="matResearchBiology">
+	<property name="forge_category" value="ulmResourceResearchBiology"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="Experience" value="1"/></material>
+
+<material id="matResearchEngineering">
+	<property name="forge_category" value="ulmResourceResearchEngineering"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="Experience" value="1"/></material>
+
+<material id="matResearchTools">
+	<property name="forge_category" value="ulmResourceResearchTools"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="Experience" value="1"/></material>
+
+<material id="matResearchAdvanced">
+	<property name="forge_category" value="ulmResourceResearchAdvanced"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="Experience" value="1"/></material>
+
+<material id="matResourcePlank">
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="wood"/>
+	<property name="Experience" value="2"/></material>
+    
+<material id="matResourceLargeStone">
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="stone"/>
+	<property name="Experience" value="4"/></material>
+
+<material id="matResourceBrick">
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="earth"/>
+	<property name="forge_category" value="clay"/>
+	<property name="Experience" value="6"/></material>
+    
+<material id="matResourceConcreteMix">
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="stone"/>
+	<property name="Experience" value="8"/></material>
+
+<material id="matResourceIronRebar">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Experience" value="10"/></material>
+
+<material id="matResourceSteelPlating">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="steel"/>
+	<property name="Experience" value="15"/></material>
+    
+<material id="matResourceTitaniumPlating">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="titanium"/>
+	<property name="Experience" value="20"/></material>
+
+<material id="matRubber">
+	<property name="stepsound" value="wood"/>
+	<property name="forge_category" value="rubber"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="lightopacity" value="255"/>
+	<property name="stability_glue" value="20"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="Experience" value="2"/>
+	<property name="MaxDamage" value="50"/></material>
+
+<material id="matSand">
+	<property name="damage_category" value="sand"/>
+	<property name="surface_category" value="earth"/>
+	<property name="forge_category" value="sand"/>
+	<property name="Experience" value="10"/>
+	<property name="lightopacity" value="255"/></material>
+
+<material id="matScrapIronShapes">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="750"/></material>
+    
+<material id="matSilicon">
+	<property name="stepsound" value="stone"/>
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="silicon"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="120"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="Experience" value="20"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="500"/></material>
+
+<material id="matSilver">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="silver"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="stability_glue" value="20"/>
+	<property name="Mass" type="int" value="200"/>
+	<property name="Experience" value="20"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="100"/></material>
+	
+<material id="matSnow">
+	<property name="stepsound" value="snow"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="earth"/>
+	<property name="particle_category" value="snow"/>
+	<property name="particle_destroy_category" value="snow"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="fertile_level" value="1"/>
+	<property name="stability_glue" value="15"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="100"/></material>
+
+<material id="matSteel">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="steel"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="2"/>
+	<property name="Experience" value="5"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="10000"/></material>
+
+<material id="matSteelSpikes">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="steel"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="1"/>
+	<property name="Experience" value="5"/>
+	<property name="movement_factor" value="0.18"/>
+	<property name="MaxDamage" value="500"/></material>
+
+<material id="matStick">
+	<property name="stepsound" value="wood"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="stick"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="40"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="Experience" value="10"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="300"/></material>
+    
+<material id="matStone">
+	<property name="stepsound" value="stone"/>
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="stone"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="120"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="Experience" value="4"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="500"/></material>
+
+<material id="matStoneFrames">
+	<property name="stepsound" value="stone"/>
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="stone"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="120"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="explosionresistance" value="1"/>
+	<property name="Experience" value="15"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="250"/></material>
+
+<material id="matStoneShapes">
+	<property name="stepsound" value="stone"/>
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="stone"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="120"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="explosionresistance" value="1"/>
+	<property name="Experience" value="15"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="1500"/></material>
+
+<material id="matStoneWeak">
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="stone"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="stone"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="stability_glue" value="10"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="Experience" value="2"/>
+	<property name="MaxDamage" value="200"/></material>
+	
+<material id="matSolarCell">
+	<property name="stepsound" value="wood"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="solarcell"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="40"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="300"/></material>
+    
+<material id="matTitanium">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="titanium"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="3"/>
+	<property name="Experience" value="30"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="15000"/></material>
+
+<material id="matTitaniumSpikes">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="titanium"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="2"/>
+	<property name="Experience" value="5"/>
+	<property name="movement_factor" value="0.18"/>
+	<property name="MaxDamage" value="1500"/></material>
+	
+<material id="matTrash">
+	<property name="stepsound" value="trash"/>
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Experience" value="0"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="50"/></material>
+
+<material id="matWood">
+	<property name="stepsound" value="wood"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="wood"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="40"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="500"/></material>
+
+<material id="matWoodLog">
+	<property name="stepsound" value="wood"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="wood"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="40"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="Experience" value="20"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="500"/></material>
+	
+<material id="matWoodLogSpike">
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="wood"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="wood"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="225"/></material>
+
+<material id="matWoodLadder">
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="wood"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="wood"/>
+	<property name="stability_glue" value="20"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="150"/></material>
+
+<material id="matWoodFrames">
+	<property name="stepsound" value="wood"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="wood"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="40"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="Experience" value="10"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="250"/></material>
+
+<material id="matWoodWeak">
+	<property name="stepsound" value="wood"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="wood"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="40"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="Experience" value="10"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="250"/></material>
+
+<material id="matGrass">
+	<property name="stepsound" value="grass"/>
+	<property name="damage_category" value="grass"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="xt_tallgrass"/>
+	<property name="particle_destroy_category" value="xt_tallgrass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="collidable" value="false"/>
+	<property name="ground_cover" value="true"/>
+	<property name="fertile_level" value="0"/>
+	<property name="lightopacity" value="0"/>
+	<property name="plant" value="true"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Experience" value="0"/>
+	<property name="MaxDamage" value="1"/></material>
+
+<material id="matLeaves">
+	<property name="stepsound" value="tree"/>
+	<property name="damage_category" value="leaves"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_destroy_category" value="xt_leaves2"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="lightopacity" value="5"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Experience" value="20"/>
+	<property name="MaxDamage" value="1"/></material>
+
+<material id="matSulfur">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="sulfur"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="stability_glue" value="20"/>
+	<property name="Mass" type="int" value="200"/>
+	<property name="Experience" value="20"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="100"/></material>
+
+<material id="matZinc">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="zinc"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="stability_glue" value="20"/>
+	<property name="Mass" type="int" value="200"/>
+	<property name="Experience" value="20"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="100"/></material>
+
+<material id="matSecureLoot">
+	<property name="damage_category" value="secureLoot"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="1.4"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="5000"/></material>
+
+<material id="matIronDoorWithGlass">
+	<property name="Experience" value="2"/>
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="glass"/>
+	<property name="forge_category" value="metal"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="Experience" value="2"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="15"/></material>
+
+<material id="matAsphalt">
+	<property name="damage_category" value="asphalt"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="stone"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="stone"/>
+	<property name="stability_glue" value="120"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="explosionresistance" value="1.1"/>
+	<property name="Experience" value="4"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="2500"/></material>
+
+<material id="matPartsSMG">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="ulmResourcePartsSMG"/>
+	<property name="Experience" value="6"/>
+	<property name="lightopacity" value="255"/></material>
+    
+<material id="matTitaniumOre">
+	<property name="stepsound" value="metal"/>
+	<property name="damage_category" value="titanium"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="titanium"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="1.5"/>
+	<property name="Experience" value="30"/>
+	<property name="lightopacity" value="255"/>
+	<property name="MaxDamage" value="1000"/></material>
+	
+</append>
+	
+</Subquake>

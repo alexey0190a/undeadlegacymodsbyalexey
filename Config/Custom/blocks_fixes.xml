@@ -1,0 +1,18 @@
+<Subquake>
+
+<set xpath="/blocks/block[@name='glassBroken_02']">
+	<property name="Extends" value="glassDebris01"/>
+	<property name="Model" value="#Mods/UndeadLegacy/Resources/Subquake_BlockFixes.ulm?glassBroken_02"/>
+	<property name="SortOrder2" value="0202"/></set>
+
+<set xpath="/blocks/block[@name='glassBrokenCapLeft']">
+	<property name="Extends" value="glassDebris01"/>
+	<property name="Model" value="#Mods/UndeadLegacy/Resources/Subquake_BlockFixes.ulm?glassBrokenCapLeft"/>
+	<property name="SortOrder2" value="0204"/></set>
+
+<set xpath="/blocks/block[@name='glassBrokenCapRight']">
+	<property name="Extends" value="glassDebris01"/>
+	<property name="Model" value="#Mods/UndeadLegacy/Resources/Subquake_BlockFixes.ulm?glassBrokenCapRight"/>
+	<property name="SortOrder2" value="0205"/></set>
+
+</Subquake>

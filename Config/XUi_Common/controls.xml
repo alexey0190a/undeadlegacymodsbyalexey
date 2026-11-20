@@ -1,0 +1,255 @@
+<Subquake>
+	
+<remove xpath="/controls/pager"/>
+<remove xpath="/controls/togglebutton"/>
+
+<append xpath="/controls">
+
+<ulmPlayerName width="175" height="46" pos="0,0" icon_size="25" icon_pos="13,-23">
+	<rect controller="PlayerName" name="playerName" width="${width}" height="${height}" on_press="true" disablefallthrough="true">
+		<rect pos="${pos}">
+			<label depth="1" pos="0,0" name="name" width="${width}" height="${height}" text="" font_size="26" justify="left"/>
+		<!--<label depth="1" pos="0,0" width="${width}" height="${height}" text="Player Name" font_size="26" justify="left"/>-->
+			<sprite name="iconCrossplay" depth="50" width="${icon_size}" height="${icon_size}" pos="${icon_pos}" globalopacity="false" pivot="center"/>
+			<label depth="1" name="nameCrossplay" pos="30,0" width="${width-40}" height="${height}" text="" font_size="26" justify="left"/>
+		</rect>
+	</rect>
+</ulmPlayerName>
+	
+<togglebutton depth="3" pos="0,0" width="200" height="32" enabled_font_color="[labelColor]" disabled_font_color="[disabledLabelColor]" visible="true" tooltip_key="" caption="" caption_key="" font_size="28" parse_actions="false">
+	<rect name="${name}" depth="${depth}" pos="${pos}" width="${width}" height="${height}" enabled_font_color="${enabled_font_color}" disabled_font_color="${disabled_font_color}" controller="ToggleButton" visible="${visible}">
+		<button name="clickable" sprite="ui_empty" defaultcolor="0,0,0,1" disabledcolor="[darkGrey]" hoversprite="ui_game_select_row" hovercolor="[white]" type="sliced" hoverscale="1.0" tooltip_key="${tooltip_key}" />
+		<sprite depth="2" name="tickbox" width="${height-6}" height="${height-6}" pos="7,-4" color="[darkGrey]" sprite="Highlight - Shadowed" type="sliced" />
+		<sprite depth="3" name="tickmark" width="${height-12}" height="${height-12}" pos="10,-7" color="[iconColor]" sprite="ui_game_symbol_check" visible="{value}" />
+		<label depth="2" name="btnLabel" width="${width-height-8}" height="${height-2}" pos="${6+height},${Round(-height/2,0)}" justify="left" text="${caption}" text_key="${caption_key}" effect="outline" pivot="left" font_size="${font_size}" parse_actions="${parse_actions}" />
+	</rect>
+</togglebutton>
+	
+<pager depth="3" pos="0,0" width="100" height="32" show_max_page="false" separator="/" primary_pager="true" name="pager">
+	<rect name="${name}" depth="${depth}" pos="${pos}" disableautobackground="true" controller="ULM_Paging,UndeadLegacy" visible="{paging_visible}" show_max_page="${show_max_page}" separator="${separator}" primary_pager="${primary_pager}"> <!-- default size: 100x32 -->
+		<rect name="pagerContaiener" visible="{showPager}"><!-- -->
+			<button depth="4" name="pageDown" style="icon30px, press2" pos="${Round(height/2 - 8, 0)},${Round(-height/2, 0)}" enabled="{# int(pagenumber) &gt; 1}" sprite="ui_page_prev" disabledcolor="[bgDefault]" pivot="center"/>
+			<rect depth="4" pos="${height},${Round(-height/2, 0)}">
+				<sprite pos="20,0" style="background" size="80,36" sprite="ui_page" pivot="center"/>
+				<!--<sprite depth="1" pos="20,0" name="background" size="70,30" color="[darkestGrey]" sprite="ui_page" type="sliced" pivot="center"/>-->
+				<label depth="5" pos="20,-2" size="80,32" font_size="28" text="{#showmaxpage ? pagenumber + separator + maxpagenumber : pagenumber}" pivot="center" justify="center"/>
+			</rect>
+			<button depth="4" name="pageUp"   style="icon30px, press2" pos="${Round(width - height/2 + 12, 0)},${Round(-height/2, 0)}" enabled="{# int(pagenumber) &lt; int(maxpagenumber)}" sprite="ui_page_next" disabledcolor="[bgDefault]" pivot="center"/>
+		</rect>
+	</rect>
+</pager>
+
+<ulmDivider depth="3" pos="0,0" width="100">
+	<rect depth="${depth}" pos="${pos}">
+		<sprite depth="1" pos="0,-1" width="${width}" height="2" color="83,89,87" sprite="ui_fill" type="sliced" foregroundlayer="true"/>
+		<sprite depth="2" pos="0,-3" width="${width}" height="4" color="75,81,79" sprite="ui_fill" type="sliced" foregroundlayer="true"/>
+	</rect>
+</ulmDivider>
+	
+<ulmBackground pos="-6,25" size="100,100" bg_color="[ulmWindowBackground]" visible="true">
+	<rect depth="-10" pos="${pos}" size="${size}" controller="ULM_DynamicBG,UndeadLegacy" visible="${visible}">
+		<sprite style="ulmWindowBG" name="BGSP1" color="${bg_color}"/>
+		<sprite sprite="ui_empty">
+			<texture style="ulmWindowTL"/><texture style="ulmWindowTM"/><texture style="ulmWindowTR"/>
+			<texture style="ulmWindowBR"/><texture style="ulmWindowBM"/><texture style="ulmWindowBL"/>
+		</sprite>
+	</rect>
+</ulmBackground>
+	
+<backgroundWA pos="-6,25" size="100,100" bg_color="[ulmWindowBackground]" bg_alpha="255" visible="true">
+	<sprite depth="-10" pos="${pos}" size="${size}" controller="ULM_DynamicBG,UndeadLegacy" sprite="ui_empty" color="255,255,255,${bg_alpha}" visible="${visible}">
+		<sprite style="ulmWindowBG" name="BGSP1" color="${bg_color}"/>
+		<sprite style="ulmWindowBG" depth="-2" color="255,255,255,32" height="60"/>
+		<sprite depth="-1" pos="0,-59" height="1" color="255,255,255,48" sprite="ui_fill" type="sliced" foregroundlayer="true"/>
+		<!--<sprite style="ulmWindowBG"/>-->
+		<sprite sprite="ui_empty">
+			<texture style="ulmWindowTL"/><texture style="ulmWindowTM"/><texture style="ulmWindowTR"/>
+			<texture style="ulmWindowBR"/><texture style="ulmWindowBM"/><texture style="ulmWindowBL"/>
+		</sprite>
+	</sprite>
+</backgroundWA>
+	
+<backgroundWA_NoHeader pos="-6,25" size="100,100" bg_color="[ulmWindowBackground]" bg_alpha="255" visible="true">
+	<sprite depth="-10" pos="${pos}" size="${size}" controller="ULM_DynamicBG,UndeadLegacy" sprite="ui_empty" color="255,255,255,${bg_alpha}" visible="${visible}">
+		<sprite style="ulmWindowBG" name="BGSP1" color="${bg_color}"/>
+		<!--<sprite style="ulmWindowBG"/>-->
+		<sprite sprite="ui_empty">
+			<texture style="ulmWindowTL"/><texture style="ulmWindowTM"/><texture style="ulmWindowTR"/>
+			<texture style="ulmWindowBR"/><texture style="ulmWindowBM"/><texture style="ulmWindowBL"/>
+		</sprite>
+	</sprite>
+</backgroundWA_NoHeader>
+	
+<background pos="-6,25" size="100,100" bg_color="[ulmWindowBackground]" visible="true">
+	<rect depth="-10" pos="${pos}" size="${size}" controller="ULM_DynamicBG,UndeadLegacy" visible="${visible}">
+		<sprite style="ulmWindowBG" name="BGSP1" color="${bg_color}"/>
+		<sprite style="ulmWindowBG" depth="-2" color="255,255,255,32" height="60"/>
+		<sprite depth="-1" pos="0,-59" height="1" color="255,255,255,48" sprite="ui_fill" type="sliced" foregroundlayer="true"/>
+		<!--<sprite style="ulmWindowBG"/>-->
+		<sprite sprite="ui_empty">
+			<texture style="ulmWindowTL"/><texture style="ulmWindowTM"/><texture style="ulmWindowTR"/>
+			<texture style="ulmWindowBR"/><texture style="ulmWindowBM"/><texture style="ulmWindowBL"/>
+		</sprite>
+	</rect>
+</background>
+	
+<ulmBackgroundDynamic pos="-6,25" size="100,100" dynamic_height="0" default_size="100,100">
+	<rect depth="-10" pos="${pos}" size="${size}" controller="ULM_DynamicBG,UndeadLegacy" dynamic_height="${dynamic_height}">
+		<sprite style="ulmWindowBG" name="BGSP1"/>
+		<!--<sprite style="ulmWindowBG" name="BGSP3"/>-->
+		<texture style="ulmWindowTL"/><texture style="ulmWindowTM"/><texture style="ulmWindowTR"/>
+		<texture style="ulmWindowBR"/><texture style="ulmWindowBM"/><texture style="ulmWindowBL"/>
+	</rect>
+</ulmBackgroundDynamic>
+	
+<ulmBackgroundDynamicWithAlpha pos="-6,25" size="100,100" bg_color="[ulmWindowBackground]" dynamic_height="0" default_size="100,100" bg_alpha="255" visible="true">
+	<sprite depth="-10" pos="${pos}" size="${size}" controller="ULM_DynamicBG,UndeadLegacy" sprite="ui_empty" dynamic_height="${dynamic_height}" color="255,255,255,${bg_alpha}" visible="${visible}">
+		<sprite style="ulmWindowBG" name="BGSP1" color="${bg_color}"/>
+		<sprite style="ulmWindowBG" depth="-2" color="255,255,255,32" height="60"/>
+		<sprite depth="-1" pos="0,-59" height="1" color="255,255,255,48" sprite="ui_fill" type="sliced" foregroundlayer="true"/>
+		<!--<sprite style="ulmWindowBG" name="BGSP3"/>-->
+			<texture style="ulmWindowTL"/><texture style="ulmWindowTM"/><texture style="ulmWindowTR"/>
+			<texture style="ulmWindowBR"/><texture style="ulmWindowBM"/><texture style="ulmWindowBL"/>
+	</sprite>
+</ulmBackgroundDynamicWithAlpha>
+	
+<ulmBackgroundDynamicWithTitle pos="-6,25" size="100,100" dynamic_height="0" default_size="100,100">
+	<rect depth="-10" pos="${pos}" size="${size}" controller="ULM_DynamicBG,UndeadLegacy" dynamic_height="${dynamic_height}">
+		<sprite style="ulmWindowBG" name="BGSP1"/>
+		<sprite style="ulmWindowBG" depth="-2" color="255,255,255,32" height="60"/>
+		<sprite depth="-1" pos="0,-59" height="1" color="255,255,255,48" sprite="ui_fill" type="sliced" foregroundlayer="true"/>
+		<texture style="ulmWindowTL"/><texture style="ulmWindowTM"/><texture style="ulmWindowTR"/>
+		<texture style="ulmWindowBR"/><texture style="ulmWindowBM"/><texture style="ulmWindowBL"/>
+	</rect>
+</ulmBackgroundDynamicWithTitle>
+	
+<backgroundCenter>
+	<rect depth="-6" pos="-6,25" size="340,60">
+		<sprite style="ulmWindowBG" depth="-2" color="255,255,255,32" height="60" atlas="UIBackground" sprite="ui_header_center"/>
+		<sprite depth="-1" pos="0,-59" height="1" color="255,255,255,48" sprite="ui_fill" type="sliced" foregroundlayer="true"/>
+	</rect>
+</backgroundCenter>
+	
+<backgroundSkillInfo>
+	<rect depth="-6" pos="-6,25" size="340,60">
+		<sprite style="ulmWindowBG" depth="-2" color="255,255,255,32" height="60" atlas="UIBackground" sprite="ui_header_center"/>
+		<sprite depth="-1" pos="0,-59" height="1" color="255,255,255,48" sprite="ui_fill" type="sliced" foregroundlayer="true"/>
+	</rect>
+</backgroundSkillInfo>
+	
+<sectionHeader pos="10,-14" width="630" text_key="uiCraftingQueue" id="sectionHeader">
+	<rect pos="${pos}" width="${width}">
+		<label style="ulmHeaderNoIcon" pos="2,0" text_key="${text_key}" color="160,160,160" name="${id}"/>
+		<sprite depth="-1" pos="0,-32" height="2" color="80,80,80" sprite="ui_fill" type="sliced" foregroundlayer="true"/>
+	</rect>
+</sectionHeader>
+	
+<sectionHeaderSmall pos="0,0" width="630" text_key="uiCraftingQueue">
+	<rect pos="${pos}" width="${width}">
+		<label style="ulmHeaderNoIcon" pos="2,0" font_size="20" text_key="${text_key}" color="160,160,160"/>
+		<sprite depth="-1" pos="0,-22" height="3" color="80,80,80" sprite="ui_fill" type="sliced" foregroundlayer="true"/>
+	</rect>
+</sectionHeaderSmall>
+	
+<sectionDivider pos="10,-14" width="630" text_key="uiCraftingQueue">
+	<rect pos="${pos}" width="${width}">
+		<sprite depth="-1" pos="0,-32" height="2" color="80,80,80" sprite="ui_fill" type="sliced" foregroundlayer="true"/>
+	</rect>
+</sectionDivider>
+	
+<backgroundNoTitle pos="-6,25" size="100,100" bg_color="[ulmWindowBackground]" visible="true">
+	<rect depth="-10" pos="${pos}" size="${size}" controller="ULM_DynamicBG,UndeadLegacy" visible="${visible}">
+		<sprite style="ulmWindowBG" name="BGSP1" color="${bg_color}"/>
+		<sprite sprite="ui_empty">
+			<texture style="ulmWindowTL"/><texture style="ulmWindowTM"/><texture style="ulmWindowTR"/>
+			<texture style="ulmWindowBR"/><texture style="ulmWindowBM"/><texture style="ulmWindowBL"/>
+		</sprite>
+	</rect>
+</backgroundNoTitle>
+	
+<ulmMenuButton depth="3" pos="0,0" caption="" text="" pivot="left" sound="[sfx_btn_menu_next]" enabled_font_color="[labelColor]" disabled_font_color="[disabledLabelColor]" visible="true">
+    <rect depth="${depth}" pos="${pos}" name="${name}" size="260,80" enabled_font_color="${enabled_font_color}" disabled_font_color="${disabled_font_color}" controller="SimpleButton" visible="${visible}">
+        <texture style="ulmButtonMenu"/>
+		<button style="ulmButtonMenu" sound="${sound}">
+			<texture style="ulmButtonMenuHover"/>
+		</button>
+        <label depth="2" name="btnLabel" pos="0,-41" justify="center" text="${caption}" text_key="${text}" pivot="${pivot}" effect="outline" font_size="30"/>
+    </rect>
+</ulmMenuButton>
+
+<ulmButtonOption depth="1" pos="0,0" sound="[sfx_btn_basic_1]" lbl_name="btnLabel" visible="true" btn_name="clickable" tooltip_key="" caption_key="" parse_actions="false">
+	<rect depth="${depth}" name="${name}" size="182,48" pos="${pos}" controller="SimpleButton" visible="${visible}" enabled_font_color="[labelColor]" disabled_font_color="128,128,128,256">
+		<sprite style="ulmButton_2x5"/>
+		<label depth="2" size="230,60" name="${lbl_name}" font_size="30" text_key="${caption_key}" pivot="center" justify="center" style="outline" parse_actions="${parse_actions}"/>
+		<button style="ulmButton_2x5" name="${btn_name}" tooltip_key="${tooltip_key}" hoverscale="1" sound="${sound}"/>
+	</rect>
+</ulmButtonOption>
+
+<ulmButtonOptionNarrow depth="1" pos="0,0" sound="[sfx_btn_basic_1]" lbl_name="btnLabel" visible="true" btn_name="clickable" tooltip_key="" caption_key=""
+	enabled_font_color="[labelColor]" disabled_font_color="[disabledLabelColor]" enabled="true">
+	<rect depth="${depth}" name="${name}" size="182,48" pos="${pos}" controller="SimpleButton" visible="${visible}" enabled_font_color="[labelColor]" disabled_font_color="128,128,128,256"  button_enabled="${enabled}">
+		<sprite style="ulmButton_2x5n"/>
+		<label depth="2" size="220,60" name="${lbl_name}" font_size="30" text_key="${caption_key}" pivot="center" justify="center" upper_case="true" style="outline"  color="{# enabled ? ( hovered ? '${hovered_font_color}' : '${enabled_font_color}' ) : '${disabled_font_color}' }"/>
+		<button style="ulmButton_2x5n" name="${btn_name}" tooltip_key="${tooltip_key}" hoverscale="1" sound="${sound}"/>
+	</rect>
+</ulmButtonOptionNarrow>
+
+<ulmButtonOptionGenWorld depth="1" pos="0,0" sound="[sfx_btn_basic_1]" lbl_name="btnLabel" visible="true" btn_name="clickable" tooltip_key="" caption_key=""
+	enabled_font_color="[labelColor]" disabled_font_color="[disabledLabelColor]" enabled="true" hovered_font_color="[labelColor]">
+	<rect depth="${depth}" name="${name}" size="182,48" pos="${pos}" controller="SimpleButton" visible="${visible}" enabled_font_color="[labelColor]" disabled_font_color="128,128,128,256"  button_enabled="${enabled}">
+		<sprite style="ulmButton_2x4n"/>
+		<label depth="2" size="180,60" name="${lbl_name}" font_size="30" text_key="${caption_key}" pivot="center" justify="center" upper_case="true" style="outline"  color="{# enabled ? ( hovered ? '${hovered_font_color}' : '${enabled_font_color}' ) : '${disabled_font_color}' }"/>
+		<button style="ulmButton_2x4n" name="${btn_name}" tooltip_key="${tooltip_key}" hoverscale="1" sound="${sound}"/>
+	</rect>
+</ulmButtonOptionGenWorld>
+
+<ulmButtonOptionManageSaves depth="1" pos="0,0" sound="[sfx_btn_basic_1]" lbl_name="btnLabel" visible="true" btn_name="clickable" tooltip_key="" caption_key=""
+	enabled_font_color="[labelColor]" disabled_font_color="[disabledLabelColor]" enabled="true">
+	<rect depth="${depth}" name="${name}" size="182,48" pos="${pos}" controller="SimpleButton" visible="${visible}" enabled_font_color="[labelColor]" disabled_font_color="128,128,128,256"  button_enabled="${enabled}">
+		<sprite style="ulmButton_2x2n"/>
+		<button style="ulmButton_2x2n" name="${btn_name}" tooltip_key="${tooltip_key}" hoverscale="1" sound="${sound}"/>
+		<sprite depth="10" sprite="symbol_gear" size="40,40"  pos="0,0" pivot="center" foregroundlayer="true" color="255,255,255"/>
+	</rect>
+</ulmButtonOptionManageSaves>
+	
+<ulmButtonApply depth="1" pos="0,0" name="" btn_name="clickable" visible="true" sound="[sfx_btn_basic_1]"
+				enabled_font_color="[labelColor]" disabled_font_color="128,128,128"
+				caption="" caption_key="" tooltip_key="" lbl_name="btnLabel" upper_case="true">
+    <rect name="${name}" depth="${depth}" pos="${pos}" size="182,48" visible="${visible}" enabled_font_color="${enabled_font_color}" disabled_font_color="${disabled_font_color}">
+		<sprite style="ulmButton_2x5"/>
+		<label depth="2" size="230,60" name="${lbl_name}" font_size="30" text="${caption}" text_key="${caption_key}" pivot="center" justify="center" upper_case="${upper_case}" style="outline"/>
+		<button style="ulmButton_2x5" name="${btn_name}" tooltip_key="${tooltip_key}" hoverscale="1" sound="${sound}"/>
+    </rect>
+</ulmButtonApply>
+
+<searchField pos="0,0" visible="true">
+	<rect name="searchInput" depth="10" pos="${pos}" size="235,26" controller="TextInput" value="SEARCH"
+		active_text_color="[white]" caret_color="[white]" selection_color="[mediumGrey_half_alpha]" 
+		character_limit="22" validation="none" on_press="true" snapCursor="true" virtual_keyboard_prompt="vkPromptSearchTerm" 
+		search_field="false" type="filled" visible="${visible}">
+		<sprite style="background" depth="2" size="240,40" atlas="UIBackground" sprite="ui_input_240x40" pos="4,-4" color="[bgInput]"/>
+		<sprite depth="3" size="20,20" pos="13,-13" sprite="symbol_search" color="255,255,255,80"/>
+		<label depth="2" name="text" pos="10,-11" size="230,26" justify="center" style="press, select"/>
+	</rect>
+</searchField>
+
+<ulmTextField depth="3" pos="0,0" width="200" height="32"
+		value="" active_text_color="[labelColor]" caret_color="[labelColor]" selection_color="[mediumGrey_half_alpha]" 
+		character_limit="0" validation="none" backgroundcolor="[black]" on_hover="false" on_scroll="false" ignore_up_down_keys="false" virtual_keyboard_prompt="" effect="none" effect_distance="1,1" effect_color="[black]"
+		pivot="topleft" visible="true" on_return="submit" tooltip_key="" search_field="false" password_field="false" clear_button="false" focus_on_open="false" clear_on_open="false" close_group_on_tab="false" open_vk_on_open="false"
+		foregroundlayer="false" justify="center" overflow="ShrinkContent" max_line_count="0" font_face="ReferenceFont" crispness="Never">
+	<panel name="${name}" depth="${depth}" controller="TextInput" pos="${pos}" width="${width}" height="${height}" value="${value}"
+		active_text_color="${active_text_color}" caret_color="${caret_color}" selection_color="${selection_color}" 
+		character_limit="${character_limit}" validation="${validation}" backgroundcolor="${backgroundcolor}" ignore_up_down_keys="${ignore_up_down_keys}" style="press2, select" on_hover="${on_hover}" on_scroll="${on_scroll}" snapCursor="true" virtual_keyboard_prompt="${virtual_keyboard_prompt}"
+		disableautobackground="true" pivot="${pivot}" visible="${visible}" on_return="${on_return}" tooltip_key="${tooltip_key}"
+		search_field="${search_field}" password_field="${password_field}" clear_button="${clear_button}" focus_on_open="${focus_on_open}" clear_on_open="${clear_on_open}" close_group_on_tab="${close_group_on_tab}" open_vk_on_open="${open_vk_on_open}">
+		<sprite depth="0" name="background" color="${backgroundcolor}" type="sliced" pivot="${pivot}" foregroundlayer="${foregroundlayer}" width="${password_field ? width-height-10 : width}"/>
+		<label depth="1" name="text" justify="${justify}" font_size="${Defined(font_size) ? font_size : height}" pivot="${pivot}" overflow="${overflow}" max_line_count="${max_line_count}" font_face="${font_face}" crispness="${crispness}" width="${width - (password_field ? 10+height : 0) - (clear_button ? 6+min(height,36) : 0)}"  effect="${effect}" effect_distance="${effect_distance}" effect_color="${effect_color}" tooltip_key="${tooltip_key}" style="press, select" on_hover="${on_hover}" on_scroll="${on_scroll}" />
+		<button name="btnShowPassword" pos="${Round(width-height/2-5,0)},-${Round(height/2,0)}" width="${height-2}" height="${height-2}" sprite="ui_game_symbol_stealth" defaultcolor="180,180,180" hovercolor="[white]" selectedcolor="[selectedColor]" foregroundlayer="true" type="simple" hoverscale="1.1" pivot="center" tooltip_key="xuiShowPassword" selected="{showpassword}" visible="{passwordfield}" />
+		<button name="btnClearInput" pos="${password_field ? width-height-Round(min(height,36)/2,0)-12 : width-Round(min(height,36)/2,0)-3},-${Round(height/2,0)}" width="${4+min(height,36)}" height="${min(height,36)-4}" pivot="center" sprite="ui_game_symbol_clear_textfield" hoverscale="1.1" tooltip_key="xuiClearTextInput" visible="{clearbutton}" />
+	</panel>
+</ulmTextField>
+	
+</append>
+	
+</Subquake>

@@ -1,0 +1,3 @@
+Key,koreana
+
+campfireActivate,"캠프파이어 열기"

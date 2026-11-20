@@ -1,0 +1,980 @@
+<Subquake>
+
+<append xpath="/lootcontainers">
+
+<lootcontainer name="playerWoodWritableStorage" count="0" size="8,6" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="playerIronWritableStorage" count="0" size="8,8" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="playerSteelWritableStorage" count="0" size="8,10" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="playerStorage" count="0" size="7,7" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="playerBackpack" count="0" size="8,39" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate" destroy_on_close="true" open_time="1">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="playerDrawer" count="0" size="8,9" sound_open="UseActions/open_dumpster" sound_close="UseActions/close_dumpster" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="playerSmallSafes" count="0" size="8,5" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate" open_time="1">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="playerGunSafe" count="0" size="8,9" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate" open_time="1">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="playerProduce" count="0" size="6,2" sound_open="UseActions/open_shopping_basket" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="playerTrash" count="1,2" size="6,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="playerCashRegister" count="0" size="6,1" sound_open="UseActions/open_cash_register" sound_close="UseActions/close_cash_register" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="playerCooler" count="0" size="6,2" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="playerFileCabinet" count="0" size="6,2" sound_open="UseActions/open_file_cabinet" sound_close="UseActions/close_file_cabinet" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="cntDropBag" count="0" size="8,60" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate" destroy_on_close="false" open_time="1">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="storageCrate" count="0" size="6,6" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="smallSafes" count="1" size="5,3" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualPlus1Template" open_time="1">
+	<item group="groupSmallSafeLoot"/></lootcontainer>
+
+<lootcontainer name="gunSafe" count="1" size="6,8" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualPlus1Template" open_time="1">
+	<item group="groupGunSafeSecure"/></lootcontainer>
+
+<lootcontainer name="sinks" count="1,2" size="5,3" sound_open="UseActions/open_cupboard" sound_close="UseActions/close_cupboard" loot_quality_template="qualBaseTemplate" open_time="1">
+	<item group="groupSinks"/></lootcontainer>
+
+<lootcontainer name="cntBackpack" count="1" size="5,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate" open_time="1.5">
+	<item group="groupBackpack"/></lootcontainer>
+
+<lootcontainer	name="cntCampingTents" count="1" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualPrimitiveTemplate" open_time="1.5">
+	<item group="groupCampingTents"/></lootcontainer>
+
+<lootcontainer name="junk" count="1,2" size="5,3" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+	<item group="groupJunk"/></lootcontainer>
+
+<lootcontainer name="plasticTrash" count="1,2" size="5,3" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" loot_quality_template="qualBaseTemplate">
+	<item group="groupJunk"/></lootcontainer>
+
+<lootcontainer name="oven" count="1" size="5,3" sound_open="UseActions/open_mailbox" sound_close="UseActions/close_mailbox" loot_quality_template="qualBaseTemplate">
+	<item group="groupOven"/></lootcontainer>
+
+<lootcontainer name="ovenNOPOP" count="0" size="6,2" sound_open="UseActions/open_mailbox" sound_close="UseActions/close_mailbox" loot_quality_template="qualBaseTemplate"/>
+
+<lootcontainer name="poiStorageBox" count="1,2" size="6,4" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupPOIStorageBox"/></lootcontainer>
+
+<lootcontainer name="laundryBasket" count="1" size="6,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+	<item group="groupLaundry"/></lootcontainer>
+
+<lootcontainer name="mailbox" count="1" size="6,2" sound_open="UseActions/open_mailbox" sound_close="UseActions/close_mailbox" loot_quality_template="qualBaseTemplate">
+	<item group="groupMailbox"/></lootcontainer>
+
+<lootcontainer name="mailboxNoPop" count="1" size="6,2" sound_open="UseActions/open_mailbox" sound_close="UseActions/close_mailbox" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+	<item group="groupMailbox"/></lootcontainer>
+
+<lootcontainer name="PObox" count="1" size="6,2" sound_open="UseActions/open_mailbox" sound_close="UseActions/close_mailbox" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+	<item group="groupMailbox"/></lootcontainer>
+
+<lootcontainer name="cardboardBox" count="1,2" size="5,5" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
+	<item group="groupCardboardBox"/></lootcontainer>
+
+<lootcontainer name="woodenBox" count="1,2" size="5,5" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupCardboardBox"/></lootcontainer>
+
+<lootcontainer name="garbage" count="1,2" size="6,2" sound_open="UseActions/open_trashcan" sound_close="UseActions/close_trashcan" loot_quality_template="qualBaseTemplate">
+	<item group="groupGarbage"/></lootcontainer>
+
+<lootcontainer name="pigTrough" count="1,2" size="6,2" sound_open="UseActions/open_trashcan" sound_close="UseActions/close_trashcan" loot_quality_template="qualBaseTemplate">
+	<item group="groupPigTrough"/></lootcontainer>
+
+<lootcontainer name="rollingTrashBin" count="1,2" size="6,2" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" loot_quality_template="qualBaseTemplate">
+	<item group="groupGarbage"/></lootcontainer>
+
+<lootcontainer name="fastFoodTrash" count="1,2" size="6,2" sound_open="rollingtrashbin_open" sound_close="rollingtrashbin_close" loot_quality_template="qualBaseTemplate">
+	<item group="groupFastFoodGarbage"/></lootcontainer>
+
+<lootcontainer name="cupboard" count="1" size="5,5" sound_open="UseActions/open_cupboard" sound_close="UseActions/close_cupboard" loot_quality_template="qualBaseTemplate">
+	<item group="groupCupboard"/></lootcontainer>
+
+<lootcontainer name="laundry" count="1" size="5,3" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualPlus1Template">
+	<item group="groupLaundry"/></lootcontainer>
+
+<lootcontainer name="laundryNOPOP" count="0" size="6,4" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualPlus1Template">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="cars" count="1,2" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate" open_time="4">
+	<item group="groupCars"/></lootcontainer>
+
+<lootcontainer name="junkNOPOP" count="1,2" size="6,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+	<item group="groupJunk"/></lootcontainer>
+
+<lootcontainer name="trashShelves" count="1,2" size="6,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+	<item group="groupJunk"/></lootcontainer>
+
+<lootcontainer name="microwave" count="1" size="6,2" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" loot_quality_template="qualBaseTemplate">
+	<item group="groupMicrowave"/></lootcontainer>
+
+<lootcontainer name="microwaveNOPOP" count="0" size="6,2" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="garage" count="1,2" size="5,5" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
+	<item group="groupGarage"/></lootcontainer>
+
+<lootcontainer name="fireExtinguisher" count="1" size="4,1" sound_open="UseActions/open_medicine_cabinet" sound_close="UseActions/close_medicine_cabinet" loot_quality_template="qualBaseTemplate">
+	<item group="groupFireExtinguisher"/></lootcontainer>
+
+<lootcontainer name="woodenDesk" count="1" size="5,3" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate">
+	<item group="groupDesks"/></lootcontainer>
+
+<lootcontainer name="woodenDeskNOPOP" count="0"	size="6,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="metalDesk" count="1" size="5,3" sound_open="UseActions/open_file_cabinet" sound_close="UseActions/close_file_cabinet" loot_quality_template="qualBaseTemplate">
+	<item group="groupDesks"/></lootcontainer>
+
+<lootcontainer name="metalDeskNOPOP" count="0" size="6,2" sound_open="UseActions/open_file_cabinet" sound_close="UseActions/close_file_cabinet" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="birdNest" count="1" size="6,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+	<item group="groupBirdNest"/></lootcontainer>
+
+<lootcontainer name="coffins" count="1"	size="6,2" sound_open="UseActions/coffin_wood_open" sound_close="UseActions/coffin_wood_close" loot_quality_template="qualBaseTemplate">
+	<item group="groupCoffins"/></lootcontainer>
+
+<lootcontainer name="caskets" count="1"	size="6,2" sound_open="UseActions/casket_metal_open" sound_close="UseActions/casket_metal_close" loot_quality_template="qualBaseTemplate">
+	<item group="groupCaskets"/></lootcontainer>
+
+<lootcontainer name="woodenChest" count="1" size="6,6" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupWoodenChest"/></lootcontainer>
+
+<lootcontainer name="rottenChest" count="1" size="6,6" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupRottenChest"/></lootcontainer>
+
+<lootcontainer name="oldWestChest" count="1" size="6,6" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupOldWestChest"/></lootcontainer>
+
+<lootcontainer name="footlocker" count="1" size="6,2" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupFootlocker"/></lootcontainer>
+
+<lootcontainer name="militaryFootlocker" count="1" size="6,6" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupMilitaryFootlocker"/></lootcontainer>
+
+<lootcontainer name="superCornFootlocker" count="1" size="6,2" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupSuperCornFootlocker"/></lootcontainer>
+
+<lootcontainer name="militaryShelves" count="1" size="6,2" sound_open="open_clothes_rack" sound_close="close_clothes_rack" loot_quality_template="qualBaseTemplate">
+	<item group="groupMilitaryFootlocker"/></lootcontainer>
+
+<lootcontainer name="militaryGoods" count="1" size="6,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+	<item group="groupMilitaryFootlocker"/></lootcontainer>
+
+<lootcontainer name="airDrop" count="1" size="8,4" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
+	<item group="groupAirDrop"/></lootcontainer>
+
+<lootcontainer name="luggage" count="1" size="5,3" sound_open="UseActions/open_suitcase" sound_close="UseActions/close_suitcase" loot_quality_template="qualBaseTemplate">
+	<item group="groupLuggage"/></lootcontainer>
+
+<lootcontainer name="bathtub" count="1,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item group="groupBathtub"/></lootcontainer>
+
+<lootcontainer name="shamwaySafe" count="1" size="5,3" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualPlus1Template" open_time="1">
+	<item group="groupShamwaySafe"/></lootcontainer>
+
+<lootcontainer name="brewSafe" count="1" size="5,3" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualPlus1Template" open_time="1">
+	<item group="groupBrewerySafe"/></lootcontainer>
+
+<lootcontainer name="munitions" count="1" size="8,4" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate" open_time="1">
+	<item group="groupAmmoMunitions"/></lootcontainer>
+
+<lootcontainer name="infestedT1" count="1" size="8,4" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate" destroy_on_close="empty" ignore_loot_abundance="true" open_time="1">
+	<item group="groupInfestedT1" /></lootcontainer>
+
+<lootcontainer name="infestedT2" count="1" size="8,4" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate" destroy_on_close="empty" ignore_loot_abundance="true" open_time="1">
+	<item group="groupInfestedT2" /></lootcontainer>
+
+<lootcontainer name="infestedT3" count="1" size="8,4" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate" destroy_on_close="empty" ignore_loot_abundance="true" open_time="1">
+	<item group="groupInfestedT3" /></lootcontainer>
+
+<lootcontainer name="infestedT4" count="1" size="8,4" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate" destroy_on_close="empty" ignore_loot_abundance="true" open_time="1">
+	<item group="groupInfestedT4" /></lootcontainer>
+
+<lootcontainer name="infestedT5" count="1" size="8,4" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate" destroy_on_close="empty" ignore_loot_abundance="true" open_time="1">
+	<item group="groupInfestedT5" /></lootcontainer>
+
+<lootcontainer name="heroChest" count="3,5" size="8,9" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualPlus1Template">
+	<item group="groupReinforcedChestT1"/></lootcontainer>
+
+<lootcontainer name="nightstand" count="1" size="5,5" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate">
+	<item group="groupNightstand"/></lootcontainer>
+
+<lootcontainer name="nightstandNOPOP" count="0"	size="6,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="lockers" count="1" size="5,5" sound_open="UseActions/open_locker" sound_close="UseActions/close_locker" loot_quality_template="qualBaseTemplate">
+	<item group="groupLocker"/></lootcontainer>
+
+<lootcontainer name="lockersNOPOP" count="0" size="6,2" sound_open="UseActions/open_locker" sound_close="UseActions/close_locker" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="fileCabinet" count="1,2" size="5,5" sound_open="UseActions/open_file_cabinet" sound_close="UseActions/close_file_cabinet" loot_quality_template="qualBaseTemplate">
+	<item group="groupFileCabinet"/></lootcontainer>
+
+<lootcontainer name="cooler" count="1" size="6,2" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" loot_quality_template="qualBaseTemplate">
+	<item group="groupCooler"/></lootcontainer>
+
+<lootcontainer name="trashCompactor" count="1,2" size="5,5" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualPlus1Template">
+	<item group="groupJunk"/></lootcontainer>
+
+<lootcontainer name="dishwasher" count="1" size="6,4" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualPlus1Template">
+	<item group="groupDishwasher"/></lootcontainer>
+
+<lootcontainer name="dishwasherNOPOP" count="0" size="6,4" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualPlus1Template">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="refrigerator" count="1" size="5,6" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualBaseTemplate">
+	<item group="groupRefrigerator"/></lootcontainer>
+
+<lootcontainer name="refrigerator_retro" count="1" size="6,4" sound_open="UseActions/fridgeretro_open" sound_close="UseActions/fridgeretro_close" loot_quality_template="qualBaseTemplate">
+	<item group="groupRefrigerator"/></lootcontainer>
+
+<lootcontainer name="refrigerator_steel" count="1" size="6,4" sound_open="UseActions/fridgesteel_open" sound_close="UseActions/fridgesteel_close" loot_quality_template="qualBaseTemplate">
+	<item group="groupRefrigerator"/></lootcontainer>
+
+<lootcontainer name="refrigeratorNOPOP" count="0" size="6,4" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="refrigerator_retroNOPOP" count="0" size="6,4" sound_open="UseActions/fridgeretro_open" sound_close="UseActions/fridgeretro_close" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="refrigerator_steelNOPOP" count="0" size="6,4" sound_open="UseActions/fridgesteel_open" sound_close="UseActions/fridgesteel_close" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="purse" count="1,2" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate" open_time="1.5">
+	<item group="groupPurse"/></lootcontainer>
+
+<lootcontainer name="bookcase" count="1" size="5,5" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate">
+	<item group="groupBookcase"/></lootcontainer>
+
+<lootcontainer name="shotgunMessiahCrate" count="1" size="5,5" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
+	<item group="groupShotgunMessiahCrate"/></lootcontainer>
+
+<lootcontainer name="popnpillsCrate" count="1,3" size="5,5" sound_open="UseActions/open_pill_case" sound_close="UseActions/close_pill_case" loot_quality_template="qualBaseTemplate">
+	<item group="groupPopNPillsCrate"/></lootcontainer>
+
+<lootcontainer name="beerCooler" count="1,2" size="5,5" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" loot_quality_template="qualBaseTemplate">
+	<item group="groupBeerCooler"/></lootcontainer>
+
+<lootcontainer name="workingStiffsCrate" count="1" size="5,5" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
+	<item group="groupWorkingStiffsCrate"/></lootcontainer>
+
+<lootcontainer name="shoppingCart" count="1" size="6,2" sound_open="UseActions/open_shopping_cart" sound_close="UseActions/close_shopping_cart" loot_quality_template="qualBaseTemplate">
+	<item group="groupShoppingCart"/></lootcontainer>
+
+<lootcontainer name="cashRegister" count="1,5" size="5,2" sound_open="UseActions/open_cash_register" sound_close="UseActions/close_cash_register" loot_quality_template="qualBaseTemplate">
+	<item group="groupCashRegister"/></lootcontainer>
+
+<lootcontainer name="testCashRegister" count="1" size="5,2" sound_open="UseActions/open_cash_register" sound_close="UseActions/close_cash_register" loot_quality_template="qualBaseTemplate">
+	<item group="groupCashRegister"/></lootcontainer>
+
+<lootcontainer name="apacheArtifactChest" count="1" size="5,5" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupApacheArtifactChest"/></lootcontainer>
+
+<lootcontainer name="charcoalGrill" count="1,2" size="6,2" sound_open="UseActions/open_file_cabinet" sound_close="UseActions/close_file_cabinet" loot_quality_template="qualBaseTemplate">
+	<item group="groupGrills"/></lootcontainer>
+
+<lootcontainer name="shoppingBasket" count="1" size="6,2" sound_open="UseActions/open_shopping_basket" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
+	<item group="groupShoppingCart"/></lootcontainer>
+
+<lootcontainer name="shamwayCrate" count="1" size="5,5" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
+	<item group="groupShamwayCrate"/></lootcontainer>
+
+<lootcontainer name="bookShelves" count="1" size="6,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate">
+	<item group="groupCrackabookShelves"/></lootcontainer>
+
+<lootcontainer name="introBuriedSupplies" count="1" size="8,9" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualPlus1Template" ignore_loot_abundance="true">
+	<item group="groupIntroBuriedSupplies"/></lootcontainer>
+
+<lootcontainer name="buriedSuppliesT1" count="1" size="5,5" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualPlus1Template">
+	<item group="groupBuriedSuppliesT1"/></lootcontainer>
+
+<lootcontainer name="buriedSuppliesT2" count="2,3" size="5,5" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupBuriedWeaponChest"/></lootcontainer>
+
+<lootcontainer name="buriedTreasure" count="1" size="5,5" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualPlus1Template" destroy_on_close="true">
+	<item group="groupTreasureChest"/></lootcontainer>
+
+<lootcontainer name="traderNPC" count="0" size="8,6" sound_open="UseActions/open_shopping_basket" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate" open_time="0">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="mountainManChest" count="0" size="5,5" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupMountainManChest"/></lootcontainer>
+
+<lootcontainer name="gasPump" count="1" size="5,5" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="toilet" count="1" size="6,1" sound_open="UseActions/open_toilet" sound_close="UseActions/close_toilet" loot_quality_template="qualQ1Template">
+	<item group="groupToilet"/></lootcontainer>
+
+<lootcontainer name="dumpster" count="1,2" size="6,5" sound_open="UseActions/open_dumpster" sound_close="UseActions/close_dumpster" loot_quality_template="qualBaseTemplate">
+	<item group="groupJunk"/></lootcontainer>
+
+<lootcontainer name="morticianDrawer" count="1,2" size="5,5" sound_open="UseActions/open_dumpster" sound_close="UseActions/close_dumpster" loot_quality_template="qualBaseTemplate">
+	<item group="groupFurnaceDrawer"/></lootcontainer>
+
+<lootcontainer name="furnaceDrawer" count="1,2" size="5,5" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualBaseTemplate">
+	<item group="groupFurnaceDrawer"/></lootcontainer>
+
+<lootcontainer name="greenDrawer" count="1,2" size="5,5" sound_open="UseActions/open_dumpster" sound_close="UseActions/close_dumpster" loot_quality_template="qualBaseTemplate">
+	<item group="groupJunk"/></lootcontainer>
+
+<lootcontainer name="zPackReg" count="1" size="5,5" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate" destroy_on_close="false" open_time="1">
+	<item group="groupZombieRegular"/></lootcontainer>
+
+<lootcontainer name="zPackStrong" count="1" size="5,5" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualPlus1Template" destroy_on_close="false" open_time="1">
+	<item group="groupZombieStrong"/></lootcontainer>
+
+<lootcontainer name="zPackBoss" count="1" size="5,5" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualPlus1Template" destroy_on_close="false" open_time="1">
+	<item group="groupZombieBoss"/></lootcontainer>
+
+<lootcontainer name="zPackPlague" count="1" size="6,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template" ignore_loot_abundance="true">
+	<item group="groupZombieRancher"/>
+</lootcontainer>
+
+<lootcontainer name="zPackNurse" count="1" size="6,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate" open_time="1">
+	<item group="groupZpackNurse"/></lootcontainer>
+
+<lootcontainer name="zPackLab" count="1" size="6,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate" open_time="1">
+	<item group="groupZpackLab"/></lootcontainer>
+
+<lootcontainer name="zPackUtility" count="1" size="6,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate" open_time="1">
+	<item group="groupZpackUtility"/></lootcontainer>
+
+<lootcontainer name="zPackSoldier" count="1" size="6,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate" open_time="1">
+	<item group="groupZpackSoldier"/></lootcontainer>
+
+<lootcontainer name="zPackThug" count="1" size="6,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate" open_time="1">
+	<item group="groupZpackThug"/></lootcontainer>
+
+<lootcontainer name="questSatchel" count="0" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate" open_time="1.5"/>
+
+<lootcontainer	name="banditLoot" count="1,2" size="5,5" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate" destroy_on_close="false" open_time="1">
+	<item group="groupBanditRegular"/></lootcontainer>
+
+<lootcontainer name="gasGrill" count="1,2" size="6,2" sound_open="UseActions/open_file_cabinet" sound_close="UseActions/close_file_cabinet" loot_quality_template="qualBaseTemplate">
+	<item group="groupGrills"/></lootcontainer>
+
+<lootcontainer name="armyTruck" count="1" size="7,7" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate" open_time="4">
+	<item group="groupArmyTruck"/></lootcontainer><!-- groupPantsContainer? -->
+
+<lootcontainer name="farmTruck" count="1" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate" open_time="4">
+	<item group="groupFarmTruck"/></lootcontainer>
+
+<lootcontainer name="policeCars" count="1" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate" open_time="4">
+	<item group="groupPoliceCar"/></lootcontainer>
+
+<lootcontainer name="policeCarsBonus" count="1" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate" open_time="4">
+	<item group="groupPoliceCarBonus"/></lootcontainer>
+
+<lootcontainer name="clothesRacks" count="1" size="7,2" sound_open="open_clothes_rack" sound_close="close_clothes_rack" loot_quality_template="qualBaseTemplate">
+	<item group="groupClothing"/></lootcontainer>
+
+<lootcontainer name="militaryClothesRacks" count="1" size="7,2" sound_open="open_clothes_rack" sound_close="close_clothes_rack" loot_quality_template="qualBaseTemplate">
+	<item group="groupClothingMilitary"/></lootcontainer>
+
+<lootcontainer name="pants" count="1,3" size="6,2" sound_open="open_clothes_rack" sound_close="close_clothes_rack" loot_quality_template="qualBaseTemplate">
+	<item group="groupPantsContainer"/></lootcontainer>
+
+<lootcontainer name="shirts" count="1,3" size="6,2" sound_open="open_clothes_rack" sound_close="close_clothes_rack" loot_quality_template="qualBaseTemplate">
+	<item group="groupShirtsContainer"/></lootcontainer>
+
+<lootcontainer name="militaryPants" count="1" size="7,2" sound_open="open_clothes_rack" sound_close="close_clothes_rack" loot_quality_template="qualBaseTemplate">
+	<item group="groupMilitaryPants"/></lootcontainer>
+
+<lootcontainer name="militaryShirts" count="1" size="7,2" sound_open="open_clothes_rack" sound_close="close_clothes_rack" loot_quality_template="qualBaseTemplate">
+	<item group="groupClothingMilitary"/></lootcontainer>
+
+<lootcontainer name="shamwayShelves" count="1,2" size="6,2" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+	<item group="groupShamwayShelves"/></lootcontainer>
+
+<lootcontainer name="savageCountryCrate" count="1" size="5,5" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
+	<item group="groupSavageCountryCrate"/></lootcontainer>
+
+<lootcontainer name="constructionCrate" count="1" size="5,5" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
+	<item group="groupConstructionCrate"/></lootcontainer>
+
+<lootcontainer name="crackabookCrate" count="1" size="5,5" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
+	<item group="groupCrackabookCrate"/></lootcontainer>
+
+<lootcontainer name="passngasCrate" count="1" size="5,5" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
+	<item group="groupPassNGas"/></lootcontainer>
+
+<lootcontainer name="collapsedDewCollector" count="1" size="7,4" sound_open="collector_open" sound_close="collector_close" loot_quality_template="qualBaseTemplate">
+	<item group="groupDewCollector"/></lootcontainer>
+
+<lootcontainer name="cntApiary" count="1" size="7,4" sound_open="collector_open" sound_close="collector_close" loot_quality_template="qualBaseTemplate">
+	<item group="groupApiary"/></lootcontainer>
+
+<lootcontainer name="collapsedForge" count="1" size="5,5" sound_open="forge_open" sound_close="forge_close" loot_quality_template="qualBaseTemplate">
+	<item group="groupForge"/></lootcontainer>
+
+<lootcontainer name="collapsedWorkbench" count="1" size="5,5" sound_open="open_workbench" sound_close="close_workbench" loot_quality_template="qualBaseTemplate">
+	<item group="groupWorkbenchLoot"/></lootcontainer>
+
+<lootcontainer name="collapsedCementMixer" count="1" size="5,5" sound_open="cement_mixer_open" sound_close="cement_mixer_close" loot_quality_template="qualBaseTemplate">
+	<item group="groupCementMixerLoot"/></lootcontainer>
+
+<lootcontainer name="collapsedChemistryStation" count="1" size="5,5" sound_open="chem_station_open" sound_close="chem_station_close" loot_quality_template="qualBaseTemplate">
+	<item group="groupChemistryStationLoot"/></lootcontainer>
+
+<lootcontainer name="hiddenStash" count="1" size="5,5" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualPlus1Template">
+	<item group="groupHiddenStash"/></lootcontainer>
+
+<lootcontainer name="collapsedBatteryBank" count="1" size="6,1" sound_open="open_vending" sound_close="close_vending" loot_quality_template="qualBaseTemplate">
+	<item group="groupBattBank"/></lootcontainer>
+
+<lootcontainer name="collapsedGeneratorBank" count="1" size="6,1" sound_open="open_vending" sound_close="close_vending" loot_quality_template="qualBaseTemplate">
+	<item group="groupGenBank"/></lootcontainer>
+
+<lootcontainer name="waterCooler" count="1" size="6,2" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" loot_quality_template="qualBaseTemplate">
+	<item group="groupWaterCooler"/></lootcontainer>
+
+<lootcontainer name="weaponsBagSmall" count="1" size="5,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate" open_time="1.5">
+	<item group="groupSmallWeaponBag"/></lootcontainer>
+
+<lootcontainer name="weaponsBagLarge" count="1" size="5,5" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate" open_time="1.5">
+	<item group="groupLargeWeaponBag"/></lootcontainer>
+
+<lootcontainer name="prefabEditorBox" count="0" size="8,8" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualPlus1Template">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="weaponTestLoot" count="0" size="8,8" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate" open_time="0.2">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="toolTestLoot" count="0" size="8,8" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate" open_time="1">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="testItemsLoot" count="0" size="8,9" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate" open_time="1">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="popnpillsShelves" count="1" size="6,2" sound_open="UseActions/open_pill_case" sound_close="UseActions/close_pill_case" loot_quality_template="qualBaseTemplate">
+	<item group="groupPopnpillsShelves"/></lootcontainer>
+
+<lootcontainer name="medicalPillCase" count="1,2" size="5,4" sound_open="UseActions/open_pill_case" sound_close="UseActions/close_pill_case" loot_quality_template="qualBaseTemplate">
+	<item group="groupMedicalPileLarge"/></lootcontainer>
+
+<lootcontainer name="ammoPileSmall" count="1" size="5,2" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
+	<item group="groupAmmoPileSmall"/></lootcontainer>
+
+<lootcontainer name="ammoPileMed" count="1" size="5,3" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
+	<item group="groupAmmoPileMed"/></lootcontainer>
+
+<lootcontainer name="ammoPileLarge" count="1" size="5,4" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
+	<item group="groupAmmoPileLarge"/></lootcontainer>
+
+<lootcontainer name="foodPileSmall" count="1" size="5,2" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
+	<item group="groupFoodPileSmall"/></lootcontainer>
+
+<lootcontainer name="foodPileMed" count="1" size="5,3" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
+	<item group="groupFoodPileMed"/></lootcontainer>
+
+<lootcontainer name="foodPileLarge" count="1" size="5,4" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
+	<item group="groupFoodPileLarge"/></lootcontainer>
+
+<lootcontainer name="medicalPileSmall" count="1" size="5,2" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
+	<item group="groupMedicalPileSmall"/></lootcontainer>
+
+<lootcontainer name="medicalPileMedium" count="1" size="5,3" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+	<item group="groupMedicalPileMed"/></lootcontainer>
+
+<lootcontainer name="medicalPileLarge" count="1" size="5,4" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
+	<item group="groupMedicalPileLarge"/></lootcontainer>
+
+<lootcontainer name="liquorPileSmall" count="1" size="5,4" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+	<item group="groupLiquorPileSmall"/></lootcontainer>
+
+<lootcontainer name="liquorPileMed" count="1" size="5,5" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+	<item group="groupLiquorPileMed"/></lootcontainer>
+
+<lootcontainer name="liquorPileLarge" count="1" size="6,6" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+	<item group="groupLiquorPileLarge"/></lootcontainer>
+
+<lootcontainer name="utilityCart" count="1,2" size="5,5" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+	<item group="groupUtilityCart"/></lootcontainer>
+
+<lootcontainer name="coffeeMaker" count="1" size="6,1" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" loot_quality_template="qualBaseTemplate">
+	<item group="groupCoffeeMaker"/></lootcontainer>
+
+<lootcontainer name="sodaFountain" count="1" size="5,2" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" loot_quality_template="qualBaseTemplate">
+	<item group="groupSodaFountain"/></lootcontainer>
+
+<lootcontainer name="gasBarrel" count="1" size="5,5" sound_open="UseActions/open_trashcan" sound_close="UseActions/close_trashcan" loot_quality_template="qualBaseTemplate"/>
+
+<lootcontainer name="closet" count="1" size="5,5" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+	<item group="groupCloset"/></lootcontainer>
+
+<lootcontainer name="hanger" count="1" size="5,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+	<item group="groupCloset"/></lootcontainer>
+
+<lootcontainer name="rollingToolBox" count="1" size="5,5" sound_open="UseActions/open_toolchest" sound_close="UseActions/close_toolchest" loot_quality_template="qualBaseTemplate">
+	<item group="groupRollingToolbox"/></lootcontainer>
+
+<lootcontainer name="toolBox" count="1" size="5,3" sound_open="UseActions/open_toolbox" sound_close="UseActions/close_toolbox" loot_quality_template="qualBaseTemplate">
+	<item group="groupToolbox"/></lootcontainer>
+
+<lootcontainer	name="workingStiffsShelves" count="1" size="5,3" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+	<item group="groupWorkingStiffs01"/></lootcontainer>
+
+<lootcontainer name="shamwayProduce" count="1" size="5,5" sound_open="UseActions/open_shopping_basket" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
+	<item group="groupShamwayProduce"/></lootcontainer>
+
+<lootcontainer name="shamwayFreezer" count="1,2" size="5,5" sound_open="UseActions/open_cupboard" sound_close="UseActions/close_cupboard" loot_quality_template="qualBaseTemplate">
+	<item group="groupShamwayFreezer"/></lootcontainer>
+
+<lootcontainer name="shamwayDrinks" count="1,2" size="5,5" sound_open="UseActions/open_cupboard" sound_close="UseActions/close_cupboard" loot_quality_template="qualBaseTemplate">
+	<item group="groupShamwayCooler"/></lootcontainer>
+
+<lootcontainer name="jeans" count="1,2" size="6,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+	<item group="groupJeans"/></lootcontainer>
+
+<lootcontainer name="medicineCabinet" count="1" size="5,3" sound_open="UseActions/open_medicine_cabinet" sound_close="UseActions/close_medicine_cabinet" loot_quality_template="qualBaseTemplate">
+	<item group="groupMedicineCabinet"/></lootcontainer>
+
+<lootcontainer name="ammoDisplay" count="1" size="5,5" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+	<item group="groupAmmoRackDisplay"/></lootcontainer>
+
+<lootcontainer name="shoesShelves" count="1" size="5,3" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+	<item group="groupClothing"/></lootcontainer>
+
+<lootcontainer name="shoes" count="1" size="5,3" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
+	<item group="groupClothing"/></lootcontainer>
+
+<lootcontainer name="bookPile" count="1" size="5,3" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
+	<item group="groupBookPile"/></lootcontainer>
+
+<lootcontainer name="singleBooks" count="1"	size="6,2" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true">
+	<item group="groupSingleBooks"/></lootcontainer>
+
+<lootcontainer name="crackabookShelves" count="1" size="5,3" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+	<item group="groupCrackabookShelves"/></lootcontainer>
+
+<lootcontainer name="armorRack" count="1,2" size="5,4" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+	<item group="groupArmorScaled"/></lootcontainer>
+
+<lootcontainer name="gunRack" count="1,2" size="5,4" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+	<item group="groupGunRack"/></lootcontainer>
+
+<lootcontainer name="roboticDrone" count="0" size="8,4" sound_open="Drone/drone_storage_open" sound_close="Drone/drone_storage_close" loot_quality_template="qualBaseTemplate" open_time="0"/>
+
+<lootcontainer name="roboticTurret" count="1" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate" open_time="4"/>
+
+<lootcontainer name="mopowerShelves" count="1" size="5,3" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+	<item group="groupMoPowerShelves"/></lootcontainer>
+
+<lootcontainer name="clothesShelves" count="1" size="7,2" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+	<item group="groupClothing"/></lootcontainer>
+
+<lootcontainer name="shirtsShelves" count="1,3" size="5,3" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+	<item group="groupShirtsContainer"/></lootcontainer>
+
+<lootcontainer name="pantsShelves" count="1,3" size="5,3" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+	<item group="groupPantsContainer"/></lootcontainer>
+
+<lootcontainer name="wineBarrel" count="1,2" size="5,5" sound_open="UseActions/open_cooler" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupRiverWater" count="1,2"/></lootcontainer>
+
+<lootcontainer name="workingStiffsTruck" count="1" size="8,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate" open_time="4">
+	<item group="groupWorkingStiffsCrate"/></lootcontainer>
+
+<lootcontainer name="ambulance" count="1,2" size="8,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate" open_time="4">
+	<item group="groupAmbulance"/></lootcontainer>
+
+<lootcontainer name="fireTruck" count="1" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate" open_time="4">
+	<item group="groupFireTruck"/></lootcontainer>
+
+<lootcontainer name="atmLoot" count="1" size="5,2" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualPlus1Template" open_time="1">
+	<item group="groupATM"/></lootcontainer>
+
+<lootcontainer name="mopowerCrate" count="1" size="5,5" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
+	<item group="groupMoPower"/></lootcontainer>
+
+<lootcontainer name="reinforcedChestT1" count="1" size="6,6" sound_open="UseActions/chest_tier1_open" sound_close="UseActions/chest_tier1_close" loot_quality_template="qualPlus1Template">
+	<item group="groupReinforcedChestT1"/></lootcontainer>
+
+<lootcontainer name="reinforcedChestT2" count="1" size="6,6" sound_open="UseActions/chest_tier2_open" sound_close="UseActions/chest_tier2_close" loot_quality_template="qualPlus1Template">
+	<item group="groupReinforcedChestT2"/></lootcontainer>
+
+<lootcontainer name="reinforcedChestT3" count="1" size="6,6" sound_open="UseActions/chest_tier3_open" sound_close="UseActions/chest_tier3_close" loot_quality_template="qualPlus1Template">
+	<item group="groupReinforcedChestT3"/></lootcontainer>
+
+<lootcontainer name="hardenedChestT4" count="1" size="6,6" sound_open="UseActions/chest_tier4_open" sound_close="UseActions/chest_tier4_close" loot_quality_template="qualPlus1Template">
+	<item group="groupHardenedChestT4"/></lootcontainer>
+
+<lootcontainer name="hardenedChestT5" count="1" size="8,8" sound_open="UseActions/chest_tier5_open" sound_close="UseActions/chest_tier5_close" loot_quality_template="qualPlus1Template">
+	<item group="groupHardenedChestT5"/></lootcontainer>
+
+<lootcontainer name="chemPileSmall" count="1" size="5,2" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+	<item group="groupChemPileSmall"/></lootcontainer>
+
+<lootcontainer name="chemPileMed" count="1" size="5,3" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+	<item group="groupChemPileMed"/></lootcontainer>
+
+<lootcontainer name="chemPileLarge" count="1" size="5,4" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+	<item group="groupChemPileLarge"/></lootcontainer>
+
+<lootcontainer name="mopowerTruck" count="1" size="8,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate" open_time="4">
+	<item group="groupMoPower"/></lootcontainer>
+
+<lootcontainer name="questRewardSkillMagazines" count="1" size="6,1" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" unique_item="true"/>
+
+<lootcontainer name="bundleBooksResearch" count="1" size="6,1" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" unique_item="true">
+	<item group="groupBooksResearchAll" count="3"/></lootcontainer>
+	
+<lootcontainer name="bundleVehicleParts" count="1" size="6,1" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" unique_item="true">
+	<item group="vehiclePartsRareRandom" count="2"/></lootcontainer>
+	
+<lootcontainer name="bundleTreasureMap" count="1" size="6,1" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" unique_item="true">
+	<item group="groupTreasureMaps"/></lootcontainer>
+
+
+<!-- Twitch -->
+
+
+<lootcontainer name="twitch_tier0weapon" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true"	open_time="0.25">
+	<item group="twitch_tier0weapon"/></lootcontainer>
+
+<lootcontainer name="twitch_tier1weapon" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_tier1weapon"/></lootcontainer>
+
+<lootcontainer name="twitch_tier2weapon" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_tier2weapon"/></lootcontainer>
+
+<lootcontainer name="twitch_tier3weapon" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_tier3weapon"/></lootcontainer>
+
+<lootcontainer name="twitch_tool1" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_tool1"/></lootcontainer>
+
+<lootcontainer name="twitch_tool2" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_tool2"/></lootcontainer>
+
+<lootcontainer name="twitch_tool3" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_tool3"/></lootcontainer>
+
+<lootcontainer name="twitch_medicine1" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_medicine1"/></lootcontainer>
+
+<lootcontainer name="twitch_medicine2" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_medicine2"/></lootcontainer>
+
+<lootcontainer name="twitch_medicine3" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_medicine3"/></lootcontainer>
+
+<lootcontainer name="twitch_resources0" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_resources0"/></lootcontainer>
+
+<lootcontainer name="twitch_resources1" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_resources1"/></lootcontainer>
+
+<lootcontainer name="twitch_resources2" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_resources2"/></lootcontainer>
+
+<lootcontainer name="twitch_resources3" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_resources3"/></lootcontainer>
+
+<lootcontainer name="twitch_ammo0" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_ammo0"/></lootcontainer>
+
+<lootcontainer name="twitch_ammo1" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_ammo1"/></lootcontainer>
+
+<lootcontainer name="twitch_ammo2" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_ammo2"/></lootcontainer>
+
+<lootcontainer name="twitch_ammo3" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_ammo3"/></lootcontainer>
+
+<lootcontainer name="twitch_ammospecial0" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+<item group="twitch_ammospecial0"/></lootcontainer>
+
+<lootcontainer name="twitch_ammospecial1" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+<item group="twitch_ammospecial1"/></lootcontainer>
+
+<lootcontainer name="twitch_books1" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_books1"/></lootcontainer>
+
+<lootcontainer name="twitch_books2" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_books2"/></lootcontainer>
+
+<lootcontainer name="twitch_books3" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_books3"/></lootcontainer>
+
+<lootcontainer name="twitch_utilitysupplies1" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_utilitysupplies1"/></lootcontainer>
+
+<lootcontainer name="twitch_utilitysupplies2" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_utilitysupplies2"/></lootcontainer>
+
+<lootcontainer name="twitch_tier0armorplus" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_tier0armorplus"/></lootcontainer>
+
+<lootcontainer name="twitch_tier1armorplus" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_tier1armorplus"/></lootcontainer>
+
+<lootcontainer name="twitch_tier2armorplus" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_tier2armorplus"/></lootcontainer>
+
+<lootcontainer name="twitch_foodanddrinkT0" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_foodanddrinkT0"/></lootcontainer>
+
+<lootcontainer name="twitch_foodanddrinkT1" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_foodanddrinkT1"/></lootcontainer>
+
+<lootcontainer name="twitch_foodanddrinkT2" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_foodanddrinkT2"/></lootcontainer>
+
+<lootcontainer name="twitch_foodanddrinkT3" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_foodanddrinkT3"/></lootcontainer>
+
+<lootcontainer name="twitch_bicycle" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_bicycle"/></lootcontainer>
+
+<lootcontainer name="twitch_minibike" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_minibike"/></lootcontainer>
+
+<lootcontainer name="twitch_motorcycle" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_motorcycle"/></lootcontainer>
+
+<lootcontainer name="twitch_4x4" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_4x4"/></lootcontainer>
+
+<lootcontainer name="twitch_explosivesT0" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_explosivesT0"/></lootcontainer>
+
+<lootcontainer name="twitch_explosivesT1" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_explosivesT1"/></lootcontainer>
+
+<lootcontainer name="twitch_explosivesT2" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_explosivesT2"/></lootcontainer>
+
+<lootcontainer name="twitch_explosivesT3" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_explosivesT3"/></lootcontainer>
+
+<lootcontainer name="twitch_robo0" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_robo0"/></lootcontainer>
+
+<lootcontainer name="twitch_robo1" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_robo1"/></lootcontainer>
+
+<lootcontainer name="twitch_robo2" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_robo2"/></lootcontainer>
+
+<lootcontainer name="twitch_tier1mods" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_tier1mods"/></lootcontainer>
+
+<lootcontainer name="twitch_tier2mods" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_tier2mods"/></lootcontainer>
+
+<lootcontainer name="twitch_tier3mods" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_tier3mods"/></lootcontainer>
+
+<lootcontainer name="twitch_electrical1" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_electrical1"/></lootcontainer>
+
+<lootcontainer name="twitch_electrical2" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_electrical2"/></lootcontainer>
+
+<lootcontainer name="twitch_vote_rewardsT1" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_T1_Rewards"/></lootcontainer>
+
+<lootcontainer name="twitch_vote_rewardsT2" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_T2_Rewards"/></lootcontainer>
+
+<lootcontainer name="twitch_vote_rewardsT3" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_T3_Rewards"/></lootcontainer>
+
+<lootcontainer name="twitch_vote_rewardsT4" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item group="twitch_T4_Rewards"/></lootcontainer>
+
+<lootcontainer name="twitch_fuel1" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="noQualTemplate"	 destroy_on_close="true" ignore_loot_abundance="true" open_time="0.25">
+	<item name="ulmAmmoFuelGasoline"/></lootcontainer>
+
+<lootcontainer name="twitch_home_run_rewardsT1" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.3" unmodified_lootstage="true">
+	<item group="twitch_T1_Home_Run_Rewards"/></lootcontainer>
+
+<lootcontainer name="twitch_home_run_rewardsT2" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.3" unmodified_lootstage="true">
+	<item group="twitch_T2_Home_Run_Rewards"/></lootcontainer>
+
+<lootcontainer name="twitch_home_run_rewardsT3" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.3" unmodified_lootstage="true">
+	<item group="twitch_T3_Home_Run_Rewards"/></lootcontainer>
+
+<lootcontainer name="twitch_home_run_rewardsT4" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.3" unmodified_lootstage="true">
+	<item group="twitch_T4_Home_Run_Rewards"/></lootcontainer>
+
+<lootcontainer name="twitch_home_run_rewardsT5" count="1" size="5,3" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true" open_time="0.3" unmodified_lootstage="true">
+	<item group="twitch_T5_Home_Run_Rewards"/></lootcontainer>
+
+
+<!-- Undead Legacy -->
+
+
+<lootcontainer name="starterBag" count="1" size="5,4" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true">
+	<item group="groupStarterKit"/></lootcontainer>
+
+<lootcontainer name="stashElliannia" count="1" size="5,3" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
+	<item group="groupTreasureElliannia"/></lootcontainer>
+
+<lootcontainer name="police" count="1,3" size="8,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate" open_time="4">
+	<item group="groupPolice"/></lootcontainer>
+
+<lootcontainer name="default" count="0" size="6,6" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="hardenedChestPlayer" count="0"	size="8,20" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="gunSafePlayer" count="0" size="7,14" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="presentBox" count="0"	size="5,2" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="cardboardPallet" count="0,2" size="5,5" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
+	<item group="groupJunk"/></lootcontainer>
+
+<lootcontainer name="iceMachine" count="1,2" size="6,5" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" loot_quality_template="qualBaseTemplate">
+	<item group="groupCooler"/></lootcontainer>
+
+<lootcontainer name="smallSafeJunk" count="1,2" size="5,3" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate" open_time="1">
+	<item group="groupSmallSafeJunk"/></lootcontainer>
+
+<lootcontainer name="metalStoragePlayer" count="0" size="8,8" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate" open_time="1">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="metalStorageLargePlayer" count="0"	size="8,20" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate" open_time="1">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="storageSack" count="0"	size="6,3" volume="18" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="storageCardboard" count="0" size="6,5" volume="30" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="storageWood" count="0" size="6,6" volume="36" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="storageIron" count="0" size="8,8" volume="64" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="storageIronDouble" count="0" size="8,16" volume="128" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="storageSteel" count="0" size="8,12" volume="96" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="storageSteelDouble" count="0" size="8,24" volume="192" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="storageTitanium" count="0" size="8,25" volume="200" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="storageTitaniumDouble" count="0" size="8,50" volume="400" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="largeVault" count="0" size="8,60" volume="480" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="cntSafeSmall" count="0" size="6,6" volume="36" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="cntSafeMedium" count="0" size="8,10" volume="80" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="cntSafeLarge" count="0" size="8,20" volume="160" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="cntSafeTallSingle" count="0" size="4,8" volume="32" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="cntSafeTallDouble" count="0" size="8,8" volume="64" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="vehicleBicycle" count="0" size="6,8" volume="48" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="vehicleMinibike" count="0" size="6,8" volume="48" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="vehicleMotorcycle" count="0" size="6,12" volume="72" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="vehicle4x4Truck" count="0" size="6,20" volume="120" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="vehicleGyrocopter" count="0" size="6,8" volume="48" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="vehiclePlayer6x6" count="0" size="6,6" volume="36" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="vehiclePlayer6x8" count="0" size="6,8" volume="48" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="vehiclePlayer6x10" count="0" size="6,10" volume="60" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="vehiclePlayer6x12" count="0" size="6,12" volume="72" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="vehiclePlayer6x14" count="0" size="6,14" volume="84" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="vehiclePlayer6x16" count="0" size="6,16" volume="96" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="vehiclePlayer6x18" count="0" size="6,18" volume="108" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="vehiclePlayer6x20" count="0" size="6,20" volume="120" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="vehiclePlayer6x22" count="0" size="6,22" volume="132" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="vehiclePlayer6x24" count="0" size="6,24" volume="144" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<lootcontainer name="vehiclePlayer6x27" count="0" size="6,27" volume="162" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate">
+	<item group="groupCobweb"/></lootcontainer>
+
+<!-- DEPRECATED -->
+<lootcontainer name="oilPump" count="1" size="5,2" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
+	<item name="resourceOilShale" count="20,60"/></lootcontainer>
+	
+<!-- DEPRECATED -->
+<lootcontainer name="oreExtractor" count="1,5" size="5,2" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true">
+	<item group="groupOreExtractor"/></lootcontainer>
+	
+<!-- DEPRECATED -->
+<lootcontainer name="chickenCoop" count="1" size="6,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
+	<item group="groupChickenCoop"/></lootcontainer>
+	
+<!-- DEPRECATED -->
+<lootcontainer name="apiaryPlayer" count="1" size="6,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
+	<item group="groupApiaryPlayer"/></lootcontainer>
+
+</append>
+
+</Subquake>

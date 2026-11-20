@@ -1,0 +1,21 @@
+<Subquake>
+
+<set xpath="/paints/paint[@name='txName_Metal_rivet'				]/property[@name='PaintCost']/@value">1</set>
+<set xpath="/paints/paint[@name='txName_Taupe_metal'				]/property[@name='PaintCost']/@value">1</set>
+<set xpath="/paints/paint[@name='txName_Corrugated_metal'			]/property[@name='PaintCost']/@value">1</set>
+<set xpath="/paints/paint[@name='txName_Fridge_stainless_side'		]/property[@name='PaintCost']/@value">1</set>
+<set xpath="/paints/paint[@name='txName_Wrought_iron_metal'			]/property[@name='PaintCost']/@value">1</set>
+<set xpath="/paints/paint[@name='txName_Metal_plate_wall'			]/property[@name='PaintCost']/@value">1</set>
+<set xpath="/paints/paint[@name='txName_Ventilation_duct'			]/property[@name='PaintCost']/@value">1</set>
+<set xpath="/paints/paint[@name='txName_Reinforced_metal_plate_wall']/property[@name='PaintCost']/@value">1</set>
+<set xpath="/paints/paint[@name='txName_Steel_floor'				]/property[@name='PaintCost']/@value">1</set>
+<set xpath="/paints/paint[@name='txName_Steel_wall'					]/property[@name='PaintCost']/@value">1</set>
+<set xpath="/paints/paint[@name='txName_Green_rusty_metal'			]/property[@name='PaintCost']/@value">1</set>
+<set xpath="/paints/paint[@name='txName_beige_metal_roof_wStripes'	]/property[@name='PaintCost']/@value">1</set>
+<set xpath="/paints/paint[@name='txName_Tread_plate02'				]/property[@name='PaintCost']/@value">1</set>
+<set xpath="/paints/paint[@name='txName_Tread_plate'				]/property[@name='PaintCost']/@value">1</set>
+<set xpath="/paints/paint[@name='txName_Metal_base'					]/property[@name='PaintCost']/@value">1</set>
+<set xpath="/paints/paint[@name='txName_Duct_soft'					]/property[@name='PaintCost']/@value">1</set>
+<set xpath="/paints/paint[@name='txName_Tarpaper'					]/property[@name='PaintCost']/@value">1</set>
+
+</Subquake>

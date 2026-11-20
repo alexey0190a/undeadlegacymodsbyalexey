@@ -1,0 +1,11 @@
+<Subquake>
+
+<set xpath="/lootcontainers"></set>
+
+<include filename="Custom/loot_templates.xml"/>
+<include filename="Custom/loot_groups.xml"/>
+<include filename="Custom/loot_quests_and_airdrops.xml"/>
+<include filename="Custom/loot_twitch.xml"/>
+<include filename="Custom/loot_containers.xml"/>
+	
+</Subquake>

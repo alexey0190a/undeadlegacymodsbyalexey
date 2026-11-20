@@ -1,0 +1,5 @@
+<Subquake>
+	<!--
+	<setattribute xpath="/iteminfo/animation/hold_type[@id='65']" name="third_person_rotation">-15,180,0</setattribute>
+	-->
+</Subquake>

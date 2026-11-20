@@ -1,0 +1,982 @@
+<Subquake>
+
+<set xpath="/blocks/block[@name='biomeHarvestRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="cropsHarvestableMaster" param1="DisplayInfo"/>
+	<property name="CustomIcon" value="plantedMushroom3Harvest"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/blueberry_plant_harvestPrefab.prefab"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="FF00FF"/></set>
+	
+<set xpath="/blocks/block[@name='cropsGrowingMaster']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Class" value="ULM_PlantGrowing,UndeadLegacy"/>
+	<property name="ShowTimeLeft" value="true" param1="uiProcessGrowing"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="LightOpacity" value="0"/>
+	<property name="Shape" value="BillboardPlant"/><property name="Mesh" value="grass"/><property name="Texture" value="378"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="Collide" value="melee"/>
+	<property name="VehicleHitScale" value=".1"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="PlantGrowing.Next" value="cropsHarvestableMaster"/>
+	<property name="PlantGrowing.GrowthRate" value="121.0"/>
+	<property name="PlantGrowing.FertileLevel" value="15"/>
+	<property name="PlantGrowing.IsRandom" value="false"/>
+	<property name="HarvestOverdamage" value="false"/>
+	<property name="DescriptionKey" value="plantedCropsGroupDesc"/>
+	<property name="Material" value="Mplants"/>
+	<property name="EconomicValue" value="2"/><property name="CarryWeight" value="0.1"/>
+	<property name="PickupJournalEntry" value="farmingTip"/>
+	<drop event="Destroy" count="0"/></set>
+	
+<set xpath="/blocks/block[@name='cropsHarvestableMaster']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Tags" value="challenge_farming"/>
+	<property name="Group" value="Crops,Food,Vegetation,Blocks"/>
+	<property name="Class" value="ULM_PlantHarvestable,UndeadLegacy"/>
+	<property name="DisplayInfo" value="Description"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Material" value="Mplants"/>
+	<property name="LightOpacity" value="0"/>
+	<property name="Shape" value="BillboardPlant"/>
+	<property name="Mesh" value="grass"/>
+	<property name="Texture" value="395"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="Collide" value="melee"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="PlantGrowing.FertileLevel" value="1"/>
+	<property name="HarvestOverdamage" value="false"/>
+	<property name="PlantGrowing.IgnoreRestrictions" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="EconomicValue" value="2"/><property name="CarryWeight" value="0.1"/>
+	<drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+	<drop event="Destroy" count="0"/></set>
+
+<set xpath="/blocks/block[@name='mushroom01']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Outdoor,Blocks"/>
+	<property name="Class" value="ULM_PlantHarvestable,UndeadLegacy"/>
+	<property name="Tags" value="challenge_farming"/>
+	<property name="DescriptionKey" value="mushroom01Desc"/>
+	<property name="DisplayInfo" value="Description"/>
+	<property name="Material" value="Mmushrooms"/><property name="CarryWeight" value="0.2"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/mushroom_01Prefab.prefab"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="HandleFace" value="Bottom"/>
+	<property name="Collide" value="melee"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="HarvestOverdamage" value="false"/>
+	<property name="PlantGrowing.IgnoreRestrictions" value="true"/>
+	<drop event="Harvest" name="foodCropMushrooms" count="1" tag="wildCropsHarvest"/>
+	<drop event="Destroy" count="0"/></set>
+
+<set xpath="/blocks/block[@name='mushroom02']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="mushroom01"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/mushroom_02Prefab.prefab"/></set>
+
+<set xpath="/blocks/block[@name='mushroomRadiated01']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Tags" value="challenge_farming"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon,DescriptionKey,MultiBlockDim,OnlySimpleRotations,DisplayInfo"/>
+	<property name="CustomIcon" value="mushroom02"/>
+	<property name="CustomIconTint" value="3D9039"/>
+	<property name="PlantGrowing.LightLevelGrow" value="0"/>
+	<property name="PlantGrowing.LightLevelStay" value="0"/>
+	<property name="PlantGrowing.FertileLevel" value="0"/>
+	<property name="PlantGrowing.Next" value="mushroomRadiated02"/>
+	<property name="Material" value="Mmushrooms"/><property name="CarryWeight" value="0.2"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/mushroomSproutNoShowPrefab.prefab"/>
+	<property name="HandleFace" value="Bottom"/>
+	<property name="CanBlocksReplace" value="true"/>
+	<property name="SoundPickup" value="seeds_generic2_grab"/>
+	<property name="SoundPlace" value="seeds_generic2_place"/>
+	<drop event="Destroy" name="plantedMushroom1" count="1"/></set>
+	
+<set xpath="/blocks/block[@name='mushroomRadiated02']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="mushroom01"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="CustomIcon" value="mushroom01"/>
+	<property name="CustomIconTint" value="3D9039"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/mushroomRadiated_01Prefab.prefab"/>
+	<dropextendsoff/>
+	<drop event="Harvest" name="foodCropMushroomsRadiated" count="1" tag="cropHarvest"/>
+	<drop event="Harvest" name="foodCropMushroomsRadiated" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropMushroomsRadiated" count="1" tag="farmerBonusHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="DowngradeBlock" value="mushroomRadiated01"/></set>
+	
+<set xpath="/blocks/block[@name='mushroomRadiated03']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon,DescriptionKey,MultiBlockDim,OnlySimpleRotations,DisplayInfo"/>
+	<property name="CustomIcon" value="mushroom02"/>
+	<property name="CustomIconTint" value="3D9039"/>
+	<property name="PlantGrowing.LightLevelGrow" value="0"/>
+	<property name="PlantGrowing.LightLevelStay" value="0"/>
+	<property name="PlantGrowing.FertileLevel" value="0"/>
+	<property name="PlantGrowing.Next" value="mushroomRadiated04"/>
+	<property name="Material" value="Mmushrooms"/><property name="CarryWeight" value="0.2"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/mushroomSproutNoShowPrefab.prefab"/>
+	<property name="HandleFace" value="Bottom"/>
+	<property name="CanBlocksReplace" value="true"/>
+	<drop event="Destroy" name="plantedMushroom1" count="1"/>
+	<property name="SoundPickup" value="seeds_generic2_grab"/>
+	<property name="SoundPlace" value="seeds_generic2_place"/></set>
+	
+<set xpath="/blocks/block[@name='mushroomRadiated04']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="mushroom01"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="CustomIcon" value="mushroom02"/>
+	<property name="CustomIconTint" value="3D9039"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/mushroomRadiated_02Prefab.prefab"/>
+	<dropextendsoff/>
+	<drop event="Harvest" name="foodCropMushroomsRadiated" count="1" tag="cropHarvest"/>
+	<drop event="Harvest" name="foodCropMushroomsRadiated" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropMushroomsRadiated" count="1" tag="farmerBonusHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="DowngradeBlock" value="mushroomRadiated03"/></set>
+
+<set xpath="/blocks/block[@name='plantedMushroom1']">
+	<property name="Group" value="Crops,Seeds,Vegetation,Blocks,Player"/>
+	<property name="Tags" value="seed"/>
+	<property name="Class" value="ULM_PlantedCrop,UndeadLegacy"/>
+	<property name="Extends" value="cropsGrowingMaster" param1="DescriptionKey,MultiBlockDim"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/mushroomSproutPrefab.prefab"/>
+	<property name="PlantGrowing.LightLevelGrow" value="0"/>
+	<property name="PlantGrowing.LightLevelStay" value="0"/>
+	<property name="PlantGrowing.GrowthRate" value="120"/>
+	<property name="PlantGrowing.Stages" value="plantedMushroom1,plantedMushroom2,plantedMushroom3HarvestPlayer"/>
+	<property name="PlantGrowing.ShowTime" value="true" param1="uiProcessGathering"/>
+	<property name="Material" value="Mmushrooms"/>
+	<property name="Collide" value="melee"/>
+	<property name="CustomIcon" value="plantedMushroom1"/>
+	<drop event="Destroy" name="plantedMushroom1" count="1"/></set>
+	
+<set xpath="/blocks/block[@name='plantedMushroom2']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedMushroom1"/>
+	<property name="CustomIcon" value="plantedMushroom1"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/mushroomGrowthPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantedMushroom3Harvest']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Tags" value="challenge_farming"/>
+	<property name="Group" value="Crops,Vegetation,Outdoor,Blocks"/>
+	<property name="Class" value="ULM_PlantHarvestable,UndeadLegacy"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/mushroomHarvestPrefab.prefab"/>
+	<property name="Collide" value="melee"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="HarvestOverdamage" value="false"/>
+	<property name="VehicleHitScale" value=".1"/>
+	<property name="Material" value="Mmushrooms"/>
+	<property name="EconomicValue" value="2"/><property name="CarryWeight" value="0.1"/>
+	<property name="PickupJournalEntry" value="farmingTip"/>
+	<property name="PlantGrowing.IgnoreRestrictions" value="true"/>
+	<drop event="Harvest" name="foodCropMushrooms" count="1" tag="wildCropsHarvest"/>
+	<drop event="Destroy" count="0"/></set>
+	
+<set xpath="/blocks/block[@name='plantedMushroom3HarvestPlayer']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedMushroom3Harvest"/>
+	<property name="DescriptionKey" value="plantedMushroom3HarvestDesc"/>
+	<property name="CustomIcon" value="plantedMushroom3Harvest"/>
+	<property name="DowngradeBlock" value="plantedMushroom1"/>
+	<drop event="Harvest" name="foodCropMushrooms" count="1" tag="cropHarvest"/></set>
+
+<set xpath="/blocks/block[@name='plantedAloe1']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Crops,Seeds,Vegetation,Blocks,Player"/>
+	<property name="Tags" value="seed"/>
+	<property name="Class" value="ULM_PlantedCrop,UndeadLegacy"/>
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/plant_aloe1_Prefab.prefab"/>
+	<property name="Material" value="Mcorn"/>
+	<property name="PlantGrowing.GrowthRate" value="120"/>
+	<property name="PlantGrowing.Stages" value="plantedAloe1,plantedAloe2,plantedAloe3HarvestPlayer"/>
+	<property name="PlantGrowing.ShowTime" value="true" param1="uiProcessGathering"/>
+	<drop event="Destroy" name="plantedAloe1" count="1"/></set>
+	
+<set xpath="/blocks/block[@name='plantedAloe2']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedAloe1"/>
+	<property name="CustomIcon" value="plantedAloe1"/>
+	<property name="Model" value="@:Entities/Plants/plant_aloe2_Prefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantedAloeHarvestRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="plantedAloe3Harvest"/>
+	<property name="CustomIcon" value="plantedAloe3Harvest"/>
+	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+	
+<set xpath="/blocks/block[@name='plantedAloe3Harvest']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Material" value="Mcorn"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/plant_aloe_harvestPrefab.prefab"/>
+	<drop event="Harvest" name="resourceCropAloeLeaf" count="1" tag="wildCropsHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedAloe3HarvestPlayer']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedAloe3Harvest"/>
+	<property name="DescriptionKey" value="plantedAloe3HarvestDesc"/>
+	<property name="CustomIcon" value="plantedAloe1"/>
+	<property name="DowngradeBlock" value="plantedAloe1"/>
+	<drop event="Harvest" name="resourceCropAloeLeaf" count="1" tag="cropHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedAloeDead']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/plant_aloe_deadPrefab.prefab"/>
+	<drop event="Destroy" name="resourceYuccaFibers" count="3,8"/></set>
+	
+<set xpath="/blocks/block[@name='plantedBlueberry1']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Crops,Seeds,Vegetation,Blocks,Player"/>
+	<property name="Tags" value="seed"/>
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+	<property name="Class" value="ULM_PlantedCrop,UndeadLegacy"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/blueberry_plant_sproutPrefab.prefab"/>
+	<property name="PlantGrowing.GrowthRate" value="120"/>
+	<property name="PlantGrowing.Stages" value="plantedBlueberry1,plantedBlueberry2,plantedBlueberry3HarvestPlayer"/>
+	<property name="PlantGrowing.ShowTime" value="true" param1="uiProcessGathering"/>
+	<drop event="Destroy" name="plantedBlueberry1" count="1"/></set>
+	
+<set xpath="/blocks/block[@name='plantedBlueberry2']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedBlueberry1"/>
+	<property name="Model" value="@:Entities/Plants/blueberry_plant_growthPrefab.prefab"/></set>
+
+<set xpath="/blocks/block[@name='plantedBlueberry3Harvest']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/blueberry_plant_harvestPrefab.prefab"/>
+	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="wildCropsHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedBlueberry3HarvestPlayer']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedBlueberry3Harvest"/>
+	<property name="DescriptionKey" value="plantedBlueberry3HarvestDesc"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="DowngradeBlock" value="plantedBlueberry1"/>
+	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="cropHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedBlueberryHarvestRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="plantedBlueberry3Harvest"/>
+	<property name="CustomIcon" value="plantedBlueberry3Harvest"/>
+	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+	
+<set xpath="/blocks/block[@name='plantedBlueberryDead']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/blueberry_plant_deadPrefab.prefab"/>
+	<drop event="Destroy" name="resourceYuccaFibers" count="3,8"/></set>
+	
+<set xpath="/blocks/block[@name='plantedChrysanthemum1']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Crops,Seeds,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="cropsGrowingMaster" param1="Class,CustomIcon,PlantGrowing.Next"/>
+	<property name="Tags" value="seed"/>
+	<property name="Class" value="ULM_PlantedCrop,UndeadLegacy"/>
+	<property name="Texture" value="550"/>
+	<property name="PlantGrowing.GrowthRate" value="120"/>
+	<property name="PlantGrowing.Stages" value="plantedChrysanthemum1,plantedChrysanthemum2,plantedChrysanthemum3HarvestPlayer"/>
+	<property name="PlantGrowing.ShowTime" value="true" param1="uiProcessGathering"/>
+	<drop event="Destroy" name="plantedChrysanthemum1" count="1"/></set>
+	
+<set xpath="/blocks/block[@name='plantedChrysanthemum2']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedChrysanthemum1"/>
+	<property name="CustomIcon" value="plantedChrysanthemum1"/>
+	<property name="Texture" value="551"/></set>
+	
+<set xpath="/blocks/block[@name='plantedChrysanthemumHarvestRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="plantedChrysanthemum3Harvest"/>
+	<property name="CustomIcon" value="plantedChrysanthemum3Harvest"/>
+	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+
+<set xpath="/blocks/block[@name='plantedChrysanthemum3Harvest']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Texture" value="244"/>
+	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="1" tag="wildCropsHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedChrysanthemum3HarvestPlayer']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedChrysanthemum3Harvest"/>
+	<property name="DescriptionKey" value="plantedChrysanthemum3HarvestDesc"/>
+	<property name="CustomIcon" value="plantedChrysanthemum1"/>
+	<property name="DowngradeBlock" value="plantedChrysanthemum1"/>
+	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="1" tag="cropHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCoffee1']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Crops,Seeds,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+	<property name="Tags" value="seed"/>
+	<property name="Class" value="ULM_PlantedCrop,UndeadLegacy"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/plantCoffee_SproutPrefab.prefab"/>
+	<property name="CustomIcon" value="plantedCoffee1"/>
+	<property name="PlantGrowing.GrowthRate" value="120"/>
+	<property name="PlantGrowing.Stages" value="plantedCoffee1,plantedCoffee2,plantedCoffee3HarvestPlayer"/>
+	<property name="PlantGrowing.ShowTime" value="true" param1="uiProcessGathering"/>
+	<drop event="Destroy" name="plantedCoffee1" count="1"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCoffee2']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedCoffee1"/>
+	<property name="Model" value="@:Entities/Plants/plantCoffee_GrowingPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCoffee3Harvest']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/plantCoffeePlant_Prefab.prefab"/>
+	<drop event="Harvest" name="resourceCropCoffeeBeans" count="1" tag="wildCropsHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCoffee3HarvestPlayer']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedCoffee3Harvest"/>
+	<property name="DescriptionKey" value="plantedCoffee3HarvestDesc"/>
+	<property name="CustomIcon" value="plantedCoffee1"/>
+	<property name="DowngradeBlock" value="plantedCoffee1"/>
+	<drop event="Harvest" name="resourceCropCoffeeBeans" count="1" tag="cropHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCoffeeHarvestRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="plantedCoffee3Harvest"/>
+	<property name="CustomIcon" value="plantedCoffee3Harvest"/>
+	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCoffeeDead']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/plantCoffee_DeadPrefab.prefab"/>
+	<drop event="Destroy" name="resourceYuccaFibers" count="3,8"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCotton1']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Crops,Seeds,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+	<property name="Tags" value="seed"/>
+	<property name="Class" value="ULM_PlantedCrop,UndeadLegacy"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/plantCottonSproutPrefab.prefab"/>
+	<property name="PlantGrowing.GrowthRate" value="120"/>
+	<property name="PlantGrowing.Stages" value="plantedCotton1,plantedCotton2,plantedCotton3HarvestPlayer"/>
+	<property name="PlantGrowing.ShowTime" value="true" param1="uiProcessGathering"/>
+	<drop event="Destroy" name="plantedCotton1" count="1"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCotton2']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedCotton1"/>
+	<property name="CustomIcon" value="plantedCotton1"/>
+	<property name="Model" value="@:Entities/Plants/plantCottonGrowthPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCotton3Harvest']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="CustomIcon" value="plantedCotton3Harvest"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/plantCottonHarvestPrefab.prefab"/>
+	<drop event="Harvest" name="resourceCropCottonPlant" count="1" tag="wildCropsHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCotton3HarvestPlayer']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedCotton3Harvest"/>
+	<property name="DescriptionKey" value="plantedCotton3HarvestDesc"/>
+	<property name="CustomIcon" value="plantedCotton1"/>
+	<property name="DowngradeBlock" value="plantedCotton1"/>
+	<drop event="Harvest" name="resourceCropCottonPlant" count="1" tag="cropHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCottonHarvestRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="plantedCotton3Harvest"/>
+	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCottonDead']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/plantCottonHarvestDeadPrefab.prefab"/>
+	<drop event="Destroy" name="resourceYuccaFibers" count="3,8"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCorn1']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Crops,Seeds,Vegetation,Blocks,Player"/>
+	<property name="Tags" value="seed"/>
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+	<property name="Class" value="ULM_PlantedCrop,UndeadLegacy"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/cornStalkGreenSmallPrefab.prefab"/>
+	<property name="MultiBlockDim" value="1,3,1"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="Material" value="Mcorn"/>
+	<property name="Place" value="Door"/>
+	<property name="CustomIcon" value="plantedCorn1"/>
+	<property name="PlaceAsRandomRotation" value="true"/>
+	<property name="PlantGrowing.GrowthRate" value="120"/>
+	<property name="PlantGrowing.Stages" value="plantedCorn1,plantedCorn2,plantedCorn3HarvestPlayer"/>
+	<property name="PlantGrowing.ShowTime" value="true" param1="uiProcessGathering"/>
+	<drop event="Destroy" name="plantedCorn1" count="1"/></set>
+
+<set xpath="/blocks/block[@name='plantedCorn2']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedCorn1"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/cornStalkGreenMediumPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCornHarvestRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="plantedCorn3Harvest"/>
+	<property name="CustomIcon" value="plantedCorn3Harvest"/>
+	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8000"/></set>
+
+<set xpath="/blocks/block[@name='plantedCorn3Harvest']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Tags" value="crop,challenge_farming"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Material" value="Mcorn"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/cornStalkGreenPrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,3,1"/>
+	<drop event="Harvest" name="foodCropCorn" count="1" tag="wildCropsHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCorn3HarvestPlayer']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedCorn3Harvest"/>
+	<property name="DescriptionKey" value="plantedCorn3HarvestDesc"/>
+	<property name="CustomIcon" value="plantedCorn1"/>
+	<property name="DowngradeBlock" value="plantedCorn1"/>
+	<drop event="Harvest" name="foodCropCorn" count="1" tag="cropHarvest"/>
+	<drop event="Harvest" name="foodCropCorn" count="1" tag="foragerBonus1" prob="0.5"/>
+	<drop event="Harvest" name="foodCropCorn" count="1" tag="foragerBonus2"/></set>
+	
+<set xpath="/blocks/block[@name='plantedGraceCorn1']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Crops,Seeds,Vegetation,Blocks,Player"/>
+	<property name="Tags" value="seed"/>
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+	<property name="Class" value="ULM_PlantedCrop,UndeadLegacy"/>
+	<property name="CustomIcon" value="plantedCorn1"/>
+	<property name="CustomIconTint" value="ff9f9f"/>
+	<property name="Material" value="Mcorn"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/cornStalkSuperSmallPrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,3,1"/>
+	<property name="Place" value="Door"/>
+	<property name="PlantGrowing.GrowthRate" value="120"/>
+	<property name="PlantGrowing.Stages" value="plantedGraceCorn1,plantedGraceCorn2,plantedGraceCorn3HarvestPlayer"/>
+	<property name="PlantGrowing.ShowTime" value="true" param1="uiProcessGathering"/>
+	<drop event="Destroy" name="plantedGraceCorn1" count="1"/></set>
+	
+<set xpath="/blocks/block[@name='plantedGraceCorn2']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedGraceCorn1" param1="CustomIcon,CustomIconTint"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/cornStalkSuperMediumPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCornDeadSmall']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="DisplayInfo" value="Description"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/cornStalkBrownSmallPrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="LightOpacity" value="0"/>
+	<property name="Collide" value="melee"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Material" value="Mcorn"/><property name="CarryWeight" value="0.1"/>
+	<drop event="Destroy" name="resourceYuccaFibers" count="3,12"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCornDeadMedium']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="DisplayInfo" value="Description"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/cornStalkBrownMediumPrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="LightOpacity" value="0"/>
+	<property name="Collide" value="melee"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Material" value="Mcorn"/><property name="CarryWeight" value="0.1"/>
+	<drop event="Destroy" name="resourceYuccaFibers" count="3,12"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCornDead']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="CustomIcon" value="plantedCorn3Harvest"/>
+	<property name="CustomIconTint" value="ffffa0"/>
+	<property name="DisplayInfo" value="Description"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/cornStalkBrownPrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="DisplayType" value="blockMulti"/><property name="MultiBlockDim" value="1,3,1"/>
+	<property name="Collide" value="melee"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="LightOpacity" value="0"/>
+	<property name="Material" value="Mcorn"/><property name="CarryWeight" value="0.1"/>
+	<drop event="Destroy" name="resourceYuccaFibers" count="3,12"/></set>
+	
+<set xpath="/blocks/block[@name='plantedCorn2Deco']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Extends" value="plantedCorn3Harvest"/>
+	<property name="CustomIcon" value="plantedCorn2"/>
+	<property name="DescriptionKey" value="plantedCorn3HarvestDesc"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/cornStalkGreenMediumPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantedGraceCornHarvestRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="plantedGraceCorn3Harvest"/>
+	<property name="CustomIcon" value="plantedGraceCorn3Harvest"/>
+	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+
+<set xpath="/blocks/block[@name='plantedGraceCorn3Harvest']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/cornStalkSuperPrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,3,1"/>
+	<property name="Material" value="Mcorn"/><property name="CarryWeight" value="0.1"/>
+	<drop event="Harvest" name="foodCropGraceCorn" count="1" tag="wildCropsHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedGraceCorn3HarvestPlayer']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedGraceCorn3Harvest"/>
+	<property name="DescriptionKey" value="plantedGraceCorn3HarvestDesc"/>
+	<property name="CustomIcon" value="plantedCorn1"/>
+	<property name="DowngradeBlock" value="plantedGraceCorn1"/>
+	<drop event="Harvest" name="foodCropGraceCorn" count="1" tag="cropHarvest"/>
+	<drop event="Harvest" name="foodCropGraceCorn" count="1" tag="foragerBonus1" prob="0.5"/>
+	<drop event="Harvest" name="foodCropGraceCorn" count="1" tag="foragerBonus2"/></set>
+	
+<set xpath="/blocks/block[@name='plantedHop1']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Crops,Seeds,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+	<property name="Tags" value="seed"/>
+	<property name="Class" value="ULM_PlantedCrop,UndeadLegacy"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/plantHopsSproutPrefab.prefab"/>
+	<property name="PlantGrowing.GrowthRate" value="120"/>
+	<property name="PlantGrowing.Stages" value="plantedHop1,plantedHop2,plantedHop3HarvestPlayer"/>
+	<property name="PlantGrowing.ShowTime" value="true" param1="uiProcessGathering"/>
+	<drop event="Destroy" name="plantedHop1" count="1"/></set>
+	
+<set xpath="/blocks/block[@name='plantedHop2']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedHop1"/>
+	<property name="CustomIcon" value="plantedHop1"/>
+	<property name="Model" value="@:Entities/Plants/plantHopsGrowthPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantedHopHarvestRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="plantedHop3Harvest"/>
+	<property name="CustomIcon" value="plantedHop3Harvest"/>
+	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+
+<set xpath="/blocks/block[@name='plantedHop3Harvest']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/plantHopsHarvestPrefab.prefab"/>
+	<drop event="Harvest" name="resourceCropHopsFlower" count="1" tag="wildCropsHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedHop3HarvestPlayer']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedHop3Harvest"/>
+	<property name="DescriptionKey" value="plantedHop3HarvestDesc"/>
+	<property name="CustomIcon" value="plantedHop1"/>
+	<property name="DowngradeBlock" value="plantedHop1"/>
+	<drop event="Harvest" name="resourceCropHopsFlower" count="1" tag="cropHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedHopDead']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/plantHopsHarvestDeadPrefab.prefab"/>
+	<drop event="Destroy" name="resourceYuccaFibers" count="3,8"/></set>
+	
+<append xpath="/blocks/block[
+	@name='plantedSnowberry1'
+ or @name='plantedSnowberry2'
+ or @name='plantedSnowberry3Harvest'
+ or @name='plantedSnowberry3HarvestPlayer']">
+	<property name="CreativeMode" value="None"/></append>
+	
+<set xpath="/blocks/block[@name='plantedPumpkin1']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Crops,Seeds,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+	<property name="Tags" value="seed"/>
+	<property name="Class" value="ULM_PlantedCrop,UndeadLegacy"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/pumpkinSproutPrefab.prefab"/>
+	<property name="Material" value="Mcorn"/>
+	<property name="PlantGrowing.GrowthRate" value="120"/>
+	<property name="PlantGrowing.Stages" value="plantedPumpkin1,plantedPumpkin2,plantedPumpkin3HarvestPlayer"/>
+	<property name="PlantGrowing.ShowTime" value="true" param1="uiProcessGathering"/>
+	<drop event="Destroy" name="plantedPumpkin1" count="1"/></set>
+	
+<set xpath="/blocks/block[@name='plantedPumpkin2']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedPumpkin1"/>
+	<property name="CustomIcon" value="plantedPumpkin1"/>
+	<property name="Model" value="@:Entities/Plants/pumpkinGrowthPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantedPumpkin3HarvestRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="plantedPumpkin3Harvest"/>
+	<property name="CustomIcon" value="plantedPumpkin3Harvest"/>
+	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+
+<set xpath="/blocks/block[@name='plantedPumpkin3Harvest']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Material" value="Mcorn"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/pumpkinHarvestPrefab.prefab"/>
+	<drop event="Harvest" name="foodCropPumpkin" count="1" tag="wildCropsHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedPumpkin3HarvestPlayer']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedPumpkin3Harvest"/>
+	<property name="DescriptionKey" value="plantedPumpkin3HarvestDesc"/>
+	<property name="CustomIcon" value="plantedPumpkin1"/>
+	<property name="DowngradeBlock" value="plantedPumpkin1"/>
+	<drop event="Harvest" name="foodCropPumpkin" count="1" tag="cropHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedGoldenrod1']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Crops,Seeds,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="cropsGrowingMaster"/>
+	<property name="Tags" value="seed"/>
+	<property name="Class" value="ULM_PlantedCrop,UndeadLegacy"/>
+	<property name="CustomIcon" value="plantedGoldenrod1"/>
+	<property name="Texture" value="401"/>
+	<property name="PlantGrowing.GrowthRate" value="120"/>
+	<property name="PlantGrowing.Stages" value="plantedGoldenrod1,plantedGoldenrod2,plantedGoldenrod3HarvestPlayer"/>
+	<property name="PlantGrowing.ShowTime" value="true" param1="uiProcessGathering"/>
+	<drop event="Destroy" name="plantedGoldenrod1" count="1"/></set>
+	
+<set xpath="/blocks/block[@name='plantedGoldenrod2']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedGoldenrod1"/>
+	<property name="CustomIcon" value="plantedGoldenrod1"/>
+	<property name="Texture" value="402"/></set>
+	
+<set xpath="/blocks/block[@name='plantedGoldenrodHarvestRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="plantedGoldenrod3Harvest"/>
+	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+
+<set xpath="/blocks/block[@name='plantedGoldenrod3Harvest']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="CustomIcon" value="plantedGoldenrod3HarvestPlayer"/>
+	<property name="Texture" value="362"/>
+	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="1" tag="wildCropsHarvest"/></set>
+
+<set xpath="/blocks/block[@name='plantedGoldenrod3HarvestPlayer']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantedGoldenrod3Harvest"/>
+	<property name="DescriptionKey" value="plantedGoldenrod3HarvestDesc"/>
+	<property name="CustomIcon" value="plantedGoldenrod3HarvestPlayer"/>
+	<property name="DowngradeBlock" value="plantedGoldenrod1"/>
+	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="1" tag="cropHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedPotato1']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Crops,Seeds,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+	<property name="Tags" value="seed"/>
+	<property name="Class" value="ULM_PlantedCrop,UndeadLegacy"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/potato_plant_sproutPrefab.prefab"/>
+	<property name="PlantGrowing.GrowthRate" value="120"/>
+	<property name="PlantGrowing.Stages" value="plantedPotato1,plantedPotato2,plantedPotato3HarvestPlayer"/>
+	<property name="PlantGrowing.ShowTime" value="true" param1="uiProcessGathering"/>
+	<drop event="Destroy" name="plantedPotato1" count="1"/></set>
+	
+<set xpath="/blocks/block[@name='plantedPotato2']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedPotato1"/>
+	<property name="CustomIcon" value="plantedPotato1"/>
+	<property name="Model" value="@:Entities/Plants/potato_plant_growthPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantedPotatoHarvestRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="plantedPotato3Harvest"/>
+	<property name="CustomIcon" value="plantedPotato3Harvest"/>
+	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+
+<set xpath="/blocks/block[@name='plantedPotato3Harvest']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/potato_plant_harvestPrefab.prefab"/>
+	<drop event="Harvest" name="foodCropPotato" count="1" tag="wildCropsHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedPotato3HarvestPlayer']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedPotato3Harvest"/>
+	<property name="DescriptionKey" value="plantedPotato3HarvestDesc"/>
+	<property name="CustomIcon" value="plantedPotato1"/>
+	<property name="DowngradeBlock" value="plantedPotato1"/>
+	<drop event="Harvest" name="foodCropPotato" count="1" tag="cropHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedPotatoDead']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/potato_plant_deadPrefab.prefab"/>
+	<drop event="Destroy" name="resourceYuccaFibers" count="3,8"/></set>
+	
+<set xpath="/blocks/block[@name='plantedYucca1']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Crops,Seeds,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+	<property name="Tags" value="seed"/>
+	<property name="Class" value="ULM_PlantedCrop,UndeadLegacy"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/plant_yucca_sproutPrefab.prefab"/>
+	<property name="Material" value="Mcorn"/>
+	<property name="CustomIcon" value="plantedYucca1"/>
+	<property name="PlantGrowing.GrowthRate" value="120"/>
+	<property name="PlantGrowing.Stages" value="plantedYucca1,plantedYucca2,plantedYucca3HarvestPlayer"/>
+	<property name="PlantGrowing.ShowTime" value="true" param1="uiProcessGathering"/>
+	<drop event="Destroy" name="plantedYucca1" count="1"/></set>
+	
+<set xpath="/blocks/block[@name='plantedYucca2']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedYucca1"/>
+	<property name="CustomIcon" value="plantedYucca1"/>
+	<property name="Model" value="@:Entities/Plants/plant_yucca_growthPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantedYucca3Harvest']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Material" value="Mcorn"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/plant_yucca_harvestPrefab.prefab"/>
+	<drop event="Harvest" name="foodCropYuccaFruit" count="1" tag="wildCropsHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedYucca3HarvestPlayer']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedYucca3Harvest"/>
+	<property name="DescriptionKey" value="plantedYucca3HarvestDesc"/>
+	<property name="CustomIcon" value="plantedYucca1"/>
+	<property name="DowngradeBlock" value="plantedYucca1"/>
+	<drop event="Harvest" name="foodCropYuccaFruit" count="1" tag="cropHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='plantedYucca3HarvestRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="plantedYucca3Harvest"/>
+	<property name="CustomIcon" value="plantedYucca3Harvest"/>
+	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+	
+<set xpath="/blocks/block[@name='plantedYuccaDead']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/plant_yucca_deadPrefab.prefab"/>
+	<drop event="Destroy" name="resourceYuccaFibers" count="3,8"/></set>
+	
+<set xpath="/blocks/block[@name='plantedtreeGrassSeed1']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Foliage,Crops,Seeds,Vegetation,Blocks,Player"/>
+	<property name="Tags" value="seed"/>
+	<property name="Class" value="PlantGrowing"/>
+	<property name="Shape" value="Grass"/><property name="Mesh" value="grass"/><property name="Texture" value="561,562,563,564,565,563"/>
+	<property name="StabilitySupport" value="false"/><property name="Collide" value="melee"/>
+	<property name="CustomIcon" value="treeForestGrassDiagonal"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="HarvestOverdamage" value="false"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="PlantGrowing.Next" value="plantedtreeGrassSeedRandomHelper"/>
+	<property name="PlantGrowing.GrowthRate" value="2"/>
+	<property name="PlantGrowing.FertileLevel" value="1"/>
+	<property name="PlantGrowing.IsRandom" value="false"/>
+	<property name="EconomicValue" value="1"/><property name="SellableToTrader" value="false"/><property name="CarryWeight" value="0.10"/>
+	<property name="Material" value="matGrass"/>
+	<drop event="Harvest" name="resourceYuccaFibers" count="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/></set>
+	
+<append xpath="/blocks">
+
+<block name="plantedTestCrop1">
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Group" value="Crops,Seeds,Vegetation,Blocks,Player"/>
+	<property name="Tags" value="seed"/>
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+	<property name="Class" value="ULM_PlantedCrop,UndeadLegacy"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/cornStalkGreenSmallPrefab.prefab"/>
+	<property name="MultiBlockDim" value="1,3,1"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="Material" value="Mcorn"/>
+	<property name="Place" value="Door"/>
+	<property name="CustomIcon" value="plantedCorn1"/>
+	<property name="PlaceAsRandomRotation" value="true"/>
+	<property name="PlantGrowing.GrowthRate" value="2"/>
+	<property name="PlantGrowing.Stages" value="plantedTestCrop1,plantedTestCrop2,plantedTestCrop3HarvestPlayer"/>
+	<property name="PlantGrowing.ShowTime" value="true" param1="uiProcessGathering"/>
+	<drop event="Destroy" name="plantedTestCrop1" count="1"/></block>
+
+<block name="plantedTestCrop2">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Crops,Vegetation,Blocks,Player"/>
+	<property name="Extends" value="plantedTestCrop1"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/cornStalkGreenMediumPrefab.prefab"/></block>
+	
+<block name="plantedTestCrop3HarvestPlayer">
+	<property name="CreativeMode" value="None"/>
+	<property name="Tags" value="crop"/>
+	<property name="Group" value="Crops,Vegetation,Blocks"/>
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Material" value="Mcorn"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/cornStalkGreenPrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,3,1"/>
+	<property name="CustomIcon" value="plantedCorn1"/>
+	<property name="DowngradeBlock" value="plantedTestCrop1"/>
+	<drop event="Harvest" name="foodCropCorn" count="1" tag="cropHarvest"/>
+	<drop event="Harvest" name="foodCropCorn" count="1" tag="foragerBonus1" prob="0.5"/>
+	<drop event="Harvest" name="foodCropCorn" count="1" tag="foragerBonus2"/></block>
+
+</append>
+	
+	
+
+</Subquake>

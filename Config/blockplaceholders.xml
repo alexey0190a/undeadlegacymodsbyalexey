@@ -1,0 +1,1302 @@
+<Subquake>
+
+<append xpath="/blockplaceholders">
+
+<randomizer name="cntForestRandomLootHelper">
+	<block name="cntTrashPile01" prob="1"/>
+	<block name="cntTrashPile02" prob="1"/>
+	<block name="cntTrashPile03" prob="1"/>
+	<block name="cntTrashPile04" prob="1"/>
+	<block name="cntTrashPile05" prob="1"/>
+	<block name="cntTrashPile06" prob="1"/>
+	<block name="cntTrashPile07" prob="1"/>
+	<block name="cntTrashPile08" prob="1"/>
+	<block name="cntTrashPile09" prob="1"/>
+	<block name="cntBackpack01" prob=".33"/>
+	<block name="cntBackpack03" prob=".33"/>
+	<block name="cntDuffle01" prob=".33"/>
+	<block name="cntSportsBag01" prob=".33"/>
+	<block name="cntSportsBag02" prob=".33"/>
+	<block name="cntPurse01" prob=".33"/></randomizer>
+
+<randomizer name="cntWastelandRandomLootHelper">
+	<block name="cntTrashPile01" prob="1"/>
+	<block name="cntTrashPile02" prob="1"/>
+	<block name="cntTrashPile03" prob="1"/>
+	<block name="cntTrashPile04" prob="1"/>
+	<block name="cntTrashPile05" prob="1"/>
+	<block name="cntTrashPile06" prob="1"/>
+	<block name="cntTrashPile07" prob="1"/>
+	<block name="cntTrashPile08" prob="1"/>
+	<block name="cntTrashPile09" prob=".5"/>
+	<block name="cntBackpack01" prob=".3"/>
+	<block name="cntBackpack03" prob=".3"/>
+	<block name="cntDuffle01" prob=".3"/>
+	<block name="cntSportsBag01" prob=".3"/>
+	<block name="cntSportsBag02" prob=".3"/>
+	<block name="cntPurse01" prob=".3"/>
+	<block name="cntDeskSafe" prob=".3"/></randomizer>
+
+<randomizer name="cntDesertRandomLootHelper">
+	<block name="cntTrashPile01" prob="1"/>
+	<block name="cntTrashPile02" prob="1"/>
+	<block name="cntTrashPile03" prob="1"/>
+	<block name="cntTrashPile04" prob="1"/>
+	<block name="cntTrashPile05" prob="1"/>
+	<block name="cntTrashPile06" prob="1"/>
+	<block name="cntTrashPile07" prob="1"/>
+	<block name="cntTrashPile08" prob="1"/>
+	<block name="cntTrashPile09" prob="1"/>
+	<block name="cntBackpack01" prob=".3"/>
+	<block name="cntBackpack03" prob=".3"/>
+	<block name="cntDuffle01" prob=".3"/>
+	<block name="cntSportsBag01" prob=".3"/>
+	<block name="cntSportsBag02" prob=".3"/>
+	<block name="cntPurse01" prob=".3"/></randomizer>
+
+<randomizer name="cntBurntForestRandomLootHelper">
+	<block name="cntTrashPile01"/>
+	<block name="cntTrashPile02"/>
+	<block name="cntTrashPile03"/>
+	<block name="cntTrashPile04"/>
+	<block name="cntTrashPile05"/>
+	<block name="cntTrashPile06"/>
+	<block name="cntTrashPile07"/>
+	<block name="cntTrashPile08"/>
+	<block name="cntTrashPile09"/></randomizer>
+
+<randomizer name="cntHouseRandomLootHelper">
+	<block name="cntTrashPile01"/>
+	<block name="cntTrashPile02"/>
+	<block name="cntTrashPile03"/>
+	<block name="cntTrashPile04"/>
+	<block name="cntTrashPile05"/>
+	<block name="cntTrashPile06"/>
+	<block name="cntTrashPile07"/>
+	<block name="cntTrashPile08"/>
+	<block name="cntTrashPile09"/>
+	<block name="cntChest01"/>
+	<block name="cntCardboardBox"/>
+	<block name="cntBin"/>
+	<block name="cntBackpack01"/>
+	<block name="cntBackpack03"/>
+	<block name="cntDuffle01"/>
+	<block name="cntSportsBag01"/>
+	<block name="cntSportsBag02"/>
+	<block name="cntPurse01"/></randomizer>
+
+<randomizer name="cntStreetRandomLootHelper">
+	<block name="cntTrashPile01"/>
+	<block name="cntTrashPile02"/>
+	<block name="cntTrashPile03"/>
+	<block name="cntTrashPile04"/>
+	<block name="cntTrashPile05"/>
+	<block name="cntTrashPile06"/>
+	<block name="cntTrashPile07"/>
+	<block name="cntTrashPile08"/>
+	<block name="cntTrashPile09"/>
+	<block name="cntShoppingCart" prob=".05"/>
+	<block name="cntShoppingCartEmpty" prob=".75"/>
+	<block name="cntBackpack01" prob=".05"/>
+	<block name="cntBackpack03" prob=".05"/>
+	<block name="cntDuffle01" prob=".05"/>
+	<block name="cntSportsBag01" prob=".05"/>
+	<block name="cntSportsBag02" prob=".05"/>
+	<block name="cntPurse01" prob=".05"/></randomizer>
+
+<randomizer name="cntYardRandomLootHelper">
+	<block name="cntTrashPile07" prob=".5"/>
+	<block name="cntCardboardBox" prob=".2"/>
+	<block name="cntBackpack01" prob=".03"/>
+	<block name="cntBackpack03" prob=".03"/>
+	<block name="cntDuffle01" prob=".03"/>
+	<block name="cntSportsBag01" prob=".03"/>
+	<block name="cntSportsBag02" prob=".03"/>
+	<block name="cntPurse01" prob=".03"/></randomizer>
+
+<randomizer name="carsRandomHelper">
+	<block name="ulmVehicleMinivan02Secure"				prob="0.1"/>
+	<block name="ulmVehicleMuscleCar01Secure"			prob="0.1"/>
+	<block name="ulmVehicleSedan03Secure"				prob="0.1"/>
+	<block name="ulmVehicleSedan04Secure"				prob="0.1"/>
+	<block name="ulmVehicleSedan05Secure"				prob="0.1"/>
+	<block name="ulmVehicleSUV02Secure"					prob="0.1"/>
+	<block name="ulmVehicleCoupe01Secure"				prob="0.1"/>
+	<block name="ulmVehicle4x4TruckSecure"				prob="0.1"/>
+	<block name="ulmVehicleMinivan02Lootable"			prob="1"/>
+	<block name="ulmVehicle4x4TruckLootable"			prob="1"/>
+	<block name="ulmVehicleMuscleCar01Lootable"			prob="1"/>
+	<block name="ulmVehicleSUV02Lootable"				prob="1"/>
+	<block name="ulmVehicleCoupe01Lootable"				prob="1"/>
+	<block name="ulmVehicleSedan05Lootable"				prob="1"/>
+	<block name="ulmVehicleSedan04Lootable"				prob="1"/>
+	<block name="ulmVehicleSedan01RandomSpawner"		prob="1"/>
+	<block name="ulmVehicleSedan03Lootable"				prob="1"/>
+	<block name="air"									prob="1"/></randomizer>
+
+<randomizer name="carWrecksRandomHelper">
+	<block name="ulmVehiclePoliceCruiserWrecked"/>
+	<block name="ulmVehicleSUV02PoliceWrecked"/>
+	<block name="ulmVehicleSUV02SecurityWrecked"/>
+	<block name="ulmVehicleMinivan02Wrecked"/>
+	<block name="ulmVehicleSUV02Wrecked"/>
+	<block name="ulmVehicleMuscleCar01Wrecked"/>
+	<block name="ulmVehicleCoupe01Wrecked"/>
+	<block name="ulmVehicle4x4TruckWrecked"/>
+	<block name="ulmVehicleSedan04Wrecked"/>
+	<block name="ulmVehicleSedan05Wrecked"/>
+	<block name="ulmVehicleSedan03Wrecked"/>
+	<block name="air"/></randomizer>
+
+<randomizer name="cars3WideRandomHelper">
+	<block name="ulmVehicleAmbulance02Lootable" prob=".05"/>
+	<block name="ulmVehicleSedan03Wide"/></randomizer>
+
+<randomizer name="cntCar03SedanDamage0RandomHelper">
+	<block name="air"/>
+	<block name="ulmVehicleSedan03Lootable"/></randomizer>
+
+<randomizer name="cntCar03SedanDamage1RandomHelper">
+	<block name="air"/>
+	<block name="ulmVehicleSedan03Damaged"/></randomizer>
+
+<randomizer name="cntCar03SedanDamage2RandomHelper">
+	<block name="ulmVehicleSedan03Wrecked"/>
+	<block name="ulmVehicleSedan04Wrecked"/>
+	<block name="ulmVehicleSedan05Wrecked"/>
+	<block name="ulmVehicleSUV02Wrecked"/>
+	<block name="ulmVehicleCoupe01Wrecked"/>
+	<block name="ulmVehicle4x4TruckWrecked"/>
+	<block name="air"/></randomizer>
+
+<randomizer name="cntBusSchoolShortRandomHelper">
+	<block name="air" prob=".7"/>
+	<block name="cntBusSchoolShort" prob=".3"/></randomizer>
+
+<randomizer name="cntBusSchoolRandomHelper">
+	<block name="air" prob=".7"/>
+	<block name="cntBusSchool" prob=".3"/></randomizer>
+
+<randomizer name="cntBusShuttleRandomHelper">
+	<block name="air" prob=".7"/>
+	<block name="cntBusShuttle" prob=".3"/></randomizer>
+
+<randomizer name="cntBusCityRandomHelper">
+	<block name="air" prob=".7"/>
+	<block name="cntBusCity" prob=".3"/></randomizer>
+
+<randomizer name="cntArmyTruckRandomLootHelper">
+	<block name="cntArmyTruckOpen" prob=".5"/>
+	<block name="cntArmyTruckClosed" prob=".5"/></randomizer>
+
+<randomizer name="cntAmbulanceTruck01RandomLootHelper">
+	<block name="air" prob=".7"/>
+	<block name="ulmVehicleAmbulance02Lootable" prob=".3"/></randomizer>
+
+<randomizer name="cntServiceTruckMoPowerRandomLootHelper">
+	<block name="cntServiceTruckMoPower" prob=".3"/>
+	<block name="air" prob="1"/></randomizer>
+
+<randomizer name="cntServiceTruckWorkingStiffToolsRandomLootHelper">
+	<block name="cntServiceTruckWorkingStiffTools" prob=".3"/>
+	<block name="air" prob="1"/></randomizer>
+
+<randomizer name="cntGarageRandomLootHelper">
+	<block name="cntGarageStorage" prob=".2"/>
+	<block name="cntTrashPile02" prob=".5"/>
+	<block name="cntCardboardBox" prob=".2"/>
+	<block name="cntBackpack01" prob=".03"/>
+	<block name="cntBackpack03" prob=".03"/>
+	<block name="cntDuffle01" prob=".03"/>
+	<block name="cntSportsBag01" prob=".03"/>
+	<block name="cntSportsBag02" prob=".03"/>
+	<block name="cntPurse01" prob=".03"/></randomizer>
+
+<randomizer name="metalSheetRandomHelper">
+	<block name="corrugatedMetalSheetBent1"/>
+	<block name="corrugatedMetalSheetBent2"/>
+	<block name="corrugatedMetalSheetBent3"/>
+	<block name="corrugatedMetalSheetBent4"/></randomizer>
+
+<randomizer name="woodSheetRandomHelper">
+	<block name="woodFenceSheetBent1"/>
+	<block name="woodFenceSheetBent2"/>
+	<block name="woodFenceSheetBent3"/>
+	<block name="woodFenceSheetBent4"/></randomizer>
+
+<randomizer name="cntMicrowaveRandomLootHelper">
+	<block name="cntMicrowaveOvenVer1Open" prob=".65"/>
+	<block name="cntMicrowaveOvenVer2Open" prob=".65"/>
+	<block name="cntMicrowaveOvenVer1Closed" prob=".35"/>
+	<block name="cntMicrowaveOvenVer2Closed" prob=".35"/></randomizer>
+
+<randomizer name="cntCabinetBottomRandomLootHelper">
+	<block name="cntCabinetBottomOpen" prob=".65"/>
+	<block name="cntCabinetBottom" prob=".35"/></randomizer>
+
+<randomizer name="cntCabinetOldBottomLootHelper">
+	<block name="cntCabinetOldBottomOpen" prob=".65"/>
+	<block name="cntCabinetOldBottom" prob=".35"/></randomizer>
+
+<randomizer name="cntRetroFridgeRandomLootHelper">
+	<block name="cntRetroFridgeVer2Open" prob=".65"/>
+	<block name="cntRetroFridgeVer1Closed" prob=".35"/></randomizer>
+
+<randomizer name="cntFridgeStainlessSteelRandomLootHelper">
+	<block name="cntFridgeStainlessSteelVer2Open" prob=".65"/>
+	<block name="cntFridgeStainlessSteel" prob=".35"/></randomizer>
+
+<randomizer name="cntFreezerGroceriesMiddleRandomLootHelper">
+	<block name="cntFreezerGroceriesMiddleEmptyClosed" prob=".08"/>
+	<block name="cntFreezerGroceriesMiddleEmptyClosedBroken" prob=".08"/>
+	<block name="cntFreezerGroceriesMiddleEmptyOpen" prob=".08"/>
+	<block name="cntFreezerGroceriesMiddleEmptyOpenBroken" prob=".08"/>
+	<block name="cntFreezerGroceriesMiddleFullClosed" prob=".175"/>
+	<block name="cntFreezerGroceriesMiddleFullClosedBroken" prob=".175"/>
+	<block name="cntFreezerGroceriesMiddleFullClosed2" prob=".175"/>
+	<block name="cntFreezerGroceriesMiddleFullClosedBroken2" prob=".175"/></randomizer>
+
+<randomizer name="cntFreezerGroceriesLeftRandomLootHelper">
+	<block name="cntFreezerGroceriesLeftEmptyClosed"/>
+	<block name="cntFreezerGroceriesLeftEmptyClosedBroken"/></randomizer>
+
+<randomizer name="cntFreezerGroceriesRightRandomLootHelper">
+	<block name="cntFreezerGroceriesRightEmptyClosed"/>
+	<block name="cntFreezerGroceriesRightEmptyClosedBroken"/></randomizer>
+
+<randomizer name="cntFreezerBeveragesMiddleRandomLootHelper">
+	<block name="cntFreezerBeveragesMiddleEmptyClosed" prob=".08"/>
+	<block name="cntFreezerBeveragesMiddleEmptyClosedBroken" prob=".08"/>
+	<block name="cntFreezerBeveragesMiddleEmptyOpen" prob=".08"/>
+	<block name="cntFreezerBeveragesMiddleEmptyOpenBroken" prob=".08"/>
+	<block name="cntFreezerBeveragesMiddleFullClosed" prob=".35"/>
+	<block name="cntFreezerBeveragesMiddleFullClosedBroken" prob=".35"/></randomizer>
+
+<randomizer name="cntFreezerBeveragesLeftRandomLootHelper">
+	<block name="cntFreezerBeveragesLeftEmptyClosed"/>
+	<block name="cntFreezerBeveragesLeftEmptyClosedBroken"/></randomizer>
+
+<randomizer name="cntFreezerBeveragesRightRandomLootHelper">
+	<block name="cntFreezerBeveragesRightEmptyClosed"/>
+	<block name="cntFreezerBeveragesRightEmptyClosedBroken"/></randomizer>
+
+<randomizer name="cntFreezerBeveragesStandaloneRandomLootHelper">
+	<block name="cntFreezerBeveragesStandaloneEmptyClosed" prob=".15"/>
+	<block name="cntFreezerBeveragesStandaloneEmptyClosedBroken" prob=".15"/>
+	<block name="cntFreezerBeveragesStandaloneFullClosed" prob=".35"/>
+	<block name="cntFreezerBeveragesStandaloneFullClosedBroken" prob=".35"/></randomizer>
+
+<randomizer name="cntCementMixerBustedRandomLootHelper">
+	<block name="cementMixer" prob="0.1"/>
+	<block name="cntCollapsedCementMixer" prob="1"/></randomizer>
+
+<randomizer name="cntChemistryStationBustedRandomLootHelper">
+	<block name="chemistryStation" prob="0.1"/>
+	<block name="cntCollapsedChemistryStation" prob="1"/></randomizer>
+
+<randomizer name="cntBathTubsRandomLootHelper">
+	<block name="cntBathTubEmpty" prob=".8"/>
+	<block name="cntBathTubGore" prob=".2"/></randomizer>
+
+<randomizer name="cntCashRegisterRandomLootHelper">
+	<block name="air" prob="0.05"/>
+	<block name="cntCashRegisterSecure"/>
+	<block name="cntCashRegister"/>
+	<block name="cntCashRegisterEmpty"/></randomizer>
+
+<randomizer name="cntShoppingCartRandomLootHelper">
+	<block name="cntShoppingCartEmpty" prob=".75"/>
+	<block name="cntShoppingCart" prob=".25"/></randomizer>
+
+<randomizer name="cntShoppingBasketRandomLootHelper">
+	<block name="cntShoppingBasketEmptyTeal"/>
+	<block name="cntShoppingBasketEmptyRed"/>
+	<block name="cntShoppingBasketEmptyGreen"/>
+	<block name="cntShoppingBasketEmptyBlue"/>
+	<block name="cntShoppingBasketEmptyYellow"/>
+	<block name="cntShoppingBasketEmptyWhite"/>
+	<block name="cntShoppingBasketEmptyOrange"/>
+	<block name="cntShoppingBasketTeal"/>
+	<block name="cntShoppingBasketRed"/>
+	<block name="cntShoppingBasketGreen"/>
+	<block name="cntShoppingBasketBlue"/>
+	<block name="cntShoppingBasketYellow"/>
+	<block name="cntShoppingBasketWhite"/>
+	<block name="cntShoppingBasketOrange"/></randomizer>
+
+<randomizer name="paintingPictureRandomHelper">
+	<block name="paintingBen"/>
+	<block name="paintingLorien"/>
+	<block name="paintingDerek"/>
+	<block name="paintingNoah"/>
+	<block name="paintingDuke"/>
+	<block name="paintingKen"/></randomizer>
+
+<randomizer name="cntPaintingPictureSafeRandomLootHelper">
+	<block name="hiddenSafePaintingBen"/>
+	<block name="hiddenSafePaintingLorien"/>
+	<block name="hiddenSafePaintingDerek"/>
+	<block name="hiddenSafePaintingNoah"/>
+	<block name="hiddenSafePaintingDuke"/>
+	<block name="hiddenSafePaintingKen"/></randomizer>
+
+<randomizer name="cntWallSafeRandomLootHelper">
+	<block name="air" prob=".75"/>
+	<block name="cntWallSafe" prob=".25"/></randomizer>
+
+<randomizer name="cntWallSafeNonPaintingRandomLootHelper">
+	<block name="cntWallSafeOpen" prob=".65"/>
+	<block name="cntWallSafe" prob=".35"/></randomizer>
+
+<randomizer name="cntDeskSafeRandomLootHelper">
+	<block name="cntDeskSafeOpen" prob=".65"/>
+	<block name="cntDeskSafe" prob=".35"/></randomizer>
+	
+<randomizer name="cntStoveRandomLootHelper">
+	<block name="cntStoveModernVer1Closed" prob=".6"/>
+	<block name="cntStoveOldVer1Closed" prob=".6"/>
+	<block name="cntStoveModernVer2Open" prob=".4"/>
+	<block name="cntStoveOldVer2Open" prob=".4"/></randomizer>
+
+<randomizer name="cntLaundryBasketRandomLootHelper">
+	<block name="cntLaundryBasketVer1Empty" prob=".6"/>
+	<block name="cntLaundryBasketVer2Full" prob=".4"/></randomizer>
+
+<randomizer name="laundryCartRandomHelper">
+	<block name="laundryCartEmpty" prob=".6"/>
+	<block name="laundryCartFull" prob=".4"/></randomizer>
+
+<randomizer name="cntCupboardCabinetOldTopLootHelper">
+	<block name="cntCupboardCabinetOldTopOpen" prob=".65"/>
+	<block name="cntCupboardCabinetOldTopClosed" prob=".35"/></randomizer>
+
+<randomizer name="cntCupboardCabinetRedTopLootHelper">
+	<block name="cntCupboardCabinetRedTopOpen" prob=".65"/>
+	<block name="cntCupboardCabinetRedTopClosed" prob=".35"/></randomizer>
+
+<randomizer name="cntWoodDesk01RandomLootHelper">
+	<block name="cntWoodDesk01Secure" prob=".1"/>
+	<block name="cntWoodDesk01Closed" prob=".2"/>
+	<block name="cntWoodDesk01Open" prob=".7"/></randomizer>
+
+<randomizer name="cntMetalDesk02RandomLootHelper">
+	<block name="cntMetalDesk02Secure" prob=".1"/>
+	<block name="cntMetalDesk02Closed" prob=".2"/>
+	<block name="cntMetalDesk02Open" prob=".7"/></randomizer>
+	
+<randomizer name="cntBagsRandomLootHelper">
+	<block name="cntBackpack01"/>
+	<block name="cntBackpack03"/>
+	<block name="cntDuffle01"/>
+	<block name="cntSportsBag01"/>
+	<block name="cntSportsBag02"/>
+	<block name="cntPurse01"/></randomizer>
+
+<randomizer name="cntBookcaseGoodRandomLootHelper">
+	<block name="cntBookcaseFull" prob=".6"/>
+	<block name="cntBookcaseEmpty" prob=".4"/></randomizer>
+
+<randomizer name="cntBookcasePoorRandomLootHelper">
+	<block name="cntBookcaseFull" prob=".3"/>
+	<block name="cntBookcaseEmpty" prob=".7"/></randomizer>
+
+<randomizer name="metalCatwalkTrapRandomHelper">
+	<block name="metalCatwalk" prob=".85"/>
+	<block name="metalCatwalkTrap" prob=".15"/></randomizer>
+
+<randomizer name="metalCatwalkRailing1TrapRandomHelper">
+	<block name="metalCatwalkRailing1" prob=".6"/>
+	<block name="metalCatwalkRailing1Trap" prob=".4"/></randomizer>
+
+<randomizer name="metalCatwalkRailingCNRTrapRandomHelper">
+	<block name="metalCatwalkRailingCNR" prob=".6"/>
+	<block name="metalCatwalkRailingCNRTrap" prob=".4"/></randomizer>
+	
+<randomizer name="metalCatwalkBentTrapRandomHelper">
+	<block name="metalCatwalkBent" prob=".6"/>
+	<block name="metalCatwalkBentTrap" prob=".4"/></randomizer>
+
+<randomizer name="metalCatwalkRailing2BentTrapRandomHelper">
+	<block name="metalCatwalkRailing2Bent" prob=".6"/>
+	<block name="metalCatwalkRailing2BentTrap" prob=".4"/></randomizer>
+
+<randomizer name="metalStairsBoardRailingTrapRandomHelper">
+	<block name="metalStairsBoardRailing" prob=".6"/>
+	<block name="metalStairsBoardRailingTrap" prob=".4"/></randomizer>
+
+<randomizer name="cntCasketModernRandomHelper">
+	<block name="cntCasketModernOpenTan"/>
+	<block name="cntCasketModernOpenBrown"/>
+	<block name="cntCasketModernOpenGrey"/>
+	<block name="cntCasketModernOpenRed"/>
+	<block name="cntCasketModernOpenGreen"/>
+	<block name="cntCasketModernOpenBlue"/>
+	<block name="cntCasketModernOpenYellow"/>
+	<block name="cntCasketModernOpenAqua"/>
+	<block name="cntCasketModernOpenPurple"/>
+	<block name="cntCasketModernOpenWhite"/>
+	<block name="cntCasketModernClosedTan"/>
+	<block name="cntCasketModernClosedBrown"/>
+	<block name="cntCasketModernClosedGrey"/>
+	<block name="cntCasketModernClosedRed"/>
+	<block name="cntCasketModernClosedGreen"/>
+	<block name="cntCasketModernClosedBlue"/>
+	<block name="cntCasketModernClosedYellow"/>
+	<block name="cntCasketModernClosedAqua"/>
+	<block name="cntCasketModernClosedPurple"/>
+	<block name="cntCasketModernClosedWhite"/></randomizer>
+
+<randomizer name="cntCoffinWildWestRandomHelper">
+	<block name="cntCoffinWildWestOpen" prob=".45"/>
+	<block name="cntCoffinWildWestClosed" prob=".15"/>
+	<block name="cntCoffinWildWestCracked" prob=".15"/></randomizer>
+
+<randomizer name="cntLockersShortRandomLootHelper">
+	<block name="cntLockersShortSecure" prob=".1"/>
+	<block name="cntLockersShortClosed" prob=".2"/>
+	<block name="cntLockersShortOpen" prob=".7"/></randomizer>
+
+<randomizer name="cntLockersTallRandomLootHelper">
+	<block name="cntLockersTallSecure" prob=".1"/>
+	<block name="cntLockersTallClosed" prob=".2"/>
+	<block name="cntLockersTallOpen" prob=".7"/></randomizer>
+
+<randomizer name="cntLockersTallDoubleRandomLootHelper">
+	<block name="cntLockersTallDoubleSecure" prob=".1"/>
+	<block name="cntLockersTallDoubleClosed" prob=".2"/>
+	<block name="cntLockersTallDoubleOpen" prob=".7"/></randomizer>
+
+<randomizer name="cntLockersTallMixRandomLootHelper">
+	<block name="cntLockersTallMixSecure" prob=".1"/>
+	<block name="cntLockersTallMixClosed" prob=".2"/>
+	<block name="cntLockersTallMixOpen" prob=".7"/></randomizer>
+
+<randomizer name="cntLockersTallMixLinkRandomLootHelper">
+	<block name="cntLockersTallMixLinkSecure" prob=".1"/>
+	<block name="cntLockersTallMixLinkClosed" prob=".2"/>
+	<block name="cntLockersTallMixLinkOpen" prob=".7"/></randomizer>
+
+<randomizer name="cntGasGrillRandomLootHelper">
+	<block name="cntGasGrillOpen" prob=".66"/>
+	<block name="cntGasGrillClosed" prob=".33"/></randomizer>
+
+<randomizer name="cntCharcoalGrillRandomLootHelper">
+	<block name="cntCharcoalGrillOpen" prob=".66"/>
+	<block name="cntCharcoalGrillClosed" prob=".33"/></randomizer>
+
+<randomizer name="cntNightstandRandomLootHelper">
+	<block name="cntNightstandOpen" prob=".66"/>
+	<block name="cntNightstandClosed" prob=".33"/></randomizer>
+
+<randomizer name="cntFileCabinetShortRandomLootHelper">
+	<block name="cntFileCabinetShortSecure" prob=".1"/>
+	<block name="cntFileCabinetShortClosed" prob=".2"/>
+	<block name="cntFileCabinetShortOpen" prob=".7"/></randomizer>
+
+<randomizer name="cntFileCabinetTallRandomLootHelper">
+	<block name="cntFileCabinetTallSecure" prob=".1"/>
+	<block name="cntFileCabinetTallClosed" prob=".2"/>
+	<block name="cntFileCabinetTallOpen" prob=".7"/></randomizer>
+
+<randomizer name="cntCoolerRandomLootHelper">
+	<block name="cntCoolerOpen" prob=".66"/>
+	<block name="cntCoolerClosed" prob=".33"/>
+	<block name="cntCoolerOpenRed" prob=".66"/>
+	<block name="cntCoolerClosedRed" prob=".33"/>
+	<block name="cntCoolerOpenGreen" prob=".66"/>
+	<block name="cntCoolerClosedGreen" prob=".33"/></randomizer>
+
+<randomizer name="cntVendingMachine2RandomLootHelper">
+	<block name="cntVendingMachine2"		prob=".25"/>
+	<block name="cntVendingMachine2Broken"	prob="1"/></randomizer>
+
+<randomizer name="cntPillCaseRandomLootHelper">
+	<block name="cntPillCaseEmpty" prob=".66"/>
+	<block name="cntPillCaseClosed" prob=".33"/></randomizer>
+
+<randomizer name="cntMedicineCabinetFaucetRandomLootHelper">
+	<block name="cntMedicineCabinetFaucetOpen" prob=".66"/>
+	<block name="cntMedicineCabinetFaucetClosed" prob=".33"/></randomizer>
+
+<randomizer name="cntMedicineCabinetClosedRandomLootHelper">
+	<block name="cntMedicineCabinetOpen" prob=".66"/>
+	<block name="cntMedicineCabinetClosed" prob=".33"/></randomizer>
+
+<randomizer name="wallMirrorRandomHelper">
+	<block name="wallMirror" prob=".5"/>
+	<block name="wallMirrorBroken" prob=".5"/></randomizer>
+
+<randomizer name="cntLuggageMediumRandomLootHelper">
+	<block name="cntLuggageMediumOpen" prob=".66"/>
+	<block name="cntLuggageMediumClosed" prob=".33"/></randomizer>
+
+<randomizer name="cntLuggageBigRandomLootHelper">
+	<block name="cntLuggageBigOpen" prob=".66"/>
+	<block name="cntLuggageBigClosed" prob=".33"/></randomizer>
+
+<randomizer name="cntLuggagePileARandomLootHelper">
+	<block name="cntLuggagePileAOpen" prob=".66"/>
+	<block name="cntLuggagePileAClosed" prob=".33"/></randomizer>
+
+<randomizer name="cntLuggagePileBRandomLootHelper">
+	<block name="cntLuggagePileBOpen" prob=".66"/>
+	<block name="cntLuggagePileBClosed" prob=".33"/></randomizer>
+
+<randomizer name="cntDomedTrashCanRandomLootHelper">
+	<block name="cntDomedTrashCanEmpty" prob=".66"/>
+	<block name="cntDomedTrashCanFull" prob=".33"/></randomizer>
+
+<randomizer name="cntDomedTrashCanCornerRandomLootHelper">
+	<block name="cntDomedTrashCanCornerEmpty" prob=".66"/>
+	<block name="cntDomedTrashCanCornerFull" prob=".33"/></randomizer>
+
+<randomizer name="cntBruteStyleTrashCanRandomLootHelper">
+	<block name="cntBruteStyleTrashCanEmpty" prob=".66"/>
+	<block name="cntBruteStyleTrashCanFull" prob=".33"/></randomizer>
+
+<randomizer name="cntTiltTruckRandomLootHelper">
+	<block name="cntTiltTruckEmpty" prob=".66"/>
+	<block name="cntTiltTruckFull" prob=".33"/></randomizer>
+
+<randomizer name="cntUtilityCartRandomLootHelper">
+	<block name="cntUtilityCartEmpty" prob=".66"/>
+	<block name="cntUtilityCartFull" prob=".33"/></randomizer>
+
+<randomizer name="cntWasherRandomLootHelper">
+	<block name="cntWasherOpen" prob=".66"/>
+	<block name="cntWasherClosed" prob=".33"/></randomizer>
+
+<randomizer name="cntDryerRandomLootHelper">
+	<block name="cntDryerOpen" prob=".66"/>
+	<block name="cntDryerClosed" prob=".33"/></randomizer>
+
+<randomizer name="cntWasherIndustrialRandomLootHelper">
+	<block name="cntWasherIndustrialOpen" prob=".66"/>
+	<block name="cntWasherIndustrialClosed" prob=".33"/></randomizer>
+
+<randomizer name="cntToolBoxRandomLootHelper">
+	<block name="cntToolBoxSecure" prob=".1"/>
+	<block name="cntToolBoxClosed" prob=".2"/>
+	<block name="cntToolBoxOpen" prob=".7"/></randomizer>
+
+<randomizer name="cntToolBoxOffsetRandomLootHelper">
+	<block name="cntToolBoxOffsetSecure" prob=".1"/>
+	<block name="cntToolBoxOffsetClosed" prob=".2"/>
+	<block name="cntToolBoxOffsetOpen" prob=".7"/></randomizer>
+
+<randomizer name="cntRollingToolBoxRandomLootHelper">
+	<block name="cntRollingToolBoxSecure" prob=".1"/>
+	<block name="cntRollingToolBoxClosed" prob=".2"/>
+	<block name="cntRollingToolBoxOpen" prob=".7"/></randomizer>
+
+<randomizer name="cntModularClosetRandomLootHelper">
+	<block name="cntModularClosetOpen" prob=".66"/>
+	<block name="cntModularClosetClosed" prob=".33"/></randomizer>
+
+<randomizer name="bunkBedRandomHelper">
+	<block name="bunkBedMade"/>
+	<block name="bunkBedMessy"/>
+	<block name="bunkBedMattress"/>
+	<block name="bunkBedFrame"/></randomizer>
+
+<randomizer name="cntClothesRackRoundRandomLootHelper">
+	<block name="cntClothesRackRoundEmpty" prob=".66"/>
+	<block name="cntClothesRackRoundPants" prob=".18"/>
+	<block name="cntClothesRackRoundShirts" prob=".18"/></randomizer>
+
+<randomizer name="cntClothesRackRectangleRandomLootHelper">
+	<block name="cntClothesRackRectangleEmpty" prob=".66"/>
+	<block name="cntClothesRackRectanglePants" prob=".18"/>
+	<block name="cntClothesRackRectangleShirts" prob=".18"/></randomizer>
+
+<randomizer name="cntClothesShelfHalfRandomLootHelper">
+	<block name="cntClothesShelfHalfEmpty" prob=".66"/>
+	<block name="cntClothesShelfHalfJeans01" prob=".7"/>
+	<block name="cntClothesShelfHalfJeans02" prob=".7"/>
+	<block name="cntClothesShelfHalfShirts01" prob=".7"/>
+	<block name="cntClothesShelfHalfShirts02" prob=".7"/>
+	<block name="cntClothesShelfHalfSweaters01" prob=".7"/></randomizer>
+
+<randomizer name="cntClothesShelfStackRandomLootHelper">
+	<block name="cntClothesShelfStackEmpty" prob=".66"/>
+	<block name="cntClothesShelfStackJeans01" prob=".9"/>
+	<block name="cntClothesShelfStackJeans02" prob=".9"/>
+	<block name="cntClothesShelfStackShirts01" prob=".9"/>
+	<block name="cntClothesShelfStackShirts02" prob=".9"/></randomizer>
+
+<randomizer name="cntClothesRackWallRandomLootHelper">
+	<block name="cntClothesRackWallFlat" prob=".33"/>
+	<block name="cntClothesRackWallEmptyHanger" prob=".33"/>
+	<block name="cntClothesRackWallPants" prob=".9"/>
+	<block name="cntClothesRackWallLongSleeve" prob=".9"/>
+	<block name="cntClothesRackWallSweater" prob=".9"/>
+	<block name="cntClothesRackWallTShirts" prob=".9"/></randomizer>
+
+<randomizer name="cntStoreShelfSingleBottomFoodRandomLootHelper">
+	<block name="cntStoreShelfSingleBottomEmpty" prob=".66"/>
+	<block name="cntStoreShelfSingleBottomFood01" prob=".18"/>
+	<block name="cntStoreShelfSingleBottomFood02" prob=".18"/></randomizer>
+
+<randomizer name="cntStoreShelfSingleTopFoodRandomLootHelper">
+	<block name="cntStoreShelfSingleTopEmpty" prob=".66"/>
+	<block name="cntStoreShelfSingleTopFood01" prob=".33"/></randomizer>
+
+<randomizer name="cntStoreShelfDoubleBottomFoodRandomLootHelper">
+	<block name="cntStoreShelfDoubleBottomEmpty" prob=".66"/>
+	<block name="cntStoreShelfDoubleBottomFood01" prob=".18"/>
+	<block name="cntStoreShelfDoubleBottomFood02" prob=".18"/></randomizer>
+
+<randomizer name="cntStoreShelfDoubleTopFoodRandomLootHelper">
+	<block name="cntStoreShelfDoubleTopEmpty" prob=".66"/>
+	<block name="cntStoreShelfDoubleTopFood01" prob=".35"/></randomizer>
+
+<randomizer name="cntStoreShelfSingleBottomHardwareRandomLootHelper">
+	<block name="cntStoreShelfSingleBottomEmpty" prob=".66"/>
+	<block name="cntStoreShelfSingleBottomHardware01" prob=".18"/>
+	<block name="cntStoreShelfSingleBottomHardware02" prob=".18"/></randomizer>
+
+<randomizer name="cntStoreShelfSingleTopHardwareRandomLootHelper">
+	<block name="cntStoreShelfSingleTopEmpty" prob=".66"/>
+	<block name="cntStoreShelfSingleTopHardware01" prob=".18"/>
+	<block name="cntStoreShelfSingleTopHardware02" prob=".18"/></randomizer>
+
+<randomizer name="cntStoreShelfDoubleBottomHardwareRandomLootHelper">
+	<block name="cntStoreShelfDoubleBottomEmpty" prob=".66"/>
+	<block name="cntStoreShelfDoubleBottomHardware01" prob=".12"/>
+	<block name="cntStoreShelfDoubleBottomHardware02" prob=".12"/>
+	<block name="cntStoreShelfDoubleBottomHardware03Rags" prob=".12"/></randomizer>
+
+<randomizer name="cntStoreShelfDoubleTopHardwareRandomLootHelper">
+	<block name="cntStoreShelfDoubleTopEmpty" prob=".66"/>
+	<block name="cntStoreShelfDoubleTopHardware01" prob=".18"/>
+	<block name="cntStoreShelfDoubleTopHardware02Rags" prob=".18"/></randomizer>
+
+<randomizer name="cntStoreShelfSingleBottomPharmaRandomLootHelper">
+	<block name="cntStoreShelfSingleBottomPharmaEmpty" prob=".66"/>
+	<block name="cntStoreShelfSingleBottomPharmaGoods01" prob=".18"/>
+	<block name="cntStoreShelfSingleBottomPharmaGoods02" prob=".18"/></randomizer>
+
+<randomizer name="cntStoreShelfDoubleBottomPharmaRandomLootHelper">
+	<block name="cntStoreShelfDoubleBottomPharmaEmpty" prob=".66"/>
+	<block name="cntStoreShelfDoubleBottomPharmaGoods01" prob=".18"/>
+	<block name="cntStoreShelfDoubleBottomPharmaGoods02" prob=".18"/></randomizer>
+
+<randomizer name="cntStoreProduceBasketCornerRandomLootHelper">
+	<block name="cntStoreProduceBasketCornerEmpty1" prob=".66"/>
+	<block name="cntStoreProduceBasketCornerEmpty2" prob=".4"/></randomizer>
+
+<randomizer name="cntStoreProduceBasketRandomLootHelper">
+	<block name="cntStoreProduceBasketEmpty1" prob=".33"/>
+	<block name="cntStoreProduceBasketEmpty2" prob=".044"/>
+	<block name="cntStoreProduceBasketApples1" prob=".044"/>
+	<block name="cntStoreProduceBasketApples2" prob=".044"/>
+	<block name="cntStoreProduceBasketGourds1" prob=".044"/>
+	<block name="cntStoreProduceBasketGourds2" prob=".044"/>
+	<block name="cntStoreProduceBasketlettuce1" prob=".044"/>
+	<block name="cntStoreProduceBasketlettuce2" prob=".044"/>
+	<block name="cntStoreProduceBasketMelons1" prob=".044"/>
+	<block name="cntStoreProduceBasketMelons2" prob=".044"/></randomizer>
+
+<randomizer name="cntDisplayCaseAmmoLeftRandomLootHelper">
+	<block name="cntDisplayCaseAmmoLeftBroken" prob=".35"/>
+	<block name="cntDisplayCaseEmptyLeft" prob=".5"/>
+	<block name="cntDisplayCaseEmptyLeftBroken" prob=".3"/></randomizer>
+
+<randomizer name="cntDisplayCaseAmmoMiddleRandomLootHelper">
+	<block name="cntDisplayCaseAmmoMiddleBroken01" prob=".17"/>
+	<block name="cntDisplayCaseAmmoMiddleBroken02" prob=".17"/>
+	<block name="cntDisplayCaseEmptyMiddle" prob=".5"/>
+	<block name="cntDisplayCaseEmptyMiddleBroken" prob=".3"/></randomizer>
+
+<randomizer name="cntDisplayCaseAmmoRightRandomLootHelper">
+	<block name="cntDisplayCaseAmmoRightBroken" prob=".35"/>
+	<block name="cntDisplayCaseEmptyRight" prob=".5"/>
+	<block name="cntDisplayCaseEmptyRightBroken" prob=".3"/></randomizer>
+
+<randomizer name="cntShoesPileRandomLootHelper">
+	<block name="cntShoesPileSandals"/>
+	<block name="cntShoesPileWomensHeels"/>
+	<block name="cntShoesPileSneakers"/>
+	<block name="cntShoesPileLeatherBoots"/>
+	<block name="cntShoesPileBusinessShoes"/>
+	<block name="cntShoesPileCommercial01"/>
+	<block name="cntShoesPileCommercial02"/></randomizer>
+
+<randomizer name="cntStoreShelfDoubleBottomShoesRandomLootHelper">
+	<block name="cntStoreShelfDoubleBottomShoesEmpty" prob=".66"/>
+	<block name="cntStoreShelfDoubleBottomShoesFull" prob=".35"/></randomizer>
+
+<randomizer name="cntStoreShelfDoubleTopShoesRandomLootHelper">
+	<block name="cntStoreShelfDoubleTopShoesEmpty" prob=".66"/>
+	<block name="cntStoreShelfDoubleTopShoesFull" prob=".35"/></randomizer>
+
+<randomizer name="cntStoreShelfSingleBottomShoesRandomLootHelper">
+	<block name="cntStoreShelfSingleBottomShoesEmpty" prob=".66"/>
+	<block name="cntStoreShelfSingleBottomShoesFull" prob=".35"/></randomizer>
+
+<randomizer name="cntStoreShelfSingleTopShoesRandomLootHelper">
+	<block name="cntStoreShelfSingleTopShoesEmpty" prob=".66"/>
+	<block name="cntStoreShelfSingleTopShoesFull" prob=".35"/></randomizer>
+
+<randomizer name="cntBookShelfSingleBottomRandomLootHelper">
+	<block name="cntBookShelfSingleBottomEmpty" prob=".72"/>
+	<block name="cntBookShelfSingleBottomFull01" prob=".14"/>
+	<block name="cntBookShelfSingleBottomFull02" prob=".14"/></randomizer>
+
+<randomizer name="cntBookShelfSingleTopRandomLootHelper">
+	<block name="cntBookShelfSingleTopEmpty" prob=".72"/>
+	<block name="cntBookShelfSingleTopFull01" prob=".14"/>
+	<block name="cntBookShelfSingleTopFull02" prob=".14"/></randomizer>
+
+<randomizer name="cntBookShelfDoubleBottomRandomLootHelper">
+	<block name="cntBookShelfDoubleBottomEmpty" prob=".72"/>
+	<block name="cntBookShelfDoubleBottomFull01" prob=".14"/>
+	<block name="cntBookShelfDoubleBottomFull02" prob=".14"/></randomizer>
+
+<randomizer name="cntBookShelfDoubleTopRandomLootHelper">
+	<block name="cntBookShelfDoubleTopEmpty" prob=".72"/>
+	<block name="cntBookShelfDoubleTopFull01" prob=".14"/>
+	<block name="cntBookShelfDoubleTopFull02" prob=".14"/></randomizer>
+
+<randomizer name="cntBookShelfSingleCapBottomRandomLootHelper">
+	<block name="cntBookShelfSingleCapBottomEmpty" prob=".72"/>
+	<block name="cntBookShelfSingleCapBottomFull01" prob=".14"/>
+	<block name="cntBookShelfSingleCapBottomFull02" prob=".14"/></randomizer>
+
+<randomizer name="cntBookShelfSingleCapTopRandomLootHelper">
+	<block name="cntBookShelfSingleCapTopEmpty" prob=".72"/>
+	<block name="cntBookShelfSingleCapTopFull01" prob=".14"/>
+	<block name="cntBookShelfSingleCapTopFull02" prob=".14"/></randomizer>
+
+<randomizer name="cntBookPileRandomLootHelper">
+	<block name="cntBookPile01" prob=".25"/>
+	<block name="cntBookPile02" prob=".25"/>
+	<block name="cntBookPile03" prob=".25"/>
+	<block name="cntBookPile04" prob=".25"/></randomizer>
+
+<randomizer name="cntBookPileRandomLootHelper2">
+	<block name="air" prob=".4"/>
+	<block name="cntBookPile01" prob=".15"/>
+	<block name="cntBookPile02" prob=".15"/>
+	<block name="cntBookPile03" prob=".15"/>
+	<block name="cntBookPile04" prob=".15"/></randomizer>
+
+<randomizer name="cntGunRackSmallRandomLootHelper">
+	<block name="cntGunRackSmallEmpty01" prob=".22"/>
+	<block name="cntGunRackSmallEmpty01" prob=".22"/>
+	<block name="cntGunRackSmallEmpty01" prob=".22"/>
+	<block name="cntGunRackSmallMagazines" prob=".18"/>
+	<block name="cntGunRackSmallArmor" prob=".18"/></randomizer>
+
+<randomizer name="cntGunRackLargeRandomLootHelper">
+	<block name="cntGunRackLargeGuns01" prob="1"/>
+	<block name="cntGunRackLargeGuns02" prob="1"/></randomizer>
+
+<randomizer name="cntStoreShelfElectronicsSingleTallRandomLootHelper">
+	<block name="cntStoreShelfElectronicsSingleBottomEmpty" prob=".66"/>
+	<block name="cntStoreShelfElectronicsSingleBottomPC" prob=".0425"/>
+	<block name="cntStoreShelfElectronicsSingleBottomElectronicsMonitor" prob=".0425"/>
+	<block name="cntStoreShelfElectronicsSingleBottomGoodsMisc" prob=".0425"/>
+	<block name="cntStoreShelfElectronicsSingleBottomHeadphones" prob=".0425"/>
+	<block name="cntStoreShelfElectronicsSingleBottomKeyboard" prob=".0425"/>
+	<block name="cntStoreShelfElectronicsSingleBottomLaptopClosed" prob=".0425"/>
+	<block name="cntStoreShelfElectronicsSingleBottomLaptopOpen" prob=".0425"/>
+	<block name="cntStoreShelfElectronicsSingleBottomSpeaker" prob=".0425"/></randomizer>
+
+<randomizer name="cntStoreShelfElectronicsDoubleTallRandomLootHelper">
+	<block name="cntStoreShelfElectronicsDoubleBottomEmpty" prob=".66"/>
+	<block name="cntStoreShelfElectronicsDoubleBottomGoods01" prob=".085"/>
+	<block name="cntStoreShelfElectronicsDoubleBottomGoods02" prob=".085"/>
+	<block name="cntStoreShelfElectronicsDoubleBottomGoods03" prob=".085"/>
+	<block name="cntStoreShelfElectronicsDoubleBottomGoods04" prob=".085"/></randomizer>
+
+<randomizer name="cntGasPumpRandomLootHelper">
+	<block name="cntGasPumpFull"/></randomizer>
+
+<randomizer name="wallClockRandomLootHelper">
+	<block name="wallClock" prob=".5"/>
+	<block name="wallClockBroken" prob=".5"/></randomizer>
+
+<randomizer name="treeSmallRandomHelper">
+	<block name="treeWinterEverGreen" prob="1.0" biome="snow" randomrotation="true"/>
+	<block name="treeWinterPine13m" prob="1.0" biome="snow" randomrotation="true"/>
+	<block name="treeMountainPine19m" prob="1.0" biome="pine_forest" randomrotation="true"/>
+	<block name="treeOakSml01" prob="1.0" biome="pine_forest" randomrotation="true"/>
+	<block name="treeCactus03" prob="1.0" biome="desert" randomrotation="true"/>
+	<block name="treeCactus02" prob="1.0" biome="desert" randomrotation="true"/>
+	<block name="treeCactus01" prob="1.0" biome="desert" randomrotation="true"/>
+	<block name="treeOakSml01" prob="1.0" biome="desert" randomrotation="true"/>
+	<block name="treeBurntMaple01" prob="1.0" biome="wasteland" randomrotation="true"/>
+	<block name="treeDeadTree01" prob="1.0" biome="burnt_forest" randomrotation="true"/>
+	<block name="treeBurntMaple01" prob="1.0" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="treeSmallThinRandomHelper">
+	<block name="treeJuniper4m" prob="1.0" biome="snow" randomrotation="true"/>
+	<block name="treeJuniper4m" prob="1.0" biome="pine_forest" randomrotation="false"/>
+	<block name="treeCactus03" prob=".5" biome="desert" randomrotation="true"/>
+	<block name="treeCactus02" prob=".5" biome="desert" randomrotation="true"/>
+	<block name="treeCactus01" prob=".5" biome="desert" randomrotation="true"/>
+	<block name="treeDeadTree01" prob="1.0" biome="desert" randomrotation="false"/>
+	<block name="treeDeadTree01" prob="1.0" biome="wasteland" randomrotation="true"/>
+	<block name="treeDeadTree01" prob="1.0" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="treeMediumRandomHelper">
+	<block name="treeWinterPine19m" prob="1.0" biome="snow" randomrotation="true"/>
+<!--<block name="treeMountainPine27m" prob="1.0" biome="pine_forest" randomrotation="true"/>-->
+<!--<block name="treeMountainPineDry21m" prob="1.0" biome="pine_forest" randomrotation="true"/>-->
+	<block name="treeOakMed01" prob="1.0" biome="pine_forest" randomrotation="false"/>
+	<block name="treeCactus03" prob=".5" biome="desert" randomrotation="true"/>
+	<block name="treeCactus02" prob=".5" biome="desert" randomrotation="true"/>
+	<block name="treeCactus01" prob=".5" biome="desert" randomrotation="true"/>
+	<block name="treeOakSml01" prob="1.0" biome="desert" randomrotation="true"/>
+	<block name="treeOakMed01" prob="1.0" biome="desert" randomrotation="false"/>
+	<block name="treeBurntMaple02" prob="1.0" biome="wasteland" randomrotation="true"/>
+	<block name="treeBurntMaple02" prob="1.0" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="treeLargeRandomHelper">
+	<block name="treeWinterPine28m" prob="1.0" biome="snow" randomrotation="false"/>
+	<block name="treeMountainPine31m" prob="1.0" biome="pine_forest" randomrotation="true"/>
+	<block name="treeOakMed01" prob="1.0" biome="pine_forest" randomrotation="false"/>
+	<block name="treeFirLrg01" prob="1.0" biome="pine_forest" randomrotation="true"/>
+	<block name="treeCactus03" prob=".15" biome="desert" randomrotation="true"/>
+	<block name="treeCactus02" prob=".15" biome="desert" randomrotation="true"/>
+	<block name="treeCactus01" prob=".15" biome="desert" randomrotation="true"/>
+	<block name="treeOakMed01" prob="1.0" biome="desert" randomrotation="false"/>
+	<block name="treeBurntMaple03" prob="1.0" biome="wasteland" randomrotation="true"/>
+	<block name="treeMountainPineDry21m" prob="1.0" biome="wasteland" randomrotation="true"/>
+	<block name="treeBurntMaple03" prob="1.0" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="plantedtreeGrassSeedRandomHelper">
+	<block name="treeSnowyGrassDiagonal" biome="snow" randomrotation="true"/>
+	<block name="treeTallGrassDiagonal" biome="pine_forest" randomrotation="true"/>
+	<block name="treeDesertShrub" biome="desert" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" biome="water" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" biome="underwater" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" biome="wasteland" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="plantedtreeGrassAirRandomHelper">
+	<block name="air" prob=".87"/>
+	<block name="treeSnowyGrassDiagonal" biome="snow" randomrotation="true"/>
+	<block name="treeTallGrassDiagonal" biome="pine_forest" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" biome="desert" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" biome="water" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" biome="underwater" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" biome="wasteland" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="plantedCornHarvestRandomHelper">
+	<block name="plantedCorn3Harvest" prob=".02" randomrotation="true"/>
+	<block name="plantedCorn2Deco" prob=".01" randomrotation="true"/>
+	<block name="air" prob=".87"/>
+	<block name="plantedCornDead" prob=".11" randomrotation="true"/>
+	<block name="treeSnowyGrassDiagonal" prob=".321" biome="snow" randomrotation="true"/>
+	<block name="treeTallGrassDiagonal" prob=".321" biome="pine_forest" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".321" biome="desert" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".321" biome="water" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".321" biome="wasteland" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".321" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="plantedYucca3HarvestRandomHelper">
+	<block name="plantedYucca3Harvest" prob=".03" randomrotation="true"/>
+	<block name="air" prob=".87"/>
+	<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
+	<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="plantedCottonHarvestRandomHelper">
+	<block name="plantedCotton3Harvest" prob=".03" randomrotation="true"/>
+	<block name="air" prob=".87"/>
+	<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
+	<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="plantedCoffeeHarvestRandomHelper">
+	<block name="plantedCoffee3Harvest" prob=".03" randomrotation="true"/>
+	<block name="air" prob=".87"/>
+	<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
+	<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="plantedGoldenrodHarvestRandomHelper">
+	<block name="plantedGoldenrod3Harvest" prob=".03" randomrotation="true"/>
+	<block name="air" prob=".87"/>
+	<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
+	<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="plantedAloeHarvestRandomHelper">
+	<block name="plantedAloe3Harvest" prob=".03" randomrotation="true"/>
+	<block name="air" prob=".87"/>
+	<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
+	<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="plantedBlueberryHarvestRandomHelper">
+	<block name="plantedBlueberry3Harvest" prob=".03" randomrotation="true"/>
+	<block name="air" prob=".87"/>
+	<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
+	<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="plantedPotatoHarvestRandomHelper">
+	<block name="plantedPotato3Harvest" prob=".03" randomrotation="true"/>
+	<block name="air" prob=".87"/>
+	<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
+	<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="plantedChrysanthemumHarvestRandomHelper">
+	<block name="plantedChrysanthemum3Harvest" prob=".03" randomrotation="true"/>
+	<block name="air" prob=".87"/>
+	<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
+	<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="plantedGraceCornHarvestRandomHelper">
+	<block name="plantedGraceCorn3Harvest" prob=".03" randomrotation="true"/>
+	<block name="air" prob=".87"/>
+	<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
+	<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="plantedHopHarvestRandomHelper">
+	<block name="plantedHop3Harvest" prob=".03" randomrotation="true"/>
+	<block name="air" prob=".1"/>
+	<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
+	<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="plantedPumpkin3HarvestRandomHelper">
+	<block name="plantedPumpkin3Harvest" prob=".03" randomrotation="true"/>
+	<block name="air" prob=".1"/>
+	<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
+	<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
+	<block name="treeBrownGrassDiagonal" prob=".431" biome="burnt_forest" randomrotation="true"/></randomizer>
+
+<randomizer name="metalSignNumbersOnlyNoZeroRandomHelper">
+	<block name="metalSignLetter_1" prob=".1"/>
+	<block name="metalSignLetter_2" prob=".1"/>
+	<block name="metalSignLetter_3" prob=".1"/>
+	<block name="metalSignLetter_4" prob=".1"/>
+	<block name="metalSignLetter_5" prob=".1"/>
+	<block name="metalSignLetter_6" prob=".1"/>
+	<block name="metalSignLetter_7" prob=".1"/>
+	<block name="metalSignLetter_8" prob=".1"/>
+	<block name="metalSignLetter_9" prob=".1"/></randomizer>
+
+<randomizer name="metalSignNumbersOnlyRandomHelper">
+	<block name="metalSignLetter_0" prob=".1"/>
+	<block name="metalSignLetter_1" prob=".1"/>
+	<block name="metalSignLetter_2" prob=".1"/>
+	<block name="metalSignLetter_3" prob=".1"/>
+	<block name="metalSignLetter_4" prob=".1"/>
+	<block name="metalSignLetter_5" prob=".1"/>
+	<block name="metalSignLetter_6" prob=".1"/>
+	<block name="metalSignLetter_7" prob=".1"/>
+	<block name="metalSignLetter_8" prob=".1"/>
+	<block name="metalSignLetter_9" prob=".1"/></randomizer>
+
+<randomizer name="cntMailBox01RandomHelper">
+	<block name="cntMailBox01Brown"/>
+	<block name="cntMailBox01Red"/>
+	<block name="cntMailBox01Orange"/>
+	<block name="cntMailBox01Yellow"/>
+	<block name="cntMailBox01Green"/>
+	<block name="cntMailBox01Blue"/>
+	<block name="cntMailBox01Purple"/>
+	<block name="cntMailBox01Grey"/>
+	<block name="cntMailBox01White"/>
+	<block name="cntMailBox01Black"/>
+	<block name="cntMailBox01Pink"/></randomizer>
+
+<randomizer name="cntMailBox02RandomHelper">
+	<block name="cntMailBox02Brown"/>
+	<block name="cntMailBox02Red"/>
+	<block name="cntMailBox02Orange"/>
+	<block name="cntMailBox02Yellow"/>
+	<block name="cntMailBox02Green"/>
+	<block name="cntMailBox02Blue"/>
+	<block name="cntMailBox02Purple"/>
+	<block name="cntMailBox02Grey"/>
+	<block name="cntMailBox02White"/>
+	<block name="cntMailBox02Black"/>
+	<block name="cntMailBox02Pink"/></randomizer>
+
+<randomizer name="cntMailBox03RandomHelper">
+	<block name="cntMailBox03Brown"/>
+	<block name="cntMailBox03Red"/>
+	<block name="cntMailBox03Orange"/>
+	<block name="cntMailBox03Yellow"/>
+	<block name="cntMailBox03Green"/>
+	<block name="cntMailBox03Blue"/>
+	<block name="cntMailBox03Purple"/>
+	<block name="cntMailBox03Grey"/>
+	<block name="cntMailBox03White"/>
+	<block name="cntMailBox03Black"/>
+	<block name="cntMailBox03Pink"/></randomizer>
+
+<randomizer name="cntFoodPileSmallRandomHelper">
+	<block name="cntFoodPileSmall" prob="0.5"/>
+	<block name="air" prob="0.5"/></randomizer>
+
+<randomizer name="cntToolsAndForgeRandomLootHelper">
+	<block name="ulmStationFurnace_1"			prob=".02"/>
+	<block name="cntCollapsedForge"				prob=".1"/>
+	<block name="cntCollapsedGeneratorbank"		prob=".1"/>
+	<block name="cntShippingCrateWorkingStiffs" prob=".5"/>
+	<block name="cntGarageStorage"				prob="1"/></randomizer>
+
+<randomizer name="cntStoreCratesRandomLootHelper">
+	<block name="cntShippingCrateShamway" prob="1"/>
+	<block name="cntShippingCrateShotgunMessiah" prob="1"/>
+	<block name="cntShippingCrateWorkingStiffs" prob="1"/>
+	<block name="cntShippingCrateSavageCountry" prob="1"/>
+	<block name="cntShippingCrateMoPowerElectronics" prob="1"/>
+	<block name="cntShippingCrateBookstore" prob="1"/>
+	<block name="cntShippingCrateCarParts" prob="1"/>
+	<block name="cntShippingCrateLabEquipment" prob="1"/></randomizer>
+
+<randomizer name="cntWorkstationsBustedRandomLootHelper">
+	<block name="ulmStationFurnace_1"			prob="0.02"/>
+	<block name="ulmStationWorkbench_1"			prob="0.02"/>
+	<block name="cementMixer"					prob="0.02"/>
+	<block name="chemistryStation"				prob="0.02"/>
+	<block name="cntCollapsedForge"				prob="1"/>
+	<block name="cntCollapsedWorkbench"			prob="1"/>
+	<block name="cntCollapsedCementMixer"		prob="1"/>
+	<block name="cntCollapsedChemistryStation"	prob="1"/></randomizer>
+
+<randomizer name="cntWorkbenchBustedRandomLootHelper">
+	<block name="ulmStationWorkbench_1"		prob="0.02"/>
+	<block name="ulmStationTailor_1"		prob="0.02"/>
+	<block name="ulmStationMechanic_1"		prob="0.02"/>
+	<block name="ulmStationBallistics_1"	prob="0.02"/>
+	<block name="ulmStationChemistry_1"		prob="0.02"/>
+	<block name="ulmStationWorkbench_1"		prob="0.02"/>
+	<block name="ulmStationArtisan_1"		prob="0.02"/>
+	<block name="cntCollapsedWorkbench"		prob="1.00"/></randomizer>
+
+<randomizer name="cntForgeBustedRandomLootHelper">
+	<block name="ulmStationFurnace_1" prob=".04"/>
+	<block name="cntCollapsedForge" prob="1"/></randomizer>
+
+<!-- ULM Additions -->
+
+<randomizer name="ulmVehicle3x3x7RandomHelper">
+	<block name="cntArmyTruckClosed"/>
+	<block name="cntAmbulanceTruck01"/>
+	<block name="cntServiceTruckMoPower"/>
+	<block name="cntServiceTruckWorkingStiffTools"/></randomizer>
+
+<randomizer name="ulmVehicle3x3x9RandomHelper">
+	<block name="cntBusCity"/></randomizer>
+
+<randomizer name="ulmVehicle3x4x7RandomHelper">
+	<block name="cntBusSchoolShort"/>
+	<block name="cntBusShuttle"/>
+	<block name="ulmVehicleAmbulance02Lootable"/></randomizer>
+
+<randomizer name="ulmVehicle3x4x12RandomHelper">
+	<block name="cntBusSchool"/>
+	<block name="ulmVehicleAmbulance02Lootable"/></randomizer>
+
+<randomizer name="terrOreStoneTitaniumRandom">
+	<block name="terrOreTitanium" prob=".4"/>
+	<block name="terrStone" prob="1"/></randomizer>
+
+<randomizer name="ulmVehiclesGenericRandomHelper">
+	<block name="ulmVehicleMinivan02Secure"						prob=".05"/>
+	<block name="ulmVehicleMuscleCar01Secure"					prob=".05"/>
+	<block name="ulmVehicleSedan03Secure"						prob=".05"/>
+	<block name="ulmVehicleSedan04Secure"						prob=".05"/>
+	<block name="ulmVehicleSedan05Secure"						prob=".05"/>
+	<block name="ulmVehicleSUV02Secure"							prob=".05"/>
+	<block name="ulmVehicleCoupe01Secure"						prob=".05"/>
+	<block name="ulmVehicle4x4TruckSecure"						prob=".05"/>
+	<block name="ulmVehicleMinivan02Lootable"					prob="1"/>
+	<block name="ulmVehicle4x4TruckLootable"					prob="1"/>
+	<block name="ulmVehicleMuscleCar01Lootable"					prob="1"/>
+	<block name="ulmVehicleSUV02Lootable"						prob="1"/>
+	<block name="ulmVehicleCoupe01Lootable"						prob="1"/>
+	<block name="ulmVehicleSedan05Lootable"						prob="1"/>
+	<block name="ulmVehicleSedan04Lootable"						prob="1"/>
+	<block name="ulmVehicleSedan03Lootable"						prob="1"/></randomizer>
+
+<randomizer name="ulmVehiclesEmergencyRandomHelper">
+	<block name="ulmVehiclePoliceCruiserSecure"					prob="0.10"/>
+	<block name="ulmVehicleSUV02PoliceSecure"					prob="0.10"/>
+	<block name="ulmVehicleSUV02SecuritySecure"					prob="0.10"/>
+	<block name="ulmVehicleSUV02SecurityLootable"				prob="0.25"/>
+	<block name="ulmVehiclePoliceCruiserLootable"				prob="0.35"/>
+	<block name="ulmVehicleSUV02PoliceLootable"					prob="0.35"/>
+	<block name="ulmVehicleAmbulance02Lootable"					prob="0.35"/></randomizer>
+
+<randomizer name="ulmVehicleBikesFallenRandomHelper">
+	<block name="ulmVehicleMotorcycle01Fallen"					prob="0.2"/>
+	<block name="ulmVehicleMotorcycle03Fallen"					prob="0.2"/>
+	<block name="ulmVehicleDirtBike01Fallen"					prob="0.2"/>
+	<block name="ulmVehicleMinibike01Fallen"					prob="0.45"/>
+	<block name="ulmVehicleBicycle01Fallen"						prob="1.00"/></randomizer>
+
+<randomizer name="ulmVehicleBikesLeanLeftRandomHelper">
+	<block name="ulmVehicleMotorcycle01LeanLeft"				prob="0.2"/>
+	<block name="ulmVehicleMotorcycle03LeanLeft"				prob="0.2"/>
+	<block name="ulmVehicleDirtBike01LeanLeft"					prob="0.2"/>
+	<block name="ulmVehicleMinibike01LeanLeft"					prob="0.45"/>
+	<block name="ulmVehicleBicycle01LeanLeft"					prob="1.00"/></randomizer>
+
+<randomizer name="ulmVehicleBikesLeanRightRandomHelper">
+	<block name="ulmVehicleMotorcycle01LeanRight"				prob="0.2"/>
+	<block name="ulmVehicleMotorcycle03LeanRight"				prob="0.2"/>
+	<block name="ulmVehicleDirtBike01LeanRight"					prob="0.2"/>
+	<block name="ulmVehicleMinibike01LeanRight"					prob="0.45"/>
+	<block name="ulmVehicleBicycle01LeanRight"					prob="1.00"/></randomizer>
+
+<randomizer name="ulmStationChemistryRandomHelper">
+	<block name="ulmStationTailor_1"							prob="0.1"/>
+	<block name="ulmStationMechanic_1"							prob="0.1"/>
+	<block name="ulmStationBallistics_1"						prob="0.1"/>
+	<block name="ulmStationWorkbench_1"							prob="0.1"/>
+	<block name="ulmStationChemistry_1"							prob="0.2"/>
+	<block name="ulmStationArtisan_1"							prob="1.0"/></randomizer>
+
+<randomizer name="ulmStationWorkbenchRandomHelper">
+	<block name="ulmStationTailor_1"							prob="0.1"/>
+	<block name="ulmStationMechanic_1"							prob="0.1"/>
+	<block name="ulmStationBallistics_1"						prob="0.1"/>
+	<block name="ulmStationChemistry_1"							prob="0.1"/>
+	<block name="ulmStationWorkbench_1"							prob="0.2"/>
+	<block name="ulmStationArtisan_1"							prob="1.0"/></randomizer>
+
+<randomizer name="ulmVehicleAmbulance02RandomHelper">
+	<block name="ulmVehicleAmbulance02Lootable"/></randomizer>
+
+<randomizer name="ulmVehicleQuadBikeRandomHelper">
+	<block name="air"											prob="0.3"/>
+	<block name="ulmVehicleQuadBike01Spawner"					prob="1"/></randomizer>
+
+<randomizer name="ulmVehicleHumveeRandomHelper">
+	<block name="ulmVehicleHumveeSecure"						prob="0.15"/>
+	<block name="ulmVehicleHumveeLootable"						prob="1"/></randomizer>
+
+<randomizer name="ulmVehicleMilitaryTruckRandomHelper">
+	<block name="ulmVehicleMilitaryTruckSecure"					prob="0.15"/>
+	<block name="ulmVehicleMilitaryTruckLootable"				prob="1"/></randomizer>
+
+<randomizer name="ulmVehicleGokart01RandomHelper">
+	<block name="air"											prob="0.25"/>
+	<block name="ulmVehicleGokart01Spawner"						prob="1"/></randomizer>
+
+<randomizer name="ulmVehiclePoliceCruiserRandomHelper">
+	<block name="ulmVehiclePoliceCruiserSecure"/>
+	<block name="ulmVehiclePoliceCruiserLootable"/></randomizer>
+
+<randomizer name="ulmVehiclePoliceSUVRandomHelper">
+	<block name="ulmVehicleSUV02PoliceSecure"/>
+	<block name="ulmVehicleSUV02PoliceLootable"/></randomizer>
+
+<randomizer name="ulmVehiclePoliceRandomHelper">
+	<block name="ulmVehiclePoliceCruiserSecure"/>
+	<block name="ulmVehiclePoliceCruiserLootable"/>
+	<block name="ulmVehicleSUV02PoliceSecure"/>
+	<block name="ulmVehicleSUV02PoliceLootable"/></randomizer>
+
+<randomizer name="ulmContainerATMStandingRandomHelper">
+	<block name="ulmContainerATM1Secure"/>
+	<block name="ulmContainerATM2Secure"/></randomizer>
+
+<randomizer name="ulmContainerATMTerminalRandomHelper">
+	<block name="ulmContainerATM3Secure"/>
+	<block name="ulmContainerATM4Secure"/></randomizer>
+
+<randomizer name="ulmContainerATMOnWallRandomHelper">
+	<block name="ulmContainerATM5Secure"/>
+	<block name="ulmContainerATM6Secure"/></randomizer>
+
+<randomizer name="ulmContainerATMInWallRandomHelper">
+	<block name="ulmContainerATM7Secure"/>
+	<block name="ulmContainerATM8Secure"/>
+	<block name="ulmContainerATM9Secure"/></randomizer>
+
+<randomizer name="ulmDecoPortableToiletRandomHelper">
+	<block name="air"											prob=".2"/>
+	<block name="ulmDecoPortableToiletOpen"						prob="1"/>
+	<block name="ulmDecoPortableToiletClosed"					prob="1"/></randomizer>
+
+<randomizer name="ulmDecoLawnMowerRandomHelper">
+	<block name="air"											prob=".2"/>
+	<block name="ulmDecoLawnMower01"							prob=".4"/>
+	<block name="ulmDecoLawnMower02"							prob="1"/></randomizer>
+
+<randomizer name="ulmFireExtinguisherBoxRandomHelper">
+	<block name="ulmFireExtinguisherBox"/>
+	<block name="ulmFireExtinguisherBoxEmpty"/></randomizer>
+
+<randomizer name="ulmEngineRandomHelper">
+	<block name="air"											prob="3"/>
+	<block name="ulmSmallEngine"								prob="6"/>
+	<block name="ulmMotorcycleEngine"							prob="5"/>
+	<block name="ulmCarEngine"									prob="4"/>
+	<block name="ulmBuggyEngine"								prob="3"/>
+	<block name="ulmGyrocopterEngine"							prob="2"/>
+	<block name="ulmSmallEngine"								prob="1"/></randomizer>
+
+<randomizer name="ulmTruckEngineRandomHelper">
+	<block name="air"											prob=".3"/>
+	<block name="ulmTruckEngine"								prob=".7"/></randomizer>
+
+<randomizer name="ulmMotorBatteryChargerRandomHelper">
+	<block name="air"/>
+	<block name="ulmBatteryCharger"/>
+	<block name="ulmElectricMotor"/>
+	<block name="ulmCarBattery"/></randomizer>
+
+<randomizer name="ulmMotorBatteryChargerEngineRandomHelper">
+	<block name="air"/>
+	<block name="ulmBatteryCharger"/>
+	<block name="ulmElectricMotor"/>
+	<block name="ulmCarBattery"/>
+	<block name="ulmSmallEngine"/>
+	<block name="ulmMotorcycleEngine"/>
+	<block name="ulmCarEngine"/>
+	<block name="ulmBuggyEngine"/>
+	<block name="ulmGyrocopterEngine"/>
+	<block name="ulmSmallEngine"/></randomizer>
+
+</append>
+	
+</Subquake>

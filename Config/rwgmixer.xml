@@ -1,0 +1,73 @@
+<Subquake>
+
+<!--
+	Defaults:
+		Tiny	0-5000			2048, 3072, 4096
+		Small	5000,7000		5120, 6144, 7168
+		Medium	7000,10000		8192, 9216
+		Large	10000,16000		10240, 11264, 12288, 13312, 14336, 15360
+	
+	New:
+		Tiny	0-5000			2048, 3072, 4096
+		Small	5000,7000		5120, 6144, 7168
+		Medium	7000,10000		8192, 9216
+		Large	10000,12000		10240, 11264
+		XL		12000-16000		12288, 13312, 14336, 15360
+-->
+<!--
+<set xpath="/rwgmixer/world[@name='tiny'	]/property[@name='world_size']/@value">0,5000</set>
+<set xpath="/rwgmixer/world[@name='small'	]/property[@name='world_size']/@value">5000,7000</set>
+<set xpath="/rwgmixer/world[@name='medium'	]/property[@name='world_size']/@value">7000,10000</set>
+<set xpath="/rwgmixer/world[@name='large'	]/property[@name='world_size']/@value">10000,12000</set>
+
+<set xpath="/rwgmixer/world[@name='tiny'	]/property[@class='oldwest'		]"><property name="few" value="1"	/><property name="default" value="2"	/><property name="many"	value="2"	/><property name="mintiles" value="2"	/><property name="maxtiles"	value="3"/></set>
+<set xpath="/rwgmixer/world[@name='small'	]/property[@class='oldwest'		]"><property name="few" value="1"	/><property name="default" value="2"	/><property name="many"	value="2"	/><property name="mintiles" value="2"	/><property name="maxtiles"	value="4"/></set>
+<set xpath="/rwgmixer/world[@name='medium'	]/property[@class='oldwest'		]"><property name="few" value="2"	/><property name="default" value="2"	/><property name="many"	value="3"	/><property name="mintiles" value="2"	/><property name="maxtiles"	value="4"/></set>
+<set xpath="/rwgmixer/world[@name='large'	]/property[@class='oldwest'		]"><property name="few"	value="2"	/><property name="default" value="3"	/><property name="many"	value="4"	/><property name="mintiles" value="3"	/><property name="maxtiles"	value="5"/></set>
+
+<set xpath="/rwgmixer/world[@name='tiny'	]/property[@class='countrytown'	]"><property name="few"	value="1"	/><property name="default" value="2"	/><property name="many"	value="3"	/><property name="mintiles" value="3"	/><property name="maxtiles"	value="6"/></set>
+<set xpath="/rwgmixer/world[@name='small'	]/property[@class='countrytown'	]"><property name="few"	value="2"	/><property name="default" value="3"	/><property name="many"	value="4"	/><property name="mintiles" value="6"	/><property name="maxtiles"	value="9"/></set>
+<set xpath="/rwgmixer/world[@name='medium'	]/property[@class='countrytown'	]"><property name="few" value="3"	/><property name="default" value="4"	/><property name="many"	value="5"	/><property name="mintiles" value="9"	/><property name="maxtiles"	value="12"/></set>
+<set xpath="/rwgmixer/world[@name='large'	]/property[@class='countrytown'	]"><property name="few"	value="4"	/><property name="default" value="5"	/><property name="many"	value="6"	/><property name="mintiles" value="12"	/><property name="maxtiles"	value="15"/></set>
+
+<set xpath="/rwgmixer/world[@name='tiny'	]/property[@class='town'		]"><property name="few"	value="1"	/><property name="default" value="1"	/><property name="many"	value="2"	/><property name="mintiles" value="6"	/><property name="maxtiles"	value="9"/></set>
+<set xpath="/rwgmixer/world[@name='small'	]/property[@class='town'		]"><property name="few"	value="2"	/><property name="default" value="4"	/><property name="many"	value="6"	/><property name="mintiles" value="10"	/><property name="maxtiles"	value="15"/></set>
+<set xpath="/rwgmixer/world[@name='medium'	]/property[@class='town'		]"><property name="few"	value="3"	/><property name="default" value="5"	/><property name="many"	value="7"	/><property name="mintiles" value="12"	/><property name="maxtiles"	value="17"/></set>
+<set xpath="/rwgmixer/world[@name='large'	]/property[@class='town'		]"><property name="few"	value="4"	/><property name="default" value="6"	/><property name="many"	value="8"	/><property name="mintiles" value="13"	/><property name="maxtiles"	value="19"/></set>
+
+<set xpath="/rwgmixer/world[@name='tiny'	]/property[@class='city'		]"><property name="few"	value="1"	/><property name="default" value="1"	/><property name="many"	value="2"	/><property name="mintiles" value="8"	/><property name="maxtiles"	value="10"/></set>
+<set xpath="/rwgmixer/world[@name='small'	]/property[@class='city'		]"><property name="few"	value="4"	/><property name="default" value="7"	/><property name="many"	value="9"	/><property name="mintiles" value="14"	/><property name="maxtiles"	value="18"/></set>
+<set xpath="/rwgmixer/world[@name='medium'	]/property[@class='city'		]"><property name="few"	value="7"	/><property name="default" value="9"	/><property name="many"	value="11"	/><property name="mintiles" value="22"	/><property name="maxtiles"	value="28"/></set>
+<set xpath="/rwgmixer/world[@name='large'	]/property[@class='city'		]"><property name="few"	value="9"	/><property name="default" value="11"	/><property name="many"	value="13"	/><property name="mintiles" value="23"	/><property name="maxtiles"	value="29"/></set>
+
+<set xpath="/rwgmixer/district[@name='commercial'	]/property[@name='district_spawn_weight']/@value">.58</set>
+<set xpath="/rwgmixer/district[@name='downtown'		]/property[@name='district_spawn_weight']/@value">.58</set>
+<set xpath="/rwgmixer/district[@name='industrial'	]/property[@name='district_spawn_weight']/@value">.58</set>
+	
+<insertAfter xpath="/rwgmixer/world[@name='large']">
+
+<world name="XL">
+	<property name="world_size"				value="12000,16000"/>
+	<property name="border_step_distance"	value="256"/>
+		
+	<property class="oldwest"			><property name="few"	value="4"	/><property name="default" value="5"	/><property name="many" value="5"	/><property name="mintiles"	value="4"	/><property name="maxtiles"	value="8"	/></property>
+	<property class="countrytown"		><property name="few"	value="5"	/><property name="default" value="4"	/><property name="many"	value="5"	/><property name="mintiles"	value="15"	/><property name="maxtiles"	value="20"	/></property>
+	<property class="town"				><property name="few"	value="2"	/><property name="default" value="8"	/><property name="many"	value="8"	/><property name="mintiles"	value="15"	/><property name="maxtiles"	value="20"	/></property>
+	<property class="city"				><property name="few"	value="5"	/><property name="default" value="10"	/><property name="many"	value="15"	/><property name="mintiles"	value="40"	/><property name="maxtiles"	value="60"	/></property>
+	<property class="wilderness"		><property name="few"	value="450"	/><property name="default" value="500"	/><property name="many"	value="550"	/>																				  </property>
+		
+	<property class="lakes"				><property name="scale"	value="1,2.5"	/><property name="few" value="5"/><property name="default" value="9"/><property name="many"	value="11"	/></property>
+	<property class="rivers"			><property name="scale"	value="1,2.5"	/><property name="few" value="6"/><property name="default" value="9"/><property name="many"	value="12"	/></property>
+	<property class="craters"			><property name="scale"	value="1,2.5"	/><property name="few" value="4"/><property name="default" value="7"/><property name="many"	value="9"	/></property>
+	<property class="canyons"			><property name="scale"	value="1,2.5"	/><property name="few" value="5"/><property name="default" value="8"/><property name="many"	value="10"	/></property>
+	<property class="desert_mountains"	><property name="scale"	value="1,2"		/><property name="cluster_iterations" value="4"/><property name="cluster_range" value="800"/><property name="use_biome_mask" value="true"	/><property name="biome_mask_min" value="0.25"/></property>
+	<property class="mountains"			><property name="scale"	value="1,2.5"	/><property name="cluster_iterations" value="4"/><property name="cluster_range" value="800"/><property name="use_biome_mask" value="true"	/>												</property>
+	<property class="hills"				><property name="scale"	value="1,2.5"	/><property name="cluster_iterations" value="4"/><property name="cluster_range" value="800"/><property name="use_biome_mask" value="false"	/>												</property>
+	<property class="plains"			><property name="scale"	value="2,3"		/><property name="cluster_iterations" value="0"/><property name="cluster_range" value="450"/><property name="use_biome_mask" value="false"	/>												</property>
+	<property class="water_border"		><property name="scale"	value="1.5,3.5"	/>																																															</property>
+
+</world>
+
+</insertAfter>
+-->
+</Subquake>

@@ -1,0 +1,340 @@
+<Subquake>
+
+<append xpath="/controls">
+	
+<ulmCharacterProfileEntry width="233" height="58">
+	<rect height="${height}" width="${width}" style="press, hover, scroll" on_doubleclick="true" disabled_font_color="[disabledLabelColor]" enabled_font_color="[labelColor]" sound="[sfx_btn_category]" controller="ListEntry`1[XUiC_ProfilesList+ListEntry]"
+		  background_sprite_selected="ui_fill" background_sprite_unselected="ui_fill" background_color_unselected="[bgDefault]" background_color_hovered="[bgHover]" background_color_selected="[bgSelected]">
+		<sprite depth="2" name="background" style="background" width="${width}"/>
+		<label depth="4" name="Name" pos="10,-10" width="${width-20}" height="40" text="{name}" font_size="40" justify="center"/>
+	</rect>
+</ulmCharacterProfileEntry>
+
+<mainMenuBackground>
+    <rect pos="0,0">
+		<texture depth="1" style="menuBackground" controller="ULM_MainMenuBackground,UndeadLegacy"/>
+    </rect>
+</mainMenuBackground>
+
+<mainMenu pos="0,0">
+    <rect pos="${pos}" controller="ULM_Version,UndeadLegacy">
+        <texture style="ulmMenuMain"/>
+        <texture style="ulmMenuLogo"/>
+		<label depth="2" name="modVersion" size="376,30" pos="130,-500" font_size="30" pivot="center" justify="center" style="outline"/>
+    </rect>
+</mainMenu>
+	
+<mainMenuVersion>
+	<rect controller="ULM_VersionRemote,UndeadLegacy">
+		<rect depth="3" name="missmatchWarning" visible="false" pos="130,230">
+			<label depth="2" name="versionLatest" size="376,44" font_size="22" pivot="center" justify="center" style="outline"/>
+			<sprite name="mmwSprite1" type="sliced" pos="-130,-2" size="40,40" sprite="symbol_pointer_right" pivot="center"/>
+			<sprite name="mmwSprite2" type="sliced" pos="130,-2" size="40,40" sprite="symbol_pointer_right" flip="horizontally" pivot="center"/>
+		</rect>
+	</rect>
+</mainMenuVersion>
+
+<ulmButtonTab depth="3" width="250" height="32" tooltip_key="" visible="true" text="" sprite="ui_btn_tab_248" sprite_s="ui_btn_tab_248_s" sprite_h="ui_btn_tab_248_h">
+    <rect name="${name}" depth="${depth}" width="${width}" height="${height}" enabled_font_color="[labelColor]" disabled_font_color="[disabledLabelColor]" controller="SimpleButton" visible="${visible}">
+        <button style="buttonTab" tooltip_key="${tooltip_key}" width="${width}" sprite="${sprite}" selectedsprite="${sprite_s}" hoversprite="${sprite_h}"/>
+        <label style="buttonTab,outline" width="${width-2}" name="btnLabel" text_key="${text}"/>
+    </rect>
+</ulmButtonTab>
+
+<ulmButtonRespawn depth="1" pos="0,0" sound="[sfx_btn_basic_1]" lbl_name="btnLabel" visible="true" btn_name="clickable" tooltip_key="" caption_key="">
+	<rect depth="${depth}" name="${name}" size="182,48" pos="${pos}" controller="SimpleButton" visible="${visible}" enabled_font_color="[labelColor]" disabled_font_color="128,128,128,256">
+		<sprite style="ulmButtonRespawn"/>
+		<label depth="2" size="297,60" name="${lbl_name}" font_size="30" text_key="${caption_key}" pivot="center" justify="center" upper_case="true" style="outline"/>
+		<button style="ulmButtonRespawn" name="${btn_name}" tooltip_key="${tooltip_key}" hoverscale="1" sound="${sound}"/>
+	</rect>
+</ulmButtonRespawn>
+
+<ulmSaveEntry height="90" width="480">
+    <rect height="${height}" on_press="true" on_hover="true" on_scroll="true" on_doubleclick="true" sound="[sfx_btn_category]" sound_play_on_hover="[sfx_btn_menu_hover]" sound_play_on_press="true" sound_volume="0.75" controller="ListEntry`1[XUiC_SavegamesList+ListEntry]"
+    background_color_unselected="0,0,0,1" background_color_hovered="0,255,144" background_color_selected="222,206,163" background_sprite_unselected="ui_load_save_h" background_sprite_selected="ui_load_save_h" disabled_font_color="[disabledLabelColor]" enabled_font_color="[labelColor]">
+        <sprite style="background" pos="-5,5" width="${10 + width}" height="${10 + height}" sprite="ui_load_save" atlas="UIBackground" visible="{hasentry}"/>
+        <sprite style="background" name="background" pos="-5,5" width="${10 + width}" height="${10 + height}" sprite="ui_load_save_h" atlas="UIBackground"/>
+        <label depth="3" name="Name" pos="15,-10" width="${width-100}" height="30" text="{savename}" font_size="30"/>
+        <label depth="3" name="World" pos="15,-60" color="{worldcolor}" width="${width-200}" height="32" text="{worldname} - {mode}" tooltip="{worldtooltip}" font_size="26" justify="left" visible="{hasentry}"/>
+        <label depth="3" name="Version" pos="${width-110},-10" color="{versioncolor}" width="100" height="32" text="{version}" tooltip="{versiontooltip}" font_size="26" justify="right"/>
+        <label depth="3" name="LastPlayed" pos="${width-210},-60" color="255,255,255,128" width="200" height="32" text="{lastplayed}" font_size="26" justify="right"/>
+    </rect>
+</ulmSaveEntry>
+	
+<ulmServerListHeader depth="3" pos="0,0" width="284" height="30">
+	<rect depth="${depth}" pos="${pos}" height="${height}">
+		<sprite depth="3" name="background" pos="0,10" size="758,46" style="inputOptionLabel" sprite="ui_server_info_list_header"/>
+		<sprite depth="4" name="favorite" pos="19,-12" width="24" height="24" sprite="symbol_star" color="[white]" type="simple" pivot="center" style="hover" tooltip_key="xuiServerBrowserToggleFavoriteTooltip" />
+		<sprite depth="4" name="anticheat" pos="46,-12" width="24" height="24" sprite="symbol_shield" color="[white]" type="simple" pivot="center" style="hover" tooltip_key="xuiServerBrowserEACTooltip" />
+		<sprite depth="4" name="password" pos="73,-12" width="24" height="24" sprite="symbol_lock" color="[white]" type="simple" pivot="center" style="hover" tooltip_key="xuiServerBrowserPasswordTooltip" />
+		<label depth="4" name="ServerName" pos="90,-2" width="${width-310}" height="32" text_key="xuiServerBrowserServerName" font_size="26" justify="left" pivot="topleft" style="hover,press" />
+		<label depth="4" name="World" pos="${width-215},-2" width="100" height="32" text_key="xuiServerBrowserWorldName" font_size="26" justify="left" pivot="topleft" style="hover,press" />
+		<!--<label depth="4" name="Difficulty" pos="${width-140},-2" width="30" height="32" text="Diff" font_size="26" justify="right" pivot="topleft" style="hover,press" />-->
+		<sprite depth="4" name="Players" pos="${width-75},-15" width="26" height="26" sprite="server_players" color="[white]" type="simple" pivot="center" style="hover,press" tooltip_key="xuiServerBrowserPlayersTooltip" />
+		<sprite depth="4" name="Ping" pos="${width-25},-15" width="26" height="26" sprite="server_ping" color="[white]" type="simple" pivot="center" style="hover,press" tooltip_key="xuiPing" />
+		<!--
+		<label depth="4" name="Version" pos="${width-10},-2" on_hover="true" color="{versioncolor}" width="80" height="32" text="{version}" tooltip="{versiontooltip}" font_size="26" justify="right" pivot="topright" />
+		<label depth="4" name="World" pos="8,${-height+2}" color="255,255,255,128" width="${width-200}" height="32" text="{worldname} - {mode}" font_size="26" justify="left" pivot="bottomleft" visible="{hasentry}" />
+		<label depth="4" name="LastPlayed" pos="${width-10},${-height+2}" color="255,255,255,128" width="180" height="32" text="{lastplayed}" font_size="26" justify="right" pivot="bottomright" />
+		-->
+	</rect>
+</ulmServerListHeader>
+
+<ulmServerListEntry width="254" height="32">
+	<rect height="${height}" style="press, hover, scroll" on_doubleclick="true" disabled_font_color="[disabledLabelColor]" enabled_font_color="[labelColor]" sound="[recipe_click]" controller="ListEntry`1[XUiC_ServersList+ListEntry]"
+		  background_color_unselected="[bgDark]" background_color_hovered="0,255,144,64" background_color_selected="222,206,163,80"
+		  background_sprite_unselected="ui_server_info_list_entry" background_sprite_selected="ui_server_info_list_entry">
+		<sprite depth="2" name="background" color="[bgDark]" pos="4,6" size="750,38" atlas="UIBackground" sprite="ui_server_info_list_entry" type="sliced"/>
+		<button depth="4" name="favorite" pos="19,-12" width="24" height="24" sprite="symbol_star" defaultcolor="180,180,180" hovercolor="[white]" selectedcolor="[selectedColor]" type="simple" pivot="center" hoverscale="1.1" visible="{hasentry}" selected="{isfavorite}" tooltip_key="xuiServerBrowserToggleFavoriteTooltip" />
+		<sprite depth="4" name="anticheat" pos="46,-12" width="24" height="24" sprite="symbol_shield" color="{anticheatcolor}" type="simple" pivot="center" visible="{hasentry}" />
+		<sprite depth="4" name="password" pos="73,-12" width="24" height="24" sprite="symbol_lock" color="{passwordcolor}" type="simple" pivot="center" visible="{hasentry}" />
+		<label depth="4" name="Name" pos="92,-2" width="${width-312}" height="32" text="{servername}" font_size="26" justify="left" pivot="topleft" support_bb_code="false" color="{textcolor}" />
+		<label depth="4" name="World" pos="${width-215},-2" width="100" height="32" text="{world}" font_size="26" justify="left" pivot="topleft" support_bb_code="false" color="{textcolor}" />
+		<!--<label depth="4" name="Difficulty" pos="${width-140},-2" width="30" height="32" text="{difficulty}" font_size="26" justify="right" pivot="topleft" visible="{hasentry}" />-->
+		<label depth="4" name="Players" pos="${width-105},-2" width="50" height="32" text="{playersonline}/{playersmax}" font_size="26" justify="right" pivot="topleft" visible="{hasentry}" color="{textcolor}" />
+		<label depth="4" name="Ping" pos="${width-50},-2" width="40" height="32" text="{ping}" color="{pingcolor}" font_size="26" justify="right" pivot="topleft" />
+		<!--
+		<label depth="4" name="Version" pos="${width-10},-2" on_hover="true" color="{versioncolor}" width="80" height="32" text="{version}" tooltip="{versiontooltip}" font_size="26" justify="right" pivot="topright" />
+		<label depth="4" name="World" pos="8,${-height+2}" color="255,255,255,128" width="${width-200}" height="32" text="{worldname} - {mode}" font_size="26" justify="left" pivot="bottomleft" visible="{hasentry}" />
+		<label depth="4" name="LastPlayed" pos="${width-10},${-height+2}" color="255,255,255,128" width="180" height="32" text="{lastplayed}" font_size="26" justify="right" pivot="bottomright" />
+		-->
+	</rect>
+</ulmServerListEntry>
+
+<ulmServerListOptionInfo pos="0,0" width="570" height="32" visible="true" display_names="" value_localization_prefix="">
+	<rect name="${name}" width="${width}" height="${height}" controller="ServerBrowserGamePrefInfo" display_names="${display_names}" value_localization_prefix="${value_localization_prefix}" visible="${visible}">
+		<sprite depth="1" pos="0,10" width="350" style="inputOptionLabel" sprite="ui_server_info_label"/>
+		<sprite depth="2" pos="333,10" width="320" style="inputOption" sprite="ui_server_info_value"/>
+		<label depth="2" pos="16,-1" size="262,30" font_size="28" style="hover" tooltip_key="${title}Desc" text_key="${title}" color="[white]"/>
+		<label depth="2" pos="343,2" size="320,32" name="value" justify="center" font_size="32"/>
+	</rect>
+</ulmServerListOptionInfo>
+
+<ulmOptionGame 
+	is_textinput="false" display_names="" value_localization_prefix="" password_field="false" has_default="true" always_show="false" 
+	value_min="@DEF" value_max="@DEF" value_wrap="@DEF" value_increment="@DEF" values="@DEF" values_enforced="false" reverse_list="@DEF" localization_prefix="" format_string="" character_limit="0" tooltip_key="" values_from_gameserverconfig="false">
+    <rect name="${name}" size="710,32" is_textinput="${is_textinput}" value_type="${value_type}" controller="ULM_GamePrefSelector,UndeadLegacy" has_default="${has_default}"
+        values="${values}" values_enforced="${values_enforced}" display_names="${display_names}" value_localization_prefix="${value_localization_prefix}" always_show="${always_show}" values_from_gameserverconfig="${values_from_gameserverconfig}">
+        <sprite style="inputOptionLabel" sprite="ui_option_label" width="450"/>
+		<label depth="1" name="ControlLabel" pos="0,-1" size="402,30" font_size="28" style="hover" on_scroll="true" tooltip_key="${title}Desc" text_key="${title}" color="[white]"/>
+        <ulmComboBox name="ControlCombo" pos="419,0" type="ULM_ComboBoxList`1[XUiC_GamePrefSelector+GameOptionValue],UndeadLegacy" tooltip_key="${tooltip_key == '' ? title + 'Desc' : tooltip_key}" value_min="${value_min}" value_max="${value_max}" value_wrap="${value_wrap}" value_increment="${value_increment}" reverse_list="${reverse_list}" localization_prefix="${localization_prefix}" format_string="${format_string}"/>
+        <ulmTextField name="ControlText" pos="419,0" password_field="${password_field}" character_limit="${character_limit}"/>
+    </rect>
+</ulmOptionGame>
+
+<ulmOptionGameX pos="0,0" width="570" visible="true"
+		is_textinput="false" display_names="" value_localization_prefix="" password_field="false" has_default="true" always_show="false"
+		value_min="@DEF" value_max="@DEF" value_wrap="@DEF" value_increment="@DEF" values="@DEF" values_enforced="false" reverse_list="@DEF" localization_prefix="" format_string="" character_limit="0" tooltip_key="">
+	<rect name="${name}" pos="${pos}" width="${width}" height="32" is_textinput="${is_textinput}" value_type="${value_type}" controller="GamePrefSelector" has_default="${has_default}" always_show="${always_show}"
+		values="${values}" values_enforced="${values_enforced}" display_names="${display_names}" value_localization_prefix="${value_localization_prefix}" visible="${visible}">
+		<label name="ControlLabel" depth="4" pos="0,0" width="262" height="30" style="hover" tooltip_key="${tooltip_key == '' ? title + 'Desc' : tooltip_key}" text_key="${title}" font_size="28" color="[white]" justify="right" pivot="topleft" />
+		<combobox name="ControlCombo" type="ULM_ComboBoxList`1[XUiC_GamePrefSelector+GameOptionValue],UndeadLegacy" tooltip_key="${tooltip_key == '' ? title + 'Desc' : tooltip_key}" value_min="${value_min}" value_max="${value_max}" value_wrap="${value_wrap}" value_increment="${value_increment}" reverse_list="${reverse_list}" localization_prefix="${localization_prefix}" format_string="${format_string}" pos="269,0" width="${width-270}" height="32" />
+		<textfield name="ControlText" depth="5" pos="303,0" width="${password_field ? 570-338+32+10 : width-338}" height="32" tooltip_key="${tooltip_key == '' ? title + 'Desc' : tooltip_key}" pivot="topLeft" password_field="${password_field}" character_limit="${character_limit}"/>
+	</rect>
+</ulmOptionGameX>
+
+<ulmWorldPoiListEntry width="780" height="30">
+	<rect controller="ULM_WorldPrefabEntry,UndeadLegacy"
+		background_color_unselected="[bgDefault]" background_color_hovered="[bgHover]" background_color_selected="[bgSelected]"  tooltip_offset_x="150" tooltip_offset_y="65">
+
+		<sprite depth="1" pos="0,0" width="58" height="${height-2}" type="sliced" color="{bgColor}"/>
+	    <label depth="2" pos="4,-2" width="54" height="${height-4}" text="{prefabNumber}" justify="right"/>
+
+		<sprite depth="1" pos="60,0" width="323" height="${height-2}" type="sliced" color="{bgColor}"/>
+	    <label depth="2" pos="64,-2" width="319" height="${height-4}" text="{prefabName}"/>
+
+		<sprite depth="1" pos="385,0" width="323" height="${height-2}" type="sliced" color="{bgColor}"/>
+	    <label depth="2" pos="385,-2" width="319" height="${height-4}" text="{prefabLocalizedName}"/>
+
+		<sprite depth="1" pos="710,0" width="68" height="${height-2}" type="sliced" color="{bgColor}"/>
+	    <label depth="2" pos="704,-2" width="64" height="${height-4}" text="{prefabCount}" justify="right"/>
+
+		<sprite depth="10" name="background" width="${width}" height="${height-2}" style="hover, scroll" color="0,0,0,1"/>
+    </rect>
+</ulmWorldPoiListEntry>
+
+<ulmSearchNew pos="0,0" visible="true" width="240" focus_on_open="false" name="searchInput">
+	<rect depth="3" name="searchControls" pos="${pos}">
+		<sprite depth="3" size="20,20" pos="20,-15" sprite="symbol_search" color="255,255,255,80"/>
+		<panel depth="4" pos="10,-12" width="${width-10}" disableautobackground="true" console_enabled="false">
+			<ulmTextField depth="1" pos="0,0" width="${width-10}" height="26" character_limit="22" name="${name}" focus_on_open="${focus_on_open}" virtual_keyboard_prompt="vkPromptSearchTerm" search_field="true" close_group_on_tab="true" backgroundcolor="0,0,0,1"/>
+		</panel>
+	</rect>
+</ulmSearchNew>
+
+<ulmOptionGameInProgress is_textinput="false" value_min="@DEF" value_max="@DEF" value_wrap="@DEF" value_increment="@DEF" values="@DEF" reverse_list="@DEF" value_localization_prefix="" localization_prefix="" format_string="" password_field="false" character_limit="0" display_names="">
+    <rect name="${name}" size="570,32" is_textinput="${is_textinput}" value_type="${value_type}" controller="GamePrefSelector"
+        values="${values}" display_names="${display_names}" value_localization_prefix="${value_localization_prefix}">
+        <sprite style="inputOptionLabel"/>
+		<label depth="1" name="ControlLabel" pos="0,-1" size="262,30" font_size="28" style="hover" tooltip_key="${title}Desc" text_key="${title}" color="128,128,128"/>
+        <ulmComboBox name="ControlCombo" pos="279,0" tooltip_key="${title}Desc" type="ULM_ComboBoxList`1[XUiC_GamePrefSelector+GameOptionValue],UndeadLegacy" value_min="${value_min}" value_max="${value_max}" value_wrap="${value_wrap}" value_increment="${value_increment}" values="${values}" reverse_list="${reverse_list}" localization_prefix="${localization_prefix}" format_string="${format_string}"/>
+        <ulmTextField name="ControlText" pos="279,0" password_field="${password_field}" character_limit="${character_limit}"/>
+        <sprite depth="10" pos="-48,0" color="255,106,0" size="32,32" sprite="symbol_warning" on_hover="true" tooltip_key="uiFeatureInProgress"/>
+    </rect>
+</ulmOptionGameInProgress>
+
+<optionAudio pos="0,0" value_min="@DEF" value_max="@DEF" value_wrap="@DEF" value_increment="@DEF" values="@DEF" reverse_list="@DEF" localization_prefix="" format_string="">
+    <rect size="570,32" pos="${pos}">
+        <sprite style="inputOptionLabel"/>
+        <label depth="1" size="262,30" font_size="28" style="hover" text_key="xuiOptionsAudio${name}"/>
+        <ulmComboBox depth="1" name="${name}" pos="279,0" type="${type}" value_min="${value_min}" value_max="${value_max}" value_wrap="${value_wrap}" value_increment="${value_increment}" values="${values}" reverse_list="${reverse_list}" localization_prefix="${localization_prefix}" format_string="${format_string}"/>
+    </rect>
+</optionAudio>
+	
+<optionGeneral pos="0,0" value_min="@DEF" value_max="@DEF" value_wrap="@DEF" value_increment="@DEF" values="@DEF" reverse_list="@DEF" localization_prefix="" format_string="" visible="true" category_prefix="xuiOptionsGeneral" category_suffix="Tooltip">
+    <rect size="670,32" pos="${pos}">
+		<rect pos="16,0">
+			<sprite style="inputOptionLabelLong"/>
+			<label depth="1" size="362,30" font_size="28" style="hover" text_key="${category_prefix}${name}" tooltip_key="${category_prefix}${name}${category_suffix}"/>
+			<ulmComboBox depth="1" name="${name}" pos="380,0" type="${type}" value_min="${value_min}" tooltip_key="${category_prefix}${name}{category_suffix}" value_max="${value_max}" value_wrap="${value_wrap}" value_increment="${value_increment}" values="${values}" reverse_list="${reverse_list}" localization_prefix="${localization_prefix}" format_string="${format_string}" visible="${visible}"/>
+		</rect>
+	</rect>
+</optionGeneral>
+	
+<optionVideo pos="0,0" value_min="@DEF" value_max="@DEF" value_wrap="@DEF" value_increment="@DEF" values="@DEF" reverse_list="@DEF" localization_prefix="" format_string="">
+    <rect size="570,32" pos="${pos}">
+        <sprite style="inputOptionLabel"/>
+		<label depth="1" size="262,30" font_size="28" style="hover" text_key="video${name}" tooltip_key="video${name}Desc"/>
+        <ulmComboBox depth="1" name="${name}" pos="280,0" type="${type}" value_min="${value_min}" tooltip_key="video${name}Desc" value_max="${value_max}" value_wrap="${value_wrap}" value_increment="${value_increment}" values="${values}" reverse_list="${reverse_list}" localization_prefix="${localization_prefix}" format_string="${format_string}"/>
+    </rect>
+</optionVideo>
+
+<controlsTabButton depth="3" width="200" height="32" tooltip_key="" visible="true" text="">
+    <rect name="${name}" depth="${depth}" width="${width}" height="${height}" enabled_font_color="[labelColor]" disabled_font_color="[disabledLabelColor]" controller="SimpleButton" visible="${visible}">
+        <button style="buttonTab" width="200" tooltip_key="${tooltip_key}" sprite="ui_btn_tab_horizontal"  selectedsprite="ui_btn_tab_horizontal_s"  hoversprite="ui_btn_tab_horizontal_h"/>
+        <label style="buttonTab" width="200" name="btnLabel" text_key="${text}"/>
+    </rect>
+</controlsTabButton>
+
+<optionControl value_min="@DEF" value_max="@DEF" value_wrap="@DEF" value_increment="@DEF" values="@DEF" reverse_list="@DEF" localization_prefix="" format_string="">
+    <rect size="570,32">
+        <sprite style="inputOptionLabel"/>
+        <label size="200,30" font_size="28" style="hover" text_key="xuiOptionsControls${name}" tooltip_key="xuiOptionsControls${name}Tooltip"/>
+        <ulmComboBox name="${name}" pos="280,0" type="${type}" value_min="${value_min}" value_max="${value_max}" value_wrap="${value_wrap}" value_increment="${value_increment}" values="${values}" reverse_list="${reverse_list}" localization_prefix="${localization_prefix}" format_string="${format_string}"/>
+    </rect>
+</optionControl>
+
+<ulmKeyboardBindingEntry width="550" height="32">
+	<rect name="bindingEntry" width="${width}" height="${height}" controller="KeyboardBindingEntry">
+		<label  depth="4" pos="0,0" size="200,30" name="label" style="hover" font_size="28" justify="right"/>
+		<button depth="4" pos="259,10" size="260,46" name="background" sprite="ui_empty" hoversprite="ui_btn_keybind" defaultcolor="[white]" hovercolor="45,187,140,127" hoverscale="1.0" type="simple" use_selection_box="true"/>
+		<label  depth="5" pos="259,0" size="260,46" name="value" justify="center" font_size="32"/>
+        <button depth="6" pos="496,-13" style="ulmButton30x30"	name="unbind" sprite="ui_btn_trash" hoversprite="ui_btn_trash_h" disabledsprite="ui_btn_trash" sound="[sfx_btn_next]"/>
+	</rect>
+</ulmKeyboardBindingEntry>
+
+<controlTemplate>
+    <rect>
+        <sprite style="inputOptionLabel" width="290" sprite="ui_option_keybind_label"/>
+		<sprite style="inputOption" pos="259,10" width="260" sprite="ui_option_keybind"/>
+    </rect>
+</controlTemplate>
+	
+<ulmComboBox depth="3" pos="0,0" value_min="@DEF" value_max="@DEF" value_wrap="@DEF" value_increment="@DEF" values="@DEF" reverse_list="@DEF" localization_prefix="" format_string="" enabled_color="[white]" disabled_color="[lightGrey]" visible="true"
+		tooltip_key="" foregroundlayer="false">
+    <rect name="${name}" controller="${type}" depth="${depth}" pos="${pos}" size="200,30" value_min="${value_min}" value_max="${value_max}" value_wrap="${value_wrap}" value_increment="${value_increment}" values="${values}" reverse_list="${reverse_list}" localization_prefix="${localization_prefix}" format_string="${format_string}" enabled_color="${enabled_color}" disabled_color="${disabled_color}" pivot="left">
+        <sprite style="inputOption"/>
+		<button pos="22,-13" style="ulmButton30x30" name="back" sprite="ui_btn_30x30_next_n" hoversprite="ui_btn_30x30_next_h" disabledsprite="ui_btn_30x30_next_n" sound="[sfx_btn_prev]" flip="Horizontally"/>
+        <filledsprite style="inputOptionFill" fill="{fillvalue}" visible="{isnumber}"/>
+        <panel name="directvalue" style="press, scroll, hover, drag" pos="41,-3" size="194,26" disableautobackground="true" tooltip_key="${tooltip_key}"/>
+
+        <label depth="5" name="currentValue" style="outline" pos="41,-3" size="218,26" font_size="26" text="{valuetext}" justify="center" color="{valuecolor}"/>
+
+        <button pos="277,-13" style="ulmButton30x30" name="forward" sprite="ui_btn_30x30_next_n" hoversprite="ui_btn_30x30_next_h" disabledsprite="ui_btn_30x30_next_n" sound="[sfx_btn_next]"/>
+    </rect>
+</ulmComboBox>
+
+<ulmWorldGenerationBiome>
+	<rect>
+		<sprite style="inputOptionLabel" sprite="ui_option_label_world"/>
+		<sprite style="background" name="color" atlas="UIBackground" sprite="ui_map_preview_biome" size="25,25" globalopacity="false" color="255,168,0"/>
+		<label depth="1" pos="32,0" size="110,30" font_size="28" style="hover" text_key="xuiWasteland" tooltip_key="xuiWasteland"/>
+		<ulmComboBox name="cb" depth="108" pos="160,0" type="ComboBoxInt" value_min="5" value_max="50" value="0" value_increment="1" value_wrap="false"/>
+	</rect>
+</ulmWorldGenerationBiome>
+
+<combobox1.0 depth="3" pos="0,0" width="200" height="30"
+		value_min="@DEF" value_max="@DEF" value_wrap="@DEF" value_increment="@DEF" scroll_by_increment="false" values="@DEF" reverse_list="@DEF" localization_prefix="" localization_key_caseinsensitive="false" format_string=""
+		enabled_color="[white]" disabled_color="[lightGrey]" bg_color="[black]" enabled_fill_color="[white]" disabled_fill_color="[lightGrey]" visible="true" segmented_fill="false" segment_height="15" segment_count="10" segment_spacing="10"
+		tooltip_key="" foregroundlayer="false" index_markers="false" gamepad_selectable="true" gamepad_decrease="" gamepad_increase="" gamepad_callout_size_increase="0" >
+
+	<rect name="${name}" controller="${type}" depth="${depth}" pos="${pos}" width="${width}" height="${height}"
+			value_min="${value_min}" value_max="${value_max}" value_wrap="${value_wrap}" value_increment="${value_increment}" scroll_by_increment="${scroll_by_increment}" values="${values}" reverse_list="${reverse_list}" localization_prefix="${localization_prefix}" localization_key_caseinsensitive="${localization_key_caseinsensitive}" format_string="${format_string}"
+			enabled_color="${enabled_color}" disabled_color="${disabled_color}" bg_color="${bg_color}" enabled_fill_color="${enabled_fill_color}" disabled_fill_color="${disabled_fill_color}" visible="${visible}" segmented_fill="${segmented_fill}" segment_spacing="${segment_spacing}"
+			pivot="left" index_markers="${index_markers}" gamepad_decrease="${gamepad_decrease}" gamepad_increase="${gamepad_increase}" >
+
+		<button name="back"        depth="${1+depth}" style="icon30px, press, hover" pos="${height/2},${-height/2}" width="${height}" height="${height}" pivot="center" sprite="ui_game_symbol_arrow_menu" disabledcolor="[disabledColor]" sound="[paging_click]" tooltip_key="${tooltip_key}" gamepad_selectable="false" enabled="{can_backward}" visible="{# !hascontrollershortcuts or !is_controller_input}" />
+		<gamepad_icon name="gamepadIconBack" depth="${1+depth}" pos="${height/2-gamepad_callout_size_increase/2},${-height/2}" width="${0+height+gamepad_callout_size_increase}" height="${0+height+gamepad_callout_size_increase}" pivot="center" visible="{# hascontrollershortcuts and is_controller_input}" color="{# can_backward ? '255,255,255' : '160,160,160'}" action="${gamepad_decrease}" />
+
+		<rect name="regularFill" pos="${2+height},0" width="${width-height*2-4}" height="${height}" force_hide="${ segmented_fill }">
+			<sprite name="background"  depth="${1+depth}" pivot="topleft" color="{bgcolor}" type="sliced" foregroundlayer="${foregroundlayer}" />
+			<filledsprite name="fill"  depth="${2+depth}" pivot="topleft" color="{fillcolor}" fill="{fillvalue}" filldirection="horizontal" visible="{isnumber}" foregroundlayer="true" />
+		</rect>
+		<rect name="segmentedFill" pos="${2+height},${-height/2+Round(segment_height/2,0)}" width="${width-height*2-4}" height="${segment_height}" force_hide="${ !segmented_fill }" repeat_content="true" repeat_count="${segmented_fill ? segment_count : 1}">
+			<rect pos="${repeat_i * 25},0">
+				<sprite name="bg"  depth="${1+depth}" width="20" pivot="topleft" color="{bgcolor}" type="sliced" foregroundlayer="${foregroundlayer}" />
+				<filledsprite name="fillSegment"  depth="${2+depth}" width="20" pivot="topleft" color="{fillcolor}" fill="{# segment_fill_${repeat_i}}" filldirection="horizontal" visible="{isnumber}" foregroundlayer="true" />
+			</rect>
+		</rect>
+
+		<label name="currentValue" depth="${3+depth}" pos="${2+height},${-height/2}" width="${width-height*2-4}" height="${height-2}" pivot="left" text="{valuetext}" font_size="${Defined(font_size) ? font_size : height-4}" justify="center" color="{valuecolor}" effect="outline" effect_color="[black]" effect_distance="1,1" />
+
+		<button name="forward"     depth="${1+depth}" style="icon30px, press, hover" pos="${width-height/2},${-height/2}" width="${height}" height="${height}" pivot="center" sprite="ui_game_symbol_arrow_menu" disabledcolor="[disabledColor]" sound="[paging_click]" tooltip_key="${tooltip_key}" flip="Horizontally" gamepad_selectable="false" enabled="{can_forward}" visible="{# !hascontrollershortcuts or !is_controller_input}" />
+		<gamepad_icon name="gamepadIconForward" depth="${1+depth}" pos="${width-height/2+gamepad_callout_size_increase/2},${-height/2}" width="${0+height+gamepad_callout_size_increase}" height="${0+height+gamepad_callout_size_increase}" pivot="center" visible="{# hascontrollershortcuts and is_controller_input}" color="{# can_forward ? '255,255,255' : '160,160,160'}" action="${gamepad_increase}" />
+
+		<panel name="directvalue" style="press, scroll, hover, drag" pos="${2+height},0" width="${width-height*2-4}" height="${height}" pivot="topleft" disableautobackground="true" tooltip_key="${tooltip_key}" gamepad_selectable="${gamepad_selectable}"/>
+			
+		<rect name="indexMarkers"  pos="${2+height},${-height+5}" width="${width-height*2-4}" height="5" visible="{usesmarkers}" active_color="[white]" inactive_color="[darkGrey]" repeat_content="true" repeat_count="${index_markers ? 20 : 1}">
+			<sprite depth="${2+depth}" width="20" pivot="topleft" color="[white]" type="sliced" foregroundlayer="true" />
+		</rect>
+	</rect>
+</combobox1.0>
+
+<ulmButtonDefault visible="true" btn_name="clickable" sound="[sfx_btn_menu_back]" lbl_name="btnLabel" tooltip_key="">
+	<rect depth="1" name="${name}" size="182,48" btn_name="clickable" pos="${pos}" controller="SimpleButton" visible="${visible}" enabled_font_color="[labelColor]" disabled_font_color="128,128,128,256">
+		<sprite style="inputOption" sprite="option_default" width="190"/>
+		<label style="ulmButton30x30" width="180" pos="95,-13" text_key="${text}" name="${lbl_name}" font_size="22" upper_case="true"/>
+		<button style="ulmButton30x30" width="194" pos="95,-13" hoverscale="1" sprite="ui_btn_160x32" hoversprite="ui_btn_160x32_h" disabledsprite="ui_btn_160x32_n" name="${btn_name}" sound="${sound}" tooltip_key="${tooltip_key}"/>
+	</rect>
+</ulmButtonDefault>
+
+<ulmTextField depth="3" pos="0,0" height="32" 
+	 value="" active_text_color="[white]" caret_color="[white]" selection_color="[mediumGrey_half_alpha]"
+	 character_limit="0" validation="none" backgroundcolor="[black]" on_hover="false" on_scroll="false" ignore_up_down_keys="false" virtual_keyboard_prompt="" effect="none" effect_distance="1,1" effect_color="[black]"
+	 pivot="topleft" visible="true" on_return="submit" tooltip_key="" search_field="false" password_field="false" clear_button="false" focus_on_open="false" clear_on_open="false" close_group_on_tab="false" open_vk_on_open="false"
+	 foregroundlayer="false" justify="center" overflow="ShrinkContent" max_line_count="0" font_face="ReferenceFont" crispness="Always">
+    <panel name="${name}" depth="${depth}" controller="TextInput" pos="${pos}" size="300,30" value="${value}"
+        active_text_color="${active_text_color}" caret_color="${caret_color}" selection_color="${selection_color}"
+        character_limit="${character_limit}" validation="${validation}" backgroundcolor="${backgroundcolor}" ignore_up_down_keys="${ignore_up_down_keys}" style="sfx_press, press2, select" on_hover="${on_hover}" snapCursor="true" virtual_keyboard_prompt="${virtual_keyboard_prompt}"
+        disableautobackground="true" pivot="${pivot}" visible="${visible}" on_return="${on_return}" tooltip_key="${tooltip_key}"
+		search_field="${search_field}" password_field="${password_field}" clear_button="${clear_button}" focus_on_open="${focus_on_open}" clear_on_open="${clear_on_open}" close_group_on_tab="${close_group_on_tab}" open_vk_on_open="${open_vk_on_open}">
+        <sprite depth="1" style="inputOption"/>
+		<label depth="2" name="text" justify="center" pos="5,0" size="290,26" font_size="26" color="[white]" overflow="ShrinkContent" max_line_count="${max_line_count}" font_face="${font_face}" crispness="${crispness}" effect="${effect}" effect_distance="${effect_distance}" effect_color="${effect_color}" tooltip_key="${tooltip_key}" style="outline, press, select" on_hover="${on_hover}" on_scroll="${on_scroll}"/>
+		<button name="btnShowPassword" style="inputUnbind" pos="277,-13" defaultcolor="[white]" sprite="ui_btn_eye" hoversprite="ui_btn_eye_h" selectedsprite="ui_btn_eye_s" tooltip_key="xuiShowPassword" selected="{showpassword}" visible="{passwordfield}"/>
+    	<button name="btnClearInput" pos="${password_field ? width-height-Round(min(height,36)/2,0)-12 : width-Round(min(height,36)/2,0)-3},-${Round(height/2,0)}" width="${4+min(height,36)}" height="${min(height,36)-4}" pivot="center" sprite="ui_game_symbol_clear_textfield" hoverscale="1.1" tooltip_key="xuiClearTextInput" visible="{clearbutton}" />
+	</panel>
+</ulmTextField>
+
+<ulmMapPreviewLegend width="272" height="38" text_key="xuiSnow" color="255,255,255">
+	<rect>
+		<sprite style="background" pos="6,-6" size="${height-12},${height-12}" globalopacity="false" color="${color}"/>
+		<label pos="40,-6" size="${width-40},${height}" text_key="${text_key}" font_size="28"/>
+	</rect>
+</ulmMapPreviewLegend>
+
+<ulmSupportEntry visible="true" width="40" height="40" btn_id="" hvr_id="" sprite_id="">
+	<rect width="${width}" height="${height}">
+		<sprite depth="1" atlas="UIBackground" sprite="${sprite_id}"/>
+		<sprite depth="2" atlas="UIBackground" sprite="ui_mm_overlay" color="65,62,54"/>
+		<rect depth="5" name="${btn_id}" on_hover="true" on_press="true">
+			<rect name="hover">
+				<sprite name="sprite" depth="4" pos="20,50" width="300" height="80" atlas="UIBackground" sprite="ui_mm_tt1" color="128,128,128,240" pivot="center"/>
+				<label name="label" depth="5" pos="20,58" width="300" height="40" text="Become a Patron" pivot="center" justify="center" upper_case="true"/>
+				<sprite depth="4" pos="-6,6" width="${12+width}" height="${12+height}" atlas="UIBackground" sprite="ui_mm_hover" color="0,255,144"/>
+			</rect>
+		</rect>
+	</rect>
+</ulmSupportEntry>
+
+</append>
+</Subquake>

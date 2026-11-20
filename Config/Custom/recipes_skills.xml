@@ -1,0 +1,2156 @@
+<Subquake>
+
+<!-- Research: Engineering -->
+    
+<append xpath="/recipes">
+
+<progression name="Strength" max_level="1000" icon="ui_game_symbol_muscle;255,167,82" desc="skillTreeStrength05Desc;+5">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="melee"/>
+		<passive_effect level="1,1000" operation="perc_add" name="EntityDamage" value="0.02,20"/>
+	</effect_group>
+	<effect_group>
+		<passive_effect level="1,1000" operation="base_add" name="StatWeightMax" value="1,1000"/>
+        <triggered_effect trigger="onPerkLevelChanged" target="self" action="ULM_RecalculatePlayerWeight,UndeadLegacy"/>
+		<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" buff="onAttributeLevelChanged"/>
+	</effect_group></progression>
+
+<progression name="Fortitude" max_level="1000" icon="symbol_fortitude;243,91,66" desc="skillTreeFortitude05Desc;+5">
+	<effect_group>
+		<passive_effect level="1,1000" operation="base_add" name="HealthMax" value="0.4,400"/>
+		<passive_effect level="1,1000" operation="base_add" name="BuffResistance" value=".005,5" tags="buffInjuryStunned01,buffInjuryStunned02"/>
+		<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" buff="onAttributeLevelChanged"/>
+	</effect_group></progression>
+
+<progression name="Perception" max_level="1000" icon="symbol_eye_2;255,167,82" desc="skillTreePerception05Desc;+5">
+	<effect_group>
+		<passive_effect level="1,1000" operation="perc_add" name="BlockDamage" value=".002,2" tags="ranged"/>
+		<passive_effect level="1,1000" operation="perc_add" name="EntityDamage" value=".002,2" tags="ranged"/>
+        <passive_effect level="1,1000" operation="base_add" name="DismemberChance" value=".004,4"/>
+		<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" buff="onAttributeLevelChanged"/>
+	</effect_group></progression>
+
+<progression name="Dexterity" max_level="1000" icon="symbol_dexterity;55,230,104" desc="skillTreeDexterity05Desc;+5">
+	<effect_group>
+		<passive_effect level="1,1000" operation="base_add" name="StaminaMax" value="0.4,400"/>
+        <passive_effect level="1,1000" operation="perc_add" name="DamageModifier" value=".01,10" tags="head"/>
+		<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" buff="onAttributeLevelChanged"/>
+	</effect_group></progression>
+
+<progression name="Intellect" max_level="1000" icon="symbol_brain;115,165,224" desc="skillTreeIntellect05Desc;+5">
+	<effect_group>
+		<requirement name="HoldingItemHasTags" tags="energyWeapon"/>
+		<passive_effect level="1,1000" operation="perc_add" name="EntityDamage" value="0.02,20"/>
+		<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" buff="onAttributeLevelChanged"/>
+		<!-- Action Skill XP handled in C# -->
+	</effect_group></progression>
+
+<!-- S O L D I E R -->
+<progression name="skillTreeStrengthClass" max_level="1" icon="ui_game_symbol_muscle" desc="skillTreeStrengthClassDesc;40;20;5%;5%;10%">
+	<!-- +100 more lbs to weight capacity and +10 strength -->
+	<!--
+		
+		A S S A U L T
+		
+		40 to Inventory Carry Limit
+		20 to Maximum Food and Thirst Limit
+		5% increased Melee Weapon Physical Damage
+		5% increased Assault Rifle, Rocket Launcher and Explosive Physical Damage
+		10% increased Mining Tool Physical Damage
+
+	-->
+	<effect_group>
+		<requirements compare_type="or">
+			<requirement name="ItemHasTags" tags="melee"/>
+			<requirement name="ItemHasTags" tags="explosive"/>
+			<requirement name="ItemHasTags" tags="machineGun"/>
+			<requirement name="ItemHasTags" tags="shovel"/>
+			<requirement name="ItemHasTags" tags="pickaxe"/>
+		</requirements>
+		<passive_effect level="1" operation="perc_add" name="BlockDamage" value=".05"/>
+		<passive_effect level="1" operation="perc_add" name="EntityDamage" value=".05"/>
+	</effect_group>
+	<effect_group>
+		<passive_effect level="1" operation="base_add" name="StatWeightMax" value="40"/>
+		<passive_effect level="1" operation="base_add" name="WaterMax" value="20"/>
+		<passive_effect level="1" operation="base_add" name="FoodMax" value="20"/>
+        <triggered_effect trigger="onPerkLevelChanged" target="self" action="ULM_RecalculatePlayerWeight,UndeadLegacy"/>
+	</effect_group></progression>
+
+<progression name="skillTreeFortitudeClass" max_level="1" icon="symbol_fortitude" desc="skillTreeFortitudeClassDesc;20;10%;20%;5%;5%">
+	<!--
+		
+		E N F O R C E R 
+		
+		20 increased Maximum Health
+		10% increased Stun Resistance
+		20% increased healing effectiveness of medical healing items (handled in C# action="ULM_Heal,UndeadLegacy")
+		5% increased Fist Weapon Physical Damage
+		5% increased Shotgun Physical Damage
+
+	-->
+	<effect_group>
+		<requirements compare_type="or">
+			<requirement name="ItemHasTags" tags="knuckles"/>
+			<requirement name="ItemHasTags" tags="shotgun"/>
+			<requirement name="ItemHasTags" tags="polearm"/>
+		</requirements>
+		<passive_effect level="1" operation="perc_add" name="BlockDamage" value=".05"/>
+		<passive_effect level="1" operation="perc_add" name="EntityDamage" value=".05"/>
+	</effect_group>
+	<effect_group>
+		<passive_effect level="1" operation="base_add" name="HealthMax" value="20"/>
+		<passive_effect level="1" operation="base_add" name="BuffResistance" value=".1" tags="buffInjuryStunned01,buffInjuryStunned02"/>
+	</effect_group></progression>
+
+<progression name="skillTreePerceptionClass" max_level="1" icon="symbol_eye_2" desc="skillTreePerceptionClassDesc;5%;10%;10%;+10;+10">
+	<!--
+		
+		S C O U T
+		
+		5% increased Physical Damage with Spears, Bows, Crossbows and Sniper Rifles
+		10% decreased stamina consumption while aiming with Ranged Weapons (handled in buff buffHoldBreathAiming01)
+		10% increased Dismemberment Chance
+		+10 to Loot Stage
+		+10 to Trader Stage
+
+	-->
+	<effect_group>
+		<requirements compare_type="or">
+			<requirement name="ItemHasTags" tags="bow"/>
+			<requirement name="ItemHasTags" tags="crossbow"/>
+			<requirement name="ItemHasTags" tags="sniperRifle"/>
+			<requirement name="ItemHasTags" tags="polearm"/>
+		</requirements>
+		<passive_effect level="1" operation="perc_add" name="BlockDamage" value=".05"/>
+		<passive_effect level="1" operation="perc_add" name="EntityDamage" value=".05"/>
+	</effect_group>
+	<effect_group>
+        <passive_effect level="1" operation="base_add" name="DismemberChance" value=".1"/>
+		<passive_effect level="1" operation="base_add" name="LootStage" value="10"/>
+		<passive_effect level="1" operation="base_add" name="TraderStage" value="10"/>
+	</effect_group></progression>
+	
+<progression name="skillTreeDexterityClass" max_level="1" icon="symbol_dexterity" desc="skillTreeDexterityClassDesc;20;5%;10%;10%;10%">
+	<!--
+		
+		R E C O N
+		
+		20 increased Maximum Stamina
+		5% increased Physical Damage with Blade Weapons, Pistols and Submachine Guns
+		10% increased Ranged Weapon Hip Fire Accuracy
+		10% increased Crouch Speed and Stealth effectiveness in low light
+		10% decreased action noise level and Alerted Target search duration
+
+	-->
+	<effect_group>
+		<requirements compare_type="or">
+			<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+			<requirement name="ItemHasTags" tags="pistol"/>
+			<requirement name="ItemHasTags" tags="submachine"/>
+		</requirements>
+		<passive_effect level="1" operation="perc_add" name="BlockDamage" value=".05"/>
+		<passive_effect level="1" operation="perc_add" name="EntityDamage" value=".05"/>
+	</effect_group>
+	<effect_group>
+		<passive_effect level="1" operation="base_add" name="StaminaMax" value="20"/>
+		<passive_effect level="1" operation="perc_add" name="SpreadMultiplierHip" value="-.1" tags="ranged"/>
+		<passive_effect level="1" operation="perc_add" name="CrouchSpeed" value=".1"/>
+		<passive_effect level="1" operation="perc_add" name="EnemySearchDuration" value="-.1"/>
+		<passive_effect level="1" operation="perc_add" name="NoiseMultiplier" value="-.1"/>
+		<passive_effect level="1" operation="perc_add" name="LightMultiplier" value="-.1">
+			<requirement name="CVarCompare" cvar="_lightlevel" operation="LTE" value="50"/>
+		</passive_effect>
+	</effect_group></progression>
+	
+<progression name="skillTreeIntellectClass" max_level="1" icon="symbol_brain" desc="skillTreeIntellectClassDesc;5%;10%;5%;5%;5%;25%">
+	<!--
+		
+		S P E C I A L I S T
+		
+		5% increased Submachine Gun, Baton Weapon and Salvage Tool Physical Damage
+		10% increased Portable Turret Physical Damage
+		5% increased Action Skill Experience gain
+		5% better prices when Buying or Selling from Traders
+		5% more Dukes for completing Missions
+		25% increased Bobby Pin and Lockpick Durability
+	-->
+	<effect_group>
+		<requirements compare_type="or">
+			<requirement name="ItemHasTags" tags="perkElectrocutioner"/>
+			<requirement name="ItemHasTags" tags="submachine"/>
+			<requirement name="ItemHasTags" tags="salvageTool"/>
+		</requirements>
+		<passive_effect level="1" operation="perc_add" name="BlockDamage" value=".05"/>
+		<passive_effect level="1" operation="perc_add" name="EntityDamage" value=".05"/>
+	</effect_group>
+	<effect_group>
+		<passive_effect level="1" operation="perc_add" name="EntityDamage" value=".1,.6" tags="perkTurrets"/>
+		<passive_effect level="1" operation="perc_add" name="BlockDamage" value=".1,.6" tags="turretMelee"/>
+	</effect_group>
+	<effect_group>
+		<passive_effect level="1" operation="base_add" name="BarteringBuying" value=".05"/>
+		<passive_effect level="1" operation="base_add" name="BarteringSelling" value=".05"/>
+		<passive_effect level="1" operation="perc_add" name="QuestBonusItemReward" value=".05" comment="Bonus Dukes"/>
+		<passive_effect level="1" operation="perc_add" name="LockPickDurability" value=".25"/>
+	</effect_group></progression>
+
+<progression name="skillTreePending" max_level="10" icon="symbol_loading">
+	<effect_group/></progression>
+
+<progression name="skillTreeMeleeDamage10" max_level="20" icon="symbol_fist_up" desc="skillTreeMeleeDamage10Desc;10%">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="melee"/>
+		<passive_effect level="1,20" operation="perc_add" name="EntityDamage" value=".1,2" tags="primary,secondary"/>
+	</effect_group></progression>
+
+<progression name="skillTreeMeleeDamage05" max_level="20" icon="symbol_fist_up" desc="skillTreeMeleeDamage05Desc;5%">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="melee"/>
+		<passive_effect level="1,20" operation="perc_add" name="EntityDamage" value=".05,1" tags="primary,secondary"/>
+	</effect_group></progression>
+
+<progression name="skillTreeMeleeSpeedBase" max_level="1" icon="symbol_attack_speed" desc="skillTreeMeleeSpeedBaseDesc;10%;5">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="melee"/>
+		<passive_effect level="1" operation="perc_add" name="AttacksPerMinute" value=".1" tags="primary,secondary"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="ItemHasTags" tags="melee"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="5" delay="1.0">
+			<requirement name="ProgressionLevel" progression_name="skillTreeMeleeSpeedBase" operation="Equals" value="1"/>
+		</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeMeleeSpeed05" max_level="20" icon="symbol_attack_speed" desc="skillTreeMeleeSpeed05Desc;5%">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="melee"/>
+		<passive_effect level="1,20" operation="perc_add" name="AttacksPerMinute" value=".05,1" tags="primary,secondary"/>
+	</effect_group></progression>
+
+<progression name="skillTreeMeleeSpeed100" max_level="1" icon="symbol_attack_speed" desc="skillTreeMeleeSpeed100Desc">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="melee"/>
+		<passive_effect level="1" operation="perc_add" name="AttacksPerMinute" value="1" tags="primary,secondary"/>
+	</effect_group></progression>
+
+<progression name="skillTreeMeleeAndAimStaminaUse" max_level="1" icon="symbol_handling" desc="skillTreeMeleeAndAimStaminaUseDesc;10%;10%">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="melee"/>
+		<passive_effect level="1" operation="perc_add" name="StaminaLoss" value="-0.1" tags="primary,secondary"/>
+	</effect_group></progression>
+
+<progression name="skillTreeMeleeStaminaUse" max_level="3" icon="ui_game_symbol_trex" desc="skillTreeMeleeStaminaUseDesc;10%;5">
+	<effect_group name="Level 1">
+		<requirement name="ItemHasTags" tags="melee"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeMeleeStaminaUse" operation="Equals" value="1"/>
+		<passive_effect operation="perc_add" name="StaminaLoss" value="-.1" tags="primary,secondary"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="5" delay="1.0"/>
+	</effect_group>
+	<effect_group name="Level 2">
+		<requirement name="ItemHasTags" tags="melee"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeMeleeStaminaUse" operation="Equals" value="2"/>
+		<passive_effect operation="perc_add" name="StaminaLoss" value="-.2" tags="primary,secondary"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="10" delay="1.0"/>
+	</effect_group>
+	<effect_group name="Level 3">
+		<requirement name="ItemHasTags" tags="melee"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeMeleeStaminaUse" operation="Equals" value="3"/>
+		<passive_effect operation="perc_add" name="StaminaLoss" value="-.3" tags="primary,secondary"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="15" delay="1.0"/>
+	</effect_group></progression>
+
+<progression name="skillTreeMeleeAttackSpeed" max_level="3" icon="ui_game_symbol_knunchuck" desc="skillTreeMeleeAttackSpeedDesc;10%;5">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="club,knuckles,sword,machete,knife,baton"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" level="1,2,3" value=".1,.2,.3" tags="primary,secondary"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="ItemHasTags" tags="melee"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="5" delay="1.0">
+			<requirement name="ProgressionLevel" progression_name="skillTreeMeleeAttackSpeed" operation="Equals" value="1"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="10" delay="1.0">
+			<requirement name="ProgressionLevel" progression_name="skillTreeMeleeAttackSpeed" operation="Equals" value="2"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="15" delay="1.0">
+			<requirement name="ProgressionLevel" progression_name="skillTreeMeleeAttackSpeed" operation="Equals" value="3"/>
+		</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeCarryWeightBase" max_level="1" icon="ui_game_symbol_pack_mule"	desc="skillTreeCarryWeightBaseDesc;+30">
+	<effect_group>
+		<passive_effect level="1" operation="base_add" name="StatWeightMax" value="30"/>
+        <triggered_effect trigger="onPerkLevelChanged" target="self" action="ULM_RecalculatePlayerWeight,UndeadLegacy"/>
+	<!--<triggered_effect trigger="onPerkLevelChanged" action="LogMessage" message="Updating weight limit"/>-->
+	</effect_group></progression>
+
+<progression name="skillTreeMaxStaminaCardio" max_level="6" icon="symbol_cardio" desc="skillTreeMaxStaminaCardioDesc;5;5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="base_add" name="StaminaMax" value="5,30"/>
+		<passive_effect level="1,6" operation="perc_add" name="StaminaChangeOT" value=".05,.3" tags="running"/>
+	</effect_group></progression>
+
+<progression name="skillTreeMaxStaminaBase" max_level="1" icon="ui_game_symbol_run" desc="skillTreeMaxStaminaDesc;+10">
+	<effect_group>
+		<passive_effect level="1" operation="base_add" name="StaminaMax" value="10"/>
+	</effect_group></progression>
+
+<progression name="skillTreeTreasureHunter" max_level="3" icon="ui_game_symbol_treasure" desc="skillTreeTreasureHunterDesc;10%;20%">
+	<effect_group>
+		<passive_effect level="0,1,2,3" operation="base_add" name="TreasureBlocksPerReduction" value="0,-2,-4,-6" note="Base value in quests is 10"/>
+		<passive_effect level="1,3" operation="perc_add" name="LootQuantity" value=".1,.3" tags="buriedTreasure"/>
+	</effect_group></progression>
+
+<progression name="skillTreeTreasureLoot1" max_level="1" icon="ui_game_symbol_treasure" desc="skillTreeTreasureLoot1Desc;10%;100-200">
+	<effect_group><!-- referenced in groupBuriedTreasure in loot_groups.xml -->
+		<passive_effect level="1" operation="perc_add" name="LootQuantity" value=".1" tags="buriedTreasure"/>
+	</effect_group></progression>
+
+<progression name="skillTreeTreasureLoot2" max_level="1" icon="ui_game_symbol_treasure" desc="skillTreeTreasureLoot2Desc;10%;100-200">
+	<effect_group><!-- referenced in groupBuriedTreasure in loot_groups.xml -->
+		<passive_effect level="1" operation="perc_add" name="LootQuantity" value=".1" tags="buriedTreasure"/>
+	</effect_group></progression>
+
+<progression name="skillTreeTreasureLoot3" max_level="1" icon="ui_game_symbol_treasure" desc="skillTreeTreasureLoot3Desc;10%">
+	<effect_group><!-- referenced in groupBuriedTreasure in loot_groups.xml -->
+		<passive_effect level="1" operation="perc_add" name="LootQuantity" value=".1" tags="buriedTreasure"/>
+	</effect_group></progression>
+
+<progression name="skillTreeLooting05" max_level="3" icon="symbol_bag"	desc="skillTreeLooting05Desc;+5;10%">
+	<effect_group>
+		<passive_effect level="1,3" operation="base_add" name="LootStage" value="5,15"/>
+		<passive_effect level="1,3" operation="perc_add" name="ScavengingTime" value="-.1,-.3"/>
+	</effect_group></progression>
+
+<progression name="skillTreeLooting10" max_level="1" icon="symbol_bag"	desc="skillTreeLooting10Desc;10%;10%">
+	<effect_group>
+		<passive_effect level="1" operation="perc_add" name="LootStage" value=".1"/>
+		<passive_effect level="1" operation="perc_add" name="ScavengingTime" value="-.1"/>
+	</effect_group></progression>
+
+<progression name="skillTreeLooting15" max_level="1" icon="symbol_bag"	desc="skillTreeLooting15Desc;15%;10%">
+	<effect_group>
+		<passive_effect level="1" operation="perc_add" name="LootStage" value=".15"/>
+		<passive_effect level="1" operation="perc_add" name="ScavengingTime" value="-.1"/>
+	</effect_group></progression>
+
+<progression name="skillTreeFarmer" max_level="2" icon="symbol_crops"	desc="skillTreeFarmerDesc;-25%">
+	<effect_group>
+		<passive_effect level="0,1,2" operation="base_set" name="CraftingTier" value="0,1,2" tags="perkLivingOffTheLandCrafting"/>
+	</effect_group></progression>
+
+<progression name="skillTreeForager" max_level="2" icon="symbol_seeds"	desc="skillTreeForagerDesc;50%;1">
+	<effect_group>
+	<!--<passive_effect name="HarvestCount" operation="perc_add" level="0,1,2" value="0,1,1" tags="cropHarvest,wildCropsHarvest"/>
+		<passive_effect level="1" operation="base_add" name="HarvestCount" value="1" tags="foragerBonus1"/>
+		<passive_effect level="2" operation="base_add" name="HarvestCount" value="1" tags="foragerBonus2"/>-->
+		<passive_effect level="1,2" operation="base_add" name="HarvestChance" value=".5,1" tags="cropHarvest,wildCropsHarvest"/>
+		<passive_effect level="0,1,2" operation="base_add" name="HarvestSize" value="0,1,2"/>
+	<!--<passive_effect level="0,1,2" operation="base_set" name="HarvestSize" value="0,1,2"/>-->
+	</effect_group></progression>
+
+<progression name="skillTreeHunter" max_level="3" icon="symbol_butcher"	desc="skillTreeHunterDesc;+10;10%">
+	<effect_group>
+		<passive_effect level="1,3" operation="base_add" name="WaterMax" value="10,30"/>
+		<passive_effect level="1,3" operation="base_add" name="FoodMax"  value="10,30"/>
+		<passive_effect level="1,3" operation="perc_add" name="HarvestCount" value=".1,.3" tags="butcherHarvest"/>
+	</effect_group></progression>
+
+<progression name="skillTreeButcher" max_level="3" icon="symbol_butcher"	desc="skillTreeButcherDesc;15%">
+	<effect_group>
+		<passive_effect level="1,3" operation="perc_add" name="HarvestCount" value=".15,.45" tags="butcherHarvest"/>
+	</effect_group></progression>
+
+<progression name="skillTreeTrackAnimalsSmall" max_level="1" icon="symbol_animal_footprint"	desc="skillTreeTrackAnimalsSmallDesc">
+	<effect_group>
+		<passive_effect level="0,1" operation="base_set" name="TrackDistance" value="0,100"/>
+		<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffAnimalTracker">
+			<requirement name="NotHasBuff" buff="buffAnimalTrackerAcquired"/>
+			<requirement name="ProgressionLevel" progression_name="skillTreeTrackAnimalsSmall" operation="GT" value="0"/>
+		</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeTrackAnimalsMedium" max_level="1" icon="symbol_animal_footprint" desc="skillTreeTrackAnimalsMediumDesc">
+	<effect_group>
+		<passive_effect level="1" operation="base_set" name="TrackDistance" value="100"/>
+		<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffAnimalTracker">
+			<requirement name="NotHasBuff" buff="buffAnimalTrackerAcquired"/>
+			<requirement name="ProgressionLevel" progression_name="skillTreeTrackAnimalsMedium" operation="GT" value="0"/>
+		</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeTrackAnimalsLarge" max_level="1" icon="symbol_animal_footprint"	desc="skillTreeTrackAnimalsLargeDesc">
+	<effect_group>
+		<passive_effect level="1" operation="base_set" name="TrackDistance" value="100"/>
+		<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffAnimalTracker">
+			<requirement name="NotHasBuff" buff="buffAnimalTrackerAcquired"/>
+			<requirement name="ProgressionLevel" progression_name="skillTreeTrackAnimalsLarge" operation="GT" value="0"/>
+		</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeFirearmHandlingBase" max_level="1" icon="symbol_recoil" desc="skillTreeFirearmHandlingDesc;10%">
+	<effect_group>
+		<passive_effect level="1" operation="perc_add" name="WeaponHandling" value="-.1" tags="gun"/>
+		<passive_effect level="1" operation="perc_add" name="RoundsPerMinute" value="-.1" tags="gun"/>
+	</effect_group></progression>
+
+<progression name="skillTreeFirearmRunAndGun" max_level="3" icon="ui_game_symbol_run_and_gun"	desc="skillTreeFirearmRunAndGunDesc;10%;33%">
+	<effect_group>
+		<passive_effect level="1,3" operation="perc_add" name="SpreadMultiplierHip" value="-.1,-.3" tags="gun"/>
+	</effect_group></progression>
+
+<progression name="skillTreeSniperPenetration" max_level="3" icon="symbol_pierce_sniper" desc="skillTreeSniperPenetrationDesc;+1">
+	<effect_group>
+		<passive_effect level="1,3" operation="perc_add" name="EntityPenetrationCount" value="1,3" tags="sniperRifle"/>
+	</effect_group></progression>
+
+<progression name="skillTreeRangedDamageBase" max_level="1" icon="symbol_damage_power" desc="skillTreeRangedDamageDesc;10%">
+	<effect_group>
+		<passive_effect level="1" operation="perc_add" name="BlockDamage" value=".1" tags="ranged"/>
+		<passive_effect level="1" operation="perc_add" name="EntityDamage" value=".1" tags="ranged"/>
+	</effect_group></progression>
+
+<progression name="skillTreeRangedArmorReduction" max_level="6" icon="symbol_pierce_ammo"	desc="skillTreeRangedArmorReductionDesc;7.5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="TargetArmor" value="-.075,-.45" tags="ranged"/>
+	</effect_group></progression>
+
+<progression name="skillTreeSpearArmorReduction" max_level="3" icon="symbol_pierce_spear"	desc="skillTreeSpearArmorReductionDesc;10%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="TargetArmor" value="-.1,-.6" tags="polearm"/>
+	</effect_group></progression>
+
+<progression name="skillTreeSpearDamage" max_level="6" icon="symbol_spear"	desc="skillTreeSpearDamageDesc;5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="BlockDamage" value=".05,.3" tags="polearm"/>
+		<passive_effect level="1,6" operation="perc_add" name="EntityDamage" value=".05,.3" tags="polearm"/>
+	</effect_group></progression>
+
+<progression name="skillTreeArcheryDamage" max_level="6" icon="symbol_archery"	desc="skillTreeArcheryDamageDesc;5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="BlockDamage" value=".05,.3" tags="archery"/>
+		<passive_effect level="1,6" operation="perc_add" name="EntityDamage" value=".05,.3" tags="archery"/>
+	</effect_group></progression>
+
+<progression name="skillTreeArcheryHandling" max_level="3" icon="symbol_bow_handling"	desc="skillTreeArcheryHandlingDesc;10%">
+	<effect_group>
+		<passive_effect level="1,3" operation="perc_add" name="WeaponHandling" value=".1,.3" tags="archery"/>
+		<passive_effect level="1,3" operation="perc_add" name="ReloadSpeedMultiplier" value=".1,.3" tags="archery"/>
+		<passive_effect level="1,3" operation="perc_add" name="RoundsPerMinute" value=".1,.3" tags="bowDrawPenalty"/>
+	</effect_group></progression>
+
+<progression name="skillTreeArcheryHandlingBase" max_level="1" icon="symbol_archery_0"	desc="skillTreeArcheryHandlingDesc;15%">
+	<effect_group>
+		<passive_effect level="1" operation="perc_add" name="WeaponHandling" value=".15" tags="archery"/>
+		<passive_effect level="1" operation="perc_add" name="ReloadSpeedMultiplier" value=".15" tags="archery"/>
+		<passive_effect level="1" operation="perc_add" name="RoundsPerMinute" value=".15" tags="bowDrawPenalty"/>
+	</effect_group></progression>
+
+<progression name="skillTreeSniperDeadEye" max_level="3" icon="symbol_dead_eye" desc="skillTreeSniperDeadEyeDesc;10%;20%">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="sniperRifle"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeSniperDeadEye" operation="GTE" value="1"/>
+		<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffDeadEye"/>
+	</effect_group></progression>
+
+<progression name="skillTreeSniperDamage" max_level="6" icon="symbol_sniper_rifle" desc="skillTreeSniperDamageDesc;5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="BlockDamage" value=".05,.3" tags="sniperRifle"/>
+		<passive_effect level="1,6" operation="perc_add" name="EntityDamage" value=".05,.3" tags="sniperRifle"/>
+	</effect_group></progression>
+
+<progression name="skillTreeSniperHandling" max_level="3" icon="symbol_sniper_handling" desc="skillTreeSniperHandlingDesc;5%">
+	<effect_group>
+		<passive_effect level="1,3" operation="perc_add" name="WeaponHandling" value=".05,.15" tags="sniperRifle"/>
+		<passive_effect level="1,3" operation="perc_add" name="ReloadSpeedMultiplier" value=".05,.15" tags="sniperRifle"/>
+	</effect_group></progression>
+
+<progression name="skillTreeMiningYield" max_level="6" icon="symbol_motherload" desc="skillTreeMiningYieldDesc;10%">
+	<effect_group>
+		<requirement name="HoldingItemHasTags" tags="pickaxe,shovel,axe"/>
+		<passive_effect level="1,6" operation="perc_add" name="HarvestCount" value=".1,.6" tags="oreHarvest"/>
+		<passive_effect level="1,6" operation="perc_add" name="HarvestCount" value=".1,.6" tags="woodHarvest"/>
+	</effect_group></progression>
+
+<progression name="skillTreeMiningDamage" max_level="6" icon="symbol_minecart" desc="skillTreeMiningDamageDesc;10%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="BlockDamage" value=".1,.6" tags="pickaxe,axe"/>
+		<passive_effect level="1,6" operation="perc_add" name="EntityDamage" value=".1,.6" tags="pickaxe,axe"/>
+	</effect_group></progression>
+
+<progression name="skillTreeMiningDamageBase" max_level="1" icon="symbol_pickaxe" desc="skillTreeMiningDamageDesc;15%">
+	<effect_group>
+		<requirements compare_type="or">
+			<requirement name="ItemHasTags" tags="axe"/>
+			<requirement name="ItemHasTags" tags="pickaxe"/>
+			<requirement name="ItemHasTags" tags="shovel"/>
+		</requirements>
+		<passive_effect level="1" operation="perc_add" name="BlockDamage" value=".15"/>
+		<passive_effect level="1" operation="perc_add" name="EntityDamage" value=".15"/>
+	</effect_group></progression>
+
+<progression name="skillTreeCarryWeight" max_level="6" icon="symbol_backpack" desc="skillTreeCarryWeightDesc;+20">
+	<effect_group>
+		<passive_effect level="1,6" operation="base_add" name="StatWeightMax" value="20,120"/>
+        <triggered_effect trigger="onPerkLevelChanged" target="self" action="ULM_RecalculatePlayerWeight,UndeadLegacy"/>
+	</effect_group></progression>
+
+<progression name="skillTreeMachineGunDamage" max_level="6" icon="symbol_machine_gun" desc="skillTreeMachineGunDamageDesc;5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="BlockDamage" value=".05,.3" tags="machineGun"/>
+		<passive_effect level="1,6" operation="perc_add" name="EntityDamage" value=".05,.3" tags="machineGun"/>
+	</effect_group></progression>
+
+<progression name="skillTreeMachineGunHandling" max_level="3" icon="symbol_machine_gun" desc="skillTreeMachineGunHandlingDesc;5%">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="machineGun"/>
+		<passive_effect level="1,3" operation="perc_add" name="RoundsPerMinute"				value=".05,.15"/>
+		<passive_effect level="1,3" operation="perc_add" name="WeaponHandling"				value=".05,.15"/>
+		<passive_effect level="1,3" operation="perc_add" name="ReloadSpeedMultiplier"		value=".05,.15"/>
+		<passive_effect level="1,3" operation="perc_add" name="KickDegreesVerticalMin"		value="-.05,-.15"/>
+		<passive_effect level="1,3" operation="perc_add" name="KickDegreesVerticalMax"		value="-.05,-.15"/>
+		<passive_effect level="1,3" operation="perc_add" name="KickDegreesHorizontalMin"	value="-.05,-.15"/>
+		<passive_effect level="1,3" operation="perc_add" name="KickDegreesHorizontalMax"	value="-.05,-.15"/>
+		<passive_effect level="1,3" operation="perc_add" name="IncrementalSpreadMultiplier"	value="-.05,-.15"/>
+	</effect_group></progression>
+
+<progression name="skillTreeMachineGunCommando" max_level="3" icon="symbol_machine_gun" desc="skillTreeMachineGunCommandoDesc;2">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="machineGun"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyStats" stat="Stamina" operation="add" value="2">
+			<requirement name="ProgressionLevel" progression_name="skillTreeMachineGunCommando" operation="Equals" value="1"/>
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyStats" stat="Stamina" operation="add" value="4">
+			<requirement name="ProgressionLevel" progression_name="skillTreeMachineGunCommando" operation="Equals" value="2"/>
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyStats" stat="Stamina" operation="add" value="6">
+			<requirement name="ProgressionLevel" progression_name="skillTreeMachineGunCommando" operation="Equals" value="3"/>
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreePistolDamage" max_level="6" icon="symbol_pistol" desc="skillTreePistolDamageDesc;5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="BlockDamage" value=".05,.3" tags="pistol"/>
+		<passive_effect level="1,6" operation="perc_add" name="EntityDamage" value=".05,.3" tags="pistol"/>
+	</effect_group></progression>
+
+<progression name="skillTreePistolHandling" max_level="3" icon="symbol_pistol" desc="skillTreePistolHandlingDesc;10%">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="pistol"/>
+		<passive_effect level="1,3" operation="perc_add" name="RoundsPerMinute"				value=".1,.3"/>
+		<passive_effect level="1,3" operation="perc_add" name="ReloadSpeedMultiplier"		value=".1,.3"/>
+		<passive_effect level="1,3" operation="perc_add" name="IncrementalSpreadMultiplier" value="-.1,-.3"/>
+	</effect_group></progression>
+
+<progression name="skillTreePistolTrippleTap" max_level="3" icon="symbol_pistol" desc="skillTreePistolTrippleTapDesc;3;+33%">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="pistol"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar=".GunslingerCombo" operation="add" value="1">
+			<requirement name="ProgressionLevel" progression_name="skillTreePistolTrippleTap" operation="GTE" value="1"/>
+			<requirement name="NotHasBuff" buff="buffPistolTrippleTapBonus"/>
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffPistolTrippleTap">
+			<requirement name="ProgressionLevel" progression_name="skillTreePistolTrippleTap" operation="GTE" value="1"/>
+			<requirement name="NotHasBuff" buff="buffPistolTrippleTapBonus"/>
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeBladeDamage" max_level="6" icon="symbol_blades" desc="skillTreeBladeDamageDesc;5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="BlockDamage" value=".05,.3" tags="perkDeepCuts"/>
+		<passive_effect level="1,6" operation="perc_add" name="EntityDamage" value=".05,.3" tags="perkDeepCuts"/>
+	</effect_group></progression>
+
+<progression name="skillTreeBladeDeepCuts" max_level="6" icon="symbol_bleed" desc="skillTreeBladeDeepCutsDesc;+1;+15%;+1;5%">
+	<effect_group name="primary, always">
+		<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+		<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="@$maxBleedCounter" target="other"/>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+		<requirement name="CVarCompare" cvar="bleedCounter" operation="GT" value="0" target="other"/>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+	</effect_group>
+	<effect_group name="Secondary Attack">
+		<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+		<!-- Level 0 -->
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="set" value="2">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="2" target="other"/>
+		</triggered_effect>
+		<!-- Level 1 -->
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="set" value="3">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="1"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="Equals" value="2" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="2">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="1"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="2" target="other"/>
+		</triggered_effect>
+		<!-- Level 2 -->
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="set" value="4">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="2"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="GTE" value="1" target="other"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="4" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="3">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="2"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="2" target="other"/>
+		</triggered_effect>
+		<!-- Level 3 -->
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="set" value="5">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="3"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="GTE" value="1" target="other"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="5" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="4">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="3"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="2" target="other"/>
+		</triggered_effect>
+		<!-- Level 4 -->
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="set" value="6">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="4"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="GTE" value="2" target="other"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="6" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="4">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="4"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="2" target="other"/>
+		</triggered_effect>
+		<!-- Level 5 -->
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="set" value="7">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="5"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="GTE" value="2" target="other"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="7" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="5">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="5"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="2" target="other"/>
+		</triggered_effect>
+		<!-- Level 6 -->
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="set" value="8">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="6"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="GTE" value="2" target="other"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="8" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="6">
+			<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="6"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="2" target="other"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Bleed Slowdown 1">
+		<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="$bleedSlowdown" operation="GT" value="-.05" target="other"/>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.05"/>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.05"/>
+	</effect_group>
+	<effect_group name="Bleed Slowdown 2">
+		<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="2"/>
+		<requirement name="CVarCompare" cvar="$bleedSlowdown" operation="GT" value="-.1" target="other"/>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.1"/>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.1"/>
+	</effect_group>
+	<effect_group name="Bleed Slowdown 3">
+		<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="3"/>
+		<requirement name="CVarCompare" cvar="$bleedSlowdown" operation="GT" value="-.15" target="other"/>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.15"/>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.15"/>
+	</effect_group>
+	<effect_group name="Bleed Slowdown 4">
+		<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="3"/>
+		<requirement name="CVarCompare" cvar="$bleedSlowdown" operation="GT" value="-.2" target="other"/>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.2"/>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.2"/>
+	</effect_group>
+	<effect_group name="Bleed Slowdown 5">
+		<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="3"/>
+		<requirement name="CVarCompare" cvar="$bleedSlowdown" operation="GT" value="-.25" target="other"/>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.25"/>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.25"/>
+	</effect_group>
+	<effect_group name="Bleed Slowdown 6">
+		<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="3"/>
+		<requirement name="CVarCompare" cvar="$bleedSlowdown" operation="GT" value="-.3" target="other"/>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.3"/>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.3"/>
+	</effect_group>
+	<effect_group name="Grazing Hits 1">
+		<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="3" target="other"/>
+		<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+	</effect_group>
+	<effect_group name="Grazing Hits 2">
+		<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="2"/>
+		<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="4" target="other"/>
+		<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+		<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+	</effect_group>
+	<effect_group name="Grazing Hits 3">
+		<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="3"/>
+		<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="5" target="other"/>
+		<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="45"/>
+		<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+	</effect_group>
+	<effect_group name="Grazing Hits 4">
+		<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="4"/>
+		<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="6" target="other"/>
+		<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
+		<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+	</effect_group>
+	<effect_group name="Grazing Hits 5">
+		<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="5"/>
+		<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="7" target="other"/>
+		<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="75"/>
+		<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+	</effect_group>
+	<effect_group name="Grazing Hits 6">
+		<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeBladeDeepCuts" operation="Equals" value="6"/>
+		<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="8" target="other"/>
+		<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="90"/>
+		<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+	</effect_group>
+	</progression>
+
+<progression name="skillTreeResistDamage" max_level="5" icon="symbol_turtle_shell" desc="skillTreeResistDamageDesc;4%;10%">
+	<effect_group>
+		<passive_effect level="1,5" operation="base_add" name="GeneralDamageResist" value=".04,.20"/>
+		<passive_effect level="1,5" operation="base_add" name="BuffResistance" value=".1,.5" tags="buffInjuryStunned01,buffInjuryStunned02"/>
+	</effect_group></progression>
+
+<progression name="skillTreeResistDamageBase" max_level="1" icon="symbol_shattered_shield" desc="skillTreeResistDamageDesc;5%;15%">
+	<effect_group>
+		<passive_effect level="1" operation="base_add" name="GeneralDamageResist" value=".05"/>
+		<passive_effect level="1" operation="base_add" name="BuffResistance" value=".15" tags="buffInjuryStunned01,buffInjuryStunned02"/>
+	</effect_group></progression>
+
+<progression name="skillTreeResistWeather" max_level="3" icon="symbol_insulated" desc="skillTreeResistWeatherDesc;+5;15%">
+	<effect_group>
+		<passive_effect level="1,3" operation="base_add" name="ResistCold" value="5,15"/>
+		<passive_effect level="1,3" operation="base_add" name="ResistHeat" value="5,15"/>
+		<!-- T3 effect is in buffElementHot/buffElementCold -->
+	</effect_group></progression>
+
+<progression name="skillTreeHealthBase" max_level="1" icon="symbol_health" desc="skillTreeHealthBaseDesc;+10">
+	<effect_group>
+		<passive_effect level="1" operation="base_add" name="HealthMax" value="10"/>
+	</effect_group></progression>
+
+<progression name="skillTreeHealth05" max_level="6" icon="symbol_health" desc="skillTreeHealth05Desc;+5">
+	<effect_group>
+		<passive_effect level="1,6" operation="base_add" name="HealthMax" value="5,30"/>
+	</effect_group></progression>
+
+<progression name="skillTreeArmorLight" max_level="6" icon="symbol_armor_light" desc="skillTreeArmorLightDesc;10%;10%;12.5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="DegradationPerUse" value="-.1,-.6" tags="armorLight"/>
+	</effect_group></progression>
+
+<progression name="skillTreeArmorMedium" max_level="6" icon="symbol_armor_medium" desc="skillTreeArmorMediumDesc;10%;10%;12.5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="DegradationPerUse" value="-.1,-.6" tags="armorMedium"/>
+	</effect_group></progression>
+
+<progression name="skillTreeArmorHeavy" max_level="6" icon="symbol_armor_heavy" desc="skillTreeArmorHeavyDesc;10%;5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="DegradationPerUse" value="-.1,-.6" tags="armorHeavy"/>
+	</effect_group></progression>
+
+<progression name="skillTreeInfiltrator" max_level="2" icon="symbol_trapper" desc="skillTreeInfiltratorDesc;0.5s;20%">
+	<effect_group>
+		<passive_effect level="1,2" operation="base_add" name="TrapDoorTriggerDelay" value=".5,1"/>
+		<passive_effect level="1,2" operation="base_add" name="LandMineTriggerDelay" value=".5,1"/>
+		<passive_effect level="1,2" operation="perc_add" name="TrapIncomingDamage" value="-.2,-.4"/>
+	</effect_group></progression>
+
+<progression name="skillTreeInfiltrator3" max_level="1" icon="symbol_trapper" desc="skillTreeInfiltrator3Desc;1s;20%">
+	<effect_group>
+		<passive_effect level="1" operation="base_add" name="TrapDoorTriggerDelay" value="1"/>
+		<passive_effect level="1" operation="base_add" name="LandMineTriggerDelay" value="1"/>
+		<passive_effect level="1" operation="perc_add" name="TrapIncomingDamage" value="-.2"/>
+		<passive_effect level="1" operation="base_set" name="BlockPickup" value="1" tags="Mine"/>
+	</effect_group></progression>
+
+<progression name="skillTreeClubDamage" max_level="6" icon="symbol_club" desc="skillTreeClubDamageDesc;5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="BlockDamage" value=".05,.3" tags="club"/>
+		<passive_effect level="1,6" operation="perc_add" name="EntityDamage" value=".05,.3" tags="club"/>
+	</effect_group></progression>
+
+<progression name="skillTreeClubDamageCombo" max_level="3" icon="symbol_club" desc="skillTreeClubDamageComboDesc;3;33%">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="club"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar=".PummelPeteCombo" operation="add" value="1">
+			<requirement name="ProgressionLevel" progression_name="skillTreeClubDamageCombo" operation="GTE" value="1"/>
+			<requirement name="NotHasBuff" buff="buffClubDamageComboBonus"/>
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffClubDamageCombo">
+			<requirement name="ProgressionLevel" progression_name="skillTreeClubDamageCombo" operation="GTE" value="1"/>
+			<requirement name="NotHasBuff" buff="buffClubDamageComboBonus"/>
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeClubKnockdown" max_level="3" icon="symbol_club" desc="skillTreeClubKnockdownDesc;15%;15%">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="club"/>
+		<requirement name="CVarCompare" cvar="_stunned" operation="Equals" value="1" target="other"/>
+		<passive_effect level="1,3" operation="perc_add" name="EntityDamage" value=".15,.45"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="ItemHasTags" tags="club"/>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffStayDownKO">
+				<requirement name="ProgressionLevel" progression_name="skillTreeClubKnockdown" operation="Equals" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+				<requirement name="CVarCompare" cvar="_stunned" operation="Equals" value="1" target="other"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffStayDownKO">
+				<requirement name="ProgressionLevel" progression_name="skillTreeClubKnockdown" operation="Equals" value="2"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+				<requirement name="CVarCompare" cvar="_stunned" operation="Equals" value="1" target="other"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffStayDownKO">
+				<requirement name="ProgressionLevel" progression_name="skillTreeClubKnockdown" operation="Equals" value="3"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="45"/>
+				<requirement name="CVarCompare" cvar="_stunned" operation="Equals" value="1" target="other"/>
+			</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeSledgeDamage" max_level="6" icon="symbol_sledgehammer" desc="skillTreeSledgeDamageDesc;5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="BlockDamage" value=".05,.3" tags="sledge"/>
+		<passive_effect level="1,6" operation="perc_add" name="EntityDamage" value=".05,.3" tags="sledge"/>
+	</effect_group></progression>
+
+<progression name="skillTreeSledgeKnockdown" max_level="6" icon="symbol_sledgehammer" desc="skillTreeSledgeKnockdownDesc;10%;5%">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="sledge"/>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+			<requirement name="ProgressionLevel" progression_name="skillTreeSledgeKnockdown" operation="Equals" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+			<requirement name="ProgressionLevel" progression_name="skillTreeSledgeKnockdown" operation="Equals" value="2"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+			<requirement name="ProgressionLevel" progression_name="skillTreeSledgeKnockdown" operation="Equals" value="3"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown02">
+			<requirement name="ProgressionLevel" progression_name="skillTreeSledgeKnockdown" operation="Equals" value="4"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown02">
+			<requirement name="ProgressionLevel" progression_name="skillTreeSledgeKnockdown" operation="Equals" value="5"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown02">
+			<requirement name="ProgressionLevel" progression_name="skillTreeSledgeKnockdown" operation="Equals" value="6"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="1.3" target_tags="zombie,animal" buff="buffInjuryKnockdown01">
+			<requirement name="ProgressionLevel" progression_name="skillTreeSledgeKnockdown" operation="Equals" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="5"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="1.325" target_tags="zombie,animal" buff="buffInjuryKnockdown01">
+			<requirement name="ProgressionLevel" progression_name="skillTreeSledgeKnockdown" operation="Equals" value="2"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="1.35" target_tags="zombie,animal" buff="buffInjuryKnockdown01">
+			<requirement name="ProgressionLevel" progression_name="skillTreeSledgeKnockdown" operation="Equals" value="3"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="1.375" target_tags="zombie,animal" buff="buffInjuryKnockdown01">
+			<requirement name="ProgressionLevel" progression_name="skillTreeSledgeKnockdown" operation="Equals" value="4"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="1.4" target_tags="zombie,animal" buff="buffInjuryKnockdown01">
+			<requirement name="ProgressionLevel" progression_name="skillTreeSledgeKnockdown" operation="Equals" value="5"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="1.425" target_tags="zombie,animal" buff="buffInjuryKnockdown01">
+			<requirement name="ProgressionLevel" progression_name="skillTreeSledgeKnockdown" operation="Equals" value="6"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+		</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeKnucklesDamage" max_level="5" icon="symbol_knuckles" desc="skillTreeKnucklesDamageDesc;5%;3%">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="knuckles"/>
+		<passive_effect level="1,5" operation="perc_add" name="BlockDamage" value=".05,.25"/>
+		<passive_effect level="1,5" operation="perc_add" name="EntityDamage" value=".05,.25"/>
+		<passive_effect level="1,5" operation="base_add" name="DismemberChance" value=".03,.15" tags="head"/>
+	</effect_group></progression>
+
+<progression name="skillTreeKnucklesTeethBreaker" max_level="1" icon="symbol_knuckles" desc="skillTreeKnucklesTeethBreakerDesc;5%;5%">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="knuckles"/>
+		<requirement name="HitLocation" body_parts="Head"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeKnucklesTeethBreaker" operation="Equals" value="1"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffBrawlerNoTeeth"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="ItemHasTags" tags="knuckles"/>
+		<passive_effect level="1" operation="perc_add" name="BlockDamage" value=".05"/>
+		<passive_effect level="1" operation="perc_add" name="EntityDamage" value=".05"/>
+		<passive_effect level="1" operation="base_add" name="DismemberChance" value=".05" tags="head"/>
+	</effect_group></progression>
+
+<progression name="skillTreeKnucklesStun" max_level="3" icon="symbol_knuckles" desc="skillTreeKnucklesStunDesc;8%;10%">
+	<effect_group>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffInjuryStunned01">
+			<requirement name="ProgressionLevel" progression_name="skillTreeKnucklesStun" operation="Equals" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="8"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffInjuryStunned01">
+			<requirement name="ProgressionLevel" progression_name="skillTreeKnucklesStun" operation="Equals" value="2"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="16"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffInjuryStunned01">
+			<requirement name="ProgressionLevel" progression_name="skillTreeKnucklesStun" operation="Equals" value="2"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="24"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group>
+		<requirement name="ItemHasTags" tags="knuckles"/>
+		<requirement name="HitLocation" body_parts="Head"/>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+			<requirement name="ProgressionLevel" progression_name="skillTreeKnucklesStun" operation="Equals" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+			<requirement name="ProgressionLevel" progression_name="skillTreeKnucklesStun" operation="Equals" value="2"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+			<requirement name="ProgressionLevel" progression_name="skillTreeKnucklesStun" operation="Equals" value="3"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+		</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeDoubleJump" max_level="1" icon="symbol_springed_hare" desc="skillTreeDoubleJumpDesc;10%;+1m">
+	<effect_group name="Effect Handled in C#">
+		<passive_effect level="1" operation="perc_add" name="StaminaLoss" value="-.1" tags="jumping"/>
+		<triggered_effect trigger="onSelfJump" action="ModifyCVar" cvar="doubleJumpCounter" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfLandJump" action="ModifyCVar" cvar="doubleJumpCounter" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfLandJump" action="ModifyCVar" cvar="doubleJumpTimer" operation="set" value="0"/>
+		<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" buff="ulmBuffUpdateStatsDoubleJump"/>
+	</effect_group></progression>
+
+<progression name="skillTreeDoubleJump2" max_level="1" icon="symbol_springed_hare" desc="skillTreeDoubleJump2Desc;10%;10%;33%;+1 m">
+	<effect_group>
+		<passive_effect level="1" operation="perc_add" name="StaminaLoss" value="-.1" tags="jumping"/>
+		<passive_effect level="1" operation="perc_add" name="StaminaLoss" value="-.1" tags="doubleJump"/>
+		<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" buff="ulmBuffUpdateStatsDoubleJump"/>
+	</effect_group></progression>
+
+<progression name="skillTreeDoubleJump3" max_level="1" icon="symbol_springed_hare" desc="skillTreeDoubleJump3Desc;10%;10%;33%;+1 m">
+	<effect_group>
+		<passive_effect level="1" operation="perc_add" name="StaminaLoss" value="-.1" tags="jumping"/>
+		<passive_effect level="1" operation="perc_add" name="StaminaLoss" value="-.1" tags="doubleJump"/>
+		<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" buff="ulmBuffUpdateStatsDoubleJump"/>
+	</effect_group></progression>
+
+<progression name="skillTreeDoubleJump4" max_level="1" icon="symbol_springed_hare" desc="skillTreeDoubleJump4Desc;10%;10%;33%;+2 m">
+	<effect_group>
+		<passive_effect level="1" operation="perc_add" name="StaminaLoss" value="-.1" tags="jumping"/>
+		<passive_effect level="1" operation="perc_add" name="StaminaLoss" value="-.1" tags="doubleJump"/>
+		<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" buff="ulmBuffUpdateStatsDoubleJump"/>
+	</effect_group></progression>
+
+<progression name="skillTreeStealth" max_level="6" icon="symbol_fox" desc="skillTreeStealthDesc;8.5%;8.5%;10%;11.5%">
+	<effect_group>
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		<passive_effect level="1,6" operation="perc_add" name="CrouchSpeed" value=".085,.51"/>
+		<passive_effect level="1,6" operation="perc_add" name="EnemySearchDuration" value="-.115,-.69"/>
+		<passive_effect level="1,6" operation="perc_add" name="NoiseMultiplier" value="-.085,-.51"/>
+		<passive_effect level="1,6" operation="perc_add" name="LightMultiplier" value="-.1,-.6">
+			<requirement name="CVarCompare" cvar="_lightlevel" operation="LTE" value="50"/>
+		</passive_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeSneakDamage" max_level="6" icon="ui_game_symbol_sneak_attack" desc="skillTreeSneakDamageDesc;50%">
+	<effect_group>
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+		<requirement name="!ItemHasTags" tags="sledge"/>
+		<passive_effect level="0,1,2,3,4,5,6" operation="base_add" name="DamageBonus"  value="1.5,2.0,2.5,3.0,3.5,4.0,4.5"/>
+		<passive_effect level="0,1,2,3,4,5,6" operation="perc_add" name="EntityDamage" value="0.5,1.0,1.5,2.0,2.5,3.0,3.5"/>
+	</effect_group></progression>
+
+<progression name="skillTreeSneakDamageBase" max_level="1" icon="ui_game_symbol_sneak_attack" desc="skillTreeSneakDamageDesc;75%">
+	<effect_group>
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+		<requirement name="!ItemHasTags" tags="sledge"/>
+		<passive_effect level="1" operation="base_add" name="DamageBonus" value=".75"/>
+		<passive_effect level="1" operation="perc_add" name="EntityDamage" value=".75"/>
+	</effect_group></progression>
+
+<progression name="skillTreeShotgunDamage" max_level="6" icon="symbol_shotgun" desc="skillTreeShotgunDamageDesc;5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="BlockDamage"	 value=".05,.3" tags="shotgun"/>
+		<passive_effect level="1,6" operation="perc_add" name="EntityDamage" value=".05,.3" tags="shotgun"/>
+	</effect_group></progression>
+
+<progression name="skillTreeShotgunHandling" max_level="3" icon="symbol_shotgun" desc="skillTreeShotgunHandlingDesc;5%">
+	<effect_group>
+		<passive_effect level="1,3" operation="perc_add" name="ReloadSpeedMultiplier"	value=".1,.3" tags="shotgun"/>
+		<passive_effect level="1,3" operation="perc_add" name="RoundsPerMinute"			value=".1,.3" tags="shotgun"/>
+	</effect_group></progression>
+
+<progression name="skillTreeShotgunStun1" max_level="1" icon="symbol_shotgun" desc="skillTreeShotgunStun1Desc;4s">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="shotgun"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeShotgunStun1" operation="Equals" value="1"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned01Shotgun"/>
+	</effect_group></progression>
+
+<progression name="skillTreeShotgunStun2" max_level="1" icon="symbol_shotgun" desc="skillTreeShotgunStun2Desc;2s">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="shotgun"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeShotgunStun2" operation="Equals" value="1"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned02Shotgun"/>
+	</effect_group></progression>
+
+<progression name="skillTreeShotgunStun3" max_level="1" icon="symbol_shotgun" desc="skillTreeShotgunStun3Desc;2s">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="shotgun"/>
+		<requirement name="ProgressionLevel" progression_name="skillTreeShotgunStun3" operation="Equals" value="1"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned03Shotgun"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker" buff="buffInjuryCrippled01">
+			<requirement name="ProgressionLevel" progression_name="skillTreeShotgunStun3" operation="Equals" value="1"/>
+			<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/></triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeMaxFoodWater" max_level="2" icon="ui_game_symbol_stomach" desc="skillTreeMaxFoodWaterDesc;+20">
+	<effect_group>
+		<passive_effect level="1,2" operation="base_add" name="WaterMax" value="20,40"/>
+		<passive_effect level="1,2" operation="base_add" name="FoodMax"  value="20,40"/>
+	</effect_group></progression>
+
+<progression name="skillTreeMetabolism" max_level="3" icon="ui_game_symbol_stomach" desc="skillTreeMetabolismDesc;10%">
+	<effect_group>
+		<passive_effect level="1,3" operation="perc_add" name="WaterLossPerHealthPointGained"  value="-.1,-.3"/>
+		<passive_effect level="1,3" operation="perc_add" name="WaterLossPerStaminaPointGained" value="-.1,-.3"/>
+		<passive_effect level="1,3" operation="perc_add" name="FoodLossPerStaminaPointGained"  value="-.1,-.3"/>
+	</effect_group></progression>
+
+<progression name="skillTreeMetabolismBase" max_level="1" icon="ui_game_symbol_stomach" desc="skillTreeMetabolismDesc;15%">
+	<effect_group>
+		<passive_effect level="1" operation="perc_add" name="WaterLossPerHealthPointGained"  value="-.15"/>
+		<passive_effect level="1" operation="perc_add" name="WaterLossPerStaminaPointGained" value="-.15"/>
+		<passive_effect level="1" operation="perc_add" name="FoodLossPerStaminaPointGained"  value="-.15"/>
+	</effect_group></progression>
+
+<progression name="skillTreeConsumableDuration" max_level="3" icon="ui_game_symbol_stomach" desc="skillTreeConsumableDurationDesc;20%">
+	<effect_group>
+    	<!-- Increase MetabolismDuration with each level of the perk, vanilla: 1,.909,.833,.769,.714,.667 -->
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="$MetabolismDuration" operation="set" value="1">
+			<requirement name="ProgressionLevel" progression_name="skillTreeConsumableDuration"  operation="Equals" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="$MetabolismDuration" operation="set" value=".833">
+			<requirement name="ProgressionLevel" progression_name="skillTreeConsumableDuration"  operation="Equals" value="1"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="$MetabolismDuration" operation="set" value=".714">
+			<requirement name="ProgressionLevel" progression_name="skillTreeConsumableDuration"  operation="Equals" value="2"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="$MetabolismDuration" operation="set" value=".6">
+			<requirement name="ProgressionLevel" progression_name="skillTreeConsumableDuration"  operation="Equals" value="3"/>
+		</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeHoldBreath" max_level="3" icon="ui_game_symbol_stomach" desc="skillTreeHoldBreathDesc;+10;40s;2%">
+	<effect_group>
+		<passive_effect level="1,3" operation="base_add" name="WaterMax" value="10,30"/>
+		<passive_effect level="1,3" operation="base_add" name="FoodMax"  value="10,30"/>
+    	<!-- Increase MetabolismResist with each level of the perk -->
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="$MetabolismResist" operation="set" value="0">
+			<requirement name="ProgressionLevel" progression_name="skillTreeHoldBreath"  operation="Equals" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="$MetabolismResist" operation="set" value="-2">
+			<requirement name="ProgressionLevel" progression_name="skillTreeHoldBreath"  operation="Equals" value="1"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="$MetabolismResist" operation="set" value="-4">
+			<requirement name="ProgressionLevel" progression_name="skillTreeHoldBreath"  operation="Equals" value="2"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="$MetabolismResist" operation="set" value="-6">
+			<requirement name="ProgressionLevel" progression_name="skillTreeHoldBreath"  operation="Equals" value="3"/>
+		</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeMithridatism" max_level="6" icon="symbol_poison" desc="skillTreeMithridatismDesc;5%;10%;10%">
+	<effect_group>
+		<passive_effect level="1,6" operation="base_add" name="ResistPoison" value="5,30"/>
+	</effect_group></progression>
+
+<progression name="skillTreeHealing" max_level="6" icon="ui_game_symbol_healing_factor" desc="skillTreeHealingDesc;0.025;20%">
+	<effect_group>
+		<requirement name="NotHasBuff" buff="buffStatusHungry03"/>
+		<requirement name="NotHasBuff" buff="buffStatusThirsty03"/>
+		<!--
+			HealthChangeOT: 
+			.011 -> 1 every 35s -> 0.011 HP every second
+			.022 -> 1 every 25s -> 0.022 HP every second
+			.050 -> 1 every 15s -> 0.050 HP every second
+			.100 -> 1 every 10s -> 0.100 HP every second
+			.160 -> 1 every  5s -> 0.160 HP every second
+
+			.025 -> 0.025 HP every second
+			.050 -> 0.050 HP every second
+			.075 -> 0.075 HP every second
+			.100 -> 0.100 HP every second
+			.125 -> 0.125 HP every second
+			.150 -> 0.150 HP every second
+		-->
+		<passive_effect level="1,2,3,4,5,6" operation="base_add" name="HealthChangeOT" value=".025,.05,.075,.1,.125,.15"/>
+	</effect_group></progression>
+
+<progression name="skillTreeMedic" max_level="6" icon="symbol_doctor" desc="skillTreeMedicDesc;10%;25%">
+	<effect_group>
+	<!-- Bonus handled in MinEventActionULM_Heal -->
+	</effect_group></progression>
+
+<progression name="skillTreeSubmachineGunDamage" max_level="6" icon="symbol_smg" desc="skillTreeSubmachineGunDamageDesc;5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="BlockDamage"	 value=".05,.3" tags="submachine"/>
+		<passive_effect level="1,6" operation="perc_add" name="EntityDamage" value=".05,.3" tags="submachine"/>
+	</effect_group></progression>
+
+<progression name="skillTreeSubmachineGunHandling" max_level="6" icon="symbol_smg" desc="skillTreeSubmachineGunHandlingDesc;5%">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="submachine"/>
+		<passive_effect level="1,6" operation="perc_add" name="RoundsPerMinute"				value=".05,.3"/>
+		<passive_effect level="1,6" operation="perc_add" name="ReloadSpeedMultiplier"		value=".05,.3"/>
+		<passive_effect level="1,6" operation="perc_add" name="IncrementalSpreadMultiplier" value="-.05,-.3"/>
+	</effect_group></progression>
+
+<progression name="skillTreeExplosiveDamage" max_level="6" icon="symbol_rocket_launcher" desc="skillTreeExplosiveDamageDesc;10%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="BlockDamage"  value=".1,.6" tags="explosive"/>
+		<passive_effect level="1,6" operation="perc_add" name="EntityDamage" value=".1,.6" tags="explosive"/>
+	</effect_group></progression>
+
+<progression name="skillTreeExplosiveHandling" max_level="6" icon="symbol_rocket_launcher" desc="skillTreeExplosiveHandlingDesc;10%;5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="base_add" name="DismemberChance"		  value=".1,.6"  tags="explosive"/>
+		<passive_effect level="1,6" operation="perc_add" name="WeaponHandling"		  value=".1,.6"  tags="explosive"/>
+		<passive_effect level="1,6" operation="perc_add" name="ReloadSpeedMultiplier" value=".05,.3" tags="explosive"/>
+	</effect_group></progression>
+
+<progression name="skillTreeBatonDamage" max_level="6" icon="symbol_stun_baton" desc="skillTreeBatonDamageDesc;10%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="BlockDamage" value=".1,.6" tags="perkElectrocutioner"/>
+		<passive_effect level="1,6" operation="perc_add" name="EntityDamage" value=".1,.6" tags="perkElectrocutioner"/>
+	</effect_group></progression>
+
+<progression name="skillTreeBatonStun" max_level="6" icon="symbol_stun_baton" desc="skillTreeBatonStunDesc;20%">
+	<!-- handled in items_effects.xml -->
+	<effect_group/></progression>
+
+<progression name="skillTreeTurretDamage" max_level="6" icon="symbol_turret" desc="skillTreeTurretDamageDesc;10%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="EntityDamage" value=".1,.6" tags="perkTurrets"/>
+		<passive_effect level="1,6" operation="perc_add" name="BlockDamage" value=".1,.6" tags="turretMelee"/>
+	</effect_group></progression>
+
+<progression name="skillTreeTurretHandling" max_level="6" icon="symbol_turret" desc="skillTreeTurretHandlingDesc;10%;25%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="RoundsPerMinute" value=".1,.6" tags="turretMelee"/>
+		<passive_effect level="1,6" operation="perc_add" name="RoundsPerMinute" value=".25,1.5" tags="turretRanged"/>
+	</effect_group></progression>
+
+<progression name="skillTreeTurretReload" max_level="3" icon="symbol_turret" desc="skillTreeTurretReloadDesc;10%">
+	<effect_group>
+		<passive_effect level="1,3" operation="perc_add" name="ReloadSpeedMultiplier" value=".1,.3" tags="perkTurrets"/>
+	</effect_group></progression>
+
+<progression name="skillTreeTurretRange" max_level="3" icon="symbol_turret" desc="skillTreeTurretRangeDesc;4m">
+	<effect_group>
+		<passive_effect level="1,3" operation="base_add" name="JunkTurretActiveRange" value="4,12"/>
+	</effect_group></progression>
+
+<progression name="skillTreeTurretMagazineSize" max_level="3" icon="symbol_turret" desc="skillTreeTurretMagazineSizeDesc;20">
+	<effect_group>
+		<passive_effect level="1,3" operation="base_add" name="MagazineSize" value="20,60" tags="perkTurrets">
+			<requirement name="!ItemHasTags" tags="turretMelee"/>
+		</passive_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeElectricalTrapXP" max_level="3" icon="symbol_turret" desc="skillTreeElectricalTrapXPDesc;20%">
+	<effect_group>
+		<passive_effect level="0,1,2,3" operation="base_set" name="ElectricalTrapXP" value="0,.2,.4,.6"/>
+	</effect_group></progression>
+
+<progression name="skillTreeTurretCount" max_level="2" icon="symbol_turret" desc="skillTreeTurretCountDesc;+1">
+	<effect_group>
+		<passive_effect level="1,2" operation="base_add" name="JunkTurretActiveCount" value="1,2"/>
+	</effect_group></progression>
+
+<progression name="skillTreeTrading" max_level="6" icon="ui_game_symbol_barter" desc="skillTreeTradingDesc;5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="base_add" name="BarteringBuying" value=".05,.3"/>
+	<!--<passive_effect level="1,6" operation="base_add" name="BarteringSelling" value=".05,.3"/>-->
+	</effect_group></progression>
+
+<progression name="skillTreeTraderStage" max_level="6" icon="ui_game_symbol_barter" desc="skillTreeTraderStageDesc;+10">
+	<effect_group>
+		<passive_effect level="1,6" name="TraderStage" operation="base_add" value="10,60"/>
+	</effect_group></progression>
+
+<progression name="skillTreeDiplomat" max_level="1" icon="ui_game_symbol_barter" desc="skillTreeDiplomatDesc;5%;5%">
+	<effect_group>
+		<passive_effect level="1" operation="base_add" name="BarteringBuying" value=".05"/>
+		<passive_effect level="1" operation="base_add" name="BarteringSelling" value=".05"/>
+		<passive_effect level="1" operation="perc_add" name="QuestBonusItemReward" value=".05" comment="Bonus Dukes"/>
+	</effect_group></progression>
+
+<progression name="skillTreeQuestRewardDukes" max_level="6" icon="ui_game_symbol_barter" desc="skillTreeQuestRewardDukesDesc;5%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="QuestBonusItemReward" value=".05,.3" comment="Bonus Dukes"/>
+	</effect_group></progression>
+
+<progression name="skillTreeQuestRewardCount" max_level="1" icon="ui_game_symbol_adventure" desc="skillTreeQuestRewardCountDesc;5%;+1">
+	<effect_group>
+		<passive_effect level="1" operation="perc_add" name="QuestBonusItemReward" value=".05" comment="Bonus Dukes"/>
+		<passive_effect level="1" operation="base_add" name="QuestRewardChoiceCount" value="1"/>
+	</effect_group></progression>
+
+<progression name="skillTreeCharismaRegen" max_level="1" icon="ui_game_symbol_talk" desc="skillTreeCharismaRegenDesc;50%">
+	<effect_group>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureRegen" operation="set" value="1" target="selfOtherPlayers" target_tags="ally,party" range="15">
+			<requirement name="ProgressionLevel" progression_name="skillTreeCharismaRegen" operation="Equals" value="1"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="ulmBuffPerkCharisma" target="selfOtherPlayers" target_tags="ally,party" range="20">
+			<requirement name="ProgressionLevel" progression_name="skillTreeCharismaRegen" operation="Equals" value="1"/>
+		</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeCharismaDamage" max_level="1" icon="ui_game_symbol_talk" desc="skillTreeCharismaDamageDesc;20%">
+	<effect_group>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureDamage" operation="set" value="1" target="selfOtherPlayers" target_tags="ally,party" range="15">
+			<requirement name="ProgressionLevel" progression_name="skillTreeCharismaDamage" operation="Equals" value="1"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="ulmBuffPerkCharisma" target="selfOtherPlayers" target_tags="ally,party" range="20">
+			<requirement name="ProgressionLevel" progression_name="skillTreeCharismaDamage" operation="Equals" value="1"/>
+		</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeCharismaResistance" max_level="1" icon="ui_game_symbol_talk" desc="skillTreeCharismaResistanceDesc;10%">
+	<effect_group>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureResistance" operation="set" value="1" target="selfOtherPlayers" target_tags="ally,party" range="15">
+			<requirement name="ProgressionLevel" progression_name="skillTreeCharismaResistance" operation="Equals" value="1"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="ulmBuffPerkCharisma" target="selfOtherPlayers" target_tags="ally,party" range="20">
+			<requirement name="ProgressionLevel" progression_name="skillTreeCharismaResistance" operation="Equals" value="1"/>
+		</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeCharismaLoot" max_level="2" icon="ui_game_symbol_talk" desc="skillTreeCharismaLootDesc;10%">
+	<effect_group>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLoot" operation="set" value="1" target="selfOtherPlayers" target_tags="ally,party" range="15">
+			<requirement name="ProgressionLevel" progression_name="skillTreeCharismaLoot" operation="Equals" value="1"/>
+			<requirement name="CVarCompare" cvar="CharismaticNatureLoot" target="other" operation="LT" value="2"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLoot" operation="set" value="2" target="selfOtherPlayers" target_tags="ally,party" range="15">
+			<requirement name="ProgressionLevel" progression_name="skillTreeCharismaLoot" operation="Equals" value="2"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="ulmBuffPerkCharisma" target="selfOtherPlayers" target_tags="ally,party" range="20">
+			<requirement name="ProgressionLevel" progression_name="skillTreeCharismaLoot" operation="GTE" value="1"/>
+		</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeCharismaAttributes" max_level="1" icon="ui_game_symbol_talk" desc="skillTreeCharismaAttributesDesc;+5">
+	<effect_group>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureAttributes" operation="set" value="1" target="selfOtherPlayers" target_tags="ally,party" range="15">
+			<requirement name="ProgressionLevel" progression_name="skillTreeCharismaAttributes" operation="Equals" value="1"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="ulmBuffPerkCharisma" target="selfOtherPlayers" target_tags="ally,party" range="20">
+			<requirement name="ProgressionLevel" progression_name="skillTreeCharismaAttributes" operation="Equals" value="1"/>
+		</triggered_effect>
+	</effect_group></progression>
+
+<progression name="skillTreeSalvager" max_level="6" icon="symbol_wrench" desc="skillTreeSalvagerDesc;10%;10%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="BlockDamage" value=".1,.6" tags="salvageTool"/>
+		<passive_effect level="1,6" operation="perc_add" name="EntityDamage" value=".1,.6" tags="salvageTool"/>
+		<passive_effect level="1,6" operation="perc_add" name="HarvestCount" value=".1,.6" tags="salvageHarvest"/>
+	</effect_group></progression>
+
+<progression name="skillTreeLockPicking" max_level="4" icon="symbol_lockpick" desc="skillTreeLockPickingDesc;25;20%">
+	<effect_group>
+		<passive_effect level="1,4" operation="base_add" name="LockPickTier" value="25,100"/>
+		<passive_effect level="1,4" operation="perc_add" name="LockPickDurability" value=".20,.80"/>
+	</effect_group></progression>
+
+<progression name="skillTreeLockPickingBase" max_level="1" icon="symbol_lockpick" desc="skillTreeLockPickingDesc;25;30%">
+	<effect_group>
+		<passive_effect level="1" operation="base_add" name="LockPickTier" value="25"/>
+		<passive_effect level="1" operation="perc_add" name="LockPickDurability" value=".3"/>
+	</effect_group></progression>
+
+<progression name="skillTreeDroneCargo" max_level="6" icon="symbol_drone_cargo" desc="skillTreeDroneCargoDesc;25%">
+	<effect_group>
+		<passive_effect level="1,6" operation="perc_add" name="VehicleCargoCapacity" value=".25,1.5" tags="drone"/>
+	</effect_group></progression>
+
+<progression name="skillTreeFastLearner" max_level="1" icon="ui_game_symbol_xp" desc="skillTreeFastLearnerDesc;5%">
+	<effect_group>
+		<passive_effect name="PlayerExpGain" operation="perc_add" level="1" value=".05" tags="Kill"/>
+	</effect_group></progression>
+
+<skill id="center"						skill="false"										pos="0,0"		icon="ui_empty"/>
+	
+
+
+<!-- 
+
+	T A N K   C L A S S
+
+	0 Degrees 
+	+-24 Offset
+	
+<skill id="startFortitude"				skill="false"	parent="center"						radius="1.8"	angle="0"		icon="symbol_class_tank_bw;120;255,255,255" background="ui_circle_fill_fg;160;64,64,64" alt_icon="symbol_class_tank" atlas="UISkills"/>
+-->
+
+
+<skill nId="0,0"   id="rootFortitude"				progression="skillTreeFortitudeClass"				radius="1.8"	angle="0"		parent="center" root="true" link_offset="0.8" icon="symbol_class_tank_bw;120" background="ui_circle_fill_fg;160;64,64,64" alt_icon="symbol_class_tank" atlas="UISkills"/>
+<skill nId="0,1"   id="baseFortitude"				progression="Fortitude" points="5"					radius="3.2"	angle="0"		parent="center" links="rootFortitude"/>
+
+<skill nId="0,2"   id="baseResistDamage"			progression="skillTreeResistDamageBase"				radius="5"		angle="336"		parent="center" links="baseFortitude"/>
+<skill nId="0,3"   id="baseMetabolism"				progression="skillTreeMetabolismBase"				radius="5"		angle="0"		parent="center" links="baseFortitude"/>
+<skill nId="0,4"   id="baseHealth"					progression="skillTreeHealthBase"					radius="5"		angle="24"		parent="center" links="baseFortitude"/>
+
+<skill nId="0,5"   id="fortitude_336_7"				progression="Fortitude" points="5"					radius="7"		angle="336"		parent="center" links="baseResistDamage,knuckleDamage1,mithridatism1"/>
+<skill nId="0,6"   id="fortitude_000_7"				progression="Fortitude" points="5"					radius="7"		angle="0"		parent="center" links="baseMetabolism,holdBreath1,consumableDuration1"/>
+<skill nId="0,7"   id="fortitude_024_7"				progression="Fortitude" points="5"					radius="7"		angle="24"		parent="center" links="baseHealth,shotgunDamage1,medic1"/>
+
+<skill nId="0,8"   id="metabolismHub1"				skill="false"										radius="9"		angle="0"		parent="center"	icon="ui_game_symbol_stomach;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="0,9"   id="holdBreath1"					progression="skillTreeHoldBreath"					radius="0.8"	angle="135"		parent="metabolismHub1" links="holdBreath2"/>
+<skill nId="0,10"  id="holdBreath2"					progression="skillTreeHoldBreath"					radius="0.8"	angle="90"		parent="metabolismHub1" links="holdBreath1"/>
+<skill nId="0,11"  id="holdBreath3"					progression="skillTreeHoldBreath"					radius="0.8"	angle="45"		parent="metabolismHub1" links="holdBreath2"/>
+<skill nId="0,12"  id="consumableDuration1"			progression="skillTreeConsumableDuration"			radius="0.8"	angle="225"		parent="metabolismHub1" links="consumableDuration2"/>
+<skill nId="0,13"  id="consumableDuration2"			progression="skillTreeConsumableDuration"			radius="0.8"	angle="270"		parent="metabolismHub1" links="consumableDuration1"/>
+<skill nId="0,14"  id="consumableDuration3"			progression="skillTreeConsumableDuration"			radius="0.8"	angle="315"		parent="metabolismHub1" links="consumableDuration2"/>
+
+<skill nId="0,15"  id="knuckleHub1"					skill="false"										radius="9"		angle="-24"		parent="center"	icon="symbol_map_gasmask;50;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="0,16"  id="knuckleDamage1"				progression="skillTreeKnucklesDamage"				radius="0.8"	angle="225"		rot="-25" parent="knuckleHub1" links="knuckleDamage2"/>
+<skill nId="0,17"  id="knuckleDamage2"				progression="skillTreeKnucklesDamage"				radius="0.8"	angle="270"		rot="-25" parent="knuckleHub1" links="knuckleDamage1"/>
+<skill nId="0,18"  id="knuckleDamage3"				progression="skillTreeKnucklesDamage"				radius="0.8"	angle="315"		rot="-25" parent="knuckleHub1" links="knuckleDamage2"/>
+<skill nId="0,19"  id="mithridatism1"				progression="skillTreeMithridatism"					radius="0.8"	angle="135"		rot="-25" parent="knuckleHub1" links="mithridatism2"/>
+<skill nId="0,20"  id="mithridatism2"				progression="skillTreeMithridatism"					radius="0.8"	angle="90"		rot="-25" parent="knuckleHub1" links="mithridatism1"/>
+<skill nId="0,21"  id="mithridatism3"				progression="skillTreeMithridatism"					radius="0.8"	angle="45"		rot="-25" parent="knuckleHub1" links="mithridatism2"/>
+
+<skill nId="0,22"  id="shotgunHub1"					skill="false"										radius="9"		angle="24"		parent="center"	icon="symbol_shotgun;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="0,23"  id="medic1"						progression="skillTreeMedic"						radius="0.8"	angle="225"		rot="25" parent="shotgunHub1" links="medic2"/>
+<skill nId="0,24"  id="medic2"						progression="skillTreeMedic"						radius="0.8"	angle="270"		rot="25" parent="shotgunHub1" links="medic1"/>
+<skill nId="0,25"  id="medic3"						progression="skillTreeMedic"						radius="0.8"	angle="315"		rot="25" parent="shotgunHub1" links="medic2"/>
+<skill nId="0,26"  id="shotgunDamage1"				progression="skillTreeShotgunDamage"				radius="0.8"	angle="135"		rot="25" parent="shotgunHub1" links="shotgunHandling1"/>
+<skill nId="0,27"  id="shotgunHandling1"			progression="skillTreeShotgunHandling"				radius="0.8"	angle="90"		rot="25" parent="shotgunHub1" links="shotgunDamage1"/>
+<skill nId="0,28"  id="shotgunStun1"				progression="skillTreeShotgunStun1"					radius="0.8"	angle="45"		rot="25" parent="shotgunHub1" links="shotgunHandling1"/>
+
+<skill nId="0,29"  id="fortitude_336_11"			progression="Fortitude" points="5"					radius="11"		angle="336"		parent="center" links="knuckleDamage3,mithridatism3"/>
+<skill nId="0,30"  id="resistDamage1"				progression="skillTreeResistDamage"					radius="11"		angle="348"		parent="center" links="fortitude_336_11,fortitude_000_11"/>
+<skill nId="0,31"  id="fortitude_000_11"			progression="Fortitude" points="5"					radius="11"		angle="0"		parent="center" links="consumableDuration3,holdBreath3"/>
+<skill nId="0,32"  id="healthMax1"					progression="skillTreeHealth05"						radius="11"		angle="12"		parent="center" links="fortitude_000_11"/>
+<skill nId="0,33"  id="fortitude_024_11"			progression="Fortitude" points="5"					radius="11"		angle="24"		parent="center" links="shotgunStun1,medic3,healthMax1"/>
+<skill nId="0,34"  id="intellect_036_11"			progression="Intellect" points="5"					radius="11"		angle="36"		parent="center" links="fortitude_024_11,perception_048_11"/>
+<skill nId="0,35"  id="dexterity_324_11"			progression="Dexterity" points="5"					radius="11"		angle="324"		parent="center" links="strength_312_11,fortitude_336_11"/>
+
+<skill nId="0,36"  id="strength_324_13"				progression="Strength" points="5"					radius="13"		angle="324"		parent="center" links="dexterity_324_11,shotgunDamage4,armorHeavy4"/>
+<skill nId="0,37"  id="strength_336_13"				progression="Strength" points="5"					radius="13"		angle="336"		parent="center" links="fortitude_336_11,knuckleStun1,regenerateHealth4"/>
+<skill nId="0,38"  id="fortitude_348_13"			progression="Fortitude" points="5"					radius="13"		angle="348"		parent="center" links="resistDamage1,infiltrator1,armorHeavy1"/>
+<skill nId="0,39"  id="fortitude_000_13"			progression="Fortitude" points="5"					radius="13"		angle="0"		parent="center" links="fortitude_000_11,meleeStaminaUse2,mithridatism4"/>
+<skill nId="0,40"  id="fortitude_012_13"			progression="Fortitude" points="5"					radius="13"		angle="12"		parent="center" links="healthMax1,regenerateHealth1,resistWeather1"/>
+<skill nId="0,41"  id="perception_024_13"			progression="Perception" points="5"					radius="13"		angle="24"		parent="center" links="fortitude_024_11,shotgunDamage2,resistDamage3"/>
+<skill nId="0,42"  id="fortitude_036_13"			progression="Fortitude" points="5"					radius="13"		angle="36"		parent="center" links="intellect_036_11,medic4,metabolism1"/>
+
+<skill nId="0,43"  id="healthMaxHub1"				skill="false"										radius="15"		angle="0"		parent="center"	icon="symbol_tough_skin;60;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="0,44"  id="meleeStaminaUse2"			progression="skillTreeMeleeStaminaUse"				radius="0.8"	angle="225"		parent="healthMaxHub1" links="healthMax2"/>
+<skill nId="0,45"  id="healthMax2"					progression="skillTreeHealth05"						radius="0.8"	angle="270"		parent="healthMaxHub1" links="resistDamage2"/>
+<skill nId="0,46"  id="resistDamage2"				progression="skillTreeResistDamage"					radius="0.8"	angle="315"		parent="healthMaxHub1" links=""/>
+<skill nId="0,47"  id="mithridatism4"				progression="skillTreeMithridatism"					radius="0.8"	angle="135"		parent="healthMaxHub1" links="mithridatism5"/>
+<skill nId="0,48"  id="mithridatism5"				progression="skillTreeMithridatism"					radius="0.8"	angle="90"		parent="healthMaxHub1" links="mithridatism4"/>
+<skill nId="0,49"  id="foodWaterMax1"				progression="skillTreeMaxFoodWater"					radius="0.8"	angle="45"		parent="healthMaxHub1" links="mithridatism5"/>
+
+<skill nId="0,50"  id="regenerateHealthHub1"		skill="false"										radius="15"		angle="12"		parent="center" icon="ui_game_symbol_healing_factor;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="0,51"  id="regenerateHealth1"			progression="skillTreeHealing"						radius="0.8"	angle="225"		rot="15" parent="regenerateHealthHub1" links="regenerateHealth2"/>
+<skill nId="0,52"  id="regenerateHealth2"			progression="skillTreeHealing"						radius="0.8"	angle="270"		rot="15" parent="regenerateHealthHub1" links="regenerateHealth1"/>
+<skill nId="0,53"  id="regenerateHealth3"			progression="skillTreeHealing"						radius="0.8"	angle="315"		rot="15" parent="regenerateHealthHub1" links="regenerateHealth2"/>
+<skill nId="0,54"  id="resistWeather1"				progression="skillTreeResistWeather"				radius="0.8"	angle="135"		rot="15" parent="regenerateHealthHub1" links="resistWeather2"/>
+<skill nId="0,55"  id="resistWeather2"				progression="skillTreeResistWeather"				radius="0.8"	angle="90"		rot="15" parent="regenerateHealthHub1" links="resistWeather3"/>
+<skill nId="0,56"  id="resistWeather3"				progression="skillTreeResistWeather"				radius="0.8"	angle="45"		rot="15" parent="regenerateHealthHub1" links=""/>
+
+<skill nId="0,57"  id="infiltratorHub"				skill="false"										radius="15"		angle="-12"		parent="center" icon="symbol_armor_heavy;50;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="0,58"  id="infiltrator1"				progression="skillTreeInfiltrator"					radius="0.8"	angle="225"		rot="-15" parent="infiltratorHub" links="infiltrator2"/>
+<skill nId="0,59"  id="infiltrator2"				progression="skillTreeInfiltrator"					radius="0.8"	angle="270"		rot="-15" parent="infiltratorHub" links="infiltrator1"/>
+<skill nId="0,90"  id="infiltrator3"				progression="skillTreeInfiltrator3"					radius="0.8"	angle="315"		rot="-15" parent="infiltratorHub" links="infiltrator2"/>
+<skill nId="0,91"  id="armorHeavy1"					progression="skillTreeArmorHeavy"					radius="0.8"	angle="135"		rot="-15" parent="infiltratorHub" links="armorHeavy2"/>
+<skill nId="0,92"  id="armorHeavy2"					progression="skillTreeArmorHeavy"					radius="0.8"	angle="90"		rot="-15" parent="infiltratorHub" links="armorHeavy1"/>
+<skill nId="0,93"  id="armorHeavy3"					progression="skillTreeArmorHeavy"					radius="0.8"	angle="45"		rot="-15" parent="infiltratorHub" links="armorHeavy2"/>
+
+<skill nId="0,94"  id="metabolismHub2"				skill="false"										radius="15"		angle="-36"		parent="center"	icon="symbol_armor_heavy;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="0,95"  id="shotgunDamage4"				progression="skillTreeShotgunDamage"				radius="0.8"	angle="135"		rot="-30" parent="metabolismHub2" links="shotgunDamage5"/>
+<skill nId="0,96"  id="shotgunDamage5"				progression="skillTreeShotgunDamage"				radius="0.8"	angle="90"		rot="-30" parent="metabolismHub2" links="shotgunDamage6"/>
+<skill nId="0,97"  id="shotgunDamage6"				progression="skillTreeShotgunDamage"				radius="0.8"	angle="45"		rot="-30" parent="metabolismHub2" links=""/>
+<skill nId="0,98"  id="armorHeavy4"					progression="skillTreeArmorHeavy"					radius="0.8"	angle="225"		rot="-30" parent="metabolismHub2" links="armorHeavy5"/>
+<skill nId="0,99"  id="armorHeavy5"					progression="skillTreeArmorHeavy"					radius="0.8"	angle="270"		rot="-30" parent="metabolismHub2" links="armorHeavy4"/>
+<skill nId="0,100" id="armorHeavy6"					progression="skillTreeArmorHeavy"					radius="0.8"	angle="315"		rot="-30" parent="metabolismHub2" links="armorHeavy5"/>
+
+<skill nId="0,101" id="medicHub2"					skill="false"										radius="15"		angle="36"		parent="center" icon="symbol_doctor;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="0,102" id="medic4"						progression="skillTreeMedic"						radius="0.8"	angle="225"		rot="30" parent="medicHub2" links="medic5"/>
+<skill nId="0,103" id="medic5"						progression="skillTreeMedic"						radius="0.8"	angle="270"		rot="30" parent="medicHub2" links="medic4"/>
+<skill nId="0,104" id="medic6"						progression="skillTreeMedic"						radius="0.8"	angle="315"		rot="30" parent="medicHub2" links="medic5"/>
+<skill nId="0,105" id="metabolism1"					progression="skillTreeMetabolism"					radius="0.8"	angle="135"		rot="30" parent="medicHub2" links="metabolism2"/>
+<skill nId="0,106" id="metabolism2"					progression="skillTreeMetabolism"					radius="0.8"	angle="90"		rot="30" parent="medicHub2" links="metabolism1"/>
+<skill nId="0,107" id="metabolism3"					progression="skillTreeMetabolism"					radius="0.8"	angle="45"		rot="30" parent="medicHub2" links="metabolism2"/>
+
+<skill nId="0,108" id="knuckleHub3"					skill="false"										radius="15"		angle="-24"		parent="center"	icon="symbol_knuckles;50;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="0,109" id="knuckleStun1"				progression="skillTreeKnucklesStun"					radius="0.8"	angle="225"		rot="-20" parent="knuckleHub3" links="knuckleStun2"/>
+<skill nId="0,110" id="knuckleStun2"				progression="skillTreeKnucklesStun"					radius="0.8"	angle="270"		rot="-20" parent="knuckleHub3" links="knuckleStun1"/>
+<skill nId="0,111" id="knuckleStun3"				progression="skillTreeKnucklesStun"					radius="0.8"	angle="315"		rot="-20" parent="knuckleHub3" links="knuckleStun2"/>
+<skill nId="0,112" id="regenerateHealth4"			progression="skillTreeHealing"						radius="0.8"	angle="135"		rot="-20" parent="knuckleHub3" links="regenerateHealth5"/>
+<skill nId="0,113" id="regenerateHealth5"			progression="skillTreeHealing"						radius="0.8"	angle="90"		rot="-20" parent="knuckleHub3" links="regenerateHealth4"/>
+<skill nId="0,114" id="foodWaterMax2"				progression="skillTreeMaxFoodWater"					radius="0.8"	angle="45"		rot="-20" parent="knuckleHub3" links="regenerateHealth5"/>
+
+<skill nId="0,115" id="shotgunHub2"					skill="false"										radius="15"		angle="24"		parent="center" icon="symbol_shotgun;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="0,116" id="resistDamage3"				progression="skillTreeResistDamage"					radius="0.8"	angle="225"		rot="25" parent="shotgunHub2" links="resistDamage4"/>
+<skill nId="0,117" id="resistDamage4"				progression="skillTreeResistDamage"					radius="0.8"	angle="270"		rot="25" parent="shotgunHub2" links="resistDamage3"/>
+<skill nId="0,118" id="resistDamage5"				progression="skillTreeResistDamage"					radius="0.8"	angle="315"		rot="25" parent="shotgunHub2" links="resistDamage4"/>
+<skill nId="0,119" id="shotgunDamage2"				progression="skillTreeShotgunDamage"				radius="0.8"	angle="135"		rot="25" parent="shotgunHub2" links="shotgunHandling2"/>
+<skill nId="0,120" id="shotgunHandling2"			progression="skillTreeShotgunHandling"				radius="0.8"	angle="90"		rot="25" parent="shotgunHub2" links="shotgunStun2"/>
+<skill nId="0,121" id="shotgunStun2"				progression="skillTreeShotgunStun2"					radius="0.8"	angle="45"		rot="25" parent="shotgunHub2" links=""/>
+
+<skill nId="0,122" id="perception_324_17"			progression="Perception" points="5"					radius="17"		angle="324"		parent="center" links="dexterity_324_19,armorHeavy6,shotgunDamage6"/>
+<skill nId="0,123" id="fortitude_336_17"			progression="Fortitude" points="5"					radius="17"		angle="336"		parent="center" links="fortitude_336_19,knuckleStun3,foodWaterMax2"/>
+<skill nId="0,124" id="fortitude_348_17"			progression="Fortitude" points="5"					radius="17"		angle="348"		parent="center" links="intellect_348_19,infiltrator3,armorHeavy3"/>
+<skill nId="0,125" id="fortitude_000_17"			progression="Fortitude" points="5"					radius="17"		angle="0"		parent="center" links="fortitude_000_19,resistDamage2,foodWaterMax1"/>
+<skill nId="0,126" id="fortitude_012_17"			progression="Fortitude" points="5"					radius="17"		angle="12"		parent="center" links="dexterity_012_19,regenerateHealth3,resistWeather3"/>
+<skill nId="0,127" id="strength_036_17"				progression="Strength" points="5"					radius="17"		angle="36"		parent="center" links="intellect_036_19,medic6,metabolism3"/>
+
+<skill nId="0,128" id="fortitude_000_19"			progression="Fortitude" points="5"					radius="19"		angle="0"		parent="center" links="intellect_348_19,dexterity_012_19,shotgunDamage3,knuckleDamage4"/>
+<skill nId="0,129" id="dexterity_012_19"			progression="Dexterity" points="5"					radius="19"		angle="12"		parent="center" links=""/>
+<skill nId="0,130" id="fortitude_024_19"			progression="Fortitude" points="5"					radius="19"		angle="24"		parent="center" links="dexterity_012_19,intellect_036_19,shotgunStun2,resistDamage5"/>
+<skill nId="0,131" id="intellect_036_19"			progression="Intellect" points="5"					radius="19"		angle="36"		parent="center" links=""/>
+<skill nId="0,132" id="dexterity_324_19"			progression="Dexterity" points="5"					radius="19"		angle="324"		parent="center" links="strength_312_19"/>
+<skill nId="0,133" id="fortitude_336_19"			progression="Fortitude" points="5"					radius="19"		angle="336"		parent="center" links="dexterity_324_19,intellect_348_19"/>
+<skill nId="0,134" id="intellect_348_19"			progression="Intellect" points="5"					radius="19"		angle="348"		parent="center" links=""/>
+
+<skill nId="0,135" id="healthMaxHub2"				skill="false"										radius="22"		angle="0"		parent="center" icon="symbol_tough_skin;60;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="0,136" id="shotgunDamage3"				progression="skillTreeShotgunDamage"				radius="0.8"	angle="135"		parent="healthMaxHub2" links="shotgunHandling3"/>
+<skill nId="0,137" id="shotgunHandling3"			progression="skillTreeShotgunHandling"				radius="0.8"	angle="90"		parent="healthMaxHub2" links="shotgunStun3"/>
+<skill nId="0,138" id="shotgunStun3"				progression="skillTreeShotgunStun3"					radius="0.8"	angle="45"		parent="healthMaxHub2" links=""/>
+<skill nId="0,139" id="knuckleDamage4"				progression="skillTreeKnucklesDamage"				radius="0.8"	angle="225"		parent="healthMaxHub2" links="knuckleDamage5"/>
+<skill nId="0,140" id="knuckleDamage5"				progression="skillTreeKnucklesDamage"				radius="0.8"	angle="270"		parent="healthMaxHub2" links="knuckleDamage4"/>
+<skill nId="0,141" id="knuckleTeethBreaker"			progression="skillTreeKnucklesTeethBreaker"			radius="0.8"	angle="315"		parent="healthMaxHub2" links="knuckleDamage5"/>
+
+<skill nId="0,142" id="healthMax3"					progression="skillTreeHealth05"						radius="21"		angle="336"		parent="center" links="fortitude_336_19"/>
+<skill nId="0,143" id="healthMax4"					progression="skillTreeHealth05"						radius="21"		angle="348"		parent="center" links="intellect_348_19"/>
+<skill nId="0,144" id="healthMax5"					progression="skillTreeHealth05"						radius="21"		angle="12"		parent="center" links="dexterity_012_19"/>
+<skill nId="0,145" id="healthMax6"					progression="skillTreeHealth05"						radius="21"		angle="24"		parent="center" links="fortitude_024_19"/>
+
+<!--
+<skill id="meleeAttackSpeedTest"		progression="skillTreeMeleeSpeed100"				radius="2.5"	angle="230"		root="true"		parent="center"/>
+-->
+
+<!-- 
+
+	R A N G E R   C L A S S
+
+	+72 Degrees 
+	+-24 Offset
+	
+<skill id="startPerception"				skill="false"	parent="center"						radius="1.8"	angle="72"		icon="ui_empty;120;255,255,255" background="ui_circle_fill_fg;160;64,64,64" alt_icon="symbol_class_ranger" atlas="UISkills"/>
+-->
+
+<skill nId="1,0"   id="rootPerception"				progression="skillTreePerceptionClass"				radius="1.8"	angle="72"		parent="center" root="true" link_offset="0.8" icon="symbol_class_ranger_bw;120" background="ui_circle_fill_fg;160;64,64,64" alt_icon="symbol_class_ranger" atlas="UISkills"/>
+
+<skill nId="1,1"   id="basePerception"				progression="Perception" points="5"					radius="3.2"	angle="72"		parent="center" links="rootPerception"/>
+
+<skill nId="1,2"   id="baseSneakDamage"				progression="skillTreeSneakDamageBase"				radius="5"		angle="48"		parent="center" links="basePerception"/>
+<skill nId="1,3"   id="baseBowHandling"				progression="skillTreeArcheryHandlingBase"			radius="5"		angle="72"		parent="center" links="basePerception"/>
+<skill nId="1,4"   id="baseRangeDamage"				progression="skillTreeRangedDamageBase"				radius="5"		angle="96"		parent="center" links="basePerception"/>
+
+<skill nId="1,5"   id="perception_048_7"			progression="Perception" points="5"					radius="7"		angle="48"		parent="center" links="baseSneakDamage,polearmDamage1,hunter1"/>
+<skill nId="1,6"   id="perception_072_7"			progression="Perception" points="5"					radius="7"		angle="72"		parent="center" links="baseBowHandling,archeryDamage1,loot1"/>
+<skill nId="1,7"   id="perception_096_7"			progression="Perception" points="5"					radius="7"		angle="96"		parent="center" links="baseRangeDamage,firearmArmorReduction1,sniperRifleDamage1"/>
+
+<skill nId="1,8"   id="polearmHub1"					skill="false"										radius="9"		angle="48"		parent="center"	icon="symbol_spear;40;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="1,9"   id="hunter1"						progression="skillTreeHunter"						radius="0.8"	angle="135"		rot="40" parent="polearmHub1" links="hunter2"/>
+<skill nId="1,10"  id="hunter2"						progression="skillTreeHunter"						radius="0.8"	angle="90"		rot="40" parent="polearmHub1" links="hunter1"/>
+<skill nId="1,11"  id="hunter3"						progression="skillTreeHunter"						radius="0.8"	angle="45"		rot="40" parent="polearmHub1" links="hunter2"/>
+<skill nId="1,12"  id="polearmDamage1"				progression="skillTreeSpearDamage"					radius="0.8"	angle="225"		rot="40" parent="polearmHub1" links="penetratingSpears1"/>
+<skill nId="1,13"  id="penetratingSpears1"			progression="skillTreeSpearArmorReduction"			radius="0.8"	angle="270"		rot="40" parent="polearmHub1" links="polearmDamage2"/>
+<skill nId="1,14"  id="polearmDamage2"				progression="skillTreeSpearDamage"					radius="0.8"	angle="315"		rot="40" parent="polearmHub1" links=""/>
+
+<skill nId="1,15"  id="archeryHub1"					skill="false"										radius="9"		angle="72"		parent="center"	icon="symbol_archery;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="1,16"  id="archeryDamage1"				progression="skillTreeArcheryDamage"				radius="0.8"	angle="225"		rot="75" parent="archeryHub1" links="archeryHandling1"/>
+<skill nId="1,17"  id="archeryHandling1"			progression="skillTreeArcheryHandling"				radius="0.8"	angle="270"		rot="75" parent="archeryHub1" links="archeryDamage2"/>
+<skill nId="1,18"  id="archeryDamage2"				progression="skillTreeArcheryDamage"				radius="0.8"	angle="315"		rot="75" parent="archeryHub1" links=""/>
+<skill nId="1,19"  id="loot1"						progression="skillTreeLooting05"					radius="0.8"	angle="135"		rot="75" parent="archeryHub1" links="lootPerception1"/>
+<skill nId="1,20"  id="lootPerception1"				progression="Perception" points="5"					radius="0.8"	angle="90"		rot="75" parent="archeryHub1" links="loot2"/>
+<skill nId="1,21"  id="loot2"						progression="skillTreeLooting05"					radius="0.8"	angle="45"		rot="75" parent="archeryHub1" links=""/>
+
+<skill nId="1,22"  id="sniperRifleHub1"				skill="false"										radius="9"		angle="96"		parent="center"	icon="symbol_sniper_rifle;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="1,23"  id="firearmArmorReduction1"		progression="skillTreeRangedArmorReduction"			radius="0.8"	angle="225"		rot="95" parent="sniperRifleHub1" links="firearmPerception1"/>
+<skill nId="1,24"  id="firearmPerception1"			progression="Perception" points="5"					radius="0.8"	angle="270"		rot="95" parent="sniperRifleHub1" links="firearmArmorReduction2"/>
+<skill nId="1,25"  id="firearmArmorReduction2"		progression="skillTreeRangedArmorReduction"			radius="0.8"	angle="315"		rot="95" parent="sniperRifleHub1" links=""/>
+<skill nId="1,26"  id="sniperRifleDamage1"			progression="skillTreeSniperDamage"					radius="0.8"	angle="135"		rot="95" parent="sniperRifleHub1" links="sniperRifleHandling1"/>
+<skill nId="1,27"  id="sniperRifleHandling1"		progression="skillTreeSniperHandling"				radius="0.8"	angle="90"		rot="95" parent="sniperRifleHub1" links="sniperRifleDeadEye1"/>
+<skill nId="1,28"  id="sniperRifleDeadEye1"			progression="skillTreeSniperDeadEye"				radius="0.8"	angle="45"		rot="95" parent="sniperRifleHub1" links=""/>
+
+<skill nId="1,29"  id="perception_048_11"			progression="Perception" points="5"					radius="11"		angle="48"		parent="center" links="hunter3,tracker1,polearmDamage2"/>
+<skill nId="1,30"  id="tracker1"					progression="skillTreeTrackAnimalsSmall"			radius="11"		angle="60"		parent="center" links=""/>
+<skill nId="1,31"  id="perception_072_11"			progression="Perception" points="5"					radius="11"		angle="72"		parent="center" links="tracker1,forager1,archeryDamage2,loot2"/>
+<skill nId="1,32"  id="forager1"					progression="skillTreeForager"						radius="11"		angle="84"		parent="center" links=""/>
+<skill nId="1,33"  id="perception_096_11"			progression="Perception" points="5"					radius="11"		angle="96"		parent="center" links="strength_108_11,forager1,sniperRifleDeadEye1,firearmArmorReduction2"/>
+<skill nId="1,34"  id="strength_108_11"				progression="Strength" points="5"					radius="11"		angle="108"		parent="center" links="dexterity_120_11"/>
+
+<skill nId="1,35"  id="fortitude_048_13"			progression="Fortitude" points="5"					radius="13"		angle="48"		parent="center" links="perception_048_11,polearmDamage3,sniperRifleDamage4"/>
+<skill nId="1,36"  id="perception_060_13"			progression="Perception" points="5"					radius="13"		angle="60"		parent="center" links="tracker1,butcher1,tracker2"/>
+<skill nId="1,37"  id="perception_072_13"			progression="Perception" points="5"					radius="13"		angle="72"		parent="center" links="perception_072_11,archeryDamage3,archeryDamage6"/>
+
+<skill nId="1,38"  id="dexterity_084_13"			progression="Dexterity" points="5"					radius="13"		angle="84"		parent="center" links="forager1,farmer1,loot3"/>
+
+<skill nId="1,39"  id="dexterity_096_13"			progression="Dexterity" points="5"					radius="13"		angle="96"		parent="center" links="perception_096_11,sniperRifleDamage2,firearmArmorReduction3"/>
+
+<skill nId="1,40"  id="polearmHub2"					skill="false"										radius="15"		angle="48"		parent="center" icon="symbol_spear;40;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="1,41"  id="polearmDamage3"				progression="skillTreeSpearDamage"					radius="0.8"	angle="225"		rot="40" parent="polearmHub2" links="penetratingSpears2"/>
+<skill nId="1,42"  id="penetratingSpears2"			progression="skillTreeSpearArmorReduction"			radius="0.8"	angle="270"		rot="40" parent="polearmHub2" links="polearmDamage4"/>
+<skill nId="1,43"  id="polearmDamage4"				progression="skillTreeSpearDamage"					radius="0.8"	angle="315"		rot="40" parent="polearmHub2" links=""/>
+<skill nId="1,44"  id="sniperRifleDamage4"			progression="skillTreeSniperDamage"					radius="0.8"	angle="135"		rot="40" parent="polearmHub2" links="sniperRifleDamage5"/>
+<skill nId="1,45"  id="sniperRifleDamage5"			progression="skillTreeSniperDamage"					radius="0.8"	angle="90"		rot="40" parent="polearmHub2" links="sniperRifleDamage6"/>
+<skill nId="1,46"  id="sniperRifleDamage6"			progression="skillTreeSniperDamage"					radius="0.8"	angle="45"		rot="40" parent="polearmHub2" links=""/>
+
+<skill nId="1,47"  id="hunterHub2"					skill="false"										radius="15"		angle="60"		parent="center" icon="symbol_butcher;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="1,48"  id="butcher1"					progression="skillTreeButcher"						radius="0.8"	angle="135"		rot="60" parent="hunterHub2" links="butcher2"/>
+<skill nId="1,49"  id="butcher2"					progression="skillTreeButcher"						radius="0.8"	angle="90"		rot="60" parent="hunterHub2" links="butcher3"/>
+<skill nId="1,50"  id="butcher3"					progression="skillTreeButcher"						radius="0.8"	angle="45"		rot="60" parent="hunterHub2" links=""/>
+<skill nId="1,51"  id="tracker2"					progression="skillTreeTrackAnimalsMedium"			radius="0.8"	angle="225"		rot="60" parent="hunterHub2" links="trackerPerception"/>
+<skill nId="1,52"  id="trackerPerception"			progression="Perception" points="5"					radius="0.8"	angle="270"		rot="60" parent="hunterHub2" links="tracker3"/>
+<skill nId="1,53"  id="tracker3"					progression="skillTreeTrackAnimalsLarge"			radius="0.8"	angle="315"		rot="60" parent="hunterHub2" links=""/>
+
+<skill nId="1,54"  id="archeryHub2"					skill="false"										radius="15"		angle="72"		parent="center" icon="symbol_archery;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="1,55"  id="archeryDamage3"				progression="skillTreeArcheryDamage"				radius="0.8"	angle="225"		rot="75" parent="archeryHub2" links="archeryHandling2"/>
+<skill nId="1,56"  id="archeryHandling2"			progression="skillTreeArcheryHandling"				radius="0.8"	angle="270"		rot="75" parent="archeryHub2" links="archeryDamage4"/>
+<skill nId="1,57"  id="archeryDamage4"				progression="skillTreeArcheryDamage"				radius="0.8"	angle="315"		rot="75" parent="archeryHub2" links=""/>
+<skill nId="1,58"  id="archeryDamage6"				progression="skillTreeArcheryDamage"				radius="0.8"	angle="135"		rot="75" parent="archeryHub2" links="archeryHandling3"/>
+<skill nId="1,59"  id="archeryHandling3"			progression="skillTreeArcheryHandling"				radius="0.8"	angle="90"		rot="75" parent="archeryHub2" links="archeryDamage5"/>
+<skill nId="1,60"  id="archeryDamage5"				progression="skillTreeArcheryDamage"				radius="0.8"	angle="45"		rot="75" parent="archeryHub2" links=""/>
+
+<skill nId="1,61"  id="farmingHub"					skill="false"										radius="15"		angle="84"		parent="center" icon="symbol_corn;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="1,62"  id="farmer1"						progression="skillTreeFarmer"						radius="0.8"	angle="135"		rot="80" parent="farmingHub" links="forager2"/>
+<skill nId="1,63"  id="forager2"					progression="skillTreeForager"						radius="0.8"	angle="90"		rot="80" parent="farmingHub" links="farmer2"/>
+<skill nId="1,64"  id="farmer2"						progression="skillTreeFarmer"						radius="0.8"	angle="45"		rot="80" parent="farmingHub" links=""/>
+<skill nId="1,65"  id="loot3"						progression="skillTreeLooting05"					radius="0.8"	angle="225"		rot="80" parent="farmingHub" links="lootPerception2"/>
+<skill nId="1,66"  id="lootPerception2"				progression="Perception" points="5"					radius="0.8"	angle="270"		rot="80" parent="farmingHub" links="loot4"/>
+<skill nId="1,67"  id="loot4"						progression="skillTreeLooting10"					radius="0.8"	angle="315"		rot="80" parent="farmingHub" links=""/>
+
+<skill nId="1,68"  id="sniperRifleHub3"				skill="false"										radius="15"		angle="96"		parent="center" icon="symbol_sniper_rifle;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="1,69"  id="sniperRifleDamage2"			progression="skillTreeSniperDamage"					radius="0.8"	angle="135"		rot="95" parent="sniperRifleHub3" links="sniperRifleHandling2"/>
+<skill nId="1,70"  id="sniperRifleHandling2"		progression="skillTreeSniperHandling"				radius="0.8"	angle="90"		rot="95" parent="sniperRifleHub3" links="sniperRifleDeadEye2"/>
+<skill nId="1,71"  id="sniperRifleDeadEye2"			progression="skillTreeSniperDeadEye"				radius="0.8"	angle="45"		rot="95" parent="sniperRifleHub3" links=""/>
+<skill nId="1,72"  id="firearmArmorReduction3"		progression="skillTreeRangedArmorReduction"			radius="0.8"	angle="225"		rot="95" parent="sniperRifleHub3" links="firearmPerception2"/>
+<skill nId="1,73"  id="firearmPerception2"			progression="Perception" points="5"					radius="0.8"	angle="270"		rot="95" parent="sniperRifleHub3" links="firearmArmorReduction4"/>
+<skill nId="1,74"  id="firearmArmorReduction4"		progression="skillTreeRangedArmorReduction"			radius="0.8"	angle="315"		rot="95" parent="sniperRifleHub3" links=""/>
+
+<skill nId="1,75"  id="treasureHunterHub1"			skill="false"										radius="15"		angle="108"		parent="center" icon="symbol_chest;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="1,76"  id="treasureHunter1"				progression="skillTreeTreasureHunter"				radius="0.8"	angle="45"		rot="-80" parent="treasureHunterHub1" links="treasureHunterPerception"/>
+<skill nId="1,77"  id="treasureHunterPerception"	progression="Perception" points="5"					radius="0.8"	angle="90"		rot="-80" parent="treasureHunterHub1" links="treasureHunter2"/>
+<skill nId="1,78"  id="treasureHunter2"				progression="skillTreeTreasureHunter"				radius="0.8"	angle="135"		rot="-80" parent="treasureHunterHub1" links=""/>
+<skill nId="1,79"  id="sneakDamage3"				progression="skillTreeSneakDamage"					radius="0.8"	angle="315"		rot="-80" parent="treasureHunterHub1" links="sneakDexterity3"/>
+<skill nId="1,60"  id="sneakDexterity3"				progression="Dexterity" points="5"					radius="0.8"	angle="270"		rot="-80" parent="treasureHunterHub1" links="sneakDamage4"/>
+<skill nId="1,61"  id="sneakDamage4"				progression="skillTreeSneakDamage"					radius="0.8"	angle="225"		rot="-80" parent="treasureHunterHub1" links=""/>
+
+<skill nId="1,62"  id="perception_048_17"			progression="Perception" points="5"					radius="17"		angle="48"		parent="center" links="perception_048_19,polearmDamage4,sniperRifleDamage6"/>
+<skill nId="1,63"  id="perception_060_17"			progression="Perception" points="5"					radius="17"		angle="60"		parent="center" links="tracker3,butcher3,strength_060_19"/>
+<skill nId="1,64"  id="perception_072_17"			progression="Perception" points="5"					radius="17"		angle="72"		parent="center" links="perception_072_19,archeryDamage5,archeryDamage4"/>
+<skill nId="1,65"  id="perception_084_17"			progression="Perception" points="5"					radius="17"		angle="84"		parent="center" links="intellect_084_19,farmer2,loot4"/>
+<skill nId="1,66"  id="intellect_108_17"			progression="Intellect" points="5"					radius="17"		angle="108"		parent="center" links="strength_108_19,sneakDamage4,treasureHunter2"/>
+<skill nId="1,67"  id="perception_096_17"			progression="Perception" points="5"					radius="17"		angle="96"		parent="center" links="perception_096_19,sniperRifleDeadEye2,firearmArmorReduction4"/>
+
+<skill nId="1,68"  id="perception_048_19"			progression="Perception" points="5"					radius="19"		angle="48"		parent="center" links="intellect_036_19,strength_060_19,sniperRiflePierce1"/>
+<skill nId="1,69"  id="strength_060_19"				progression="Strength" points="5"					radius="19"		angle="60"		parent="center" links="firearmArmorReduction5"/>
+<skill nId="1,70"  id="perception_072_19"			progression="Perception" points="5"					radius="19"		angle="72"		parent="center" links="strength_060_19,intellect_084_19,polearmDamage5,sniperRifleDamage3"/>
+<skill nId="1,71"  id="intellect_084_19"			progression="Intellect" points="5"					radius="19"		angle="84"		parent="center" links="loot5"/>
+<skill nId="1,72"  id="perception_096_19"			progression="Perception" points="5"					radius="19"		angle="96"		parent="center" links="intellect_084_19,strength_108_19,sniperRiflePierce3"/>
+<skill nId="1,73"  id="strength_108_19"				progression="Strength" points="5"					radius="19"		angle="108"		parent="center" links="treasureHunter3"/>
+
+<skill nId="1,74"  id="loot5"						progression="skillTreeLooting15"					radius="21"		angle="84"		parent="center" links=""/>
+<skill nId="1,75"  id="sniperRiflePierce3"			progression="skillTreeSniperPenetration"			radius="21"		angle="96"		parent="center" links=""/>
+<!--<skill		   id="treasureHunter3"			progression="skillTreeTreasureHunter"				radius="21"		angle="108"		parent="center" links=""/>-->
+
+<skill nId="1,76"  id="treasureHunterHub2"			skill="false"										radius="21"		angle="108"		parent="center" icon="symbol_chest;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="1,77"  id="treasureHunter3"				progression="skillTreeTreasureHunter"				radius="0.8"	angle="270"		rot="10" parent="treasureHunterHub2" links="treasureHunterLoot1"/>
+<skill nId="1,78"  id="treasureHunterLoot1"			progression="skillTreeTreasureLoot1"				radius="0.8"	angle="225"		rot="10" parent="treasureHunterHub2" links="treasureHunterLoot2"/>
+<skill nId="1,79"  id="treasureHunterLoot2"			progression="skillTreeTreasureLoot2"				radius="0.8"	angle="180"		rot="10" parent="treasureHunterHub2" links="treasureHunterLoot3"/>
+<skill nId="1,80"  id="treasureHunterLoot3"			progression="skillTreeTreasureLoot3"				radius="0.8"	angle="135"		rot="10" parent="treasureHunterHub2" links=""/>
+
+<skill nId="1,81"  id="sniperRifleHub2"				skill="false"										radius="21"		angle="48"		parent="center" icon="symbol_sniper_rifle;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="1,82"  id="sniperRiflePierce1"			progression="skillTreeSniperPenetration"			radius="0.8"	angle="135"		rot="40" parent="sniperRifleHub2" links="sniperRiflePerception1"/>
+<skill nId="1,83"  id="sniperRiflePerception1"		progression="Perception" points="5"					radius="0.8"	angle="90"		rot="40" parent="sniperRifleHub2" links="sniperRiflePierce2"/>
+<skill nId="1,84"  id="sniperRiflePierce2"			progression="skillTreeSniperPenetration"			radius="0.8"	angle="45"		rot="40" parent="sniperRifleHub2" links=""/>
+
+<skill nId="1,85"  id="sniperRiflePierceHub"		skill="false"										radius="21"		angle="72"		parent="center" icon="symbol_sniper_rifle;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="1,86"  id="polearmDamage5"				progression="skillTreeSpearDamage"					radius="0.8"	angle="135"		rot="75" parent="sniperRiflePierceHub" links="penetratingSpears3"/>
+<skill nId="1,87"  id="penetratingSpears3"			progression="skillTreeSpearArmorReduction"			radius="0.8"	angle="90"		rot="75" parent="sniperRiflePierceHub" links="polearmDamage6"/>
+<skill nId="1,88"  id="polearmDamage6"				progression="skillTreeSpearDamage"					radius="0.8"	angle="45"		rot="75" parent="sniperRiflePierceHub" links=""/>
+<skill nId="1,89"  id="sniperRifleDamage3"			progression="skillTreeSniperDamage"					radius="0.8"	angle="225"		rot="75" parent="sniperRiflePierceHub" links="sniperRifleHandling3"/>
+<skill nId="1,90"  id="sniperRifleHandling3"		progression="skillTreeSniperHandling"				radius="0.8"	angle="270"		rot="75" parent="sniperRiflePierceHub" links="sniperRifleDeadEye3"/>
+<skill nId="1,91"  id="sniperRifleDeadEye3"			progression="skillTreeSniperDeadEye"				radius="0.8"	angle="315"		rot="75" parent="sniperRiflePierceHub" links=""/>
+
+<skill nId="1,92"  id="firearmArmorReductionHub2"	skill="false"										radius="21"		angle="60"		parent="center" icon="symbol_pierce_ammo;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="1,93"  id="firearmArmorReduction5"		progression="skillTreeRangedArmorReduction"			radius="0.8"	angle="315"		rot="-100" parent="firearmArmorReductionHub2" links="firearmPerception3"/>
+<skill nId="1,94"  id="firearmPerception3"			progression="Perception" points="5"					radius="0.8"	angle="270"		rot="-100" parent="firearmArmorReductionHub2" links="firearmArmorReduction6"/>
+<skill nId="1,95"  id="firearmArmorReduction6"		progression="skillTreeRangedArmorReduction"			radius="0.8"	angle="225"		rot="-100" parent="firearmArmorReductionHub2" links=""/>
+
+
+<!-- 
+
+	S C O U T   C L A S S
+
+	+144 Degrees
+	+-24 Offset
+	
+<skill id="startDexterity"				skill="false"	parent="center"						radius="1.8"	angle="144"		icon="symbol_class_scout_bw;120;255,255,255" background="ui_circle_fill_fg;160;64,64,64" alt_icon="symbol_class_scout" atlas="UISkills"/>
+-->
+
+<skill nId="2,0"   id="rootDexterity"				progression="skillTreeDexterityClass"				radius="1.8"	angle="144"		parent="center" root="true" link_offset="0.8" icon="symbol_class_scout_bw;120" background="ui_circle_fill_fg;160;64,64,64" alt_icon="symbol_class_scout" atlas="UISkills"/>
+
+<skill nId="2,1"   id="baseDexterity"				progression="Dexterity" points="5"					radius="3.2"	angle="144"		parent="center" links="rootDexterity"/>
+
+<skill nId="2,2"   id="baseStamina"					progression="skillTreeMaxStaminaBase"				radius="5"		angle="144"		parent="center" links="baseDexterity"/>
+<skill nId="2,3"   id="baseFirearmHandling"			progression="skillTreeFirearmHandlingBase"			radius="5"		angle="120"		parent="center" links="baseDexterity"/>
+<skill nId="2,4"   id="baseMeleeSpeed"				progression="skillTreeMeleeSpeedBase"				radius="5"		angle="168"		parent="center" links="baseDexterity"/>
+
+<skill nId="2,5"   id="pistolHub1"					skill="false"										radius="9"		angle="120"		parent="center"	icon="symbol_pistol;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="2,6"   id="pistolDamage1"				progression="skillTreePistolDamage"					radius="0.8"	angle="45"		rot="-50" parent="pistolHub1" links="pistolHandling1"/>
+<skill nId="2,7"   id="pistolHandling1"				progression="skillTreePistolHandling"				radius="0.8"	angle="90"		rot="-50" parent="pistolHub1" links="pistolTrippleTap1"/>
+<skill nId="2,8"   id="pistolTrippleTap1"			progression="skillTreePistolTrippleTap"				radius="0.8"	angle="135"		rot="-50" parent="pistolHub1" links=""/>
+<skill nId="2,9"   id="firearmRunAndGun1"			progression="skillTreeFirearmRunAndGun"				radius="0.8"	angle="315"		rot="-50" parent="pistolHub1" links="firearmDexterity1"/>
+<skill nId="2,10"  id="firearmDexterity1"			progression="Dexterity" points="5"					radius="0.8"	angle="270"		rot="-50" parent="pistolHub1" links="firearmRunAndGun2"/>
+<skill nId="2,11"  id="firearmRunAndGun2"			progression="skillTreeFirearmRunAndGun"				radius="0.8"	angle="225"		rot="-50" parent="pistolHub1" links=""/>
+
+<skill nId="2,12"  id="stealthHub3"					skill="false"										radius="9"		angle="144"		parent="center"	icon="symbol_fox;50;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="2,13"  id="stealth1"					progression="skillTreeStealth"						radius="0.8"	angle="315"		rot="-40" parent="stealthHub3" links="stealthPerception1"/>
+<skill nId="2,14"  id="stealthPerception1"			progression="Perception" points="5"					radius="0.8"	angle="270"		rot="-40" parent="stealthHub3" links="stealth2"/>
+<skill nId="2,15"  id="stealth2"					progression="skillTreeStealth"						radius="0.8"	angle="225"		rot="-40" parent="stealthHub3" links=""/>
+<skill nId="2,16"  id="cardio1"						progression="skillTreeMaxStaminaCardio"				radius="0.8"	angle="45"		rot="-40" parent="stealthHub3" links="cardioDexterity1"/>
+<skill nId="2,17"  id="cardioDexterity1"			progression="Dexterity" points="5"					radius="0.8"	angle="90"		rot="-40" parent="stealthHub3" links="cardio2"/>
+<skill nId="2,18"  id="cardio2"						progression="skillTreeMaxStaminaCardio"				radius="0.8"	angle="135"		rot="-40" parent="stealthHub3" links=""/>	
+
+<skill nId="2,19"  id="bladeHub1"					skill="false"										radius="9"		angle="168"		parent="center"	icon="symbol_deep_cuts;40;180,180,180" background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="2,20"  id="bladeDamage1"				progression="skillTreeBladeDamage"					radius="0.8"	angle="315"		rot="-10" parent="bladeHub1" links="bladeDexterity1"/>
+<skill nId="2,21"  id="bladeDexterity1"				progression="Dexterity" points="5"					radius="0.8"	angle="270"		rot="-10" parent="bladeHub1" links="bladeDamage2"/>
+<skill nId="2,22"  id="bladeDamage2"				progression="skillTreeBladeDamage"					radius="0.8"	angle="225"		rot="-10" parent="bladeHub1" links=""/>
+<skill nId="2,23"  id="bladeBleed1"					progression="skillTreeBladeDeepCuts"				radius="0.8"	angle="45"		rot="-10" parent="bladeHub1" links="bladeDexterity2"/>
+<skill nId="2,24"  id="bladeDexterity2"				progression="Dexterity" points="5"					radius="0.8"	angle="90"		rot="-10" parent="bladeHub1" links="bladeBleed2"/>
+<skill nId="2,25"  id="bladeBleed2"					progression="skillTreeBladeDeepCuts"				radius="0.8"	angle="135"		rot="-10" parent="bladeHub1" links=""/>
+
+<skill nId="2,26"  id="dexterity_120_7"				progression="Dexterity" points="5"					radius="7"		angle="120"		parent="center" links="baseFirearmHandling,pistolDamage1,firearmRunAndGun1"/>
+<skill nId="2,27"  id="dexterity_144_7"				progression="Dexterity" points="5"					radius="7"		angle="144"		parent="center" links="baseStamina,stealth1,cardio1"/>
+<skill nId="2,28"  id="dexterity_168_7"				progression="Dexterity" points="5"					radius="7"		angle="168"		parent="center" links="baseMeleeSpeed,bladeDamage1,bladeBleed1"/>
+
+<skill nId="2,29"  id="dexterity_120_11"			progression="Dexterity" points="5"					radius="11"		angle="120"		parent="center" links="perception_120_13,firearmRunAndGun3,firearmRunAndGun2,pistolTrippleTap1"/>
+<skill nId="2,30"  id="dexterity_144_11"			progression="Dexterity" points="5"					radius="11"		angle="144"		parent="center" links="dexterity_144_13,meleeStaminaUse1,firearmRunAndGun3,cardio2,stealth2"/>
+<skill nId="2,31"  id="dexterity_168_11"			progression="Dexterity" points="5"					radius="11"		angle="168"		parent="center" links="intellect_168_13,fortitude_180_11,meleeStaminaUse1,bladeDamage2,bladeBleed2"/>
+
+<skill nId="2,32"  id="firearmRunAndGun3"			progression="skillTreeFirearmRunAndGun"				radius="11"		angle="132"		parent="center" links="dexterity_132_13"/>
+<skill nId="2,33"  id="meleeStaminaUse1"			progression="skillTreeMeleeStaminaUse"				radius="11"		angle="156"		parent="center" links="dexterity_156_13"/>
+<skill nId="2,34"  id="fortitude_180_11"			progression="Fortitude" points="5"					radius="11"		angle="180"		parent="center" links=""/>
+
+<skill nId="2,35"  id="perception_120_13"			progression="Perception" points="5"					radius="13"		angle="120"		parent="center" links="pistolDamage2,armorLight1"/>
+
+<skill nId="2,36"  id="perception_108_13"			progression="Perception" points="5"					radius="13"		angle="108"		parent="center" links="strength_108_11,sneakDamage3,treasureHunter1"/>
+<skill nId="2,37"  id="dexterity_132_13"			progression="Dexterity" points="5"					radius="13"		angle="132"		parent="center" links="stealth3,sneakDamage5"/>
+<skill nId="2,38"  id="dexterity_144_13"			progression="Dexterity" points="5"					radius="13"		angle="144"		parent="center" links="meleeAttackSpeed1,lockpick4"/>
+<skill nId="2,39"  id="intellect_168_13"			progression="Intellect" points="5"					radius="13"		angle="168"		parent="center" links="bladeDamage3,bladeBleed3"/>
+
+<skill nId="2,40"  id="armorLightHub"				skill="false"										radius="15"		angle="180"		parent="center" icon="symbol_armor_light;50;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="2,41"  id="armorLight4"					progression="skillTreeArmorLight"					radius="0.8"	angle="45"		parent="armorLightHub" links="armorLight5"/>
+<skill nId="2,42"  id="armorLight5"					progression="skillTreeArmorLight"					radius="0.8"	angle="90"		parent="armorLightHub" links="armorLight6"/>
+<skill nId="2,43"  id="armorLight6"					progression="skillTreeArmorLight"					radius="0.8"	angle="135"		parent="armorLightHub" links=""/>
+<skill nId="2,44"  id="sneakDamage1"				progression="skillTreeSneakDamage"					radius="0.8"	angle="315"		parent="armorLightHub" links="sneakDexterity1"/>
+<skill nId="2,45"  id="sneakDexterity1"				progression="Dexterity" points="5"					radius="0.8"	angle="270"		parent="armorLightHub" links="sneakDamage2"/>
+<skill nId="2,46"  id="sneakDamage2"				progression="skillTreeSneakDamage"					radius="0.8"	angle="225"		parent="armorLightHub" links=""/>
+
+<skill nId="2,47"  id="stealthHub2"					skill="false"										radius="15"		angle="132"		parent="center" icon="symbol_fox;50;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="2,48"  id="stealth3"					progression="skillTreeStealth"						radius="0.8"	angle="315"		rot="-50" parent="stealthHub2" links="stealthPerception2"/>
+<skill nId="2,49"  id="stealthPerception2"			progression="Perception" points="5"					radius="0.8"	angle="270"		rot="-50" parent="stealthHub2" links="stealth4"/>
+<skill nId="2,50"  id="stealth4"					progression="skillTreeStealth"						radius="0.8"	angle="225"		rot="-50" parent="stealthHub2" links=""/>
+<skill nId="2,51"  id="sneakDamage5"				progression="skillTreeSneakDamage"					radius="0.8"	angle="45"		rot="-50" parent="stealthHub2" links="sneakDexterity2"/>
+<skill nId="2,52"  id="sneakDexterity2"				progression="Dexterity" points="5"					radius="0.8"	angle="90"		rot="-50" parent="stealthHub2" links="sneakDamage6"/>
+<skill nId="2,53"  id="sneakDamage6"				progression="skillTreeSneakDamage"					radius="0.8"	angle="135"		rot="-50" parent="stealthHub2" links=""/>
+
+<skill nId="2,54"  id="meleeAttackSpeedHub1"		skill="false"										radius="15"		angle="144"		parent="center" icon="ui_game_symbol_knunchuck;50;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="2,55"  id="meleeAttackSpeed1"			progression="skillTreeMeleeAttackSpeed"				radius="0.9"	angle="315"		rot="-35" parent="meleeAttackSpeedHub1" links="meleeAttackSpeedDexterity"/>
+<skill nId="2,56"  id="meleeAttackSpeedDexterity"	progression="Dexterity" points="5"					radius="0.9"	angle="270"		rot="-35" parent="meleeAttackSpeedHub1" links="meleeAttackSpeed2"/>
+<skill nId="2,57"  id="meleeAttackSpeed2"			progression="skillTreeMeleeAttackSpeed"				radius="0.9"	angle="225"		rot="-35" parent="meleeAttackSpeedHub1" links=""/>
+<skill nId="2,58"  id="lockpick3"					progression="skillTreeLockPicking"					radius="0.8"	angle="135"		rot="-35" parent="meleeAttackSpeedHub1" links="lockpickPerception2"/>
+<skill nId="2,59"  id="lockpickPerception2"			progression="Perception" points="5"					radius="0.8"	angle="90"		rot="-35" parent="meleeAttackSpeedHub1" links="lockpick4"/>
+<skill nId="2,60"  id="lockpick4"					progression="skillTreeLockPicking"					radius="0.8"	angle="45"		rot="-35" parent="meleeAttackSpeedHub1" links=""/>
+
+<skill nId="2,61"  id="cardioHub1"					skill="false"										radius="15"		angle="156"		parent="center" icon="symbol_cardio;50;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="2,62"  id="cardio4"						progression="skillTreeMaxStaminaCardio"				radius="0.8"	angle="225"		rot="-30" parent="cardioHub1" links="cardioStrength"/>
+<skill nId="2,63"  id="cardioStrength"				progression="Strength" points="5"					radius="0.8"	angle="270"		rot="-30" parent="cardioHub1" links="cardio3"/>
+<skill nId="2,64"  id="cardio3"						progression="skillTreeMaxStaminaCardio"				radius="0.8"	angle="315"		rot="-30" parent="cardioHub1" links=""/>
+<skill nId="2,65"  id="cardio5"						progression="skillTreeMaxStaminaCardio"				radius="0.8"	angle="45"		rot="-30" parent="cardioHub1" links="cardioFortitude"/>
+<skill nId="2,66"  id="cardioFortitude"				progression="Fortitude" points="5"					radius="0.8"	angle="90"		rot="-30" parent="cardioHub1" links="cardio6"/>
+<skill nId="2,67"  id="cardio6"						progression="skillTreeMaxStaminaCardio"				radius="0.8"	angle="135"		rot="-30" parent="cardioHub1" links=""/>
+
+<skill nId="2,68"  id="strength_180_13"				progression="Strength" points="5"					radius="13"		angle="180"		parent="center" links="fortitude_180_11,sneakDamage1,armorLight4"/>
+
+<skill nId="2,69"  id="pistolHub2"					skill="false"										radius="15"		angle="120"		parent="center" icon="symbol_pistol;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="2,70"  id="armorLight1"					progression="skillTreeArmorLight"					radius="0.8"	angle="315"		rot="-60" parent="pistolHub2" links="armorLight2"/>
+<skill nId="2,71"  id="armorLight2"					progression="skillTreeArmorLight"					radius="0.8"	angle="270"		rot="-60" parent="pistolHub2" links="armorLight3"/>
+<skill nId="2,72"  id="armorLight3"					progression="skillTreeArmorLight"					radius="0.8"	angle="225"		rot="-60" parent="pistolHub2" links=""/>
+<skill nId="2,73"  id="pistolDamage2"				progression="skillTreePistolDamage"					radius="0.8"	angle="45"		rot="-60" parent="pistolHub2" links="pistolHandling2"/>
+<skill nId="2,74"  id="pistolHandling2"				progression="skillTreePistolHandling"				radius="0.8"	angle="90"		rot="-60" parent="pistolHub2" links="pistolTrippleTap2"/>
+<skill nId="2,75"  id="pistolTrippleTap2"			progression="skillTreePistolTrippleTap"				radius="0.8"	angle="135"		rot="-60" parent="pistolHub2" links=""/>
+
+<skill nId="2,76"  id="bladeHub2"					skill="false"										radius="15"		angle="168"		parent="center" icon="symbol_deep_cuts;40;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="2,77"  id="bladeDamage3"				progression="skillTreeBladeDamage"					radius="0.8"	angle="315"		rot="-15" parent="bladeHub2" links="bladeDexterity3"/>
+<skill nId="2,78"  id="bladeDexterity3"				progression="Dexterity" points="5"					radius="0.8"	angle="270"		rot="-15" parent="bladeHub2" links="bladeDamage4"/>
+<skill nId="2,79"  id="bladeDamage4"				progression="skillTreeBladeDamage"					radius="0.8"	angle="225"		rot="-15" parent="bladeHub2" links=""/>
+<skill nId="2,80"  id="bladeBleed3"					progression="skillTreeBladeDeepCuts"				radius="0.8"	angle="45"		rot="-15" parent="bladeHub2" links="bladeDexterity4"/>
+<skill nId="2,81"  id="bladeDexterity4"				progression="Dexterity" points="5"					radius="0.8"	angle="90"		rot="-15" parent="bladeHub2" links="bladeBleed4"/>
+<skill nId="2,82"  id="bladeBleed4"					progression="skillTreeBladeDeepCuts"				radius="0.8"	angle="135"		rot="-15" parent="bladeHub2" links=""/>
+
+<skill nId="2,83"  id="dexterity_156_13"			progression="Dexterity" points="5"					radius="13"		angle="156"		parent="center" links="cardio3,cardio5"/>
+
+<skill nId="2,84"  id="dexterity_120_17"			progression="Dexterity" points="5"					radius="17"		angle="120"		parent="center" links="armorLight3,pistolTrippleTap2"/>
+<skill nId="2,85"  id="dexterity_144_17"			progression="Dexterity" points="5"					radius="17"		angle="144"		parent="center" links="meleeAttackSpeed2,lockpick3"/>
+<skill nId="2,86"  id="dexterity_132_17"			progression="Dexterity" points="5"					radius="17"		angle="132"		parent="center" links="stealth4,sneakDamage6,perception_132_19"/>
+<skill nId="2,87"  id="dexterity_156_17"			progression="Dexterity" points="5"					radius="17"		angle="156"		parent="center" links="cardio4,cardio6"/>
+<skill nId="2,88"  id="dexterity_168_17"			progression="Dexterity" points="5"					radius="17"		angle="168"		parent="center" links="bladeDamage4,bladeBleed4"/>
+
+<skill nId="2,89"  id="dexterity_120_19"			progression="Dexterity" points="5"					radius="19"		angle="120"		parent="center" links="dexterity_120_17,strength_108_19,perception_132_19,meleeAttackSpeed3"/>
+<skill nId="2,90"  id="perception_132_19"			progression="Perception" points="5"					radius="19"		angle="132"		parent="center" links="bladeBleed5,stealth5"/>
+
+<skill nId="2,91"  id="dexterity_144_19"			progression="Dexterity" points="5"					radius="19"		angle="144"		parent="center" links="dexterity_144_17,perception_132_19,intellect_156_19,doubleJump"/>
+<skill nId="2,92"  id="intellect_156_19"			progression="Intellect" points="5"					radius="19"		angle="156"		parent="center" links="dexterity_156_17,dexterity_168_19,pistolDamage4,pistolDamage3"/>
+<skill nId="2,93"  id="dexterity_168_19"			progression="Dexterity" points="5"					radius="19"		angle="168"		parent="center" links="dexterity_168_17,smgDamage4,smgHandling4"/>
+<skill nId="2,94"  id="fortitude_180_17"			progression="Fortitude" points="5"					radius="17"		angle="180"		parent="center" links="sneakDamage2,armorLight6"/>
+
+<skill nId="2,95"  id="intellect_180_19"			progression="Intellect" points="5"					radius="19"		angle="180"		parent="center" links="fortitude_180_17,intellect_192_19,dexterity_168_19,droneCargo4,salvcager5"/>
+
+<skill nId="2,96"  id="meleeAttackSpeed3"			progression="skillTreeMeleeAttackSpeed"				radius="21"		angle="120"		parent="center" links=""/>
+
+<skill nId="2,97"  id="bladeHub3"					skill="false"										radius="21"		angle="132"		parent="center" icon="symbol_deep_cuts;40;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="2,98"  id="bladeBleed5"					progression="skillTreeBladeDeepCuts"				radius="0.8"	angle="315"		rot="-40" parent="bladeHub3" links="bladeDamage5"/>
+<skill nId="2,99"  id="bladeDamage5"				progression="skillTreeBladeDamage"					radius="0.8"	angle="270"		rot="-40" parent="bladeHub3" links="bladeBleed6"/>
+<skill nId="2,100" id="bladeBleed6"					progression="skillTreeBladeDeepCuts"				radius="0.8"	angle="225"		rot="-40" parent="bladeHub3" links="bladeDamage6"/>
+<skill nId="2,101" id="bladeDamage6"				progression="skillTreeBladeDamage"					radius="0.8"	angle="180"		rot="-40" parent="bladeHub3" links=""/>
+<skill nId="2,102" id="stealth5"					progression="skillTreeStealth"						radius="0.8"	angle="45"		rot="-40" parent="bladeHub3" links="stealth6"/>
+<skill nId="2,103" id="stealth6"					progression="skillTreeStealth"						radius="0.8"	angle="90"		rot="-40" parent="bladeHub3" links=""/>
+
+<skill nId="2,104" id="pistolTrippleTapHub"			skill="false"										radius="21"		angle="156"		parent="center" icon="symbol_pistol;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="2,105" id="pistolDamage3"				progression="skillTreePistolDamage"					radius="0.8"	angle="45"		rot="-25" parent="pistolTrippleTapHub" links="pistolHandling3"/>
+<skill nId="2,106" id="pistolHandling3"				progression="skillTreePistolHandling"				radius="0.8"	angle="90"		rot="-25" parent="pistolTrippleTapHub" links="pistolTrippleTap3"/>
+<skill nId="2,107" id="pistolTrippleTap3"			progression="skillTreePistolTrippleTap"				radius="0.8"	angle="135"		rot="-25" parent="pistolTrippleTapHub" links=""/>
+<skill nId="2,108" id="pistolDamage4"				progression="skillTreePistolDamage"					radius="0.8"	angle="315"		rot="-25" parent="pistolTrippleTapHub" links="pistolDamage5"/>
+<skill nId="2,109" id="pistolDamage5"				progression="skillTreePistolDamage"					radius="0.8"	angle="270"		rot="-25" parent="pistolTrippleTapHub" links="pistolDamage6"/>
+<skill nId="2,110" id="pistolDamage6"				progression="skillTreePistolDamage"					radius="0.8"	angle="225"		rot="-25" parent="pistolTrippleTapHub" links=""/>
+
+<skill nId="2,111" id="doubleJumpHub"				skill="false"										radius="21"		angle="144"		parent="center" icon="symbol_springed_hare;50;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="2,112" id="doubleJump"					progression="skillTreeDoubleJump"					radius="0.8"	angle="315"		rot="10" parent="doubleJumpHub" links="betterJump1"/>
+<skill nId="2,113" id="betterJump1"					progression="skillTreeDoubleJump2"					radius="0.8"	angle="270"		rot="10" parent="doubleJumpHub" links="parkourDexterity"/>
+<skill nId="2,114" id="parkourDexterity"			progression="Dexterity" points="5"					radius="0.8"	angle="225"		rot="10" parent="doubleJumpHub" links="betterJump2"/>
+<skill nId="2,115" id="betterJump2"					progression="skillTreeDoubleJump3"					radius="0.8"	angle="180"		rot="10" parent="doubleJumpHub" links="betterJump3"/>
+<skill nId="2,116" id="betterJump3"					progression="skillTreeDoubleJump4"					radius="0.8"	angle="135"		rot="10" parent="doubleJumpHub" links=""/>
+
+<!-- 
+
+	S U P P O R T   C L A S S
+
+	+216 Degrees 
+	+-24 Offset
+	
+<skill id="startIntellect"				skill="false"	parent="center"						radius="1.8"	angle="216"		icon="symbol_class_specialist_bw;120;255,255,255" background="ui_circle_fill_fg;160;64,64,64" alt_icon="symbol_class_specialist" atlas="UISkills"/>
+-->
+
+<skill nId="3,0"   id="rootIntellect"				progression="skillTreeIntellectClass"				radius="1.8"	angle="216"		parent="center" root="true" link_offset="0.8" icon="symbol_class_specialist_bw;120" background="ui_circle_fill_fg;160;64,64,64" alt_icon="symbol_class_specialist" atlas="UISkills"/>
+
+<skill nId="3,1"   id="baseIntellect"				progression="Intellect" points="5"					radius="3.2"	angle="216"		parent="center" links="rootIntellect"/>
+
+<skill nId="3,2"   id="baseFastLearner"				progression="skillTreeFastLearner"					radius="5"		angle="240"		parent="center"	links="baseIntellect"/>
+<!--<skill		   id="baseWeightLimit"				progression="skillTreeCarryWeightBase"				radius="4.4"	angle="216"		parent="center"	links="rootIntellect"/>-->
+<skill nId="3,3"   id="baseLockPicking"				progression="skillTreeLockPickingBase"				radius="5"		angle="192"		parent="center"	links="baseIntellect"/>
+<skill nId="3,4"   id="baseDiplomat"				progression="skillTreeDiplomat"						radius="5"		angle="216"		parent="center"	links="baseIntellect"/>
+
+<skill nId="3,5"   id="salvcagerHub1"				skill="false"										radius="9"		angle="192"		parent="center"	icon="symbol_wrench;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="3,6"   id="salvcager1"					progression="skillTreeSalvager"						radius="0.8"	angle="315"		rot="15" parent="salvcagerHub1" links="salvcagerStrength1"/>
+<skill nId="3,7"   id="salvcagerStrength1"			progression="Strength" points="5"					radius="0.8"	angle="270"		rot="15" parent="salvcagerHub1" links="salvcager2"/>
+<skill nId="3,8"   id="salvcager2"					progression="skillTreeSalvager"						radius="0.8"	angle="225"		rot="15" parent="salvcagerHub1" links=""/>
+<skill nId="3,9"   id="smgDamage1"					progression="skillTreeSubmachineGunDamage"			radius="0.8"	angle="45"		rot="15" parent="salvcagerHub1" links="smgHandling1"/>
+<skill nId="3,10"  id="smgHandling1"				progression="skillTreeSubmachineGunHandling"		radius="0.8"	angle="90"		rot="15" parent="salvcagerHub1" links="smgDamage2"/>
+<skill nId="3,11"  id="smgDamage2"					progression="skillTreeSubmachineGunDamage"			radius="0.8"	angle="135"		rot="15" parent="salvcagerHub1" links=""/>
+
+<skill nId="3,12"  id="charismaHub1"				skill="false"										radius="9"		angle="216"		parent="center" icon="ui_game_symbol_talk;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="3,13"  id="charismaRegen"				progression="skillTreeCharismaRegen"				radius="0.8"	angle="315"		rot="40" parent="charismaHub1" links="charismaLoot1"/>
+<skill nId="3,14"  id="charismaLoot1"				progression="skillTreeCharismaLoot"					radius="0.8"	angle="270"		rot="40" parent="charismaHub1" links="charismaResistance"/>
+<skill nId="3,15"  id="charismaResistance"			progression="skillTreeCharismaResistance"			radius="0.8"	angle="225"		rot="40" parent="charismaHub1"/>
+<skill nId="3,16"  id="traderStage1"				progression="skillTreeTraderStage"					radius="0.8"	angle="45"		rot="40" parent="charismaHub1" links="trading1"/>
+<skill nId="3,17"  id="trading1"					progression="skillTreeTrading"						radius="0.8"	angle="90"		rot="40" parent="charismaHub1" links="questRewardDukes1"/>
+<skill nId="3,18"  id="questRewardDukes1"			progression="skillTreeQuestRewardDukes"				radius="0.8"	angle="135"		rot="40" parent="charismaHub1"/>
+
+<skill nId="3,19"  id="turretHub1"					skill="false"										radius="9"		angle="240"		parent="center"	icon="symbol_turret;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="3,20"  id="turretDamage1"				progression="skillTreeTurretDamage"					radius="0.8"	angle="45"		rot="60" parent="turretHub1" links="turretHandling1"/>
+<skill nId="3,21"  id="turretHandling1"				progression="skillTreeTurretHandling"				radius="0.8"	angle="90"		rot="60" parent="turretHub1" links="turretRange1"/>
+<skill nId="3,22"  id="turretRange1"				progression="skillTreeTurretRange"					radius="0.8"	angle="135"		rot="60" parent="turretHub1" links=""/>
+<skill nId="3,23"  id="batonDamage1"				progression="skillTreeBatonDamage"					radius="0.8"	angle="315"		rot="60" parent="turretHub1" links="batonIntellect1"/>
+<skill nId="3,24"  id="batonIntellect1"				progression="Intellect" points="5"					radius="0.8"	angle="270"		rot="60" parent="turretHub1" links="batonDamage2"/>
+<skill nId="3,25"  id="batonDamage2"				progression="skillTreeBatonDamage"					radius="0.8"	angle="225"		rot="60" parent="turretHub1" links=""/>
+
+<skill nId="3,26"  id="intellect_192_7"				progression="Intellect" points="5"					radius="7"		angle="192"		parent="center" links="baseLockPicking,smgDamage1,salvcager1"/>
+<skill nId="3,27"  id="intellect_216_7"				progression="Intellect" points="5"					radius="7"		angle="216"		parent="center" links="baseDiplomat,charismaRegen,traderStage1"/>
+<skill nId="3,28"  id="intellect_240_7"				progression="Intellect" points="5"					radius="7"		angle="240"		parent="center" links="baseFastLearner,batonDamage1,turretDamage1"/>
+
+<skill nId="3,29"  id="intellect_192_11"			progression="Intellect" points="5"					radius="11"		angle="192"		parent="center" links="fortitude_180_11,dexterity_192_13,smgDamage2,supportPerception1,salvcager2"/>
+<skill nId="3,30"  id="intellect_216_11"			progression="Intellect" points="5"					radius="11"		angle="216"		parent="center" links="intellect_216_13,charismaResistance,questRewardDukes1,supportPerception1,turretElectricalTrapXP1"/>
+<skill nId="3,31"  id="intellect_240_11"			progression="Intellect" points="5"					radius="11"		angle="240"		parent="center" links="strength_240_13,batonDamage2,turretRange1,turretElectricalTrapXP1,meleeStaminaUse3"/>
+
+<skill nId="3,32"  id="turretElectricalTrapXP1"		progression="skillTreeElectricalTrapXP"				radius="11"		angle="228"		parent="center" links=""/>
+<skill nId="3,33"  id="supportPerception1"			progression="Perception" points="5"					radius="11"		angle="204"		parent="center" links=""/>
+
+<skill nId="3,34"  id="explosiveHub1"				skill="false"										radius="15"		angle="252"		parent="center"	icon="symbol_stun_baton;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="3,35"  id="armorMedium1"				progression="skillTreeArmorMedium"					radius="0.8"	angle="315"		rot="75" parent="explosiveHub1" links="armorMedium2"/>
+<skill nId="3,36"  id="armorMedium2"				progression="skillTreeArmorMedium"					radius="0.8"	angle="270"		rot="75" parent="explosiveHub1" links="armorMedium3"/>
+<skill nId="3,37"  id="armorMedium3"				progression="skillTreeArmorMedium"					radius="0.8"	angle="225"		rot="75" parent="explosiveHub1" links=""/>
+<skill nId="3,38"  id="batonStun1"					progression="skillTreeBatonStun"					radius="0.8"	angle="45"		rot="75" parent="explosiveHub1" links="batonIntellect2"/>
+<skill nId="3,39"  id="batonIntellect2"				progression="Intellect" points="5"					radius="0.8"	angle="90"		rot="75" parent="explosiveHub1" links="batonStun2"/>
+<skill nId="3,40"  id="batonStun2"					progression="skillTreeBatonStun"					radius="0.8"	angle="135"		rot="75" parent="explosiveHub1" links=""/>
+
+<skill nId="3,41"  id="turretHub2"					skill="false"										radius="15"		angle="228"		parent="center" icon="symbol_turret;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="3,42"  id="turretDamage2"				progression="skillTreeTurretDamage"					radius="0.8"	angle="315"		rot="45" parent="turretHub2" links="turretHandling2"/>
+<skill nId="3,43"  id="turretHandling2"				progression="skillTreeTurretHandling"				radius="0.8"	angle="270"		rot="45" parent="turretHub2" links="turretRange2"/>
+<skill nId="3,44"  id="turretRange2"				progression="skillTreeTurretRange"					radius="0.8"	angle="225"		rot="45" parent="turretHub2" links=""/>
+<skill nId="3,45"  id="turretMagazine1"				progression="skillTreeTurretMagazineSize"			radius="0.8"	angle="45"		rot="45" parent="turretHub2" links="turretReload1"/>
+<skill nId="3,46"  id="turretReload1"				progression="skillTreeTurretReload"					radius="0.8"	angle="90"		rot="45" parent="turretHub2" links="turretMagazine2"/>
+<skill nId="3,47"  id="turretMagazine2"				progression="skillTreeTurretMagazineSize"			radius="0.8"	angle="135"		rot="45" parent="turretHub2" links=""/>
+
+<skill nId="3,48"  id="batonHub1"					skill="false"										radius="15"		angle="240"		parent="center" icon="symbol_stun_baton;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="3,49"  id="batonDamage3"				progression="skillTreeBatonDamage"					radius="0.8"	angle="315"		rot="55" parent="batonHub1" links="batonDexterity1"/>
+<skill nId="3,50"  id="batonDexterity1"				progression="Dexterity" points="5"					radius="0.8"	angle="270"		rot="55" parent="batonHub1" links="batonStun3"/>
+<skill nId="3,51"  id="batonStun3"					progression="skillTreeBatonStun"					radius="0.8"	angle="225"		rot="55" parent="batonHub1" links=""/>
+<skill nId="3,52"  id="turretElectricalTrapXP2"		progression="skillTreeElectricalTrapXP"				radius="0.8"	angle="45"		rot="55" parent="batonHub1" links="turretIntellect1"/>
+<skill nId="3,53"  id="turretIntellect1"			progression="Intellect" points="5"					radius="0.8"	angle="90"		rot="55" parent="batonHub1" links="turretElectricalTrapXP3"/>
+<skill nId="3,54"  id="turretElectricalTrapXP3"		progression="skillTreeElectricalTrapXP"				radius="0.8"	angle="135"		rot="55" parent="batonHub1" links=""/>
+
+<skill nId="3,55"  id="charismaHub2"				skill="false"										radius="15"		angle="216"		parent="center" icon="ui_game_symbol_talk;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="3,56"  id="charismaLoot2"				progression="skillTreeCharismaLoot"					radius="0.8"	angle="315"		rot="30" parent="charismaHub2" links="charismaDamage"/>
+<skill nId="3,57"  id="charismaDamage"				progression="skillTreeCharismaDamage"				radius="0.8"	angle="270"		rot="30" parent="charismaHub2" links="charismaAttributes"/>
+<skill nId="3,58"  id="charismaAttributes"			progression="skillTreeCharismaAttributes"			radius="0.8"	angle="225"		rot="30" parent="charismaHub2" links=""/>
+<skill nId="3,59"  id="traderStage2"				progression="skillTreeTraderStage"					radius="0.8"	angle="45"		rot="30" parent="charismaHub2" links="trading2"/>
+<skill nId="3,60"  id="trading2"					progression="skillTreeTrading"						radius="0.8"	angle="90"		rot="30" parent="charismaHub2" links="questRewardDukes2"/>
+<skill nId="3,61"  id="questRewardDukes2"			progression="skillTreeQuestRewardDukes"				radius="0.8"	angle="135"		rot="30" parent="charismaHub2" links=""/>
+
+<skill nId="3,62"  id="smgHub1"						skill="false"										radius="15"		angle="192"		parent="center" icon="symbol_smg;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="3,63"  id="smgHandling2"				progression="skillTreeSubmachineGunHandling"		radius="0.8"	angle="45"		rot="10" parent="smgHub1" links="smgDamage3"/>
+<skill nId="3,64"  id="smgDamage3"					progression="skillTreeSubmachineGunDamage"			radius="0.8"	angle="90"		rot="10" parent="smgHub1" links="smgHandling3"/>
+<skill nId="3,65"  id="smgHandling3"				progression="skillTreeSubmachineGunHandling"		radius="0.8"	angle="135"		rot="10" parent="smgHub1" links=""/>
+<skill nId="3,66"  id="salvcager3"					progression="skillTreeSalvager"						radius="0.8"	angle="315"		rot="10" parent="smgHub1" links="salvcagerStrength2"/>
+<skill nId="3,67"  id="salvcagerStrength2"			progression="Strength" points="5"					radius="0.8"	angle="270"		rot="10" parent="smgHub1" links="salvcager4"/>
+<skill nId="3,68"  id="salvcager4"					progression="skillTreeSalvager"						radius="0.8"	angle="225"		rot="10" parent="smgHub1" links=""/>
+
+<skill nId="3,69"  id="lockpickHub1"				skill="false"										radius="15"		angle="204"		parent="center" icon="symbol_lockpick;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="3,70"  id="lockpick1"					progression="skillTreeLockPicking"					radius="0.8"	angle="45"		rot="25" parent="lockpickHub1" links="lockpickPerception1"/>
+<skill nId="3,71"  id="lockpickPerception1"			progression="Perception" points="5"					radius="0.8"	angle="90"		rot="25" parent="lockpickHub1" links="lockpick2"/>
+<skill nId="3,72"  id="lockpick2"					progression="skillTreeLockPicking"					radius="0.8"	angle="135"		rot="25" parent="lockpickHub1" links=""/>
+<skill nId="3,73"  id="droneCargo1"					progression="skillTreeDroneCargo"					radius="0.8"	angle="315"		rot="25" parent="lockpickHub1" links="droneCargo2"/>
+<skill nId="3,74"  id="droneCargo2"					progression="skillTreeDroneCargo"					radius="0.8"	angle="270"		rot="25" parent="lockpickHub1" links="droneCargo3"/>
+<skill nId="3,75"  id="droneCargo3"					progression="skillTreeDroneCargo"					radius="0.8"	angle="225"		rot="25" parent="lockpickHub1" links=""/>
+
+<skill nId="3,76"  id="dexterity_192_13"			progression="Dexterity" points="5"					radius="13"		angle="192"		parent="center" links="salvcager3,smgHandling2"/>
+<skill nId="3,77"  id="intellect_204_13"			progression="Intellect" points="5"					radius="13"		angle="204"		parent="center" links="supportPerception1,droneCargo1,lockpick1"/>
+<skill nId="3,78"  id="intellect_216_13"			progression="Intellect" points="5"					radius="13"		angle="216"		parent="center" links="charismaLoot2,traderStage2"/>
+<skill nId="3,79"  id="strength_240_13"				progression="Strength" points="5"					radius="13"		angle="240"		parent="center" links="batonDamage3,turretElectricalTrapXP2"/>
+<skill nId="3,80"  id="intellect_228_13"			progression="Intellect" points="5"					radius="13"		angle="228"		parent="center" links="turretElectricalTrapXP1,turretDamage2,turretMagazine1"/>
+
+<skill nId="3,81"  id="intellect_192_17"			progression="Intellect" points="5"					radius="17"		angle="192"		parent="center" links="intellect_192_19,salvcager4,smgHandling3"/>
+<skill nId="3,82"  id="intellect_204_17"			progression="Intellect" points="5"					radius="17"		angle="204"		parent="center" links="droneCargo3,lockpick2"/>
+<skill nId="3,83"  id="intellect_216_17"			progression="Intellect" points="5"					radius="17"		angle="216"		parent="center" links="intellect_216_19,charismaAttributes,questRewardDukes2"/>
+<skill nId="3,84"  id="intellect_228_17"			progression="Intellect" points="5"					radius="17"		angle="228"		parent="center" links="turretRange2,turretMagazine2"/>
+<skill nId="3,85"  id="intellect_240_17"			progression="Intellect" points="5"					radius="17"		angle="240"		parent="center" links="batonStun3,turretElectricalTrapXP3,intellect_240_19"/>
+
+<skill nId="3,86"  id="intellect_192_19"			progression="Intellect" points="5"					radius="19"		angle="192"		parent="center" links="trading3,questRewardDukes4"/>
+<skill nId="3,87"  id="dexterity_204_19"			progression="Dexterity" points="5"					radius="19"		angle="204"		parent="center" links="intellect_204_17,intellect_192_19,intellect_216_19,turretDamage4,turretHandling4"/>
+<skill nId="3,88"  id="intellect_216_19"			progression="Intellect" points="5"					radius="19"		angle="216"		parent="center" links="batonDamage4,batonStun4"/>
+<skill nId="3,89"  id="strength_228_19"				progression="Strength" points="5"					radius="19"		angle="228"		parent="center" links="intellect_240_19,intellect_216_19,intellect_228_17,turretDamage3,turretReload2"/>
+<skill nId="3,90"  id="intellect_240_19"			progression="Intellect" points="5"					radius="19"		angle="240"		parent="center" links="trading4,traderStage4"/>
+
+<skill nId="3,91"  id="tradingHub1"					skill="false"										radius="21"		angle="192"		parent="center" icon="ui_game_symbol_barter;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="3,92"  id="trading3"					progression="skillTreeTrading"						radius="0.8"	angle="315"		rot="10" parent="tradingHub1" links="traderStage3"/>
+<skill nId="3,93"  id="traderStage3"				progression="skillTreeTraderStage"					radius="0.8"	angle="270"		rot="10" parent="tradingHub1" links="questRewardDukes3"/>
+<skill nId="3,94"  id="questRewardDukes3"			progression="skillTreeQuestRewardDukes"				radius="0.8"	angle="225"		rot="10" parent="tradingHub1" links=""/>
+<skill nId="3,95"  id="questRewardDukes4"			progression="skillTreeQuestRewardDukes"				radius="0.8"	angle="45"		rot="10" parent="tradingHub1" links="questRewardDukes5"/>
+<skill nId="3,96"  id="questRewardDukes5"			progression="skillTreeQuestRewardDukes"				radius="0.8"	angle="90"		rot="10" parent="tradingHub1" links="questRewardCount1"/>
+<skill nId="3,97"  id="questRewardCount1"			progression="skillTreeQuestRewardCount"				radius="0.8"	angle="135"		rot="10" parent="tradingHub1" links=""/>
+
+<skill nId="3,98"  id="tradingHub2"					skill="false"										radius="21"		angle="240"		parent="center" icon="ui_game_symbol_barter;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="3,99"  id="trading4"					progression="skillTreeTrading"						radius="0.8"	angle="315"		rot="50" parent="tradingHub2" links="trading5"/>
+<skill nId="3,100" id="trading5"					progression="skillTreeTrading"						radius="0.8"	angle="270"		rot="50" parent="tradingHub2" links="trading6"/>
+<skill nId="3,101" id="trading6"					progression="skillTreeTrading"						radius="0.8"	angle="225"		rot="50" parent="tradingHub2" links=""/>
+<skill nId="3,102" id="traderStage4"				progression="skillTreeTraderStage"					radius="0.8"	angle="45"		rot="50" parent="tradingHub2" links="traderStage5"/>
+<skill nId="3,103" id="traderStage5"				progression="skillTreeTraderStage"					radius="0.8"	angle="90"		rot="50" parent="tradingHub2" links="traderStage6"/>
+<skill nId="3,104" id="traderStage6"				progression="skillTreeTraderStage"					radius="0.8"	angle="135"		rot="50" parent="tradingHub2" links=""/>
+
+<skill nId="3,105" id="turretHub3"					skill="false"										radius="21"		angle="228"		parent="center" icon="symbol_turret;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="3,106" id="turretDamage3"				progression="skillTreeTurretDamage"					radius="0.8"	angle="315"		rot="45" parent="turretHub3" links="turretHandling3"/>
+<skill nId="3,107" id="turretHandling3"				progression="skillTreeTurretHandling"				radius="0.8"	angle="270"		rot="45" parent="turretHub3" links="turretRange3"/>
+<skill nId="3,108" id="turretRange3"				progression="skillTreeTurretRange"					radius="0.8"	angle="225"		rot="45" parent="turretHub3" links=""/>
+<skill nId="3,109" id="turretReload2"				progression="skillTreeTurretReload"					radius="0.8"	angle="45"		rot="45" parent="turretHub3" links="turretMagazine3"/>
+<skill nId="3,110" id="turretMagazine3"				progression="skillTreeTurretMagazineSize"			radius="0.8"	angle="90"		rot="45" parent="turretHub3" links="turretReload3"/>
+<skill nId="3,111" id="turretReload3"				progression="skillTreeTurretReload"					radius="0.8"	angle="135"		rot="45" parent="turretHub3" links=""/>
+
+<skill nId="3,112" id="droneCargoHub1"				skill="false"										radius="21"		angle="180"		parent="center" icon="symbol_drone_cargo;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="3,113" id="droneCargo4"					progression="skillTreeDroneCargo"					radius="0.8"	angle="315"		parent="droneCargoHub1" links="droneCargo5"/>
+<skill nId="3,114" id="droneCargo5"					progression="skillTreeDroneCargo"					radius="0.8"	angle="270"		parent="droneCargoHub1" links="droneCargo6"/>
+<skill nId="3,115" id="droneCargo6"					progression="skillTreeDroneCargo"					radius="0.8"	angle="225"		parent="droneCargoHub1" links=""/>
+<skill nId="3,116" id="salvcager5"					progression="skillTreeSalvager"						radius="0.8"	angle="45"		parent="droneCargoHub1" links="salvcagerPerception1"/>
+<skill nId="3,117" id="salvcagerPerception1"		progression="Perception" points="5"					radius="0.8"	angle="90"		parent="droneCargoHub1" links="salvcager6"/>
+<skill nId="3,118" id="salvcager6"					progression="skillTreeSalvager"						radius="0.8"	angle="135"		parent="droneCargoHub1" links=""/>
+
+<skill nId="3,119" id="smgHub2"						skill="false"										radius="21"		angle="168"		parent="center" icon="symbol_smg;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="3,120" id="smgDamage4"					progression="skillTreeSubmachineGunDamage"			radius="0.8"	angle="315"		rot="-15" parent="smgHub2" links="smgDamage5"/>
+<skill nId="3,121" id="smgDamage5"					progression="skillTreeSubmachineGunDamage"			radius="0.8"	angle="270"		rot="-15" parent="smgHub2" links="smgDamage6"/>
+<skill nId="3,122" id="smgDamage6"					progression="skillTreeSubmachineGunDamage"			radius="0.8"	angle="225"		rot="-15" parent="smgHub2" links=""/>
+<skill nId="3,123" id="smgHandling4"				progression="skillTreeSubmachineGunHandling"		radius="0.8"	angle="45"		rot="-15" parent="smgHub2" links="smgHandling5"/>
+<skill nId="3,124" id="smgHandling5"				progression="skillTreeSubmachineGunHandling"		radius="0.8"	angle="90"		rot="-15" parent="smgHub2" links="smgHandling6"/>
+<skill nId="3,125" id="smgHandling6"				progression="skillTreeSubmachineGunHandling"		radius="0.8"	angle="135"		rot="-15" parent="smgHub2" links=""/>
+
+<skill nId="3,126" id="turretHub4"					skill="false"										radius="21"		angle="204"		parent="center" icon="symbol_turret;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="3,127" id="turretDamage4"				progression="skillTreeTurretDamage"					radius="0.8"	angle="315"		rot="25" parent="turretHub4" links="turretDamage5"/>
+<skill nId="3,128" id="turretDamage5"				progression="skillTreeTurretDamage"					radius="0.8"	angle="270"		rot="25" parent="turretHub4" links="turretDamage6"/>
+<skill nId="3,129" id="turretDamage6"				progression="skillTreeTurretDamage"					radius="0.8"	angle="225"		rot="25" parent="turretHub4" links=""/>
+<skill nId="3,130" id="turretHandling4"				progression="skillTreeTurretHandling"				radius="0.8"	angle="45"		rot="25" parent="turretHub4" links="turretHandling5"/>
+<skill nId="3,131" id="turretHandling5"				progression="skillTreeTurretHandling"				radius="0.8"	angle="90"		rot="25" parent="turretHub4" links="turretHandling6"/>
+<skill nId="3,132" id="turretHandling6"				progression="skillTreeTurretHandling"				radius="0.8"	angle="135"		rot="25" parent="turretHub4" links=""/>
+
+<skill nId="3,133" id="batonHub2"					skill="false"										radius="21"		angle="216"		parent="center" icon="symbol_stun_baton;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="3,134" id="batonDamage4"				progression="skillTreeBatonDamage"					radius="0.8"	angle="315"		rot="30" parent="batonHub2" links="batonDamage5"/>
+<skill nId="3,135" id="batonDamage5"				progression="skillTreeBatonDamage"					radius="0.8"	angle="270"		rot="30" parent="batonHub2" links="batonDamage6"/>
+<skill nId="3,136" id="batonDamage6"				progression="skillTreeBatonDamage"					radius="0.8"	angle="225"		rot="30" parent="batonHub2" links=""/>
+<skill nId="3,137" id="batonStun4"					progression="skillTreeBatonStun"					radius="0.8"	angle="45"		rot="30" parent="batonHub2" links="batonStun5"/>
+<skill nId="3,138" id="batonStun5"					progression="skillTreeBatonStun"					radius="0.8"	angle="90"		rot="30" parent="batonHub2" links="batonStun6"/>
+<skill nId="3,139" id="batonStun6"					progression="skillTreeBatonStun"					radius="0.8"	angle="135"		rot="30" parent="batonHub2" links=""/>
+
+<skill nId="3,140" id="turretCount1"				progression="skillTreeTurretCount"					radius="23"		angle="204"		parent="center" links="turretDamage6,turretHandling6"/>
+<skill nId="3,141" id="turretCount2"				progression="skillTreeTurretCount"					radius="23"		angle="228"		parent="center" links="turretRange3,turretReload3"/>
+
+<!-- 
+
+	W A R R I O R   C L A S S
+
+	+288 Degrees 
+	+-24 Offset
+	
+<skill id="startStrength"				skill="false"	parent="center"						radius="1.8"	angle="288" icon="symbol_class_warrior_bw;120;255,255,255" background="ui_circle_fill_fg;160;64,64,64" alt_icon="symbol_class_warrior" atlas="UISkills"/>
+-->
+
+<skill nId="4,0"   id="rootStrength"				progression="skillTreeStrengthClass"				radius="1.8"	angle="288"		parent="center" root="true" link_offset="0.8" icon="symbol_class_warrior_bw;120" background="ui_circle_fill_fg;160;64,64,64" alt_icon="symbol_class_warrior" atlas="UISkills"/>
+
+<skill nId="4,1"   id="baseStrength"				progression="Strength" points="5"					radius="3.2"	angle="288"		parent="center" links="rootStrength"/>
+
+<skill nId="4,2"   id="baseMeleeDamage"				progression="skillTreeMeleeDamage10"				radius="5"		angle="264"		parent="center" links="baseStrength"/>
+<skill nId="4,3"   id="baseMiningDamage"			progression="skillTreeMiningDamageBase"				radius="5"		angle="288"		parent="center"	links="baseStrength"/>
+<skill nId="4,4"   id="baseMeleeStaminaUse"			progression="skillTreeMeleeAndAimStaminaUse"		radius="5"		angle="312"		parent="center"	links="baseStrength"/>
+
+<skill nId="4,5"   id="strength_264_7"				progression="Strength" points="5"					radius="7"		angle="264"		parent="center" links="baseMeleeDamage,clubDamage1,sledgeDamage1"/>
+<skill nId="4,6"   id="strength_288_7"				progression="Strength" points="5"					radius="7"		angle="288"		parent="center" links="baseMiningDamage,miningYield1,carryWeight1"/>
+<skill nId="4,7"   id="strength_312_7"				progression="Strength" points="5"					radius="7"		angle="312"		parent="center" links="baseMeleeStaminaUse,machineGunDamage1,machineGunHandling1"/>
+
+<skill nId="4,8"   id="clubHub1"					skill="false"										radius="9"		angle="264"		parent="center" icon="symbol_club;50;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="4,9"   id="sledgeDamage1"				progression="skillTreeSledgeDamage"					radius="0.8"	angle="315"		rot="80" parent="clubHub1" links="sledgeKnockdown1"/>
+<skill nId="4,10"  id="sledgeKnockdown1"			progression="skillTreeSledgeKnockdown"				radius="0.8"	angle="270"		rot="80" parent="clubHub1" links="sledgeDamage2"/>
+<skill nId="4,11"  id="sledgeDamage2"				progression="skillTreeSledgeDamage"					radius="0.8"	angle="225"		rot="80" parent="clubHub1" links=""/>
+<skill nId="4,12"  id="clubDamage1"					progression="skillTreeClubDamage"					radius="0.8"	angle="45"		rot="80" parent="clubHub1" links="clubKnockdown1"/>
+<skill nId="4,13"  id="clubKnockdown1"				progression="skillTreeClubKnockdown"				radius="0.8"	angle="90"		rot="80" parent="clubHub1" links="clubDamageCombo1"/>
+<skill nId="4,14"  id="clubDamageCombo1"			progression="skillTreeClubDamageCombo"				radius="0.8"	angle="135"		rot="80" parent="clubHub1" links=""/>
+
+<skill nId="4,15"  id="weightLimitHub1"				skill="false"										radius="9"		angle="288"		parent="center" icon="ui_game_symbol_pack_mule;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="4,16"  id="carryWeight1"				progression="skillTreeCarryWeight"					radius="0.8"	angle="315"		rot="110" parent="weightLimitHub1" links="carryStrength1"/>
+<skill nId="4,17"  id="carryStrength1"				progression="Strength" points="5"					radius="0.8"	angle="270"		rot="110" parent="weightLimitHub1" links="carryWeight2"/>
+<skill nId="4,18"  id="carryWeight2"				progression="skillTreeCarryWeight"					radius="0.8"	angle="225"		rot="110" parent="weightLimitHub1" links=""/>
+<skill nId="4,19"  id="miningYield1"				progression="skillTreeMiningYield"					radius="0.8"	angle="45"		rot="110" parent="weightLimitHub1" links="miningPerception1"/>
+<skill nId="4,20"  id="miningPerception1"			progression="Perception" points="5"					radius="0.8"	angle="90"		rot="110" parent="weightLimitHub1" links="miningYield2"/>
+<skill nId="4,21"  id="miningYield2"				progression="skillTreeMiningYield"					radius="0.8"	angle="135"		rot="110" parent="weightLimitHub1" links=""/>
+
+<skill nId="4,22"  id="machineGunHub1"				skill="false"										radius="9"		angle="312"		parent="center" icon="symbol_machine_gun;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="4,23"  id="machineGunDamage1"			progression="skillTreeMachineGunDamage"				radius="0.8"	angle="45"		rot="140" parent="machineGunHub1" links="machineGunDamage2"/>
+<skill nId="4,24"  id="machineGunDamage2"			progression="skillTreeMachineGunDamage"				radius="0.8"	angle="90"		rot="140" parent="machineGunHub1" links="machineGunDamage1"/>
+<skill nId="4,25"  id="machineGunDamage3"			progression="skillTreeMachineGunDamage"				radius="0.8"	angle="135"		rot="140" parent="machineGunHub1" links="machineGunDamage2"/>
+<skill nId="4,26"  id="machineGunHandling1"			progression="skillTreeMachineGunHandling"			radius="0.8"	angle="315"		rot="140" parent="machineGunHub1" links="machineGunHandling2"/>
+<skill nId="4,27"  id="machineGunHandling2"			progression="skillTreeMachineGunHandling"			radius="0.8"	angle="270"		rot="140" parent="machineGunHub1" links="machineGunHandling1"/>
+<skill nId="4,28"  id="machineGunHandling3"			progression="skillTreeMachineGunHandling"			radius="0.8"	angle="225"		rot="140" parent="machineGunHub1" links="machineGunHandling2"/>
+
+<skill nId="4,29"  id="meleeStaminaUse3"			progression="skillTreeMeleeStaminaUse"				radius="11"		angle="252"		parent="center" links=""/>
+<skill nId="4,30"  id="strength_264_11"				progression="Strength" points="5"					radius="11"		angle="264"		parent="center" links="intellect_264_13,dexterity_276_11,meleeStaminaUse3,sledgeDamage2,clubDamageCombo1"/>
+<skill nId="4,31"  id="dexterity_276_11"			progression="Dexterity" points="5"					radius="11"		angle="276"		parent="center" links=""/>
+<skill nId="4,32"  id="strength_288_11"				progression="Strength" points="5"					radius="11"		angle="288"		parent="center" links="strength_288_13,dexterity_276_11,intellect_300_11,miningYield2,carryWeight2"/>
+<skill nId="4,33"  id="intellect_300_11"			progression="Intellect" points="5"					radius="11"		angle="300"		parent="center" links=""/>
+<skill nId="4,34"  id="strength_312_11"				progression="Strength" points="5"					radius="11"		angle="312"		parent="center" links="fortitude_312_13,intellect_300_11,machineGunDamage3,machineGunHandling3"/>
+
+<skill nId="4,35"  id="strength_252_13"				progression="Strength" points="5"					radius="13"		angle="252"		parent="center" links="meleeStaminaUse3,batonStun1,armorMedium1"/>
+<skill nId="4,36"  id="intellect_264_13"			progression="Intellect" points="5"					radius="13"		angle="264"		parent="center" links="sledgeKnockdown2,clubDamage2"/>
+<skill nId="4,37"  id="strength_276_13"				progression="Strength" points="5"					radius="13"		angle="276"		parent="center" links="dexterity_276_11,miningDamage1,explosiveDamage1"/>
+<skill nId="4,38"  id="strength_288_13"				progression="Strength" points="5"					radius="13"		angle="288"		parent="center" links="carryWeight3,miningYield3"/>
+<skill nId="4,39"  id="strength_300_13"				progression="Strength" points="5"					radius="13"		angle="300"		parent="center" links="intellect_300_11,miningDamage4,armorMedium4"/>
+<skill nId="4,40"  id="fortitude_312_13"			progression="Fortitude" points="5"					radius="13"		angle="312"		parent="center" links="carryWeight5,miningYield5"/>
+
+<skill nId="4,41"  id="clubHub2"					skill="false"										radius="15"		angle="264"		parent="center" icon="symbol_club;50;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="4,42"  id="sledgeKnockdown2"			progression="skillTreeSledgeKnockdown"				radius="0.8"	angle="315"		rot="80" parent="clubHub2" links="sledgeDamage3"/>
+<skill nId="4,43"  id="sledgeDamage3"				progression="skillTreeSledgeDamage"					radius="0.8"	angle="270"		rot="80" parent="clubHub2" links="sledgeKnockdown3"/>
+<skill nId="4,44"  id="sledgeKnockdown3"			progression="skillTreeSledgeKnockdown"				radius="0.8"	angle="225"		rot="80" parent="clubHub2" links=""/>
+<skill nId="4,45"  id="clubDamage2"					progression="skillTreeClubDamage"					radius="0.8"	angle="45"		rot="80" parent="clubHub2" links="clubKnockdown2"/>
+<skill nId="4,46"  id="clubKnockdown2"				progression="skillTreeClubKnockdown"				radius="0.8"	angle="90"		rot="80" parent="clubHub2" links="clubDamageCombo2"/>
+<skill nId="4,47"  id="clubDamageCombo2"			progression="skillTreeClubDamageCombo"				radius="0.8"	angle="135"		rot="80" parent="clubHub2" links=""/>
+
+<skill nId="4,48"  id="miningHub1"					skill="false"										radius="15"		angle="276"		parent="center" icon="symbol_pickaxe;40;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="4,49"  id="explosiveDamage1"			progression="skillTreeExplosiveDamage"				radius="0.8"	angle="315"		rot="90" parent="miningHub1" links="explosiveHandling1"/>
+<skill nId="4,50"  id="explosiveHandling1"			progression="skillTreeExplosiveHandling"			radius="0.8"	angle="270"		rot="90" parent="miningHub1" links="explosiveDamage2"/>
+<skill nId="4,51"  id="explosiveDamage2"			progression="skillTreeExplosiveDamage"				radius="0.8"	angle="225"		rot="90" parent="miningHub1" links=""/>
+<skill nId="4,52"  id="miningDamage1"				progression="skillTreeMiningDamage"					radius="0.8"	angle="45"		rot="90" parent="miningHub1" links="miningStrength1"/>
+<skill nId="4,53"  id="miningStrength1"				progression="Strength" points="5"					radius="0.8"	angle="90"		rot="90" parent="miningHub1" links="miningDamage2"/>
+<skill nId="4,54"  id="miningDamage2"				progression="skillTreeMiningDamage"					radius="0.8"	angle="135"		rot="90" parent="miningHub1" links=""/>
+
+<skill nId="4,55"  id="miningHub2"					skill="false"										radius="15"		angle="300"		parent="center" icon="symbol_pickaxe;40;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="4,56"  id="armorMedium4"				progression="skillTreeArmorMedium"					radius="0.8"	angle="315"		rot="110" parent="miningHub2" links="armorMedium5"/>
+<skill nId="4,57"  id="armorMedium5"				progression="skillTreeArmorMedium"					radius="0.8"	angle="270"		rot="110" parent="miningHub2" links="armorMedium6"/>
+<skill nId="4,58"  id="armorMedium6"				progression="skillTreeArmorMedium"					radius="0.8"	angle="225"		rot="110" parent="miningHub2" links=""/>
+<skill nId="4,59"  id="miningDamage4"				progression="skillTreeMiningDamage"					radius="0.8"	angle="45"		rot="110" parent="miningHub2" links="miningStrength3"/>
+<skill nId="4,60"  id="miningStrength3"				progression="Strength" points="5"					radius="0.8"	angle="90"		rot="110" parent="miningHub2" links="miningDamage3"/>
+<skill nId="4,61"  id="miningDamage3"				progression="skillTreeMiningDamage"					radius="0.8"	angle="135"		rot="110" parent="miningHub2" links=""/>
+
+<skill nId="4,62"  id="weightLimitHub2"				skill="false"										radius="15"		angle="288"		parent="center" icon="ui_game_symbol_pack_mule;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="4,63"  id="carryWeight3"				progression="skillTreeCarryWeight"					radius="0.8"	angle="315"		rot="110" parent="weightLimitHub2" links="carryStrength2"/>
+<skill nId="4,64"  id="carryStrength2"				progression="Strength" points="5"					radius="0.8"	angle="270"		rot="110" parent="weightLimitHub2" links="carryWeight4"/>
+<skill nId="4,65"  id="carryWeight4"				progression="skillTreeCarryWeight"					radius="0.8"	angle="225"		rot="110" parent="weightLimitHub2" links=""/>
+<skill nId="4,66"  id="miningYield3"				progression="skillTreeMiningYield"					radius="0.8"	angle="45"		rot="110" parent="weightLimitHub2" links="miningPerception2"/>
+<skill nId="4,67"  id="miningPerception2"			progression="Perception" points="5"					radius="0.8"	angle="90"		rot="110" parent="weightLimitHub2" links="miningYield4"/>
+<skill nId="4,68"  id="miningYield4"				progression="skillTreeMiningYield"					radius="0.8"	angle="135"		rot="110" parent="weightLimitHub2" links=""/>
+
+<skill nId="4,69"  id="weightLimitHub3"				skill="false"										radius="15"		angle="312"		parent="center" icon="ui_game_symbol_pack_mule;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="4,70"  id="carryWeight5"				progression="skillTreeCarryWeight"					radius="0.8"	angle="315"		rot="130" parent="weightLimitHub3" links="carryStrength3"/>
+<skill nId="4,71"  id="carryStrength3"				progression="Strength" points="5"					radius="0.8"	angle="270"		rot="130" parent="weightLimitHub3" links="carryWeight6"/>
+<skill nId="4,72"  id="carryWeight6"				progression="skillTreeCarryWeight"					radius="0.8"	angle="225"		rot="130" parent="weightLimitHub3" links=""/>
+<skill nId="4,73"  id="miningYield5"				progression="skillTreeMiningYield"					radius="0.8"	angle="45"		rot="130" parent="weightLimitHub3" links="miningPerception3"/>
+<skill nId="4,74"  id="miningPerception3"			progression="Perception" points="5"					radius="0.8"	angle="90"		rot="130" parent="weightLimitHub3" links="miningYield6"/>
+<skill nId="4,75"  id="miningYield6"				progression="skillTreeMiningYield"					radius="0.8"	angle="135"		rot="130" parent="weightLimitHub3" links=""/>
+
+<skill nId="4,76"  id="dexterity_252_17"			progression="Dexterity" points="5"					radius="17"		angle="252"		parent="center" links="batonStun2,armorMedium3"/>
+<skill nId="4,77"  id="strength_276_17"				progression="Strength" points="5"					radius="17"		angle="276"		parent="center" links="miningDamage2,explosiveDamage2"/>
+<skill nId="4,78"  id="strength_288_17"				progression="Strength" points="5"					radius="17"		angle="288"		parent="center" links="strength_288_19,carryWeight4,miningYield4"/>
+<skill nId="4,79"  id="strength_300_17"				progression="Strength" points="5"					radius="17"		angle="300"		parent="center" links="miningDamage3,armorMedium6"/>
+<skill nId="4,80"  id="strength_312_17"				progression="Strength" points="5"					radius="17"		angle="312"		parent="center" links="strength_312_19,carryWeight6,miningYield6"/>
+<skill nId="4,81"  id="strength_264_17"				progression="Strength" points="5"					radius="17"		angle="264"		parent="center" links="sledgeKnockdown3,clubDamageCombo2,strength_264_19"/>
+
+<skill nId="4,82"  id="perception_252_19"			progression="Perception" points="5"					radius="19"		angle="252"		parent="center" links="strength_264_19,dexterity_252_17,intellect_240_19,clubDamage4,clubKnockdown3"/>
+<skill nId="4,83"  id="strength_264_19"				progression="Strength" points="5"					radius="19"		angle="264"		parent="center" links="explosiveDamage4,explosiveHandling4"/>
+<skill nId="4,84"  id="intellect_276_19"			progression="Intellect" points="5"					radius="19"		angle="276"		parent="center" links="strength_276_17,strength_288_19,strength_264_19,sledgeDamage4,sledgeKnockdown4"/>
+<skill nId="4,85"  id="strength_288_19"				progression="Strength" points="5"					radius="19"		angle="288"		parent="center" links="meleeSpeed1,meleeDamage1"/>
+<skill nId="4,86"  id="fortitude_300_19"			progression="Fortitude" points="5"					radius="19"		angle="300"		parent="center" links="strength_312_19,strength_300_17,strength_288_19,miningDamage5,explosiveHandling2"/>
+<skill nId="4,87"  id="strength_312_19"				progression="Strength" points="5"					radius="19"		angle="312"		parent="center" links="machineGunCommando1,machineGunDamage4"/>
+
+<skill nId="4,88"  id="miningHub3"					skill="false"										radius="21"		angle="300"		parent="center" icon="symbol_pickaxe;40;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="4,89"  id="miningDamage5"				progression="skillTreeMiningDamage"					radius="0.8"	angle="45"		rot="120" parent="miningHub3" links="miningStrength4"/>
+<skill nId="4,90"  id="miningStrength4"				progression="Strength" points="5"					radius="0.8"	angle="90"		rot="120" parent="miningHub3" links="miningDamage6"/>
+<skill nId="4,91"  id="miningDamage6"				progression="skillTreeMiningDamage"					radius="0.8"	angle="135"		rot="120" parent="miningHub3" links=""/>
+<skill nId="4,92"  id="explosiveHandling2"			progression="skillTreeExplosiveHandling"			radius="0.8"	angle="315"		rot="120" parent="miningHub3" links="explosiveDamage3"/>
+<skill nId="4,93"  id="explosiveDamage3"			progression="skillTreeExplosiveDamage"				radius="0.8"	angle="270"		rot="120" parent="miningHub3" links="explosiveHandling3"/>
+<skill nId="4,94"  id="explosiveHandling3"			progression="skillTreeExplosiveHandling"			radius="0.8"	angle="225"		rot="120" parent="miningHub3" links=""/>
+
+<skill nId="4,95"  id="explosiveHub2"				skill="false"										radius="21"		angle="264"		parent="center" icon="symbol_rocket_launcher;42;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="4,96"  id="explosiveDamage4"			progression="skillTreeExplosiveDamage"				radius="0.8"	angle="315"		rot="80" parent="explosiveHub2" links="explosiveDamage5"/>
+<skill nId="4,97"  id="explosiveDamage5"			progression="skillTreeExplosiveDamage"				radius="0.8"	angle="270"		rot="80" parent="explosiveHub2" links="explosiveDamage6"/>
+<skill nId="4,98"  id="explosiveDamage6"			progression="skillTreeExplosiveDamage"				radius="0.8"	angle="225"		rot="80" parent="explosiveHub2" links=""/>
+<skill nId="4,99"  id="explosiveHandling4"			progression="skillTreeExplosiveHandling"			radius="0.8"	angle="45"		rot="80" parent="explosiveHub2" links="explosiveHandling5"/>
+<skill nId="4,100" id="explosiveHandling5"			progression="skillTreeExplosiveHandling"			radius="0.8"	angle="90"		rot="80" parent="explosiveHub2" links="explosiveHandling6"/>
+<skill nId="4,101" id="explosiveHandling6"			progression="skillTreeExplosiveHandling"			radius="0.8"	angle="135"		rot="80" parent="explosiveHub2" links=""/>
+
+<skill nId="4,102" id="machineGunCommandoHub"		skill="false"										radius="21"		angle="312"		parent="center" icon="symbol_machine_gun;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="4,103" id="machineGunDamage4"			progression="skillTreeMachineGunDamage"				radius="0.8"	angle="315"		rot="130" parent="machineGunCommandoHub" links="machineGunDamage5"/>
+<skill nId="4,104" id="machineGunDamage5"			progression="skillTreeMachineGunDamage"				radius="0.8"	angle="270"		rot="130" parent="machineGunCommandoHub" links="machineGunDamage6"/>
+<skill nId="4,105" id="machineGunDamage6"			progression="skillTreeMachineGunDamage"				radius="0.8"	angle="225"		rot="130" parent="machineGunCommandoHub" links=""/>
+<skill nId="4,106" id="machineGunCommando1"			progression="skillTreeMachineGunCommando"			radius="0.8"	angle="45"		rot="130" parent="machineGunCommandoHub" links="machineGunCommando2"/>
+<skill nId="4,107" id="machineGunCommando2"			progression="skillTreeMachineGunCommando"			radius="0.8"	angle="90"		rot="130" parent="machineGunCommandoHub" links="machineGunCommando3"/>
+<skill nId="4,108" id="machineGunCommando3"			progression="skillTreeMachineGunCommando"			radius="0.8"	angle="135"		rot="130" parent="machineGunCommandoHub" links=""/>
+
+<skill nId="4,109" id="clubHub3"					skill="false"										radius="21"		angle="252"		parent="center" icon="symbol_club;50;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="4,110" id="clubKnockdown3"				progression="skillTreeClubKnockdown"				radius="0.8"	angle="315"		rot="70" parent="clubHub3" links="clubDamage3"/>
+<skill nId="4,111" id="clubDamage3"					progression="skillTreeClubDamage"					radius="0.8"	angle="270"		rot="70" parent="clubHub3" links="clubDamageCombo3"/>
+<skill nId="4,112" id="clubDamageCombo3"			progression="skillTreeClubDamageCombo"				radius="0.8"	angle="225"		rot="70" parent="clubHub3" links=""/>
+<skill nId="4,113" id="clubDamage4"					progression="skillTreeClubDamage"					radius="0.8"	angle="45"		rot="70" parent="clubHub3" links="clubDamage5"/>
+<skill nId="4,114" id="clubDamage5"					progression="skillTreeClubDamage"					radius="0.8"	angle="90"		rot="70" parent="clubHub3" links="clubDamage6"/>
+<skill nId="4,115" id="clubDamage6"					progression="skillTreeClubDamage"					radius="0.8"	angle="135"		rot="70" parent="clubHub3" links=""/>
+
+<skill nId="4,116" id="sledgeHub2"					skill="false"										radius="21"		angle="276"		parent="center" icon="symbol_sledgehammer;50;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="4,117" id="sledgeDamage4"				progression="skillTreeSledgeDamage"					radius="0.8"	angle="315"		rot="100" parent="sledgeHub2" links="sledgeDamage5"/>
+<skill nId="4,118" id="sledgeDamage5"				progression="skillTreeSledgeDamage"					radius="0.8"	angle="270"		rot="100" parent="sledgeHub2" links="sledgeDamage6"/>
+<skill nId="4,119" id="sledgeDamage6"				progression="skillTreeSledgeDamage"					radius="0.8"	angle="225"		rot="100" parent="sledgeHub2" links=""/>
+<skill nId="4,120" id="sledgeKnockdown4"			progression="skillTreeSledgeKnockdown"				radius="0.8"	angle="45"		rot="100" parent="sledgeHub2" links="sledgeKnockdown5"/>
+<skill nId="4,121" id="sledgeKnockdown5"			progression="skillTreeSledgeKnockdown"				radius="0.8"	angle="90"		rot="100" parent="sledgeHub2" links="sledgeKnockdown6"/>
+<skill nId="4,122" id="sledgeKnockdown6"			progression="skillTreeSledgeKnockdown"				radius="0.8"	angle="135"		rot="100" parent="sledgeHub2" links=""/>
+
+<skill nId="4,123" id="meleeDamageHub"				skill="false"										radius="21"		angle="288"		parent="center" icon="symbol_fist_up;46;180,180,180"	background="hub;130;120,120,120,128;UISkills"/>
+<skill nId="4,124" id="meleeDamage1"				progression="skillTreeMeleeDamage05"				radius="0.8"	angle="315"		rot="110" parent="meleeDamageHub" links="meleeDamage2"/>
+<skill nId="4,125" id="meleeDamage2"				progression="skillTreeMeleeDamage05"				radius="0.8"	angle="270"		rot="110" parent="meleeDamageHub" links="meleeDamage3"/>
+<skill nId="4,126" id="meleeDamage3"				progression="skillTreeMeleeDamage05"				radius="0.8"	angle="225"		rot="110" parent="meleeDamageHub" links=""/>
+<skill nId="4,127" id="meleeSpeed1"					progression="skillTreeMeleeSpeed05"					radius="0.8"	angle="45"		rot="110" parent="meleeDamageHub" links="meleeSpeed2"/>
+<skill nId="4,128" id="meleeSpeed2"					progression="skillTreeMeleeSpeed05"					radius="0.8"	angle="90"		rot="110" parent="meleeDamageHub" links="meleeSpeed3"/>
+<skill nId="4,129" id="meleeSpeed3"					progression="skillTreeMeleeSpeed05"					radius="0.8"	angle="135"		rot="110" parent="meleeDamageHub" links=""/>
+
+<!-- 
+
+	U N S O R T E D
+
+-->
+
+
+</append>
+
+</Subquake>

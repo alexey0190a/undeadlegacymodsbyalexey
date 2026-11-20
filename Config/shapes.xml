@@ -1,0 +1,88 @@
+<Subquake>
+
+<append xpath="/shapes/categories">
+		<category order="16" name="All"				icon="symbol_all"/>
+		<category order="16" name="RandomHelper"	icon="ui_game_symbol_dice"/>
+		<category order="17" name="Sedan"			icon="symbol_vehicle_sedan"/>
+		<category order="18" name="SportsCar"		icon="symbol_vehicle_racecar"/>
+		<category order="19" name="SUV"				icon="symbol_vehicle_suv"/>
+		<category order="20" name="Pickup"			icon="symbol_vehicle_pickup"/>
+		<category order="21" name="Minivan"			icon="symbol_vehicle_minivan"/>
+		<category order="22" name="Truck"			icon="symbol_vehicle_truck"/>
+		<category order="23" name="Bus"				icon="symbol_vehicle_bus"/>
+		<category order="24" name="LightVehicle"	icon="symbol_vehicle_motorcycle"/>
+		<category order="25" name="Utility"			icon="symbol_vehicle_forklift"/>
+
+		<category order="26" name="SignRoad"		icon="symbol_sign_road"/>
+		<category order="27" name="SignGas"			icon="symbol_gasoline"/>
+		<category order="28" name="SignGun"			icon="symbol_pistol"/>
+		<category order="29" name="SignWork"		icon="symbol_worker_badge"/>
+		<category order="30" name="SignAds"			icon="symbol_sale"/>
+		<category order="31" name="SignStore"		icon="ui_game_symbol_shopping_cart"/>
+		<category order="32" name="SignBathroom"	icon="symbol_sign_bathroom"/>
+		<category order="33" name="SignExit"		icon="symbol_sign_exit"/>
+		<category order="34" name="SignMisc"		icon="symbol_3_dots"/></append>
+
+<set xpath="/shapes/shape[
+	@name='windowStoreOneSidedFull'
+or @name='windowStoreTwoSidedFull'
+or @name='windowStoreThreeSidedFull'
+or @name='windowStoreFourSidedFull'
+or @name='windowStoreCornerFull'
+or @name='windowStoreOneSidedCornerFull'
+or @name='windowStoreTwoSidedCornerLeftFull'
+or @name='windowStoreTwoSidedCornerRightFull'
+or @name='windowStoreTwoSidedCornerFull'
+or @name='windowStoreThreeSidedCornerLeftFull'
+or @name='windowStoreThreeSidedCornerRightFull'
+or @name='windowStoreThreeSidedCornerFull'
+or @name='windowStoreFourSidedCornerFull'
+or @name='windowStoreCornerCornerFull'
+or @name='windowRampFourSidedFull'
+or @name='windowRampTwoSidedFull'
+or @name='windowRampOutsideCornerFull'
+or @name='windowStoreThreeSidedTriangleFull'
+or @name='windowRampDiagonalCornerFull'
+or @name='windowWedge60TipFourSidedFull'
+or @name='windowWedge60FourSidedFull'
+or @name='windowWedge60TipTwoSidedFull'
+or @name='windowWedge60TwoSidedFull'
+or @name='windowWedge60TipOutsideCornerFull'
+or @name='windowWedge60OutsideCornerFull'
+or @name='windowStoreWedge60TipFullLeft'
+or @name='windowStoreWedge60TipFullRight'
+or @name='windowStoreWedge60FullLeft'
+or @name='windowStoreWedge60FullRight'
+or @name='windowPlateCircleFull'
+or @name='windowPlateRoundedSquare4SidedHalfWidthFull'
+or @name='windowPlateRoundedSquareHalfLeftFull'
+or @name='windowPlateRoundedSquareHalfRightFull'
+or @name='windowPlateRoundedSquareHalfStraightFull'
+or @name='windowPlateRoundedSquareHalf3SidedFull'
+or @name='windowPlateRoundedSquare1SidedFull'
+or @name='windowPlateRoundedSquare2SidedFull'
+or @name='windowPlateRoundedSquare3SidedFull'
+or @name='windowPlateRoundedSquare4SidedFull'
+or @name='windowPlateRoundedSquareCornerFull'
+or @name='windowPlateThreeSidedTriangleFull'
+or @name='windowPlateTwoSidedTriangleLeftFull'
+or @name='windowPlateTwoSidedTriangleRightFull'
+or @name='windowCircleCenterFull'
+or @name='archWindowFull'
+or @name='archHalfWindowFull'
+or @name='arch2mWindow01Top'
+or @name='arch2mWindow01Center'
+or @name='arch2mWindow01Bottom'
+or @name='window01'
+or @name='window02Full'
+or @name='window04Full'
+or @name='windowIndustrial01Full'
+or @name='rampWindow01Centered'
+or @name='windowArchTopFilledCenteredStained'
+or @name='windowCircleFull'
+or @name='windowCircleStraightFull'
+or @name='windowCircleStraightCenterFull']/property[@class='UpgradeBlock']">
+	<property name="ItemCount" value="5000"/>
+</set>
+
+</Subquake>

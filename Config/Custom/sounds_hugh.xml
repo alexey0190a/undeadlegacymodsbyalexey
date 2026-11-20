@@ -1,0 +1,180 @@
+<Subquake>
+
+<set xpath="/Sounds/SoundDataNode[@name='trader_hugh_greeting']">
+	<AudioSource name="@:Sounds/Prefabs/AudioSource_VO_TraderHugh.prefab"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_01.wav" Subtitle="trader_hugh_greeting_01"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_02.wav" Subtitle="trader_hugh_greeting_02"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_03.wav" Subtitle="trader_hugh_greeting_03"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_04.wav" Subtitle="trader_hugh_greeting_04"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_05.wav" Subtitle="trader_hugh_greeting_05"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_06.wav" Subtitle="trader_hugh_greeting_06"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_07.wav" Subtitle="trader_hugh_greeting_07"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_08.wav" Subtitle="trader_hugh_greeting_08"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_09.wav" Subtitle="trader_hugh_greeting_09"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_10.wav" Subtitle="trader_hugh_greeting_10"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_11.wav" Subtitle="trader_hugh_greeting_11"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_12.wav" Subtitle="trader_hugh_greeting_12"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_13.wav" Subtitle="trader_hugh_greeting_13"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_14.wav" Subtitle="trader_hugh_greeting_14" profanity="true"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_15.wav" Subtitle="trader_hugh_greeting_15"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_16.wav" Subtitle="trader_hugh_greeting_16"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_17.wav" Subtitle="trader_hugh_greeting_17"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_18.wav" Subtitle="trader_hugh_greeting_18"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_19.wav" Subtitle="trader_hugh_greeting_19"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_20.wav" Subtitle="trader_hugh_greeting_20"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_21.wav" Subtitle="trader_hugh_greeting_21"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_22.wav" Subtitle="trader_hugh_greeting_22"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_23.wav" Subtitle="trader_hugh_greeting_23"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_24.wav" Subtitle="trader_hugh_greeting_24"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_25.wav" Subtitle="trader_hugh_greeting_25"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_26.wav" Subtitle="trader_hugh_greeting_26"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_27.wav" Subtitle="trader_hugh_greeting_27"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_28.wav" Subtitle="trader_hugh_greeting_28"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_29.wav" Subtitle="trader_hugh_greeting_29"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_30.wav" Subtitle="trader_hugh_greeting_30" profanity="true"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_31.wav" Subtitle="trader_hugh_greeting_31" profanity="true"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_32.wav" Subtitle="trader_hugh_greeting_32"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_33.wav" Subtitle="trader_hugh_greeting_33"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> 
+	</set>
+
+<set xpath="/Sounds/SoundDataNode[@name='trader_hugh_greetmorn']">
+	<AudioSource name="@:Sounds/Prefabs/AudioSource_VO_TraderHugh.prefab"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greeting_02.wav" Subtitle="trader_hugh_greeting_02"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greetmorn_01.wav" Subtitle="trader_hugh_greetmorn_01"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greetmorn_02.wav" Subtitle="trader_hugh_greetmorn_02"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greetmorn_03.wav" Subtitle="trader_hugh_greetmorn_03"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greetmorn_04.wav" Subtitle="trader_hugh_greetmorn_04"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_01.wav" Subtitle="trader_hugh_grunt_01"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_02.wav" Subtitle="trader_hugh_grunt_02"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_03.wav" Subtitle="trader_hugh_grunt_03"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_04.wav" Subtitle="trader_hugh_grunt_04"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_05.wav" Subtitle="trader_hugh_grunt_05"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_06.wav" Subtitle="trader_hugh_grunt_06"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_07.wav" Subtitle="trader_hugh_grunt_07"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_08.wav" Subtitle="trader_hugh_grunt_08"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_10.wav" Subtitle="trader_hugh_grunt_10"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_16.wav" Subtitle="trader_hugh_grunt_16"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> 
+	</set>
+
+<set xpath="/Sounds/SoundDataNode[@name='trader_hugh_greetnightfall']">
+	<AudioSource name="@:Sounds/Prefabs/AudioSource_VO_TraderHugh.prefab"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greetnightfall_01.wav" Subtitle="trader_hugh_greetnightfall_01" profanity="true"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greetnightfall_03.wav" Subtitle="trader_hugh_greetnightfall_03"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_01.wav" Subtitle="trader_hugh_grunt_01"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_02.wav" Subtitle="trader_hugh_grunt_02"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_03.wav" Subtitle="trader_hugh_grunt_03"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_04.wav" Subtitle="trader_hugh_grunt_04"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_05.wav" Subtitle="trader_hugh_grunt_05"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_06.wav" Subtitle="trader_hugh_grunt_06"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_07.wav" Subtitle="trader_hugh_grunt_07"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_08.wav" Subtitle="trader_hugh_grunt_08"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_10.wav" Subtitle="trader_hugh_grunt_10"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_16.wav" Subtitle="trader_hugh_grunt_16"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> 
+</set>
+
+<set xpath="/Sounds/SoundDataNode[@name='trader_hugh_trade']">
+	<AudioSource name="@:Sounds/Prefabs/AudioSource_VO_TraderHugh.prefab"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_01.wav" Subtitle="trader_hugh_trade_01"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_02.wav" Subtitle="trader_hugh_trade_02"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_03.wav" Subtitle="trader_hugh_trade_03"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_04.wav" Subtitle="trader_hugh_trade_04"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_05.wav" Subtitle="trader_hugh_trade_05"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_06.wav" Subtitle="trader_hugh_trade_06" profanity="true"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_07.wav" Subtitle="trader_hugh_trade_07"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_08.wav" Subtitle="trader_hugh_trade_08"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_09.wav" Subtitle="trader_hugh_trade_09"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_10.wav" Subtitle="trader_hugh_trade_10"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_11.wav" Subtitle="trader_hugh_trade_11"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_12.wav" Subtitle="trader_hugh_trade_12"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_13.wav" Subtitle="trader_hugh_trade_13"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_14.wav" Subtitle="trader_hugh_trade_14"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_15.wav" Subtitle="trader_hugh_trade_15"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_16.wav" Subtitle="trader_hugh_trade_16"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_17.wav" Subtitle="trader_hugh_trade_17"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_18.wav" Subtitle="trader_hugh_trade_18"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_19.wav" Subtitle="trader_hugh_trade_19"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_20.wav" Subtitle="trader_hugh_trade_20"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_21.wav" Subtitle="trader_hugh_trade_21"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_22.wav" Subtitle="trader_hugh_trade_22"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_23.wav" Subtitle="trader_hugh_trade_23"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_24.wav" Subtitle="trader_hugh_trade_24"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_25.wav" Subtitle="trader_hugh_trade_25"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_26.wav" Subtitle="trader_hugh_trade_26"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_27.wav" Subtitle="trader_hugh_trade_27"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_28.wav" Subtitle="trader_hugh_trade_28"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_29.wav" Subtitle="trader_hugh_trade_29"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_31.wav" Subtitle="trader_hugh_trade_31"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_32.wav" Subtitle="trader_hugh_trade_32"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_34.wav" Subtitle="trader_hugh_trade_34"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_36.wav" Subtitle="trader_hugh_trade_36"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_37.wav" Subtitle="trader_hugh_trade_37"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_trade_38.wav" Subtitle="trader_hugh_trade_38"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> 
+	</set>
+
+<set xpath="/Sounds/SoundDataNode[@name='trader_hugh_trade']">
+	<AudioSource name="@:Sounds/Prefabs/AudioSource_VO_TraderHugh.prefab"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greetaft_01.wav" Subtitle="trader_hugh_greetaft_01"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greetaft_03.wav" Subtitle="trader_hugh_greetaft_03"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greetaft_04.wav" Subtitle="trader_hugh_greetaft_04"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_greetaft_05.wav" Subtitle="trader_hugh_greetaft_05" profanity="true"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_01.wav" Subtitle="trader_hugh_grunt_01"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_02.wav" Subtitle="trader_hugh_grunt_02"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_03.wav" Subtitle="trader_hugh_grunt_03"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_04.wav" Subtitle="trader_hugh_grunt_04"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_05.wav" Subtitle="trader_hugh_grunt_05"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_06.wav" Subtitle="trader_hugh_grunt_06"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> 
+	</set>
+
+<set xpath="/Sounds/SoundDataNode[@name='trader_hugh_quest_declined']">
+	<AudioSource name="@:Sounds/Prefabs/AudioSource_VO_TraderHugh.prefab"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_quest_declined_01.wav" Subtitle="trader_hugh_quest_declined_01" profanity="true"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_quest_declined_02.wav" Subtitle="trader_hugh_quest_declined_02"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_quest_declined_03.wav" Subtitle="trader_hugh_quest_declined_03"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_quest_declined_05.wav" Subtitle="trader_hugh_quest_declined_05"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_quest_declined_07.wav" Subtitle="trader_hugh_quest_declined_07"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_quest_declined_08.wav" Subtitle="trader_hugh_quest_declined_08"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_quest_declined_09.wav" Subtitle="trader_hugh_quest_declined_09"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_quest_declined_10.wav" Subtitle="trader_hugh_quest_declined_10"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_15.wav" Subtitle="trader_hugh_grunt_15"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_14.wav" Subtitle="trader_hugh_grunt_14"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_10.wav" Subtitle="trader_hugh_grunt_10"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_grunt_08.wav" Subtitle="trader_hugh_grunt_08"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_idle_01.wav" Subtitle="trader_hugh_idle_01"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_idle_03.wav" Subtitle="trader_hugh_idle_03"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_monolog_01.wav" Subtitle="trader_hugh_monolog_01"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_sale_declined_02.wav" Subtitle="trader_hugh_sale_declined_02" profanity="true"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_sale_declined_03.wav" Subtitle="trader_hugh_sale_declined_03" profanity="true"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_sale_declined_09.wav" Subtitle="trader_hugh_sale_declined_09"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/>
+	</set>
+
+<set xpath="/Sounds/SoundDataNode[@name='trader_hugh_quest_declined']">
+	<AudioSource name="@:Sounds/Prefabs/AudioSource_VO_TraderHugh.prefab"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_sale_declined_02.wav" Subtitle="trader_hugh_sale_declined_02" profanity="true"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_sale_declined_03.wav" Subtitle="trader_hugh_sale_declined_03" profanity="true"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_sale_declined_05.wav" Subtitle="trader_hugh_sale_declined_05" profanity="true"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_sale_declined_06.wav" Subtitle="trader_hugh_sale_declined_06"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_sale_declined_07.wav" Subtitle="trader_hugh_sale_declined_07" profanity="true"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_sale_declined_08.wav" Subtitle="trader_hugh_sale_declined_08"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_sale_declined_09.wav" Subtitle="trader_hugh_sale_declined_09"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_sale_declined_10.wav" Subtitle="trader_hugh_sale_declined_10"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_sale_declined_11.wav" Subtitle="trader_hugh_sale_declined_11" profanity="true"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_sale_declined_12.wav" Subtitle="trader_hugh_sale_declined_12" profanity="true"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_sale_declined_13.wav" Subtitle="trader_hugh_sale_declined_13"/>
+	<AudioClip ClipName="@:Sounds/VO/Trader/Hugh/trader_hugh_sale_declined_14.wav" Subtitle="trader_hugh_sale_declined_14"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> 
+	</set>
+
+</Subquake>

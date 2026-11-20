@@ -1,0 +1,262 @@
+<Subquake>
+
+<append xpath="//buff[@name='buffStatusCheck01']">
+    <effect_group name="Check IS Wasteland or Burnt Forest">
+		<requirements compare_type="or">
+			<requirement name="InBiome" biome="8"/>
+			<requirement name="InBiome" biome="9"/>
+		</requirements>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$airPollution" operation="set" value="1"/>
+	</effect_group>
+    <effect_group name="Check NOT Wasteland or Burnt Forest">
+		<requirement name="!InBiome" biome="8"/>
+		<requirement name="!InBiome" biome="9"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$airPollution" operation="set" value="0"/>
+	</effect_group>
+	<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$hitCounter"/>
+    <effect_group name="Lung Disease Check">
+		<!-- Increase Lung Damage when exposed in Burnt or Wasteland biome without protection -->
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="ulmBuffPollutedAir">
+			<requirement name="CVarCompare" cvar="$airPollution" operation="Equals" value="1"/>
+			<requirement name="!HasBuff" buff="ulmBuffHelmetGasMaskActive"/>
+			<requirement name="!HasBuff" buff="ulmBuffAirPurifierActive"/>
+		</triggered_effect>
+		
+		<!-- Recovery from Lung Damage -->
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$lungDamage" operation="add" value="-1">
+			<requirement name="CVarCompare" cvar="$airPollution" operation="Equals" value="0"/>
+			<requirement name="CVarCompare" cvar="$lungDamage" operation="GT" value="0"/>
+			<requirement name="!HasBuff" buff="ulmBuffLungInfectionMain"/>
+		</triggered_effect>
+
+		<!-- Catch Lung Infection -->
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="ulmBuffLungInfectionMain">
+			<requirement name="CVarCompare" cvar="$lungDamage" operation="GT" value="60"/>
+			<requirement name="!HasBuff" buff="ulmBuffLungInfectionMain"/>
+		</triggered_effect>
+	</effect_group>
+</append>
+
+<append xpath="/buffs">
+
+<buff name="ulmBuffPollutedAir" name_key="ulmBuffPollutedAir" description_key="ulmBuffPollutedAirDesc" tooltip_key="ulmBuffPollutedAirTooltip" icon="symbol_polluted_air" icon_color="255,128,0">
+	<damage_type value="Disease"/>
+	<stack_type value="ignore"/>
+	<duration value="0"/>
+	<update_rate value="1"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$airPolutionDuration" operation="set" value="60"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$airPolutionDuration" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$lungDamage" operation="add" value="1">
+			<requirement name="!HasBuff" buff="ulmBuffLungInfectionMain"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group>
+		<requirements compare_type="or">
+			<requirement name="CVarCompare" cvar="$airPollution" operation="Equals" value="0"/>
+			<requirement name="HasBuff" buff="ulmBuffHelmetGasMaskActive"/>
+			<requirement name="HasBuff" buff="ulmBuffAirPurifierActive"/>
+		</requirements>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="ulmBuffPollutedAir"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="!InBiome" biome="8"/>
+		<requirement name="!InBiome" biome="9"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="ulmBuffPollutedAir"/>
+	</effect_group>
+
+	<effect_group name="cough">
+		<requirement name="CVarCompare" cvar="$airPolutionCough" operation="LT" value="@$airPolutionDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Stamina" operation="subtract" value="75"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="ulmPlayer#Cough"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".nextCough" operation="set" value="@$airPolutionDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".nextCough" operation="add" value="randomint(15,30)"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$airPolutionCough" operation="set" value="@.nextCough"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveCVar" cvar=".nextCough"/>
+	</effect_group>
+
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$airPolutionDuration"/>
+	</effect_group>
+</buff>
+
+<buff name="ulmBuffInhalerTrigger" hidden="true">
+	<stack_type value="ignore"/>
+	<duration value="1"/>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="$lungDamage" operation="LT" value="300"/>
+		<requirement name="CVarCompare" cvar="$lungDamage" operation="GT" value="0"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="$lungDamageInhalerRemoveAmount" operation="set" value="@$lungDamage"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="$lungDamage" operation="subtract" value="@$lungDamageInhalerRemoveAmount"/>
+	</effect_group>
+	<effect_group>
+			<requirement name="CVarCompare" cvar="$lungDamage" operation="GTE" value="300"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="$lungDamage" operation="add" value="-300"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffFinish" action="RemoveCVar" cvar="$lungDamageInhalerRemoveAmount"/>
+	</effect_group></buff>
+
+<buff name="ulmBuffLungInfectionRemove" hidden="true">
+	<stack_type value="replace"/>
+	<duration value="1"/>
+	<effect_group name="Recover">
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="ulmBuffLungInfectionMain"/>
+	</effect_group>
+</buff>
+
+<buff name="ulmBuffLungInfectionMain" hidden="true">
+	<damage_type value="Disease"/>
+	<stack_type value="ignore"/>
+	<duration value="0"/>
+	<update_rate value="1"/>
+
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$lungDamageDuration" operation="set" value="60"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$lungDamageDuration" operation="add" value="1"/>
+	</effect_group>
+
+	<effect_group name="Stage 1 Trigger">
+		<requirement name="CVarCompare" cvar="$lungDamage" operation="GT" value="60"/>
+		<requirement name="CVarCompare" cvar="$lungDamage" operation="LTE" value="600"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="ulmBuffLungInfectionStage1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="ulmBuffLungInfectionStage2"/>
+	</effect_group>
+
+	<effect_group name="Stage 2 Trigger">
+		<requirement name="CVarCompare" cvar="$lungDamage" operation="GT" value="300"/>
+	<!--<requirement name="CVarCompare" cvar="$lungDamage" operation="LTE" value="600"/>-->
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="ulmBuffLungInfectionStage1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="ulmBuffLungInfectionStage2"/>
+	</effect_group>
+
+	<effect_group name="Recover">
+		<requirement name="CVarCompare" cvar="$lungDamage" operation="LTE" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="ulmBuffLungInfectionRemove"/>
+	</effect_group>
+
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="ulmBuffLungInfectionStage1"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="ulmBuffLungInfectionStage2"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="ulmBuffLungInfectionStage3"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="ulmBuffLungInfectionStage4"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$lungDamage"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$lungDamageCough"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$lungDamageHealing"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$lungDamageDuration"/>
+	</effect_group>
+	<!--
+	<effect_group name="Stage 2">
+		<requirement name="CVarCompare" cvar="$lungDamage" operation="GT" value="300"/>
+		<requirement name="CVarCompare" cvar="$lungDamage" operation="LTE" value="600"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="ulmBuffLungInfectionStage2"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="ulmBuffLungInfectionStage1"/>
+	</effect_group>
+
+	<effect_group name="Stage 3">
+		<requirement name="CVarCompare" cvar="$lungDamage" operation="GT" value="600"/>
+		<requirement name="CVarCompare" cvar="$lungDamage" operation="LTE" value="900"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="ulmBuffLungInfectionStage3"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="ulmBuffLungInfectionStage2"/>
+	</effect_group>
+
+	<effect_group name="Stage 4">
+		<requirement name="CVarCompare" cvar="$lungDamage" operation="GT" value="900"/>
+		<requirement name="CVarCompare" cvar="$lungDamage" operation="LTE" value="1200"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="ulmBuffLungInfectionStage4"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="ulmBuffLungInfectionStage3"/>
+	</effect_group>
+	-->
+	<effect_group name="cough">
+		<requirement name="CVarCompare" cvar="$lungDamageCough" operation="LT" value="@$lungDamageDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Stamina" operation="subtract" value="75"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="ulmPlayer#Cough"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".nextCough" operation="set" value="@$lungDamageDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".nextCough" operation="add" value="randomint(30,90)"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$lungDamageCough" operation="set" value="@.nextCough"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveCVar" cvar=".nextCough"/>
+	</effect_group>
+</buff>
+
+<buff name="ulmBuffLungInfectionStage1" name_key="ulmBuffLungInfectionStage1" description_key="ulmBuffLungInfectionStage1Desc" tooltip_key="ulmBuffLungInfectionStage1Tooltip" icon="symbol_lungs" icon_color="255,128,0">
+	<damage_type value="Disease"/>
+	<stack_type value="ignore"/>
+	<duration value="0"/>
+	<update_rate value="1"/>
+	<display_value value="$lungDamage"/>
+	<display_value_key value="{0}"/>
+	<effect_group name="Main Trigger">
+		<requirement name="!HasBuff" buff="ulmBuffLungInfectionMain"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="ulmBuffLungInfectionMain"/>
+	</effect_group>
+	<effect_group name="Effects">
+		<passive_effect name="WaterChangeOT" operation="base_subtract" value=".1"/>
+		<passive_effect name="EntityDamage" operation="perc_subtract" value=".1" tags="melee"/>
+		<passive_effect name="BlockDamage" operation="perc_subtract" value=".1" tags="melee"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_subtract" value=".05"/>
+		<passive_effect name="StaminaMaxBlockage" operation="base_add" value="10"/>
+	</effect_group>
+	<effect_group name="Update">
+		<requirements compare_type="or">
+			<requirement name="CVarCompare" cvar="$airPollution" operation="NotEquals" value="1"/>
+			<requirement name="HasBuff" buff="ulmBuffHelmetGasMaskActive"/>
+			<requirement name="HasBuff" buff="ulmBuffAirPurifierActive"/>
+		</requirements>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$lungDamage" operation="add" value="-1">
+			<requirement name="CVarCompare" cvar="$lungDamage" operation="GT" value="1"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$lungDamageHealing" operation="set" value="1"/>
+	</effect_group>
+	<effect_group name="Update">
+		<requirement name="CVarCompare" cvar="$airPollution" operation="Equals" value="1"/>
+		<requirement name="!HasBuff" buff="ulmBuffHelmetGasMaskActive"/>
+		<requirement name="!HasBuff" buff="ulmBuffAirPurifierActive"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$lungDamage" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveCVar" cvar="$lungDamageHealing"/>
+	</effect_group>
+</buff>
+
+<buff name="ulmBuffLungInfectionStage2" name_key="ulmBuffLungInfectionStage2" description_key="ulmBuffLungInfectionStage2Desc" tooltip_key="ulmBuffLungInfectionStage2Tooltip" icon="symbol_lungs" icon_color="255,90,0">
+	<damage_type value="Disease"/>
+	<stack_type value="ignore"/>
+	<duration value="0"/>
+	<update_rate value="1"/>
+	<display_value value="$lungDamage"/>
+	<display_value_key value="{0}"/>
+	<effect_group name="Main Trigger">
+		<requirement name="!HasBuff" buff="ulmBuffLungInfectionMain"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="ulmBuffLungInfectionMain"/>
+	</effect_group>
+	<effect_group name="Effects">
+		<passive_effect name="WaterChangeOT" operation="base_subtract" value=".2"/>
+		<passive_effect name="EntityDamage" operation="perc_subtract" value=".20" tags="melee"/>
+		<passive_effect name="BlockDamage" operation="perc_subtract" value=".20" tags="melee"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_subtract" value=".1"/>
+		<passive_effect name="StaminaMaxBlockage" operation="base_add" value="20"/>
+	</effect_group>
+	<effect_group name="Update">
+		<requirements compare_type="or">
+			<requirement name="CVarCompare" cvar="$airPollution" operation="Equals" value="0"/>
+			<requirement name="HasBuff" buff="ulmBuffHelmetGasMaskActive"/>
+			<requirement name="HasBuff" buff="ulmBuffAirPurifierActive"/>
+		</requirements>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$lungDamage" operation="add" value="-1">
+			<requirement name="CVarCompare" cvar="$lungDamage" operation="GT" value="1"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$lungDamageHealing" operation="set" value="1"/>
+	</effect_group>
+	<effect_group name="Update">
+		<requirement name="CVarCompare" cvar="$airPollution" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="$lungDamage" operation="LT" value="900"/>
+		<requirement name="!HasBuff" buff="ulmBuffHelmetGasMaskActive"/>
+		<requirement name="!HasBuff" buff="ulmBuffAirPurifierActive"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$lungDamage" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveCVar" cvar="$lungDamageHealing"/>
+	</effect_group>
+</buff>
+
+</append>
+
+</Subquake>

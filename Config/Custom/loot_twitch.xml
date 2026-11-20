@@ -1,0 +1,222 @@
+<Subquake>
+
+<append xpath="/lootcontainers">
+
+<!-- TWITCH_INTEGRATION -->
+
+<lootgroup name="twitch_ammo0">
+	<item group="groupAmmoRegularT0"/></lootgroup>
+<lootgroup name="twitch_ammo1">
+	<item group="groupAmmoRegularT1"/></lootgroup>
+<lootgroup name="twitch_ammo2">	
+	<item group="groupAmmoRegularT2"/></lootgroup>
+<lootgroup name="twitch_ammo3">
+	<item group="groupAmmoRegularT2" count="2"/></lootgroup>
+<lootgroup name="twitch_ammospecial0">
+	<item group="groupAmmoAdvanced" count="1"/></lootgroup>
+<lootgroup name="twitch_ammospecial1">
+	<item group="groupAmmoAdvanced" count="2"/></lootgroup>
+<lootgroup name="twitch_tier0weapon" count="all">
+	<item group="groupRangedT0"/>	
+	<item group="T0_Melee"/></lootgroup>
+<lootgroup name="twitch_tier1weapon" count="all">
+	<item group="groupRangedT1"/>	
+	<item group="T1_Melee"/>
+	<item group="T2_Melee" prob="0.25"/></lootgroup>
+<lootgroup name="twitch_tier2weapon" count="all">
+	<item group="groupRangedT2"/>	
+	<item group="T2_Melee"/>
+	<item group="T3_Melee" prob="0.25"/></lootgroup>
+<lootgroup name="twitch_tier3weapon" count="all">
+	<item group="groupRangedT3"/>	
+	<item group="T3_Melee"/>
+	<item group="T4_Melee" prob="0.25"/></lootgroup>
+<lootgroup name="twitch_explosivesT0" count="1">
+	<item group="T1_Explosives"/></lootgroup>
+<lootgroup name="twitch_explosivesT1" count="1">
+	<item group="T2_Explosives"/></lootgroup>
+<lootgroup name="twitch_explosivesT2" count="1">
+	<item group="T3_Explosives"/></lootgroup>
+<lootgroup name="twitch_explosivesT3" count="2">
+	<item group="T3_Explosives"/></lootgroup>
+<lootgroup name="twitch_robo0" count="1">
+	<item group="T1_Turrets"/></lootgroup>
+<lootgroup name="twitch_robo1" count="1">
+	<item group="T2_Turrets"/></lootgroup>
+<lootgroup name="twitch_robo2" count="1">
+	<item group="T2_Turrets"/></lootgroup>
+<lootgroup name="twitch_tier0armorplus" count="all">
+	<item group="groupArmorAll"/></lootgroup>
+<lootgroup name="twitch_tier1armorplus" count="all">
+	<item group="groupArmorAll"/></lootgroup>
+<lootgroup name="twitch_tier2armorplus" count="all">
+	<item group="groupArmorAll"/></lootgroup>
+<lootgroup name="twitch_tier1mods" count="1">
+	<item group="groupModsMeleeCommon"/>	
+	<item group="groupModsGunsCommon"/>
+	<item group="groupModsArmorCommon"/></lootgroup>
+<lootgroup name="twitch_tier2mods" count="1">
+	<item group="groupModsMeleeRare"/>	
+	<item group="groupModsGunsRare"/>
+	<item group="groupModsArmorRare"/></lootgroup>
+<lootgroup name="twitch_tier3mods" count="1">
+	<item group="groupModsMeleeEpic"/>	
+	<item group="groupModsGunsEpic"/>
+	<item group="groupModsArmorEpic"/></lootgroup>
+<lootgroup name="twitch_tool1" count="all">
+	<item group="T1_Tools"/>
+	<item group="T2_Tools" prob="0.25"/></lootgroup>
+<lootgroup name="twitch_tool2" count="all">
+	<item group="T2_Tools"/>
+	<item group="T3_Tools" prob="0.25"/></lootgroup>
+<lootgroup name="twitch_tool3" count="all">
+	<item group="T3_Tools"/>
+	<item group="T4_Tools" prob="0.25"/></lootgroup>
+<lootgroup name="twitch_medicine1" count="all">
+	<item group="groupMedicalCommon"/></lootgroup>
+<lootgroup name="twitch_medicine2" count="all">
+	<item group="groupMedicalUncommon"/></lootgroup>
+<lootgroup name="twitch_medicine3">
+	<item group="groupMedicalRare"/></lootgroup>
+<lootgroup name="twitch_bicycle">
+	<item group="groupPartsBicycle"/></lootgroup>
+<lootgroup name="twitch_minibike">
+	<item group="groupPartsMinibike"/></lootgroup>
+<lootgroup name="twitch_motorcycle">
+	<item group="groupPartsMotorcycle"/></lootgroup>
+<lootgroup name="twitch_4x4">
+	<item group="groupParts4x4"/></lootgroup>
+<lootgroup name="twitch_foodT0" count="1">
+	<item group="groupFoodCommon" count="1"/></lootgroup>
+<lootgroup name="twitch_foodT1" count="1">
+	<item group="groupFoodCommon" count="1"/>
+	<item group="groupFoodUncommon" count="1"/></lootgroup>
+<lootgroup name="twitch_foodT2" count="1">
+	<item group="groupFoodUncommon" count="1"/></lootgroup>
+<lootgroup name="twitch_foodT3" count="1">
+	<item group="groupFoodUncommon" count="1"/>
+	<item group="groupFoodRare" count="1"/></lootgroup>
+<lootgroup name="twitch_drink" count="1">
+	<item group="groupDrinksCommon" count="1"/></lootgroup>
+<lootgroup name="twitch_drinkspecial1" count="1">
+	<item group="groupDrinksUncommon" count="1"/></lootgroup>
+<lootgroup name="twitch_drinkspecial2" count="1">
+	<item group="groupDrinksRare" count="1"/></lootgroup>
+<lootgroup name="twitch_foodanddrinkT0" count="all">
+	<item group="groupFoodCommon" count="1"/>
+	<item group="groupDrinksCommon" count="1"/></lootgroup>
+<lootgroup name="twitch_foodanddrinkT1" count="all">
+	<item group="groupFoodCommon" count="1"/>
+	<item group="groupDrinksCommon" count="1"/></lootgroup>
+<lootgroup name="twitch_foodanddrinkT2" count="all">
+	<item group="groupFoodUncommon" count="1"/>
+	<item group="groupDrinksUncommon" count="1"/></lootgroup>
+<lootgroup name="twitch_foodanddrinkT3" count="all">
+	<item group="groupFoodRare" count="1"/>
+	<item group="groupDrinksRare" count="1"/></lootgroup>
+<lootgroup name="twitch_books1" count="1">
+	<item group="groupBooksAll"/></lootgroup>
+<lootgroup name="twitch_books2" count="1">
+	<item group="groupBooksAll"/></lootgroup>
+<lootgroup name="twitch_books3" count="1">
+	<item group="groupBooksAll"/></lootgroup>
+<lootgroup name="twitch_utilitysupplies1" count="1">
+	<item group="groupLockpicks" count="1,2"/>
+	<item name="resourceRepairKit" count="1"/></lootgroup>
+<lootgroup name="twitch_utilitysupplies2" count="all">
+	<item group="groupLockpicks" count="2,3"/>
+	<item name="resourceRepairKit" count="1,2"/>
+	<item name="thrownTimedCharge" count="1,2"/></lootgroup>
+<lootgroup name="twitch_resources0" count="1">
+	<item group="groupCraftingCommon" count="1,2"/></lootgroup>
+<lootgroup name="twitch_resources1" count="1">
+	<item group="groupCraftingCommon" count="1,2"/>
+	<item group="groupCraftingUncommon" count="1,2"	loot_prob_template="low"/></lootgroup>
+<lootgroup name="twitch_resources2" count="1">
+	<item group="groupCraftingUncommon" count="1,2"/></lootgroup>
+<lootgroup name="twitch_resources3" count="1">
+	<item group="groupCraftingUncommon" count="1,2"/>
+	<item group="groupCraftingRare" count="1,2"	loot_prob_template="low"/></lootgroup>
+<lootgroup name="twitch_electrical1">
+	<item group="groupElectricalDevices" count="1"/></lootgroup>
+<lootgroup name="twitch_electrical2">
+	<item group="groupElectricalDevices" count="2"/></lootgroup>
+<lootgroup name="twitch_T1_Rewards" count="all">
+	<item group="groupAmmoRegularT0"/>
+	<item name="casinoCoin" count="200,500"/></lootgroup>
+<lootgroup name="twitch_T2_Rewards" count="all">
+	<item group="groupAmmoRegularT1"/>
+	<item name="drinkCanMegaCrush" count="1,2"/>
+	<item name="casinoCoin" count="500,1000"/>
+	<item name="resourceSilverNugget" count="1,3"/></lootgroup>
+<lootgroup name="twitch_T3_Rewards" count="all">
+	<item group="groupAmmoRegularT1"/>
+	<item name="drinkCanMegaCrush" count="1,2"/>
+	<item name="casinoCoin" count="1000,1500"/>
+	<item name="resourceSilverNugget" count="2,3"/>
+	<item name="resourceGoldNugget" count="2,3"/></lootgroup>
+<lootgroup name="twitch_T4_Rewards" count="all">
+	<item group="groupAmmoRegularT2"/>
+	<item group="groupAmmoAdvanced"/>
+	<item group="groupGemstones" count="1"/>
+	<item name="drinkCanMegaCrush" count="1,2"/>
+	<item name="casinoCoin" count="2000,3000"/></lootgroup>
+
+<!-- *** Twitch_Home_Run_Rewards -->
+<lootgroup name="twitch_Home_Run_Books">
+	<item name="bookBatterUpFoulBalls"/>
+	<item name="bookBatterUpBigHits"/>
+	<item name="bookBatterUpStealingBases"/>
+	<item name="bookBatterUpKnockdown"/>
+	<item name="bookBatterUpSlowPitch"/>
+	<item name="bookBatterUpMaintenance"/>
+	<item name="bookBatterUpMetalChain"/></lootgroup>
+<lootgroup name="twitch_Home_Run_Gear">
+	<item name="armorAthleticHelmet"/>
+	<item name="armorAthleticOutfit"/>
+	<item name="armorAthleticGloves"/>
+	<item name="armorAthleticBoots"/></lootgroup>
+
+<lootgroup name="twitch_T1_Home_Run_Rewards" count="all" loot_quality_template="qualTwitchT2Template">
+	<item name="meleeWpnClubT1BaseballBat"/>
+	<item name="casinoCoin" count="200,500"/></lootgroup>
+
+<lootgroup name="twitch_T2_Home_Run_Rewards" count="all" loot_quality_template="qualTwitchT3Template">
+	<item group="twitch_Home_Run_Gear" count="1"/>
+	<item name="meleeWpnClubT1BaseballBat"/>
+	<item name="drinkCanMegaCrush" count="1,2"/>
+	<item name="casinoCoin" count="500,1000"/>
+	<!-- <item name="resourceSilverNugget" count="1,3"/> --></lootgroup>
+
+<lootgroup name="twitch_T3_Home_Run_Rewards" count="all" loot_quality_template="qualTwitchT4Template">
+	<item group="twitch_Home_Run_Gear" count="1"/>
+	<item group="twitch_Home_Run_Books" count="1"/>
+	<item name="meleeWpnClubT1BaseballBat"/>
+	<item name="drinkCanMegaCrush" count="1,2"/>
+	<item name="casinoCoin" count="1000,1500"/>
+	<!-- <item name="resourceSilverNugget" count="2,3"/> -->
+	<!-- <item name="resourceGoldNugget" count="2,3"/> --></lootgroup>
+
+<lootgroup name="twitch_T4_Home_Run_Rewards" count="all" loot_quality_template="qualTwitchT5Template">
+	<item group="twitch_Home_Run_Gear" count="1"/>
+	<item group="twitch_Home_Run_Books" count="2"/>
+	<item name="meleeWpnClubT1BaseballBat"/>
+	<item name="drinkCanMegaCrush" count="1,2"/>
+	<item name="casinoCoin" count="2000,3000"/>
+	<!-- <item name="resourceSilverNugget" count="3,5"/> -->
+	<!-- <item name="resourceGoldNugget" count="3,5"/> -->
+	<!-- <item name="resourceRawDiamond" count="3,5"/> --></lootgroup>
+
+<lootgroup name="twitch_T5_Home_Run_Rewards" count="all" loot_quality_template="qualTwitchT6Template">
+	<item group="twitch_Home_Run_Gear" count="1"/>
+	<item group="twitch_Home_Run_Books" count="3"/>
+	<item name="meleeWpnClubT1BaseballBat"/>
+	<item name="drinkCanMegaCrush" count="1,2"/>
+	<item name="casinoCoin" count="3000,5000"/>
+	<!-- <item name="resourceSilverNugget" count="3,5"/> -->
+	<!-- <item name="resourceGoldNugget" count="3,5"/> -->
+	<!-- <item name="resourceRawDiamond" count="3,5"/> --></lootgroup>
+
+</append>
+
+</Subquake>

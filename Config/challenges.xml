@@ -1,0 +1,215 @@
+<Subquake>
+<!--
+	
+<setattribute xpath="/challenges/challenge[@name='craftClothes']" name="icon">symbol_primitive_armor</setattribute>-->
+
+<remove xpath="/challenges/challenge[@name='redeemChallenge']"/>
+<remove xpath="/challenges/challenge[@name='gatherResources']"/>
+<remove xpath="/challenges/challenge[@name='craftStoneAxe']"/>
+<remove xpath="/challenges/challenge[@name='gatherResourcesStoneAxe']"/>
+<remove xpath="/challenges/challenge[@name='craftClothes']"/>
+<remove xpath="/challenges/challenge[@name='wearClothes']"/>
+<remove xpath="/challenges/challenge[@name='craftWoodClub']"/>
+<remove xpath="/challenges/challenge[@name='craftBow']"/>
+<remove xpath="/challenges/challenge[@name='craftArrows']"/>
+<remove xpath="/challenges/challenge[@name='groupCompleteChallenge']"/>
+
+<set xpath="/challenges/challenge[@name='placeForge']">
+	<objective type="BlockPlace" block="ulmStationForge_1" count="1"/></set>
+
+<set xpath="/challenges/challenge[@name='placeWorkbench']">
+	<objective type="BlockPlace" block="ulmStationWorkbench_1" count="1"/></set>
+
+<set xpath="/challenges/challenge[@name='placeCementMixer']">
+	<objective type="BlockPlace" block="ulmStationCementMixerPowered" count="1"/></set>
+
+<set xpath="/challenges/challenge[@name='placeChemistryStation']">
+	<objective type="BlockPlace" block="ulmStationChemistry_1" count="1"/></set>
+
+<set xpath="/challenges/challenge[@name='craftGasCan']">
+	<objective type="Craft" item="ulmAmmoFuelGasoline" count="1"/></set>
+
+<set xpath="/challenges/challenge[@name='harvestHoney']">
+	<objective type="Harvest" item="ulmResourceHoney" count="10" block_tag="challenge_stump" override_tracker_index="challenge_stump" track_distance="50"/></set>
+	
+<set xpath="/challenges/challenge[@name='harvestCobblestone']">
+	<objective type="Harvest" item="ulmResourceOreStone" count="10" block_tag="challenge_stone"/></set>
+
+<set xpath="/challenges/challenge[@name='harvestLeather']">
+	<objective type="Harvest" item="ulmResourceHide" is_block="false" count="10"/></set>
+
+<set xpath="/challenges/challenge[@name='harvestCarParts']">
+	<objective type="Harvest" item="ulmCarBattery" count="3" block_tag="challenge_cars" override_tracker_index="challenge_cars" track_distance="50"/>
+	<objective type="Harvest" item="ulmCarEngine" count="3" block_tag="challenge_cars" override_tracker_index="challenge_cars" track_distance="50"/>
+	<objective type="Harvest" item="resourceRadiator" count="4" block_tag="challenge_cars" override_tracker_index="challenge_cars" track_distance="50"/></set>
+
+<set xpath="/challenges/challenge[@name='gathererWood']">
+	<objective type="Harvest" item="ulmResourceLumber" count="2000"/></set>
+
+<set xpath="/challenges/challenge[@name='spendSkillPoint']">
+	<objective type="ULM_SpendSkillPoint,UndeadLegacy" count="1"/></set>
+
+<set xpath="/challenges/challenge[@name='burntSurvivalGatherGear']">
+	<objective type="Gather" item="resourceScrapPolymers" count="20"/>
+	<objective type="Gather" item="ulmResourceHide" count="10"/>
+	<objective type="Gather" item="resourceCloth" count="20"/>
+	<objective type="Gather" item="resourceCoal" count="50"/></set>
+	
+<set xpath="/challenges/challenge[@name='desertSurvivalGatherGear']">
+	<objective type="Gather" item="resourceScrapPolymers" count="20"/>
+	<objective type="Gather" item="ulmResourceHide" count="10"/>
+	<objective type="Gather" item="resourceCloth" count="20"/>
+	<objective type="Gather" item="resourceOilShale" count="30"/></set>
+	
+<set xpath="/challenges/challenge[@name='snowSurvivalGatherGear']">
+	<objective type="Gather" item="resourceScrapPolymers" count="20"/>
+	<objective type="Gather" item="ulmResourceHide" count="10"/>
+	<objective type="Gather" item="resourceCropCottonPlant" count="50"/>
+	<objective type="Gather" item="resourceSnowBall" count="100"/></set>
+
+<set xpath="/challenges/challenge[@name='wastelandSurvivalGatherGear']">
+	<objective type="Gather" item="resourceScrapPolymers" count="20"/>
+	<objective type="Gather" item="ulmResourceHide" count="10"/>
+	<objective type="Gather" item="resourceScrapLead" count="100"/>
+	<objective type="Gather" item="resourceForgedSteel" count="10"/>
+	<objective type="Gather" item="ulmResourceOreTitanium" count="20"/></set>
+	
+<set xpath="/challenges/challenge[@name='gathererPotassium']">
+	<objective type="Harvest" item="ulmResourceOrePotassiumNitrate" count="1000" block_tag="ore"/></set>
+	
+<set xpath="/challenges/challenge[@name='burntSurvivalHarvestOre']">
+	<objective type="Harvest" item="ulmResourceOrePotassiumNitrate" count="250" block_tag="ore"/></set>
+
+<set xpath="/challenges/challenge[@name='gathererStone']">
+	<objective type="Harvest" item="ulmResourceOreStone" count="2000" block_tag="challenge_stone"/></set>
+
+<set xpath="/challenges/challenge[@name='gathererIron']">
+	<objective type="Harvest" item="ulmResourceOreIron" count="1000" block_tag="ore"/></set>
+
+<set xpath="/challenges/challenge[@name='gathererLead']">
+	<objective type="Harvest" item="ulmResourceOreLead" count="1000" block_tag="ore"/></set>
+	
+<set xpath="/challenges/challenge[@name='wastelandSurvivalHarvestOre']">
+	<objective type="Harvest" item="ulmResourceOreLead" count="250" block_tag="ore"/></set>
+	
+<set xpath="/challenges/challenge[@name='drinkWaterSource']">
+	<objective type="UseItem" item="ulmDrinkPlasticBottleRiverWater" count="1"/></set>
+
+<set xpath="/challenges/challenge[@name='healerDysentery']">
+		<objective type="CureDebuff" debuff="buffDysenteryMain" item="ulmDrinkPlasticBottleGoldenRodTea,ulmDrinkPlasticBottleMineralWater" count="5"/></set>
+
+<insertBefore xpath="/challenges/challenge[@name='craftLandclaim']">
+
+
+<challenge           name="ulmBasicsDuffleBag" 
+	                group="Basics"
+	                 icon="symbol_duffle_bag" 
+	            title_key="ulmChallengeDuffleBagName" 
+	short_description_key="ulmChallengeDuffleBagShort"	
+	      description_key="ulmChallengeDuffleBagDesc">
+						  <objective type="ULM_BlockPlace,UndeadLegacy" block="ulmContainerBagStarter"/>
+						  <objective type="ULM_OpenLootContainer,UndeadLegacy" block="ulmContainerBagStarterLoot"/></challenge>
+
+
+<challenge           name="ulmBasicsResources1" 
+					group="Basics" 
+				     icon="ui_game_symbol_challenge_basics_gather_resources" 
+	            title_key="ulmChallengeHandGathering" 
+	short_description_key="ulmChallengeHandGatheringShort" 
+	      description_key="ulmChallengeHandGatheringDesc">
+						  <objective type="ULM_Gather,UndeadLegacy" item="resourceRockSmall" count="10"/>
+						  <objective type="ULM_Gather,UndeadLegacy" item="ulmResourceRope" count="4"/>
+						  <objective type="ULM_Gather,UndeadLegacy" item="ulmResourceBranch" count="40"/></challenge>
+
+
+<challenge			 name="ulmBasicsSurvivalTools" 
+					group="Basics"
+				     icon="symbol_primitive_tools" 
+	            title_key="ulmChallengeSurvivalTools" 
+	short_description_key="ulmChallengeSurvivalToolsShort" 
+	      description_key="ulmChallengeSurvivalToolsDesc">
+						  <objective type="Craft" item="meleeToolRepairT0StoneAxe"/>
+						  <objective type="Craft" item="ulmToolPickaxeStone"/></challenge>
+
+
+<challenge			 name="ulmBasicsUsingBasicTools" 
+					group="Basics"
+				     icon="symbol_gather_resources" 
+	            title_key="ulmChallengeUsingBasicTools" 
+	short_description_key="ulmChallengeUsingBasicToolsShort" 
+	      description_key="ulmChallengeUsingBasicToolsDesc">
+						  <objective type="ULM_Gather,UndeadLegacy" item="ulmResourceLumber" count="5"/>
+						  <objective type="ULM_Gather,UndeadLegacy" item="ulmResourceResin" count="5"/>
+						  <objective type="ULM_Gather,UndeadLegacy" item="ulmResourceBranch" count="15"/>
+						  <objective type="ULM_Gather,UndeadLegacy" item="resourceScrapIron" count="30"/></challenge>
+
+
+<challenge			 name="ulmBasicsCarpentersTable" 
+					group="Basics"
+				     icon="symbol_carpenter" 
+	            title_key="ulmChallengeCarpentersTable" 
+	short_description_key="ulmChallengeCarpentersTableShort" 
+	      description_key="ulmChallengeCarpentersTableDesc">
+						  <objective type="Craft" item="ulmStationCarpenter_1"/>
+						  <objective type="ULM_BlockPlace,UndeadLegacy" block="ulmStationCarpenter_1"/>
+						  <objective type="ULM_InteractWith,UndeadLegacy" name="ulmStationCarpenter_1" window="ulmStationCarpenter_1"/></challenge>
+
+
+<challenge           name="ulmBasicsResources2" 
+					group="Basics" 
+				     icon="symbol_gather_resources" 
+                title_key="ulmChallengeGatherResources" 
+	short_description_key="ulmChallengeGatherResourcesShort" 
+	      description_key="ulmChallengeGatherResourcesDesc">
+						  <objective type="ULM_Gather,UndeadLegacy" item="ulmResourceLumber" count="1"/>
+						  <objective type="ULM_Gather,UndeadLegacy" item="ulmResourceRope" count="3"/>
+						  <objective type="ULM_Gather,UndeadLegacy" item="ulmResourceBranch" count="20"/></challenge>
+						  
+
+<challenge			 name="ulmBasicsPrimitiveWeapons" 
+					group="Basics"
+				     icon="symbol_primitive_weapons" 
+	            title_key="ulmChallengePrimitiveWeapons" 
+	short_description_key="ulmChallengePrimitiveWeaponsShort" 
+	      description_key="ulmChallengePrimitiveWeaponsDesc">
+						  <objective type="ULM_Gather,UndeadLegacy" item="ulmMeleeSpearWood"/>
+						  <objective type="ULM_Gather,UndeadLegacy" item="meleeWpnClubT0WoodenClub"/></challenge>
+
+
+<challenge           name="ulmBasicsArchery" 
+					group="Basics"
+				     icon="symbol_archery" 
+                title_key="ulmChallengeArchery" 
+	short_description_key="ulmChallengeArcheryShort" 
+	      description_key="ulmChallengeArcheryDesc">
+		                  <objective type="ULM_Gather,UndeadLegacy" item="gunBowT0PrimitiveBow" count="1"/>
+		                  <objective type="ULM_Gather,UndeadLegacy" item="ammoArrowStone" count="1"/></challenge>
+
+
+<challenge           name="ulmBasicsWearArmor" 
+					group="Basics"
+				     icon="symbol_primitive_helmet" 
+                title_key="ulmChallengeWearArmor" 
+	short_description_key="ulmChallengeWearArmorShort" 
+	      description_key="ulmChallengeWearArmorDesc">
+		                  <objective type="Wear" item="armorPrimitiveHelmet"/>
+		                  <objective type="Wear" item="armorPrimitiveOutfit"/>
+		                  <objective type="Wear" item="armorPrimitiveGloves"/>
+		                  <objective type="Wear" item="armorPrimitiveBoots"/></challenge>
+
+
+<challenge           name="ulmBasicsComplete" 
+					group="Basics"
+				     icon="ui_game_symbol_challenge_basics_redeem_rewards" 
+                title_key="challengeGroupComplete" 
+	    prerequisite_hint="challengeGroupCompleteHint1" 
+		             hint="challengeGroupCompleteHint2"
+	short_description_key="challengeGroupCompleteShort" 
+	      description_key="challengeGroupCompleteDesc" 
+		    redeem_always="false">
+						  <objective type="ChallengeComplete" challenge="Basics" is_redeemed="true" is_group="true"/></challenge>
+
+
+</insertBefore>
+
+</Subquake>

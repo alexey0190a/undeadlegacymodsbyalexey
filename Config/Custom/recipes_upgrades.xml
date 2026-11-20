@@ -1,0 +1,211 @@
+<Subquake>
+
+<!-- Block Upgrades -->
+    
+<append xpath="/recipes">
+
+<upgrade block="ulmStationResearch_1" next="ulmStationResearch_2" tools="ulmToolHammerWood,meleeToolRepairT1ClawHammer">
+	<ingredient name="ulmResourceResearch" count="400"/>
+    <ingredient name="ulmResourceBook" count="25"/>
+    <ingredient name="resourcePaper" count="50"/>
+	<ingredient name="ulmResourceLumber" count="5"/>
+	<ingredient name="ulmResourceBranch" count="10"/>
+	<ingredient name="resourceGlue" count="5"/></upgrade>
+
+<upgrade block="ulmStationResearch_2" next="ulmStationResearch_3" tools="ulmToolHammerWood,meleeToolRepairT1ClawHammer">
+	<ingredient name="ulmResourceResearch" count="800"/>
+    <ingredient name="ulmResourceBook" count="50"/>
+    <ingredient name="resourcePaper" count="50"/>
+	<ingredient name="resourceForgedIron" count="50"/>
+	<ingredient name="ulmResourceLumber" count="5"/>
+	<ingredient name="ulmResourcePlank" count="20"/>
+	<ingredient name="ulmResourceAdhesive" count="5"/></upgrade>
+
+<upgrade block="ulmStationCarpenter_1" next="ulmStationCarpenter_2" tools="ulmToolHammerWood,meleeToolRepairT1ClawHammer">
+	<ingredient name="ulmResourceResearch" count="200"/>
+	<ingredient name="ulmResourceLumber" count="50"/>
+	<ingredient name="ulmResourceBranch" count="20"/>
+	<ingredient name="ulmResourcePlank" count="100"/>
+	<ingredient name="resourceScrapIron" count="50"/>
+	<ingredient name="ulmResourceResin" count="20"/>
+	<ingredient name="resourceNail" count="25"/>
+	<ingredient name="ulmToolSaw"/>
+	<ingredient name="ulmMeleeAxeCarpenters"/></upgrade>
+
+<upgrade block="ulmStationCarpenter_2" next="ulmStationCarpenter_3" tools="ulmToolHammerWood,meleeToolRepairT1ClawHammer">
+	<ingredient name="ulmResourceResearch" count="400"/>
+	<ingredient name="ulmResourceLumber" count="100"/>
+	<ingredient name="ulmResourcePlank" count="200"/>
+	<ingredient name="resourceForgedIron" count="50"/>
+	<ingredient name="ulmResourceScrapSteel" count="25"/>
+	<ingredient name="resourceMechanicalParts" count="50"/>
+	<ingredient name="resourceElectricParts" count="30"/>
+	<ingredient name="ulmResourceScrapWires" count="20"/>
+	<ingredient name="ulmResourceGears" count="10"/>
+	<ingredient name="resourceNail" count="50"/></upgrade>
+
+<upgrade block="ulmStationArtisan_1" next="ulmStationArtisan_2" tools="ulmToolHammerWood,meleeToolRepairT1ClawHammer">
+	<ingredient name="ulmResourceResearch" count="400"/>
+	<ingredient name="ulmResourceBook" count="10"/>
+	<ingredient name="resourceForgedIron" count="30"/>
+	<ingredient name="ulmResourceRebarIron" count="80"/>
+	<ingredient name="ulmResourceOreStone" count="100"/>
+	<ingredient name="resourceConcreteMix" count="50"/>
+	<ingredient name="ulmResourceBrick" count="50"/>
+	<ingredient name="resourceCrushedSand" count="50"/></upgrade>
+
+<upgrade block="ulmStationWorkbench_1" next="ulmStationWorkbench_2" tools="ulmToolHammerWood,meleeToolRepairT1ClawHammer">
+	<ingredient name="ulmResourceResearch" count="400"/>
+	<ingredient name="resourcePaper" count="50"/>
+	<ingredient name="resourceForgedIron" count="50"/>
+	<ingredient name="resourceScrapIron" count="40"/>
+	<ingredient name="resourceMetalPipe" count="5"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="20"/>
+	<ingredient name="resourceMechanicalParts" count="20"/>
+	<ingredient name="meleeToolSalvageT2Ratchet"/>
+	<ingredient name="meleeToolRepairT1ClawHammer"/></upgrade>
+
+<upgrade block="ulmStationWorkbench_2" next="ulmStationWorkbench_3" tools="ulmToolHammerWood,meleeToolRepairT1ClawHammer">
+	<ingredient name="ulmResourceResearch" count="600"/>
+	<ingredient name="ulmResourceBook" count="10"/>
+	<ingredient name="resourceForgedSteel" count="100"/>
+	<ingredient name="ulmResourceScrapTitanium" count="20"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="40"/>
+	<ingredient name="resourceMechanicalParts" count="20"/>
+	<ingredient name="resourceElectricParts" count="20"/>
+	<ingredient name="meleeToolSalvageT3ImpactDriver"/>
+	<ingredient name="meleeToolRepairT3Nailgun"/></upgrade>
+
+<upgrade block="ulmStationBallistics_1" next="ulmStationBallistics_2" tools="ulmToolHammerWood,meleeToolRepairT1ClawHammer">
+	<ingredient name="ulmResourceResearch" count="400"/>
+	<ingredient name="ulmResourceBook" count="10"/>
+	<ingredient name="resourcePaper" count="100"/>
+	<ingredient name="resourceForgedIron" count="50"/>
+	<ingredient name="resourceMetalPipe" count="5"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="20"/>
+	<ingredient name="ulmResourceGears" count="10"/>
+	<ingredient name="ulmResourceIngotBrass" count="10"/>
+	<ingredient name="resourceScrapPolymers" count="50"/>
+	<ingredient name="resourceOil" count="10"/>
+	<ingredient name="resourceDuctTape" count="5"/></upgrade>
+
+<upgrade block="ulmStationMechanic_1" next="ulmStationMechanic_2" tools="ulmToolHammerWood,meleeToolRepairT1ClawHammer">
+	<ingredient name="ulmResourceResearch" count="400"/>
+	<ingredient name="ulmResourceBook" count="10"/>
+	<ingredient name="resourcePaper" count="20"/>
+	<ingredient name="resourceForgedIron" count="50"/>
+	<ingredient name="resourceMetalPipe" count="5"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="20"/>
+	<ingredient name="ulmResourceScrapRubber" count="50"/>
+	<ingredient name="resourceOil" count="5"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="meleeToolSalvageT1Wrench"/></upgrade>
+
+<upgrade block="ulmStationForge_1" next="ulmStationForge_2" tools="ulmToolHammerWood,meleeToolRepairT1ClawHammer">
+	<ingredient name="ulmResourceResearch" count="300"/>
+	<ingredient name="resourcePaper" count="10"/>
+	<ingredient name="ulmResourceBrick" count="50"/>
+	<ingredient name="resourceClayLump" count="20"/>
+	<ingredient name="resourceScrapIron" count="200"/>
+	<ingredient name="ulmResourceIngotSteel" count="20"/>
+	<ingredient name="ulmResourcePlank" count="5"/>
+	<ingredient name="ulmResourceLumber"/>
+	<ingredient name="bucketEmpty"/>
+	<ingredient name="toolAnvil"/>
+	<ingredient name="toolCookingGrill"/></upgrade>
+
+<upgrade block="ulmStationForge_2" next="ulmStationForge_3" tools="ulmToolHammerWood,meleeToolRepairT1ClawHammer">
+	<ingredient name="ulmResourceResearch" count="600"/>
+	<ingredient name="ulmResourceBook" count="10"/>
+	<ingredient name="ulmResourceBrick" count="100"/>
+	<ingredient name="resourceClayLump" count="20"/>
+	<ingredient name="resourceForgedSteel" count="50"/>
+	<ingredient name="ulmResourceIngotTitanium" count="20"/></upgrade>
+
+<upgrade block="ulmStationMaintenance_1" next="ulmStationMaintenance_2">
+	<ingredient name="ulmResourceResearch" count="250"/>
+    <ingredient name="resourcePaper" count="20"/>
+	<ingredient name="resourceRepairKit"/>
+	<ingredient name="resourceScrapIron" count="100"/>
+	<ingredient name="ulmResourceScrapRubber" count="20"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceCloth" count="20"/>
+	<ingredient name="ulmResourceResin" count="20"/></upgrade>
+
+<upgrade block="ulmStationMaintenance_2" next="ulmStationMaintenance_3">
+	<ingredient name="ulmResourceResearch" count="500"/>
+    <ingredient name="ulmResourceBook" count="20"/>
+	<ingredient name="ulmResourceAdvancedRepairKit"/>
+	<ingredient name="resourceForgedIron" count="100"/>
+	<ingredient name="resourceMetalPipe" count="5"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="25"/>
+	<ingredient name="resourceLeather" count="50"/>
+	<ingredient name="meleeToolRepairT1ClawHammer"/>
+	<ingredient name="ulmResourceBenchVice"/>
+	<ingredient name="resourceGlue" count="10"/></upgrade>
+
+<upgrade block="ulmStationMaintenance_3" next="ulmStationMaintenance_4">
+	<ingredient name="ulmResourceResearch" count="750"/>
+    <ingredient name="ulmResourceBook" count="40"/>
+	<ingredient name="ulmResourceSuperiorRepairKit"/>
+	<ingredient name="resourceForgedSteel" count="100"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="50"/>
+	<ingredient name="ulmResourceScrapTitanium" count="20"/>
+	<ingredient name="resourceScrapPolymers" count="75"/>
+	<ingredient name="resourceLeather" count="100"/>
+	<ingredient name="ulmResourceMilitaryFiber" count="10"/>
+	<ingredient name="ulmResourceAdhesive" count="10"/></upgrade>
+<!--
+<upgrade block="ulmStationFurnace_1" next="ulmStationFurnace_2" tools="ulmToolHammerWood,meleeToolRepairT1ClawHammer">
+	<ingredient name="ulmResourceResearch" count="300"/>
+	<ingredient name="ulmResourceBook" count="10"/>
+	<ingredient name="ulmResourceBrick" count="40"/>
+	<ingredient name="resourceClayLump" count="20"/>
+	<ingredient name="resourceLeather" count="25"/>
+	<ingredient name="resourceMetalPipe" count="10"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="toolCookingGrill"/>
+	<ingredient name="toolForgeCrucible"/></upgrade>
+
+<upgrade block="ulmStationFurnace_2" next="ulmStationFurnace_3" tools="ulmToolHammerWood,meleeToolRepairT1ClawHammer">
+	<ingredient name="ulmResourceResearch" count="600"/>
+	<ingredient name="ulmResourceBook" count="20"/>
+	<ingredient name="ulmResourceBrick" count="40"/>
+	<ingredient name="resourceClayLump" count="20"/>
+	<ingredient name="resourceMetalPipe" count="10"/>
+	<ingredient name="resourceForgedSteel" count="50"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="50"/>
+	<ingredient name="ulmResourceMilitaryFiber" count="20"/></upgrade>-->
+
+<upgrade block="ulmStationChemistry_1" next="ulmStationChemistry_2">
+	<ingredient name="ulmResourceResearchChemistry" count="250"/>
+    <ingredient name="resourcePaper" count="20"/>
+	<ingredient name="resourceForgedSteel" count="20"/>
+	<ingredient name="resourceMetalPipe" count="10"/>
+	<ingredient name="ulmResourceGlass" count="20"/>
+	<ingredient name="ulmResourceAdhesive" count="5"/>
+	<ingredient name="toolBeaker"/></upgrade>
+
+<upgrade block="ulmStationChemistry_2" next="ulmStationChemistry_3">
+	<ingredient name="ulmResourceResearch" count="500"/>
+    <ingredient name="ulmResourceBook" count="20"/>
+	<ingredient name="ulmResourceForgedTitanium" count="20"/>
+	<ingredient name="resourceMetalPipe" count="10"/>
+	<ingredient name="ulmResourceGlass" count="20"/>
+	<ingredient name="resourceAcid" count="5"/>
+	<ingredient name="toolBeaker" count="2"/></upgrade>
+
+<upgrade block="ulmStationTailor_1" next="ulmStationTailor_2">
+	<ingredient name="ulmResourceResearchArmor" count="500"/>
+	<ingredient name="ulmResourceAdvancedRepairKit"/>
+	<ingredient name="resourceForgedIron" count="100"/>
+	<ingredient name="resourceMetalPipe" count="10"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="75"/>
+	<ingredient name="resourceLeather" count="50"/>
+	<ingredient name="resourceSewingKit" count="20"/>
+	<ingredient name="toolAnvil"/>
+	<ingredient name="ulmResourceAdhesive" count="10"/></upgrade>
+
+</append>
+
+</Subquake>

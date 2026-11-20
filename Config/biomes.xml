@@ -1,0 +1,123 @@
+<Subquake>
+
+<insertBefore xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='default']">
+	<spectrum name="desert"/>
+</insertBefore>
+<insertBefore xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='default']">
+	<spectrum name="desert"/>
+</insertBefore>
+
+<!--<remove  xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather/ParticleEffect" />-->
+    
+<!--  No need for branches, all trees give them
+<append xpath="//biome[
+        @name='burnt_forest'
+        or @name='desert'
+        or @name='pine_forest'
+        or @name='wasteland'
+        or @name='snow'
+        or @name='wasteland_hub']/decorations">
+    <decoration type="block" blockname="ulmResourceBranch01" prob=".0005" rotatemax="3"/>
+    <decoration type="block" blockname="ulmResourceBranch02" prob=".0005" rotatemax="3"/>
+    <decoration type="block" blockname="ulmResourceBranch03" prob=".0005" rotatemax="3"/>
+    <decoration type="block" blockname="ulmResourceBranch04" prob=".00025" rotatemax="3"/>
+    <decoration type="block" blockname="ulmResourceBranch05" prob=".0005" rotatemax="3"/>
+    <decoration type="block" blockname="ulmResourceBranch06" prob=".0005" rotatemax="3"/>
+    <decoration type="block" blockname="ulmResourceBranch07" prob=".00025" rotatemax="3"/>
+    <decoration type="block" blockname="ulmResourceBranch08" prob=".00025" rotatemax="3"/>
+    <decoration type="block" blockname="ulmResourceBranch09" prob=".00025" rotatemax="3"/>
+    <decoration type="block" blockname="ulmResourceBranch10" prob=".00025" rotatemax="3"/>
+</append> -->
+
+<!-- Reducing grass density -->
+<set xpath="//decoration[@blockname='treeTallGrassDiagonal' and @prob='.5']/@prob">.1</set>
+<set xpath="//decoration[@blockname='treeTallGrassDiagonal' and @prob='.4']/@prob">.08</set>
+<set xpath="//decoration[@blockname='treeTallGrassDiagonal' and @prob='.35']/@prob">.07</set>
+<set xpath="//decoration[@blockname='treeSnowyGrassDiagonal' and @prob='.4']/@prob">.08</set>
+<set xpath="//decoration[@blockname='treeSnowyGrassDiagonal' and @prob='.1']/@prob">.02</set>
+	
+<!-- Add buses to spawn -->
+<!-- Desert Sub Biome -->
+<insertAfter xpath="//decoration[@blockname='carsRandomHelper' and @prob='.005']">
+	<decoration type="block" blockname="ulmVehicle3x4x12RandomHelper" prob="0.001" rotatemax="3"/>
+	<decoration type="block" blockname="ulmVehicleBikesFallenRandomHelper" prob="0.003" rotatemax="3"/>
+</insertAfter>
+<!-- Wasteland Sub Biome -->
+<insertAfter xpath="//decoration[@blockname='carsRandomHelper' and @prob='.003']">
+	<decoration type="block" blockname="ulmVehicle3x4x12RandomHelper" prob="0.001" rotatemax="3"/>
+	<decoration type="block" blockname="ulmVehicleBikesFallenRandomHelper" prob="0.004" rotatemax="3"/>
+</insertAfter>
+<!-- City Asphalt / Country Road Asphalt -->
+<insertAfter xpath="//blockontop[@blockname='carsRandomHelper' and @prob='.0015']">
+	<decoration type="block" blockname="ulmVehicle3x4x12RandomHelper" prob="0.0001" rotatemax="3"/>
+	<decoration type="block" blockname="ulmVehicleBikesFallenRandomHelper" prob="0.00025" rotatemax="3"/>
+</insertAfter>
+<!-- Road Gravel -->
+<insertAfter xpath="//blockontop[@blockname='carsRandomHelper' and @prob='.0005']">
+	<decoration type="block" blockname="ulmVehicle3x4x12RandomHelper" prob="0.00005" rotatemax="3"/>
+	<decoration type="block" blockname="ulmVehicleBikesFallenRandomHelper" prob="0.00025" rotatemax="3"/>
+</insertAfter>
+
+<!-- Increasing junk car density -->
+<remove xpath="//poi[@blockname='terrAsphalt']/blockontop[@blockname='carsRandomHelper']"/>
+<append xpath="//poi[@blockname='terrAsphalt']">
+	<blockontop blockname="ulmVehiclesGenericRandomHelper" prob="0.003" rotatemax="3"/>
+	<blockontop blockname="ulmVehiclesEmergencyRandomHelper" prob="0.0006" rotatemax="3"/>
+	<blockontop blockname="ulmVehicleBikesFallenRandomHelper" prob="0.0008" rotatemax="3"/>
+</append>
+<remove xpath="//poi[@blockname='terrGravel']/blockontop[@blockname='carsRandomHelper']"/>
+<append xpath="//poi[@blockname='terrGravel']">
+	<blockontop blockname="ulmVehiclesGenericRandomHelper" prob="0.001" rotatemax="3"/>
+	<blockontop blockname="ulmVehiclesEmergencyRandomHelper" prob="0.00025" rotatemax="3"/>
+	<blockontop blockname="ulmVehicleBikesFallenRandomHelper" prob="0.00025" rotatemax="3"/>
+</append>
+	
+<set xpath="//decoration[@blockname='carWrecksRandomHelper' and @prob='.0005']/@prob">0.004</set>
+<set xpath="//decoration[@blockname='carWrecksRandomHelper' and @prob='.001']/@prob">0.008</set>
+	
+<!-- Adds Titanium Ore in the world -->
+<append xpath="/worldgeneration/biomes/biome[@name='wasteland']">
+	<subbiome noise=".032, 0, .23" noiseoffset="5000, 555">
+		<layers>
+			<layer depth="2" blockname="terrDestroyedStone,terrDestroyedGrass,terrDestroyedGrass"/>
+			<layer depth="2" blockname="terrDirt"/>
+			<layer depth="1" blockname="terrStone">
+				<resource blockname="terrGravel" prob=".75" rwgGenerationType="all"/>
+			</layer>
+			<layer depth="*" blockname="terrStone">
+				<resource blockname="terrOreTitanium" prob="0.1" rwgGenerationType="all"/>
+				<resource blockname="terrOreIron" prob="0.55" rwgGenerationType="all"/>
+				<resource blockname="terrGravel" prob="0.783" rwgGenerationType="all"/>
+			</layer>
+			<layer depth="3" blockname="terrBedrock"/>
+		</layers>
+		<decorations>
+			<decoration type="prefab" name="deco_titanium_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
+			<decoration type="block" blockname="ulmVehiclesGenericRandomHelper" prob=".3" rotatemax="3"/>
+			<blockontop type="block" blockname="ulmVehiclesEmergencyRandomHelper" prob=".03" rotatemax="3"/>
+			<decoration type="block" blockname="cntBarrelWhiteSingle45" 		prob=".0001" rotatemax="3"/>
+			<decoration type="block" blockname="plantShrubDead" 				prob=".0001" rotatemax="7"/>
+			<decoration type="block" blockname="resourceRock01" 				prob=".00033" rotatemax="3"/>
+			<decoration type="block" blockname="resourceRock02" 				prob=".00033" rotatemax="3"/>
+			<decoration type="block" blockname="driftwood3" 					prob=".0005" rotatemax="7"/>
+			<decoration type="block" blockname="carsRandomHelper" 				prob=".003" rotatemax="3"/>
+			<decoration type="block" blockname="mushroomRadiated02" 			prob=".006"/>
+			<decoration type="block" blockname="mushroomRadiated04" 			prob=".006"/>
+			<decoration type="block" blockname="driftwood" 						prob=".001" rotatemax="7"/>
+			<decoration type="block" blockname="driftwood2" 					prob=".001" rotatemax="7"/>
+			<decoration type="block" blockname="rock01" 						prob=".01"/>
+			<decoration type="block" blockname="rock02" 						prob=".01"/>
+			<decoration type="block" blockname="treeBrownGrassDiagonal" 		prob=".5"/>
+			<decoration type="block" blockname="treeShortGrass" 				prob=".15"/>
+		</decorations>
+	</subbiome>
+</append>
+
+<!-- Removal of biome default hazard buffs -->
+<removeattribute  xpath="//biome[@name='pine_forest']/@buff"/> <!-- buffForest_Hazard -->
+<removeattribute  xpath="//biome[@name='burnt_forest']/@buff"/> <!-- buffBurnt_Hazard -->
+<removeattribute  xpath="//biome[@name='desert']/@buff"/> <!-- buffDesert_Hazard -->
+<removeattribute  xpath="//biome[@name='snow']/@buff"/> <!-- buffSnow_Hazard -->
+<removeattribute  xpath="//biome[@name='wasteland']/@buff"/> <!-- buffWasteland_Hazard -->
+    
+</Subquake>

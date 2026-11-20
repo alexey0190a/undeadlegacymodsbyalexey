@@ -1,0 +1,908 @@
+<Subquake>
+    
+<append xpath="/recipes">
+
+<!--
+	
+<recipe name="apparelArmyPants" time="30" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="25"/>
+	<ingredient name="ulmResourceMilitaryFiber"/>
+	<ingredient name="resourceSewingKit" count="3"/></recipe>
+
+<recipe name="apparelArmyShirt" time="30" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="25"/>
+	<ingredient name="ulmResourceMilitaryFiber"/>
+	<ingredient name="resourceSewingKit" count="3"/></recipe>
+
+<recipe name="apparelBallCap" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="4"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+	
+<recipe name="apparelBandana" time="20" area="ulmStationTailor_1">
+	<ingredient name="resourceCloth" count="4"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelCoatLeatherDuster" time="60" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceLeather" count="25"/>
+	<ingredient name="resourceSewingKit" count="3"/></recipe>
+
+<recipe name="apparelCoatLeatherPoncho" time="40" area="ulmStationTailor_1">
+	<ingredient name="resourceLeather" count="20"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelCoatPufferCoat" time="60" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="35"/>
+	<ingredient name="resourceFeather" count="50"/>
+	<ingredient name="resourceCropCottonPlant" count="35"/>
+	<ingredient name="resourceSewingKit" count="3"/></recipe>
+
+<recipe name="apparelCoatJacketLetterZU" time="60" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="20"/>
+	<ingredient name="resourcePaint" count="2"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelCowboyBoots" time="60" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceScrapPolymers" count="5"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelCowboyHat" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelDenimPants" time="30" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="25"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelDenimShortsPants" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="20"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelFlannelShirt" time="60" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="20"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelGhillieSuitHood" time="60" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceYuccaFibers" count="50"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelGhillieSuitJacket" time="60" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceYuccaFibers" count="50"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelGhillieSuitPants" time="60" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceYuccaFibers" count="50"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelOveralls" time="60" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="25"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelPlantFiberGloves" time="20" area="ulmStationTailor_1">
+	<ingredient name="resourceYuccaFibers" count="12"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelPlantFiberHat" time="20" area="ulmStationTailor_1">
+	<ingredient name="resourceYuccaFibers" count="18"/>
+	<ingredient name="resourceSewingKit" count="5"/></recipe>
+
+<recipe name="apparelPlantFiberHood" time="20" area="ulmStationTailor_1">
+	<ingredient name="resourceYuccaFibers" count="25"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelPlantFiberPants" time="20" area="ulmStationTailor_1">
+	<ingredient name="resourceYuccaFibers" count="40"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelPlantFiberShirt" time="20" area="ulmStationTailor_1">
+	<ingredient name="resourceYuccaFibers" count="30"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelPlantFiberShoes" time="20" area="ulmStationTailor_1">
+	<ingredient name="resourceYuccaFibers" count="18"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelRunningShoesRegular" time="60" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceScrapPolymers" count="5"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelSkirt" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="20"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelSkullCap" time="60" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="10"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelSuitDressShoes" time="60" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceScrapPolymers" count="5"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelSweatshirt" time="60" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="25"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelTankTop" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="25"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelTShirtPlain" time="30" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="25"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="apparelWornBoots" time="60" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceScrapPolymers" count="5"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceSewingKit"/></recipe>
+
+<recipe name="armorFirefightersHelmet" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceForgedIron" count="20"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorIronBoots" time="25" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceForgedIron" count="20"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorIronChest" time="25" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceForgedIron" count="20"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorIronGloves" time="25" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceForgedIron" count="20"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorIronHelmet" time="25" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceForgedIron" count="20"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorIronLegs" time="25" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceForgedIron" count="20"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorLeatherBoots" time="15" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceLeather" count="10"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorLeatherChest" time="15" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceLeather" count="10"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorLeatherGloves" time="15" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceLeather" count="10"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorLeatherHood" time="15" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceLeather" count="10"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorLeatherPants" time="15" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceLeather" count="10"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorMilitaryBoots" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="armorMilitarySetParts" count="5"/>
+	<ingredient name="ulmResourceMilitaryFiber"/>
+	<ingredient name="resourceScrapPolymers" count="2"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorMilitaryStealthBoots" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="armorMilitarySetParts" count="5"/>
+	<ingredient name="ulmResourceMilitaryFiber"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorMilitaryGloves" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="armorMilitarySetParts" count="5"/>
+	<ingredient name="ulmResourceMilitaryFiber"/>
+	<ingredient name="resourceScrapPolymers" count="2"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorMilitaryHelmet" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="armorMilitarySetParts" count="5"/>
+	<ingredient name="ulmResourceMilitaryFiber"/>
+	<ingredient name="resourceScrapPolymers" count="2"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorMilitaryLegs" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="armorMilitarySetParts" count="5"/>
+	<ingredient name="ulmResourceMilitaryFiber"/>
+	<ingredient name="resourceScrapPolymers" count="2"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorMilitaryVest" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="armorMilitarySetParts" count="5"/>
+	<ingredient name="ulmResourceMilitaryFiber"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorMiningHelmet" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceScrapPolymers" count="20"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorScrapBoots" time="20" area="ulmStationTailor_1">
+	<ingredient name="resourceScrapIron" count="50"/>
+	<ingredient name="resourceLeather" count="2"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorScrapChest" time="20" area="ulmStationTailor_1">
+	<ingredient name="resourceScrapIron" count="50"/>
+	<ingredient name="resourceLeather" count="2"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorScrapGloves" time="20" area="ulmStationTailor_1">
+	<ingredient name="resourceScrapIron" count="50"/>
+	<ingredient name="resourceLeather" count="2"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorScrapHelmet" time="20" area="ulmStationTailor_1">
+	<ingredient name="resourceScrapIron" count="50"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorScrapLegs" time="20" area="ulmStationTailor_1">
+	<ingredient name="resourceScrapIron" count="50"/>
+	<ingredient name="resourceLeather" count="2"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorSteelBoots" time="30" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceForgedSteel" count="20"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="40"/>
+	<ingredient name="resourceLeather" count="10"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="resourceDuctTape" count="4"/></recipe>
+
+<recipe name="armorSteelChest" time="30" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceForgedSteel" count="20"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="80"/>
+	<ingredient name="resourceLeather" count="20"/>
+	<ingredient name="resourceDuctTape" count="6"/>
+	<ingredient name="resourceSewingKit" count="4"/></recipe>
+
+<recipe name="armorSteelGloves" time="30" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceForgedSteel" count="20"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="40"/>
+	<ingredient name="resourceLeather" count="10"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+<recipe name="armorSteelHelmet" time="30" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceForgedSteel" count="20"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="40"/>
+	<ingredient name="resourceLeather" count="10"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+<recipe name="armorSteelLegs" time="30" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceForgedSteel" count="20"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="60"/>
+	<ingredient name="resourceLeather" count="10"/>
+	<ingredient name="resourceSewingKit" count="4"/>
+	<ingredient name="resourceDuctTape" count="8"/></recipe>
+-->
+
+<recipe name="armorPrimitiveHelmet" time="10" always_unlocked="true">
+	<ingredient name="resourceCloth" count="10"/>
+	<ingredient name="ulmResourceBranch" count="10"/>
+	<ingredient name="ulmResourceRope" count="2"/>
+	<ingredient name="resourceYuccaFibers" count="10"/>
+	<ingredient name="ulmResourceResin" count="6"/></recipe>
+
+<recipe name="armorPrimitiveOutfit" time="10" always_unlocked="true">
+	<ingredient name="resourceCloth" count="20"/>
+	<ingredient name="ulmResourceBranch" count="10"/>
+	<ingredient name="ulmResourceRope" count="2"/>
+	<ingredient name="resourceYuccaFibers" count="30"/>
+	<ingredient name="ulmResourceResin" count="12"/></recipe>
+
+<recipe name="armorPrimitiveGloves" time="10" always_unlocked="true">
+	<ingredient name="resourceCloth" count="10"/>
+	<ingredient name="ulmResourceBranch" count="10"/>
+	<ingredient name="ulmResourceRope" count="2"/>
+	<ingredient name="resourceYuccaFibers" count="10"/>
+	<ingredient name="ulmResourceResin" count="4"/></recipe>
+
+<recipe name="armorPrimitiveBoots" time="10" always_unlocked="true">
+	<ingredient name="resourceCloth" count="10"/>
+	<ingredient name="ulmResourceBranch" count="10"/>
+	<ingredient name="ulmResourceRope" count="2"/>
+	<ingredient name="resourceYuccaFibers" count="10"/>
+	<ingredient name="ulmResourceResin" count="4"/></recipe>
+
+<recipe name="ulmBackpackPrimitive" time="10" tags="learnable">
+	<ingredient name="resourceCloth" count="20"/>
+	<ingredient name="ulmResourceRope" count="3"/>
+	<ingredient name="resourceYuccaFibers" count="20"/>
+	<ingredient name="ulmResourceResin" count="5"/></recipe>
+
+<recipe name="armorFarmerHelmet" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="5"/>
+	<ingredient name="resourceYuccaFibers" count="75"/>
+	<ingredient name="ulmResourceRope"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorFarmerOutfit" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="30"/>
+	<ingredient name="resourceScrapIron" count="20"/>
+	<ingredient name="resourceSewingKit" count="1"/>
+	<ingredient name="resourceDuctTape" count="4"/></recipe>
+
+<recipe name="armorFarmerGloves" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="35"/>
+	<ingredient name="resourceLeather" count="10"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorFarmerBoots" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="5"/>
+	<ingredient name="resourceLeather" count="25"/>
+	<ingredient name="resourceScrapIron" count="20"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+
+<recipe name="armorAthleticHelmet" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="25"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourcePaper" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorAthleticOutfit" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="40"/>
+	<ingredient name="resourceScrapPolymers" count="25"/>
+	<ingredient name="resourceForgedIron" count="2"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="resourceDuctTape" count="5"/></recipe>
+
+<recipe name="armorAthleticGloves" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="35"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorAthleticBoots" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="10"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceLeather" count="20"/>
+	<ingredient name="resourceForgedIron" count="2"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+
+<recipe name="armorLumberjackHelmet" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="25"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="ulmResourceGlass" count="2"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorLumberjackOutfit" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="75"/>
+	<ingredient name="resourceForgedIron" count="2"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="resourceDuctTape" count="5"/></recipe>
+
+<recipe name="armorLumberjackGloves" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="35"/>
+	<ingredient name="resourceLeather" count="10"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorLumberjackBoots" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="5"/>
+	<ingredient name="resourceLeather" count="25"/>
+	<ingredient name="resourceForgedIron" count="2"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+
+<recipe name="armorEnforcerHelmet" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceScrapPolymers" count="20"/>
+	<ingredient name="ulmResourceGlass" count="2"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="4"/>
+	<ingredient name="resourceDuctTape"/>
+	<ingredient name="modDyeBlack"/></recipe>
+
+<recipe name="armorEnforcerOutfit" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="120"/>
+	<ingredient name="resourceLeather" count="50"/>
+	<ingredient name="resourceSewingKit" count="5"/>
+	<ingredient name="resourceForgedSteel" count="10"/>
+	<ingredient name="resourceDuctTape" count="4"/></recipe>
+
+<recipe name="armorEnforcerGloves" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="5"/>
+	<ingredient name="resourceLeather" count="20"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorEnforcerBoots" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="4"/>
+	<ingredient name="resourceLeather" count="30"/>
+	<ingredient name="resourceForgedSteel" count="2"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+
+<recipe name="armorPreacherHelmet" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="30"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="20"/>
+	<ingredient name="ulmResourceGlass" count="2"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="4"/>
+	<ingredient name="resourceForgedSteel" count="5"/>
+	<ingredient name="resourceDuctTape"/>
+	<ingredient name="modDyeOrange"/></recipe>
+
+<recipe name="armorPreacherOutfit" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="100"/>
+	<ingredient name="resourceLeather" count="125"/>
+	<ingredient name="resourceSewingKit" count="5"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceForgedSteel" count="10"/>
+	<ingredient name="ulmResourceBook" count="5"/>
+	<ingredient name="ulmResourceIngotGold"/></recipe>
+
+<recipe name="armorPreacherGloves" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="5"/>
+	<ingredient name="resourceLeather" count="20"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorPreacherBoots" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="30"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+	<ingredient name="resourceForgedSteel" count="2"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+
+<recipe name="armorNerdHelmet" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="35"/>
+	<ingredient name="resourceScrapPolymers" count="20"/>
+	<ingredient name="resourcePaper" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+<recipe name="armorNerdOutfit" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="50"/>
+	<ingredient name="resourceLeather" count="10"/>
+	<ingredient name="resourceScrapIron" count="100"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="20"/>
+	<ingredient name="ulmResourceRope" count="5"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="resourceDuctTape" count="5"/></recipe>
+
+<recipe name="armorNerdGloves" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="40"/>
+	<ingredient name="resourceLeather" count="20"/>
+	<ingredient name="resourceScrapIron" count="20"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorNerdBoots" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="40"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceScrapIron" count="10"/>
+	<ingredient name="resourceScrapPolymers" count="14"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="armorMinerHelmet" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="10"/>
+	<ingredient name="ulmResourceScrapRubber" count="20"/>
+	<ingredient name="resourceScrapPolymers" count="50"/>
+	<ingredient name="ulmResourceGlass"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="20"/>
+	<ingredient name="ulmResourceScrapWires" count="5"/>
+	<ingredient name="ulmResourceRope" count="2"/>
+	<ingredient name="resourceDuctTape" count="5"/></recipe>
+
+<recipe name="armorMinerOutfit" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="50"/>
+	<ingredient name="ulmResourceScrapRubber" count="30"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceScrapIron" count="125"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="40"/>
+	<ingredient name="ulmResourceRope" count="5"/>
+	<ingredient name="resourceSewingKit" count="3"/>
+	<ingredient name="resourceDuctTape" count="7"/></recipe>
+
+<recipe name="armorMinerGloves" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="50"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceScrapIron" count="20"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="10"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+<recipe name="armorMinerBoots" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="10"/>
+	<ingredient name="resourceLeather" count="30"/>
+	<ingredient name="resourceScrapIron" count="30"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+
+<recipe name="armorScavengerHelmet" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="25"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourcePaper" count="5"/>
+	<ingredient name="ulmResourceGlass" count="2"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+<recipe name="armorScavengerOutfit" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="125"/>
+	<ingredient name="resourceScrapPolymers" count="30"/>
+	<ingredient name="resourceLeather" count="20"/>
+	<ingredient name="resourceScrapIron" count="50"/>
+	<ingredient name="ulmResourceRope" count="5"/>
+	<ingredient name="resourceSewingKit" count="5"/>
+	<ingredient name="resourceDuctTape" count="5"/></recipe>
+
+<recipe name="armorScavengerGloves" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="50"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceScrapIron" count="20"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+<recipe name="armorScavengerBoots" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="50"/>
+	<ingredient name="resourceLeather" count="20"/>
+	<ingredient name="resourceScrapIron" count="30"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+
+<recipe name="armorRogueHelmet" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="50"/>
+	<ingredient name="resourceLeather" count="5"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceForgedIron" count="2"/>
+	<ingredient name="ulmResourceRope"/></recipe>
+
+<recipe name="armorRogueOutfit" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="150"/>
+	<ingredient name="resourceLeather" count="30"/>
+	<ingredient name="resourceScrapPolymers" count="20"/>
+	<ingredient name="resourceForgedIron" count="10"/>
+	<ingredient name="ulmResourceRope" count="2"/>
+	<ingredient name="resourceSewingKit" count="5"/>
+	<ingredient name="resourceDuctTape" count="5"/></recipe>
+
+<recipe name="armorRogueGloves" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="50"/>
+	<ingredient name="resourceLeather" count="15"/>
+	<ingredient name="resourceForgedIron" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+<recipe name="armorRogueBoots" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="50"/>
+	<ingredient name="resourceLeather" count="20"/>
+	<ingredient name="resourceForgedIron" count="4"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+
+<recipe name="armorCommandoHelmet" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="25"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourcePaper" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="ulmResourceGlass" count="2"/>
+	<ingredient name="resourceForgedSteel" count="5"/>
+	<ingredient name="ulmResourceScrapWires" count="4"/>
+	<ingredient name="ulmResourceElectronicCircuitboard" count="2"/></recipe>
+
+<recipe name="armorCommandoOutfit" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="125"/>
+	<ingredient name="resourceLeather" count="50"/>
+	<ingredient name="resourceScrapPolymers" count="30"/>
+	<ingredient name="resourceForgedSteel" count="20"/>
+	<ingredient name="ulmResourceAdhesive" count="4"/>
+	<ingredient name="resourceSewingKit" count="5"/>
+	<ingredient name="resourceDuctTape" count="6"/></recipe>
+
+<recipe name="armorCommandoGloves" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="50"/>
+	<ingredient name="resourceLeather" count="15"/>
+	<ingredient name="resourceForgedSteel" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+<recipe name="armorCommandoBoots" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="30"/>
+	<ingredient name="resourceLeather" count="30"/>
+	<ingredient name="resourceForgedSteel" count="4"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+
+<recipe name="armorRangerHelmet" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="10"/>
+	<ingredient name="resourceLeather" count="60"/>
+	<ingredient name="resourcePaper" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+<recipe name="armorRangerOutfit" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="120"/>
+	<ingredient name="resourceLeather" count="60"/>
+	<ingredient name="resourceScrapPolymers" count="40"/>
+	<ingredient name="resourceScrapIron" count="80"/>
+	<ingredient name="resourceSewingKit" count="4"/>
+	<ingredient name="resourceDuctTape" count="8"/>
+	<ingredient name="ulmResourceRope" count="2"/></recipe>
+
+<recipe name="armorRangerGloves" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="25"/>
+	<ingredient name="resourceLeather" count="25"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+<recipe name="armorRangerBoots" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="30"/>
+	<ingredient name="resourceLeather" count="30"/>
+	<ingredient name="resourceScrapIron" count="20"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+
+<recipe name="armorBikerHelmet" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="20"/>
+	<ingredient name="resourceLeather" count="4"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceScrapIron" count="60"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="20"/>
+	<ingredient name="ulmResourceGlass" count="2"/>
+	<ingredient name="ulmResourceAdhesive" count="2"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="4"/></recipe>
+
+<recipe name="armorBikerOutfit" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="80"/>
+	<ingredient name="resourceLeather" count="80"/>
+	<ingredient name="resourceScrapPolymers" count="40"/>
+	<ingredient name="ulmResourceScrapRubber" count="40"/>
+	<ingredient name="resourceScrapIron" count="120"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="60"/>
+	<ingredient name="resourceSewingKit" count="4"/>
+	<ingredient name="resourceDuctTape" count="8"/>
+	<ingredient name="ulmResourceAdhesive" count="2"/>
+	<ingredient name="ulmResourceRope" count="2"/></recipe>
+
+<recipe name="armorBikerGloves" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="30"/>
+	<ingredient name="resourceLeather" count="30"/>
+	<ingredient name="resourceScrapIron" count="30"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="4"/></recipe>
+
+<recipe name="armorBikerBoots" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceCloth" count="30"/>
+	<ingredient name="resourceLeather" count="30"/>
+	<ingredient name="resourceScrapIron" count="40"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+
+<recipe name="armorRaiderHelmet" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="40"/>
+	<ingredient name="resourceForgedIron" count="20"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="40"/>
+	<ingredient name="ulmResourceAdhesive" count="2"/>
+	<ingredient name="ulmResourceRope" count="2"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="8"/></recipe>
+
+<recipe name="armorRaiderOutfit" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="100"/>
+	<ingredient name="resourceLeather" count="20"/>
+	<ingredient name="resourceForgedIron" count="50"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="200"/>
+	<ingredient name="resourceSewingKit" count="4"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="ulmResourceAdhesive" count="4"/>
+	<ingredient name="ulmResourceRope" count="4"/></recipe>
+
+<recipe name="armorRaiderGloves" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="30"/>
+	<ingredient name="resourceLeather" count="30"/>
+	<ingredient name="resourceForgedIron" count="10"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="ulmResourceAdhesive" count="2"/>
+	<ingredient name="resourceDuctTape" count="4"/></recipe>
+
+<recipe name="armorRaiderBoots" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="30"/>
+	<ingredient name="resourceLeather" count="30"/>
+	<ingredient name="resourceForgedIron" count="15"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="ulmResourceAdhesive"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+
+<recipe name="armorAssassinHelmet" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="60"/>
+	<ingredient name="resourceLeather" count="30"/>
+	<ingredient name="resourceForgedSteel" count="20"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="ulmResourceGlass" count="2"/>
+	<ingredient name="ulmResourceRope" count="2"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="8"/></recipe>
+
+<recipe name="armorAssassinOutfit" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="120"/>
+	<ingredient name="resourceLeather" count="40"/>
+	<ingredient name="resourceForgedSteel" count="60"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="100"/>
+	<ingredient name="resourceSewingKit" count="6"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="ulmResourceAdhesive" count="4"/>
+	<ingredient name="ulmResourceRope" count="4"/></recipe>
+
+<recipe name="armorAssassinGloves" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="30"/>
+	<ingredient name="resourceLeather" count="30"/>
+	<ingredient name="resourceForgedSteel" count="10"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="ulmResourceAdhesive" count="2"/>
+	<ingredient name="resourceDuctTape" count="4"/></recipe>
+
+<recipe name="armorAssassinBoots" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="30"/>
+	<ingredient name="resourceLeather" count="30"/>
+	<ingredient name="resourceForgedSteel" count="15"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="ulmResourceAdhesive"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+
+<recipe name="armorNomadHelmet" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="50"/>
+	<ingredient name="ulmResourceMilitaryFiber" count="20"/>
+	<ingredient name="ulmResourceForgedTitanium" count="20"/>
+	<ingredient name="ulmResourceScrapRubber" count="20"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="ulmResourceGlass" count="4"/>
+	<ingredient name="ulmResourceRope" count="2"/>
+	<ingredient name="resourceSewingKit"/>
+	<ingredient name="resourceDuctTape" count="8"/></recipe>
+
+<recipe name="armorNomadOutfit" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="200"/>
+	<ingredient name="ulmResourceMilitaryFiber" count="20"/>
+	<ingredient name="ulmResourceForgedTitanium" count="60"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="100"/>
+	<ingredient name="ulmResourceAdhesive" count="4"/>
+	<ingredient name="resourceSewingKit" count="6"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="ulmResourceRope" count="4"/></recipe>
+
+<recipe name="armorNomadGloves" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="50"/>
+	<ingredient name="ulmResourceMilitaryFiber" count="20"/>
+	<ingredient name="ulmResourceForgedTitanium" count="15"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="ulmResourceAdhesive" count="2"/>
+	<ingredient name="resourceDuctTape" count="4"/></recipe>
+
+<recipe name="armorNomadBoots" time="10" area="ulmStationTailor_2" tags="learnable">
+	<ingredient name="resourceCloth" count="50"/>
+	<ingredient name="resourceLeather" count="20"/>
+	<ingredient name="ulmResourceMilitaryFiber" count="10"/>
+	<ingredient name="ulmResourceForgedTitanium" count="30"/>
+	<ingredient name="ulmResourceAdhesive" count="2"/>
+	<ingredient name="resourceSewingKit" count="2"/>
+	<ingredient name="resourceDuctTape" count="2"/></recipe>
+
+<!-- 
+
+	Face Wear
+
+-->
+
+<recipe name="ulmFacewearRespiratorMask" time="10" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceScrapIron" count="10"/>
+	<ingredient name="ulmResourceScrapRubber" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="4"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceGlue"/></recipe>
+
+<recipe name="ulmFacewearGP5GasMaskGrey" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="ulmResourceScrapCopper" count="5"/>
+	<ingredient name="resourceLeather" count="10"/>
+	<ingredient name="ulmResourceScrapRubber" count="10"/>
+	<ingredient name="ulmResourceGlass" count="4"/>
+	<ingredient name="ulmResourceAdhesive"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="ulmFacewearFFLGasMask" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceForgedIron" count="5"/>
+	<ingredient name="resourceLeather" count="16"/>
+	<ingredient name="ulmResourceScrapRubber" count="8"/>
+	<ingredient name="ulmResourceGlass" count="6"/>
+	<ingredient name="ulmResourceAdhesive"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="ulmFacewearFFVGasMask" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceForgedSteel" count="5"/>
+	<ingredient name="resourceLeather" count="16"/>
+	<ingredient name="ulmResourceScrapRubber" count="8"/>
+	<ingredient name="ulmResourceGlass" count="10"/>
+	<ingredient name="ulmResourceAdhesive"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="ulmFacewearM42WardenGasMask" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="resourceForgedSteel" count="10"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="20"/>
+	<ingredient name="ulmResourceScrapRubber" count="8"/>
+	<ingredient name="ulmResourceGlass" count="8"/>
+	<ingredient name="ulmResourceAdhesive" count="2"/>
+	<ingredient name="resourceDuctTape"/></recipe>
+
+<recipe name="ulmFacewearX90PredatorGasMask" time="20" area="ulmStationTailor_1" tags="learnable">
+	<ingredient name="ulmResourceForgedTitanium" count="10"/>
+	<ingredient name="ulmResourceNutsAndBolts" count="30"/>
+	<ingredient name="ulmResourceScrapRubber" count="8"/>
+	<ingredient name="ulmResourceGlass" count="4"/>
+	<ingredient name="ulmResourceMilitaryFiber" count="5"/>
+	<ingredient name="ulmResourceAdhesive" count="4"/>
+	<ingredient name="resourceAcid" count="4"/></recipe>
+
+</append>
+
+</Subquake>

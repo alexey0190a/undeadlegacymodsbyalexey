@@ -1,0 +1,1785 @@
+<Subquake>
+
+<set xpath="/blocks/block[@name='plantHedge']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Foliage,Vegetation,Outdoor,Blocks"/>
+	<property name="IndexName" value="quest_branch"/>
+	<property name="Tags" value="wood,branch"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/plantHedgePrefab.prefab"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Collide" value="movement,melee"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="Material" value="MleavesStable"/>
+	<property name="EconomicValue" value="10"/><property name="CarryWeight" value="1"/>
+	<drop event="Harvest" name="ulmResourceBranch" count="2,6" tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="resourceYuccaFibers" count="1,3" tag="allHarvest,woodHarvest"/>
+	<drop event="Fall" count="0" prob="0"/>
+	<drop event="Destroy" count="0"/></set>
+	
+<set xpath="/blocks/block[@name='plantHedgeSnow']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHedge"/>
+	<property name="Model" value="@:Entities/Plants/plantHedgeSnowPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantHedgeDead']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHedge"/>
+	<property name="Model" value="@:Entities/Plants/plantHedgeDeadPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantHedgeRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="plantHedge"/>
+	<property name="PlantGrowing.FertileLevel" value="0"/>
+	<property name="DescriptionKey" value="treeRandomHelperGroupDesc"/>
+	<property name="CustomIcon" value="plantHedge"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+
+<set xpath="/blocks/block[@name='plantShrub']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHedge"/>
+	<property name="Model" value="@:Entities/Plants/plantShrubPrefab.prefab"/>
+	<property name="Collide" value="melee"/>
+	<property name="Tags" value="wood,branch,twitchReplace"/></set>
+	
+<set xpath="/blocks/block[@name='plantShrubSnow']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantShrub"/>
+	<property name="Model" value="@:Entities/Plants/plantShrubSnowPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantShrubDead']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantShrub"/>
+	<property name="Model" value="@:Entities/Plants/plantShrubDeadPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantShrubRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="plantShrub"/>
+	<property name="PlantGrowing.FertileLevel" value="0"/>
+	<property name="DescriptionKey" value="treeRandomHelperGroupDesc"/>
+	<property name="CustomIcon" value="plantShrub"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+	
+<set xpath="/blocks/block[@name='treeMaster']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Tags" value="wood"/>
+	<property name="BlockTag" value="TreeTrunk"/>
+	<property name="Group" value="Trees,Outdoor,Blocks"/>
+	<property name="Class" value="ModelTree"/>
+	<property name="IsPlant" value="true"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="IndexName" value="quest_wood_trees"/>
+	<property name="DescriptionKey" value="plantsBlockGroupDesc"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Shape" value="DistantDecoTree"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/MountainPineLrg01/MountainPineLrg01GimbalPrefab.prefab"/>
+	<property name="Texture" value="116"/>
+	<property name="ImposterExclude" value="true"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="LightOpacity" value="0"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsDistantDecoration" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="ActivationDistance" value="12"/>
+	<property name="Material" value="MtreeWoodSmall"/>
+	<property name="EconomicValue" value="3"/><property name="CarryWeight" value="0.01"/>
+	<drop event="Harvest" name="ulmResourceHoney" prob=".05" count="1,3" tag="WasteTreasuresHoneyHarvest"/>
+	<drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+	<drop event="Destroy" count="0"/></set>
+	
+<set xpath="/blocks/block[@name='treeMasterGrowing']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="PlantGrowing.Next" value="treePlantedMountainPine19m"/>
+	<property name="PlantGrowing.GrowthRate" value="63"/>
+	<property name="PlantGrowing.IsRandom" value="false"/>
+	<property name="PlantGrowing.FertileLevel" value="1"/>
+	<property name="DescriptionKey" value="devOnlyGroupDesc"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="EconomicValue" value="3"/></set>
+	
+<set xpath="/blocks/block[@name='treeGrassMaster']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Vegetation,Outdoor,Blocks"/>
+	<property name="Class" value="Deadgrass"/>
+	<property name="HarvestOverdamage" value="false"/>
+	<property name="CustomIcon" value="treeForestGrassDiagonal"/>
+	<property name="DescriptionKey" value="plantsBlockGroupDesc"/>
+	<property name="Shape" value="Grass"/>
+	<property name="Mesh" value="grass"/>
+	<property name="Texture" value="350,368,369,370,350,368"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Collide" value="melee"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Material" value="Mtallgrass"/><property name="CarryWeight" value="0.01"/>
+	<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+	<property name="Tags" value="twitchReplace,grass"/>
+	<property name="FilterTags" value="MC_outdoor,SC_crops"/></set>
+	
+<set xpath="/blocks/block[@name='treeSnowyGrassDiagonal']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Foliage,Vegetation,Outdoor,Blocks"/>
+	<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/></set>
+	
+<set xpath="/blocks/block[@name='treeBrownGrassDiagonal']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Foliage,Vegetation,Outdoor,Blocks"/>
+	<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+	<property name="Texture" value="201,306,371,201,306,371"/></set>
+	
+<set xpath="/blocks/block[@name='treeTallGrassDiagonal']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Foliage,Vegetation,Outdoor,Blocks"/>
+	<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+	<property name="Class" value="Tallgrass"/>
+	<property name="Texture" value="39,40,364,365,39,364"/></set>
+	
+<set xpath="/blocks/block[@name='treeShortGrass']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Foliage,Vegetation,Outdoor,Blocks"/>
+	<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+	<property name="Class" value="Tallgrass"/>
+	<property name="Shape" value="GrassShort"/>
+	<property name="Texture" value="573,573,573,573,573,573"/>
+	<property name="SlopeMax" value="28"/></set>
+	
+<set xpath="/blocks/block[@name='treeDesertShrub']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Foliage,Vegetation,Outdoor,Blocks"/>
+	<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+	<property name="Texture" value="377"/></set>
+	
+<set xpath="/blocks/block[@name='treeForestGrassDiagonal']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Foliage,Vegetation,Outdoor,Blocks"/>
+	<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+	<property name="Class" value="Tallgrass"/>
+	<property name="Texture" value="561,562,563,564,565,563"/></set>
+	
+<set xpath="/blocks/block[@name='treeGreenBrownGrassDiagonal']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Foliage,Vegetation,Outdoor,Blocks"/>
+	<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+	<property name="Texture" value="306"/></set>
+	
+<set xpath="/blocks/block[@name='forestFlower']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Foliage,Vegetation,Outdoor,Blocks"/>
+	<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+	<property name="Class" value="Tallgrass"/>
+	<property name="Texture" value="567"/></set>
+	
+<set xpath="/blocks/block[@name='plantedtreeGrassAirRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Foliage,Vegetation,Outdoor,Blocks"/>
+	<property name="PlaceAltBlockMode" value="Dev"/>
+	<property name="Extends" value="treeForestGrassDiagonal"/>
+	<property name="CustomIcon" value="treeForestGrassDiagonal"/>
+	<property name="CustomIconTint" value="FF00FF"/>
+	<property name="ItemTypeIcon" value="random_helper"/></set>
+	
+<set xpath="/blocks/block[@name='treePlantedOak1m']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Trees,Seeds,Outdoor,Blocks,Player"/>
+	<property name="Tags" value="seed"/>
+	<property name="Extends" value="treeMasterGrowing" param1="CustomIcon"/>
+	<property name="FallOver" value="false"/>
+	<property name="PlaceAsRandomRotation" value="true"/>
+	<property name="PlantGrowing.Next" value="treePlantedOak08m"/>
+	<property name="DescriptionKey" value="treePlantedSeed1mDesc"/>
+	<property name="Model" value="#Entities/Trees?OakSeed01Prefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.2,0"/>
+	<property name="ParticleOnDeath" value="treeGib_sapling"/>
+	<property name="Collide" value="melee"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="ActivationDistance" value="4"/>
+	<property name="Material" value="Mplants"/><property name="MaxDamage" value="10"/>
+	<property name="EconomicValue" value="3"/><property name="CarryWeight" value="0.01"/>
+	<property name="SellableToTrader" value="false"/>
+	<dropextendsoff/>
+	<drop event="Destroy" name="treePlantedOak1m" count="1"/>
+	<property name="SoundPickup" value="seeds_acorn_grab"/>
+	<property name="SoundPlace" value="seeds_acorn_place"/></set>
+
+<set xpath="/blocks/block[@name='treePlantedMountainPine1m']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Trees,Seeds,Outdoor,Blocks,Player"/>
+	<property name="Tags" value="seed"/>
+	<property name="Extends" value="treeMasterGrowing" param1="CustomIcon"/>
+	<property name="PlaceAsRandomRotation" value="true"/>
+	<property name="PlantGrowing.Next" value="treePlantedMountainPine12m"/>
+	<property name="FallOver" value="false"/>
+	<property name="DescriptionKey" value="treePlantedSeed1mDesc"/>
+	<property name="Model" value="#Entities/Trees?MountainPineSeed01Prefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.2,0"/>
+	<property name="Collide" value="melee"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_sapling"/>
+	<property name="ActivationDistance" value="4"/>
+	<property name="SoundPickup" value="seeds_cone_grab"/>
+	<property name="SoundPlace" value="seeds_cone_place"/>
+	<property name="Material" value="Mplants"/><property name="MaxDamage" value="10"/>
+	<property name="EconomicValue" value="3"/><property name="CarryWeight" value="0.01"/>
+	<property name="SellableToTrader" value="false"/>
+	<dropextendsoff/>
+	<drop event="Destroy" name="treePlantedMountainPine1m" count="1"/></set>
+	
+<set xpath="/blocks/block[@name='treePlantedWinterPine1m']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="treePlantedMountainPine1m"/>
+	<property name="PlantGrowing.Next" value="treePlantedWinterPine6m"/>
+	<property name="CustomIcon" value="treePlantedMountainPine1m"/>
+	<property name="CustomIconTint" value="b0b0ff"/>
+	<property name="SoundPickup" value="seeds_cone_grab"/>
+	<property name="SoundPlace" value="seeds_cone_place"/></set>
+	
+<set xpath="/blocks/block[@name='driftwood']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Trees,Decor,Outdoor,Blocks"/>
+	<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
+	<property name="Material" value="Mwood_weak"/>
+	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/driftwood_01Prefab.prefab"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="VehicleHitScale" value="999"/>
+	<property name="Material" value="Mwood_weak"/><property name="CarryWeight" value="0.5"/>
+	<drop event="Harvest" name="ulmResourceFirewood" count="2,4" tag="woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceScrapWood" count="1,4" tag="woodHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m" count="1" prob="0.03"/></set>
+	
+<set xpath="/blocks/block[@name='driftwood2']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="driftwood"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/driftwood_02Prefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='driftwood3']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="driftwood"/>
+	<property name="Model" value="@:Entities/OutdoorDecor/driftwood_03Prefab.prefab"/></set>
+
+<set xpath="/blocks/block[@name='treeDeadTree01']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Trees,Vegetation,Outdoor,Blocks"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/White_Oak22/White_Oak22GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.3,0"/>
+	<property name="MultiBlockDim" value="1,4,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="ParticleOnDeath" value="treeGib_dead_01"/>
+	<property name="MaxDamage" value="500"/><property name="CarryWeight" value="0.5"/>
+	<drop event="Harvest" name="ulmResourceBranch" count="1,2" tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber" count="2,3"	tag="allHarvest,woodHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='treeDeadTree02']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Trees,Vegetation,Outdoor,Blocks"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Haunted_Shrub_Wasteland/Haunted_Shrub_WastelandGimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.3,0"/>
+	<property name="Collide" value="melee,rocket"/>
+	<property name="ParticleOnDeath" value="treeGib_dead_02"/>
+	<property name="MaxDamage" value="500"/><property name="CarryWeight" value="0.5"/>
+	<drop event="Harvest" name="ulmResourceBranch" count="1,2" tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber" count="1,2"	tag="allHarvest,woodHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='treeDeadPineLeaf']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Foliage,Vegetation,Outdoor,Blocks"/>
+	<property name="TrackerIndexName" value="quest_branch"/>
+	<property name="Tags" value="grass"/>
+	<property name="Shape" value="BillboardPlant"/><property name="Mesh" value="grass"/><property name="Texture" value="177"/>
+	<property name="CanDecorateOnSlopes" value="true"/><property name="Collide" value="melee"/><property name="IndexName" value="quest_wood"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="Material" value="Mleaves"/><property name="CarryWeight" value="0.25"/>
+	<drop event="Harvest" name="ulmResourceBranch" count="1,4" tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" count="0"/></set>
+	
+<set xpath="/blocks/block[@name='treeSnowyDeadBush']">
+	<property name="CreativeMode" value="None"/>
+	<property name="TrackerIndexName" value="quest_branch"/>
+	<property name="Group" value="Foliage,Vegetation,Outdoor,Blocks"/>
+	<property name="Shape" value="BillboardPlant"/><property name="Mesh" value="grass"/><property name="Texture" value="351"/>
+	<property name="CanDecorateOnSlopes" value="true"/><property name="Collide" value="melee"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="Material" value="Mleaves"/><property name="CarryWeight" value="0.25"/>
+	<drop event="Harvest" name="ulmResourceBranch" count="1,4" tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" count="0"/></set>
+	
+<set xpath="/blocks/block[@name='treeAzalea']">
+	<property name="CreativeMode" value="None"/>
+	<property name="BlockTag" value="TreeTrunk"/>
+	<property name="TrackerIndexName" value="quest_branch"/>
+	<property name="Tags" value="wood,branch"/>
+	<property name="Group" value="Foliage,Vegetation,Outdoor,Blocks"/>
+	<property name="Class" value="Plant"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#Entities/Trees?AzaleaPrefab.prefab"/>
+	<property name="ImposterDontBlock" value="true"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="IsTerrainDecoration" value="true"/><property name="Collide" value="melee"/>
+	<property name="Material" value="Mleaves"/>
+	<property name="EconomicValue" value="20"/><property name="CarryWeight" value="0.25"/>
+	<drop event="Harvest" name="ulmResourceBranch" count="2,6" tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="resourceYuccaFibers" count="1,3" tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" count="0"/></set>
+	
+<set xpath="/blocks/block[@name='treePlainsTree']">
+	<property name="CreativeMode" value="None"/>
+	<property name="BlockTag" value="TreeTrunk"/>
+	<property name="Group" value="Foliage,Vegetation,Outdoor,Blocks"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#Entities/Trees?SnakeweedPrefab.prefab"/>
+	<property name="ImposterDontBlock" value="true"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="Collide" value="melee"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="Material" value="Mleaves"/><property name="CarryWeight" value="0.25"/>
+	<drop event="Harvest" name="ulmResourceBranch" count="2,6" tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="resourceYuccaFibers" count="0,1" tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" count="0"/></set>
+	
+<set xpath="/blocks/block[@name='treeCactus01']">
+	<property name="CreativeMode" value="None"/>
+	<property name="BlockTag" value="TreeTrunk"/>
+	<property name="Group" value="Foliage,Vegetation,Outdoor,Blocks"/>
+	<property name="Class" value="Cactus"/>
+	<property name="Shape" value="DistantDeco"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Saguaro_Cactus_20/Saguaro_Cactus_20GimbalPrefab.prefab"/>
+	<property name="DisplayType" value="blockMulti"/><property name="MultiBlockDim" value="1,6,1"/>
+	<property name="ModelOffset" value="0,-0.1,0"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDistantDecoration" value="true"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="Damage" value="3"/>
+	<property name="IsPlant" value="true"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ActivationDistance" value="10"/>
+	<property name="Material" value="Mcactus"/><property name="CarryWeight" value="0.35"/>
+	<drop event="Harvest" name="resourceYuccaFibers" count="10" tag="woodHarvest"/>
+	<drop event="Destroy" name="foodCropYuccaFruit" count="3"/>
+	<drop event="Destroy" name="resourceYuccaFibers" count="5"/></set>
+	
+<set xpath="/blocks/block[@name='treeCactus02']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeCactus01"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Saguaro_Cactus_16/Saguaro_Cactus_16GimbalPrefab.prefab"/>
+	<property name="MultiBlockDim" value="1,5,1"/>
+	<drop event="Destroy" name="foodCropYuccaFruit" count="3"/></set>
+	
+<set xpath="/blocks/block[@name='treeCactus03']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeCactus01"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Saguaro_Cactus_13/Saguaro_Cactus_13GimbalPrefab.prefab"/>
+	<property name="MultiBlockDim" value="1,3,1"/>
+	<drop event="Destroy" name="foodCropYuccaFruit" count="3"/></set>
+	
+<set xpath="/blocks/block[@name='treeCactus04']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Tags" value="twitchReplace"/>
+	<property name="Extends" value="treeCactus01" param1="MultiBlockDim"/>
+	<property name="Model" value="@:Entities/Plants/cactus04Prefab.prefab"/>
+	<property name="ModelOffset" value="0,0.45,0"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="VehicleHitScale" value="999"/>
+	<drop event="Destroy" name="foodCropYuccaFruit" count="2"/></set>
+	
+<set xpath="/blocks/block[@name='treeCactus05']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeCactus04"/>
+	<property name="Model" value="@:Entities/Plants/cactus05Prefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='treeCactus06']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Tags" value="twitchReplace"/>
+	<property name="Extends" value="treeCactus01"/>
+	<property name="Model" value="@:Entities/Plants/cactus06Prefab.prefab"/>
+	<property name="ModelOffset" value="0,0.4,0"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<drop event="Destroy" name="foodCropYuccaFruit" count="3"/></set>
+
+<set xpath="/blocks/block[@name='treeStump']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Tags" value="wood,challenge_stump"/>
+	<property name="Group" value="Trees,Vegetation,Outdoor,Blocks"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#Entities/Trees?Prefabs/StumpHolePrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="Path" value="solid"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="BigDecorationRadius" value="3"/>
+	<property name="IsPlant" value="true"/>
+	<property name="Material" value="MtreeWoodSmall"/><property name="MaxDamage" value="250"/>
+	<property name="EconomicValue" value="2"/><property name="CarryWeight" value="0.5"/>
+	<property name="DestroyedEvent" value="block_tree_stump_bees"/>
+	<drop event="Harvest" name="ulmResourceFirewood" count="1,5" tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceFirewood" count="1"/>
+	<drop event="Destroy" name="ulmResourceHoney" count="1,3" prob="1"/>
+<!-- Handled in DestroyedEvent block_tree_stump_bees
+	<drop event="Destroy" name="ulmResourceQueenBee" count="1" prob=".125"/>--></set>
+	
+<set xpath="/blocks/block[@name='treeStumpPOI']">
+	<property name="CreativeMode" value="None"/>
+	<property name="ItemTypeIcon" value="poi_block"/>
+	<property name="Extends" value="treeStump" param1="StabilitySupport"/>
+	<property name="CustomIcon" value="treeStump"/>
+	<property name="CustomIconTint" value="996600"/>
+	<property name="Model" value="#Entities/Trees?Prefabs/Stump.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='treeJuniper4m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Hollywood_Juniper_15m/Hollywood_Juniper15mGimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.3,0"/>
+	<property name="MultiBlockDim" value="1,4,1"/>
+	<property name="BigDecorationRadius" value="3"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<property name="MaxDamage" value="250"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="0,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="1,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="20,25"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="0,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="1"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treePlainsTree2']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/White_Oak42/White_Oak42GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-.1,0"/>
+	<property name="MultiBlockDim" value="1,9,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="MaxDamage" value="250"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="0,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="1,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="20,25"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="0,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="1"		tag="allHarvest,woodHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='treeBurntMaple01']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Tags" value="coalBurnedDmg"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Haunted_Tree_Wasteland25/Haunted_Tree_Wasteland25GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-.5,0"/>
+	<property name="MultiBlockDim" value="1,3,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_small"/>
+	<property name="MaxDamage" value="250"/>
+	<drop event="Destroy" name="ulmResourceLumber" count="1"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceBranch" count="0,1"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceCharcoal" count="1,2"	tag="allHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='treeBurntMaple02']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Tags" value="coalBurnedDmg"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Haunted_Tree_Wasteland39/Haunted_Tree_Wasteland39GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-.4,0"/>
+	<property name="MultiBlockDim" value="1,5,1"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<property name="MaxDamage" value="500"/>
+	<drop event="Destroy" name="ulmResourceLumber" count="2,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceBranch" count="0,1"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceCharcoal" count="1,3"	tag="allHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='treeBurntMaple03']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Tags" value="coalBurnedDmg"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Haunted_Tree_Wasteland42/Haunted_Tree_Wasteland42GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-.6,0"/>
+	<property name="MultiBlockDim" value="2,9,2"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<property name="ActivationDistance" value="14"/>
+	<property name="MaxDamage" value="1000"/>
+	<drop event="Destroy" name="ulmResourceLumber" count="4,5"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceBranch" count="0,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceCharcoal" count="1,4"	tag="allHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='treeBurntMaple04']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Tags" value="coalBurnedDmg"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Haunted_Tree_Wasteland42/Haunted_Tree_WastelandLargeGimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="-0.5,-0.6,-0.5"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<property name="ActivationDistance" value="14"/>
+	<property name="MaxDamage" value="4000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="5,12"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="5,12"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="50,100"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Harvest" name="ulmResourceCharcoal"		count="5,20"	tag="allHarvest"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="4,40"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="17,20"	tag="allHarvest,woodHarvest"/></set>
+	
+<set xpath="/blocks/block[@name='treePlantedWinterPine6m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="ItemTypeIcon" value="player_shape"/>
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="CustomIcon" value="treeWinterEverGreen"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/AlaskaCedar60/AlaskaCedar60GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,6,1"/>
+	<property name="BigDecorationRadius" value="3"/>
+	<property name="PlantGrowing.Next" value="treePlantedWinterPine13m"/>
+	<property name="MaxDamage" value="500"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="1,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="1,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="40,50"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Harvest" name="resourceSnowBall"			count="0,5"		tag="allHarvest"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="1,5"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="2,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"		prob=".05"/></set>
+
+<set xpath="/blocks/block[@name='treePlantedMountainPine12m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="ItemTypeIcon" value="player_shape"/>
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="CustomIcon" value="treeMountainPine12m"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/MountainPineSml01/MountainPineSml01GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.4,0"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="PlantGrowing.Next" value="treePlantedMountainPine19m"/>
+	<property name="MaxDamage" value="500"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="1,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="1,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="40,50"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="1,5"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="2,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treeMountainPine12m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/MountainPineSml01/MountainPineSml01GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.5,0"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="SortOrder1" value="B903"/>
+	<property name="SortOrder2" value="0001"/>
+	<property name="MaxDamage" value="500"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="1,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="1,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="40,50"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="1,5"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="2,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treeWinterEverGreen']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/AlaskaCedar60/AlaskaCedar60GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,6,1"/>
+	<property name="BigDecorationRadius" value="3"/>
+	<property name="FallOver" value="true"/>
+	<property name="ParticleOnDeath" value="treeGib_winter_small"/>
+	<property name="MaxDamage" value="500"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="1,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="1,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="40,50"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Harvest" name="resourceSnowBall"			count="0,5"		tag="allHarvest"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="1,5"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="2,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treeWinterPine13m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Fir2LrgSnow01/Blue_Spruce45GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.4,0"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="3"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="ParticleOnDeath" value="treeGib_winter01"/>
+	<property name="MaxDamage" value="1000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="2,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="2,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="80,100"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Harvest" name="resourceSnowBall"			count="5,10"	tag="allHarvest"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="1,10"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="4,5"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treeOakSml01']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/OakSml01/OakSml01GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.3,0"/>
+	<property name="MultiBlockDim" value="1,7,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="ParticleOnDeath" value="treeGib_dead_01"/>
+	<property name="MaxDamage" value="1000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="2,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="2,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="80,100"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="1,10"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="4,5"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedOak1m"			count="1"/>
+	<drop event="Destroy" name="treePlantedOak1m"			count="1"		prob=".05"/></set>
+
+<set xpath="/blocks/block[@name='treePlantedOak08m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="ItemTypeIcon" value="player_shape"/>
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="CustomIcon" value="treeOakSml01"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/OakSml01/OakSml01GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.3,0"/>
+	<property name="MultiBlockDim" value="1,7,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="PlantGrowing.Next" value="treePlantedOak16m"/>
+	<property name="MaxDamage" value="1000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="2,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="2,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="80,100"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="1,10"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="4,5"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedOak1m"			count="1"/>
+	<drop event="Destroy" name="treePlantedOak1m"			count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treeMountainPine19m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/MountainPineMed01/MountainPineMed01GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.5,0"/>
+	<property name="MultiBlockDim" value="1,19,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="MaxDamage" value="1000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="2,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="2,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="80,100"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="1,10"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="4,5"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treePlantedMountainPine19m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="ItemTypeIcon" value="player_shape"/>
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="CustomIcon" value="treeMountainPine19m"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/MountainPineMed01/MountainPineMed01GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.4,0"/>
+	<property name="MultiBlockDim" value="1,19,1"/>
+	<property name="PlantGrowing.Next" value="treePlantedMountainPine27m"/>
+	<property name="MaxDamage" value="1000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="2,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="2,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="80,100"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="1,10"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="4,5"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treePlantedWinterPine13m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="ItemTypeIcon" value="player_shape"/>
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="CustomIcon" value="treeWinterPine13m"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Fir2LrgSnow01/Blue_Spruce45GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.4,0"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="3"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="PlantGrowing.Next" value="treePlantedWinterPine19m"/>
+	<property name="MaxDamage" value="1000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="2,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="3,4"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="80,100"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Harvest" name="resourceSnowBall"			count="5,10"	tag="allHarvest"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="1,10"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="4,5"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treeMountainPineDry21m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/MountainPineDead/MountainPineDeadGimbalPrefab.prefab"/>
+	<property name="MultiBlockDim" value="1,21,1"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<property name="ModelOffset" value="0,-0.5,0"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="MaxDamage" value="1000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="3,4"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="1,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="20,25"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="4,5"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treePineBurntFullMed']">
+	<property name="CreativeMode" value="None"/>
+    <property name="Extends" value="treeMaster"/>
+    <property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Fir2LrgDead01/FirMed01BurntGimbalPrefab.prefab"/>
+    <property name="MultiBlockDim" value="1,21,1"/>
+    <property name="BigDecorationRadius" value="5"/>
+    <property name="ModelOffset" value="0,-0.5,0"/>
+    <property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="MaxDamage" value="1000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="3,4"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="1,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="20,25"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Harvest" name="ulmResourceCharcoal"		count="1,4"		tag="allHarvest"/>
+	<drop event="Harvest" name="ulmResourceCharcoal"		count="1,4"		tag="woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="4,5"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treePineBurntLrg']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/pineBurnt/pineBurntGimbalPrefab.prefab"/>
+	<property name="MultiBlockDim" value="1,21,1"/>
+	<property name="BigDecorationRadius" value="6"/>
+	<property name="ModelOffset" value="0,-0.5,0"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="MaxDamage" value="1000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="3,4"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="1,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="20,25"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Harvest" name="ulmResourceCharcoal"		count="1,4"		tag="allHarvest"/>
+	<drop event="Harvest" name="ulmResourceCharcoal"		count="1,4"		tag="woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="4,5"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treePineBurntMed']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/pineBurnt/pineBurntMedGimbalPrefab.prefab"/>
+	<property name="MultiBlockDim" value="1,21,1"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<property name="ModelOffset" value="0,-0.5,0"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="MaxDamage" value="1000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="3,4"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="1,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="24,30"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Harvest" name="ulmResourceCharcoal"		count="1,4"		tag="allHarvest"/>
+	<drop event="Harvest" name="ulmResourceCharcoal"		count="1,4"		tag="woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="4,5"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treeFirLrg01']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Fir2Lrg01/FirLrg01GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.2,0"/>
+	<property name="MultiBlockDim" value="1,24,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="MaxDamage" value="2000"/>
+	<drop event="Harvest" name="ulmResourceBranch"		count="4,8"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"		count="4,8"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"		count="160,200"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"	count="2,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"		count="8,10"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treeOakMed01']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/OakLrg02/OakMed03GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.3,0"/>
+	<property name="MultiBlockDim" value="1,15,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="ParticleOnDeath" value="treeGib_dead_01"/>
+	<property name="MaxDamage" value="2000"/>
+	<drop event="Harvest" name="ulmResourceBranch"		count="4,8"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"		count="4,8"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"		count="160,200" tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"	count="2,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"		count="8,10"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedOak1m"		count="1"/>
+	<drop event="Destroy" name="treePlantedOak1m"		count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treePlantedOak16m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="ItemTypeIcon" value="player_shape"/>
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="CustomIcon" value="treeOakMed01"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/OakLrg02/OakMed03GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.3,0"/>
+	<property name="MultiBlockDim" value="1,15,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="PlantGrowing.Next" value="treePlantedOak27m"/>
+	<property name="MaxDamage" value="2000"/>
+	<drop event="Harvest" name="ulmResourceBranch"		count="4,8"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"		count="4,8"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"		count="160,200" tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"	count="2,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"		count="8,10"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedOak1m"		count="1"/>
+	<drop event="Destroy" name="treePlantedOak1m"		count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treeMountainPine27m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/ScotsPineMed01/ScotsPineMed01GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.5,0"/>
+	<property name="MultiBlockDim" value="1,27,1"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="MaxDamage" value="2000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="4,8"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="4,8"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="160,200"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="2,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="8,10"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treePlantedMountainPine27m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="ItemTypeIcon" value="player_shape"/>
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="CustomIcon" value="treeMountainPine27m"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/ScotsPineMed01/ScotsPineMed01GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.5,0"/>
+	<property name="MultiBlockDim" value="1,27,1"/>
+	<property name="PlantGrowing.Next" value="treePlantedMountainPine41m"/>
+	<property name="PlantGrowing.FertileLevel" value="3"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="MaxDamage" value="2000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="4,8"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="4,8"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="160,200" tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="2,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="8,10"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treeWinterPine19m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Fir2LrgSnow01/Blue_Spruce55GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.4,0"/>
+	<property name="MultiBlockDim" value="1,19,1"/>
+	<property name="BigDecorationRadius" value="3"/>
+	<property name="ParticleOnDeath" value="treeGib_winter02"/>
+	<property name="MaxDamage" value="2000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="4,8"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="4,8"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="160,200"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Harvest" name="resourceSnowBall"			count="10,15"	tag="allHarvest"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="2,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="8,10"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treePlantedWinterPine19m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="ItemTypeIcon" value="player_shape"/>
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="CustomIcon" value="treeWinterPine19m"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Fir2LrgSnow01/Blue_Spruce55GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.4,0"/>
+	<property name="MultiBlockDim" value="1,19,1"/>
+	<property name="BigDecorationRadius" value="3"/>
+	<property name="PlantGrowing.Next" value="treePlantedWinterPine28m"/>
+	<property name="PlantGrowing.FertileLevel" value="3"/>
+	<property name="MaxDamage" value="2000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="4,8"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="4,8"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="160,200"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Harvest" name="resourceSnowBall"			count="10,15"	tag="allHarvest"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="2,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="8,10"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treeMountainPine31m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Fir2Lrg01/FirMed01GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.2,0"/>
+	<property name="MultiBlockDim" value="1,31,1"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="MaxDamage" value="2000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="4,8"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="4,8"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="160,200"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="2,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="8,10"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"		prob=".05"/></set>
+
+<set xpath="/blocks/block[@name='treeOakMed02']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/OakLrg02/OakMed03GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.3,0"/>
+	<property name="MultiBlockDim" value="1,26,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="ParticleOnDeath" value="treeGib_dead_01"/>
+	<property name="MaxDamage" value="4000"/>
+	<drop event="Harvest" name="ulmResourceBranch"		count="5,12"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"		count="5,12"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"		count="320,400"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"	count="4,40"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"		count="17,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedOak1m"		count="1"/>
+	<drop event="Destroy" name="treePlantedOak1m"		count="1"		prob=".05"/></set>
+
+<set xpath="/blocks/block[@name='treePlantedOak27m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="ItemTypeIcon" value="player_shape"/>
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="CustomIcon" value="treeOakMed02"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/OakLrg02/OakMed03GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.3,0"/>
+	<property name="MultiBlockDim" value="1,26,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="PlantGrowing.Next" value="treePlantedOak41m"/>
+	<property name="PlantGrowing.FertileLevel" value="3"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="MaxDamage" value="4000"/>
+	<drop event="Harvest" name="ulmResourceBranch"		count="5,12"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"		count="5,12"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"		count="320,400" tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"	count="4,40"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"		count="17,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedOak1m"		count="1"/>
+	<drop event="Destroy" name="treePlantedOak1m"		count="1"		prob=".05"/></set>
+
+<set xpath="/blocks/block[@name='treeMountainPine41m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/MountainPineLrg01/MountainPineLrg01GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.5,0"/>
+	<property name="MultiBlockDim" value="1,41,1"/>
+	<property name="BigDecorationRadius" value="6"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="MaxDamage" value="4000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="5,12"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="5,12"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="320,400" tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="4,40"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="17,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"		prob=".05"/></set>
+
+<set xpath="/blocks/block[@name='treePlantedMountainPine41m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="ItemTypeIcon" value="player_shape"/>
+	<property name="Extends" value="treeMountainPine41m"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="CustomIcon" value="treeMountainPine41m"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/MountainPineLrg01/MountainPineLrg01GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.5,0"/>
+	<property name="MultiBlockDim" value="1,41,1"/>
+	<property name="PlantGrowing.FertileLevel" value="5"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="MaxDamage" value="4000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="5,12"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="5,12"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="320,400"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="4,40"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="17,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"		prob=".05"/></set>
+
+<set xpath="/blocks/block[@name='treeMountainPine48m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/ScotsPineLrg01/ScotsPineLrg01GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.2,0"/>
+	<property name="MultiBlockDim" value="1,47,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="MaxDamage" value="4000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="5,12"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="5,12"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="320,400"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="4,40"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="17,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m"	count="1"		prob=".05"/></set>
+
+<set xpath="/blocks/block[@name='treeWinterPine28m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Fir2LrgSnow01/Blue_Spruce66GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.5,0"/>
+	<property name="MultiBlockDim" value="1,27,1"/>
+	<property name="BigDecorationRadius" value="3"/>
+	<property name="ParticleOnDeath" value="treeGib_winter03"/>
+	<property name="MaxDamage" value="4000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="5,12"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="5,12"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="320,400" tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Harvest" name="resourceSnowBall"			count="15,20"	tag="allHarvest"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="4,40"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="17,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"		prob=".05"/></set>
+
+<set xpath="/blocks/block[@name='treeWinterEverGreenLarge']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="CustomIcon" value="treeWinterEverGreen"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/AlaskaCedar60/AlaskaCedar60LargeGimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,13,1"/>
+	<property name="BigDecorationRadius" value="3"/>
+	<property name="ParticleOnDeath" value="treeGib_winter03"/>
+	<property name="MaxDamage" value="500"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="1,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="1,2"		tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="40,50"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Harvest" name="resourceSnowBall"			count="5,10"	tag="allHarvest"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="1,5"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="2,3"		tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"		prob=".05"/></set>
+
+<set xpath="/blocks/block[@name='treePlantedWinterPine28m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="ItemTypeIcon" value="player_shape"/>
+	<property name="Extends" value="treeWinterPine28m"/>
+	<property name="CustomIcon" value="treeWinterPine28m"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/Fir2LrgSnow01/Blue_Spruce66GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.5,0"/>
+	<property name="MultiBlockDim" value="1,28,1"/>
+	<property name="BigDecorationRadius" value="3"/>
+	<property name="MaxDamage" value="4000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="5,12"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="5,12"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="320,400"	tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Harvest" name="resourceSnowBall"			count="15,20"	tag="allHarvest"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="4,40"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="17,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m"	count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treeOakLrg01']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/OakLrg02/OakLrg02GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.3,0"/>
+	<property name="MultiBlockDim" value="1,40,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="ParticleOnDeath" value="treeGib_dead_01"/>
+	<property name="MaxDamage" value="6000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="5,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="5,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="480,600" tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="6,60"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="25,30"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedOak1m"			count="1"/>
+	<drop event="Destroy" name="treePlantedOak1m"			count="1"		prob=".05"/></set>
+	
+<set xpath="/blocks/block[@name='treePlantedOak41m']">
+	<property name="CreativeMode" value="None"/>
+	<property name="ItemTypeIcon" value="player_shape"/>
+	<property name="Extends" value="treeOakLrg01"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="CustomIcon" value="treeOakLrg01"/>
+	<property name="Model" value="#Entities/Trees?StudioGimbal/OakLrg02/OakLrg02GimbalPrefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.3,0"/>
+	<property name="MultiBlockDim" value="1,40,1"/>
+	<property name="PlantGrowing.FertileLevel" value="5"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="MaxDamage" value="6000"/>
+	<drop event="Harvest" name="ulmResourceBranch"			count="5,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="5,20"	tag="allHarvest,woodHarvest"/>
+	<drop event="Harvest" name="ulmResourceResin"			count="480,600" tag="ulmHarvestBlade,notOnKill"/>
+	<drop event="Destroy" name="resourceYuccaFibers"		count="6,60"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="ulmResourceLumber"			count="25,30"	tag="allHarvest,woodHarvest"/>
+	<drop event="Destroy" name="treePlantedOak1m"			count="1"/>
+	<drop event="Destroy" name="treePlantedOak1m"			count="1"		prob=".05"/></set>
+
+<set xpath="/blocks/block[@name='treePlant02']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Foliage,Indoor,Decor,Blocks"/>
+	<property name="Class" value="ULM_Decor,UndeadLegacy"/>
+	<property name="CanPickup" value="true" param1="treePlant02"/>
+	<property name="DescriptionKey" value="furnitureGroupDesc"/>
+	<property name="Material" value="matClay"/><property name="MaxDamage" value="100"/><property name="Weight" value="5"/>
+	<property name="Path" value="solid"/>
+	<property name="GndAlign" value="1"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Plants/plantCeramicDecorPrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="SoundPickup" value="pottedplant_grab"/>
+	<property name="SoundPlace" value="pottedplant_place"/>
+	<property name="EconomicValue" value="25"/><property name="CarryWeight" value="0.5"/>
+	<property class="RepairItems"><property name="resourceClayLump" value="10"/></property>
+	<drop event="Destroy" name="resourceClayLump" count="1"/>
+	<drop event="Fall" name="resourceClayLump" count="1" prob="1" stick_chance="0"/></set>
+	
+<set xpath="/blocks/block[@name='treeSmallRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeOakSml01"/>
+	<property name="CustomIcon" value="treeOakSml01"/>
+	<property name="MultiBlockDim" value="1,19,1"/>
+	<property name="PlantGrowing.FertileLevel" value="0"/>
+	<property name="DescriptionKey" value="treeRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+	
+<set xpath="/blocks/block[@name='treeSmallThinRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeJuniper4m"/>
+	<property name="CustomIcon" value="treeJuniper4m"/>
+	<property name="MultiBlockDim" value="1,6,1"/>
+	<property name="PlantGrowing.FertileLevel" value="0"/>
+	<property name="DescriptionKey" value="treeRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+	
+<set xpath="/blocks/block[@name='treeMediumRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeOakMed01"/>
+	<property name="CustomIcon" value="treeOakMed01"/>
+	<property name="MultiBlockDim" value="1,20,1"/>
+	<property name="PlantGrowing.FertileLevel" value="0"/>
+	<property name="DescriptionKey" value="treeRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+	
+<set xpath="/blocks/block[@name='treeLargeRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treeOakMed01" param1="MultiBlockDim"/>
+	<property name="CustomIcon" value="treeOakMed01"/>
+	<property name="PlantGrowing.FertileLevel" value="0"/>
+	<property name="DescriptionKey" value="treeRandomHelperGroupDesc"/>
+	<property name="ModelOffset" value="-0.5,-0.3,-0.5"/>
+	<property name="OversizedBounds" value="(-0.5,9.5,-0.5),(2,20,2)"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+	
+<set xpath="/blocks/block[@name='treeTraderRandomHelper']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treePlantedOak27m"/>
+	<property name="CustomIcon" value="treePineBurntLrg"/>
+	<property name="PlantGrowing.FertileLevel" value="0"/>
+	<property name="DescriptionKey" value="treeRandomHelperGroupDesc"/>
+	<property name="MultiBlockDim" value="1,20,1"/>
+	<property name="ItemTypeIcon" value="random_helper"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="CustomIconTint" value="ff8080"/></set>
+
+<set xpath="/blocks/block[@name='plantAloePottedWhite']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treePlant02"/>
+	<property name="CanPickup" value="true" param1="ulmDecoPottedAloePlant"/>
+	<property name="CustomIcon" value="plantAloePottedWhite"/>
+	<property name="CustomIconTint" value="B9B9B9"/>
+	<property name="TintColor" value="B9B9B9"/>
+	<property name="Model" value="@:Entities/Plants/plantAloePottedPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedBrown']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedWhite"/>
+	<property name="CustomIconTint" value="736452"/>
+	<property name="TintColor" value="736452"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedRed']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedWhite"/>
+	<property name="CustomIconTint" value="9C7A7A"/>
+	<property name="TintColor" value="9C7A7A"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedOrange']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedWhite"/>
+	<property name="CustomIconTint" value="C7A78C"/>
+	<property name="TintColor" value="C7A78C"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedYellow']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedWhite"/>
+	<property name="CustomIconTint" value="B7B690"/>
+	<property name="TintColor" value="B7B690"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedGreen']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedWhite"/>
+	<property name="CustomIconTint" value="A4B790"/>
+	<property name="TintColor" value="A4B790"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedBlue']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedWhite"/>
+	<property name="CustomIconTint" value="99A6AB"/>
+	<property name="TintColor" value="99A6AB"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedPurple']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedWhite"/>
+	<property name="CustomIconTint" value="97939C"/>
+	<property name="TintColor" value="97939C"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedGrey']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedWhite"/>
+	<property name="CustomIconTint" value="878787"/>
+	<property name="TintColor" value="878787"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedPink']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedWhite"/>
+	<property name="CustomIconTint" value="B5A6B4"/>
+	<property name="TintColor" value="B5A6B4"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedCornerWhite']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treePlant02"/>
+	<property name="CustomIcon" value="plantAloePottedWhite"/>
+	<property name="ItemTypeIcon" value="triangle"/>
+	<property name="CustomIcon" value="plantAloePottedCornerWhite"/>
+	<property name="CustomIconTint" value="B9B9B9"/>
+	<property name="TintColor" value="B9B9B9"/>
+	<property name="Model" value="@:Entities/Plants/plantAloePottedCornerPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedCornerBrown']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedCornerWhite"/>
+	<property name="CustomIconTint" value="736452"/>
+	<property name="TintColor" value="736452"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedCornerRed']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedCornerWhite"/>
+	<property name="CustomIconTint" value="9C7A7A"/>
+	<property name="TintColor" value="9C7A7A"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedCornerOrange']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedCornerWhite"/>
+	<property name="CustomIconTint" value="C7A78C"/>
+	<property name="TintColor" value="C7A78C"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedCornerYellow']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedCornerWhite"/>
+	<property name="CustomIconTint" value="B7B690"/>
+	<property name="TintColor" value="B7B690"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedCornerGreen']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedCornerWhite"/>
+	<property name="CustomIconTint" value="A4B790"/>
+	<property name="TintColor" value="A4B790"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedCornerBlue']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedCornerWhite"/>
+	<property name="CustomIconTint" value="99A6AB"/>
+	<property name="TintColor" value="99A6AB"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedCornerPurple']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedCornerWhite"/>
+	<property name="CustomIconTint" value="97939C"/>
+	<property name="TintColor" value="97939C"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedCornerGrey']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedCornerWhite"/>
+	<property name="CustomIconTint" value="878787"/>
+	<property name="TintColor" value="878787"/></set>
+	
+<set xpath="/blocks/block[@name='plantAloePottedCornerPink']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantAloePottedCornerWhite"/>
+	<property name="CustomIconTint" value="B5A6B4"/>
+	<property name="TintColor" value="B5A6B4"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedWhite']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treePlant02"/>
+	<property name="CanPickup" value="true" param1="ulmDecoPottedHousePlant"/>
+	<property name="CustomIcon" value="plantHousePottedWhite"/>
+	<property name="CustomIconTint" value="B9B9B9"/>
+	<property name="TintColor" value="B9B9B9"/>
+	<property name="Model" value="@:Entities/Plants/plantHousePottedPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedBrown']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedWhite"/>
+	<property name="CustomIconTint" value="736859"/>
+	<property name="TintColor" value="736859"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedRed']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedWhite"/>
+	<property name="CustomIconTint" value="9C7E7E"/>
+	<property name="TintColor" value="9C7E7E"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedOrange']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedWhite"/>
+	<property name="CustomIconTint" value="C7A78C"/>
+	<property name="TintColor" value="C7A78C"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedYellow']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedWhite"/>
+	<property name="CustomIconTint" value="B7B797"/>
+	<property name="TintColor" value="B7B797"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedGreen']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedWhite"/>
+	<property name="CustomIconTint" value="95A385"/>
+	<property name="TintColor" value="95A385"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedBlue']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedWhite"/>
+	<property name="CustomIconTint" value="8D9EA4"/>
+	<property name="TintColor" value="8D9EA4"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedPurple']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedWhite"/>
+	<property name="CustomIconTint" value="90869C"/>
+	<property name="TintColor" value="90869C"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedGrey']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedWhite"/>
+	<property name="CustomIconTint" value="878787"/>
+	<property name="TintColor" value="878787"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedBlack']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedWhite"/>
+	<property name="CustomIconTint" value="464646"/>
+	<property name="TintColor" value="464646"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedPink']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedWhite"/>
+	<property name="CustomIconTint" value="B5A6B4"/>
+	<property name="TintColor" value="B5A6B4"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedCornerWhite']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treePlant02"/>
+	<property name="ItemTypeIcon" value="triangle"/>
+	<property name="CustomIcon" value="plantHousePottedCornerWhite"/>
+	<property name="CustomIconTint" value="B9B9B9"/>
+	<property name="TintColor" value="B9B9B9"/>
+	<property name="Model" value="@:Entities/Plants/plantHousePottedCornerPrefab.prefab"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedCornerBrown']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedCornerWhite"/>
+	<property name="CustomIconTint" value="736859"/>
+	<property name="TintColor" value="736859"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedCornerRed']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedCornerWhite"/>
+	<property name="CustomIconTint" value="9C7E7E"/>
+	<property name="TintColor" value="9C7E7E"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedCornerOrange']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedCornerWhite"/>
+	<property name="CustomIconTint" value="C7A78C"/>
+	<property name="TintColor" value="C7A78C"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedCornerYellow']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedCornerWhite"/>
+	<property name="CustomIconTint" value="B7B797"/>
+	<property name="TintColor" value="B7B797"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedCornerGreen']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedCornerWhite"/>
+	<property name="CustomIconTint" value="95A385"/>
+	<property name="TintColor" value="95A385"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedCornerBlue']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedCornerWhite"/>
+	<property name="CustomIconTint" value="8D9EA4"/>
+	<property name="TintColor" value="8D9EA4"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedCornerPurple']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedCornerWhite"/>
+	<property name="CustomIconTint" value="90869C"/>
+	<property name="TintColor" value="90869C"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedCornerGrey']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedCornerWhite"/>
+	<property name="CustomIconTint" value="878787"/>
+	<property name="TintColor" value="878787"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedCornerBlack']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedCornerWhite"/>
+	<property name="CustomIconTint" value="464646"/>
+	<property name="TintColor" value="464646"/></set>
+	
+<set xpath="/blocks/block[@name='plantHousePottedCornerPink']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHousePottedCornerWhite"/>
+	<property name="CustomIconTint" value="B5A6B4"/>
+	<property name="TintColor" value="B5A6B4"/></set>
+	
+<set xpath="/blocks/block[@name='plantCherryBlossomWhite']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treePlant02"/>
+	<property name="CanPickup" value="true" param1="ulmDecoPottedCherryBlossomPlant"/>
+	<property name="Model" value="@:Entities/Plants/plantCherryBlossomPrefab.prefab"/>
+	<property name="CustomIcon" value="plantCherryBlossomWhite"/>
+	<property name="CustomIconTint" value="B9B9B9"/>
+	<property name="TintColor" value="B9B9B9"/></set>
+	
+<set xpath="/blocks/block[@name='plantCherryBlossomBrown']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantCherryBlossomWhite"/>
+	<property name="CustomIconTint" value="736859"/>
+	<property name="TintColor" value="736859"/></set>
+	
+<set xpath="/blocks/block[@name='plantCherryBlossomRed']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantCherryBlossomWhite"/>
+	<property name="CustomIconTint" value="9C7E7E"/>
+	<property name="TintColor" value="9C7E7E"/></set>
+	
+<set xpath="/blocks/block[@name='plantCherryBlossomOrange']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantCherryBlossomWhite"/>
+	<property name="CustomIconTint" value="C7A78C"/>
+	<property name="TintColor" value="C7A78C"/></set>
+	
+<set xpath="/blocks/block[@name='plantCherryBlossomYellow']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantCherryBlossomWhite"/>
+	<property name="CustomIconTint" value="B7B797"/>
+	<property name="TintColor" value="B7B797"/></set>
+	
+<set xpath="/blocks/block[@name='plantCherryBlossomGreen']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantCherryBlossomWhite"/>
+	<property name="CustomIconTint" value="95A385"/>
+	<property name="TintColor" value="95A385"/></set>
+	
+<set xpath="/blocks/block[@name='plantCherryBlossomBlue']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantCherryBlossomWhite"/>
+	<property name="CustomIconTint" value="8D9EA4"/>
+	<property name="TintColor" value="8D9EA4"/></set>
+	
+<set xpath="/blocks/block[@name='plantCherryBlossomPurple']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantCherryBlossomWhite"/>
+	<property name="CustomIconTint" value="90869C"/>
+	<property name="TintColor" value="90869C"/></set>
+	
+<set xpath="/blocks/block[@name='plantCherryBlossomGrey']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantCherryBlossomWhite"/>
+	<property name="CustomIconTint" value="878787"/>
+	<property name="TintColor" value="878787"/></set>
+	
+<set xpath="/blocks/block[@name='plantCherryBlossomBlack']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantCherryBlossomWhite"/>
+	<property name="CustomIconTint" value="464646"/>
+	<property name="TintColor" value="464646"/></set>
+	
+<set xpath="/blocks/block[@name='plantCherryBlossomPink']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantCherryBlossomWhite"/>
+	<property name="CustomIconTint" value="B5A6B4"/>
+	<property name="TintColor" value="B5A6B4"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernHangingWhite']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treePlant02" param1="GndAlign,ModelOffset"/>
+	<property name="CanPickup" value="true" param1="ulmDecoPottedFernPlant"/>
+	<property name="Model" value="@:Entities/Plants/plantFernHangingPrefab.prefab"/>
+	<property name="CustomIcon" value="plantFernHangingWhite"/>
+	<property name="CustomIconTint" value="B9B9B9"/>
+	<property name="TintColor" value="B9B9B9"/>
+	<property name="Material" value="MfertilizedClayStable"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernHangingBrown']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernHangingWhite"/>
+	<property name="CustomIconTint" value="736859"/>
+	<property name="TintColor" value="736859"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernHangingRed']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernHangingWhite"/>
+	<property name="CustomIconTint" value="9C7E7E"/>
+	<property name="TintColor" value="9C7E7E"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernHangingOrange']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernHangingWhite"/>
+	<property name="CustomIconTint" value="C7A78C"/>
+	<property name="TintColor" value="C7A78C"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernHangingYellow']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernHangingWhite"/>
+	<property name="CustomIconTint" value="B7B797"/>
+	<property name="TintColor" value="B7B797"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernHangingGreen']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernHangingWhite"/>
+	<property name="CustomIconTint" value="95A385"/>
+	<property name="TintColor" value="95A385"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernHangingBlue']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernHangingWhite"/>
+	<property name="CustomIconTint" value="8D9EA4"/>
+	<property name="TintColor" value="8D9EA4"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernHangingPurple']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernHangingWhite"/>
+	<property name="CustomIconTint" value="90869C"/>
+	<property name="TintColor" value="90869C"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernHangingGrey']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernHangingWhite"/>
+	<property name="CustomIconTint" value="878787"/>
+	<property name="TintColor" value="878787"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernHangingBlack']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernHangingWhite"/>
+	<property name="CustomIconTint" value="464646"/>
+	<property name="TintColor" value="464646"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernHangingPink']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernHangingWhite"/>
+	<property name="CustomIconTint" value="B5A6B4"/>
+	<property name="TintColor" value="B5A6B4"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernWhite']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treePlant02"/>
+	<property name="CanPickup" value="true" param1="ulmDecoPottedFernPlant"/>
+	<property name="CustomIcon" value="plantFernWhite"/>
+	<property name="CustomIconTint" value="B9B9B9"/>
+	<property name="TintColor" value="B9B9B9"/>
+	<property name="Material" value="MfertilizedClayStable"/>
+	<property name="Model" value="@:Entities/Plants/plantFernPrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernBrown']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernWhite"/>
+	<property name="CustomIconTint" value="736859"/>
+	<property name="TintColor" value="736859"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernRed']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernWhite"/>
+	<property name="CustomIconTint" value="9C7E7E"/>
+	<property name="TintColor" value="9C7E7E"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernOrange']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernWhite"/>
+	<property name="CustomIconTint" value="C7A78C"/>
+	<property name="TintColor" value="C7A78C"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernYellow']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernWhite"/>
+	<property name="CustomIconTint" value="B7B797"/>
+	<property name="TintColor" value="B7B797"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernGreen']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernWhite"/>
+	<property name="CustomIconTint" value="95A385"/>
+	<property name="TintColor" value="95A385"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernBlue']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernWhite"/>
+	<property name="CustomIconTint" value="8D9EA4"/>
+	<property name="TintColor" value="8D9EA4"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernPurple']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernWhite"/>
+	<property name="CustomIconTint" value="90869C"/>
+	<property name="TintColor" value="90869C"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernGrey']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernWhite"/>
+	<property name="CustomIconTint" value="878787"/>
+	<property name="TintColor" value="878787"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernBlack']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernWhite"/>
+	<property name="CustomIconTint" value="464646"/>
+	<property name="TintColor" value="464646"/></set>
+	
+<set xpath="/blocks/block[@name='plantFernPink']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantFernWhite"/>
+	<property name="CustomIconTint" value="B5A6B4"/>
+	<property name="TintColor" value="B5A6B4"/></set>
+	
+<set xpath="/blocks/block[@name='plantHouseTallPottedWhite']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="treePlant02"/>
+	<property name="CanPickup" value="true" param1="ulmDecoPottedTallHousePlant"/>
+	<property name="Model" value="@:Entities/Plants/plantHouseTallPottedPrefab.prefab"/>
+	<property name="CustomIcon" value="plantHouseTallPottedWhite"/>
+	<property name="CustomIconTint" value="B9B9B9"/>
+	<property name="TintColor" value="B9B9B9"/></set>
+	
+<set xpath="/blocks/block[@name='plantHouseTallPottedBrown']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHouseTallPottedWhite"/>
+	<property name="CustomIconTint" value="736859"/>
+	<property name="TintColor" value="736859"/></set>
+	
+<set xpath="/blocks/block[@name='plantHouseTallPottedRed']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHouseTallPottedWhite"/>
+	<property name="CustomIconTint" value="9C7E7E"/>
+	<property name="TintColor" value="9C7E7E"/></set>
+	
+<set xpath="/blocks/block[@name='plantHouseTallPottedOrange']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHouseTallPottedWhite"/>
+	<property name="CustomIconTint" value="C7A78C"/>
+	<property name="TintColor" value="C7A78C"/></set>
+	
+<set xpath="/blocks/block[@name='plantHouseTallPottedYellow']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHouseTallPottedWhite"/>
+	<property name="CustomIconTint" value="B7B797"/>
+	<property name="TintColor" value="B7B797"/></set>
+	
+<set xpath="/blocks/block[@name='plantHouseTallPottedGreen']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHouseTallPottedWhite"/>
+	<property name="CustomIconTint" value="95A385"/>
+	<property name="TintColor" value="95A385"/></set>
+	
+<set xpath="/blocks/block[@name='plantHouseTallPottedBlue']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHouseTallPottedWhite"/>
+	<property name="CustomIconTint" value="8D9EA4"/>
+	<property name="TintColor" value="8D9EA4"/></set>
+	
+<set xpath="/blocks/block[@name='plantHouseTallPottedPurple']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHouseTallPottedWhite"/>
+	<property name="CustomIconTint" value="90869C"/>
+	<property name="TintColor" value="90869C"/></set>
+	
+<set xpath="/blocks/block[@name='plantHouseTallPottedGrey']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHouseTallPottedWhite"/>
+	<property name="CustomIconTint" value="878787"/>
+	<property name="TintColor" value="878787"/></set>
+	
+<set xpath="/blocks/block[@name='plantHouseTallPottedBlack']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHouseTallPottedWhite"/>
+	<property name="CustomIconTint" value="464646"/>
+	<property name="TintColor" value="464646"/></set>
+	
+<set xpath="/blocks/block[@name='plantHouseTallPottedPink']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="plantHouseTallPottedWhite"/>
+	<property name="CustomIconTint" value="B5A6B4"/>
+	<property name="TintColor" value="B5A6B4"/></set>
+
+</Subquake>

@@ -1,0 +1,1168 @@
+<Subquake>
+
+<set xpath="/items/item[@name='vehicleBicyclePlaceable']">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,bicycle,vcargo,canHaveCosmetic"/>
+	<property name="Group" value="Bicycles,Vehicles,Items"/>
+	<property name="Meshfile" value="@:Entities/Vehicles/VBikeMountain/VBikeMountainP.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="SoundPickup" value="bike_grab"/>
+	<property name="SoundPlace" value="bike_place"/>
+	<property name="EconomicValue" value="2500"/>
+	<property name="CarryWeight" value="10" param1="20"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_Bicycle"/>
+	<property class="Action1">
+		<property name="Vehicle" value="vehicleBicycle"/></property>
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="5"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="400"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="4500"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+	</effect_group></set>
+
+<set xpath="/items/item[@name='vehicleGyrocopterPlaceable']">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vcargo,gyroarmor,canHaveCosmetic"/>
+	<property name="Group" value="GyroCopters,Vehicles,Items"/>
+	<property name="Meshfile" value="@:Entities/Vehicles/VGyrocopter/VGyrocopterP.prefab"/>
+	<property name="EconomicValue" value="50000"/>
+	<property name="CarryWeight" value="25" param1="50"/>
+	<property name="RepairTools" value="ulmResourceAdvancedRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_Gyrocopter"/>
+	<property class="Action1">
+		<property name="Vehicle" value="vehicleGyrocopter"/>
+		<property name="VehicleSize" value="2.5,2.5,5.5"/></property>
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="5"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="400"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="7500"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+	</effect_group></set>
+
+<set xpath="/items/item[@name='vehicleMinibikePlaceable']">
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,vcargo,vstorage,canHaveCosmetic"/>
+	<property name="Group" value="Minibikes,Vehicles,Items"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="HoldType" value="7"/>
+	<property name="Meshfile" value="@:Entities/Vehicles/VBikeMini/VBikeMiniP.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="matIron"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="SoundPickup" value="minibike_grab"/>
+	<property name="SoundPlace" value="minibike_place"/>
+	<property name="EconomicValue" value="6000"/><property name="CarryWeight" value="20" param1="40"/>
+	<property name="DisplayType" value="vehicle"/><property name="SellableToTrader" value="false"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_Minibike"/>
+	<property class="Action1"><property name="Class" value="SpawnVehicle"/><property name="Vehicle" value="vehicleMinibike"/></property>
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="5"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="600"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="12000"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+	</effect_group></set>
+
+<set xpath="/items/item[@name='vehicleMotorcyclePlaceable']">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,varmor,vengine,vfuel,vlight,vseat,vcargo,vstorage,canHaveCosmetic"/>
+	<property name="Group" value="Motorcycles,Vehicles,Items"/>
+	<property name="Meshfile" value="@:Entities/Vehicles/VMotorcycle/VMotorcycleP.prefab"/>
+	<property name="SoundPickup" value="motorcycle_grab"/>
+	<property name="SoundPlace" value="motorcycle_place"/>
+	<property name="EconomicValue" value="10000"/>
+	<property name="CarryWeight" value="40" param1="120"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_Motorcycle"/>
+	<property class="Action1">
+		<property name="Vehicle" value="vehicleMotorcycle"/>
+		<property name="VehicleSize" value="1.3,1.9,3"/></property>
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="5"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="500"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="15000"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+	</effect_group></set>
+
+<set xpath="/items/item[@name='vehicleTruck4x4Placeable']">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Group" value="Cars,Vehicles,Items"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,vcargo,vstorage,vplow,canHaveCosmetic"/>
+<!--<property name="Meshfile" value="@:Entities/Vehicles/jeep_Prefab.prefab"/>-->
+	<property name="Meshfile" value="@:Entities/Vehicles/VTruck4x4/VTruck4x4P.prefab"/>
+	<property name="EconomicValue" value="30000"/>
+	<property name="CarryWeight" value="100" param1="1800"/>
+	<property name="RepairTools" value="ulmResourceAdvancedRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_CarRepair"/>
+	<property class="Action1">
+		<property name="Vehicle" value="vehicleTruck4x4"/>
+		<property name="VehicleSize" value="2.5,2.1,5"/></property>
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="5"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="1200"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="20000"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+	</effect_group></set>
+
+<append xpath="/items">
+
+<item name="ulmVehicleAmbulance02">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vcargo"/>
+	<property name="Group" value="Cars,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Ambulance_VL"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?bus_modern"/>
+	<property name="Siren" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Siren_02"/>
+    <property name="CarryWeight" value="150" param1="4500"/>
+	<property name="EconomicValue" value="60000"/>
+	<property name="RepairTools" value="ulmResourceSuperiorRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_CarRepair"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleAmbulance02"/>
+		<property name="VehicleSize" value="2,2,5"/></property>
+	<effect_group tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="5"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="100" tags="EconomicValue"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="25000"/>
+		<passive_effect name="VehicleCargoCapacity" operation="base_set" value="2000"/></effect_group></item>
+    
+<item name="ulmVehicleDuneRunner">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vcargo"/>
+	<property name="Group" value="Cars,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_DuneRunner_VL"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?v8_german"/>
+	<property name="CarryWeight" value="75" param1="2500"/>
+	<property name="EconomicValue" value="25000"/>
+	<property name="RepairTools" value="ulmResourceAdvancedRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_CarRepair"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleDuneRunner"/>
+		<property name="VehicleSize" value="2.5,2.1,5"/></property>
+	<effect_group tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="5"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="100" tags="EconomicValue"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="15000"/>
+		<passive_effect name="VehicleCargoCapacity" operation="base_set" value="800"/></effect_group></item>
+
+<item name="ulmVehicleCoupe01White">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vcargo"/>
+	<property name="Group" value="Cars,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Coupe_A"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?i6m_german"/>
+	<property name="EconomicValue" value="38000"/>
+    <property name="CarryWeight" value="100" param1="1300"/>
+	<property name="RepairTools" value="ulmResourceAdvancedRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_CarRepair"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleCoupe01"/>
+		<property name="VehicleSize" value="2.5,2.1,5"/></property></item>
+<item name="ulmVehicleCoupe01WhiteStripe">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_WhiteStripe"/></item>
+<item name="ulmVehicleCoupe01Black">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Black"/></item>
+<item name="ulmVehicleCoupe01BlackStripe">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_BlackStripe"/></item>
+<item name="ulmVehicleCoupe01Beige">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Beige"/></item>
+<item name="ulmVehicleCoupe01Blue">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Blue"/></item>
+<item name="ulmVehicleCoupe01BlueStripe">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_BlueStripe"/></item>
+<item name="ulmVehicleCoupe01Gray">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Gray"/></item>
+<item name="ulmVehicleCoupe01Green">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Green"/></item>
+<item name="ulmVehicleCoupe01Orange">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Orange"/></item>
+<item name="ulmVehicleCoupe01OrangeStripe">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_OrangeStripe"/></item>
+<item name="ulmVehicleCoupe01Purple">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Purple"/></item>
+<item name="ulmVehicleCoupe01Red">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Red"/></item>
+<item name="ulmVehicleCoupe01RedStripe">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_RedStripe"/></item>
+<item name="ulmVehicleCoupe01Cherry">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_RedDark"/></item>
+<item name="ulmVehicleCoupe01Yellow">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Yellow"/></item>
+<item name="ulmVehicleCoupe01YellowStripe">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_YellowStripe"/></item>
+<item name="ulmVehicleCoupe01Mixed1">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Multicolor1"/></item>
+<item name="ulmVehicleCoupe01Mixed2">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Multicolor2"/></item>
+<item name="ulmVehicleCoupe01Mixed3">
+	<property name="Extends" value="ulmVehicleCoupe01White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Multicolor3"/></item>
+
+<item name="ulmVehicleGokart01White">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Groups" value="Cars,GoKarts,Vehicles,Items"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,noStorage,vcargo"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Gokart"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?250cc_dirt"/>
+	<property name="EconomicValue" value="10000"/>
+	<property name="CarryWeight" value="30" param1="90"/>
+	<property name="MaintenanceGroup" value="MG_Motorcycle"/>
+	<property name="DisplayType" value="vehicleNoSlots"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleGokart01"/>
+		<property name="VehicleSize" value="1.3,1.9,3"/>
+	</property></item>
+<item name="ulmVehicleGokart01Gray">
+	<property name="Extends" value="ulmVehicleGokart01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_Color(808080);"/></item>
+<item name="ulmVehicleGokart01Black">
+	<property name="Extends" value="ulmVehicleGokart01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_Color(1A1A1A);"/></item>
+<item name="ulmVehicleGokart01LightBlue">
+	<property name="Extends" value="ulmVehicleGokart01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_Color(1C5DA2);"/></item>
+<item name="ulmVehicleGokart01DarkBlue">
+	<property name="Extends" value="ulmVehicleGokart01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_Color(00336A);"/></item>
+<item name="ulmVehicleGokart01Cyan">
+	<property name="Extends" value="ulmVehicleGokart01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_Color(25909A);"/></item>
+<item name="ulmVehicleGokart01RetroGreen">
+	<property name="Extends" value="ulmVehicleGokart01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_Color(298062);"/></item>
+<item name="ulmVehicleGokart01LimeGreen">
+	<property name="Extends" value="ulmVehicleGokart01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_Color(2CB330);"/></item>
+<item name="ulmVehicleGokart01ForestGreen">
+	<property name="Extends" value="ulmVehicleGokart01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_Color(156615);"/></item>
+<item name="ulmVehicleGokart01Purple">
+	<property name="Extends" value="ulmVehicleGokart01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_Color(500B73);"/></item>
+<item name="ulmVehicleGokart01Pink">
+	<property name="Extends" value="ulmVehicleGokart01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_Color(A64A76);"/></item>
+<item name="ulmVehicleGokart01Yellow">
+	<property name="Extends" value="ulmVehicleGokart01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_Color(FFEF00);"/></item>
+<item name="ulmVehicleGokart01Orange">
+	<property name="Extends" value="ulmVehicleGokart01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_Color(F18500);"/></item>
+<item name="ulmVehicleGokart01Brown">
+	<property name="Extends" value="ulmVehicleGokart01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_Color(98570D);"/></item>
+<item name="ulmVehicleGokart01Red">
+	<property name="Extends" value="ulmVehicleGokart01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_Color(C01500);"/></item>
+<item name="ulmVehicleGokart01Cherry">
+	<property name="Extends" value="ulmVehicleGokart01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_Color(910509);"/></item>
+
+<item name="ulmVehicleHumveeSnow">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vcargo,4x4truckplow,vlight"/>
+	<property name="Group" value="Cars,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Humvee_VL"/>
+	<property name="VehicleWheels" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Wheel_SUV_White"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?V8_american_classic_2"/>
+	<property name="EconomicValue" value="50000"/>
+    <property name="CarryWeight" value="100" param1="2800"/>
+	<property name="RepairTools" value="ulmResourceAdvancedRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_CarRepair"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleHumvee"/>
+		<property name="VehicleSize" value="2.5,2.1,5"/></property></item>
+<item name="ulmVehicleHumveeSnowCargo">
+	<property name="Extends" value="ulmVehicleHumveeSnow"/>
+	<property name="dCargo" value="1800"/>
+	<property name="VehicleVariant" value="Origin/Frame_SnowCargo"/></item>
+<item name="ulmVehicleHumveeDesert">
+	<property name="Extends" value="ulmVehicleHumveeSnow"/>
+	<property name="VehicleVariant" value="Origin/Frame_Desert"/>
+	<property name="VehicleWheels" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Wheel_SUV_Beige"/></item>
+<item name="ulmVehicleHumveeDesertCargo">
+	<property name="Extends" value="ulmVehicleHumveeDesert"/>
+	<property name="dCargo" value="1800"/>
+	<property name="VehicleVariant" value="Origin/Frame_DesertCargo"/></item>
+<item name="ulmVehicleHumveeJungle">
+	<property name="Extends" value="ulmVehicleHumveeSnow"/>
+	<property name="VehicleVariant" value="Origin/Frame_Jungle"/>
+	<property name="VehicleWheels" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Wheel_SUV_Green"/></item>
+<item name="ulmVehicleHumveeJungleCargo">
+	<property name="Extends" value="ulmVehicleHumveeJungle"/>
+	<property name="dCargo" value="1800"/>
+	<property name="VehicleVariant" value="Origin/Frame_JungleCargo"/></item>
+<item name="ulmVehicleHumveeBurnt">
+	<property name="Extends" value="ulmVehicleHumveeSnow"/>
+	<property name="VehicleVariant" value="Origin/Frame_Burned"/>
+	<property name="VehicleWheels" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Wheel_SUV_Burned"/></item>
+<item name="ulmVehicleHumveeBurntCargo">
+	<property name="Extends" value="ulmVehicleHumveeBurnt"/>
+	<property name="dCargo" value="1800"/>
+	<property name="VehicleVariant" value="Origin/Frame_BurnedCargo"/></item>
+    
+<item name="ulmVehicleHelicopterDH1">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vcargo"/>
+	<property name="Group" value="Helicopters,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Dekohawk_VL"/>
+	<property name="CarryWeight" value="200" param1="6000"/>
+	<property name="EconomicValue" value="200000"/>
+	<property name="RepairTools" value="ulmResourceSuperiorRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_HelicopterDH1"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleHelicopterDH"/>
+		<property name="VehicleSize" value="3,3,11"/></property></item>
+<item name="ulmVehicleHelicopterDH2">
+	<property name="Extends" value="ulmVehicleHelicopterDH1"/>
+	<property name="VehicleVariant" value="Frame_02"/></item>
+<item name="ulmVehicleHelicopterDH3">
+	<property name="Extends" value="ulmVehicleHelicopterDH1"/>
+	<property name="VehicleVariant" value="Frame_03"/></item>
+<item name="ulmVehicleHelicopterDH4">
+	<property name="Extends" value="ulmVehicleHelicopterDH1"/>
+	<property name="VehicleVariant" value="Frame_04"/></item>
+<item name="ulmVehicleHelicopterDH5">
+	<property name="Extends" value="ulmVehicleHelicopterDH1"/>
+	<property name="VehicleVariant" value="Frame_05"/></item>
+<item name="ulmVehicleHelicopterDH6">
+	<property name="Extends" value="ulmVehicleHelicopterDH1"/>
+	<property name="VehicleVariant" value="Frame_06"/></item>
+<item name="ulmVehicleHelicopterDH7">
+	<property name="Extends" value="ulmVehicleHelicopterDH1"/>
+	<property name="VehicleVariant" value="Frame_07"/></item>
+    
+<item name="ulmVehicleHelicopterRaven">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,vcargo"/>
+	<property name="Group" value="Helicopters,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Raven_VL"/>
+	<property name="CarryWeight" value="100" param1="1000"/>
+	<property name="EconomicValue" value="100000"/>
+	<property name="RepairTools" value="ulmResourceSuperiorRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_HelicopterRaven"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleHelicopterRaven"/>
+		<property name="VehicleSize" value="3,3,5"/></property>
+	<effect_group tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="5"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="100" tags="EconomicValue"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="15000"/>
+		<passive_effect name="VehicleCargoCapacity" operation="base_set" value="800"/></effect_group></item>
+    
+<item name="ulmVehicleMilitaryTruckDesertTarp1">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vcargo"/>
+	<property name="Group" value="Trucks,Cars,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_MilitaryTruck_VL"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?truck_modern"/>
+	<property name="EconomicValue" value="200000"/>
+    <property name="CarryWeight" value="200" param1="6000"/>
+	<property name="RepairTools" value="ulmResourceSuperiorRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_TruckRepair"/>
+	<property name="VehicleColliders" value="Tarp"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleMilitaryTruck"/>
+		<property name="VehicleSize" value="3,3,9"/></property></item>
+	
+<item name="ulmVehicleMilitaryTruckDesertTarp2">
+	<property name="Extends" value="ulmVehicleMilitaryTruckDesertTarp1"/>
+	<property name="VehicleVariant" value="Frame_DesertTarp2"/></item>
+	
+<item name="ulmVehicleMilitaryTruckDesertTarp3">
+	<property name="Extends" value="ulmVehicleMilitaryTruckDesertTarp1"/>
+	<property name="VehicleVariant" value="Frame_DesertTarp3"/></item>
+	
+<item name="ulmVehicleMilitaryTruckDesertRails">
+	<property name="Extends" value="ulmVehicleMilitaryTruckDesertTarp1" param1="VehicleColliders"/>
+	<property name="VehicleVariant" value="Frame_DesertRails"/></item>
+	
+<item name="ulmVehicleMilitaryTruckCamoTarp1">
+	<property name="Extends" value="ulmVehicleMilitaryTruckDesertTarp1"/>
+	<property name="VehicleVariant" value="Frame_CamoTarp1"/></item>
+	
+<item name="ulmVehicleMilitaryTruckCamoTarp2">
+	<property name="Extends" value="ulmVehicleMilitaryTruckDesertTarp1"/>
+	<property name="VehicleVariant" value="Frame_CamoTarp2"/></item>
+	
+<item name="ulmVehicleMilitaryTruckCamoTarp3">
+	<property name="Extends" value="ulmVehicleMilitaryTruckDesertTarp1"/>
+	<property name="VehicleVariant" value="Frame_CamoTarp3"/></item>
+	
+<item name="ulmVehicleMilitaryTruckCamoRails">
+	<property name="Extends" value="ulmVehicleMilitaryTruckDesertTarp1" param1="VehicleColliders"/>
+	<property name="VehicleVariant" value="Frame_CamoRails"/></item>
+    
+<item name="ulmVehicleMineCart">
+	<property name="Extends" value="ulmVehicleDuneRunner"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vcargo,vstorage"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Minecart_VL"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?i6_japanese_2"/>
+    <property name="CarryWeight" value="100" param1="3000"/>
+	<property name="EconomicValue" value="30000"/><property name="SellableToTrader" value="false"/>
+	<property name="RepairTools" value="ulmResourceAdvancedRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_CarRepair"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleMineCart"/>
+		<property name="VehicleSize" value="2,2,4"/></property>
+	<effect_group tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="5"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="100" tags="EconomicValue"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="20000"/>
+		<passive_effect name="VehicleCargoCapacity" operation="base_set" value="6000"/></effect_group></item>
+	
+<item name="ulmVehicleMiningDumpTruck">
+	<property name="Extends" value="ulmVehicleDuneRunner"/>
+	<property name="Group" value="Trucks,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_MiningDumpTruck_VL"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Bus_Old"/>
+	<property name="EconomicValue" value="600000"/><property name="SellableToTrader" value="false"/>
+    <property name="CarryWeight" value="300" param1="300000"/>
+	<property name="RepairTools" value="ulmResourceSuperiorRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_DumpTruckRepair"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleMiningDumpTruck"/>
+		<property name="VehicleSize" value="6,6,12"/></property>
+	<effect_group tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="5"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="100" tags="EconomicValue"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="32000"/>
+		<passive_effect name="VehicleCargoCapacity" operation="base_set" value="200000"/></effect_group></item>
+		
+<!--<property name="Variants" value="White,Gray,Black,Blue,Cyan,Green,Purple,Pink,Yellow,Orange,Brown,Red"/>-->
+<item name="ulmVehicleMinivan02White">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>	
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vcargo"/>
+	<property name="Group" value="Vans,Cars,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Minivan_1_VL"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?bus_modern"/>
+    <property name="CarryWeight" value="100" param1="2500"/>
+	<property name="EconomicValue" value="48000"/>
+	<property name="RepairTools" value="ulmResourceSuperiorRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_CarRepair"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleMinivan02"/>
+		<property name="VehicleSize" value="2,1.5,5"/></property></item>
+<item name="ulmVehicleMinivan02Gray">
+	<property name="Extends" value="ulmVehicleMinivan02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(505050)"/></item>
+<item name="ulmVehicleMinivan02Black">
+	<property name="Extends" value="ulmVehicleMinivan02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(000000);_DustLevel(0.4)"/></item>
+<item name="ulmVehicleMinivan02Blue">
+	<property name="Extends" value="ulmVehicleMinivan02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(192B57);_DustLevel(0.4)"/></item>
+<item name="ulmVehicleMinivan02Cyan">
+	<property name="Extends" value="ulmVehicleMinivan02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(0D5959)"/></item>
+<item name="ulmVehicleMinivan02Green">
+	<property name="Extends" value="ulmVehicleMinivan02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(234818);_DustLevel(0.8)"/></item>
+<item name="ulmVehicleMinivan02Purple">
+	<property name="Extends" value="ulmVehicleMinivan02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(5A0E80);_DustLevel(0.8)"/></item>
+<item name="ulmVehicleMinivan02Pink">
+	<property name="Extends" value="ulmVehicleMinivan02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(842753);"/></item>
+<item name="ulmVehicleMinivan02Yellow">
+	<property name="Extends" value="ulmVehicleMinivan02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(D9A038);"/></item>
+<item name="ulmVehicleMinivan02Orange">
+	<property name="Extends" value="ulmVehicleMinivan02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(C25200);"/></item>
+<item name="ulmVehicleMinivan02Brown">
+	<property name="Extends" value="ulmVehicleMinivan02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(6F410D);_DustLevel(0.8)"/></item>
+<item name="ulmVehicleMinivan02Red">
+	<property name="Extends" value="ulmVehicleMinivan02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(7D0900);_DustLevel(0.4)"/></item>
+	
+<item name="ulmVehicleBicycle1">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,bicycle,vcargo,vlight,canHaveCosmetic,noStorage"/>
+	<property name="Group" value="Bicycles,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Bicycle"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="SoundPickup" value="bike_grab"/>
+	<property name="SoundPlace" value="bike_place"/>
+	<property name="EconomicValue" value="2500"/>
+	<property name="CarryWeight" value="10" param1="20"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_Bicycle"/>
+	<property name="DisplayType" value="vehicleNoSlots"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleBicycle1"/></property>
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="5"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="400"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="4500"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+	</effect_group></item>
+
+<item name="ulmVehicleMinibikeOld">
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,vcargo,vstorage,canHaveCosmetic"/>
+	<property name="Group" value="Minibikes,Vehicles,Items"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="HoldType" value="7"/><property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Minibike"/>
+	<property name="DropMeshfile" value="@:Other/Items/?Misc/sack_droppedPrefab"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="matIron"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="SoundPickup" value="minibike_grab"/>
+	<property name="SoundPlace" value="minibike_place"/>
+	<property name="EconomicValue" value="6000"/><property name="CarryWeight" value="20" param1="40"/>
+	<property name="DisplayType" value="vehicle"/><property name="SellableToTrader" value="false"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_Minibike"/>
+	<property class="Action1"><property name="Class" value="SpawnVehicle"/><property name="Vehicle" value="ulmVehicleMinibikeOld"/></property>
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="5"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="400"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="9000"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+	</effect_group></item>
+	
+<item name="ulmVehicleMotorcycle01">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,vcargo,vwandererplow,canHaveCosmetic"/>
+	<property name="Group" value="Motorcycles,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Motorcycle"/>
+	<property name="SoundPickup" value="motorcycle_grab"/>
+	<property name="SoundPlace" value="motorcycle_place"/>
+	<property name="EconomicValue" value="10000"/>
+	<property name="CarryWeight" value="40" param1="120"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_Motorcycle"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleMotorcycle01"/>
+		<property name="VehicleSize" value="1.3,1.9,3"/></property>
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="5"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="500"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="14000"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+	</effect_group></item>
+	
+<item name="ulmVehicleTruck4x4Classic">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Group" value="Cars,Vehicles,Items"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,4x4truckplow,vseat,vcargo,canHaveCosmetic"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_4x4Truck"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?V8_american_classic"/>
+	<property name="EconomicValue" value="30000"/>
+	<property name="CarryWeight" value="100" param1="1800"/>
+	<property name="RepairTools" value="ulmResourceAdvancedRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_CarRepair"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicle4x4Classic"/>
+		<property name="VehicleSize" value="2.5,2.1,5"/></property>
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="5"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="1200"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="20000"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+	</effect_group></item>
+
+<item name="ulmVehicleGyrocopterBasic">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vcargo,canHaveCosmetic"/>
+	<property name="Group" value="GyroCopters,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Gyrocopter"/>
+	<property name="EconomicValue" value="50000"/>
+	<property name="CarryWeight" value="25" param1="50"/>
+	<property name="RepairTools" value="ulmResourceAdvancedRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_Gyrocopter"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleGyrocopterBasic"/>
+		<property name="VehicleSize" value="2.5,2.5,5.5"/></property>
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="5"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="400"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="13000"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+	</effect_group></item>
+
+<item name="ulmVehicleMotorcycle03White">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vcargo,vlight"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Motorcycle2_VL"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?1500cc_chopper"/>
+	<property name="EconomicValue" value="10000"/>
+	<property name="CarryWeight" value="35" param1="100"/>
+	<property name="MaintenanceGroup" value="MG_Motorcycle"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleMotorcycle03"/>
+		<property name="VehicleSize" value="1.3,1.9,3"/>
+	</property></item>
+<item name="ulmVehicleMotorcycle03Gray">
+	<property name="Extends" value="ulmVehicleMotorcycle03White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(808080);"/></item>
+<item name="ulmVehicleMotorcycle03Black">
+	<property name="Extends" value="ulmVehicleMotorcycle03White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(000000);"/></item>
+<item name="ulmVehicleMotorcycle03LightBlue">
+	<property name="Extends" value="ulmVehicleMotorcycle03White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(6480C0);"/></item>
+<item name="ulmVehicleMotorcycle03DarkBlue">
+	<property name="Extends" value="ulmVehicleMotorcycle03White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(194B81);"/></item>
+<item name="ulmVehicleMotorcycle03Cyan">
+	<property name="Extends" value="ulmVehicleMotorcycle03White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(3BB5C0);"/></item>
+<item name="ulmVehicleMotorcycle03RetroGreen">
+	<property name="Extends" value="ulmVehicleMotorcycle03White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(329C77);"/></item>
+<item name="ulmVehicleMotorcycle03LimeGreen">
+	<property name="Extends" value="ulmVehicleMotorcycle03White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(32CD37);"/></item>
+<item name="ulmVehicleMotorcycle03ForestGreen">
+	<property name="Extends" value="ulmVehicleMotorcycle03White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(1C761C);"/></item>
+<item name="ulmVehicleMotorcycle03Purple">
+	<property name="Extends" value="ulmVehicleMotorcycle03White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(5A0E80);"/></item>
+<item name="ulmVehicleMotorcycle03Pink">
+	<property name="Extends" value="ulmVehicleMotorcycle03White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(CB5B90);"/></item>
+<item name="ulmVehicleMotorcycle03Yellow">
+	<property name="Extends" value="ulmVehicleMotorcycle03White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(E5D919);_DirtOcclusion(0.1);"/></item>
+<item name="ulmVehicleMotorcycle03Orange">
+	<property name="Extends" value="ulmVehicleMotorcycle03White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(FF8D00);"/></item>
+<item name="ulmVehicleMotorcycle03Brown">
+	<property name="Extends" value="ulmVehicleMotorcycle03White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(6F410D);"/></item>
+<item name="ulmVehicleMotorcycle03Red">
+	<property name="Extends" value="ulmVehicleMotorcycle03White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(FF1B00);"/></item>
+<item name="ulmVehicleMotorcycle03Cherry">
+	<property name="Extends" value="ulmVehicleMotorcycle03White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(AB1215);"/></item>
+
+<item name="ulmVehicleDirtBike01White">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vcargo,vlight"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_DirtBike"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?250cc_dirt"/>
+	<property name="EconomicValue" value="12000"/>
+	<property name="CarryWeight" value="30" param1="90"/>
+	<property name="MaintenanceGroup" value="MG_Motorcycle"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleDirtBike01"/>
+		<property name="VehicleSize" value="1.3,1.9,3"/>
+	</property></item>
+<item name="ulmVehicleDirtBike01Gray">
+	<property name="Extends" value="ulmVehicleDirtBike01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(808080);"/></item>
+<item name="ulmVehicleDirtBike01Black">
+	<property name="Extends" value="ulmVehicleDirtBike01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(1A1A1A);"/></item>
+<item name="ulmVehicleDirtBike01LightBlue">
+	<property name="Extends" value="ulmVehicleDirtBike01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(1C5DA2);"/></item>
+<item name="ulmVehicleDirtBike01DarkBlue">
+	<property name="Extends" value="ulmVehicleDirtBike01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(00336A);"/></item>
+<item name="ulmVehicleDirtBike01Cyan">
+	<property name="Extends" value="ulmVehicleDirtBike01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(25909A);"/></item>
+<item name="ulmVehicleDirtBike01RetroGreen">
+	<property name="Extends" value="ulmVehicleDirtBike01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(298062);"/></item>
+<item name="ulmVehicleDirtBike01LimeGreen">
+	<property name="Extends" value="ulmVehicleDirtBike01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(2CB330);"/></item>
+<item name="ulmVehicleDirtBike01ForestGreen">
+	<property name="Extends" value="ulmVehicleDirtBike01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(156615);"/></item>
+<item name="ulmVehicleDirtBike01Purple">
+	<property name="Extends" value="ulmVehicleDirtBike01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(500B73);"/></item>
+<item name="ulmVehicleDirtBike01Pink">
+	<property name="Extends" value="ulmVehicleDirtBike01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(A64A76);"/></item>
+<item name="ulmVehicleDirtBike01Yellow">
+	<property name="Extends" value="ulmVehicleDirtBike01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(C0B615);"/></item>
+<item name="ulmVehicleDirtBike01Orange">
+	<property name="Extends" value="ulmVehicleDirtBike01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(CC7100);"/></item>
+<item name="ulmVehicleDirtBike01Brown">
+	<property name="Extends" value="ulmVehicleDirtBike01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(663C0C);"/></item>
+<item name="ulmVehicleDirtBike01Red">
+	<property name="Extends" value="ulmVehicleDirtBike01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(C01500);"/></item>
+<item name="ulmVehicleDirtBike01Cherry">
+	<property name="Extends" value="ulmVehicleDirtBike01White"/>
+	<property name="VehicleVariant" value="Origin/Frame" param1="_TintColor(730003);"/></item>
+	
+<item name="ulmVehicleMuscleCar01White">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vcargo,vlight"/>
+	<property name="Group" value="Cars,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Muscle_1_VL"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?V8_american_classic"/>
+    <property name="CarryWeight" value="100" param1="2200"/>
+	<property name="EconomicValue" value="40000"/>
+	<property name="RepairTools" value="ulmResourceAdvancedRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_CarRepair"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleMuscleCar01"/>
+		<property name="VehicleSize" value="2,1.5,5"/></property></item>
+<item name="ulmVehicleMuscleCar01WhiteStripe">
+	<property name="Extends" value="ulmVehicleMuscleCar01White"/>
+	<property name="VehicleVariant" value="Frame_WhiteStripe"/></item>
+<item name="ulmVehicleMuscleCar01Black">
+	<property name="Extends" value="ulmVehicleMuscleCar01White"/>
+	<property name="VehicleVariant" value="Frame_Black"/></item>
+<item name="ulmVehicleMuscleCar01BlackStripe">
+	<property name="Extends" value="ulmVehicleMuscleCar01White"/>
+	<property name="VehicleVariant" value="Frame_BlackStripe"/></item>
+<item name="ulmVehicleMuscleCar01Blue">
+	<property name="Extends" value="ulmVehicleMuscleCar01White"/>
+	<property name="VehicleVariant" value="Frame_Blue"/></item>
+<item name="ulmVehicleMuscleCar01BlueStripe">
+	<property name="Extends" value="ulmVehicleMuscleCar01White"/>
+	<property name="VehicleVariant" value="Frame_BlueStripe"/></item>
+<item name="ulmVehicleMuscleCar01Gray">
+	<property name="Extends" value="ulmVehicleMuscleCar01White"/>
+	<property name="VehicleVariant" value="Frame_Gray"/></item>
+<item name="ulmVehicleMuscleCar01GrayStripe">
+	<property name="Extends" value="ulmVehicleMuscleCar01White"/>
+	<property name="VehicleVariant" value="Frame_GrayStripe"/></item>
+<item name="ulmVehicleMuscleCar01Red">
+	<property name="Extends" value="ulmVehicleMuscleCar01White"/>
+	<property name="VehicleVariant" value="Frame_Red"/></item>
+<item name="ulmVehicleMuscleCar01RedStripe">
+	<property name="Extends" value="ulmVehicleMuscleCar01White"/>
+	<property name="VehicleVariant" value="Frame_RedStripe"/></item>
+<item name="ulmVehicleMuscleCar01Yellow">
+	<property name="Extends" value="ulmVehicleMuscleCar01White"/>
+	<property name="VehicleVariant" value="Frame_Yellow"/></item>
+<item name="ulmVehicleMuscleCar01YellowStripe">
+	<property name="Extends" value="ulmVehicleMuscleCar01White"/>
+	<property name="VehicleVariant" value="Frame_YellowStripe"/></item>
+	
+<item name="ulmVehiclePoliceCruiser">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vcargo,vlight"/>
+	<property name="Group" value="Cars,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_PoliceCruiser_VL"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?i4_serbian"/>
+	<property name="Siren" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Siren_02"/>
+    <property name="CarryWeight" value="100" param1="2000"/>
+	<property name="EconomicValue" value="55000"/>
+	<property name="RepairTools" value="ulmResourceAdvancedRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_CarRepair"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehiclePoliceCruiser"/>
+		<property name="VehicleSize" value="2,2,5"/></property>
+	<effect_group tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="5"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="100" tags="EconomicValue"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="25000"/>
+		<passive_effect name="VehicleCargoCapacity" operation="base_set" value="1300"/></effect_group></item>
+
+<item name="ulmVehicleQuadBike01Desert">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Group" value="Cars,QuadBikes,Vehicles,Items"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vcargo,vlight"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_QuadBike"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?bike_660ccm"/>
+	<property name="EconomicValue" value="20000"/>
+	<property name="CarryWeight" value="50" param1="200"/>
+	<property name="MaintenanceGroup" value="MG_Motorcycle"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleQuadBike01"/>
+		<property name="VehicleSize" value="1.3,1.9,3"/>
+	</property></item>
+<item name="ulmVehicleQuadBike01Raider">
+	<property name="Extends" value="ulmVehicleQuadBike01Desert"/>
+	<property name="VehicleVariant" value="Origin/Frame/Raider"/>
+	<property name="VehicleVariant2" value="Origin/Steering/Raider"/></item>
+<item name="ulmVehicleQuadBike01HotRod">
+	<property name="Extends" value="ulmVehicleQuadBike01Desert"/>
+	<property name="VehicleVariant" value="Origin/Frame/HotRod"/>
+	<property name="VehicleVariant2" value="Origin/Steering/HotRod"/></item>
+<item name="ulmVehicleQuadBike01Digital">
+	<property name="Extends" value="ulmVehicleQuadBike01Desert"/>
+	<property name="VehicleVariant" value="Origin/Frame/Digital"/>
+	<property name="VehicleVariant2" value="Origin/Steering/Digital"/></item>
+<item name="ulmVehicleQuadBike01Snow">
+	<property name="Extends" value="ulmVehicleQuadBike01Desert"/>
+	<property name="VehicleVariant" value="Origin/Frame/Snow"/>
+	<property name="VehicleVariant2" value="Origin/Steering/Snow"/></item>
+<item name="ulmVehicleQuadBike01Woodland">
+	<property name="Extends" value="ulmVehicleQuadBike01Desert"/>
+	<property name="VehicleVariant" value="Origin/Frame/Woodland"/>
+	<property name="VehicleVariant2" value="Origin/Steering/Woodland"/></item>
+
+<item name="ulmVehicleSedan03White">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vcargo,vlight"/>
+	<property name="Group" value="Cars,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Sedan_1_VL"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?diesel_2p5_german"/>
+	<property name="EconomicValue" value="35000"/>
+    <property name="CarryWeight" value="100" param1="2500"/>
+	<property name="RepairTools" value="ulmResourceAdvancedRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_CarRepair"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleSedan03"/>
+		<property name="VehicleSize" value="2.5,2.1,5"/></property></item>
+<item name="ulmVehicleSedan03Gray">
+	<property name="Extends" value="ulmVehicleSedan03White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(505050);"/></item>
+<item name="ulmVehicleSedan03Black">
+	<property name="Extends" value="ulmVehicleSedan03White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(0D0D0D);"/></item>
+<item name="ulmVehicleSedan03Blue">
+	<property name="Extends" value="ulmVehicleSedan03White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(192B57);"/></item>
+<item name="ulmVehicleSedan03Cyan">
+	<property name="Extends" value="ulmVehicleSedan03White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(0D5959);"/></item>
+<item name="ulmVehicleSedan03Green">
+	<property name="Extends" value="ulmVehicleSedan03White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(234818);"/></item>
+<item name="ulmVehicleSedan03Purple">
+	<property name="Extends" value="ulmVehicleSedan03White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(522966);"/></item>
+<item name="ulmVehicleSedan03Pink">
+	<property name="Extends" value="ulmVehicleSedan03White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(803357);"/></item>
+<item name="ulmVehicleSedan03Yellow">
+	<property name="Extends" value="ulmVehicleSedan03White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(D9A038);"/></item>
+<item name="ulmVehicleSedan03Orange">
+	<property name="Extends" value="ulmVehicleSedan03White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(B37524);"/></item>
+<item name="ulmVehicleSedan03Brown">
+	<property name="Extends" value="ulmVehicleSedan03White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(6F410D);"/></item>
+<item name="ulmVehicleSedan03Red">
+	<property name="Extends" value="ulmVehicleSedan03White"/>
+	<property name="VehicleVariant" value="Frame" param1="_Color(7D0900);"/></item>
+
+<!-- DEPRECATED / REMOVED
+<item name="ulmVehicleSedan03PoliceWithLights">
+	<property name="Extends" value="ulmVehicleSedan03White" param1="VehicleVariant"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Sedan_Police"/>
+	<property name="Siren" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Siren_02"/>
+	<property class="Action1"><property name="Vehicle" value="ulmVehicleSedan03Police"/></property></item>-->
+
+<item name="ulmVehicleSedan04White">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vcargo,vlight"/>
+	<property name="Group" value="Cars,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Sedan_2_VL"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?i4_serbian"/>
+    <property name="CarryWeight" value="100" param1="1500"/>
+	<property name="EconomicValue" value="37500"/>
+	<property name="RepairTools" value="ulmResourceAdvancedRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_CarRepair"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleSedan04"/>
+		<property name="VehicleSize" value="2,2,5"/></property></item>
+<item name="ulmVehicleSedan04Black">
+	<property name="Extends" value="ulmVehicleSedan04White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Black"/></item>
+<item name="ulmVehicleSedan04Beige">
+	<property name="Extends" value="ulmVehicleSedan04White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Beige"/></item>
+<item name="ulmVehicleSedan04Blue">
+	<property name="Extends" value="ulmVehicleSedan04White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Blue"/></item>
+<item name="ulmVehicleSedan04Green">
+	<property name="Extends" value="ulmVehicleSedan04White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Green"/></item>
+<item name="ulmVehicleSedan04GreenBlack">
+	<property name="Extends" value="ulmVehicleSedan04White"/>
+	<property name="VehicleVariant" value="Origin/Frame_GreenBlack"/></item>
+<item name="ulmVehicleSedan04Orange">
+	<property name="Extends" value="ulmVehicleSedan04White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Orange"/></item>
+<item name="ulmVehicleSedan04Red">
+	<property name="Extends" value="ulmVehicleSedan04White"/>
+	<property name="VehicleVariant" value="Origin/Frame_Red"/></item>
+<item name="ulmVehicleSedan04Police">
+	<property name="Extends" value="ulmVehicleSedan04White"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Sedan_2_Police_VL"/>
+	<property name="Siren" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Siren_02"/>
+	<property class="Action1"><property name="Vehicle" value="ulmVehicleSedan04Police"/></property></item>
+<item name="ulmVehicleSedan04Taxi">
+	<property name="Extends" value="ulmVehicleSedan04White"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Sedan_2_Taxi_VL"/>
+	<property class="Action1"><property name="Vehicle" value="ulmVehicleSedan04Taxi"/></property></item>
+	
+<item name="ulmVehicleSedan05White">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vcargo,vlight"/>
+	<property name="Group" value="Cars,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Sedan_3_VL"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?v8m_german_3"/>
+    <property name="CarryWeight" value="100" param1="1700"/>
+	<property name="EconomicValue" value="42000"/>
+	<property name="RepairTools" value="ulmResourceAdvancedRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_CarRepair"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleSedan05"/>
+		<property name="VehicleSize" value="2,1.5,5"/></property></item>
+<item name="ulmVehicleSedan05Black">
+	<property name="Extends" value="ulmVehicleSedan05White"/>
+	<property name="VehicleVariant" value="Frame_Black"/></item>
+<item name="ulmVehicleSedan05Blue">
+	<property name="Extends" value="ulmVehicleSedan05White"/>
+	<property name="VehicleVariant" value="Frame_Blue"/></item>
+<item name="ulmVehicleSedan05Beige">
+	<property name="Extends" value="ulmVehicleSedan05White"/>
+	<property name="VehicleVariant" value="Frame_Beige"/></item>
+<item name="ulmVehicleSedan05Brown">
+	<property name="Extends" value="ulmVehicleSedan05White"/>
+	<property name="VehicleVariant" value="Frame_Brown"/></item>
+<item name="ulmVehicleSedan05Gray">
+	<property name="Extends" value="ulmVehicleSedan05White"/>
+	<property name="VehicleVariant" value="Frame_Gray"/></item>
+<item name="ulmVehicleSedan05Green">
+	<property name="Extends" value="ulmVehicleSedan05White"/>
+	<property name="VehicleVariant" value="Frame_Green"/></item>
+<item name="ulmVehicleSedan05Orange">
+	<property name="Extends" value="ulmVehicleSedan05White"/>
+	<property name="VehicleVariant" value="Frame_Orange"/></item>
+<item name="ulmVehicleSedan05Red">
+	<property name="Extends" value="ulmVehicleSedan05White"/>
+	<property name="VehicleVariant" value="Frame_Red"/></item>
+<item name="ulmVehicleSedan05Yellow">
+	<property name="Extends" value="ulmVehicleSedan05White"/>
+	<property name="VehicleVariant" value="Frame_Yellow"/></item>
+<item name="ulmVehicleSedan05Mixed1">
+	<property name="Extends" value="ulmVehicleSedan05White"/>
+	<property name="VehicleVariant" value="Frame_Multicolor1"/></item>
+<item name="ulmVehicleSedan05Mixed2">
+	<property name="Extends" value="ulmVehicleSedan05White"/>
+	<property name="VehicleVariant" value="Frame_Multicolor2"/></item>
+<item name="ulmVehicleSedan05Mixed3">
+	<property name="Extends" value="ulmVehicleSedan05White"/>
+	<property name="VehicleVariant" value="Frame_Multicolor3"/></item>
+<item name="ulmVehicleSedan05Mixed4">
+	<property name="Extends" value="ulmVehicleSedan05White"/>
+	<property name="VehicleVariant" value="Frame_Multicolor4"/></item>
+<item name="ulmVehicleSedan05Mixed5">
+	<property name="Extends" value="ulmVehicleSedan05White"/>
+	<property name="VehicleVariant" value="Frame_Multicolor5"/></item>
+
+<item name="ulmVehicleSUV02White">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vcargo,suvbrushguard"/>
+	<property name="Group" value="Cars,Vehicles,Items"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_SUV_VL"/>
+	<property name="Engine" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?i4_japanese"/>
+	<property name="EconomicValue" value="40000"/><property name="SellableToTrader" value="false"/>
+    <property name="CarryWeight" value="100" param1="2500"/>
+	<property name="RepairTools" value="ulmResourceAdvancedRepairKit"/>
+	<property name="MaintenanceGroup" value="MG_CarRepair"/>
+	<property class="Action1">
+		<property name="Vehicle" value="ulmVehicleSUV02"/>
+		<property name="VehicleSize" value="2.5,2.1,5"/></property></item>
+<item name="ulmVehicleSUV02Gray">
+	<property name="Extends" value="ulmVehicleSUV02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_DecalColor(808080)"/></item>
+<item name="ulmVehicleSUV02Black">
+	<property name="Extends" value="ulmVehicleSUV02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_DecalColor(000000);_DirtColor(281E1E)"/></item>
+<item name="ulmVehicleSUV02Blue">
+	<property name="Extends" value="ulmVehicleSUV02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_DecalColor(192B57)"/></item>
+<item name="ulmVehicleSUV02Cyan">
+	<property name="Extends" value="ulmVehicleSUV02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_DecalColor(29CCCC)"/></item>
+<item name="ulmVehicleSUV02Green">
+	<property name="Extends" value="ulmVehicleSUV02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_DecalColor(234818)"/></item>
+<item name="ulmVehicleSUV02Purple">
+	<property name="Extends" value="ulmVehicleSUV02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_DecalColor(5A0E80)"/></item>
+<item name="ulmVehicleSUV02Red">
+	<property name="Extends" value="ulmVehicleSUV02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_DecalColor(AF2424)"/></item>
+<item name="ulmVehicleSUV02Cherry">
+	<property name="Extends" value="ulmVehicleSUV02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_DecalColor(520C0D);_DirtColor(282323)"/></item>
+<item name="ulmVehicleSUV02Pink">
+	<property name="Extends" value="ulmVehicleSUV02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_DecalColor(842753)"/></item>
+<item name="ulmVehicleSUV02Yellow">
+	<property name="Extends" value="ulmVehicleSUV02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_DecalColor(D9A038);_DirtColor(784E30)"/></item>
+<item name="ulmVehicleSUV02Orange">
+	<property name="Extends" value="ulmVehicleSUV02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_DecalColor(FF6700)"/></item>
+<item name="ulmVehicleSUV02Brown">
+	<property name="Extends" value="ulmVehicleSUV02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_DecalColor(6F410D)"/></item>
+<item name="ulmVehicleSUV02Beige">
+	<property name="Extends" value="ulmVehicleSUV02White"/>
+	<property name="VehicleVariant" value="Frame" param1="_DecalColor(CC967A)"/></item>
+<item name="ulmVehicleSUV02Police">
+	<property name="Extends" value="ulmVehicleSUV02White"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_SUV_Police_VL"/>
+	<property name="Siren" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Siren_02"/>
+	<property class="Action1"><property name="Vehicle" value="ulmVehicleSUV02Police"/></property></item>
+<item name="ulmVehicleSUV02Security">
+	<property name="Extends" value="ulmVehicleSUV02White"/>
+	<property name="Meshfile" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_SUV_Security_VL"/>
+	<property name="Siren" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Siren_02"/>
+	<property class="Action1"><property name="Vehicle" value="ulmVehicleSUV02Security"/></property></item>
+
+</append>
+
+<!--    
+		# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+			V E H I C L E   S T A T S
+	
+		# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+-->
+	
+<!-- Helicopter SUV  -->
+<append xpath="/items/item[starts-with(@name, 'ulmVehicleSUV02')]">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="6"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="24000"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="1500"/></effect_group></append>
+		
+<!-- Helicopter Vanilla Old Sedan  -->
+<append xpath="/items/item[starts-with(@name, 'ulmVehicleSedan03')]">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="6"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="20000"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="1000"/></effect_group></append>
+	
+<!-- Helicopter DH-800  -->
+<append xpath="/items/item[starts-with(@name, 'ulmVehicleHelicopterDH')]">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="6"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="28000"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="3500"/></effect_group></append>
+	
+<!-- Sports Car Old Coupe -->
+<append xpath="/items/item[starts-with(@name, 'ulmVehicleCoupe01')]">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="6"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="15000"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="700"/></effect_group></append>
+	
+<!-- Military Truck -->
+<append xpath="/items/item[starts-with(@name, 'ulmVehicleMilitaryTruck')]">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="6"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="30000"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="10000"/></effect_group></append>
+	
+<!-- Military Hummer -->
+<append xpath="/items/item[@name='ulmVehicleHumveeSnow'
+						or @name='ulmVehicleHumveeDesert'
+						or @name='ulmVehicleHumveeJungle'
+						or @name='ulmVehicleHumveeBurnt']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="6"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="26000"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="1600"/></effect_group></append>
+	
+<!-- Military Hummer Cargo -->
+<append xpath="/items/item[@name='ulmVehicleHumveeSnowCargo'
+						or @name='ulmVehicleHumveeDesertCargo'
+						or @name='ulmVehicleHumveeJungleCargo'
+						or @name='ulmVehicleHumveeBurntCargo']">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="6"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="28000"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="1800"/></effect_group></append>
+		
+<!-- Sedan Modern Cheap -->
+<append xpath="/items/item[starts-with(@name, 'ulmVehicleSedan04')]">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="6"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="15000"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="1100"/></effect_group></append>
+	
+<!-- Sedan Classic -->
+<append xpath="/items/item[starts-with(@name, 'ulmVehicleSedan05')]">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="6"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="15000"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="1200"/></effect_group></append>
+	
+<append xpath="/items/item[starts-with(@name, 'ulmVehicleMuscleCar01')]">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="6"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="18000"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="1400"/></effect_group></append>
+	
+<append xpath="/items/item[starts-with(@name, 'ulmVehicleMinivan02')]">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="6"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="18000"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="2500"/></effect_group></append>
+	
+<append xpath="/items/item[starts-with(@name, 'ulmVehicleMotorcycle03')]">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="6"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="500"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="12000"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/></effect_group></append>
+	
+<append xpath="/items/item[starts-with(@name, 'ulmVehicleDirtBike01')]">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="6"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="500"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="12000"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/></effect_group></append>
+	
+<append xpath="/items/item[starts-with(@name, 'ulmVehicleGokart01')]">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="6"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="400"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="11000"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/></effect_group></append>
+	
+<append xpath="/items/item[starts-with(@name, 'ulmVehicleQuadBike01')]">
+	<effect_group tiered="false">
+		<passive_effect operation="base_set" name="ModSlots"				value="6"/>
+		<passive_effect operation="base_set" name="VehicleCargoCapacity"	value="700"/>
+		<passive_effect operation="base_set" name="DegradationMax"			value="13000"/>
+		<passive_effect operation="base_add" name="ModPowerBonus"			value="100" tags="EconomicValue"/></effect_group></append>
+
+</Subquake>

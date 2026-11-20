@@ -1,0 +1,2443 @@
+<Subquake>
+
+<!-- Recycling Recipes -->
+    
+<append xpath="/recipes">
+
+
+<recycle time="4" name="decoCarTireSmallFlat,
+						ulmDecoTire1_S,
+						ulmDecoTire2_S,
+						ulmDecoTire3_S,
+						ulmDecoTire4_S">
+						<output name="ulmResourceScrapRubber"		count="4,6"/></recycle>
+
+<recycle time="4" name="decoCarTireFlat,
+						ulmDecoTire1,
+						ulmDecoTire2,
+						ulmDecoTire3,
+						ulmDecoTire4,
+						ulmDecoTire4_Red,
+						ulmDecoTire4_White,
+						ulmDecoTire5,
+						ulmDecoTire6">
+						<output name="ulmResourceScrapRubber"		count="8,16"/></recycle>
+
+<recycle time="5" name="decoCarWheelFlat">
+						<output name="ulmResourceScrapRubber"		count="10,20"/>
+						<output name="resourceScrapIron"			count="6,12"/></recycle>
+
+<recycle time="4" name="ulmDecoTires2_1,
+						ulmDecoTires2_1_Red,
+						ulmDecoTires2_1_White">
+						<output name="ulmResourceScrapRubber"		count="10,18"/></recycle>
+
+<recycle time="4" name="decoCarTirePile,
+						decoCarTireStack,
+						ulmDecoTires4_1,
+						ulmDecoTires4_2,
+						ulmDecoTires4_3,
+						ulmDecoTires4_4">
+						<output name="ulmResourceScrapRubber"		count="12,20"/></recycle>
+
+<recycle time="4" name="ulmResourceBicycleWheel,
+						ulmResourceGyrocopterWheel">
+						<output name="ulmResourceScrapRubber"		count="2,3"/>
+						<output name="resourceScrapIron"			count="1,4"/></recycle>
+
+<recycle time="5" name="ulmResourceMinibikeWheel">
+						<output name="ulmResourceScrapRubber"		count="3,4"/>
+						<output name="resourceScrapIron"			count="3,6"/></recycle>
+
+<recycle time="6" name="ulmResourceCarWheel,
+						ulmResourceMotorcycleWheel">
+						<output name="ulmResourceScrapRubber"		count="4,8"/>
+						<output name="resourceScrapIron"			count="5,18"/></recycle>
+
+<recycle time="7" name="ulmResourceTruckWheel">
+						<output name="ulmResourceScrapRubber"		count="10,15"/>
+						<output name="resourceScrapIron"			count="10,25"/></recycle>
+
+<recycle time="5" name="cntBin,
+						signRoadStop,
+						cntDomedTrashCanEmpty,
+						cntDomedTrashCanFull,
+						cntDomedTrashCanRandomLootHelper,
+						cntDomedTrashCanCornerEmpty,
+						cntDomedTrashCanCornerRandomLootHelper,
+						cntTrash_can01">
+						<output name="resourceScrapIron"				count="3,4"/></recycle>
+
+<recycle time="9" name="cntDumpster,
+						cntDumpsterFlies">
+						<output name="resourceScrapIron"				count="30,40"/>
+						<output name="resourceScrapPolymers"			count="2,3"/></recycle>
+
+<recycle time="9" name="cntTrashCompactor">
+						<output name="resourceScrapIron"				count="4,10"/>
+						<output name="resourceMechanicalParts"			count="1,2"/>
+						<output name="resourceElectricParts"			count="1"/></recycle>
+
+<recycle time="5" name="cntBin">
+						<output name="ulmResourceScrapSteel"			count="4,6"/></recycle>
+
+<recycle time="9" name="ulmCarBattery">
+						<output name="resourceScrapLead"				count="10,20"/>
+						<output name="resourceScrapPolymers"			count="4,5"/>
+						<output name="resourceAcid"						count="1,2"/></recycle>
+
+<recycle time="12" name="ulmBatteryCharger">
+						<output name="ulmResourceElectronicFuse"		count="1"/>
+						<output name="ulmResourceScrapWires"			count="4,5"/>
+						<output name="ulmResourceElectronicSwitch"		count="2"/>
+						<output name="ulmResourceElectronicLCDScreen"	count="1"/>
+						<output name="ulmResourceScrapCopper"			count="10,15"/>
+						<output name="resourceScrapPolymers"			count="4,6"/>
+						<output name="resourceElectricParts"			count="4,8"/>
+						<output name="resourceScrapIron"				count="6,15"/></recycle>
+
+<recycle time="3" name="ulmResourceElectronicCircuitboard">
+						<output name="resourceScrapPolymers"/>
+						<output name="ulmResourceScrapCopper"/>
+						<output name="ulmResourceElectronicMicrochip"		count="1,2"/>
+						<output name="ulmResourceElectronicFuse"/></recycle>
+
+<recycle time="4" name="ulmResourceBook">
+						<output name="resourcePaper"						count="5,10"/>
+						<output name="ulmResourceResearch"					count="2"/></recycle>
+
+<recycle time="6" name="decoLaptop">
+						<output name="ulmResourceElectronicLCDScreen"/>
+						<output name="ulmResourceElectronicCircuitboard"/>
+						<output name="resourceScrapPolymers"				count="2,3"/>
+						<output name="ulmResourceElectronicDiode"			count="1,3"/></recycle>
+
+<recycle time="6" name="decoComputerMonitorKeyboardMousePC">
+						<output name="decoComputerDeskTopPC"/>
+						<output name="decoComputerMonitorKeyboardMouse"/></recycle>
+
+<recycle time="6" name="decoComputerMonitorKeyboardMouse,
+						decoComputerMonitorKeyboardMouse2">
+						<output name="decoComputerMonitor"/>
+						<output name="ulmResourceElectronicCircuitboard"/>
+						<output name="resourceScrapPolymers"				count="5"/>
+						<output name="ulmResourceScrapWires"				count="2"/>
+						<output name="ulmResourceBatterySmall"				count="1,2"/>
+						<output name="ulmResourceElectronicDiode"			count="1,3"/></recycle>
+
+<!--<recycle time="6" name="decoComputerMonitorKeyboardMousePC">
+						<output name="ulmResourceElectronicLCDScreen"/>
+						<output name="ulmResourceElectronicCircuitboard"	count="2"/>
+						<output name="ulmResourceScrapWires"				count="2"/>
+						<output name="resourceScrapPolymers"				count="5"/>
+						<output name="resourceScrapIron"					count="10"/></recycle>-->
+
+<recycle time="6" name="decoComputerDeskTopPC">
+						<output name="resourceScrapIron"					count="2,5"/>
+						<output name="ulmResourceElectronicCircuitboard"/>
+						<output name="ulmResourceScrapWires"/>
+						<output name="resourceScrapPolymers"/>
+						<output name="ulmResourceElectronicDiode"			count="1,2"/></recycle>
+
+<recycle time="6" name="decoComputerMonitor">
+						<output name="resourceScrapPolymers"				count="2"/>
+						<output name="ulmResourceElectronicLCDScreen"/>
+						<output name="ulmResourceElectronicCircuitboard"/>
+						<output name="resourceScrapIron"/>
+						<output name="ulmResourceElectronicDiode"			prob=".8"/></recycle>
+
+<recycle time="5" name="tv_fallen,
+						tv_large_1,
+						tv_large_2,
+						ulmBlockTVVariantHelper">
+						<output name="ulmResourceElectronicLCDScreen"		prob=".4"/>
+						<output name="ulmResourceElectronicCircuitboard"	prob=".4"/>
+						<output name="ulmResourceElectronicSwitch"			prob=".4"/>
+						<output name="ulmResourceScrapWires"				prob=".8"/>
+						<output name="resourceElectricParts"				count="1,3"/>
+						<output name="resourceScrapPolymers"				count="2,3"/>
+						<output name="ulmResourceElectronicDiode"			prob=".8"/></recycle>
+
+<recycle time="6" name="commercialDistributionBox">
+						<output name="ulmResourceElectronicFuse"			count="2"/>
+						<output name="resourceScrapIron"					count="5"/>
+						<output name="ulmResourceScrapWires"/></recycle>
+
+<recycle time="6" name="fusebox,
+						breakerBoxClosed,
+						breakerBoxOpen,
+						breakerBoxBroken,
+						breakerBoxWallClosed,
+						breakerBoxWallOpen">
+						<output name="ulmResourceElectronicFuse"	count="2"/>
+						<output name="resourceScrapIron"			count="2"/>
+						<output name="ulmResourceScrapWires"/></recycle>
+
+<recycle time="5" name="residentialSingleMeterDisconnect,
+						commercialSingleMeter,
+						commercialDualMeter,
+						commercialTripleMeter,
+						commercialQuadMeter,
+						commercialSingleMeterDisconnect">
+						<output name="resourceScrapIron"			count="2"/>
+						<output name="ulmResourceElectronicFuse"/>
+						<output name="ulmResourceScrapWires"/>
+						<output name="ulmResourceGears"/>
+						<output name="resourceScrapPolymers"/></recycle>
+
+<recycle time="9" name="tableSaw">
+						<output name="resourceScrapIron"			count="20,30"/>
+						<output name="resourceForgedIron"			count="3,6"/>
+						<output name="resourceMechanicalParts"		count="2,4"/>
+						<output name="ulmResourceGears"				count="1"/>
+						<output name="ulmSmallEngine"				prob=".35"/>
+						<output name="ulmResourceElectronicDiode"	prob=".8"/></recycle>
+
+<recycle time="5" name="officeChair01VariantHelper">
+						<output name="resourceLeather"				count="3,5"/>
+						<output name="resourceScrapIron"			count="15,25"/>
+						<output name="ulmResourceNutsAndBolts"		count="4,8"/>
+						<output name="resourceMechanicalParts"		count="1,2"/>
+						<output name="ulmResourceBallBearings"		count="1,2"/></recycle>
+
+<!-- RC_Lights -->
+<recycle time="5" name="meleeToolFlashlight02,
+						modGunFlashlight,
+						modArmorHelmetLight">
+						<output name="resourceScrapIron"			count="1,2"/>
+						<output name="ulmResourceBatterySmall"		count="1,2"/>
+						<output name="resourceHeadlight"			prob=".75"/>
+						<output name="ulmResourceElectronicSwitch"	prob=".4"/></recycle>
+
+<recycle time="5" name="wallTorchLight,
+						wallTorchLightPlayer">
+						<output name="ulmResourceBranch"/>
+						<output name="ulmResourceCharcoal"/></recycle>
+
+<recycle time="5" name="candle,
+						candleWallLight,
+						candleWallLightPlayer,
+						candleTableLight,
+						candleTableLightPlayer">
+						<output name="resourceAnimalFat"			count="1,3"/>
+						<output name="resourceYuccaFibers"			prob="0.75"/></recycle>
+
+<recycle time="5" name="chandelierLight,
+						ulmLightChandelierPlayer">
+						<output name="resourceScrapBrass"			count="15,25"/>
+						<output name="resourceScrapPolymers"		count="4,9"/>
+						<output name="resourceBrokenGlass"			count="3,8"/>
+						<output name="ulmResourceScrapWires"		count="1,2"/></recycle>
+
+<recycle time="3" name="ulmLightCandelabraPlayer,
+						ulmLightCandelabraSmallPlayer">
+						<output name="resourceScrapBrass"			count="8,16"/>
+						<output name="resourceAnimalFat"			count="3,9"/>
+						<output name="resourceYuccaFibers"			prob="0.75"/></recycle>
+
+<recycle time="3" name="ceilingLight02Brass,
+						ceilingLight02Brass_2x2,
+						porchLight04Brass,
+						ulmLightPorch04BrassPlayer,
+						ulmLightCeiling02BrassPlayer,
+						ulmLightCeiling05BrassPlayer">
+						<output name="resourceScrapBrass"			count="6,10"/>
+						<output name="resourceBrokenGlass"			count="1,3"/>
+						<output name="ulmResourceScrapCopper"		prob="0.75"/></recycle>
+
+<recycle time="6" name="ulmLightStreetLampClassicPlayer,
+						ulmLightSearchLightsPole">
+						<output name="resourceScrapIron"			count="15,30"/>
+						<output name="resourceElectricParts"		count="1,2"/></recycle>
+
+<recycle time="6" name="lanternDecorLightWhite,
+						lanternDecorLightRed,
+						lanternDecorLightYellow,
+						lanternDecorLightGreen,
+						lanternDecorLightBlue,
+						lanternDecorLightGrey,
+						lanternDecorLightBlack,
+						lanternDecorLightRandomHelper,
+						lanternDecorLightWhite_player,
+						lanternDecorLightRed_player,
+						lanternDecorLightYellow_player,
+						lanternDecorLightGreen_player,
+						lanternDecorLightBlue_player,
+						lanternDecorLightGrey_player,
+						lanternDecorLightBlack_player,
+						lanternDecorLightBlockVariantHelper,
+						flashlightDecor,
+						ulmLightFlashlightPlayer">
+						<output name="resourceScrapPolymers"		count="1,2"/>
+						<output name="ulmResourceBatterySmall"		count="1,2"/>
+						<output name="resourceHeadlight"			prob=".75"/>
+						<output name="ulmResourceElectronicSwitch"	prob=".4"/></recycle>
+
+<recycle time="6" name="lanternOldBlockVariantHelper">
+						<output name="resourceScrapIron"			count="3,6"/>
+						<output name="ulmResourceBatterySmall"		count="1,2"/>
+						<output name="resourceHeadlight"			prob=".65"/>
+						<output name="ulmResourceElectronicSwitch"	prob=".3"/></recycle>
+
+<recycle time="4" name="ceilingLight01,
+						ceilingLight01_2x2,
+						ceilingLight01_player,
+						ceilingLight02,
+						ceilingLight02_2x2,
+						ceilingLight05,
+						ceilingLight07,
+						ceilingLight07_2x2,
+						ceilingLight07_player,
+						industrialLight01,
+						industrialLight01_player,
+						industrialLight02,
+						industrialLight02_player,
+						industrialLight02Red,
+						porchLight01,
+						porchLight04,
+						sconce1Light,
+						sconce1LightShadow,
+						ulmLightTableLamp01VariantHelper,
+						trackLight,
+						wallLight01,
+						ulmLightCeiling07VariantHelper,
+						ulmLightCeiling02Player,
+						ulmLightCeiling04Player,
+						ulmLightCeiling04bPlayer,
+						ulmLightCeiling05Player,
+						ulmLightDeskLamp01Player,
+						ulmLightDeskLamp02VariantHelper,
+						ulmLightFluorescentPlayer,
+						ulmLightPorchWhitePlayer,
+						ulmLightRecessedVariantHelper,
+						ulmLightSconcePlayer,
+						ulmLightTrackPlayer">
+						<output name="resourceScrapIron"					count="2,5"/>
+						<output name="ulmResourceScrapCopper"				count="1,2"/>
+						<output name="resourceBrokenGlass"					count="2,3"/></recycle>
+
+<recycle time="6" name="signPillsLogo,
+						signPillsLogoSmall,
+						signTrafficLight,
+						signTrafficLightOffset,
+						workLightPOI,
+						xRayDisplayLight1,
+						xRayDisplayLight2,
+						ulmLightSignPillsLogoPlayer,
+						ulmLightSignPillsLogoSmallPlayer,
+						ulmLightWorkLampVariantHelper,
+						ulmLightXRayDisplay1Player,
+						ulmLightXRayDisplay2Player,
+						projectorCeiling,
+						projectorTableTop">
+						<output name="resourceScrapIron"					count="10,15"/>
+						<output name="ulmResourceElectronicDiode"			count="4,8"/>
+						<output name="ulmResourceScrapWires"				count="1,2"/>
+						<output name="resourceBrokenGlass"					count="2,3"/></recycle>
+
+<recycle time="6" name="spotlightNailedDownPOI,
+						spotlightPlayer">
+						<output name="resourceScrapIron"					count="25,30"/>
+						<output name="resourceElectricParts"				count="2,3"/>
+						<output name="ulmResourceScrapWires"				count="1,2"/>
+						<output name="resourceBrokenGlass"					count="2,3"/></recycle>
+
+<recycle time="6" name="ulmStreetLightVariantHelper">
+						<output name="resourceForgedSteel"					count="1,2"/>
+						<output name="resourceScrapIron"					count="5,15"/>
+						<output name="resourceElectricParts"				count="3,4"/>
+						<output name="ulmResourceScrapWires"				count="1,2"/>
+						<output name="resourceBrokenGlass"					count="2,3"/></recycle>
+
+<recycle time="5" name="ulmLightCeilingFanPlayer">
+						<output name="resourceScrapIron"					count="2,3"/>
+						<output name="ulmResourceScrapCopper"				count="1,2"/>
+						<output name="resourceBrokenGlass"					count="2,3"/>
+						<output name="ulmResourcePlank"						count="1,4"/>
+						<output name="ulmResourceGears"						count="1,2"/></recycle>
+
+<recycle time="5" name="ulmLightEndTablePlayer">
+						<output name="resourceScrapIron"					count="2,3"/>
+						<output name="resourceElectricParts"				count="1,2"/>
+						<output name="ulmResourceScrapCopper"				count="1,2"/>
+						<output name="resourceBrokenGlass"					count="2,3"/>
+						<output name="ulmResourcePlank"						count="2,5"/></recycle>
+
+<recycle time="6" name="ulmLightSignExitVariantHelper,
+						ulmLightSignOpenVariantHelper">
+						<output name="ulmResourceElectronicDiode"			count="4,8"/>
+						<output name="ulmResourceScrapCopper"				count="1,2"/>
+						<output name="resourceScrapPolymers"				count="1,2"/></recycle>
+
+<recycle time="6" name="cntNewspaperDispenserStandBlue">
+						<output name="resourceScrapIron"					count="5,10"/></recycle>
+
+<!-- RC_Engines -->
+<recycle time="9" name="ulmResourceEngineV1">
+						<output name="resourceForgedIron"					count="2,5"/>
+						<output name="resourceScrapIron"					count="10,15"/>
+						<output name="resourceMechanicalParts"				count="1,3"/>
+						<output name="resourceOil"							count="2,4"/>
+						<output name="ulmResourceGears"						count="2,3"/>
+						<output name="ulmResourceElectronicCopperCoil"		count="1"/></recycle>
+
+<recycle time="9" name="ulmSmallEngine">
+						<output name="resourceForgedIron"					count="2,4"/>
+						<output name="resourceScrapIron"					count="10,15"/>
+						<output name="resourceMechanicalParts"				count="1,3"/>
+						<output name="resourceOil"							count="2,4"/>
+						<output name="ulmResourceGears"						count="2,3"/>
+						<output name="ulmResourceElectronicCopperCoil"		count="1"/></recycle>
+
+<recycle time="9" name="ulmGyrocopterEngine">
+						<output name="resourceForgedSteel"					count="4,8"/>
+						<output name="ulmResourceScrapSteel"				count="10,15"/>
+						<output name="resourceMechanicalParts"				count="3,5"/>
+						<output name="resourceOil"							count="3,5"/>
+						<output name="ulmResourceGears"						count="4,6"/>
+						<output name="ulmResourceElectronicCopperCoil"		count="1"/>
+						<output name="ulmResourceNutsAndBolts"				count="12,16"/>
+						<output name="ulmResourceScrapRubber"				count="5,8"/></recycle>
+
+<recycle time="9" name="ulmBuggyEngine">
+						<output name="resourceForgedSteel"					count="4,8"/>
+						<output name="ulmResourceScrapSteel"				count="15,25"/>
+						<output name="resourceMechanicalParts"				count="4,6"/>
+						<output name="resourceOil"							count="4,6"/>
+						<output name="ulmResourceGears"						count="6,8"/>
+						<output name="ulmResourceElectronicCopperCoil"		count="1,2"/>
+						<output name="ulmResourceNutsAndBolts"				count="16,20"/>
+						<output name="ulmResourceScrapRubber"				count="7,10"/></recycle>
+
+<recycle time="9" name="ulmMotorcycleEngine">
+						<output name="resourceForgedSteel"					count="4,8"/>
+						<output name="ulmResourceScrapSteel"				count="20,30"/>
+						<output name="resourceMechanicalParts"				count="5,7"/>
+						<output name="resourceOil"							count="5,6"/>
+						<output name="ulmResourceGears"						count="7,10"/>
+						<output name="ulmResourceElectronicCopperCoil"		count="1,2"/>
+						<output name="ulmResourceNutsAndBolts"				count="20,28"/>
+						<output name="ulmResourceScrapRubber"				count="8,12"/></recycle>
+
+<recycle time="9" name="ulmCarEngine">
+						<output name="resourceForgedSteel"					count="5,10"/>
+						<output name="ulmResourceScrapSteel"				count="20,30"/>
+						<output name="resourceMechanicalParts"				count="5,7"/>
+						<output name="resourceOil"							count="5,6"/>
+						<output name="ulmResourceGears"						count="7,10"/>
+						<output name="ulmResourceElectronicCopperCoil"		count="1,2"/>
+						<output name="ulmResourceNutsAndBolts"				count="20,28"/>
+						<output name="ulmResourceScrapRubber"				count="8,12"/></recycle>
+
+<recycle time="9" name="ulmTruckEngine">
+						<output name="resourceForgedSteel"					count="5,9"/>
+						<output name="ulmResourceScrapTitanium"				count="25,40"/>
+						<output name="resourceMechanicalParts"				count="8,10"/>
+						<output name="resourceOil"							count="6,8"/>
+						<output name="ulmResourceGears"						count="8,12"/>
+						<output name="ulmResourceElectronicCopperCoil"		count="1,2"/>
+						<output name="ulmResourceNutsAndBolts"				count="28,38"/>
+						<output name="ulmResourceScrapRubber"				count="10,16"/></recycle>
+
+<recycle time="9" name="ulmModArmorBroadcastRadio">
+						<output name="resourceScrapPolymers"				count="2,4"/>
+						<output name="ulmResourceBatterySmall"				count="1,2"/>
+						<output name="ulmResourceElectronicCircuitboard"	prob=".8"/>
+						<output name="ulmResourceElectronicSwitch"			prob=".5"/></recycle>
+
+<recycle time="9" name="ulmLightRoadBarricadePlayer">
+						<output name="resourceScrapIron"					count="5,8"/>
+						<output name="resourceScrapPolymers"				count="2,4"/>
+						<output name="ulmResourceBatterySmall"				count="1,2"/>
+						<output name="ulmResourcePlank"						count="4,6"/>
+						<output name="resourceHeadlight"					count="1,2"/></recycle>
+
+<recycle time="12" name="ulmElectricMotor">
+						<output name="ulmResourceElectronicCopperCoil"		count="1,2"/>
+						<output name="ulmResourceBallBearings"				count="1,2"/>
+						<output name="resourceForgedIron"					count="1,2"/>
+						<output name="resourceScrapIron"					count="4,8"/>
+						<output name="ulmResourceScrapWires"				count="2,3"/>
+						<output name="resourceScrapPolymers"				count="3,5"/>
+						<output name="resourceOil"							prob=".5"/></recycle>
+
+<recycle time="9" name="ulmResourceElectronicCopperCoil">
+						<output name="ulmResourceScrapWires"				count="5,20"/>
+						<output name="resourceScrapPolymers"				count="3,5"/>
+						<output name="ulmResourceScrapSteel"				count="1,5"/>
+						<output name="ulmResourceScrapRubber"				prob="0.75"/></recycle>
+
+<recycle time="9" name="burningBarrelPlayer">
+						<output name="resourceScrapIron"					count="10,20"/></recycle>
+
+<recycle time="9" name="meleeToolRepairT3Nailgun">
+						<output name="resourceScrapIron"					count="4,8"/>
+						<output name="resourceScrapPolymers"				count="1,2"/>
+						<output name="ulmResourceElectronicCopperCoil"		prob=".75"/>
+						<output name="ulmResourceElectronicSwitch"			prob=".5"/></recycle>
+
+<recycle time="9" name="meleeToolAxeT3Chainsaw,
+						meleeToolPickT3Auger,
+						ulmToolJackhammer">
+						<output name="meleeToolAxeT3ChainsawParts"			count="1,4"/>
+						<output name="ulmResourceScrapSteel"				count="15,30"/>
+						<output name="resourceMetalPipe"					count="1,2"/>
+						<output name="resourceScrapPolymers"				count="1,2"/>
+						<output name="ulmSmallEngine"						prob=".75"/></recycle>
+
+<recycle time="9" name="ulmToolBerserkerDrill">
+						<output name="meleeToolAxeT3ChainsawParts"			count="1,4"/>
+						<output name="ulmResourceScrapTitanium"				count="60,90"/>
+						<output name="resourceMetalPipe"					count="4,6"/>
+						<output name="ulmResourceGears"						count="5,10"/>
+						<output name="ulmResourceElectronicCircuitboard"	count="1,2"/>
+						<output name="ulmSmallEngine"						prob=".75"/>
+						<output name="ulmResourceMilitaryFiber"				count="5,10"/></recycle>
+
+<recycle time="8" name="meleeToolSalvageT3ImpactDriver">
+						<output name="ulmResourceScrapSteel"				count="15,30"/>
+						<output name="resourceScrapPolymers"				count="1,2"/>
+						<output name="ulmResourceGears"						count="1,3"/>
+						<output name="ulmResourceElectronicCopperCoil"		prob=".75"/>
+						<output name="ulmResourceElectronicSwitch"			prob=".5"/>
+						<output name="resourceOil"							prob=".4"/></recycle>
+
+<recycle time="4" name="decoHandTruck">
+						<output name="resourceMetalPipe"		count="2,3"/>
+						<output name="resourceScrapIron"		count="8,14"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+						
+<!-- RC_Conveyor -->
+<recycle time="5" name="factoryConveyorBelt,
+						factoryConveyorCap,
+						factoryConveyorBridge,
+						factoryConveyorTee,
+						factoryConveyorCorner,
+						factoryConveyorCorner2,
+						factoryConveyorRamp,
+						factoryConveyorWedgeRamp">
+						<output name="resourceMetalPipe"		count="1,2"/>
+						<output name="resourceScrapIron"		count="8,12"/>
+						<output name="ulmResourceGears"			count="1,2"/>
+						<output name="ulmResourceBallBearings"	count="1,2"/>
+						<output name="ulmResourceScrapRubber"	count="4,7"/></recycle>
+
+<recycle time="5" name="cashRegisterConveyorMiddle,
+						cashRegisterConveyorCorner,
+						cashRegisterConveyorStraight">
+						<output name="resourceMetalPipe"		count="1,2"/>
+						<output name="resourceScrapIron"		count="20,30"/>
+						<output name="ulmResourceGears"			count="1,2"/>
+						<output name="ulmResourceBallBearings"	count="1,2"/>
+						<output name="ulmResourceScrapRubber"	count="4,7"/></recycle>
+
+<!-- RC_Furniture -->
+<recycle time="5" name="gurneyBed,
+						cntShoppingCart,
+						cntShoppingCartEmpty,
+						cntShoppingCartRandomLootHelper,
+						cntFileCabinetShortOpen,
+						cntFileCabinetShortClosed,
+						cntLockersShortOpen,
+						cntLockersShortClosed">
+						<output name="resourceScrapIron"		count="6,12"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+
+<recycle time="5" name="bunkBedMade,
+						bunkBedMessy,
+						bunkBedMattress">
+						<output name="resourceCloth"			count="5,15"/>
+						<output name="resourceSpring"			count="2,6"/>
+						<output name="resourceMetalPipe"		count="5,10"/>
+						<output name="resourceScrapIron"		count="3,8"/></recycle>
+
+<recycle time="5" name="bunkBedFrame">
+						<output name="resourceMetalPipe"		count="5,10"/>
+						<output name="resourceScrapIron"		count="3,8"/></recycle>
+
+<recycle time="7" name="bed02">
+						<output name="resourceCloth"			count="10,15"/>
+						<output name="resourceSpring"			count="4,8"/>
+						<output name="resourceMetalPipe"		count="3,4"/>
+						<output name="resourceScrapIron"		count="15,20"/>
+						<output name="ulmResourcePlank"			count="4,7"/>
+						<output name="ulmResourceScrapPlank"	count="2,3"/></recycle>
+
+<recycle time="9" name="hospitalBed">
+						<output name="resourceMetalPipe"		count="3,4"/>
+						<output name="resourceElectricParts"	count="2,3"/>
+						<output name="resourceMechanicalParts"	count="2,3"/>
+						<output name="resourceScrapPolymers"	count="6,12"/>
+						<output name="resourceScrapIron"		count="15,25"/></recycle>
+						
+<recycle time="5" name="barStoolVariantHelper">
+						<output name="resourceScrapIron"		count="5,15"/>
+						<output name="resourceCloth"			count="1,2"/>
+						<output name="resourceCropCottonPlant"	count="1,4"/></recycle>
+
+<recycle time="5" name="metalTablePillar0.025CTR,
+						decoTableRound">
+						<output name="resourceScrapIron"		count="5,15"/></recycle>
+
+<recycle time="5" name="decoPoolTable">
+						<output name="ulmResourcePlank"			count="6,20"/>
+						<output name="ulmResourceScrapPlank"	count="4,12"/>
+						<output name="resourceScrapIron"		count="9,18"/>
+						<output name="resourceCloth"			count="3,5"/></recycle>
+
+<!-- RC_Sign -->
+<recycle time="5" name="signPosterWantedMissing01,
+						signPosterWantedMissing02,
+						signPosterWantedMissing03,
+						signBookSaleAd,
+						signBread01,
+						signBread02,
+						signCigaretteAd,
+						signDinersMenu,
+						signDinersMenu2m,
+						signDinersMenu2mCentered,
+						signLaborDaySaleAd,
+						signMegaCrushAd,
+						signNotice01,
+						signNotice02,
+						signNotice03,
+						signNotice04,
+						signSafetyWorkProtection,
+						signSale01,
+						signSale02,
+						signShamwaySale">
+						<output name="resourcePaper"			count="4,6"/></recycle>
+
+<recycle time="3" name="signBulletinBoard01,
+						signBulletinBoard02,
+						signPosterMovie2159,
+						signPosterMovieLoneWolf,
+						signPosterMovieMammasJustice,
+						signPosterMovieSexualTension,
+						signPosterMovieTheater2159,
+						signPosterMovieTheaterLoneWolf,
+						signPosterMovieTheaterMammasJustice,
+						signPosterMovieTheaterSexualTension">
+						<output name="ulmResourcePlank"			count="1,4"/>
+						<output name="ulmResourceScrapPlank"	count="1,4"/>
+						<output name="resourcePaper"			count="4,6"/></recycle>
+
+<recycle time="5" name="signBathroomSignUnisexWallMount,
+						signBathroomSignUnisexCeilingMount,
+						signBathroomSignWomenWallMount,
+						signBathroomSignWomenCeilingMount,
+						signBathroomSignMenWallMount,
+						signBathroomSignMenCeilingMount">
+						<output name="resourceScrapPolymers"	count="1,2"/>
+						<output name="resourcePaper"			count="1,3"/></recycle>
+
+<recycle time="5" name="oldChair1VariantHelper">
+						<output name="resourceScrapIron"		count="5,8"/>
+						<output name="resourceCloth"			count="1,3"/></recycle>
+
+<recycle time="5" name="barracksChair">
+						<output name="resourceCloth"			count="2,5"/>
+						<output name="resourceScrapIron"		count="1,10"/>
+						<output name="ulmResourceMilitaryFiber"	prob="0.5"/></recycle>
+
+<recycle time="5" name="restaurantTableEnd,
+						restaurantTableMiddle">
+						<output name="resourceScrapIron"		count="2,5"/>
+						<output name="ulmResourcePlank"			count="2,4"/>
+						<output name="ulmResourceScrapPlank"	count="1,2"/></recycle>
+
+<recycle time="5" name="sectionalPlaidCouchSofaMiddle,
+						sectionalPlaidCouchSofaCorner,
+						sectionalPlaidCouchSofaArm,
+						sectionalPlaidChair,
+						sectionalPlaidCouchSofaBlockVariantHelper,
+						couchSofa01,
+						chairCouchSofa01,
+						couchModernArm,
+						couchModernArmRed,
+						couchModernCornerRed,
+						couchModernSectionRed,
+						couchModernArmGreen,
+						couchModernCornerGreen,
+						couchModernSectionGreen,
+						couchModernArmBlue,
+						couchModernCornerBlue,
+						couchModernSectionBlue,
+						couchModernArmGrey,
+						couchModernCornerGrey,
+						couchModernSectionGrey,
+						couchModernArmWhite,
+						couchModernCornerWhite,
+						couchModernSectionWhite,
+						couchModernArmBlack,
+						couchModernCornerBlack,
+						couchModernSectionBlack,
+						couchModernBlockVariantHelper">
+						<output name="ulmResourcePlank"			count="2,3"/>
+						<output name="ulmResourceScrapPlank"	count="1,2"/>
+						<output name="resourceCloth"			count="3,4"/>
+						<output name="resourceNail"				count="6,12"/>
+						<output name="oldCash"					count="2,5" prob="0.05"/></recycle>
+
+<recycle time="5" name="sectionalLeatherCouchSofaArm,
+						sectionalLeatherCouchSofaCorner,
+						sectionalLeatherCouchSofaMiddle,
+						sectionalLeatherChair,
+						sectionalLeatherCouchSofaBlockVariantHelper,
+						leatherCouchSofa2,
+						leatherChairCouchSofa2,
+						restaurantBooth,
+						restaurantBoothCorner,
+						restaurantBoothBrown,
+						restaurantBoothCornerBrown,
+						restaurantBoothRed,
+						restaurantBoothCornerRed,
+						restaurantBoothOrange,
+						restaurantBoothCornerOrange,
+						restaurantBoothYellow,
+						restaurantBoothCornerYellow,
+						restaurantBoothGreen,
+						restaurantBoothCornerGreen,
+						restaurantBoothBlue,
+						restaurantBoothCornerBlue,
+						restaurantBoothPurple,
+						restaurantBoothCornerPurple,
+						restaurantBoothWhite,
+						restaurantBoothCornerWhite,
+						restaurantBoothBlack,
+						restaurantBoothCornerBlack,
+						restaurantBoothPink,
+						restaurantBoothCornerPink">
+						<output name="ulmResourcePlank"			count="2,3"/>
+						<output name="ulmResourceScrapPlank"	count="1,2"/>
+						<output name="resourceLeather"			count="2,4"/>
+						<output name="resourceNail"				count="6,12"/>
+						<output name="oldCash"					count="2,5" prob="0.05"/></recycle>
+
+<recycle time="3" name="cntFileCabinetTallOpen,
+						cntFileCabinetTallClosed,
+						cntLockersTallOpen,
+						cntLockersTallClosed,
+						cntLockersTallDoubleOpen,
+						cntLockersTallDoubleClosed,
+						cntLockersTallMixOpen,
+						cntLockersTallMixClosed,
+						cntLockersTallMixLinkOpen,
+						cntLockersTallMixLinkClosed,
+						cntMetalDesk02Closed,
+						cntMetalDesk02Open">
+						<output name="resourceScrapIron"		count="15,25"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+
+<recycle time="5" name="cntMedicineCabinetOpen,
+						cntMedicineCabinetClosed">
+						<output name="resourceScrapIron"		count="2,4"/>
+						<output name="resourceScrapPolymers"	count="2,3"/>
+						<output name="resourceBrokenGlass"		count="2,3"/></recycle>
+	
+<!-- RC_Resin -->
+<recycle time="2" name="meleeToolTorch">
+						<output name="ulmResourceBranch"		count="1"/>
+						<output name="ulmResourceResin"			count="1,5"/></recycle>
+	
+<!-- RC_Clay -->
+<recycle time="2" name="ulmToolMoldBrick,
+						ulmToolMoldGlass,
+						ulmToolMoldIngot">
+						<output name="resourceClayLump"			count="5,10"/></recycle>
+
+<!-- RC_Wood -->
+<recycle time="2" name="meleeToolPaintTool,
+						ulmDecoToyRocket">
+						<output name="ulmResourceScrapWood"		count="1,5"/></recycle>
+
+<recycle time="2" name="meleeWpnClubT0WoodenClub,
+						ulmMeleeSpearWood,
+						ulmMeleeClubCricketBat,
+						ulmMeleeClubRollingPin,
+						woodChair1,
+						woodChair1Broken">
+						<output name="ulmResourceScrapWood"		count="5,20"/></recycle>
+
+<recycle time="2" name="ulmMeleePaddle,
+						ulmToolHammerWood">
+						<output name="ulmResourceScrapWood"		count="15,30"/></recycle>
+
+<!-- RC_Wood + Nails -->
+<recycle time="2" name="ulmMeleeClubTableLegMace">
+						<output name="ulmResourceScrapWood"		count="5,20"/>
+						<output name="resourceNail"				count="4,8"/></recycle>
+
+<recycle time="3" name="cntPillCaseClosed,
+						cntPillCaseEmpty">
+						<output name="ulmResourcePlank"			count="2,3"/>
+						<output name="ulmResourceScrapPlank"	count="1,2"/>
+						<output name="ulmResourceScrapWood"		count="1,2"/></recycle>
+
+<recycle time="5" name="schoolDesk">
+						<output name="resourceScrapIron"		count="3,5"/>
+						<output name="resourceScrapPolymers"	count="2,3"/>
+						<output name="ulmResourceScrapWood"		count="5,10"/></recycle>
+	
+<!-- RC_Bone -->
+<recycle time="2" name="meleeWpnBladeT0BoneKnife,
+						ulmMeleeClubBone">
+						<output name="ulmResourceBonePowder"	count="5,10"/></recycle>
+	
+<!-- RC_Leather -->
+<recycle time="2" name="meleeWpnKnucklesT0LeatherKnuckles">
+						<output name="resourceCloth"			count="5,10"/></recycle>
+
+<!-- RC_Cloth -->
+<recycle time="5" name="laundryCartEmpty">
+						<output name="resourceCloth"			count="5,10"/>
+						<output name="ulmResourcePlank"			count="2,6"/>
+						<output name="resourceScrapIron"		count="2,4"/></recycle>
+
+<recycle time="5" name="laundryCartFull">
+						<output name="resourceCloth"			count="15,20"/>
+						<output name="ulmResourcePlank"			count="2,6"/>
+						<output name="resourceScrapIron"		count="2,4"/></recycle>
+
+<!-- RC_Plastic -->
+<recycle time="4" name="cntWaterCoolerBottle,
+						cntWaterCoolerBottleSideCentered,
+						cntBruteStyleTrashCanEmpty,
+						cntBruteStyleTrashCanFull,
+						cntBruteStyleTrashCanRandomLootHelper">
+						<output name="resourceScrapPolymers"	count="2,4"/></recycle>
+
+<recycle time="6" name="cntWaterCoolerFull,
+						cntWaterCoolerFullSideCentered,
+						cntCoolerOpen,
+						cntCoolerOpenRed,
+						cntCoolerOpenGreen,
+						cntCoolerClosed,
+						cntCoolerClosedRed,
+						cntCoolerClosedGreen,
+						cntLaundryBasketVer1Empty,
+						cntLaundryBasketVer2Full,
+						cntShoppingBasket,
+						cntShoppingBasketBlue,
+						cntShoppingBasketGreen,
+						cntShoppingBasketOrange,
+						cntShoppingBasketRed,
+						cntShoppingBasketTeal,
+						cntShoppingBasketYellow,
+						cntShoppingBasketWhite,
+						cntShoppingBasketEmpty,
+						cntShoppingBasketEmptyBlue,
+						cntShoppingBasketEmptyGreen,
+						cntShoppingBasketEmptyOrange,
+						cntShoppingBasketEmptyRed,
+						cntShoppingBasketEmptyTeal,
+						cntShoppingBasketEmptyWhite,
+						cntShoppingBasketEmptyYellow,
+						cntShoppingBasketRandomLootHelper">
+						<output name="resourceScrapPolymers"	count="3,5"/></recycle>
+
+<recycle time="4" name="meleeWpnBladeT1CandyKnife,
+						meleeWpnClubT1CandyClub,
+						ulmMeleeBatonPoliceBaton,
+						ulmMeleeClubTennisRacket,
+						decoMannequinMale,
+						decoMannequinMaleBroken,
+						decoMannequinFemale,
+						decoMannequinFemaleBroken">
+						<output name="resourceScrapPolymers"	count="4,8"/></recycle>
+
+<recycle time="5" name="cntTiltTruckEmpty,
+						cntTiltTruckFull,
+						cntTiltTruckFullFlies">
+						<output name="resourceScrapIron"		count="3,6"/>
+						<output name="resourceMechanicalParts"	count="1,2"/>
+						<output name="resourceScrapPolymers"	count="4,8"/></recycle>
+
+<recycle time="5" name="ulmMeleeBatonPoliceBatonWithBlade">
+						<output name="resourceScrapPolymers"	count="4,8"/>
+						<output name="resourceScrapIron"		count="10,20"/></recycle>
+
+<!-- RC_Stone -->
+<recycle time="3" name="meleeToolShovelT0StoneShovel,
+						meleeToolRepairT0StoneAxe,
+						meleeToolRepairT0TazasStoneAxe,
+						meleeWpnSpearT0StoneSpear,
+						meleeWpnSledgeT0StoneSledgehammer,
+						ulmToolPickaxeStone">
+						<output name="resourceRockSmall"		count="1,5"/>
+						<output name="ulmResourceBranch"		count="1,20"/>
+						<output name="resourceYuccaFibers"		count="1,10"/></recycle>
+
+<!-- RC_Brass -->
+<recycle time="1" name="casinoCoin,
+						ulmResourceBobbyPin" count="5">
+						<output name="resourceScrapBrass"		count="1"/></recycle>
+<recycle time="1" name="resourceBulletCasing">
+						<output name="resourceScrapBrass"		count="1"/></recycle>
+
+<recycle time="1" name="ulmResourceHingeBrass">
+						<output name="resourceScrapBrass"		count="1,2"/></recycle>
+
+<recycle time="1" name="resourceDoorKnob,
+						ulmResourceBrassValve">
+						<output name="resourceScrapBrass"		count="2,4"/></recycle>
+
+<recycle time="2" name="ulmResourceIngotBrass">
+						<output name="resourceScrapBrass"		count="8,10"/></recycle>
+
+<recycle time="2" name="ulmResourceIngotIron,
+						ulmResourceIngotCrudeIron">
+						<output name="resourceScrapIron"		count="8,10"/></recycle>
+
+<recycle time="2" name="ulmResourceIngotGold">
+						<output name="resourceGoldNugget"		count="8,10"/></recycle>
+
+<recycle time="2" name="ulmResourceIngotSilver">
+						<output name="resourceSilverNugget"		count="8,10"/></recycle>
+
+<recycle time="2" name="ulmResourceIngotZinc">
+						<output name="ulmResourceOreZinc"		count="2"/></recycle>
+
+<recycle time="3" name="resourceCandleStick,
+						resourceTrophy1">
+						<output name="resourceScrapBrass"		count="5,10"/></recycle>
+
+<recycle time="3" name="resourceRadiator">
+						<output name="resourceScrapBrass"		count="15,25"/></recycle>
+
+<recycle time="8" name="churchBell,
+						churchBell1x2x1,
+						churchBellHanging,
+						churchBellHanging1x2x1">
+						<output name="resourceScrapBrass"		count="25,35"/></recycle>
+
+<recycle time="3" name="ulmMeleeKnucklesBrassKnuckles">
+						<output name="resourceScrapBrass"		count="10,20"/>
+						<output name="resourceLeather"			count="2,3"/></recycle>
+
+<!-- RC_Lead -->
+<recycle time="1" name="resourceBulletTip,
+						resourceFishingWeight">
+						<output name="resourceScrapLead"		count="1"/></recycle>
+
+<recycle time="3" name="resourceBuckshot">
+						<output name="resourceScrapLead"		count="1,2"/></recycle>
+
+<recycle time="3" name="resourceTrophy2">
+						<output name="resourceScrapLead"		count="4,8"/></recycle>
+
+<recycle time="3" name="ulmResourceIngotLead">
+						<output name="resourceScrapLead"		count="8,10"/></recycle>
+
+<recycle time="5" name="resourceRocketTip">
+						<output name="resourceScrapLead"					count="4,10"/>
+						<output name="ulmResourceElectronicCircuitboard"	prob=".75"/>
+						<output name="ulmResourceScrapWires"				prob=".5"/>
+						<output name="resourceSpring"						prob=".5"/>
+						<output name="resourceGunPowder"					count="1,2"/></recycle>
+
+<!-- RC_Copper -->
+<recycle time="1" name="ulmResourceScrapWires" count="5">
+						<output name="ulmResourceScrapCopper"	count="1"/></recycle>
+
+<recycle time="3" name="ulmResourceIngotCopper">
+						<output name="ulmResourceScrapCopper"	count="8,10"/></recycle>
+
+<!-- RC_Iron -->
+<recycle time="4" name="resourceNail" count="5">
+						<output name="resourceScrapIron"		count="1"/></recycle>
+
+<recycle time="4" name="resourceArrowHeadIron">
+						<output name="resourceScrapIron"		count="1,2"/></recycle>
+
+<recycle time="3" name="cntMailbox">
+						<output name="resourceScrapIron"		count="4,6"/></recycle>
+
+<recycle time="3" name="cntMailBox01White,
+						cntMailBox02White,
+						cntMailBox03White,
+						cntMailBox01Brown,
+						cntMailBox02Brown,
+						cntMailBox03Brown,
+						cntMailBox01Red,
+						cntMailBox02Red,
+						cntMailBox03Red,
+						cntMailBox01Orange,
+						cntMailBox02Orange,
+						cntMailBox03Orange,
+						cntMailBox01Yellow,
+						cntMailBox02Yellow,
+						cntMailBox03Yellow,
+						cntMailBox01Green,
+						cntMailBox02Green,
+						cntMailBox03Green,
+						cntMailBox01Blue,
+						cntMailBox02Blue,
+						cntMailBox03Blue,
+						cntMailBox01Purple,
+						cntMailBox02Purple,
+						cntMailBox03Purple,
+						cntMailBox01Grey,
+						cntMailBox02Grey,
+						cntMailBox03Grey,
+						cntMailBox01Black,
+						cntMailBox02Black,
+						cntMailBox03Black,
+						cntMailBox01Pink,
+						cntMailBox02Pink,
+						cntMailBox03Pink,
+						cntMailBox01RandomHelper,
+						cntMailBox02RandomHelper,
+						cntMailBox03RandomHelper,
+						cntMailBox01VariantHelper,
+						cntMailBox02VariantHelper,
+						cntMailBox03VariantHelper,
+						ulmContainerMailBoxApartmentLVariantHelper,
+						ulmContainerMailBoxApartmentSVariantHelper">
+						<output name="resourceScrapIron"		count="4,6"/>
+						<output name="ulmResourcePlank"			count="1,2"/>
+						<output name="ulmResourceScrapPlank"	prob="0.5"/></recycle>
+
+<recycle time="3" name="apartmentMailboxClosedRed,
+						apartmentMailboxClosedYellow,
+						apartmentMailboxClosedGreen,
+						apartmentMailboxClosedBlue,
+						apartmentMailboxClosedGrey,
+						apartmentMailboxClosedWhite,
+						apartmentMailboxOpenRed,
+						apartmentMailboxOpenYellow,
+						apartmentMailboxOpenGreen,
+						apartmentMailboxOpenBlue,
+						apartmentMailboxOpenGrey,
+						apartmentMailboxOpenWhite">
+						<output name="resourceScrapIron"		count="6,8"/>
+						<output name="ulmResourceHingeBrass"	count="2,3"/></recycle>
+
+<recycle time="2" name="resourceMetalPipe">
+						<output name="resourceScrapIron"		count="5,10"/></recycle>
+
+<recycle time="5" name="cntFileCabinetShortOpen,
+						cntFileCabinetShortClosed,
+						cntPostMailbox">
+						<output name="resourceScrapIron"		count="6,12"/></recycle>
+
+<recycle time="3" name="toolBellows">
+						<output name="resourceScrapIron"		count="5,15"/>
+						<output name="resourceLeather"			count="8,12"/>
+						<output name="ulmResourceScrapWood"		count="3,6"/></recycle>
+
+<recycle time="3" name="toolCookingGrill,
+						modMeleeClubBarbedWire">
+						<output name="resourceScrapIron"		count="6,15"/></recycle>
+
+<recycle time="3" name="meleeWpnBladeT1HuntingKnife,
+						ulmMeleeBladeKnifeCombatIron,
+						ulmMeleeBladeKnifeKunai,
+						meleeToolShovelT1IronShovel,
+						ulmMeleeBladeKnifeCleaverIron,
+						meleeToolRepairT1ClawHammer,
+						meleeToolAxeT1IronFireaxe,
+						meleeToolPickT1IronPickaxe,
+						meleeWpnSpearT1IronSpear,
+						meleeWpnClubT1BaseballBat,
+						meleeWpnSledgeT1IronSledgehammer,
+						meleeWpnKnucklesT1IronKnuckles,
+						ulmMeleeAxeCarpenters,
+						ulmMeleeBladeMacheteIron,
+						ulmMeleeBladeMisshapedJunkBlade,
+						ulmMeleeBladeSwordIron,
+						ulmMeleeClubIron,
+						ulmMeleeClubIronMorningStar,
+						ulmMeleePolearmPitchfork,
+						ulmMeleePolearmBoathook,
+						ulmMeleeBladeSaw,
+						ulmMeleeSpearIron,
+						ulmMeleeTwoHandedPipe">
+						<output name="resourceScrapIron"		count="5,20"/>
+						<output name="resourceLeather"			count="2,3"/></recycle>
+
+<!-- RC_Iron + Cloth -->
+<recycle time="3" name="meleeWpnBatonT0PipeBaton">
+						<output name="resourceScrapIron"		count="10,20"/>
+						<output name="resourceCloth"			count="2,3"/></recycle>
+
+<recycle time="3" name="ulmMeleeBladeKnifeScrapIron,
+						ulmToolShovelScrapIron,
+						ulmMeleeBladeFoldingKnife,
+						ulmMeleeBladeKnifeCleaverRusty,
+						meleeWpnBladeT3Machete,
+						ulmMeleeAxeScrapIron,
+						ulmMeleeAxeCrudeIron,
+						ulmMeleeBladeSwordScrap,
+						ulmMeleeBladeKatanaScrapIron,
+						ulmMeleeSpearScrapIron,
+						ulmMeleeKnucklesScrapKnuckles,
+						ulmToolPickaxeScrapIron">
+						<output name="resourceScrapIron"		count="10,20"/>
+						<output name="resourceLeather"			count="2,3"/></recycle>
+
+<recycle time="3" name="radiatorHouse01">
+						<output name="resourceScrapIron"		count="10,20"/>
+						<output name="ulmResourceBrassValve"	count="1,2"/>
+						<output name="resourceMetalPipe"		count="1,2"/></recycle>
+
+<recycle time="3" name="toolCookingPot,
+						ulmMeleeClubGolfClub,
+						cntFileCabinetTallOpen,
+						cntFileCabinetTallClosed">
+						<output name="resourceScrapIron"		count="15,25"/></recycle>
+
+
+<recycle time="3" name="ulmMeleeBladeRex">
+						<output name="resourceScrapIron"		count="10,30"/>
+						<output name="resourceLeather"			count="3,4"/>
+						<output name="resourceBone"				count="2,4"/></recycle>
+
+<recycle time="3" name="meleeToolSalvageT1Wrench">
+						<output name="resourceScrapIron"		count="10,30"/>
+						<output name="ulmResourceGears"			count="2,3"/></recycle>
+
+<recycle time="3" name="ulmToolFryingPan">
+						<output name="resourceScrapIron"		count="20,30"/></recycle>
+
+<recycle time="3" name="toolForgeCrucible">
+						<output name="resourceScrapIron"		count="40,60"/></recycle>
+
+<recycle time="3" name="ulmMeleeGreataxeScrapIron,
+						ulmMeleeSledgeScrapIron">
+						<output name="resourceScrapIron"		count="40,60"/>
+						<output name="resourceLeather"			count="4,6"/></recycle>
+
+<recycle time="3" name="airConditioner,
+						airConditionVentFan,
+						airConditionVenstFanDouble">
+						<output name="resourceScrapIron"					count="10,20"/>
+						<output name="resourceMechanicalParts"				count="1,4"/>
+						<output name="resourceMetalPipe"					count="2,5"/>
+						<output name="resourceElectricParts"				count="2,5"/>
+						<output name="resourceRadiator"						prob="0.8"/>
+						<output name="ulmResourceElectronicCircuitboard"	prob="0.5"/>
+						<output name="ulmResourceScrapWires"				prob="0.5"/></recycle>
+
+<recycle time="3" name="ulmAirConditionerPowered">
+						<output name="resourceScrapIron"					count="30,50"/>
+						<output name="resourceMetalPipe"					count="1,8"/>
+						<output name="resourceRadiator"						count="1,2"/>
+						<output name="ulmResourceNutsAndBolts"				count="10,28"/>
+						<output name="ulmElectricMotor"						prob="0.8"/>
+						<output name="ulmResourceElectronicCircuitboard"	count="1,3"/>
+						<output name="ulmResourceScrapWires"				count="1,5"/></recycle>
+
+<recycle time="3" name="ulmMeleeBladeElectro,
+						ulmMeleeBladeInferno">
+						<output name="resourceScrapIron"					count="20,40"/>
+						<output name="ulmResourceElectronicCopperCoil"		count="1"/>
+						<output name="resourceLeather"						count="2,3"/>
+						<output name="resourceElectricParts"				prob="0.5"/>
+						<output name="ulmResourceElectronicCircuitboard"	prob="0.5"/>
+						<output name="ulmResourceScrapWires"				prob="0.5"/>
+						<output name="ulmResourceElectronicSwitch"			prob="0.5"/></recycle>
+
+<!-- RC_StunBaton -->
+<recycle time="3" name="meleeWpnBatonT2StunBaton">
+						<output name="resourceScrapIron"					count="20,40"/>
+						<output name="ulmResourceElectronicCopperCoil"		count="1"/>
+						<output name="ulmResourceNutsAndBolts"				count="5,10"/>
+						<output name="resourceLeather"						count="2,3"/>
+						<output name="resourceElectricParts"				prob="0.5"/>
+						<output name="ulmResourceElectronicCircuitboard"	prob="0.5"/>
+						<output name="ulmResourceScrapWires"				prob="0.5"/>
+						<output name="ulmResourceElectronicSwitch"			prob="0.5"/></recycle>
+
+<!-- RC_Steel -->
+<recycle time="2" name="resourceArrowHeadSteelAP">
+						<output name="ulmResourceScrapSteel"	count="1,2"/></recycle>
+
+<recycle time="2" name="resourceSpring">
+						<output name="ulmResourceScrapSteel"	count="2,4"/></recycle>
+
+<recycle time="2" name="ulmResourceGears,
+						ulmResourceHingeSteel,
+						ulmResourceIngotSteel,
+						ulmResourceRebarSteel">
+						<output name="ulmResourceScrapSteel"	count="5,10"/></recycle>
+
+<recycle time="2" name="ulmResourceBallBearings">
+						<output name="ulmResourceScrapSteel"	count="1,2"/></recycle>
+
+<recycle time="2" name="ulmResourceMetalMesh">
+						<output name="ulmResourceScrapSteel"	count="5,10"/>
+						<output name="resourceScrapLead"		count="5,10"/></recycle>
+
+<recycle time="3" name="resourceForgedSteel,
+						resourceRocketCasing,
+						ulmAmmoFuelCanEmpty">
+						<output name="ulmResourceScrapSteel"	count="5,20"/></recycle>
+
+<!-- RC_Steel Electric -->
+<recycle time="3" name="ulmMeleeBladeElectroSaber,ulmMeleeSledgeHectorsWrath">
+						<output name="ulmResourceScrapSteel"				count="20,40"/>
+						<output name="ulmResourceElectronicCopperCoil"		count="1"/>
+						<output name="resourceLeather"						count="2,3"/>
+						<output name="resourceElectricParts"				prob="0.5"/>
+						<output name="ulmResourceElectronicCircuitboard"	prob="0.5"/>
+						<output name="ulmResourceScrapWires"				prob="0.5"/>
+						<output name="ulmResourceElectronicSwitch"			prob="0.5"/></recycle>
+
+<recycle time="3" name="cntMunitionsBox,
+						cntMunitionsBoxArmy,
+						cntMunitionsBoxRed,
+						cntMunitionsBoxGreen,
+						cntMunitionsBoxBlue,
+						cntMunitionsBoxOrange">
+						<output name="ulmResourceScrapSteel"				count="15,30"/></recycle>
+
+<recycle time="5" name="ulmRailingSteelMiddleA,
+						ulmRailingSteelMiddleB,
+						ulmRailingSteelMiddleC,
+						ulmRailingSteelAL,
+						ulmRailingSteelAR,
+						ulmRailingSteelBL,
+						ulmRailingSteelBR,
+						ulmRailingSteelOuter,
+						ulmRailingSteelInner,
+						ulmRailingSteelVariantHelper,
+						ulmStorageSteelCrate1,
+						ulmStorageSteelCrate1Secure,
+						ulmStorageSteelCrate1Signed,
+						ulmStorageSteelBarrel1,
+						ulmStorageSteelBarrel1Secure,
+						ulmStorageSteelVariantHelper">
+						<output name="ulmResourceScrapSteel"				count="25,50"/>
+						<output name="ulmResourceHingeSteel"				count="1,2"/>
+						<output name="ulmResourceRebarSteel"				count="1,2"/>
+						<output name="resourceSpring"						count="1,2"/>
+						<output name="ulmResourceNutsAndBolts"				count="10,20"/>
+						<output name="ulmResourceElectronicCircuitboard"	prob=".75"/>
+						<output name="ulmResourceElectronicLCDScreen"		prob=".75"/>
+						<output name="ulmResourceScrapWires"				prob=".75"/></recycle>
+
+<recycle time="5" name="ulmStorageSteelDoubleCrate1,
+						ulmStorageSteelDoubleCrate1Secure,
+						ulmStorageSteelDoubleCrate1Signed,
+						ulmStorageSteelDoubleCrate2,
+						ulmStorageSteelDoubleCrate2Secure,
+						ulmStorageSteelDoubleCrate2Signed,
+						ulmStorageSteelDoubleVariantHelper">
+						<output name="ulmResourceScrapSteel"				count="50,100"/>
+						<output name="ulmResourceHingeSteel"				count="2,5"/>
+						<output name="ulmResourceRebarSteel"				count="2,4"/>
+						<output name="ulmResourceNutsAndBolts"				count="20,40"/>
+						<output name="resourceSpring"						count="2,4"/>
+						<output name="ulmResourceScrapWires"				count="1,5"/>
+						<output name="ulmResourceElectronicCircuitboard"	count="1,2"/>
+						<output name="ulmResourceElectronicLCDScreen"		count="1,2"/></recycle>
+
+<!-- RC_Safes -->
+<recycle time="5" name="cntWallSafe,
+						cntWallSafeOpen,
+						cntDeskSafe,
+						cntDeskSafeOpen,
+						cntWallSafeShamway,
+						cntWallSafeBrewery,
+						ulmContainerSteelSafe1Open,
+						ulmContainerSteelSafe1Closed,
+						ulmContainerSteelSafe1Secure,
+						ulmContainerSteelSafe1CTROpen,
+						ulmContainerSteelSafe1CTRClosed,
+						ulmContainerSteelSafe1CTRSecure,
+						ulmContainerSteelSafe1WallOpen,
+						ulmContainerSteelSafe1WallClosed,
+						ulmContainerSteelSafe1WallSecure,
+						ulmContainerSmallSafeVariantHelper,
+						ulmContainerSteelSafeVariantHelper,
+						ulmContainerSteelSafe5Open,
+						ulmContainerSteelSafe5Closed,
+						ulmContainerSteelSafe5Secure">
+						<output name="ulmResourceScrapSteel"	count="25,50"/>
+						<output name="ulmResourceRebarSteel"	count="2,4"/>
+						<output name="ulmResourceHingeSteel"	count="1,2"/>
+						<output name="ulmResourceGears"			count="1,2"/>
+						<output name="ulmResourceNutsAndBolts"	count="10,20"/></recycle>
+
+<recycle time="7" name="cntGunSafe,
+						ulmContainerSteelSafe2Open,
+						ulmContainerSteelSafe2Closed,
+						ulmContainerSteelSafe2Secure,
+						ulmContainerSteelSafe6Open,
+						ulmContainerSteelSafe6Closed,
+						ulmContainerSteelSafe6Secure">
+						<output name="ulmResourceScrapSteel"	count="50,100"/>
+						<output name="ulmResourceRebarSteel"	count="5,8"/>
+						<output name="ulmResourceHingeSteel"	count="2,4"/>
+						<output name="ulmResourceGears"			count="3,4"/>
+						<output name="ulmResourceNutsAndBolts"	count="15,30"/></recycle>
+
+<recycle time="9" name="ulmContainerSteelSafe3Open,
+						ulmContainerSteelSafe3Closed,
+						ulmContainerSteelSafe3Secure,
+						ulmContainerSteelSafe4Open,
+						ulmContainerSteelSafe4Closed,
+						ulmContainerSteelSafe4Secure,">
+						<output name="ulmResourceScrapSteel"	count="100,200"/>
+						<output name="ulmResourceRebarSteel"	count="10,15"/>
+						<output name="ulmResourceHingeSteel"	count="3,6"/>
+						<output name="ulmResourceGears"			count="6,12"/>
+						<output name="ulmResourceNutsAndBolts"	count="30,60"/></recycle>
+
+<recycle time="9" name="ulmContainerSteelSafe1Open,
+						ulmContainerSteelSafe1Closed,
+						ulmContainerSteelSafe1Secure,
+						ulmContainerSteelSafeVariantHelper">
+						<output name="ulmResourceScrapSteel"	count="25,50"/>
+						<output name="ulmResourceRebarSteel"	count="2,5"/>
+						<output name="ulmResourceHingeSteel"	count="1,2"/>
+						<output name="ulmResourceGears"			count="2,5"/>
+						<output name="ulmResourceNutsAndBolts"	count="10,20"/></recycle>
+
+<recycle time="30" name="ulmContainerVault">
+						<output name="resourceForgedSteel"		count="50,100"/>
+						<output name="ulmResourceScrapSteel"	count="100,150"/>
+						<output name="ulmResourceRebarSteel"	count="10,20"/>
+						<output name="ulmResourceHingeSteel"	count="5,10"/>
+						<output name="ulmResourceGears"			count="20,40"/>
+						<output name="ulmResourceNutsAndBolts"	count="100,200"/></recycle>
+
+<recycle time="4" name="ulmMeleeBladeKnifeCombatSteel,
+						meleeToolShovelT2SteelShovel,
+						meleeToolAxeT2SteelAxe,
+						meleeToolPickT2SteelPickaxe,
+						meleeWpnClubT3SteelClub,
+						meleeWpnSpearT3SteelSpear,
+						ulmMeleeBladeKatana,
+						meleeWpnKnucklesT3SteelKnuckles,
+						ulmMeleeBladeMacheteSteel,
+						ulmMeleeBladeZweihander,
+						meleeWpnSledgeT3SteelSledgehammer,
+						ulmMeleePolearmTrident,
+						ulmMeleeSpearSerpent,
+						ulmToolPickaxeIceBreaker">
+						<output name="ulmResourceScrapSteel"	count="10,30"/>
+						<output name="resourceLeather"			count="2,3"/></recycle>
+
+<recycle time="3" name="meleeToolWireTool">
+						<output name="ulmResourceScrapSteel"	count="5,30"/>
+						<output name="resourceMechanicalParts"	count="1" prob="0.75"/></recycle>
+
+<recycle time="3" name="meleeToolSalvageT2Ratchet">
+						<output name="ulmResourceScrapSteel"	count="10,30"/>
+						<output name="ulmResourceGears"			count="2,3"/></recycle>
+
+<!-- RC_Chitin -->
+<recycle time="3" name="ulmMeleeBladeChitinSaber,
+						ulmMeleeClubChitin,
+						ulmMeleeKnucklesChitin,
+						ulmMeleeSpearChitin">
+						<output name="ulmResourceChitin"		count="3,6"/>
+						<output name="ulmResourceMandibles"		count="1,2"/>
+						<output name="ulmResourceScrapSteel"	count="5,10"/>
+						<output name="resourceLeather"			count="2,3"/></recycle>
+
+<!-- RC_Titanium Low -->
+<recycle time="5" name="ulmResourceIngotTitanium,
+						ulmResourceRebarTitanium">
+						<output name="ulmResourceScrapTitanium" count="5,10"/></recycle>
+
+<!-- RC_Titanium Medium -->
+<recycle time="5" name="ulmResourceForgedTitanium">
+						<output name="ulmResourceScrapTitanium" count="10,20"/></recycle>
+
+<recycle time="5" name="ulmLadderTitanium,
+						ulmRailingTitaniumVariantHelper,
+						ulmRailingTitaniumMiddleA,
+						ulmStorageTitaniumCrate1,
+						ulmStorageTitaniumCrate1Secure,
+						ulmStorageTitaniumCrate1Signed,
+						ulmStorageTitaniumBarrel1,
+						ulmStorageTitaniumBarrel1Secure,
+						ulmStorageTitaniumBarrel1Signed,
+						ulmStorageTitaniumVariantHelper">
+						<output name="ulmResourceScrapTitanium" count="25,50"/></recycle>
+
+<recycle time="5" name="ulmStorageTitaniumDoubleCrate1,
+						ulmStorageTitaniumDoubleCrate1Secure,
+						ulmStorageTitaniumDoubleCrate1Signed,
+						ulmStorageTitaniumDoubleCrate2,
+						ulmStorageTitaniumDoubleCrate2Secure,
+						ulmStorageTitaniumDoubleCrate2Signed,
+						ulmStorageTitaniumDoubleVariantHelper">
+						<output name="ulmResourceScrapTitanium" count="25,50"/></recycle>
+
+<!-- RC_Titanium + Leather -->
+<recycle time="5" name="ulmMeleeBladeKnifeTitanium,
+						ulmToolShovelTitanium,
+						ulmMeleeBladeKatanaTitanium,
+						ulmMeleeAxeTitanium,
+						ulmMeleeSledgeTitanium,
+						ulmMeleeBladeMacheteTitanium,
+						ulmMeleeSpearTitanium,
+						ulmMeleeKnucklesTitaniumKnuckles,
+						ulmMeleeClubTitanium,
+						ulmToolPickaxeTitanium,
+						ulmModChainsawChainTitanium">
+						<output name="ulmResourceScrapTitanium" count="10,30"/>
+						<output name="resourceLeather"			count="2,3"/></recycle>
+
+<!-- RC_Thermal Katana -->
+<recycle time="3" name="ulmMeleeBladeKatanaThermal">
+						<output name="ulmResourceScrapTitanium"				count="20,40"/>
+						<output name="ulmResourceElectronicCopperCoil"		count="1"/>
+						<output name="resourceLeather"						count="2,3"/>
+						<output name="resourceElectricParts"				prob="0.5"/>
+						<output name="ulmResourceElectronicCircuitboard"	prob="0.5"/>
+						<output name="ulmResourceScrapWires"				prob="0.5"/>
+						<output name="ulmResourceElectronicSwitch"			prob="0.5"/></recycle>
+
+<!-- RC_RocketSledge -->
+<recycle time="3" name="ulmMeleeSledgeRocket">
+						<output name="ulmResourceScrapTitanium"				count="60,90"/>
+						<output name="ulmResourceElectronicCopperCoil"		count="2,3"/>
+						<output name="resourceLeather"						count="4,6"/>
+						<output name="resourceElectricParts"				prob="1,2"/>
+						<output name="ulmResourceElectronicCircuitboard"	prob="1"/>
+						<output name="ulmResourceScrapWires"				prob="1,2"/>
+						<output name="ulmResourceElectronicSwitch"			prob="0.5"/></recycle>
+
+<!-- RC_BowPrimitive -->
+<recycle time="3" name="gunBowT0PrimitiveBow">
+						<output name="ulmResourceBranch"		count="5,20"/>
+						<output name="resourceYuccaFibers"		count="5,20"/>
+						<output name="resourceCloth"			prob="0.5"/></recycle>
+
+<!-- RC_BowHunting -->
+<recycle time="4" name="gunBowT1WoodenBow">
+						<output name="gunBowT1WoodenBowParts"	count="1,2"/>
+						<output name="ulmResourceBranch"		count="5,20"/>
+						<output name="resourceLeather"			count="2,3"/>
+						<output name="resourceYuccaFibers"		count="5,20"/></recycle>
+
+<!-- RC_BowCompound -->
+<recycle time="5" name="gunBowT3CompoundBow">
+						<output name="gunBowT1WoodenBowParts"	count="1,2"/>
+						<output name="resourceScrapPolymers"	count="5,20"/>
+						<output name="resourceSpring"			count="4,8"/>
+						<output name="resourceLeather"			count="2,3"/></recycle>
+
+<!-- RC_CrossbowIron -->
+<recycle time="4" name="gunBowT1IronCrossbow">
+						<output name="gunBowT1WoodenBowParts"	count="1,2"/>
+						<output name="resourceScrapIron"		count="10,20"/>
+						<output name="resourceLeather"			count="2,3"/>
+						<output name="ulmResourceRope"			count="1,2"/>
+						<output name="ulmResourceScrapWood"		count="3,6"/></recycle>
+
+<!-- RC_CrossbowCompound -->
+<recycle time="5" name="gunBowT3CompoundCrossbow">
+						<output name="gunBowT1WoodenBowParts"	count="1,2"/>
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceScrapPolymers"	count="5,20"/>
+						<output name="resourceLeather"			count="2,3"/></recycle>
+
+<!-- RC_Pistols -->
+<recycle time="3" name="gunHandgunT0PipePistol,
+						ulmGunKineticPistolScrap1,
+						ulmGunKineticPistolScrap2">
+						<output name="resourceScrapIron"		count="5,10"/>
+						<output name="resourceScrapPolymers"	count="1,2"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+
+<recycle time="4" name="gunHandgunT1Pistol,
+						ulmGunKineticPistolMakarov,
+						ulmGunKineticPistolGlock,
+						ulmGunKineticPistolCondor,
+						ulmGunKineticPistolFalcon,
+						ulmGunKineticRevolverBugert9mm,
+						ulmGunKineticRevolverBugert38Cal">
+						<output name="gunHandgunT1PistolParts"	count="1,2"/>
+						<output name="resourceScrapIron"		count="10,20"/>
+						<output name="resourceScrapPolymers"	count="1,2"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+
+<recycle time="5" name="gunHandgunT2Magnum44,
+						gunHandgunT3DesertVulture,
+						ulmGunKineticPistolDesertEagle,
+						ulmGunKineticPistolColt">
+						<output name="gunHandgunT1PistolParts"	count="1,2"/>
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceScrapPolymers"	count="1,2"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+
+<!-- RC_SMG -->
+<recycle time="4" name="gunHandgunT3SMG5,
+						ulmGunKineticMicroSmg,
+						ulmGunKineticUMP">
+						<output name="ulmResourcePartsSMG"		count="1,2"/>
+						<output name="resourceScrapIron"		count="10,20"/>
+						<output name="resourceScrapPolymers"	count="2,3"/>
+						<output name="resourceSpring"			count="1,2"/></recycle>
+
+<recycle time="5" name="ulmGunKineticSMGMP5,
+						ulmGunKineticSMGCricket">
+						<output name="ulmResourcePartsSMG"		count="1,2"/>
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceScrapPolymers"	count="2,3"/>
+						<output name="resourceSpring"			count="1,2"/></recycle>
+
+<recycle time="6" name="ulmGunKineticR90">
+						<output name="ulmResourcePartsSMG"		count="1,2"/>
+						<output name="ulmResourceScrapTitanium" count="10,20"/>
+						<output name="ulmResourceGears"			count="2,3"/>
+						<output name="resourceSpring"			count="3,5"/>
+						<output name="resourceScrapPolymers"	count="4,6"/></recycle>
+	
+<!-- RC_Shotguns -->
+<recycle time="3" name="gunShotgunT0PipeShotgun,
+						ulmGunKineticShotgunScrap">
+						<output name="resourceScrapIron"		count="10,15"/>
+						<output name="resourceScrapPolymers"	count="2,3"/>
+						<output name="resourceMechanicalParts"	count="1,2"/>
+						<output name="resourceMetalPipe"		count="1"/></recycle>
+
+<recycle time="4" name="gunShotgunT1DoubleBarrel,
+						gunShotgunT2PumpShotgun,
+						ulmGunKineticShotgunDoubleBarrel">
+						<output name="gunShotgunT1DoubleBarrelParts"	count="1,2"/>
+						<output name="resourceScrapIron"				count="10,20"/>
+						<output name="resourceScrapPolymers"			count="1,2"/>
+						<output name="resourceMechanicalParts"			count="1,2"/>
+						<output name="resourceSpring"					prob=".5"/></recycle>
+
+<recycle time="5" name="ulmGunKineticShotgunEnforcer,
+						ulmGunKineticShotgunPeacekeeper">
+						<output name="gunShotgunT1DoubleBarrelParts"	count="1,2"/>
+						<output name="ulmResourceScrapSteel"			count="10,20"/>
+						<output name="resourceScrapPolymers"			count="1,2"/>
+						<output name="resourceMechanicalParts"			count="1,2"/>
+						<output name="resourceSpring"					prob="1"/></recycle>
+
+<recycle time="6" name="gunShotgunT3AutoShotgun,
+						ulmGunKineticShotgunSpas,
+						ulmGunKineticShotgunPumpBM4">
+						<output name="gunShotgunT1DoubleBarrelParts"	count="1,2"/>
+						<output name="ulmResourceScrapTitanium"			count="10,20"/>
+						<output name="resourceScrapPolymers"			count="2,3"/>
+						<output name="resourceMechanicalParts"			count="1,3"/>
+						<output name="resourceSpring"					prob="1,2"/></recycle>
+
+<!-- RC_PipeRifles -->
+<recycle time="4" name="gunRifleT0PipeRifle,
+						gunMGT0PipeMachineGun">
+						<output name="resourceScrapIron"				count="10,15"/>
+						<output name="resourceMetalPipe"				count="2,4"/>
+						<output name="ulmResourceScrapWood"				count="5,10"/>
+						<output name="resourceSpring"					prob="1,2"/></recycle>
+
+<!-- RC_SniperRifles -->
+<recycle time="5" name="gunRifleT1HuntingRifle">
+						<output name="gunRifleT1HuntingRifleParts"		count="1,2"/>
+						<output name="resourceScrapIron"				count="20,30"/>
+						<output name="resourceMetalPipe"				count="3,6"/>
+						<output name="resourceScrapPolymers"			count="5,10"/>
+						<output name="resourceSpring"					prob="1,2"/></recycle>
+						
+<recycle time="6" name="gunRifleT2LeverActionRifle,
+						gunRifleT3SniperRifle,
+						ulmGunKineticSniperRifleM1A,
+						ulmGunKineticSniperRifleSRD63">
+						<output name="gunRifleT1HuntingRifleParts"		count="1,2"/>
+						<output name="ulmResourceScrapSteel"			count="20,30"/>
+						<output name="resourceMetalPipe"				count="3,6"/>
+						<output name="resourceScrapPolymers"			count="5,10"/>
+						<output name="resourceSpring"					prob="1,2"/></recycle>
+						
+<recycle time="6" name="ulmGunKineticSniperRifleM82">
+						<output name="gunRifleT1HuntingRifleParts"		count="1,2"/>
+						<output name="ulmResourceScrapTitanium"			count="20,30"/>
+						<output name="resourceMetalPipe"				count="3,6"/>
+						<output name="resourceScrapPolymers"			count="5,10"/>
+						<output name="resourceSpring"					prob="1,2"/></recycle>
+
+<!-- RC_AssaultRifles -->
+<recycle time="5" name="gunMGT1AK47,
+						ulmGunKineticAssaultRifleAug1,
+						ulmGunKineticAssaultRifleFamas1,
+						ulmGunKineticAssaultRifleAKM12">
+						<output name="gunMGT1AK47Parts"			count="1,2"/>
+						<output name="resourceScrapIron"		count="20,30"/>
+						<output name="resourceMetalPipe"		count="3,6"/>
+						<output name="resourceScrapPolymers"	count="5,10"/>
+						<output name="resourceSpring"			prob="1,2"/></recycle>
+
+<recycle time="5" name="gunMGT2TacticalAR,
+						gunMGT3M60,
+						ulmGunKineticAssaultRifleM4">
+						<output name="gunMGT1AK47Parts"			count="1,2"/>
+						<output name="ulmResourceScrapSteel"	count="20,30"/>
+						<output name="resourceMetalPipe"		count="3,6"/>
+						<output name="resourceScrapPolymers"	count="5,10"/>
+						<output name="resourceSpring"			prob="1,2"/></recycle>
+
+<recycle time="5" name="ulmGunKineticMinigun">
+						<output name="gunMGT1AK47Parts"			count="2,3"/>
+						<output name="ulmResourceScrapSteel"	count="50,70"/>
+						<output name="resourceMetalPipe"		count="3,6"/>
+						<output name="resourceScrapPolymers"	count="5,10"/>
+						<output name="resourceSpring"			prob="1,2"/></recycle>
+
+<recycle time="5" name="ulmGunKineticAdjudicator">
+						<output name="gunMGT1AK47Parts"			count="1,2"/>
+						<output name="ulmResourceScrapTitanium" count="20,30"/>
+						<output name="resourceMetalPipe"		count="3,6"/>
+						<output name="resourceScrapPolymers"	count="5,10"/>
+						<output name="resourceSpring"			prob="1,2"/></recycle>
+
+<!-- RC_RocketLaunchers -->
+<recycle time="9" name="gunExplosivesT3RocketLauncher,
+						ulmGunKineticRocketLauncherAT4,
+						ulmGunKineticRocketLauncherM202">
+						<output name="gunExplosivesT3RocketLauncherParts"	count="1,2"/>
+						<output name="ulmResourceScrapSteel"				count="30,50"/>
+						<output name="resourceElectricParts"				count="1,5"/>
+						<output name="resourceSpring"						count="1,3"/></recycle>
+
+
+<!-- RC_TurretSledge -->
+<recycle time="9" name="gunBotT1JunkSledge">
+						<output name="gunBotRoboticsParts"		count="1,2"/>
+						<output name="resourceScrapIron"		count="30,50"/>
+						<output name="ulmResourceGears"			count="3,6"/>
+						<output name="ulmResourceBallBearings"	count="2,4"/>
+						<output name="resourceMechanicalParts"	count="1,2"/>
+						<output name="resourceSpring"			count="1,2"/>
+						<output name="ulmResourceScrapWires"	count="2,4"/>
+						<output name="ulmResourceElectronicCircuitboard"/></recycle>
+
+<!-- RC_TurretPortable -->
+<recycle time="9" name="gunBotT2JunkTurret">
+						<output name="gunBotRoboticsParts"		count="1,2"/>
+						<output name="ulmResourceScrapSteel"	count="30,50"/>
+						<output name="ulmResourceGears"			count="3,6"/>
+						<output name="ulmResourceBallBearings"	count="2,4"/>
+						<output name="resourceMechanicalParts"	count="1,2"/>
+						<output name="resourceSpring"			count="1,2"/>
+						<output name="ulmResourceScrapWires"	count="2,4"/>
+						<output name="ulmResourceElectronicCircuitboard"/></recycle>
+
+<!-- RC_Drone -->
+<recycle time="9" name="gunBotT3JunkDrone">
+						<output name="gunBotRoboticsParts"		count="1,2"/>
+						<output name="ulmResourceScrapTitanium" count="30,50"/>
+						<output name="ulmResourceGears"			count="3,6"/>
+						<output name="ulmResourceBallBearings"	count="2,4"/>
+						<output name="resourceMechanicalParts"	count="1,2"/>
+						<output name="resourceSpring"			count="1,2"/>
+						<output name="ulmResourceScrapWires"	count="2,4"/>
+						<output name="ulmResourceElectronicCircuitboard"/></recycle>
+						
+<!-- RC_Mods -->
+<recycle time="5" name="modDyeBlack,
+						modDyePink,
+						modDyeGreen,
+						modDyeYellow,
+						modDyeBlue,
+						modDyeBrown,
+						modDyePurple,
+						modDyeRed">
+						<output name="resourcePaint"			count="5"/></recycle>
+
+<recycle time="5" name="modArmorSkullCap,
+						modArmorPressboyCap,
+						modArmorBallCap">
+						<output name="resourceCloth"			count="5,10"/></recycle>
+
+<recycle time="5" name="modClothingStoragePocket,
+						modArmorCowboyHat">
+						<output name="resourceLeather"			count="2,3"/>
+						<output name="resourceCloth"			count="5,10"/></recycle>
+
+<recycle time="5" name="modClothingCargoStoragePocket">
+						<output name="resourceLeather"			count="4,6"/>
+						<output name="resourceCloth"			count="10,20"/></recycle>
+
+<recycle time="7" name="ulmModArmorBackpackBasic">
+						<output name="resourceLeather"			count="8,16"/>
+						<output name="resourceCloth"			count="25,50"/></recycle>
+
+<recycle time="9" name="ulmModVehicleCargoBag">
+						<output name="resourceLeather"			count="20,30"/>
+						<output name="resourceCloth"			count="30,60"/></recycle>
+
+<recycle time="5" name="modArmorPlatingBasic">
+						<output name="resourceLeather"			count="2,4"/>
+						<output name="resourceScrapPolymers"	count="2,3"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+
+<recycle time="5" name="modArmorImprovedFittings">
+						<output name="resourceLeather"			count="2,3"/>
+						<output name="resourceScrapPolymers"	count="4,8"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+
+<recycle time="5" name="modArmorStoragePocket">
+						<output name="resourceLeather"			count="4,8"/>
+						<output name="resourceScrapPolymers"	count="2,3"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+
+<recycle time="5" name="modArmorDoubleStoragePocket">
+						<output name="resourceLeather"			count="8,16"/>
+						<output name="resourceScrapPolymers"	count="4,6"/>
+						<output name="resourceMechanicalParts"	count="2,4"/></recycle>
+
+<recycle time="5" name="modArmorTripleStoragePocket,
+						ulmModArmorEnforcerBelt,
+						ulmModArmorEnforcerVest">
+						<output name="resourceLeather"			count="12,24"/>
+						<output name="resourceScrapPolymers"	count="6,9"/>
+						<output name="resourceMechanicalParts"	count="3,6"/></recycle>
+
+<recycle time="5" name="modArmorCustomizedFittings">
+						<output name="resourceLeather"			count="3,6"/>
+						<output name="resourceScrapPolymers"	count="8,16"/>
+						<output name="resourceMechanicalParts"	count="3,5"/></recycle>
+
+<recycle time="5" name="modArmorBandolier">
+						<output name="resourceLeather"			count="5,10"/>
+						<output name="resourceCloth"			count="5,10"/>
+						<output name="resourceScrapPolymers"	count="2,3"/></recycle>
+
+<recycle time="5" name="ulmModArmorPlatingChitin">
+						<output name="resourceLeather"			count="2,3"/>
+						<output name="ulmResourceChitin"		count="5,10"/>
+						<output name="resourceMechanicalParts"	count="2,3"/></recycle>
+
+<recycle time="5" name="ulmModArmorInsulatedLiner">
+						<output name="resourceScrapPolymers"	count="2,3"/>
+						<output name="resourceCloth"			count="5,10"/></recycle>
+
+<recycle time="5" name="ulmModArmorCoolingMesh">
+						<output name="resourceScrapPolymers"	count="5,10"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+
+<recycle time="5" name="modMeleeStructuralBrace,
+						modGunBipod,
+						modShotgunSawedOffBarrel,
+						modGunMagazineExtender,
+						modGunDuckbill,
+						modGunChoke,
+						modGunShotgunTubeExtenderMagazine,
+						modGunForegrip,
+						modGunMeleeTheHunter,
+						modMeleeSerratedBlade,
+						modMeleeWeightedHead,
+						modMeleeGraveDigger,
+						modMeleeWoodSplitter,
+						modMeleeFiremansAxeMod">
+						<output name="resourceScrapIron"		count="10,20"/>
+						<output name="resourceMechanicalParts"	count="2,3"/>
+						<output name="resourceSpring"			count="3,6"/></recycle>
+
+<recycle time="5" name="modMeleeStructuralBrace,
+						modGunMuzzleBrake,
+						modArmorPlatingReinforced">
+						<output name="resourceScrapIron"		count="10,20"/>
+						<output name="resourceScrapPolymers"	count="2,3"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+
+<recycle time="5" name="modGunDrumMagazineExtender,
+						modGunTriggerGroupSemi">
+						<output name="resourceScrapIron"		count="10,20"/>
+						<output name="resourceScrapPolymers"	count="2,3"/>
+						<output name="resourceMechanicalParts"	count="1,2"/>
+						<output name="ulmResourceGears"			count="1,2"/></recycle>
+
+<recycle time="5" name="modRoboticDroneCargoMod">
+						<output name="ulmResourceScrapSteel"	count="30,60"/>
+						<output name="ulmResourceNutsAndBolts"	count="20,40"/></recycle>
+
+<recycle time="5" name="modMeleeBunkerBuster,
+						modMeleeClubMetalSpikes,
+						modMeleeIronBreaker,
+						modMeleeFortifyingGrip,
+						modArmorImpactBracing,
+						modGunRetractingStock,
+						modGunMeleeRadRemover,
+						modGunCrippleEm,
+						modMeleeErgonomicGrip,
+						modGunBowPolymerString,
+						modGunBowArrowRest,
+						modMeleeTemperedBlade,
+						modMeleeClubMetalChain">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceMechanicalParts"	count="2,3"/>
+						<output name="resourceSpring"			count="3,6"/></recycle>
+
+<recycle time="5" name="modRoboticDroneArmorPlatingMod">
+						<output name="ulmResourceScrapSteel"	count="30,60"/>
+						<output name="resourceMetalPipe"		count="4,8"/>
+						<output name="resourceScrapPolymers"	count="5,10"/></recycle>
+
+<recycle time="5" name="modFuelTankSmall">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceScrapPolymers"	count="20,40"/></recycle>
+
+<recycle time="5" name="modFuelTankLarge">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceScrapPolymers"	count="40,80"/></recycle>
+
+<recycle time="5" name="modMeleeDiamondTip">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceMechanicalParts"	count="2,3"/>
+						<output name="resourceRawDiamond"		count="1,2"/></recycle>
+
+<recycle time="5" name="modVehicleFuelSaver">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceMetalPipe"		count="2,3"/>
+						<output name="resourceMechanicalParts"	count="1,2"/>
+						<output name="resourceScrapPolymers"	count="3,6"/>
+						<output name="resourceAcid"				count="1,2"/></recycle>
+
+<recycle time="9" name="ulmModVehicleShockAbsorbers">
+						<output name="ulmResourceScrapSteel"	count="30,50"/>
+						<output name="ulmResourceRebarSteel"	count="3,5"/>
+						<output name="resourceMetalPipe"		count="4,8"/>
+						<output name="resourceSpring"			count="10,20"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+
+<recycle time="5" name="modArmorMuffledConnectors">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceScrapPolymers"	count="16,26"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+
+<recycle time="5" name="modGunBarrelExtender,
+						modVehicleReserveFuelTank">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceScrapPolymers"	count="2,3"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+
+<recycle time="5" name="modVehicleSuperCharger">
+						<output name="ulmResourceScrapSteel"	count="25,50"/>
+						<output name="ulmResourceGears"			count="10,20"/>
+						<output name="resourceMetalPipe"		count="4,8"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+
+<recycle time="5" name="modGunTriggerGroupBurst3,
+						modGunTriggerGroupAutomatic">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceScrapPolymers"	count="2,3"/>
+						<output name="resourceMechanicalParts"	count="1,2"/>
+						<output name="ulmResourceGears"			count="1,2"/></recycle>
+
+<recycle time="5" name="modGunLaserSight">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceElectricParts"	count="3,6"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+
+<recycle time="5" name="modGunLaserSight">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceElectricParts"	count="3,6"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+
+<recycle time="5" name="modGunScopeSmall">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceBrokenGlass"		count="1,5"/>
+						<output name="resourceScrapPolymers"	count="2,5"/></recycle>
+
+<recycle time="5" name="modGunScopeMedium">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceBrokenGlass"		count="5,10"/>
+						<output name="resourceScrapPolymers"	count="3,6"/></recycle>
+
+<recycle time="5" name="modGunScopeLarge">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceBrokenGlass"		count="10,15"/>
+						<output name="resourceScrapPolymers"	count="4,7"/></recycle>
+
+<recycle time="5" name="modGunSoundSuppressorSilencer">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceScrapPolymers"	count="2,3"/>
+						<output name="resourceMechanicalParts"	count="1,2"/></recycle>
+
+<recycle time="5" name="modGunReflexSight">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceScrapPolymers"	count="3,6"/>
+						<output name="resourceElectricParts"	count="3,6"/></recycle>
+
+<recycle time="5" name="modArmorAdvancedMuffledConnectors">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceScrapPolymers"	count="20,40"/>
+						<output name="resourceMechanicalParts"	count="1,3"/></recycle>
+
+<recycle time="5" name="modArmorWaterPurifier">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="resourceScrapPolymers"	count="4,8"/>
+						<output name="ulmResourceCoalPowder"	count="10,25"/></recycle>
+
+<recycle time="9" name="modMeleeStunBatonRepulsor">
+						<output name="ulmResourceScrapSteel"				count="10,20"/>
+						<output name="resourceMechanicalParts"				count="2,3"/>
+						<output name="resourceElectricParts"				count="2,3"/>
+						<output name="ulmResourceElectronicCopperCoil"		count="2,3"/></recycle>
+
+<recycle time="5" name="modRoboticDroneHeadlampMod">
+						<output name="ulmResourceScrapSteel"				count="10,20"/>
+						<output name="resourceMechanicalParts"				count="2,3"/>
+						<output name="resourceElectricParts"				count="2,3"/>
+						<output name="ulmResourceElectronicDiode"			count="9,18"/>
+						<output name="ulmResourceScrapWires"				count="2,4"/>
+						<output name="ulmResourceElectronicCircuitboard"	prob="0.75"/></recycle>
+
+<recycle time="5" name="modVehicleOffRoadHeadlights">
+						<output name="ulmResourceScrapSteel"				count="10,20"/>
+						<output name="resourceScrapPolymers"				count="2,3"/>
+						<output name="resourceHeadlight"					count="1,3"/>
+						<output name="ulmResourceScrapWires"				count="2,3"/>
+						<output name="ulmResourceElectronicCircuitboard"	prob="0.5"/></recycle>
+
+<recycle time="5" name="modRoboticDroneMoraleBoosterMod">
+						<output name="ulmResourceScrapSteel"	count="20,40"/>
+						<output name="resourceCropCottonPlant"	count="20,40"/>
+						<output name="resourceCloth"			count="8,16"/></recycle>
+
+<recycle time="9" name="modRoboticDroneMedicMod">
+						<output name="ulmResourceScrapSteel"	count="10,20"/>
+						<output name="ulmResourceGears"			count="2,3"/>
+						<output name="resourceMechanicalParts"	count="2,3"/>
+						<output name="resourceElectricParts"	count="1,2"/>
+						<output name="resourceScrapPolymers"	count="4,8"/>
+						<output name="ulmResourceScrapWires"	count="2,3"/>
+						<output name="ulmResourceElectronicCircuitboard" prob="0.5"/></recycle>
+
+<recycle time="9" name="modGunMeleeExoticAlloy">
+						<output name="ulmResourceScrapTitanium" count="10,20"/>
+						<output name="resourceMechanicalParts"	count="2,3"/>
+						<output name="resourceRawDiamond"		count="1,2"/></recycle>
+
+<recycle time="9" name="ulmModArmorEllianniaLocket">
+						<output name="resourceScrapIron"		count="1,5"/>
+						<output name="resourceSilverNugget"		count="2,3"/>
+						<output name="resourceRawDiamond"		count="1,2"/></recycle>
+
+<recycle time="9" name="ulmResourceWristWatch">
+						<output name="resourceScrapIron"		count="1,5"/>
+						<output name="resourceSilverNugget"		count="1,2"/>
+						<output name="resourceRawDiamond"		prob="0.5"/></recycle>
+
+<!-- RC_Armor -->
+<!--
+<recycle time="3" name="apparelCigar">
+						<output name="resourceYuccaFibers"		count="5,10"/></recycle>
+
+<recycle time="3" name="apparelPlantFiberHood,
+						apparelPlantFiberGloves,
+						apparelPlantFiberShirt,
+						apparelPlantFiberPants,
+						apparelPlantFiberShoes,
+						apparelPlantFiberHat">
+						<output name="resourceYuccaFibers"		count="15,25"/></recycle>
+
+<recycle time="3" name="apparelGhillieSuitHood,
+						apparelGhillieSuitJacket,
+						apparelGhillieSuitPants">
+						<output name="resourceYuccaFibers"		count="30,50"/></recycle>
+
+<recycle time="3" name="apparelBandana,
+						apparelTankTop">
+						<output name="resourceCloth"			count="2,4"/></recycle>
+
+<recycle time="3" name="armorClothHat,
+						armorClothGloves,
+						armorClothPants,
+						armorClothJacket,
+						armorClothBoots,
+						armorSantaHat,
+						apparelBallCap,
+						apparelSkullCap,
+						apparelPressboyCap,
+						apparelDenimPants,
+						apparelArmyPants,
+						apparelArmyShirt,
+						apparelDenimShortsPants,
+						apparelWornBoots,
+						apparelOveralls,
+						apparelSkirt,
+						apparelSweatshirt,
+						apparelTShirtPlain,
+						apparelLongShirt,
+						apparelFlannelShirt,
+						apparelTShirtZU,
+						apparelHoodySweatshirt,
+						apparelSuitPants">
+						<output name="resourceCloth"			count="3,6"/></recycle>
+
+<recycle time="4" name="apparelCoatPufferCoat,
+						apparelCoatJacketGeneric,
+						apparelCoatJacketLetterZU,
+						apparelSuitJacket">
+						<output name="resourceCloth"			count="4,8"/></recycle>
+
+<recycle time="4" name="apparelRunningShoesRegular,
+						apparelRunningShoesHP,
+						apparelSuitDressShoes">
+						<output name="resourceLeather"			count="3,6"/></recycle>
+
+<recycle time="4" name="armorLeatherHood,
+						armorLeatherChest,
+						armorLeatherPants,
+						armorLeatherGloves,
+						armorLeatherBoots,
+						apparelCowboyHat,
+						apparelCowboyBoots,
+						apparelGothPants,
+						apparelGothBoots,
+						apparelCoatLeatherPoncho">
+						<output name="resourceLeather"			count="4,8"/></recycle>
+
+<recycle time="4" name="apparelCoatLeatherDuster">
+						<output name="resourceLeather"			count="5,10"/></recycle>
+
+<recycle time="5" name="armorMilitaryHelmet,
+						armorMilitaryVest,
+						armorMilitaryGloves,
+						armorMilitaryLegs,
+						armorMilitaryBoots,
+						armorMilitaryStealthBoots">
+						<output name="armorMilitarySetParts"	count="2,3"/>
+						<output name="resourceScrapPolymers"	count="1,2"/>
+						<output name="ulmResourceMilitaryFiber"	prob="0.5"/></recycle>
+
+<recycle time="6" name="armorScrapHelmet,
+						armorScrapChest,
+						armorScrapGloves,
+						armorScrapLegs,
+						armorScrapBoots">
+						<output name="resourceScrapIron"		count="20,40"/>
+						<output name="resourceLeather"			count="2,3"/></recycle>
+
+<recycle time="7" name="armorIronHelmet,
+						armorIronChest,
+						armorIronGloves,
+						armorIronLegs,
+						armorIronBoots,
+						armorFirefightersHelmet">
+						<output name="resourceForgedIron"		count="2,4"/>
+						<output name="resourceScrapIron"		count="15,30"/>
+						<output name="resourceLeather"			count="2,3"/></recycle>
+
+<recycle time="8" name="armorSteelHelmet,
+						armorSteelChest,
+						armorSteelGloves,
+						armorSteelLegs,
+						armorSteelBoots,
+						armorSwatHelmet">
+						<output name="resourceForgedSteel"		count="2,4"/>
+						<output name="ulmResourceScrapSteel"	count="15,30"/>
+						<output name="resourceLeather"			count="4,6"/></recycle>
+
+<recycle time="4" name="armorMiningHelmet,
+						armorFootballHelmet,
+						armorFootballHelmetZU">
+						<output name="resourceScrapPolymers"	count="10,20"/>
+						<output name="resourceLeather"			count="2,3"/></recycle>
+
+<recycle time="4" name="apparelHazmatMask,
+						apparelHazmatGloves,
+						apparelHazmatJacket,
+						apparelHazmatPants,
+						apparelHazmatBoots">
+						<output name="resourceScrapPolymers"	count="4,8"/>
+						<output name="ulmResourceMilitaryFiber"	count="3,5"/>
+						<output name="resourceLeather"			count="2,3"/></recycle>
+
+<recycle time="4" name="apparelShades,
+						apparelAviatorGoggles,
+						apparelToughGuySunglasses,
+						apparelNightvisionGoggles,
+						apparelSkiGoggles,
+						apparelNerdGlasses">
+						<output name="resourceScrapIron"		count="1,2"/>
+						<output name="resourceScrapPolymers"	count="1,2"/>
+						<output name="resourceBrokenGlass"		count="1,2"/></recycle>
+
+<recycle time="4" name="apparelFacialPiercings">
+						<output name="resourceScrapIron"		count="1,2"/></recycle>
+-->
+
+<!-- RC_Ammo -->
+<recycle time="4" name="ammoArrowStone,
+						ammoCrossbowBoltStone">
+						<output name="resourceRockSmall"		prob="0.75"/>
+						<output name="ulmResourceBranch"		prob="0.75"/>
+						<output name="resourceFeather"			prob="0.75"/>
+						<output name="resourceYuccaFibers"		prob="0.75"/></recycle>
+
+<recycle time="4" name="ammoArrowIron,
+						ammoCrossbowBoltIron">
+						<output name="resourceScrapIron"		count="1,2"/>
+						<output name="ulmResourceBranch"		prob="0.75"/>
+						<output name="resourceFeather"			prob="0.75"/>
+						<output name="resourceYuccaFibers"		prob="0.75"/></recycle>
+
+<recycle time="4" name="ammoArrowSteelAP,
+						ammoCrossbowBoltSteelAP">
+						<output name="ulmResourceScrapSteel"	count="1,2"/>
+						<output name="ulmResourceBranch"		prob="0.75"/>
+						<output name="resourceFeather"			prob="0.75"/>
+						<output name="resourceScrapPolymers"	prob="0.75"/></recycle>
+
+<recycle time="4" name="ammoArrowFlaming,
+						ammoCrossbowBoltFlaming">
+						<output name="ulmResourceScrapSteel"	count="1,2"/>
+						<output name="resourceScrapPolymers"	count="1,2"/>
+						<output name="resourceGunPowder"		count="1,2"/>
+						<output name="resourceCloth"			prob="0.75"/>
+						<output name="resourceAnimalFat"		prob="0.75"/></recycle>
+
+<recycle time="4" name="ammoArrowExploding,
+						ammoCrossbowBoltExploding">
+						<output name="ulmResourceScrapSteel"	count="1,2"/>
+						<output name="resourceScrapPolymers"	count="1,2"/>
+						<output name="resourceGunPowder"		count="3,6"/></recycle>
+
+<recycle time="4" name="ammoDartIron">
+						<output name="resourceScrapIron"		count="1,2"/></recycle>
+
+<recycle time="4" name="ammo9mmBulletBall,
+						ulmAmmo10mmRoundST">
+						<output name="resourceScrapLead"		prob=".75"/>
+						<output name="resourceGunPowder"		prob=".75"/>
+						<output name="resourceScrapBrass"		prob=".75"/></recycle>
+
+<recycle time="4" name="ammo9mmBulletHP,
+						ulmAmmo10mmRoundHP">
+						<output name="resourceScrapLead"		count="1,2"/>
+						<output name="resourceGunPowder"		prob=".75"/>
+						<output name="resourceScrapBrass"		prob=".75"/></recycle>
+
+<recycle time="4" name="ammo9mmBulletAP,
+						ulmAmmo10mmRoundAP,
+						ammo44MagnumBulletBall,
+						ulmAmmo556mmRoundST,
+						ulmAmmo792mmRoundST">
+						<output name="resourceScrapLead"		prob=".75"/>
+						<output name="resourceGunPowder"		count="1,2"/>
+						<output name="resourceScrapBrass"		prob=".75"/></recycle>
+
+<recycle time="4" name="ammo44MagnumBulletHP">
+						<output name="resourceScrapLead"		count="1,2"/>
+						<output name="resourceGunPowder"		count="1,2"/>
+						<output name="resourceScrapBrass"		prob=".75"/></recycle>
+
+<recycle time="4" name="ammo44MagnumBulletAP,
+						ammo762mmBulletBall,
+						ulmAmmo556mmRoundHP,
+						ulmAmmo792mmRoundHP">
+						<output name="resourceScrapLead"		count="1,2"/>
+						<output name="resourceGunPowder"		count="1,3"/>
+						<output name="resourceScrapBrass"		prob=".75"/></recycle>
+
+<recycle time="4" name="ammo762mmBulletHP">
+						<output name="resourceScrapLead"		count="1,2"/>
+						<output name="resourceGunPowder"		count="1,3"/>
+						<output name="resourceScrapBrass"		prob=".75"/></recycle>
+
+<recycle time="4" name="ammo762mmBulletAP,
+						ulmAmmo556mmRoundAP,
+						ulmAmmo792mmRoundAP,
+						ulmAmmo50CalRoundST,
+						ulmAmmo50CalRoundHP,
+						ulmAmmo50CalRoundAP">
+						<output name="resourceScrapLead"		prob=".75"/>
+						<output name="resourceGunPowder"		count="2,4"/>
+						<output name="resourceScrapBrass"		prob=".75"/></recycle>
+
+<recycle time="4" name="ammoShotgunShell">
+						<output name="resourceScrapLead"		count="1,2"/>
+						<output name="resourceGunPowder"		count="2,3"/>
+						<output name="resourceScrapBrass"		prob=".75"/>
+						<output name="resourceScrapPolymers"	prob=".75"/></recycle>
+
+<recycle time="4" name="ammoShotgunSlug">
+						<output name="resourceScrapLead"		count="1,2"/>
+						<output name="resourceGunPowder"		count="2,3"/>
+						<output name="resourceScrapPolymers"	prob=".75"/></recycle>
+
+<recycle time="4" name="ammoShotgunBreachingSlug">
+						<output name="ulmResourceScrapSteel"	count="2,4"/>
+						<output name="resourceGunPowder"		count="2,3"/>
+						<output name="resourceScrapPolymers"	prob=".75"/></recycle>
+
+<recycle time="4" name="ammoJunkTurretRegular">
+						<output name="resourceScrapIron"		prob=".75"/>
+						<output name="resourceRockSmall"		count="1,2"/></recycle>
+
+<recycle time="4" name="ammoJunkTurretShell,
+						ammoJunkTurretAP">
+						<output name="resourceScrapIron"		prob=".75"/>
+						<output name="resourceScrapLead"		count="1,2"/></recycle>
+
+<recycle time="4" name="ammoRocketHE,
+						ammoRocketFrag">
+						<output name="ulmResourceScrapSteel"	count="5,10"/>
+						<output name="resourceScrapLead"		count="5,10"/>
+						<output name="resourceGunPowder"		count="4,12"/></recycle>
+						
+<!-- RC_Explosives -->
+<recycle time="6" name="thrownDynamite">
+						<output name="resourceGunPowder"		count="10,15"/>
+						<output name="resourcePaper"			count="5,8"/></recycle>
+
+<recycle time="6" name="thrownAmmoPipeBomb">
+						<output name="resourceScrapIron"		count="8,16"/>
+						<output name="resourceGunPowder"		count="6,9"/></recycle>
+
+<recycle time="6" name="thrownGrenade,
+						thrownGrenadeContact">
+						<output name="ulmResourceScrapSteel"	count="4,8"/>
+						<output name="resourceSpring"			prob="0.75"/>
+						<output name="resourceMechanicalParts"	prob="0.75"/>
+						<output name="resourceGunPowder"		count="6,12"/></recycle>
+
+<recycle time="6" name="thrownTimedCharge">
+						<output name="resourceScrapIron"		count="8,16"/>
+						<output name="resourceElectricParts"	prob="0.75"/>
+						<output name="resourceGunPowder"		count="5,8"/></recycle>
+
+<recycle time="6" name="thrownAmmoMolotovCocktail">
+						<output name="resourceBrokenGlass"		count="3,5"/>
+						<output name="resourceOil"				prob=".75"/>
+						<output name="resourceCloth"			prob=".75"/></recycle>
+
+<!-- RC_Others -->
+<recycle time="6" name="ulmDecoLawnMower01,
+						ulmDecoLawnMower02,
+						ulmDecoLawnMower03">
+						<output name="resourceScrapIron"		count="5,20"/>
+						<output name="resourceMechanicalParts"	count="1,2"/>
+						<output name="ulmResourceScrapWires"	count="1,2"/>
+						<output name="ulmSmallEngine"			prob=".3"/>
+						<output name="ulmResourceGears"			prob=".5"/>
+						<output name="ulmResourceBallBearings"	prob=".5"/></recycle>
+
+<recycle time="5" name="ulmDecoToyRobot1,
+						ulmDecoToyRobot2,
+						ulmDecoToyRobot3">
+						<output name="ulmResourceBatterySmall"	prob="0.4"/>
+						<output name="ulmResourceScrapPlank"	count="4,8"/>
+						<output name="resourceScrapPolymers"	count="1,2"/></recycle>
+
+<recycle time="5" name="ulmDecoToyElephant,
+						ulmDecoToySquirrel,
+						ulmDecoToyBear">
+						<output name="resourceCropCottonPlant"	count="3,6"/>
+						<output name="resourceCloth"			count="1,2"/></recycle>
+
+<recycle time="5" name="hayBaleSquare,
+						hayBaleRound">
+						<output name="resourceYuccaFibers"		count="5,15"/></recycle>
+
+<recycle time="9" name="ulmDecoPortableToiletClosed,
+						ulmDecoPortableToiletOpen">
+						<output name="resourceScrapPolymers"	count="15,25"/></recycle>
+
+<recycle time="9" name="cntRetroFridgeVer1Closed,
+						cntRetroFridgeVer2Open,
+						cntFridgeStainlessSteelVer2Open,
+						cntFridgeStainlessSteel">
+						<output name="resourceScrapIron"		count="5,20"/>
+						<output name="resourceMetalPipe"/>
+						<output name="resourceScrapPolymers"	count="0,1"/>
+						<output name="resourceMechanicalParts"	count="0,2"/>
+						<output name="resourceElectricParts"	count="1,8"/></recycle>
+
+<recycle time="5" name="cntCoffeeMaker,
+						cntCoffeeMakerCommercial,
+						cntSodaFountain">
+						<output name="resourceElectricParts"	count="1,2"/>
+						<output name="resourceScrapPolymers"	count="1,2"/>
+						<output name="resourceScrapIron"		count="1,2"/></recycle>
+
+<recycle time="5" name="cntToaster">
+						<output name="resourceElectricParts"	count="1"/>
+						<output name="resourceScrapIron"		count="1,3"/></recycle>
+
+<recycle time="9" name="cntStoveOldVer1Closed,
+						cntStoveOldVer2Open,
+						cntStoveModernVer1Closed,
+						cntStoveModernVer2Open,
+						cntWallOven,
+						cntGasGrillOpen,
+						cntGasGrillClosed,
+						cntWoodBurningStove,
+						cntCharcoalGrillOpen,
+						cntCharcoalGrillClosed">
+						<output name="resourceElectricParts"	count="1,2"/>
+						<output name="resourceScrapIron"		count="15,25"/></recycle>
+
+<recycle time="8" name="cntMicrowaveOvenVer1Open,
+						cntMicrowaveOvenVer1Closed,
+						cntMicrowaveOvenVer2Open,
+						cntMicrowaveOvenVer2Closed">
+						<output name="resourceElectricParts"	count="1,2"/>
+						<output name="resourceScrapPolymers"	count="2,3"/>
+						<output name="resourceScrapIron"		count="4,8"/></recycle>
+
+<recycle time="9" name="cntBeerCooler">
+						<output name="resourceElectricParts"	count="1,3"/>
+						<output name="resourceMetalPipe"		count="1,2"/>
+						<output name="resourceScrapIron"		count="5,15"/></recycle>
+
+<recycle time="9" name="cntWasherOpen,
+						cntWasherClosed,
+						cntDryerOpen,
+						cntDryerClosed">
+						<output name="resourceMechanicalParts"	count="1,3"/>
+						<output name="resourceElectricParts"	count="1,2"/>
+						<output name="resourceMetalPipe"		count="1,4"/>
+						<output name="resourceScrapIron"		count="5,15"/></recycle>
+
+<recycle time="9" name="cntWasherIndustrialClosed,
+						cntWasherIndustrialOpen,
+						cntWasherIndustrialTipped">
+						<output name="resourceMechanicalParts"	count="2,4"/>
+						<output name="resourceElectricParts"	count="2,3"/>
+						<output name="resourceMetalPipe"		count="2,6"/>
+						<output name="resourceScrapIron"		count="10,25"/></recycle>
+
+<recycle time="3" name="ulmResourceChicken">
+						<output name="foodRawMeat"				count="4,10"/>
+						<output name="resourceFeather"			count="4,20"/>
+						<output name="resourceBone"				count="2,4"/>
+						<output name="ulmResourceHide"			prob=".2"/></recycle>
+
+<recycle time="3" name="wallClock,
+						wallClockBroken">
+						<output name="resourceElectricParts"	count="1,2"/>
+						<output name="resourceScrapPolymers"	count="1,2"/>
+						<output name="ulmResourceBatterySmall"	prob="0.6"/></recycle>
+
+<recycle time="30" name="ulmElevatorPlatform2">
+						<output name="resourceForgedIron"		count="25,50"/>
+						<output name="ulmResourceScrapSteel"	count="50,100"/>
+						<output name="resourceSpring"			count="10,20"/>
+						<output name="resourceMetalPipe"		count="6,12"/>
+						<output name="ulmResourceRebarIron"		count="2,6"/>
+						<output name="ulmResourceNutsAndBolts"	count="10,50"/>
+						<output name="resourceMechanicalParts"	count="10,40"/>
+						<output name="resourceScrapPolymers"	count="5,30"/>
+						<output name="ulmResourceGlass"			count="1,2"/>
+						<output name="resourceBrokenGlass"		count="1,2"/>
+						<output name="resourceElectricParts"	count="5,20"/>
+						<output name="ulmResourceScrapWires"	count="5,10"/></recycle>
+	
+<recycle time="30" name="ulmElevatorPlatform3">
+						<output name="resourceForgedIron"		count="50,75"/>
+						<output name="ulmResourceScrapSteel"	count="75,150"/>
+						<output name="resourceSpring"			count="15,30"/>
+						<output name="resourceMetalPipe"		count="10,18"/>
+						<output name="ulmResourceRebarIron"		count="4,9"/>
+						<output name="ulmResourceNutsAndBolts"	count="20,75"/>
+						<output name="resourceMechanicalParts"	count="20,60"/>
+						<output name="resourceScrapPolymers"	count="10,45"/>
+						<output name="ulmResourceGlass"			count="1,2"/>
+						<output name="resourceBrokenGlass"		count="2,3"/>
+						<output name="resourceElectricParts"	count="10,30"/>
+						<output name="ulmResourceScrapWires"	count="7,15"/></recycle>
+	
+<recycle time="30" name="ulmElevatorPlatform4">
+						<output name="resourceForgedIron"		count="75,100"/>
+						<output name="ulmResourceScrapSteel"	count="100,200"/>
+						<output name="resourceSpring"			count="20,40"/>
+						<output name="resourceMetalPipe"		count="15,24"/>
+						<output name="ulmResourceRebarIron"		count="6,12"/>
+						<output name="ulmResourceNutsAndBolts"	count="30,100"/>
+						<output name="resourceMechanicalParts"	count="30,80"/>
+						<output name="resourceScrapPolymers"	count="20,60"/>
+						<output name="ulmResourceGlass"			count="2,3"/>
+						<output name="resourceBrokenGlass"		count="2,3"/>
+						<output name="resourceElectricParts"	count="15,40"/>
+						<output name="ulmResourceScrapWires"	count="9,20"/></recycle>
+	
+<recycle time="30" name="ulmElevatorPlatform5">
+						<output name="resourceForgedIron"		count="100,125"/>
+						<output name="ulmResourceScrapSteel"	count="125,250"/>
+						<output name="resourceSpring"			count="30,50"/>
+						<output name="resourceMetalPipe"		count="20,30"/>
+						<output name="ulmResourceRebarIron"		count="9,15"/>
+						<output name="ulmResourceNutsAndBolts"	count="40,125"/>
+						<output name="resourceMechanicalParts"	count="40,100"/>
+						<output name="resourceScrapPolymers"	count="30,75"/>
+						<output name="ulmResourceGlass"			count="2,3"/>
+						<output name="resourceBrokenGlass"		count="3,4"/>
+						<output name="resourceElectricParts"	count="20,50"/>
+						<output name="ulmResourceScrapWires"	count="10,25"/></recycle>
+	
+<recycle time="30" name="ulmElevatorPlatform6">
+						<output name="resourceForgedIron"		count="100,150"/>
+						<output name="ulmResourceScrapSteel"	count="150,300"/>
+						<output name="resourceSpring"			count="60"/>
+						<output name="resourceMetalPipe"		count="25,36"/>
+						<output name="ulmResourceRebarIron"		count="12,18"/>
+						<output name="ulmResourceNutsAndBolts"	count="50,150"/>
+						<output name="resourceMechanicalParts"	count="50,120"/>
+						<output name="resourceScrapPolymers"	count="40,90"/>
+						<output name="ulmResourceGlass"			count="3,4"/>
+						<output name="resourceBrokenGlass"		count="3,4"/>
+						<output name="resourceElectricParts"	count="25,60"/>
+						<output name="ulmResourceScrapWires"	count="15,30"/></recycle>
+
+<recycle time="5" name="ulmResourceTarp">
+						<output name="resourceScrapPolymers"	count="2,10"/></recycle>
+
+<recycle time="5" name="frameShapes:VariantHelper">
+						<output name="ulmResourcePlank"	count="3,4"/>
+						<output name="ulmResourceScrapPlank" count="1,2"/>
+						<output name="resourceNail"	count="3,5"/></recycle>
+
+<recycle time="5" name="woodShapes:VariantHelper">
+						<output name="ulmResourcePlank"	count="7,9"/>
+						<output name="ulmResourceScrapPlank" count="1,2"/>
+						<output name="resourceNail"	count="3,5"/></recycle>
+
+<recycle time="5" name="cobblestoneShapes:VariantHelper">
+						<output name="ulmResourceOreStone"	count="3,5"/>
+						<output name="resourceClayLump"	prob=".8"/></recycle>
+
+<recycle time="5" name="brickShapes:VariantHelper">
+						<output name="ulmResourceBrick"	count="3,5"/>
+						<output name="resourceClayLump"	prob=".8"/></recycle>
+
+<recycle time="5" name="corrugatedMetalShapes:VariantHelper">
+						<output name="resourceScrapIron" count="16,20"/>
+						<output name="ulmResourceNutsAndBolts" count="3,5"/></recycle>
+
+<recycle time="5" name="concreteShapes:VariantHelper">
+						<output name="resourceCement" count="10,15"/>
+						<output name="ulmResourceStonePowder" count="7,10"/>
+						<output name="resourceCrushedSand" count="7,10"/></recycle>
+
+<recycle time="5" name="rConcreteShapes:VariantHelper">
+						<output name="resourceCement" count="10,15"/>
+						<output name="ulmResourceStonePowder" count="7,10"/>
+						<output name="resourceCrushedSand" count="7,10"/>
+						<output name="resourceScrapIron" count="30,40"/></recycle>
+
+<recycle time="5" name="steelShapes:VariantHelper">
+						<output name="ulmResourceScrapSteel" count="80,100"/>
+						<output name="ulmResourceNutsAndBolts" count="7,10"/></recycle>
+
+<recycle time="5" name="titaniumShapes:VariantHelper">
+						<output name="ulmResourceScrapTitanium" count="80,100"/>
+						<output name="ulmResourceNutsAndBolts" count="7,10"/></recycle>
+
+<recycle time="5" name="awningShapes:VariantHelper">
+						<output name="resourceScrapIron" count="60,80"/>
+						<output name="resourceCloth" count="3,5"/></recycle>
+<!--
+<recycle time="5" name="resourceMechanicalParts">
+						<output name="ulmElectricMotor"			prob="0.4"/>
+						<output name="ulmResourceGears"			count="0,2"/>
+						<output name="ulmResourceBallBearings"	count="0,2"/>
+						<output name="ulmResourceScrapWires"	count="0,2"/></recycle>-->
+
+</append>
+
+</Subquake>

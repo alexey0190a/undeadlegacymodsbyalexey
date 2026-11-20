@@ -1,0 +1,3 @@
+﻿Key,schinese
+
+campfireActivate,打开篝火

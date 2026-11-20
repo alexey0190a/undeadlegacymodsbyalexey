@@ -1,0 +1,2556 @@
+<Subquake>
+<set xpath="/traders/@buy_markup">3</set>
+<set xpath="/traders/@sell_markdown">.2</set>
+<set xpath="/traders/@quality_mod">1,9</set>
+<set xpath="/traders/@currency_item">casinoCoin</set>
+	
+<set xpath="/traders">
+
+<traderstage_templates>
+
+	<traderstage_template name="always">	<entry min="1"/></traderstage_template>
+
+	<traderstage_template name="Level1">	<entry  min="1" quality="0"/>	<entry min="25" quality="5"/>
+											<entry  min="5" quality="1"/>	<entry min="30" quality="6"/>
+											<entry min="10" quality="2"/>	<entry min="35" quality="7"/>
+											<entry min="15" quality="3"/>	<entry min="40" quality="8"/>
+											<entry min="20" quality="4"/>	<entry min="45" quality="9"/></traderstage_template>
+
+	<traderstage_template name="Level25">	<entry min="25" quality="0"/>	<entry  min="75" quality="5"/>
+											<entry min="35" quality="1"/>	<entry  min="85" quality="6"/>
+											<entry min="45" quality="2"/>	<entry  min="95" quality="7"/>
+											<entry min="55" quality="3"/>	<entry min="105" quality="8"/>
+											<entry min="65" quality="4"/>	<entry min="115" quality="9"/></traderstage_template>
+
+	<traderstage_template name="Level50">	<entry min="50" quality="0"/>	<entry min="100" quality="5"/>
+											<entry min="60" quality="1"/>	<entry min="110" quality="6"/>
+											<entry min="70" quality="2"/>	<entry min="120" quality="7"/>
+											<entry min="80" quality="3"/>	<entry min="130" quality="8"/>
+											<entry min="90" quality="4"/>	<entry min="140" quality="9"/></traderstage_template>
+
+	<traderstage_template name="Level75">	<entry  min="75" quality="0"/>	<entry min="125" quality="5"/>
+											<entry  min="85" quality="1"/>	<entry min="135" quality="6"/>
+											<entry  min="95" quality="2"/>	<entry min="145" quality="7"/>
+											<entry min="105" quality="3"/>	<entry min="155" quality="8"/>
+											<entry min="115" quality="4"/>	<entry min="165" quality="9"/></traderstage_template>
+
+	<traderstage_template name="Level100">	<entry min="100" quality="0"/>	<entry min="150" quality="5"/>
+											<entry min="110" quality="1"/>	<entry min="160" quality="6"/>
+											<entry min="120" quality="2"/>	<entry min="170" quality="7"/>
+											<entry min="130" quality="3"/>	<entry min="180" quality="8"/>
+											<entry min="140" quality="4"/>	<entry min="190" quality="9"/></traderstage_template>
+
+	<traderstage_template name="Level125">	<entry min="125" quality="0"/>	<entry min="175" quality="5"/>
+											<entry min="135" quality="1"/>	<entry min="185" quality="6"/>
+											<entry min="145" quality="2"/>	<entry min="195" quality="7"/>
+											<entry min="155" quality="3"/>	<entry min="205" quality="8"/>
+											<entry min="165" quality="4"/>	<entry min="215" quality="9"/></traderstage_template>
+
+	<traderstage_template name="Level150">	<entry min="150" quality="0"/>	<entry min="200" quality="5"/>
+											<entry min="160" quality="1"/>	<entry min="210" quality="6"/>
+											<entry min="170" quality="2"/>	<entry min="220" quality="7"/>
+											<entry min="180" quality="3"/>	<entry min="230" quality="8"/>
+											<entry min="190" quality="4"/>	<entry min="240" quality="9"/></traderstage_template>
+
+	<traderstage_template name="Level175">	<entry min="175" quality="0"/>	<entry min="225" quality="5"/>
+											<entry min="185" quality="1"/>	<entry min="235" quality="6"/>
+											<entry min="195" quality="2"/>	<entry min="245" quality="7"/>
+											<entry min="205" quality="3"/>	<entry min="255" quality="8"/>
+											<entry min="215" quality="4"/>	<entry min="265" quality="9"/></traderstage_template>
+
+	<traderstage_template name="Level200">	<entry min="200" quality="0"/>	<entry min="250" quality="5"/>
+											<entry min="210" quality="1"/>	<entry min="260" quality="6"/>
+											<entry min="220" quality="2"/>	<entry min="270" quality="7"/>
+											<entry min="230" quality="3"/>	<entry min="280" quality="8"/>
+											<entry min="240" quality="4"/>	<entry min="290" quality="9"/></traderstage_template>
+
+	<traderstage_template name="Level225">	<entry min="225" quality="0"/>	<entry min="275" quality="5"/>
+											<entry min="235" quality="1"/>	<entry min="285" quality="6"/>
+											<entry min="245" quality="2"/>	<entry min="295" quality="7"/>
+											<entry min="255" quality="3"/>	<entry min="305" quality="8"/>
+											<entry min="265" quality="4"/>	<entry min="315" quality="9"/></traderstage_template>
+
+	<traderstage_template name="Level250">	<entry min="250" quality="0"/>	<entry min="300" quality="5"/>
+											<entry min="260" quality="1"/>	<entry min="310" quality="6"/>
+											<entry min="270" quality="2"/>	<entry min="320" quality="7"/>
+											<entry min="280" quality="3"/>	<entry min="330" quality="8"/>
+											<entry min="290" quality="4"/>	<entry min="340" quality="9"/></traderstage_template>
+
+	<traderstage_template name="Level275">	<entry min="275" quality="0"/>	<entry min="325" quality="5"/>
+											<entry min="285" quality="1"/>	<entry min="335" quality="6"/>
+											<entry min="295" quality="2"/>	<entry min="345" quality="7"/>
+											<entry min="305" quality="3"/>	<entry min="355" quality="8"/>
+											<entry min="315" quality="4"/>	<entry min="365" quality="9"/></traderstage_template>
+
+	<traderstage_template name="Level300">	<entry min="300" quality="0"/>	<entry min="350" quality="5"/>
+											<entry min="310" quality="1"/>	<entry min="360" quality="6"/>
+											<entry min="320" quality="2"/>	<entry min="370" quality="7"/>
+											<entry min="330" quality="3"/>	<entry min="380" quality="8"/>
+											<entry min="340" quality="4"/>	<entry min="390" quality="9"/></traderstage_template>
+
+	<traderstage_template name="ammoT0"><entry min="1"/></traderstage_template><!-- Stone, Standard Bullets -->
+	<traderstage_template name="ammoT1"><entry min="10"/></traderstage_template><!-- Iron -->
+	<traderstage_template name="ammoT2"><entry min="25"/></traderstage_template><!-- Steel, Hollow Point Bullets -->
+	<traderstage_template name="ammoT3"><entry min="40"/></traderstage_template><!-- Flaming -->
+	<traderstage_template name="ammoT4"><entry min="55"/></traderstage_template><!-- Explosive, Armor Piercing Bullets -->
+
+	<traderstage_template name="seedsT0"><entry min="1"/></traderstage_template><!-- Potato, Cotton, Chrysanthemum, Goldenrod -->
+	<traderstage_template name="seedsT1"><entry min="10"/></traderstage_template><!-- Mushroom, Yucca, Corn, Pumpkin -->
+	<traderstage_template name="seedsT2"><entry min="25"/></traderstage_template><!-- Blueberry, Coffee, Hops -->
+	<traderstage_template name="seedsT3"><entry min="40"/></traderstage_template><!-- Aloe -->
+	<traderstage_template name="seedsT4"><entry min="60"/></traderstage_template><!-- Super Corn -->
+
+	<traderstage_template name="vehicleT0"><entry min="1"/></traderstage_template><!-- Bicycle Parts -->
+	<traderstage_template name="vehicleT1"><entry min="25"/></traderstage_template><!-- Bicycle Full - Minibike Parts -->
+	<traderstage_template name="vehicleT2"><entry min="50"/></traderstage_template><!-- Minibike Full - Motorcycle Parts -->
+	<traderstage_template name="vehicleT3"><entry min="75"/></traderstage_template><!-- Motorcycle Full - 4x4 Parts -->
+	<traderstage_template name="vehicleT4"><entry min="100"/></traderstage_template><!-- Car, 4x4 Full - Gyro Parts -->
+	<traderstage_template name="vehicleT5"><entry min="150"/></traderstage_template><!-- Gyro Full, Raven -->
+	<traderstage_template name="vehicleT6"><entry min="200"/></traderstage_template><!-- DH-800 -->
+
+	<traderstage_template name="electricT0"><entry min="1"/></traderstage_template>
+	<traderstage_template name="electricT1"><entry min="10"/></traderstage_template>
+	<traderstage_template name="electricT2"><entry min="25"/></traderstage_template>
+	<traderstage_template name="electricT3"><entry min="50"/></traderstage_template>
+	<traderstage_template name="electricT4"><entry min="75"/></traderstage_template>
+	<traderstage_template name="electricT5"><entry min="100"/></traderstage_template>
+	<traderstage_template name="electricT6"><entry min="125"/></traderstage_template>
+	<traderstage_template name="electricT7"><entry min="150"/></traderstage_template>
+
+	<traderstage_template name="modsT1">	<entry  min="1" quality="0"/>	<entry min="25" quality="5"/>
+											<entry  min="5" quality="1"/>	<entry min="30" quality="6"/>
+											<entry min="10" quality="2"/>	<entry min="35" quality="7"/>
+											<entry min="15" quality="3"/>	<entry min="40" quality="8"/>
+											<entry min="20" quality="4"/>	<entry min="45" quality="9"/></traderstage_template>
+
+	<traderstage_template name="modsT2">	<entry min="25" quality="0"/>	<entry  min="75" quality="5"/>
+											<entry min="35" quality="1"/>	<entry  min="85" quality="6"/>
+											<entry min="45" quality="2"/>	<entry  min="95" quality="7"/>
+											<entry min="55" quality="3"/>	<entry min="105" quality="8"/>
+											<entry min="65" quality="4"/>	<entry min="115" quality="9"/></traderstage_template>
+
+	<traderstage_template name="modsT3">	<entry min="55" quality="0"/>	<entry min="105" quality="5"/>
+											<entry min="65" quality="1"/>	<entry min="115" quality="6"/>
+											<entry min="75" quality="2"/>	<entry min="125" quality="7"/>
+											<entry min="85" quality="3"/>	<entry min="135" quality="8"/>
+											<entry min="95" quality="4"/>	<entry min="145" quality="9"/></traderstage_template>
+
+	<traderstage_template name="modsT4">	<entry  min="85" quality="0"/>	<entry min="135" quality="5"/>
+											<entry  min="95" quality="1"/>	<entry min="145" quality="6"/>
+											<entry min="105" quality="2"/>	<entry min="155" quality="7"/>
+											<entry min="115" quality="3"/>	<entry min="165" quality="8"/>
+											<entry min="125" quality="4"/>	<entry min="175" quality="9"/></traderstage_template>
+
+	<traderstage_template name="modsT5">	<entry min="110" quality="0"/>	<entry min="160" quality="5"/>
+											<entry min="120" quality="1"/>	<entry min="170" quality="6"/>
+											<entry min="130" quality="2"/>	<entry min="180" quality="7"/>
+											<entry min="140" quality="3"/>	<entry min="190" quality="8"/>
+											<entry min="150" quality="4"/>	<entry min="200" quality="9"/></traderstage_template>
+
+	<traderstage_template name="trapsT1"><entry min="1"/></traderstage_template><!-- Wooden Spikes, Barbed Wire Fence, Tin Mine -->
+	<traderstage_template name="trapsT2"><entry min="25"/></traderstage_template><!-- Iron Spikes, Barbed Wire Roll, Pot Mine, Dart Trap -->
+	<traderstage_template name="trapsT4"><entry min="50"/></traderstage_template><!-- Powered Spikes, Fence Post T1, Blade Trap T1, Iron Spikes, Flamethrower Trap -->
+	<traderstage_template name="trapsT5"><entry min="75"/></traderstage_template><!-- SMG Turret, Fence Post T2, Blade Trap T2, Steel Spikes -->
+	<traderstage_template name="trapsT6"><entry min="100"/></traderstage_template><!-- Shotgun Turret, Fence Post T3, Blade Trap T3, Titanium Spikes -->
+	<traderstage_template name="trapsT7"><entry min="125"/></traderstage_template><!-- Gatling Turret -->
+
+	<!-- Primitive, Farmer, Tinkerer, Ranger -->
+	<traderstage_template name="armorT1">	<entry  min="1" quality="0"/>	<entry min="25" quality="5"/>
+											<entry  min="5" quality="1"/>	<entry min="30" quality="6"/>
+											<entry min="10" quality="2"/>	<entry min="35" quality="7"/>
+											<entry min="15" quality="3"/>	<entry min="40" quality="8"/>
+											<entry min="20" quality="4"/>	<entry min="45" quality="9"/></traderstage_template>
+	<!-- Athletic, Miner, Biker -->
+	<traderstage_template name="armorT2">	<entry min="25" quality="0"/>	<entry  min="75" quality="5"/>
+											<entry min="35" quality="1"/>	<entry  min="85" quality="6"/>
+											<entry min="45" quality="2"/>	<entry  min="95" quality="7"/>
+											<entry min="55" quality="3"/>	<entry min="105" quality="8"/>
+											<entry min="65" quality="4"/>	<entry min="115" quality="9"/></traderstage_template>
+	<!-- Lumberjack, Scavenger, Raider -->
+	<traderstage_template name="armorT3">	<entry min="55" quality="0"/>	<entry min="105" quality="5"/>
+											<entry min="65" quality="1"/>	<entry min="115" quality="6"/>
+											<entry min="75" quality="2"/>	<entry min="125" quality="7"/>
+											<entry min="85" quality="3"/>	<entry min="135" quality="8"/>
+											<entry min="95" quality="4"/>	<entry min="145" quality="9"/></traderstage_template>
+	<!-- Agent, Rogue, Headhunter -->
+	<traderstage_template name="armorT4">	<entry  min="85" quality="0"/>	<entry min="135" quality="5"/>
+											<entry  min="95" quality="1"/>	<entry min="145" quality="6"/>
+											<entry min="105" quality="2"/>	<entry min="155" quality="7"/>
+											<entry min="115" quality="3"/>	<entry min="165" quality="8"/>
+											<entry min="125" quality="4"/>	<entry min="175" quality="9"/></traderstage_template>
+	<!-- Preacher, Commando, Nomad -->
+	<traderstage_template name="armorT5">	<entry min="115" quality="0"/>	<entry min="165" quality="5"/>
+											<entry min="125" quality="1"/>	<entry min="175" quality="6"/>
+											<entry min="135" quality="2"/>	<entry min="185" quality="7"/>
+											<entry min="145" quality="3"/>	<entry min="195" quality="8"/>
+											<entry min="155" quality="4"/>	<entry min="205" quality="9"/></traderstage_template>
+	
+	<traderstage_template name="weaponT0">	<entry  min="1" quality="0"/>	<entry min="20" quality="5"/>
+											<entry  min="1" quality="1"/>	<entry min="25" quality="6"/>
+											<entry  min="5" quality="2"/>	<entry min="30" quality="7"/>
+											<entry min="10" quality="3"/>	<entry min="35" quality="8"/>
+											<entry min="15" quality="4"/>	<entry min="40" quality="9"/></traderstage_template>
+	
+	<traderstage_template name="weaponT1">	<entry  min="1" quality="0"/>	<entry min="25" quality="5"/>
+											<entry  min="5" quality="1"/>	<entry min="30" quality="6"/>
+											<entry min="10" quality="2"/>	<entry min="35" quality="7"/>
+											<entry min="15" quality="3"/>	<entry min="40" quality="8"/>
+											<entry min="20" quality="4"/>	<entry min="45" quality="9"/></traderstage_template>
+	
+	<traderstage_template name="weaponT2">	<entry min="30" quality="0"/>	<entry min="80" quality="5"/>
+											<entry min="40" quality="1"/>	<entry min="90" quality="6"/>
+											<entry min="50" quality="2"/>	<entry min="100" quality="7"/>
+											<entry min="60" quality="3"/>	<entry min="110" quality="8"/>
+											<entry min="70" quality="4"/>	<entry min="120" quality="9"/></traderstage_template>
+	
+	<traderstage_template name="weaponT3">	<entry min="60" quality="0"/>	<entry min="110" quality="5"/>
+											<entry min="70" quality="1"/>	<entry min="120" quality="6"/>
+											<entry min="80" quality="2"/>	<entry min="130" quality="7"/>
+											<entry min="90" quality="3"/>	<entry min="140" quality="8"/>
+											<entry min="100" quality="4"/>	<entry min="150" quality="9"/></traderstage_template>
+	
+	<traderstage_template name="weaponT4">	<entry  min="90" quality="0"/>	<entry min="140" quality="5"/>
+											<entry min="100" quality="1"/>	<entry min="150" quality="6"/>
+											<entry min="110" quality="2"/>	<entry min="160" quality="7"/>
+											<entry min="120" quality="3"/>	<entry min="170" quality="8"/>
+											<entry min="130" quality="4"/>	<entry min="180" quality="9"/></traderstage_template>
+	
+	<traderstage_template name="weaponT5">	<entry min="120" quality="0"/>	<entry min="170" quality="5"/>
+											<entry min="130" quality="1"/>	<entry min="180" quality="6"/>
+											<entry min="140" quality="2"/>	<entry min="190" quality="7"/>
+											<entry min="150" quality="3"/>	<entry min="200" quality="8"/>
+											<entry min="160" quality="4"/>	<entry min="210" quality="9"/></traderstage_template>
+</traderstage_templates>
+
+<trader_item_groups>
+	
+	<trader_item_group name="groupEngines">
+		<item name="ulmSmallEngine"						stage="vehicleT0"/><!-- Minibike -->
+		<item name="ulmMotorcycleEngine"				stage="vehicleT1"/><!-- Motorcycle -->
+		<item name="ulmBuggyEngine"						stage="vehicleT2"/><!-- Buggy -->
+		<item name="ulmCarEngine"						stage="vehicleT3"/><!-- Car -->
+		<item name="ulmGyrocopterEngine"				stage="vehicleT4"/><!-- Gyrocopter/Small Plane -->
+		<item name="ulmTruckEngine"						stage="vehicleT5"/><!-- Truck -->
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleWheels">
+		<item name="ulmResourceBicycleWheel"			stage="vehicleT0"/>
+		<item name="ulmResourceMinibikeWheel"			stage="vehicleT1"/>
+		<item name="ulmResourceMotorcycleWheel"			stage="vehicleT2"/>
+		<item name="ulmResourceCarWheel"				stage="vehicleT3"/>
+		<item name="ulmResourceGyrocopterWheel"			stage="vehicleT4"/>
+		<item name="ulmResourceTruckWheel"				stage="vehicleT5"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleDuneRunner">							<!-- Scout Buggy, Dune Runner -->
+		<item name="ulmResourceDuneRunnerFrame"			stage="vehicleT2"/>
+		<item name="ulmResourceDuneRunnerSuspension"	stage="vehicleT2"/>
+		<item name="ulmResourceDuneRunnerSeat"			stage="vehicleT2"/>
+		<item name="ulmResourceDuneRunnerDashboard"		stage="vehicleT2"/>
+		<item name="ulmVehicleDuneRunner" prob=".1"		stage="vehicleT3"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleHelicopterRaven">						<!-- Helicopter, Small Raven -->
+		<item name="ulmVehicleHelicopterRaven"			stage="vehicleT5"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleHelicopterDH800">						<!-- Helicopter, Large DH-800  -->
+		<item name="ulmVehicleHelicopterDH1"			stage="vehicleT6"/>
+		<item name="ulmVehicleHelicopterDH2"			stage="vehicleT6"/>
+		<item name="ulmVehicleHelicopterDH3"			stage="vehicleT6"/>
+		<item name="ulmVehicleHelicopterDH4"			stage="vehicleT6"/>
+		<item name="ulmVehicleHelicopterDH5"			stage="vehicleT6"/>
+		<item name="ulmVehicleHelicopterDH6"			stage="vehicleT6"/>
+		<item name="ulmVehicleHelicopterDH7"			stage="vehicleT6"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleSedan04">								<!-- Sedan, Modern, Cheap -->
+		<item name="ulmVehicleSedan04White"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan04Black"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan04Beige"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan04Blue"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan04Green"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan04GreenBlack"		stage="vehicleT4"/>
+		<item name="ulmVehicleSedan04Orange"			stage="vehicleT4"/>
+		<item name="ulmVehicleSedan04Red"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan04Police"			stage="vehicleT4"/>
+		<item name="ulmVehicleSedan04Taxi"				stage="vehicleT4"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleSedan05">								<!-- Sedan, Classic -->
+		<item name="ulmVehicleSedan05White"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan05Black"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan05Blue"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan05Beige"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan05Brown"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan05Gray"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan05Green"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan05Orange"			stage="vehicleT4"/>
+		<item name="ulmVehicleSedan05Red"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan05Yellow"			stage="vehicleT4"/>
+		<item name="ulmVehicleSedan05Mixed1"			stage="vehicleT4"/>
+		<item name="ulmVehicleSedan05Mixed2"			stage="vehicleT4"/>
+		<item name="ulmVehicleSedan05Mixed3"			stage="vehicleT4"/>
+		<item name="ulmVehicleSedan05Mixed4"			stage="vehicleT4"/>
+		<item name="ulmVehicleSedan05Mixed5"			stage="vehicleT4"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleCoupe1">								<!-- Classic Coupe A -->
+		<item name="ulmVehicleCoupe01White"				stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01WhiteStripe"		stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01Black"				stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01BlackStripe"		stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01Red"				stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01RedStripe"			stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01Beige"				stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01Blue"				stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01BlueStripe"		stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01Gray"				stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01Green"				stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01Orange"			stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01OrangeStripe"		stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01Purple"			stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01Cherry"			stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01Yellow"			stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01YellowStripe"		stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01Mixed1"			stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01Mixed2"			stage="vehicleT4"/>
+		<item name="ulmVehicleCoupe01Mixed3"			stage="vehicleT4"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleSedan1">								<!-- Vanilla Sedan -->
+		<item name="ulmVehicleSedan03White"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan03Black"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan03Yellow"			stage="vehicleT4"/>
+		<item name="ulmVehicleSedan03Green"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan03Red"				stage="vehicleT4"/>
+		<item name="ulmVehicleSedan03Blue"				stage="vehicleT4"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleSUV02">								<!-- Modern SUV -->
+		<item name="ulmVehicleSUV02White"				stage="vehicleT4"/>
+		<item name="ulmVehicleSUV02Gray"				stage="vehicleT4"/>
+		<item name="ulmVehicleSUV02Black"				stage="vehicleT4"/>
+		<item name="ulmVehicleSUV02Blue"				stage="vehicleT4"/>
+		<item name="ulmVehicleSUV02Green"				stage="vehicleT4"/>
+		<item name="ulmVehicleSUV02Red"					stage="vehicleT4"/>
+		<item name="ulmVehicleSUV02Cherry"				stage="vehicleT4"/>
+		<item name="ulmVehicleSUV02Pink"				stage="vehicleT4"/>
+		<item name="ulmVehicleSUV02Orange"				stage="vehicleT4"/>
+		<item name="ulmVehicleSUV02Beige"				stage="vehicleT4"/>
+		<item name="ulmVehicleSUV02Police"				stage="vehicleT4"/>
+		<item name="ulmVehicleSUV02Security"			stage="vehicleT4"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleHumvee">								<!-- Humvee -->
+		<item name="ulmVehicleHumveeSnow"				stage="vehicleT5"/>
+		<item name="ulmVehicleHumveeSnowCargo"			stage="vehicleT5"/>
+		<item name="ulmVehicleHumveeDesert"				stage="vehicleT5"/>
+		<item name="ulmVehicleHumveeDesertCargo"		stage="vehicleT5"/>
+		<item name="ulmVehicleHumveeJungle"				stage="vehicleT5"/>
+		<item name="ulmVehicleHumveeJungleCargo"		stage="vehicleT5"/>
+		<item name="ulmVehicleHumveeBurnt"				stage="vehicleT5"/>
+		<item name="ulmVehicleHumveeBurntCargo"			stage="vehicleT5"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleMuscle">								<!-- Muscle -->
+		<item name="ulmVehicleMuscleCar01White"			stage="vehicleT4"/>
+		<item name="ulmVehicleMuscleCar01WhiteStripe"	stage="vehicleT4"/>
+		<item name="ulmVehicleMuscleCar01Black"			stage="vehicleT4"/>
+		<item name="ulmVehicleMuscleCar01BlackStripe"	stage="vehicleT4"/>
+		<item name="ulmVehicleMuscleCar01Blue"			stage="vehicleT4"/>
+		<item name="ulmVehicleMuscleCar01BlueStripe"	stage="vehicleT4"/>
+		<item name="ulmVehicleMuscleCar01Gray"			stage="vehicleT4"/>
+		<item name="ulmVehicleMuscleCar01GrayStripe"	stage="vehicleT4"/>
+		<item name="ulmVehicleMuscleCar01Red"			stage="vehicleT4"/>
+		<item name="ulmVehicleMuscleCar01RedStripe"		stage="vehicleT4"/>
+		<item name="ulmVehicleMuscleCar01Yellow"		stage="vehicleT4"/>
+		<item name="ulmVehicleMuscleCar01YellowStripe"	stage="vehicleT4"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleMinivan">								<!-- Minivan -->
+		<item name="ulmVehicleMinivan02White"			stage="vehicleT5"/>
+		<item name="ulmVehicleMinivan02Gray"			stage="vehicleT5"/>
+		<item name="ulmVehicleMinivan02Black"			stage="vehicleT5"/>
+		<item name="ulmVehicleMinivan02Blue"			stage="vehicleT5"/>
+		<item name="ulmVehicleMinivan02Cyan"			stage="vehicleT5"/>
+		<item name="ulmVehicleMinivan02Green"			stage="vehicleT5"/>
+		<item name="ulmVehicleMinivan02Purple"			stage="vehicleT5"/>
+		<item name="ulmVehicleMinivan02Pink"			stage="vehicleT5"/>
+		<item name="ulmVehicleMinivan02Yellow"			stage="vehicleT5"/>
+		<item name="ulmVehicleMinivan02Orange"			stage="vehicleT5"/>
+		<item name="ulmVehicleMinivan02Brown"			stage="vehicleT5"/>
+		<item name="ulmVehicleMinivan02Red"				stage="vehicleT5"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleMilitaryTruck">						<!-- Military Truck -->
+		<item name="ulmVehicleMilitaryTruckDesertTarp1"	stage="vehicleT6"/>
+		<item name="ulmVehicleMilitaryTruckDesertTarp2"	stage="vehicleT6"/>
+		<item name="ulmVehicleMilitaryTruckDesertTarp3"	stage="vehicleT6"/>
+		<item name="ulmVehicleMilitaryTruckDesertRails"	stage="vehicleT6"/>
+		<item name="ulmVehicleMilitaryTruckCamoTarp1"	stage="vehicleT6"/>
+		<item name="ulmVehicleMilitaryTruckCamoTarp2"	stage="vehicleT6"/>
+		<item name="ulmVehicleMilitaryTruckCamoTarp3"	stage="vehicleT6"/>
+		<item name="ulmVehicleMilitaryTruckCamoRails"	stage="vehicleT6"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleBicycleT1">							<!-- Bicycle T1 -->
+		<item name="ulmResourceBicycleChassis"			stage="vehicleT0"/>
+		<item name="ulmResourceBicycleHandlebars"		stage="vehicleT0"/>
+		<item name="ulmResourceBicycleAccessories"		stage="vehicleT0"/>
+		<item name="ulmVehicleBicycle1"					stage="vehicleT0"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleBicycleT2">							<!-- Bicycle T2 -->
+		<item name="ulmResourceBicycleAccessories"		stage="vehicleT0"/>
+		<item name="vehicleBicycleChassis"				stage="vehicleT1"/>
+		<item name="vehicleBicycleHandlebars"			stage="vehicleT1"/>
+		<item name="vehicleBicyclePlaceable"			stage="vehicleT1"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleMinibikeT1">							<!-- Minibike T1 -->
+		<item name="ulmResourceMinibikeAccessories"/>
+		<item name="ulmResourceMinibikeChassis"			stage="vehicleT0"/>
+		<item name="ulmResourceMinibikeHandlebars"		stage="vehicleT0"/>
+		<item name="ulmVehicleMinibikeOld"				stage="vehicleT1"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleMinibikeT2">							<!-- Minibike T2 -->
+		<item name="vehicleMinibikeChassis"				stage="vehicleT0"/>
+		<item name="vehicleMinibikeHandlebars"			stage="vehicleT0"/>
+		<item name="vehicleMinibikePlaceable"			stage="vehicleT1"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleMotorcycleT1">							<!-- Motorcycle T1 -->
+		<item name="ulmResourceMotorcycleAccessories"	stage="vehicleT2"/>
+		<item name="ulmResourceMotorcycleChassis"		stage="vehicleT2"/>
+		<item name="ulmResourceMotorcycleHandlebars"	stage="vehicleT2"/>
+		<item name="ulmVehicleMotorcycle01"				stage="vehicleT2"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleMotorcycleT2">							<!-- Motorcycle T2 -->
+		<item name="vehicleMotorcycleChassis"			stage="vehicleT2"/>
+		<item name="vehicleMotorcycleHandlebars"		stage="vehicleT2"/>
+		<item name="vehicleMotorcyclePlaceable"			stage="vehicleT2"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleRenegade">								<!-- Motorcycle Classic -->
+		<item name="ulmVehicleMotorcycle03White"		stage="vehicleT3"/>
+		<item name="ulmVehicleMotorcycle03Gray"			stage="vehicleT3"/>
+		<item name="ulmVehicleMotorcycle03Black"		stage="vehicleT3"/>
+		<item name="ulmVehicleMotorcycle03LightBlue"	stage="vehicleT3"/>
+		<item name="ulmVehicleMotorcycle03DarkBlue"		stage="vehicleT3"/>
+		<item name="ulmVehicleMotorcycle03RetroGreen"	stage="vehicleT3"/>
+		<item name="ulmVehicleMotorcycle03LimeGreen"	stage="vehicleT3"/>
+		<item name="ulmVehicleMotorcycle03ForestGreen"	stage="vehicleT3"/>
+		<item name="ulmVehicleMotorcycle03Purple"		stage="vehicleT3"/>
+		<item name="ulmVehicleMotorcycle03Pink"			stage="vehicleT3"/>
+		<item name="ulmVehicleMotorcycle03Yellow"		stage="vehicleT3"/>
+		<item name="ulmVehicleMotorcycle03Orange"		stage="vehicleT3"/>
+		<item name="ulmVehicleMotorcycle03Brown"		stage="vehicleT3"/>
+		<item name="ulmVehicleMotorcycle03Red"			stage="vehicleT3"/>
+		<item name="ulmVehicleMotorcycle03Cherry"		stage="vehicleT3"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleThunderbird">						<!-- Dirt Bike -->
+		<item name="ulmVehicleDirtBike01White"			stage="vehicleT3"/>
+		<item name="ulmVehicleDirtBike01Gray"			stage="vehicleT3"/>
+		<item name="ulmVehicleDirtBike01Black"			stage="vehicleT3"/>
+		<item name="ulmVehicleDirtBike01LightBlue"		stage="vehicleT3"/>
+		<item name="ulmVehicleDirtBike01DarkBlue"		stage="vehicleT3"/>
+		<item name="ulmVehicleDirtBike01Cyan"			stage="vehicleT3"/>
+		<item name="ulmVehicleDirtBike01RetroGreen"		stage="vehicleT3"/>
+		<item name="ulmVehicleDirtBike01LimeGreen"		stage="vehicleT3"/>
+		<item name="ulmVehicleDirtBike01ForestGreen"	stage="vehicleT3"/>
+		<item name="ulmVehicleDirtBike01Purple"			stage="vehicleT3"/>
+		<item name="ulmVehicleDirtBike01Pink"			stage="vehicleT3"/>
+		<item name="ulmVehicleDirtBike01Yellow"			stage="vehicleT3"/>
+		<item name="ulmVehicleDirtBike01Orange"			stage="vehicleT3"/>
+		<item name="ulmVehicleDirtBike01Brown"			stage="vehicleT3"/>
+		<item name="ulmVehicleDirtBike01Red"			stage="vehicleT3"/>
+		<item name="ulmVehicleDirtBike01Cherry"			stage="vehicleT3"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleQuadBike">							<!-- Quad Bike -->
+		<item name="ulmVehicleQuadBike01Desert"			stage="vehicleT4"/>
+		<item name="ulmVehicleQuadBike01Raider"			stage="vehicleT4"/>
+		<item name="ulmVehicleQuadBike01HotRod"			stage="vehicleT4"/>
+		<item name="ulmVehicleQuadBike01Digital"		stage="vehicleT4"/>
+		<item name="ulmVehicleQuadBike01Snow"			stage="vehicleT4"/>
+		<item name="ulmVehicleQuadBike01Woodland"		stage="vehicleT4"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleGokart">							<!-- Gokart -->
+		<item name="ulmVehicleGokart01White"			stage="vehicleT2"/>
+		<item name="ulmVehicleGokart01Gray"				stage="vehicleT2"/>
+		<item name="ulmVehicleGokart01Black"			stage="vehicleT2"/>
+		<item name="ulmVehicleGokart01LightBlue"		stage="vehicleT2"/>
+		<item name="ulmVehicleGokart01DarkBlue"			stage="vehicleT2"/>
+		<item name="ulmVehicleGokart01Cyan"				stage="vehicleT2"/>
+		<item name="ulmVehicleGokart01RetroGreen"		stage="vehicleT2"/>
+		<item name="ulmVehicleGokart01LimeGreen"		stage="vehicleT2"/>
+		<item name="ulmVehicleGokart01ForestGreen"		stage="vehicleT2"/>
+		<item name="ulmVehicleGokart01Purple"			stage="vehicleT2"/>
+		<item name="ulmVehicleGokart01Pink"				stage="vehicleT2"/>
+		<item name="ulmVehicleGokart01Yellow"			stage="vehicleT2"/>
+		<item name="ulmVehicleGokart01Orange"			stage="vehicleT2"/>
+		<item name="ulmVehicleGokart01Brown"			stage="vehicleT2"/>
+		<item name="ulmVehicleGokart01Red"				stage="vehicleT2"/>
+		<item name="ulmVehicleGokart01Cherry"			stage="vehicleT2"/>
+		</trader_item_group>
+	
+	<trader_item_group name="groupVehicleGyrocopterT1">						<!-- Gyrocopter T1 -->
+		<item name="ulmResourceGyrocopterAccessories"		stage="vehicleT4"/>
+		<item name="ulmResourceGyrocopterControlSurfaces"	stage="vehicleT4"/>
+		<item name="ulmResourceGyrocopterChassis"			stage="vehicleT4"/>
+		<item name="ulmVehicleGyrocopterBasic"				stage="vehicleT5"/></trader_item_group>
+	
+	<trader_item_group name="groupVehicleGyrocopterT2">						<!-- Gyrocopter T2-->
+		<item name="vehicleGyroCopterChassis"			stage="vehicleT4"/>
+		<item name="vehicleGyroCopterAccessories"		stage="vehicleT4"/>
+		<item name="vehicleGyrocopterPlaceable"			stage="vehicleT5"/></trader_item_group>
+    
+	<trader_item_group name="groupModsMeleeCommon">
+		<item name="ulmResourceModParts"				stage="modsT0"/>
+		<item name="modMeleeSerratedBlade"				stage="modsT1"/>
+		<item name="modMeleeWeightedHead"				stage="modsT1"/>
+		<item name="modFuelTankSmall"					stage="modsT1"/>	
+		<item name="modMeleeStructuralBrace"			stage="modsT1"	quality="1,30"/>
+		<item name="modMeleeGraveDigger"				stage="modsT1"	quality="1,30"/>
+		<item name="modMeleeWoodSplitter"				stage="modsT1"	quality="1,30"/></trader_item_group>
+
+	<trader_item_group name="groupModsMeleeRare">
+		<item name="modMeleeClubBarbedWire"				stage="modsT2"/>
+		<item name="modMeleeFortifyingGrip"				stage="modsT2"/>
+		<item name="modFuelTankLarge"					stage="modsT2"/>
+		<item name="modMeleeFiremansAxeMod"				stage="modsT2"	quality="1,30"/>
+		<item name="modMeleeBunkerBuster"				stage="modsT2"	quality="1,30"/>
+		<item name="modMeleeClubMetalSpikes"			stage="modsT3"/>
+		<item name="modMeleeStunBatonRepulsor"			stage="modsT3"	quality="1,30"/></trader_item_group>
+
+	<trader_item_group name="groupModsMeleeEpic">
+		<item name="modMeleeClubMetalChain"				stage="modsT3"/>
+		<item name="modMeleeErgonomicGrip"				stage="modsT3"/>
+		<item name="modMeleeTemperedBlade"				stage="modsT3"	quality="1,30"/>
+		<item name="modMeleeIronBreaker"				stage="modsT3"	quality="1,30"/>
+		<item name="modGunMeleeRadRemover"				stage="modsT3"					prob=".3"/>
+		<item name="modMeleeDiamondTip"					stage="modsT3"	quality="1,30"	prob=".3"/>
+		<item name="modGunMeleeExoticAlloy"				stage="modsT3"	quality="1,30"	prob=".3"/>
+		<item name="ulmModChainsawChainTitanium"		stage="modsT3"	quality="1,30"	prob=".3"/>
+		<item name="ulmModMeleeChargeExtender"			stage="modsT3"	quality="1,30"	prob=".3"/></trader_item_group>
+
+	<trader_item_group name="groupModsGunsCommon">
+		<item name="ulmResourceModParts"				stage="modsT0"/>
+		<item name="modGunChoke"						stage="modsT1"/>
+		<item name="modGunDuckbill"						stage="modsT1"/>
+		<item name="modGunBipod"						stage="modsT1"/>
+		<item name="modGunFlashlight"					stage="modsT1"/>
+		<item name="modGunForegrip"						stage="modsT1"/>
+		<item name="modGunScopeSmall"					stage="modsT1"/>
+		<item name="modShotgunSawedOffBarrel"			stage="modsT1"/>
+		<item name="modGunTriggerGroupSemi"				stage="modsT1"/>
+		<item name="modGunMagazineExtender"				stage="modsT1"	quality="1,30"/>
+		<item name="modGunMeleeTheHunter"				stage="modsT1"	quality="1,30"/>
+		<item name="modGunMuzzleBrake"					stage="modsT1"	quality="1,30"/></trader_item_group>
+
+	<trader_item_group name="groupModsGunsRare">
+		<item name="modGunBarrelExtender"				stage="modsT2"/>
+		<item name="modGunCrippleEm"					stage="modsT2"/>
+		<item name="modGunLaserSight"					stage="modsT2"/>
+		<item name="modGunReflexSight"					stage="modsT2"/>
+		<item name="modGunScopeMedium"					stage="modsT2"/>
+		<item name="modGunSoundSuppressorSilencer"		stage="modsT2"/>
+		<item name="modGunTriggerGroupBurst3"			stage="modsT2"/>
+		<item name="modGunShotgunTubeExtenderMagazine"	stage="modsT2"/>
+		<item name="modGunRetractingStock"				stage="modsT2"	quality="1,30"/></trader_item_group>
+
+	<trader_item_group name="groupModsGunsEpic">
+		<item name="modGunScopeLarge"					stage="modsT3"/>
+		<item name="modGunTriggerGroupAutomatic"		stage="modsT3"/>
+		<item name="modGunBowPolymerString"				stage="modsT3"	quality="1,30"/>
+		<item name="modGunBowArrowRest"					stage="modsT3"	quality="1,30"/>
+		<item name="modGunMeleeRadRemover"				stage="modsT3"					prob=".25"/>
+		<item name="modGunDrumMagazineExtender"			stage="modsT3"	quality="1,30"	prob=".25"/>
+		<item name="modGunMeleeExoticAlloy"				stage="modsT3"	quality="1,30"	prob=".25"/></trader_item_group>
+
+	<trader_item_group name="groupModsArmorGeneral">
+		<item name="modArmorPerception"							stage="armorT1"	quality="1,30"/>
+		<item name="modArmorStrength"							stage="armorT1"	quality="1,30"/>
+		<item name="modArmorFortitude"							stage="armorT1"	quality="1,30"/>
+		<item name="modArmorAgility"							stage="armorT1"	quality="1,30"/>
+		<item name="modArmorIntellect"							stage="armorT1"	quality="1,30"/>
+		<item name="modArmorTreasureHunter"						stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorMaxStamina"						stage="armorT1"	quality="1,30"/>
+	</trader_item_group>
+
+	<trader_item_group name="groupModsArmorHelmet">
+		<!-- Tier 1 -->
+		<item name="ulmModArmorHelmetFoodWaterLoss"				stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorHelmetResistStun"				stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorHelmetHarvestCountMining"		stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorHelmetHarvestCountWood"			stage="armorT1"	quality="1,30"/>
+		<!-- Tier 2 -->
+		<item name="ulmModArmorHelmetBarteringBuying"			stage="armorT2"	quality="1,30"/>
+		<item name="ulmModArmorHelmetBarteringGunsAmmo"			stage="armorT2"	quality="1,30"/>
+		<item name="ulmModArmorHelmetBarteringFitness"			stage="armorT2"	quality="1,30"/>
+		<!-- Tier 3 -->
+		<item name="ulmModArmorHelmetLootStage"					stage="armorT3"	quality="1,30"/>
+		<item name="ulmModArmorHelmetBarteringAll"				stage="armorT3"	quality="1,30"/>
+		<item name="ulmModArmorHelmetDamageSneak"				stage="armorT3"	quality="1,30"/>
+		<!-- Tier 4 -->
+		<item name="ulmModArmorHelmetExpMining"					stage="armorT4"	quality="1,30"/>
+		<item name="ulmModArmorHelmetExpSalvaging"				stage="armorT4"	quality="1,30"/>
+		<!-- Tier 5 -->
+		<item name="ulmModArmorHelmetExpAll"					stage="armorT5"	quality="1,30"/>
+		<!-- need to hook it up in loot
+		<item name="ulmModArmorHelmetLootProbSeeds"				stage="armorT3"	quality="1,30"/> -->
+	</trader_item_group>
+		
+	<trader_item_group name="groupModsArmorOutfit">
+		<!-- Tier 1 -->
+		<item name="ulmModArmorOutfitMaxFoodWater"				stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorOutfitStaminaLossMining"			stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorOutfitForager"					stage="armorT1"	quality="1,30"/>
+		<!-- Tier 2 -->
+		<item name="ulmModArmorOutfitCarryLimit"				stage="armorT2"	quality="1,30"/>
+		<item name="ulmModArmorOutfitCritHeal"					stage="armorT2"	quality="1,30"/>
+		<item name="ulmModArmorOutfitCritHealing"				stage="armorT2"	quality="1,30"/>
+		<!-- Tier 3 -->
+		<item name="ulmModArmorOutfitSneakBoost"				stage="armorT3"	quality="1,30"/>
+		<item name="ulmModArmorOutfitMaxHealth"					stage="armorT3"	quality="1,30"/>
+		<!-- Tier 4 -->
+		<item name="ulmModArmorOutfitActionSkillExp"			stage="armorT4"	quality="1,30"/>
+		<item name="ulmModArmorOutfitActionSkillDoubleChance"	stage="armorT4"	quality="1,30"/>
+		<!-- Tier 5 -->
+		<item name="ulmModArmorOutfitResistCritDamage"			stage="armorT5"	quality="1,30"/>
+		<item name="ulmModArmorOutfitResistPhysicalDamage"		stage="armorT5"	quality="1,30"/></trader_item_group>
+
+	<trader_item_group name="groupModsArmorGloves">
+		<!-- Tier 1 -->
+		<item name="ulmModArmorGlovesDamageBlade"				stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageBlunt"				stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamagePolearm"				stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageBatons"				stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageAxes"				stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageBows"				stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageCrossbows"			stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamagePistols"				stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageRevolvers"			stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageRifles"				stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageMachineGuns"			stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageSniperRifles"		stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageSMG"					stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageShotguns"			stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageLaunchers"			stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageGrenades"			stage="armorT1"	quality="1,30"/>
+		<!-- Tier 2 -->
+		<item name="ulmModArmorGlovesDamageArchery"				stage="armorT2"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageMining"				stage="armorT2"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageDigging"				stage="armorT2"	quality="1,30"/>
+		<item name="ulmModArmorGlovesHarvestCountSalvage"		stage="armorT2"	quality="1,30"/>
+		<!-- Tier 3 -->
+		<item name="ulmModArmorGlovesAttackSpeedBlades"			stage="armorT3"	quality="1,30"/>
+		<item name="ulmModArmorGlovesAttackSpeedArchery"		stage="armorT3"	quality="1,30"/>
+		<item name="ulmModArmorGlovesLockpicking"				stage="armorT3"	quality="1,30"/>
+		<!-- Tier 4 -->
+		<item name="ulmModArmorGlovesDamageMelee"				stage="armorT4"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageRanged"				stage="armorT4"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageRadiated"			stage="armorT4"	quality="1,30"/>
+		<!-- Tier 5 -->
+		<item name="ulmModArmorGlovesDamageUndead"				stage="armorT5"	quality="1,30"/>
+		<item name="ulmModArmorGlovesDamageWeapons"				stage="armorT5"	quality="1,30"/></trader_item_group>
+
+	<trader_item_group name="groupModsArmorBoots">
+		<!-- Tier 1 -->
+		<item name="ulmModArmorBootsDamageTakenFall"			stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorBootsCritHealing"				stage="armorT1"	quality="1,30"/>
+		<!-- Tier 2 -->
+		<item name="ulmModArmorBootsSneakSprintNoise"			stage="armorT2"	quality="1,30"/>
+		<item name="ulmModArmorBootsStaminaLossMelee"			stage="armorT2"	quality="1,30"/>
+		<item name="ulmModArmorBootsStaminaLossSalvage"			stage="armorT2"	quality="1,30"/>
+		<item name="ulmModArmorBootsStaminaLossRunning"			stage="armorT2"	quality="1,30"/>
+		<!-- Tier 3 -->
+		<item name="ulmModArmorBootsRunSpeed"					stage="armorT3"	quality="1,30"/></trader_item_group>
+
+	<trader_item_group name="groupModsArmorBoosts">
+		<item group="groupModsArmorGeneral"/>
+		<item group="groupModsArmorHelmet"/>
+		<item group="groupModsArmorOutfit"/>
+		<item group="groupModsArmorGloves"/>
+		<item group="groupModsArmorBoots"/></trader_item_group>
+
+	<trader_item_group name="groupModsArmorCommon">
+		<item name="ulmResourceModParts"				stage="modsT0"/>
+		<item name="ulmArmorHelmetCandle"				stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorInsulatedLiner"			stage="armorT1"	quality="1,30"/>
+		<item name="ulmModArmorCoolingMesh"				stage="armorT1"	quality="1,30"/>
+		<item name="modArmorImprovedFittings"			stage="armorT1"	quality="1,30"/>
+		<item name="modArmorPlatingBasic"				stage="armorT1"	quality="1,30"/>
+		<item name="modArmorStoragePocket"				stage="armorT1"	quality="1,30"/></trader_item_group>
+
+	<trader_item_group name="groupModsArmorRare">
+		<item name="ulmArmorHelmetLight"				stage="armorT2"	quality="1,30"/>
+		<item name="modArmorImpactBracing"				stage="armorT2"/>
+		<item name="modArmorCustomizedFittings"			stage="armorT2"	quality="1,30"/>
+		<item name="modArmorPlatingReinforced"			stage="armorT2"	quality="1,30"/>
+		<item name="modArmorMuffledConnectors"			stage="armorT2"	quality="1,30"/>
+		<item name="modArmorDoubleStoragePocket"		stage="armorT2"	quality="1,30"/>
+		<item name="ulmArmorEnforcerBelt"				stage="armorT2"	quality="1,30"/></trader_item_group>
+
+	<trader_item_group name="groupModsArmorEpic">
+		<item name="ulmArmorNightVision"				stage="armorT3"	quality="1,30"/>
+		<item name="modArmorBandolier"					stage="armorT3"/>
+		<item name="modArmorAdvancedMuffledConnectors"	stage="armorT3"	quality="1,30"/>
+		<item name="modArmorTripleStoragePocket"		stage="armorT3"	quality="1,30"/>
+		<item name="ulmBackpackUrban1"					stage="armorT3"	quality="1,30"/>
+		<item name="ulmModArmorBroadcastRadio"			stage="armorT3"	quality="1,30"/>
+		<item name="ulmModArmorEnforcerVest"			stage="armorT3"	quality="1,30"/>
+		<item name="modArmorWaterPurifier"				stage="armorT4"					prob=".25"/>
+		<item name="modArmorQuadStoragePocket"			stage="armorT4"	quality="1,30"	prob=".25"/></trader_item_group>
+
+	<trader_item_group name="groupModsGuns">
+		<item group="groupModsGunsCommon" prob="0.8"/>
+		<item group="groupModsGunsRare" prob="0.13"/>
+		<item group="groupModsGunsEpic" prob="0.07"/></trader_item_group>
+
+	<trader_item_group name="groupModsMelee">
+		<item group="groupModsMeleeCommon" prob="0.8"/>
+		<item group="groupModsMeleeRare" prob="0.13"/>
+		<item group="groupModsMeleeEpic" prob="0.07"/></trader_item_group>
+		
+	<trader_item_group name="groupModsArmor01">
+		<item group="groupModsArmorCommon" prob="0.8"/>
+		<item group="groupModsArmorRare" prob="0.13"/>
+		<item group="groupModsArmorEpic" prob="0.07"/></trader_item_group>
+
+	<trader_item_group name="groupModsArmor">
+		<item group="groupModsArmor01"/>
+		<item group="groupModsArmorBoosts"/></trader_item_group>
+
+	<trader_item_group name="groupModsAll">
+		<item group="groupModsGuns"/>
+		<item group="groupModsMelee"/>
+		<item group="groupModsArmor"/></trader_item_group>
+
+	<trader_item_group name="ulmArmorNewsboyHat">
+		<item name="ulmArmorNewsboyHatBeige"			stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorNewsboyHatBlack"			stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorNewsboyHatBlueCamo"			stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorNewsboyHatBrownLeather"		stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorNewsboyHatDarkCamo"			stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorNewsboyHatDarkGray"			stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorNewsboyHatLightGray"		stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorNewsboyHatMilitaryGreen"	stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorNewsboyHatRedPlaid"			stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorNewsboyHatRustLeather"		stage="armorT2"	quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="ulmArmorWoolHat">
+		<item name="ulmArmorWoolHatWhite"				stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorWoolHatAloe"				stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorWoolHatBlack"				stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorWoolHatBlue"				stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorWoolHatBrown"				stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorWoolHatCherry"				stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorWoolHatGreen"				stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorWoolHatGrey"				stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorWoolHatOlive"				stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorWoolHatOrange"				stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorWoolHatPink"				stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorWoolHatPurple"				stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorWoolHatRed"					stage="armorT2"	quality="1,50"/>
+		<item name="ulmArmorWoolHatTan"					stage="armorT2"	quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="ulmArmorEnforcerHat">
+		<item name="ulmArmorEnforcerHatBlack"			stage="armorT4"	quality="1,50"/>
+		<item name="ulmArmorEnforcerHatBlue"			stage="armorT4"	quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="ulmArmorBonnieHat">
+		<item name="ulmArmorBonnieHatBlack"				stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorBonnieHatCamo"				stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorBonnieHatGreen"				stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorBonnieHatTan"				stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorBonnieHatUrban"				stage="armorT5"	quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="ulmArmor8PCoverHat">
+		<item name="ulmArmor8PCoverHatBlack"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmor8PCoverHatDesert"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmor8PCoverHatGreen"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmor8PCoverHatTan"				stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmor8PCoverHatWoodlands"		stage="armorT5"	quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="ulmArmorCowboyHat">
+		<item name="ulmArmorCowboyHatDesert"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorCowboyHatSheriff"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorCowboyHatBrown"				stage="armorT5"	quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="ulmArmorHardHat">
+		<item name="ulmArmorHardHatYellow"				stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorHardHatBlue"				stage="armorT5"	quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="ulmArmorBrodieHelmet">
+		<item name="ulmArmorBrodieHelmetGreen"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorBrodieHelmetGray"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorBrodieHelmetMetal"			stage="armorT5"	quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="ulmArmorMotoHelmet">
+		<item name="ulmArmorMotoHelmetWhite"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetWhiteBlack"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetWhiteBlue"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetWhiteGreen"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetWhiteOrange"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetWhitePink"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetWhitePurple"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetWhiteRed"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetBlack"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetBlackBlue"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetBlackGreen"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetBlackOrange"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetBlackPink"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetBlackPurple"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetBlackRed"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetBlackWhite"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetBlue"				stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetBlueBlack"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetBlueRed"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetBlueWhite"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetCamoBlack"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetCamoBlue"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetCamoRed"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetCamoWhite"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetDigitalBlack"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetDigitalBlue"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetDigitalRed"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetDigitalWhite"		stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetGold"				stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetRed"				stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetRedBlack"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetRedBlue"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetRedWhite"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetTan"				stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetTanBlack"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetTanBlue"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetTanRed"			stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorMotoHelmetTanWhite"			stage="armorT5"	quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="ulmArmorFirefighterHelmet">
+		<item name="ulmArmorFirefighterHelmetRusty"		stage="armorT1"	quality="1,50"/>
+		<item name="ulmArmorFirefighterHelmetBlack"		stage="armorT1"	quality="1,50"/>
+		<item name="ulmArmorFirefighterHelmetRed"		stage="armorT1"	quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="ulmArmorArmyHelmet1">
+		<item name="ulmArmorArmyHelmet1Green"			stage="armorT3"	quality="1,50"/>
+		<item name="ulmArmorArmyHelmet1Savanna"			stage="armorT3"	quality="1,50"/>
+		<item name="ulmArmorArmyHelmet1Urban"			stage="armorT3"	quality="1,50"/>
+		<item name="ulmArmorArmyHelmet1Woodlands"		stage="armorT3"	quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="ulmArmorArmyHelmet2">
+		<item name="ulmArmorArmyHelmet2Black"			stage="armorT3"	quality="1,50"/>
+		<item name="ulmArmorArmyHelmet2Desert"			stage="armorT3"	quality="1,50"/>
+		<item name="ulmArmorArmyHelmet2Green"			stage="armorT3"	quality="1,50"/>
+		<item name="ulmArmorArmyHelmet2Savanna"			stage="armorT3"	quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="ulmArmorArmyHelmet3">
+		<item name="ulmArmorArmyHelmet3Black"			stage="armorT4"	quality="1,50"/>
+		<item name="ulmArmorArmyHelmet3Olive"			stage="armorT4"	quality="1,50"/>
+		<item name="ulmArmorArmyHelmet3Sand"			stage="armorT4"	quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="ulmArmorBandana">
+		<item name="ulmArmorBandanaBlack"				stage="armorT1"	quality="1,50"/>
+		<item name="ulmArmorBandanaGreen"				stage="armorT1"	quality="1,50"/>
+		<item name="ulmArmorBandanaOlive"				stage="armorT1"	quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="ulmArmorHeadband">
+		<item name="ulmArmorHeadbandBlack"				stage="armorT1"	quality="1,50"/>
+		<item name="ulmArmorHeadbandGreen"				stage="armorT1"	quality="1,50"/>
+		<item name="ulmArmorHeadbandOlive"				stage="armorT1"	quality="1,50"/></trader_item_group>
+		
+	<trader_item_group name="groupHelmetLight">
+		<!-- Tier 1 -->
+		<item group="ulmArmorBandana"/>
+		<item group="ulmArmorHeadband"/>
+		<item name="ulmArmorStrawConeHat"				stage="armorT1"	quality="1,50"/>
+		<item name="ulmArmorStrawHat"					stage="armorT1"	quality="1,50"/>
+		<item name="ulmArmorGraduateHat"				stage="armorT1"	quality="1,50"/>
+		<item name="armorFarmerHelmet"					stage="armorT1"	quality="1,50"/>
+		<item name="armorNerdHelmet"					stage="armorT1"	quality="1,50"/>
+		<item name="ulmArmorNerdHatNormal"				stage="armorT1"	quality="1,50"/>
+		<item name="armorAthleticHelmet"				stage="armorT1"	quality="1,50"/>
+		<item name="armorScavengerHelmet"				stage="armorT1"	quality="1,50"/>
+		<!-- Tier 2 -->
+		<item group="ulmArmorNewsboyHat"/>
+		<item group="ulmArmorWoolHat"/>
+		<!-- Tier 3 -->
+		<item name="armorLumberjackHelmet"				stage="armorT3"	quality="1,50"/>
+		<item name="ulmArmorBeanieHat"					stage="armorT3"	quality="1,50"/>
+		<!-- Tier 4 -->
+		<item name="armorCommandoHelmet"				stage="armorT4"	quality="1,50"/>
+		<item name="ulmArmorCommandoHelmetBackwards"	stage="armorT4"	quality="1,50"/>
+		<item group="ulmArmorEnforcerHat"/>
+		<!-- Tier 5 -->
+		<item group="ulmArmorBonnieHat"/>
+		<item group="ulmArmor8PCoverHat"/>
+		<item name="ulmArmorCommanderHat"				stage="armorT5"	quality="1,50"/></trader_item_group>
+		
+	<trader_item_group name="groupHelmetMedium">
+		<!-- Tier 1 -->
+		<item name="ulmArmorSafariHat"			stage="armorT1"	quality="1,50"/>
+		<item name="ulmArmorWinterHat1"			stage="armorT1"	quality="1,50"/>
+		<item name="ulmArmorWinterHat2"			stage="armorT1"	quality="1,50"/>
+		<!-- Tier 2 -->
+		<item group="ulmArmorCowboyHat"/>
+		<item name="armorEnforcerHelmet"		stage="armorT2"	quality="1,50"/>
+		<item name="armorPreacherHelmet"		stage="armorT2"	quality="1,50"/>
+		<item name="armorRangerHelmet"			stage="armorT2"	quality="1,50"/>
+		<!-- Tier 3 -->
+		<item name="armorAssassinHelmet"		stage="armorT3"	quality="1,50"/>
+		<item name="armorRogueHelmet"			stage="armorT3"	quality="1,50"/>
+		<!-- Tier 4 -->
+		<item group="ulmArmorHardHat"/>
+		<item group="ulmArmorBrodieHelmet"/>
+		<item name="armorMinerHelmet"			stage="armorT4"	quality="1,50"/>
+		<!-- Tier 5 -->
+		<item group="ulmArmorMotoHelmet"/>
+		<item name="ulmArmorLeatherHelmet"		stage="armorT5"	quality="1,50"/></trader_item_group>
+		
+	<trader_item_group name="groupHelmetHeavy">
+		<!-- Tier 1 -->
+		<item group="ulmArmorFirefighterHelmet"/>
+		<item name="ulmArmorBoneHelmet"			stage="armorT1"	quality="1,50"/>
+		<item name="armorBikerHelmet"			stage="armorT1"	quality="1,50"/>
+		<!-- Tier 2 -->
+		<item name="ulmArmorMetalHelmet"		stage="armorT2"	quality="1,50"/>
+		<item name="armorRaiderHelmet"			stage="armorT2"	quality="1,50"/>
+		<!-- Tier 3 -->
+		<item group="ulmArmorArmyHelmet1"/>
+		<item group="ulmArmorArmyHelmet2"/>
+		<!-- Tier 4 -->
+		<item group="ulmArmorArmyHelmet3"/>
+		<item name="ulmArmorSwatHelmet"			stage="armorT4"	quality="1,50"/>
+		<!-- Tier 5 -->
+		<item name="armorNomadHelmet"					stage="armorT5"	quality="1,50"/>
+		<item name="ulmArmorExperimentalMilitaryHelmet"	stage="armorT5"	quality="1,30" prob="0.3"/></trader_item_group>
+		
+	<trader_item_group name="groupOutfitLight">
+		<item name="armorFarmerOutfit"			stage="armorT1"	quality="1,50"/>
+		<item name="armorAthleticOutfit"		stage="armorT2"	quality="1,50"/>
+		<item name="armorLumberjackOutfit"		stage="armorT3"	quality="1,50"/>
+		<item name="armorEnforcerOutfit"		stage="armorT4"	quality="1,50"/>
+		<item name="armorPreacherOutfit"		stage="armorT5"	quality="1,50"/></trader_item_group>
+		
+	<trader_item_group name="groupOutfitMedium">
+		<item name="armorNerdOutfit"			stage="armorT1"	quality="1,50"/>
+		<item name="armorMinerOutfit"			stage="armorT2"	quality="1,50"/>
+		<item name="armorScavengerOutfit"		stage="armorT3"	quality="1,50"/>
+		<item name="armorRogueOutfit"			stage="armorT4"	quality="1,50"/>
+		<item name="armorCommandoOutfit"		stage="armorT5"	quality="1,50"/></trader_item_group>
+		
+	<trader_item_group name="groupOutfitHeavy">
+		<item name="armorRangerOutfit"			stage="armorT1"	quality="1,50"/>
+		<item name="armorBikerOutfit"			stage="armorT2"	quality="1,50"/>
+		<item name="armorRaiderOutfit"			stage="armorT3"	quality="1,50"/>
+		<item name="armorAssassinOutfit"		stage="armorT4"	quality="1,50"/>
+		<item name="armorNomadOutfit"			stage="armorT5"	quality="1,50"/></trader_item_group>
+		
+	<trader_item_group name="groupGlovesLight">
+		<item name="armorFarmerGloves"			stage="armorT1"	quality="1,50"/>
+		<item name="armorAthleticGloves"		stage="armorT2"	quality="1,50"/>
+		<item name="armorLumberjackGloves"		stage="armorT3"	quality="1,50"/>
+		<item name="armorEnforcerGloves"		stage="armorT4"	quality="1,50"/>
+		<item name="armorPreacherGloves"		stage="armorT5"	quality="1,50"/></trader_item_group>
+	<trader_item_group name="groupGlovesMedium">
+		<item name="armorNerdGloves"			stage="armorT1"	quality="1,50"/>
+		<item name="armorMinerGloves"			stage="armorT2"	quality="1,50"/>
+		<item name="armorScavengerGloves"		stage="armorT3"	quality="1,50"/>
+		<item name="armorRogueGloves"			stage="armorT4"	quality="1,50"/>
+		<item name="armorCommandoGloves"		stage="armorT5"	quality="1,50"/></trader_item_group>
+	<trader_item_group name="groupGlovesHeavy">
+		<item name="armorRangerGloves"			stage="armorT1"	quality="1,50"/>
+		<item name="armorBikerGloves"			stage="armorT2"	quality="1,50"/>
+		<item name="armorRaiderGloves"			stage="armorT3"	quality="1,50"/>
+		<item name="armorAssassinGloves"		stage="armorT4"	quality="1,50"/>
+		<item name="armorNomadGloves"			stage="armorT5"	quality="1,50"/></trader_item_group>
+		
+	<trader_item_group name="groupBootsLight">
+		<item name="armorFarmerBoots"			stage="armorT1"	quality="1,50"/>
+		<item name="armorAthleticBoots"			stage="armorT2"	quality="1,50"/>
+		<item name="armorLumberjackBoots"		stage="armorT3"	quality="1,50"/>
+		<item name="armorEnforcerBoots"			stage="armorT4"	quality="1,50"/>
+		<item name="armorPreacherBoots"			stage="armorT5"	quality="1,50"/></trader_item_group>
+	<trader_item_group name="groupBootsMedium">
+		<item name="armorNerdBoots"				stage="armorT1"	quality="1,50"/>
+		<item name="armorMinerBoots"			stage="armorT2"	quality="1,50"/>
+		<item name="armorScavengerBoots"		stage="armorT3"	quality="1,50"/>
+		<item name="armorRogueBoots"			stage="armorT4"	quality="1,50"/>
+		<item name="armorCommandoBoots"			stage="armorT5"	quality="1,50"/></trader_item_group>
+	<trader_item_group name="groupBootsHeavy">
+		<item name="armorRangerBoots"			stage="armorT1"	quality="1,50"/>
+		<item name="armorBikerBoots"			stage="armorT2"	quality="1,50"/>
+		<item name="armorRaiderBoots"			stage="armorT3"	quality="1,50"/>
+		<item name="armorAssassinBoots"			stage="armorT4"	quality="1,50"/>
+		<item name="armorNomadBoots"			stage="armorT5"	quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="groupFacewear">
+		<item name="ulmFacewearRespiratorMask"		stage="armorT1"	quality="1,50"/>
+		<item name="ulmFacewearGP5GasMaskBlack"		stage="armorT1"	quality="1,50"/>
+		<item name="ulmFacewearGP5GasMaskGrey"		stage="armorT1"	quality="1,50"/>
+		<item name="ulmFacewearFFLGasMask"			stage="armorT2"	quality="1,50"/>
+		<item name="ulmFacewearCigar"				stage="armorT2"	quality="1,50" prob="0.3"/>
+		<item name="ulmFacewearFFVGasMask"			stage="armorT3"	quality="1,50"/>
+		<item name="ulmFacewearM42WardenGasMask"	stage="armorT4"	quality="1,50"/>
+		<item name="ulmFacewearX90PredatorGasMask"	stage="armorT5"	quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="groupEyewear">
+		<item name="ulmEyewearCommandoGlasses"		stage="armorT1"	quality="1,50"/>
+		<item name="ulmEyewearLumberjackGoggles"	stage="armorT1"	quality="1,50"/>
+		<item name="ulmEyewearNerdGlasses"			stage="armorT1"	quality="1,50"/>
+		<item name="ulmEyewearPreacherGlasses"		stage="armorT1"	quality="1,50"/>
+		<item name="ulmEyewearAviatorSunglasses"	stage="armorT1"	quality="1,50"/>
+		<item name="ulmEyewearScavengerGoggles"		stage="armorT2"	quality="1,50"/>
+		<item name="ulmEyewearEnforcerGlasses"		stage="armorT2"	quality="1,50"/>
+		<item name="ulmEyewearAssassinGoggles"		stage="armorT2"	quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="groupAccessories">
+		<item name="ulmAccessoryCommandoHeadset"		stage="armorT1"	quality="1,40"/>
+
+		<item name="ulmAccessoryDukesLuckyNecklace"		stage="armorT1"	quality="1,40"/>
+		<item name="ulmAccessoryForestersNecklace"		stage="armorT1"	quality="1,40"/>
+	<!--<item name="ulmAccessoryEllianniasNecklace"		stage="armorT1"	quality="1,40"	prob="0.1"/>-->
+		<item name="ulmAccessoryAssassinsNecklace"		stage="armorT1"	quality="1,40"/>
+		<item name="ulmAccessoryFortitudeNecklace"		stage="armorT1"	quality="1,40"/>
+		<item name="ulmAccessoryIntellectNecklace"		stage="armorT1"	quality="1,40"/>
+
+		<item name="ulmAccessoryIronRing"				stage="armorT1"	quality="1,40"/>
+		<item name="ulmAccessoryMarksmanRing"			stage="armorT1"	quality="1,40"/>
+		<item name="ulmAccessoryIronScaleRing"			stage="armorT1"	quality="1,40"/>
+		<item name="ulmAccessoryRangersRing"			stage="armorT1"	quality="1,40"/>
+		<item name="ulmAccessorySkullRing"				stage="armorT1"	quality="1,40"/>
+		<item name="ulmAccessoryColdResistRing"			stage="armorT1"	quality="1,40"/>
+		<item name="ulmAccessoryHeatResistRing"			stage="armorT1"	quality="1,40"/>
+		<item name="ulmAccessoryForagersRing"			stage="armorT1"	quality="1,40"/>
+		<item name="ulmAccessoryDexterityRing"			stage="armorT1"	quality="1,40"/>
+		<item name="ulmAccessoryPerceptionRing"			stage="armorT1"	quality="1,40"/>
+		<item name="ulmAccessoryStrengthRing"			stage="armorT1"	quality="1,40"/></trader_item_group>
+
+	<trader_item_group name="groupBelts">
+		<item name="ulmArmorHideBelt"					stage="armorT1"	quality="1,40"/>
+		<item name="ulmArmorLeatherBeltWorn"			stage="armorT2"	quality="1,40"/>
+		<item name="ulmArmorLeatherBeltStitched"		stage="armorT2"	quality="1,40"/>
+		<item name="ulmArmorLeatherBeltBlack"			stage="armorT2"	quality="1,40"/>
+		<item name="ulmArmorLeatherBeltStitchedBlack"	stage="armorT2"	quality="1,40"/>
+		<item name="ulmArmorFannyPackBelt"				stage="armorT3"	quality="1,40"/>
+		<item name="ulmArmorEnforcerBelt"				stage="armorT3"	quality="1,40"/>
+		<item name="ulmArmorMechanicsBelt"				stage="armorT3"	quality="1,40"/>
+		<item name="ulmArmorMilitaryBelt"				stage="armorT3"	quality="1,40"/></trader_item_group>
+
+	<trader_item_group name="groupBackpacks">
+		<!-- Tier 1 -->
+		<item name="ulmBackpackPrimitive"				stage="armorT1"	quality="1,40"/>
+		<item name="ulmBackpackActive1"					stage="armorT1"	quality="1,40"/>
+		<item name="ulmBackpackActive2"					stage="armorT1"	quality="1,40"/>
+		<item name="ulmBackpackJogger1"					stage="armorT1"	quality="1,40"/>
+		<item name="ulmBackpackJogger2"					stage="armorT1"	quality="1,40"/>
+		<item name="ulmBackpackLink1"					stage="armorT1"	quality="1,40"/>
+		<item name="ulmBackpackLink2"					stage="armorT1"	quality="1,40"/>
+		<item name="ulmBackpackScholar1"				stage="armorT1"	quality="1,40"/>
+		<item name="ulmBackpackScholar2"				stage="armorT1"	quality="1,40"/>
+	<!-- Not Done, Missing Female Model
+		<item name="ulmBackpackSlingBag1"				stage="armorT1"	quality="1,40"/>
+		<item name="ulmBackpackSlingBag2"				stage="armorT1"	quality="1,40"/>
+		<item name="ulmBackpackSlingBag3"				stage="armorT1"	quality="1,40"/>
+		<item name="ulmBackpackSlingBag4"				stage="armorT1"	quality="1,40"/>-->
+		<item name="ulmBackpackTrail1"					stage="armorT1"	quality="1,40"/>
+		<item name="ulmBackpackTrail2"					stage="armorT1"	quality="1,40"/>
+		<item name="ulmBackpackUrban1"					stage="armorT1"	quality="1,40"/>
+		<item name="ulmBackpackUrban2"					stage="armorT1"	quality="1,40"/>
+		<!-- Tier 2 -->
+		<item name="ulmBackpackHaven1"					stage="armorT2"	quality="1,40"/>
+		<item name="ulmBackpackHaven2"					stage="armorT2"	quality="1,40"/>
+		<item name="ulmBackpackRatPack1"				stage="armorT2"	quality="1,40"/>
+		<item name="ulmBackpackRatPack2"				stage="armorT2"	quality="1,40"/>
+		<item name="ulmBackpackRatPack3"				stage="armorT2"	quality="1,40"/>
+		<item name="ulmBackpackMiner"					stage="armorT2"	quality="1,40"/>
+		<item name="ulmBackpackScavenger"				stage="armorT2"	quality="1,40"/>
+		<!-- Tier 3 -->
+		<item name="ulmBackpackTactical1"				stage="armorT3"	quality="1,40"/>
+		<item name="ulmBackpackTactical2"				stage="armorT3"	quality="1,40"/>
+		<item name="ulmBackpackBastion1"				stage="armorT3"	quality="1,40"/>
+		<item name="ulmBackpackBastion2"				stage="armorT3"	quality="1,40"/>
+		<!-- Tier 4 -->
+		<item name="ulmBackpackRanger1"					stage="armorT4"	quality="1,40"/>
+		<item name="ulmBackpackRanger2"					stage="armorT4"	quality="1,40"/>
+		<item name="ulmBackpackRanger3"					stage="armorT4"	quality="1,40"/>
+		<item name="ulmBackpackCamper1"					stage="armorT4"	quality="1,40"/>
+		<item name="ulmBackpackCamper2"					stage="armorT4"	quality="1,40"/>
+		<!-- Tier 5 -->
+		<item name="ulmBackpackMilitary1"				stage="armorT5"	quality="1,40"/>
+		<item name="ulmBackpackMilitary2"				stage="armorT5"	quality="1,40"/>
+		<item name="ulmBackpackMilitary3"				stage="armorT5"	quality="1,40"/>
+		<item name="ulmBackpackMilitary4"				stage="armorT5"	quality="1,40"/></trader_item_group>
+
+	<trader_item_group name="groupClothing">
+		<item name="clothingHeadT1"						stage="armorT1"	quality="1,40"/>
+		<item name="clothingOutfitT1"					stage="armorT1"	quality="1,40"/>
+		<item name="clothingHandsT1"					stage="armorT1"	quality="1,40"/>
+		<item name="clothingFeetT1"						stage="armorT1"	quality="1,40"/>
+		<item name="clothingHeadT2"						stage="armorT3"	quality="1,40"/>
+		<item name="clothingOutfitT2"					stage="armorT3"	quality="1,40"/>
+		<item name="clothingHandsT2"					stage="armorT3"	quality="1,40"/>
+		<item name="clothingFeetT2"						stage="armorT3"	quality="1,40"/>
+		<item name="clothingHeadT3"						stage="armorT5"	quality="1,40"/>
+		<item name="clothingOutfitT3"					stage="armorT5"	quality="1,40"/>
+		<item name="clothingHandsT3"					stage="armorT5"	quality="1,40"/>
+		<item name="clothingFeetT3"						stage="armorT5"	quality="1,40"/></trader_item_group>
+
+	<trader_item_group name="groupArmorLight">
+		<item group="groupHelmetLight"/>
+		<item group="groupOutfitLight"/>
+		<item group="groupGlovesLight"/>
+		<item group="groupBootsLight"/></trader_item_group>
+
+	<trader_item_group name="groupArmorMedium">
+		<item group="groupHelmetMedium"/>
+		<item group="groupOutfitMedium"/>
+		<item group="groupGlovesMedium"/>
+		<item group="groupBootsMedium"/></trader_item_group>
+
+	<trader_item_group name="groupArmorHeavy">
+		<item group="groupHelmetHeavy"/>
+		<item group="groupOutfitHeavy"/>
+		<item group="groupGlovesHeavy"/>
+		<item group="groupBootsHeavy"/></trader_item_group>
+
+	<trader_item_group name="groupArmorAll">
+		<item group="groupClothing"/>
+		<item group="groupArmorLight"/>
+		<item group="groupArmorMedium"/>
+		<item group="groupArmorHeavy"/>
+		<item group="groupFacewear"/>
+		<item group="groupEyewear"/>
+		<item group="groupAccessories"/>
+		<item group="groupBelts"/>
+		<item group="groupBackpacks"/></trader_item_group>
+
+	<trader_item_group name="groupMedicineCommon">
+		<item name="medicalBandage"/>
+		<item name="medicalFirstAidBandage" count="1,4"/>
+		<item name="drugPainkillers"/>
+		<item name="medicalBloodBag" count="2,4"/>
+		<item name="medicalSplint"/>
+		<item name="drugVitamins"/>
+		<item name="ulmDrinkPlasticBottleGrainAlcohol"/></trader_item_group>
+
+	<trader_item_group name="groupMedicineVeryRare">
+		<item name="ulmDrugRegretex"					prob="3"/>
+		<item name="drinkJarGrandpasForgettingElixir"	prob="2"/>
+		<item name="ulmFacewearCigar"					prob="1" stage="armorT2" quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="groupMedicineRare">
+		<item group="groupMedicineVeryRare"/>
+		<item name="ulmResourceTobacco"/>
+		<item name="medicalFirstAidKit"/>
+		<item name="toolBeaker"/>
+		<item name="drugAntibiotics"/>
+		<item name="drugFortBites"/>
+		<item name="drugRecog"/>
+		<item name="drugSteroids"/>
+		<item name="drinkJarGrandpasMoonshine"/>
+		<item name="drinkJarGrandpasAwesomeSauce"/>
+		<item name="drinkJarGrandpasLearningElixir"/></trader_item_group>
+
+	<trader_item_group name="groupMedicineAll">
+		<item group="groupMedicineCommon"/>
+		<item group="groupMedicineRare" prob=".2"/></trader_item_group>
+
+	<trader_item_group name="groupBooksResearchBasic">
+		<item name="ulmResourceResearch" count="1,50"/>
+		<item name="ulmResourceBookDuctTape"/>
+
+		<item name="repairToolsSkillMagazine"/>
+		<item name="salvageToolsSkillMagazine"/></trader_item_group>
+
+	<trader_item_group name="groupBooksResearchArmor">
+		<item name="ulmResourceResearchArmor" count="1,50"/>
+		<item name="ulmResourceBookArmor"/>
+		<item name="ulmResourceBookGasMasks"/>
+		<item name="ulmResourceBookJackets"/>
+
+		<item name="armorSkillMagazine"/></trader_item_group>
+
+	<trader_item_group name="groupBooksResearchBiology">
+		<item name="ulmResourceResearchBiology" count="1,50"/>
+		<item name="ulmResourceBookBerries"/>
+		<item name="ulmResourceBookMeat"/>
+		<item name="ulmResourceBookPlants"/>
+		<item name="ulmResourceBookForaging"/>
+		<item name="ulmResourceBookHunting"/>
+
+		<item name="medicalSkillMagazine"/>
+		<item name="foodSkillMagazine"/>
+		<item name="seedSkillMagazine"/></trader_item_group>
+
+	<trader_item_group name="groupBooksResearchChemistry">
+		<item name="ulmResourceResearchChemistry" count="1,50"/>
+		<item name="ulmResourceBookChemicals"/>
+		<item name="ulmResourceBookChemistry"/>
+		<item name="ulmResourceBookFuel"/></trader_item_group>
+
+	<trader_item_group name="groupBooksResearchEngineering">
+		<item name="ulmResourceResearchEngineering" count="1,50"/>
+		<item name="ulmResourceBookMotors"/>
+		<item name="ulmResourceBookEngineering"/>
+		<item name="ulmResourceBookBattery"/>
+
+		<item name="trapsSkillMagazine"/>
+		<item name="electricianSkillMagazine"/>
+		<item name="workstationSkillMagazine"/>
+		<item name="vehiclesSkillMagazine"/></trader_item_group>
+
+	<trader_item_group name="groupBooksResearchTools">
+		<item name="ulmResourceResearchTools" count="1,50"/>
+		<item name="ulmResourceBookToolbox"/>
+		<item name="ulmResourceBookTools"/>
+
+		<item name="harvestingToolsSkillMagazine"/>
+		<item name="knucklesSkillMagazine"/>
+		<item name="bladesSkillMagazine"/>
+		<item name="clubsSkillMagazine"/>
+		<item name="sledgehammersSkillMagazine"/>
+		<item name="spearsSkillMagazine"/></trader_item_group>
+
+	<trader_item_group name="groupBooksResearchGuns">
+		<item name="ulmResourceResearchGuns" count="1,50"/>
+		<item name="ulmResourceBookAmmo"/>
+		<item name="ulmResourceBookGuns"/>
+		<item name="ulmResourceBookCrossbows"/>
+
+		<item name="bowsSkillMagazine"/>
+		<item name="handgunsSkillMagazine"/>
+		<item name="shotgunsSkillMagazine"/>
+		<item name="riflesSkillMagazine"/>
+		<item name="machineGunsSkillMagazine"/>
+		<item name="explosivesSkillMagazine"/></trader_item_group>
+
+	<trader_item_group name="groupBooksResearchAdvanced">
+		<item name="ulmResourceResearchAdvanced" count="1,50"/>
+		<item name="ulmResourceBookRobotics"/>
+		<item name="ulmResourceBookModernScience"/>
+		<item name="ulmResourceBookElectricCircuits"/>
+
+		<item name="roboticsSkillMagazine"/></trader_item_group>
+
+	<trader_item_group name="groupBooksResearchAll">
+		<item group="groupBooksResearchBasic"/>
+		<item group="groupBooksResearchArmor"/>
+		<item group="groupBooksResearchBiology"/>
+		<item group="groupBooksResearchChemistry"/>
+		<item group="groupBooksResearchEngineering"/>
+		<item group="groupBooksResearchTools"/>
+		<item group="groupBooksResearchGuns"/>
+		<item group="groupBooksResearchAdvanced"/></trader_item_group>
+
+	<trader_item_group name="groupBooksPerks">
+		<item name="bookRangersArrowRecovery"/>
+		<item name="bookRangersCripplingShot"/>
+		<item name="bookRangersKnockdown"/>
+		<item name="bookRangersFlamingArrows"/>
+		<item name="bookRangersAPAmmo"/>
+		<item name="bookRangersExplodingBolts"/>
+		<item name="bookRangersForestGuide"/>
+		<item name="bookArtOfMiningLuckyStrike"/>
+		<item name="bookArtOfMiningDiamondTools"/>
+		<item name="bookArtOfMiningCoffee"/>
+		<item name="bookArtOfMiningBlackStrap"/>
+		<item name="bookArtOfMiningPallets"/>
+		<item name="bookArtOfMiningAvalanche"/>
+		<item name="bookAutoWeaponsDamage"/>
+		<item name="bookAutoWeaponsRagdoll"/>
+		<item name="bookAutoWeaponsMaintenance"/>
+		<item name="bookAutoWeaponsRecoil"/>
+		<item name="bookAutoWeaponsDrumMag"/>
+		<item name="bookAutoWeaponsUncontrolledBurst"/>
+		<item name="bookAutoWeaponsMachineGuns"/>
+		<item name="bookBatterUpBigHits"/>
+		<item name="bookBatterUpKnockdown"/>
+		<item name="bookBatterUpSlowPitch"/>
+		<item name="bookBatterUpMaintenance"/>
+		<item name="bookBatterUpMetalChain"/>
+		<item name="bookEnforcerAPAmmo"/>
+		<item name="bookEnforcerApparel"/>
+		<item name="bookEnforcerCriminalPursuit"/>
+		<item name="bookEnforcerHPAmmo"/>
+		<item name="bookEnforcerDamage"/>
+		<item name="bookEnforcerIntimidation"/>
+		<item name="bookEnforcerPunks"/>
+		<item name="bookFiremansAlmanacSpeed"/>
+		<item name="bookFiremansAlmanacAxes"/>
+		<item name="bookFiremansAlmanacEquipment"/>
+		<item name="bookFiremansAlmanacPrevention"/>
+		<item name="bookFiremansAlmanacHarvest"/>
+		<item name="bookFiremansAlmanacHeat"/>
+		<item name="bookFiremansAlmanacMolotov"/>
+		<item name="bookGreatHeistAdrenalineFall"/>
+		<item name="bookGreatHeistClaimed"/>
+		<item name="bookGreatHeistGems"/>
+		<item name="bookGreatHeistMotionDetection"/>
+		<item name="bookGreatHeistSafes"/>
+		<item name="bookGreatHeistSprintSneak"/>
+		<item name="bookHuntingJournalBears"/>
+		<item name="bookHuntingJournalCoyotes"/>
+		<item name="bookHuntingJournalDeer"/>
+		<item name="bookHuntingJournalMountainLions"/>
+		<item name="bookHuntingJournalVultures"/>
+		<item name="bookHuntingJournalWolves"/>
+		<item name="bookHuntingJournalSelfDefense"/>
+		<item name="bookLuckyLooterAmmunition"/>
+		<item name="bookLuckyLooterBooks"/>
+		<item name="bookLuckyLooterBrass"/>
+		<item name="bookLuckyLooterDukes"/>
+		<item name="bookLuckyLooterFood"/>
+		<item name="bookLuckyLooterLead"/>
+		<item name="bookLuckyLooterMedical"/>
+		<item name="bookNightStalkerArchery"/>
+		<item name="bookNightStalkerBlades"/>
+		<item name="bookNightStalkerSilentNight"/>
+		<item name="bookNightStalkerSlumberParty"/>
+		<item name="bookNightStalkerStealthDamage"/>
+		<item name="bookNightStalkerThiefAdrenaline"/>
+		<item name="bookNightStalkerTwilightThief"/>
+		<item name="bookPistolPeteAPAmmo"/>
+		<item name="bookPistolPeteDamage"/>
+		<item name="bookPistolPeteHPAmmo"/>
+		<item name="bookPistolPeteMaintenance"/>
+		<item name="bookPistolPeteSteadyHand"/>
+		<item name="bookPistolPeteSwissKnees"/>
+		<item name="bookPistolPeteTakeAim"/>
+		<item name="bookShotgunMessiahBreachingSlugs"/>
+		<item name="bookShotgunMessiahDamage"/>
+		<item name="bookShotgunMessiahLimbShot"/>
+		<item name="bookShotgunMessiahMaintenance"/>
+		<item name="bookShotgunMessiahMagazine"/>
+		<item name="bookShotgunMessiahPartyStarter"/>
+		<item name="bookShotgunMessiahSlugs"/>
+		<item name="bookSniperAPAmmo"/>
+		<item name="bookSniperControlledBreathing"/>
+		<item name="bookSniperCripplingShot"/>
+		<item name="bookSniperDamage"/>
+		<item name="bookSniperHeadShot"/>
+		<item name="bookSniperReload"/>
+		<item name="bookSniperHPAmmo"/>
+		<item name="bookUrbanCombatAdrenalineRush"/>
+		<item name="bookUrbanCombatCigar"/>
+		<item name="bookUrbanCombatRoomClearing"/>
+		<item name="bookUrbanCombatJumping"/>
+		<item name="bookUrbanCombatLandMines"/>
+		<item name="bookUrbanCombatLanding"/>
+		<item name="bookUrbanCombatSneaking"/>
+		<item name="bookWasteTreasuresAcid"/>
+		<item name="bookWasteTreasuresCloth"/>
+		<item name="bookWasteTreasuresCoffins"/>
+		<item name="bookWasteTreasuresDoors"/>
+		<item name="bookWasteTreasuresHoney"/>
+		<item name="bookWasteTreasuresSinks"/>
+		<item name="bookWasteTreasuresWater"/>
+		<item name="bookBarBrawling1BasicMoves"/>
+		<item name="bookBarBrawling2DropABomb"/>
+		<item name="bookBarBrawling3KillerInstinct"/>
+		<item name="bookBarBrawling4FinishingMoves"/>
+		<item name="bookBarBrawling5AdrenalineHealing"/>
+		<item name="bookBarBrawling6RageMode"/>
+		<item name="bookBarBrawling7BoozedUp"/>
+		<item name="bookSpearHunter1Damage"/>
+		<item name="bookSpearHunter2Maintenance"/>
+		<item name="bookSpearHunter5RapidStrike"/>
+		<item name="bookSpearHunter7QuickStrike"/>
+		<item name="bookTechJunkie1Damage"/>
+		<item name="bookTechJunkie2Maintenance"/>
+		<item name="bookTechJunkie3APAmmo"/>
+		<item name="bookTechJunkie4Shells"/>
+		<item name="bookTechJunkie5Repulsor"/>
+		<item name="bookTechJunkie6BatonCharge"/>
+		<item name="bookTechJunkie7Hydraulics"/></trader_item_group>
+
+	<trader_item_group name="groupBooksSkills">
+		<item name="ulmBookSniperRifles"/>
+		<item name="ulmBookArchery"/>
+		<item name="ulmBookSpears"/>
+		<item name="ulmBookLockPicking"/>
+		<item name="ulmBookLooting"/>
+		<item name="ulmBookButcher"/>
+		<item name="ulmBookAssaultRifles"/>
+		<item name="ulmBookClubs"/>
+		<item name="ulmBookSledgehammers"/>
+		<item name="ulmBookAxes"/>
+		<item name="ulmBookShovels"/>
+		<item name="ulmBookMining"/>
+		<item name="ulmBookShotguns"/>
+		<item name="ulmBookBrawler"/>
+		<item name="ulmBookResistHeat"/>
+		<item name="ulmBookResistCold"/>
+		<item name="ulmBookResistPain"/>
+		<item name="ulmBookHealing"/>
+		<item name="ulmBookHandguns"/>
+		<item name="ulmBookBlades"/>
+		<item name="ulmBookAthletics"/>
+		<item name="ulmBookSneaking"/>
+		<item name="ulmBookAssasin"/>
+		<item name="ulmBookSubmachineGuns"/>
+		<item name="ulmBookShockers"/>
+		<item name="ulmBookTrading"/>
+		<item name="ulmBookQuesting"/>
+		<item name="ulmBookSalvaging"/>
+		<item name="ulmBookStrength"/></trader_item_group>
+
+	<trader_item_group name="groupBooksAll">
+		<item group="groupBooksResearchAll" prob="3"/>
+		<item group="groupBooksPerks" prob="2"/>
+		<item group="groupBooksSkills" prob="1"/></trader_item_group>
+
+	<trader_item_group name="groupMeleeT0">
+		<item name="ulmMeleeClubBone"					stage="weaponT0" quality="1,50"/>
+		<item name="meleeWpnClubT0WoodenClub"			stage="weaponT0" quality="1,50"/>
+		<item name="ulmMeleeClubTennisRacket"			stage="weaponT0" quality="1,50"/>
+		<item name="ulmMeleeClubRollingPin"				stage="weaponT0" quality="1,50"/>
+		<item name="ulmMeleeClubCricketBat"				stage="weaponT0" quality="1,50"/>
+		<item name="ulmMeleeClubGolfClub"				stage="weaponT0" quality="1,50"/>
+		<item name="meleeWpnBatonT0PipeBaton"			stage="weaponT0" quality="1,50"/>
+		<item name="ulmMeleeBatonPrimitiveBaton"		stage="weaponT0" quality="1,50"/>
+		<item name="ulmMeleeBatonScrapBaton"			stage="weaponT0" quality="1,50"/>
+		<item name="ulmMeleeBladeKnifeScrapIron"		stage="weaponT0" quality="1,50"/>
+		<item name="ulmMeleeBladeFoldingKnife"			stage="weaponT0" quality="1,50"/>
+		<item name="meleeWpnKnucklesT0LeatherKnuckles"	stage="weaponT0" quality="1,50"/>
+		<item name="ulmToolFryingPan"					stage="weaponT0" quality="1,50"/>
+		<item name="ulmMeleePaddle"						stage="weaponT0" quality="1,50"/>
+		<item name="ulmMeleeSpearScrapIron"				stage="weaponT0" quality="1,50"/>
+		<item name="meleeWpnSledgeT0StoneSledgehammer"	stage="weaponT0" quality="1,40"/></trader_item_group>
+
+	<trader_item_group name="groupMeleeT1">
+		<item name="ulmMeleeGreataxeScrapIron"			stage="weaponT1" quality="1,40"/>
+		<item name="ulmMeleeSledgeScrapIron"			stage="weaponT1" quality="1,40"/>
+		<item name="ulmMeleeBatonPoliceBaton"			stage="weaponT1" quality="1,40"/>
+		<item name="ulmMeleeKnucklesBrassKnuckles"		stage="weaponT1" quality="1,50"/>
+		<item name="ulmMeleeKnucklesJunkKnuckles"		stage="weaponT1" quality="1,50"/>
+		<item name="ulmMeleeKnucklesScrapKnuckles"		stage="weaponT1" quality="1,50"/>
+		<item name="meleeWpnBladeT1HuntingKnife"		stage="weaponT1" quality="1,50"/>
+	<!--<item name="meleeWpnBladeT1CandyKnife"			stage="weaponT1" quality="1,50"/>-->
+	<!--<item name="meleeWpnClubT1CandyClub"			stage="weaponT1" quality="1,50"/>-->
+		<item name="ulmMeleeBladeKnifeKunai"			stage="weaponT1" quality="1,50"/>
+		<item name="ulmMeleeBladeKnifeBrush"			stage="weaponT1" quality="1,30" prob="0.1"/>
+		<item name="ulmMeleeBladeKnifeCleaverRusty"		stage="weaponT1" quality="1,50"/>
+		<item name="meleeWpnBladeT3Machete"				stage="weaponT1" quality="1,50"/>
+		<item name="ulmMeleeBladeMisshapedJunkBlade"	stage="weaponT1" quality="1,50"/>
+		<item name="ulmMeleeBladeSwordScrap"			stage="weaponT1" quality="1,50"/>
+		<item name="ulmMeleeBladeKatanaScrapIron"		stage="weaponT1" quality="1,50"/>
+		<item name="ulmMeleeClubTableLegMace"			stage="weaponT1" quality="1,50"/>
+		<item name="meleeWpnClubT1BaseballBat"			stage="weaponT1" quality="1,50"/>
+		<item name="ulmMeleeTwoHandedPipe"				stage="weaponT1" quality="1,50"/>
+		<item name="ulmMeleeSpearIron"					stage="weaponT1" quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="groupMeleeT2">
+		<item name="ulmMeleeBatonPoliceBatonWithBlade"	stage="weaponT2" quality="1,40"/>
+		<item name="meleeWpnKnucklesT1IronKnuckles"		stage="weaponT2" quality="1,40"/>
+		<item name="ulmMeleeBladeKnifeCombatIron"		stage="weaponT2" quality="1,50"/>
+		<item name="ulmMeleeBladeKnifeCleaverIron"		stage="weaponT2" quality="1,50"/>
+		<item name="ulmMeleeBladeMacheteIron"			stage="weaponT2" quality="1,50"/>
+		<item name="ulmMeleeBladeSwordIron"				stage="weaponT2" quality="1,50"/>
+		<item name="ulmMeleeClubIron"					stage="weaponT2" quality="1,50"/>
+		<item name="ulmMeleeClubIronMorningStar"		stage="weaponT2" quality="1,40"/>
+		<item name="meleeWpnSledgeT1IronSledgehammer"	stage="weaponT2" quality="1,50"/>
+		<item name="meleeWpnSpearT1IronSpear"			stage="weaponT2" quality="1,50"/>
+		<item name="ulmMeleePolearmBoathook"			stage="weaponT2" quality="1,50"/>
+		<item name="ulmMeleeBladeElectro"				stage="weaponT3" quality="1,30"/></trader_item_group>
+
+	<trader_item_group name="groupMeleeT3">
+		<item name="meleeWpnBatonT2StunBaton"			stage="weaponT3" quality="1,40"/>
+		<item name="ulmMeleeKnucklesChitin"				stage="weaponT3" quality="1,30"	prob="0.1"/>
+		<item name="ulmMeleeClubChitin"					stage="weaponT3" quality="1,30"	prob="0.1"/>
+		<item name="meleeWpnClubT3SteelClub"			stage="weaponT3" quality="1,40"/>
+		<item name="meleeWpnKnucklesT3SteelKnuckles"	stage="weaponT3" quality="1,40"/>
+		<item name="ulmMeleeBladeKnifeCombatSteel"		stage="weaponT3" quality="1,40"/>
+		<item name="ulmMeleeBladeMacheteSteel"			stage="weaponT3" quality="1,40"/>
+		<item name="ulmMeleeBladeSaw"					stage="weaponT3" quality="1,40"/>
+		<item name="ulmMeleeBladeRex"					stage="weaponT3" quality="1,30"/>
+		<item name="ulmMeleeBladeKatana"				stage="weaponT3" quality="1,40"/>
+		<item name="meleeWpnSledgeT3SteelSledgehammer"	stage="weaponT3" quality="1,40"/>
+		<item name="ulmMeleePolearmTrident"				stage="weaponT3" quality="1,40"/>
+		<item name="meleeWpnSpearT3SteelSpear"			stage="weaponT3" quality="1,40"/>
+		<item name="ulmMeleePolearmTrident"				stage="weaponT3" quality="1,40"/>
+		<item name="ulmMeleeBladeElectroSaber"			stage="weaponT4" quality="1,30"/></trader_item_group>
+
+	<trader_item_group name="groupMeleeT4">
+		<item name="ulmMeleeBatonStunClub"				stage="weaponT4" quality="1,40"/>
+		<item name="ulmMeleeBatonStunArcFlow"			stage="weaponT4" quality="1,40"/>
+		<item name="ulmMeleeKnucklesTitaniumKnuckles"	stage="weaponT4" quality="1,40"/>
+		<item name="ulmMeleeBladeKnifeTitanium"			stage="weaponT4" quality="1,30"/>
+		<item name="ulmMeleeBladeMacheteTitanium"		stage="weaponT4" quality="1,30"/>
+		<item name="ulmMeleeBladeInferno"				stage="weaponT4" quality="1,30"/>
+		<item name="ulmMeleeBladeKatanaTitanium"		stage="weaponT4" quality="1,30"/>
+		<item name="ulmMeleeBladeZweihander"			stage="weaponT4" quality="1,40"/>
+		<item name="ulmMeleeClubTitanium"				stage="weaponT4" quality="1,30"/>
+		<item name="ulmMeleeSledgeTitanium"				stage="weaponT4" quality="1,30"/>
+		<item name="ulmMeleeSpearSerpent"				stage="weaponT4" quality="1,30" prob=".05"/>
+		<item name="ulmMeleeSpearTitanium"				stage="weaponT5" quality="1,30"/>
+		<item name="ulmMeleeSledgeRocket"				stage="weaponT5" quality="1,30"/>
+		<item name="ulmMeleeSledgeHectorsWrath"			stage="weaponT5" quality="1,30"/>
+		<item name="ulmMeleeBladeKatanaThermal"			stage="weaponT5" quality="1,30"/></trader_item_group>
+
+	<trader_item_group name="groupMeleeAll">
+		<item group="groupMeleeT0" prob="7"/>
+		<item group="groupMeleeT1" prob="5"/>
+		<item group="groupMeleeT2" prob="3"/>
+		<item group="groupMeleeT3" prob="2"/>
+		<item group="groupMeleeT4" prob="1"/></trader_item_group>
+		
+	<trader_item_group name="groupGunsT0">
+		<item name="gunBowT0PrimitiveBow"				stage="weaponT0" quality="1,60" prob=".7"/>
+		<item name="ulmGunKineticPistolMakarov"			stage="weaponT0" quality="1,50"/>
+		<item name="gunHandgunT0PipePistol"				stage="weaponT0" quality="1,50"/>
+		<item name="ulmGunKineticRevolverBugert9mm"		stage="weaponT0" quality="1,50"/>
+		<item name="ulmGunKineticPistolScrap1"			stage="weaponT0" quality="1,50"/>
+		<item name="gunShotgunT0PipeShotgun"			stage="weaponT0" quality="1,50"/>
+		<item name="ulmGunKineticShotgunScrap"			stage="weaponT0" quality="1,50"/>
+		<item name="gunMGT0PipeMachineGun"				stage="weaponT0" quality="1,50"/>
+		<item name="gunRifleT0PipeRifle"				stage="weaponT0" quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="groupGunsT1">
+		<item name="gunBowT1WoodenBow"					stage="weaponT1" quality="1,40" prob=".7"/>
+		<item name="gunHandgunT1Pistol"					stage="weaponT1" quality="1,40"/>
+		<item name="ulmGunKineticPistolGlock"			stage="weaponT1" quality="1,40"/>
+		<item name="ulmGunKineticPistolScrap2"			stage="weaponT1" quality="1,40"/>
+		<item name="gunShotgunT1DoubleBarrel"			stage="weaponT1" quality="1,40"/>
+		<item name="ulmGunKineticShotgunDoubleBarrel"	stage="weaponT1" quality="1,40"/>
+		<item name="gunHandgunT3SMG5"					stage="weaponT1" quality="1,40"/>
+		<item name="ulmGunKineticAssaultRifleAug1"		stage="weaponT1" quality="1,40"/>
+		<item name="ulmGunKineticAssaultRifleFamas1"	stage="weaponT1" quality="1,40"/>
+		<item name="gunRifleT1HuntingRifle"				stage="weaponT1" quality="1,40"/>
+		<item name="gunRifleT2LeverActionRifle"			stage="weaponT1" quality="1,40"/>
+		<item name="gunBotT1JunkSledge"					stage="weaponT1" quality="1,50"/></trader_item_group>
+
+	<trader_item_group name="groupGunsT2">
+		<item name="gunBowT1IronCrossbow"				stage="weaponT2" quality="1,50" prob=".7"/>
+		<item name="ulmGunKineticPistolCondor"			stage="weaponT2" quality="1,40"/>
+		<item name="ulmGunKineticPistolFalcon"			stage="weaponT2" quality="1,40"/>
+		<item name="ulmGunKineticRevolverBugert38Cal"	stage="weaponT2" quality="1,40"/>
+		<item name="gunShotgunT2PumpShotgun"			stage="weaponT2" quality="1,40"/>
+		<item name="ulmGunKineticMicroSmg"				stage="weaponT2" quality="1,40"/>
+		<item name="ulmGunKineticUMP"					stage="weaponT2" quality="1,40"/>
+		<item name="gunMGT1AK47"						stage="weaponT2" quality="1,40"/>
+		<item name="ulmGunKineticAssaultRifleAKM12"		stage="weaponT2" quality="1,30"/>
+		<item name="gunMGT2TacticalAR"					stage="weaponT2" quality="1,40"/>
+		<item name="ulmGunKineticSniperRifleM1A"		stage="weaponT2" quality="1,30"/>
+		<item name="gunRifleT3SniperRifle"				stage="weaponT2" quality="1,30"/>
+		<item name="gunExplosivesT3RocketLauncher"		stage="weaponT2" quality="1,30"/>
+		<item name="gunBotT2JunkTurret"					stage="weaponT2" quality="1,40"/></trader_item_group>
+
+	<trader_item_group name="groupGunsT3">
+		<item name="gunBowT3CompoundBow"				stage="weaponT3" quality="1,40"/>
+		<item name="gunHandgunT2Magnum44"				stage="weaponT3" quality="1,30"/>
+		<item name="gunHandgunT3DesertVulture"			stage="weaponT3" quality="1,30"/>
+		<item name="ulmGunKineticShotgunPeacekeeper"	stage="weaponT3" quality="1,40"/>
+		<item name="ulmGunKineticShotgunEnforcer"		stage="weaponT3" quality="1,40"/>
+		<item name="ulmGunKineticShotgunSpas"			stage="weaponT3" quality="1,30"/>
+		<item name="ulmGunKineticSMGMP5"				stage="weaponT3" quality="1,40"/>
+		<item name="ulmGunKineticSMGCricket"			stage="weaponT3" quality="1,40"/>
+		<item name="ulmGunKineticAssaultRifleM4"		stage="weaponT3" quality="1,30"/>
+		<item name="gunMGT3M60"							stage="weaponT3" quality="1,30"/>
+		<item name="ulmGunKineticSniperRifleSRD63"		stage="weaponT3" quality="1,30"/>
+		<item name="ulmGunKineticRocketLauncherAT4"		stage="weaponT3" quality="1,30"/>
+		<item name="gunBotT3JunkDrone"					stage="weaponT3" quality="1,30"/></trader_item_group>
+
+	<trader_item_group name="groupGunsT4">
+		<item name="gunBowT3CompoundCrossbow"			stage="weaponT4" quality="1,40"/>
+		<item name="ulmGunKineticPistolColt"			stage="weaponT4" quality="1,30"/>
+		<item name="ulmGunKineticPistolDesertEagle"		stage="weaponT4" quality="1,30"/>
+		<item name="ulmGunKineticShotgunPumpBM4"		stage="weaponT4" quality="1,30"/>
+		<item name="gunShotgunT3AutoShotgun"			stage="weaponT4" quality="1,30"/>
+		<item name="ulmGunKineticR90"					stage="weaponT4" quality="1,30"/>
+		<item name="ulmGunKineticAdjudicator"			stage="weaponT4" quality="1,30"/>
+		<item name="ulmGunKineticSniperRifleM82"		stage="weaponT4" quality="1,30"/>
+		<item name="ulmGunKineticRocketLauncherM202"	stage="weaponT4" quality="1,30"/></trader_item_group>
+
+	<trader_item_group name="groupRocketParts">
+		<item name="resourceRocketTip" count="1,50"/>
+		<item name="resourceRocketCasing" count="1,50"/>
+		<item name="gunExplosivesT3RocketLauncherParts" count="1,50"/></trader_item_group>
+
+	<trader_item_group name="groupGunParts">
+		<item name="gunHandgunT1PistolParts"			count="1,50"/>
+		<item name="gunShotgunT1DoubleBarrelParts"		count="1,50"/>
+		<item name="gunMGT1AK47Parts"					count="1,50"/>
+		<item name="gunRifleT1HuntingRifleParts"		count="1,50"/>
+		<item name="gunBowT1WoodenBowParts"				count="1,50"/>
+		<item name="gunBotRoboticsParts"				count="1,50"/>
+		<item name="ulmResourcePartsSMG"				count="1,50"/>
+		<item group="groupRocketParts"					count="1"/></trader_item_group>
+		
+	<trader_item_group name="groupGunsTiered">
+		<item group="groupGunsT0" prob="7"/>
+		<item group="groupGunsT1" prob="5"/>
+		<item group="groupGunsT2" prob="3"/>
+		<item group="groupGunsT3" prob="2"/>
+		<item group="groupGunsT4" prob="1"/></trader_item_group>
+		
+	<trader_item_group name="groupGunsRare">
+		<item group="groupGunsT2" prob="5"/>
+		<item group="groupGunsT3" prob="3"/>
+		<item group="groupGunsT4" prob="1"/></trader_item_group>
+
+	<trader_item_group name="groupGunsAll">
+		<item group="groupGunsTiered" prob="7"/>
+		<item group="groupGunParts" prob="3" count="1"/></trader_item_group>
+	
+	<trader_item_group name="group9mm">
+		<item name="ammo9mmBulletBall"					stage="ammoT0" count="40,150"/>
+		<item name="ammo9mmBulletHP"					stage="ammoT1" count="40,150"		prob=".4"/>
+		<item name="ammo9mmBulletAP"					stage="ammoT2" count="40,150"		prob=".1"/>
+	</trader_item_group>
+	
+	<trader_item_group name="group10mm">
+		<item name="ulmAmmo10mmRoundST"					stage="ammoT1" count="50,200"/>
+		<item name="ulmAmmo10mmRoundHP"					stage="ammoT2" count="50,200"		prob=".4"/>
+		<item name="ulmAmmo10mmRoundAP"					stage="ammoT3" count="50,200"		prob=".1"/>
+	</trader_item_group>
+	
+	<trader_item_group name="group556mm">
+		<item name="ulmAmmo556mmRoundST"				stage="ammoT1" count="25,125"/>
+		<item name="ulmAmmo556mmRoundHP"				stage="ammoT2" count="25,125"		prob=".4"/>
+		<item name="ulmAmmo556mmRoundAP"				stage="ammoT4" count="25,125"		prob=".1"/>
+	</trader_item_group>
+	
+	<trader_item_group name="group762mm">
+		<item name="ammo762mmBulletBall"				stage="ammoT1" count="20,100"/>
+		<item name="ammo762mmBulletHP"					stage="ammoT2" count="20,100"		prob=".2"/>
+		<item name="ammo762mmBulletAP"					stage="ammoT4" count="20,100"		prob=".2"/>
+	</trader_item_group>
+	
+	<trader_item_group name="group792mm">
+		<item name="ulmAmmo792mmRoundST"				stage="ammoT1" count="20,100"/>
+		<item name="ulmAmmo792mmRoundHP"				stage="ammoT2" count="20,100"		prob=".4"/>
+		<item name="ulmAmmo792mmRoundAP"				stage="ammoT4" count="20,100"		prob=".1"/>
+	</trader_item_group>
+	
+	<trader_item_group name="group44Magnum">
+		<item name="ammo44MagnumBulletBall"				stage="ammoT1" count="15,60"/>
+		<item name="ammo44MagnumBulletHP"				stage="ammoT2" count="15,60"		prob=".4"/>
+		<item name="ammo44MagnumBulletAP"				stage="ammoT4" count="15,60"		prob=".1"/>
+	</trader_item_group>
+	
+	<trader_item_group name="group50Cal">
+		<item name="ulmAmmo50CalRoundST"				stage="ammoT2" count="12,48"/>
+		<item name="ulmAmmo50CalRoundHP"				stage="ammoT3" count="12,48"		prob=".4"/>
+		<item name="ulmAmmo50CalRoundAP"				stage="ammoT4" count="12,48"		prob=".1"/>
+	</trader_item_group>
+	
+	<trader_item_group name="groupShotgunShells">
+		<item name="ammoShotgunShell"					stage="ammoT0" count="15,100"/>
+		<item name="ammoShotgunSlug"					stage="ammoT2" count="6,25"		prob=".2"/>
+	</trader_item_group>
+	
+	<trader_item_group name="groupPrimitive">
+		<item name="ammoArrowStone"						stage="ammoT0" count="20,60"/>
+		<item name="ammoArrowIron"						stage="ammoT1" count="20,60"/>
+		<item name="ammoArrowSteelAP"					stage="ammoT2" count="20,60"/>
+		<item name="ammoArrowFlaming"					stage="ammoT3" count="20,60"/>
+		<item name="ammoArrowExploding"					stage="ammoT4" count="20,60"/>
+		<item name="ammoCrossbowBoltStone"				stage="ammoT0" count="20,60"/>
+		<item name="ammoCrossbowBoltIron"				stage="ammoT1" count="20,60"/>
+		<item name="ammoCrossbowBoltSteelAP"			stage="ammoT2" count="20,60"/>
+		<item name="ammoCrossbowBoltFlaming"			stage="ammoT3" count="20,60"/>
+		<item name="ammoCrossbowBoltExploding"			stage="ammoT4" count="20,60"/>
+	</trader_item_group>
+	
+	<trader_item_group name="groupExplosives">
+		<item name="thrownAmmoMolotovCocktail"			stage="ammoT0" count="1,50"/>
+		<item name="thrownAmmoPipeBomb"					stage="ammoT0" count="1,50"/>
+		<item name="thrownDynamite"						stage="ammoT1" count="1,50"/>
+		<item name="thrownTimedCharge"					stage="ammoT1" count="1,10"/>
+		<item name="thrownGrenade"						stage="ammoT2" count="1,50"/>
+		<item name="thrownGrenadeContact"				stage="ammoT2" count="1,50"/>
+		<item name="ammoRocketHE"						stage="ammoT3" count="2,10"/>
+		<item name="ammoRocketFrag"						stage="ammoT4" count="2,10"/>
+	</trader_item_group>
+	
+	<trader_item_group name="groupAmmoRounds">
+		<item group="groupPrimitive" prob=".5"/>
+		<item group="group9mm"/>
+		<item group="group10mm"/>
+		<item group="group556mm"/>
+		<item group="group762mm"/>
+		<item group="group792mm"/>
+		<item group="group44Magnum"/>
+		<item group="group50Cal" prob=".3"/>
+		<item group="groupShotgunShells"/>
+		<item group="groupExplosives"/></trader_item_group>
+
+	<trader_item_group name="groupAmmoResources">
+		<item name="ulmResourceBottleEmpty"				stage="ammoT0" count="10,30"/>
+		<item name="resourceBulletCasing"				stage="ammoT0" count="20,200"/>
+		<item name="resourceBulletTip"					stage="ammoT0" count="20,200"/>
+		<item name="resourceBuckshot" 					stage="ammoT0" count="20,200"/>
+		<item name="resourceGunPowder" 					stage="ammoT0" count="20,200"/>
+		<item name="resourcePaper" 						stage="ammoT0" count="20,200"/>
+		<item name="resourceFeather" 					stage="ammoT0" count="20,200"/>
+		<item name="resourcePotassiumNitratePowder"		stage="ammoT0" count="25,50"/>
+		<item name="resourceArrowHeadIron" 				stage="ammoT0" count="20,200" prob=".05"/>
+		<item name="resourceArrowHeadSteelAP" 			stage="ammoT1" count="5,25"	prob=".05"/></trader_item_group>
+	
+	<trader_item_group name="groupAmmo">
+		<item group="groupAmmoRounds"					count="3"/>
+		<item group="groupAmmoResources"				count="2"/></trader_item_group>
+
+	<trader_item_group name="groupSeeds">
+		<item name="plantedPotato1"						stage="seedsT0"/>
+		<item name="plantedCotton1"						stage="seedsT0"/>
+		<item name="plantedChrysanthemum1"				stage="seedsT0"/>
+		<item name="plantedGoldenrod1"					stage="seedsT0"/>
+		<item name="plantedMushroom1"					stage="seedsT1"/>
+		<item name="plantedYucca1"						stage="seedsT1"/>
+		<item name="plantedCorn1"						stage="seedsT1"/>
+		<item name="plantedPumpkin1"					stage="seedsT1"/>
+		<item name="plantedBlueberry1"					stage="seedsT2"/>
+		<item name="plantedCoffee1"						stage="seedsT2"/>
+		<item name="plantedHop1"						stage="seedsT2"/>
+		<item name="plantedAloe1"						stage="seedsT3"/>
+		<item name="plantedGraceCorn1"					stage="seedsT4" prob="0.1"/></trader_item_group>
+
+	<trader_item_group name="groupFoodCanned">
+		<item name="foodCanBeef"/>
+		<item name="foodCanCatfood"/>
+		<item name="foodCanChicken"/>
+		<item name="foodCanChili"/>
+		<item name="foodCanDogfood"/>
+		<item name="foodCanSham"/>
+		<item name="foodCanLamb"/>
+		<item name="foodCanMiso"/>
+		<item name="foodCanPasta"/>
+		<item name="foodCanPeas"/>
+		<item name="foodCanSalmon"/>
+		<item name="foodCanSoup"/>
+		<item name="foodCanStock"/>
+		<item name="foodCanTuna"/>
+		<item name="foodCanPears"/></trader_item_group>
+
+	<trader_item_group name="groupFoodCandy">
+		<item name="drugJailBreakers"					count="2,3" prob="1.5"/>
+		<item name="drugAtomJunkies"/>
+		<item name="drugCovertCats"/>
+		<item name="drugEyeKandy"/>
+		<item name="drugHackers"/>
+		<item name="drugHealthBar"/>
+		<item name="drugNerdTats"/>
+		<item name="drugOhShitzDrops"/>
+		<item name="drugRockBusters"/>
+		<item name="drugSkullCrushers"/>
+		<item name="drugSugarButts"/></trader_item_group>
+
+	<trader_item_group name="groupFoodRaw">
+		<item name="foodEgg"							count="2,8"/>
+		<item name="foodRawMeat"						count="10,40"/>
+		<item name="foodCropCorn"						count="4,20"/>
+		<item name="foodCropPotato"						count="4,18"/>
+		<item name="foodCropBlueberries"				count="5,20"/>
+		<item name="foodCornMeal"						count="5,20"/>
+		<item name="foodCropMushrooms"					count="4,8"/>
+		<item name="ulmResourceHoney"					count="1,2"/></trader_item_group>
+
+	<trader_item_group name="groupFoodPrepared">
+		<item name="foodBlueberryPie"					count="1"/>
+		<item name="foodMeatStew" 						count="1"/>
+		<item name="foodCornBread" 						count="1,2"/>
+		<item name="foodCharredMeat" 					count="1,2"/>
+		<item name="foodGrilledMeat" 					count="1,2"/>
+		<item name="foodBoiledMeat" 					count="1,2"/>
+		<item name="foodEggBoiled" 						count="1,2"/>
+		<item name="foodBakedPotato" 					count="1,2"/>
+		<item name="foodBaconAndEggs" 					count="1,2"/>
+		<item name="foodVegetableStew" 					count="1,2"/>
+		<item name="foodFishTacos" 						count="1,2"/>
+		<item name="foodHoboStew" 						count="1,2"/>
+		<item name="foodShamChowder" 					count="1,2"/>
+		<item name="foodHoneyBrisket" 					count="1,2"/>
+		<item name="foodHoneyGlazedSham" 				count="1,2"/>
+		<item name="foodSteakAndPotato" 				count="1,2"/>
+		<item name="foodChiliDog" 						count="1,2"/></trader_item_group>
+
+	<trader_item_group name="groupDrinks">
+		<item name="ulmDrinkBeer"  						count="1,3"/>
+		<item name="drinkYuccaJuiceSmoothie"  			count="1,2"/>
+		<item name="ulmDrinkPlasticBottleYuccaJuice" 	count="1,2"/>
+		<item name="ulmDrinkPlasticBottleBoiledWater"  	count="1,2"/>
+		<item name="ulmDrinkPlasticBottleGoldenRodTea"  count="1,2"/>
+		<item name="ulmDrinkPlasticBottleRedTea"  		count="1,2"/>
+		<item name="ulmDrinkPlasticBottleCoffee"  		count="1,2"/>
+		<item name="ulmDrinkPlasticBottleGrainAlcohol"  count="1,2"/>
+		<item name="ulmDrinkPlasticBottleMineralWater"	count="1,2"/>
+		<item name="ulmDrinkCurePoison"  				count="1,2"/></trader_item_group>
+
+	<trader_item_group name="groupFood">
+		<item group="groupFoodCanned"					count="1"/>
+		<item group="groupFoodRaw"						count="1"/>
+		<item group="groupFoodPrepared"					count="1"/>
+		<item group="groupDrinks"						count="1"/></trader_item_group>
+
+	<trader_item_group name="groupResourcesBuilding">
+		<item name="resourceCement"						count="50,500"/>
+		<item name="ulmResourceOreStone"				count="50,500"/>
+		<item name="resourceConcreteMix"				count="100,500"/>
+		<item name="resourceNail"						count="10,100"/>
+		<item name="ulmResourceBrick"					count="50,500"/></trader_item_group>
+
+	<trader_item_group name="groupPowerCells">
+		<item name="ulmAmmoPowerCellDepleted"				stage="electricT1" count="1,2"	prob="1"/>
+		<item name="ulmAmmoPowerCell"						stage="electricT1" count="1"	prob=".3"/></trader_item_group>
+
+	<trader_item_group name="groupPortableBatteries">
+		<item name="ulmResourceBatterySmall"				count="10,30"	prob="1"/>
+		<item group="groupPowerCells"						count="1"		prob=".3"/></trader_item_group>
+		
+	<trader_item_group name="groupElectricComponents">
+		<item group="groupPortableBatteries"				count="1"/>
+		<item name="resourceElectricParts"					count="20,50"/>
+		<item name="ulmResourceScrapWires"					count="50,100"/>
+		<item name="ulmElectricMotor"						count="1,3"/>
+		<item name="ulmResourceElectronicCircuitboard"		count="1,50"/>
+		<item name="ulmResourceElectronicCopperCoil"		count="1,50"/>
+		<item name="ulmResourceElectronicDiode"				count="1,50"/>
+		<item name="ulmResourceElectronicFuse"				count="1,20"/>
+		<item name="ulmResourceElectronicMicrochip"			count="1,10"/>
+		<item name="ulmResourceElectronicSwitch"			count="1,10"/>
+		<item name="ulmResourceElectronicLCDScreen"			count="1,10"/>
+		<item name="ulmResourceElectronicLEDPanel"			count="1,10"/>
+		<item name="ulmResourceLightBulb"					count="1,10"/>
+		<item name="ulmResourceLightBar"					count="1,10"/>
+		<item name="ulmResourceHalogenBulb"					count="1,10"/></trader_item_group>
+
+	<trader_item_group name="groupResourcesGeneral">
+		<item name="resourceElectricParts"				count="15,50"/>
+		<item name="ulmResourceElectronicCircuitboard"	count="1,50"/>
+		<item name="ulmResourceElectronicCopperCoil"	count="1,50"/>
+		<item name="ulmResourceElectronicDiode"			count="1,50"/>
+		<item name="ulmResourceElectronicFuse"			count="1,20"/>
+		<item name="ulmResourceElectronicMicrochip"		count="1,10"/>
+		<item name="ulmResourceElectronicSwitch"		count="1,10"/>
+		<item name="ulmResourceElectronicLCDScreen"		count="1,10"/>
+		<item name="ulmResourceElectronicLEDPanel"		count="1,10"/>
+		<item name="ulmResourceLightBulb"				count="1,10"/>
+		<item name="ulmResourceLightBar"				count="1,10"/>
+		<item name="ulmResourceHalogenBulb"				count="1,10"/>
+		<item name="ulmResourcePlank"					count="50,1000"/>
+		<item name="resourceYuccaFibers"				count="50,500"/>
+		<item name="resourceCrushedSand"				count="50,500"/>
+		<item name="resourceScrapIron"					count="25,250"/>
+		<item name="resourceScrapPolymers"				count="30,150"/>
+		<item name="resourceForgedIron"					count="5,50"/>
+		<item name="resourceForgedSteel"				count="5,50"/>
+		<item name="resourceMetalPipe"					count="5,20"/>
+		<item name="resourceOilShale"					count="20,60"/>
+		<item name="resourceLeather"					count="5,25"/>
+		<item name="ulmResourceWristWatch"				count="5,25"/>
+		<item name="ulmResourceMandibles"				count="5,25"/>
+		<item name="ulmResourceChitin"					count="5,25"/>
+		<item name="ulmResourceVenomSack"				count="5,25"/>
+		<item name="ulmResourceChicken"					count="1"/>
+		<item name="ulmResourceQueenBee"				count="1"/>
+		<item name="resourceScrapBrass"					count="30,80"/>
+		<item name="resourceClayLump"					count="5,25"/>
+		<item name="resourceScrapLead"					count="5,90"/>
+		<item name="resourceCloth"						count="5,100"/>
+		<item name="ulmResourceClothFabric"				count="5,100"/>
+		<item name="ulmResourceMilitaryFiber"			count="5,20"	prob="0.6"/>
+		<item name="resourceCoal"						count="20,60"/>
+		<item name="resourcePotassiumNitratePowder"		count="20,60"/>
+		<item name="resourceGunPowder"					count="3,30"/>
+		<item name="resourceOil"						count="3,10"/>
+		<item name="resourceAcid"						count="1,50"		prob="0.6"/>
+		<item name="resourceAnimalFat"					count="5,40"/>
+		<item name="resourceSewingKit"					count="1,50"/>
+		<item name="bucketEmpty"						count="1"		prob="0.6"/>
+		<item name="candle"								count="5,20"/>
+		<item name="ulmResourceCanEmpty"				count="5,20"/>
+		<item name="resourceHeadlight"					count="5,20"	prob="0.6"/>
+		<item name="resourceDuctTape"					count="10,30"/>
+		<item name="resourceGlue"						count="5,15"/>
+		<item name="resourceSpring"						count="5,30"/>
+		<item name="resourceMechanicalParts"			count="15,80"	prob="0.8"/>
+		<item name="resourceLockPick"					count="1,10"/>
+		<item name="ulmDrinkPlasticBottleEmpty"			count="10,30"/>
+		<item name="ulmResourceBottleEmpty"				count="10,30"/>
+		<item name="ulmAmmoFuelGasoline"				count="1"					quality="0"/>
+		<item name="ulmAmmoFuelGasolineBarrel"			count="1"		prob="0.2"	quality="0"/>
+		<item name="ulmResourceAdhesive"				count="1,30"/>
+		<item name="ulmResourceBook"					count="1,50"/>
+		<item name="ulmResourceBottleEmpty"				count="10,30"/>
+		<item name="ulmResourceBrassValve"				count="1,25"/>
+		<item name="ulmResourceMetalMesh"				count="1,10"/>
+		<item name="ulmResourceGears"					count="1,10"/>
+		<item name="ulmResourceGasMaskFilter"			count="1,10"/>
+		<item name="ulmResourceGlass"					count="1,50"/>
+		<item name="ulmResourceUVGlass"					count="1,50"/>
+		<item name="ulmResourceLumber"					count="1,100"/>
+		<item name="ulmResourceScrapCopper"				count="1,100"/>
+		<item name="ulmResourceScrapLeather"			count="1,100"/>
+		<item name="ulmResourceHide"					count="1,100"/>
+		<item name="ulmResourceScrapRubber"				count="1,100"/>
+		<item name="ulmResourceScrapSteel"				count="1,100"/>
+		<item name="ulmResourceScrapWires"				count="1,100"/>
+		<item name="ulmResourceScrapWood"				count="1,100"/>
+		<item name="ulmResourceScrapTitanium"			count="1,100"	prob="0.25"/>
+		<item name="ulmResourceIngotSilver"				count="1,10"	prob="0.75"/>
+		<item name="ulmResourceIngotGold"				count="1,10"	prob="0.5"/>
+		<item name="ulmResourceIngotIron"				count="1,50"/>
+		<item name="ulmResourceIngotBrass"				count="1,50"/>
+		<item name="ulmResourceIngotLead"				count="1,50"/>
+		<item name="ulmResourceIngotCopper"				count="1,50"/>
+		<item name="ulmResourceIngotZinc"				count="1,50"/>
+		<item name="ulmResourceIngotSteel"				count="1,50"	prob="0.5"/>
+		<item name="ulmResourceResin"					count="1,200"/>
+		<item name="ulmResourceHoney"					count="1,20"	prob="0.1"/>
+		<item name="ulmResourceHingeBrass"				count="1,50"/>
+		<item name="ulmResourceHingeSteel"				count="1,50"/>
+		<item name="ulmResourceHandleWood"				count="1,50"/>
+		<item name="ulmResourceFuelBrick"				count="1,200"/>
+		<item name="ulmResourceBonePowder"				count="1,100"/>
+		<item name="ulmResourceCoalPowder"				count="1,200"/>
+		<item name="ulmResourceSulfurPowder"			count="1,100"/>
+		<item name="ulmResourceRope"					count="1,100"/>
+		<item name="ulmResourceNutsAndBolts"			count="1,500"/>
+		<item name="ulmResourceBallBearings"			count="1,15"/>
+		<item name="ulmResourceAluminiumFoil"			count="1,15"/>
+		<item name="ulmResourceCondenserMembrane"		count="1,15"/>
+		<item name="ulmResourceNeedle"					count="1,15"/>
+		<item name="ulmResourceTarp"					count="1,15"/>
+		<item name="ulmResourceThread"					count="1,15"/>
+		<item name="ulmResourceAluminiumFoil"			count="1,5"/>
+		<item name="ulmTrapBarbedWireVariantHelper"		count="1,50"/>
+		<item name="barbedFence"						count="1,50"/>
+		<item name="ulmResourceWristWatch"				count="1,5"/>
+		<item name="ulmResourceRebarIron"				count="1,100"/>
+		<item name="ulmResourceRebarSteel"				count="1,100"/>
+		<item name="ulmResourceRebarTitanium"			count="1,100"	prob="0.25"/>
+		<item name="ulmResourceIngotTitanium"			count="1,50"	prob="0.20"/>
+		<item name="ulmResourceForgedTitanium"			count="1,25"	prob="0.15"/>
+		<item group="groupPortableBatteries"			count="1"/>
+		<item name="resourcePaint"						count="500,5000"/>
+		<item name="ulmResourceResearch"				count="250,2500"/></trader_item_group>
+		
+	<trader_item_group name="groupSickles">
+		<item name="ulmToolSickleRusty"				stage="weaponT0" quality="1,40" prob="6"/>
+		<item name="ulmToolSickleBrass"				stage="weaponT0" quality="1,40" prob="5"/>
+		<item name="ulmToolSickleScrap"				stage="weaponT1" quality="1,40" prob="4"/>
+		<item name="ulmToolSickleIron"				stage="weaponT2" quality="1,40" prob="3"/>
+		<item name="ulmToolSickleSteel"				stage="weaponT3" quality="1,35" prob="2"/>
+		<item name="ulmToolSickleTitanium"			stage="weaponT4" quality="1,30" prob="1"/></trader_item_group>
+		
+	<trader_item_group name="groupShovels">
+		<item name="meleeToolShovelT0StoneShovel"		stage="weaponT1" quality="1,60" prob="1"/>
+		<item name="meleeToolShovelT1IronShovel"		stage="weaponT1" quality="1,40" prob="5"/>
+		<item name="ulmToolShovelScrapIron"				stage="weaponT0" quality="1,40" prob="4"/>
+		<item name="meleeToolShovelT2SteelShovel"		stage="weaponT2" quality="1,35" prob="3"/>
+		<item name="ulmToolShovelTitanium"				stage="weaponT3" quality="1,30" prob="2"/>
+		<item name="meleeToolPickT3Auger"				stage="weaponT3" quality="1,40" prob="1"/>
+		<item name="ulmToolBerserkerDrill"				stage="weaponT5" quality="1,30"	prob=".2"/></trader_item_group>
+
+	<trader_item_group name="groupPickaxes">
+		<item name="ulmToolPickaxeStone"				stage="weaponT1" quality="1,60" prob="1"/>
+		<item name="ulmToolPickaxeScrapIron"			stage="weaponT1" quality="1,40" prob="5"/>
+		<item name="meleeToolPickT1IronPickaxe"			stage="weaponT1" quality="1,40" prob="4"/>
+		<item name="meleeToolPickT2SteelPickaxe"		stage="weaponT2" quality="1,35" prob="3"/>
+		<item name="ulmToolPickaxeIceBreaker"			stage="weaponT2" quality="1,35" prob="2"/>
+		<item name="ulmToolPickaxeTitanium"				stage="weaponT2" quality="1,30" prob="1"/>
+		<item name="ulmToolJackhammer"					stage="weaponT3" quality="1,30" prob="0.7"/>
+		<item name="ulmToolBerserkerDrill"				stage="weaponT5" quality="1,30"	prob=".2"/></trader_item_group>
+
+	<trader_item_group name="groupAxes">
+		<item name="meleeToolRepairT0StoneAxe"			stage="weaponT0" quality="1,60" prob="1"/>
+		<item name="meleeToolRepairT0TazasStoneAxe"		stage="weaponT0" quality="1,60" prob="0.1"/>
+		<item name="ulmMeleeAxeCarpenters"				stage="weaponT0" quality="1,40" prob="4"/>
+		<item name="ulmMeleeAxeCrudeIron"				stage="weaponT0" quality="1,40" prob="3"/>
+		<item name="ulmMeleeAxeScrapIron"				stage="weaponT0" quality="1,40" prob="3"/>
+		<item name="meleeToolAxeT1IronFireaxe"			stage="weaponT1" quality="1,40" prob="2"/>
+		<item name="ulmMeleeGreataxeScrapIron"			stage="weaponT2" quality="1,40" prob="2"/>
+		<item name="meleeToolAxeT2SteelAxe"				stage="weaponT2" quality="1,35" prob="1"/>
+		<item name="meleeToolAxeT3Chainsaw"				stage="weaponT4" quality="1,35" prob="1"/>
+		<item name="ulmMeleeAxeSpinebiter"				stage="weaponT3" quality="1,35" prob=".75"/>
+		<item name="ulmMeleeAxeTitanium"				stage="weaponT5" quality="1,30"	prob="0.3"/></trader_item_group>
+	
+	<trader_item_group name="groupSalvageTools">
+		<item name="meleeToolSalvageT1Wrench"			stage="weaponT0" quality="1,40" prob="3"/>
+		<item name="meleeToolSalvageT2Ratchet"			stage="weaponT1" quality="1,40" prob="2"/>
+		<item name="meleeToolSalvageT3ImpactDriver"		stage="weaponT2" quality="1,40" prob="1"/></trader_item_group>
+
+	<trader_item_group name="groupHammers">
+		<item name="ulmToolHammerWood"					stage="weaponT0" quality="1,40" prob="5"/>
+		<item name="meleeToolRepairT1ClawHammer"		stage="weaponT1" quality="1,40" prob="3"/>
+		<item name="meleeToolRepairT3Nailgun"			stage="weaponT2" quality="1,40" prob="1"/></trader_item_group>
+
+	<trader_item_group name="groupRepairKits">
+		<item name="ulmResourcePrimitiveRepairKit"		stage="weaponT0" count="2,6" prob="0.5"/>
+		<item name="resourceRepairKit"					stage="weaponT1" count="2,6" prob="7"/>
+		<item name="ulmResourceAdvancedRepairKit"		stage="weaponT2" count="2,3" prob="4"/>
+		<item name="ulmResourceSuperiorRepairKit"		stage="weaponT3" count="1,2" prob="1"/></trader_item_group>
+
+	<trader_item_group name="groupWorkstationTools">
+		<item name="toolCookingPot"						stage="weaponT0" prob="3"/>
+		<item name="ulmToolSaw"							stage="weaponT0" prob="3"/>
+		<item name="ulmResourceSawBladeCrude"			stage="weaponT0" prob="3"/>
+		<item name="ulmResourceSawBladeSteel"			stage="weaponT0" prob="3"/>
+		<item name="ulmResourceBenchVice"				stage="weaponT0" prob="2.5"/>
+		<item name="toolBellows"						stage="weaponT0" quality="1,40" prob="2"/>
+		<item name="ulmToolFryingPan"					stage="weaponT1" quality="1,40" prob="1.5"/>
+		<item name="toolForgeCrucible"					stage="weaponT3" prob="1"/></trader_item_group>
+
+	<trader_item_group name="groupMiscTools">
+		<item name="meleeToolPaintTool"					stage="weaponT0" prob="0.5"/>
+		<item name="meleeToolWireTool"					stage="weaponT0" prob="0.5"/>
+		<item name="ulmMeleePolearmBoathook"			stage="weaponT0" quality="1,40"/>
+		<item name="ulmMeleePolearmPitchfork"			stage="weaponT0" quality="1,40"/>
+		<item name="ulmMeleeClubRollingPin"				stage="weaponT0" quality="1,40"/>
+		<item name="ulmMeleeBladeKnifeCleaverIron"		stage="weaponT1" quality="1,40"/></trader_item_group>
+
+	<trader_item_group name="groupToolsAll">
+		<item group="groupEngines"/>
+		<item group="groupSickles"/>
+		<item group="groupShovels"/>
+		<item group="groupPickaxes"/>
+		<item group="groupAxes"/>
+		<item group="groupHammers"/>
+		<item group="groupRepairKits"/>
+		<item group="groupMiscTools"/>
+		<item group="groupWorkstationTools"/>
+		<item group="groupSalvageTools"/>
+		<item name="meleeToolSalvageT1Wrench"			stage="weaponT0" quality="1,40"/></trader_item_group>
+	
+	<trader_item_group name="groupVehicleMods">
+		<item name="ulmModVehicleCargoBag"				quality="1,30"/>
+		<item name="ulmModVehicleShockAbsorbers"		quality="1,30"/>
+		<item name="modVehicleFuelSaver"				quality="1,30"/>
+		<item name="modVehicleOffRoadHeadlights"		quality="1,30"/>
+		<item name="modVehicleSuperCharger"				quality="1,30"/>
+		<item name="modVehicleReserveFuelTank"			quality="1,30"/>
+		<item name="ulmModVehicle4x4TruckPlow"			quality="1,30"/>
+		<item name="ulmModVehicleMotorcyclePlow"		quality="1,30"/>
+		<item name="ulmModVehicleSUVBrushGuard"			quality="1,30"/>
+		<item name="modVehiclePlow"						quality="1,30"/>
+		<item name="modVehicleExpandedSeat"/></trader_item_group>
+
+	<trader_item_group name="groupVehiclesMotorcycles">
+		<item group="groupVehicleMinibikeT1"/>
+		<item group="groupVehicleMinibikeT2"/>
+		<item group="groupVehicleMotorcycleT1"/>
+		<item group="groupVehicleMotorcycleT2"/>
+		<item group="groupVehicleRenegade"/>
+		<item group="groupVehicleThunderbird"/></trader_item_group>
+
+	<trader_item_group name="groupVehicle4x4Classic">
+		<item name="ulmModVehicle4x4TruckPlow" quality="1,30"/>
+		<item name="ulmResource4x4TruckChassis"/>
+		<item name="ulmResource4x4TruckAccessories"/>
+		<item name="ulmResource4x4TruckInterior"/>
+		<item name="ulmVehicleTruck4x4Classic"			stage="vehicleT4"/></trader_item_group>
+
+	<trader_item_group name="groupVehicle4x4Truck">
+		<item name="modVehiclePlow" quality="1,30"/>
+		<item name="vehicleTruck4x4Accessories"/>
+		<item name="vehicleTruck4x4Chassis"/>
+		<item name="ulmResource4x4TruckInterior"/>
+		<item name="vehicleTruck4x4Placeable"			stage="vehicleT4"/></trader_item_group>
+
+	<trader_item_group name="groupVehiclesT1">
+		<item group="groupEngines"/>
+		<item group="groupVehicleWheels"/>
+		<item group="groupVehicleBicycleT1"/>
+		<item group="groupVehicleBicycleT2"/>
+		<item group="groupVehiclesMotorcycles"/>
+		<item group="groupVehicleQuadBike"/>
+		<item group="groupVehicleGokart"/>
+		<item group="groupVehicleSedan1"/>
+		<item group="groupVehicleMods"/></trader_item_group>
+
+	<trader_item_group name="groupVehiclesT2">
+		<item name="ulmVehicleMineCart"					stage="vehicleT4"/>
+		<item group="groupVehiclesMotorcycles"/>
+		<item group="groupVehicleDuneRunner"/>
+		<item group="groupVehicleSedan04"/>
+		<item group="groupVehicleSedan05"/>
+		<item group="groupVehicleSUV02"/>
+		<item group="groupVehicleHumvee"/>
+		<item group="groupVehicleMuscle"/>
+		<item group="groupVehicleCoupe1"/>
+		<item group="groupVehicle4x4Classic"/>
+		<item group="groupVehicle4x4Truck"/></trader_item_group>
+
+	<trader_item_group name="groupVehiclesT3">
+		<item name="ulmVehicleMiningDumpTruck"			stage="vehicleT5"/>
+		<item name="ulmVehiclePoliceCruiser"			stage="vehicleT5"/>
+		<item name="ulmVehicleAmbulance02"				stage="vehicleT4"/>
+		<item group="groupVehicleMinivan"/>
+		<item group="groupVehicleMilitaryTruck"/>
+		<item group="groupVehicleGyrocopterT1"/>
+		<item group="groupVehicleGyrocopterT2"/>
+		<item group="groupVehicleHelicopterRaven"/>
+		<item group="groupVehicleHelicopterDH800"/></trader_item_group>
+
+	<trader_item_group name="groupVehicles">
+		<item group="groupVehiclesT1" prob="5"/>
+		<item group="groupVehiclesT2" prob="2"/>
+		<item group="groupVehiclesT3" prob="1"/></trader_item_group>
+
+	<trader_item_group name="decorativeBlinds" count="all">
+		<item name="miniblindTopSheet"					count="10,15"/>
+		<item name="miniblindBottomSheet"				count="10,15"/></trader_item_group>
+		
+	<trader_item_group name="groupDecoToys">
+		<item name="ulmDecoToyBear"/>
+		<item name="ulmDecoToyElephant"/>
+		<item name="ulmDecoToyRobot1"/>
+		<item name="ulmDecoToyRobot2"/>
+		<item name="ulmDecoToyRobot3"/>
+		<item name="ulmDecoToyRocket"/>
+		<item name="ulmDecoToySquirrel"/></trader_item_group>
+		
+	<trader_item_group name="groupChairs">
+		<item name="barStoolVariantHelper"							count="5,10"/>
+		<item name="officeChair01VariantHelper"						count="5,10"/>
+		<item name="woodChair1"										count="5,10"/>
+		<item name="chairWood01"									count="5,10"/>
+		<item name="oldChair1VariantHelper"							count="5,10"/>
+		<item name="chairFoldingMetalVariantHelper"					count="5,10"/>
+		<item name="chairCampingVariantHelper"						count="5,10"/>
+		<item name="couchUglySingleBlockVariantHelper"				count="5,10"/>
+		<item name="ulmRestaurantBoothVariantHelper"				count="5,10"/>
+		<item name="sectionalPlaidChair"							count="5,10"/>
+		<item name="sectionalLeatherChair"							count="5,10"/>
+		<item name="ulmSchoolDeskVariantHelper"						count="5,10"/>
+		<item name="parkBenchA"										count="5,10"/>
+		<item name="parkBenchB"										count="5,10"/>
+		<item name="decoBenchPress"									count="5,10"/>
+		<item name="ulmBleachersBenchVariantHelper"					count="5,10"/>
+		<item name="ulmFastFoodBoothBenchVariantHelper"				count="5,10"/></trader_item_group>
+
+	<trader_item_group name="groupBeds">
+		<item name="bed02BlockVariantHelper"						count="5,10"/>
+		<item name="gurneyBed"										count="5,10"/>
+		<item name="hospitalBed"									count="5,10"/>
+		<item name="ulmBedNoFrameVariantHelper"						count="5,10"/>
+		<item name="ulmBunkBedVariantHelper"						count="5,10"/></trader_item_group>
+
+	<trader_item_group name="groupDesks">
+		<item name="cntDeskMetalVariantHelper"						count="5,10"/>
+		<item name="cntDeskWoodFull"								count="5,10"/>
+		<item name="officeDesk"										count="5,10"/>
+		<item name="officeTable"									count="5,10"/>
+		<item name="ulmDecoIronTable"								count="5,10"/>
+		<item name="ulmDecoLogTable"								count="5,10"/>
+		<item name="decoPicnicTable"								count="5,10"/>
+		<item name="metalTablePillar0.025CTR"						count="5,10"/>
+		<item name="decoTableRound"									count="5,10"/>
+		<item name="ulmTableUmbrellaVariantHelper"					count="5,10"/>
+		<item name="decoPoolTable"									count="5,10"/>
+		<item name="decoPoolTableBlue"								count="5,10"/></trader_item_group>
+
+	<trader_item_group name="groupDeco">
+	<!--<item group="decorativeBlinds"/>-->
+		<item group="groupDecoToys"									count="1"	prob=".1"/>
+		<item group="groupChairs"/>
+		<item group="groupBeds"/>
+		<item group="groupDesks"/>
+		<item name="ulmContainerCashRegisterVariantHelper"/>
+		<item name="cntCoolerVariantHelper"/>
+		<item name="cntFileCabinetBlockVariantHelper"/>
+		<item name="cntWaterCoolerFull"/>
+		<item name="airConditioner"									count="5,10"/>
+		<item name="curtainVariantHelper"							count="5,10"/>
+		<item name="ulmCurtainDrapesDirtyVariantHelper"				count="5,10"/>
+		<item name="ulmContainerCabinetCupboardVariantHelper"		count="5,10"/>
+		<item name="ulmBlindsMetalVariantHelper"					count="5,10"/>
+		<item name="ulmBlindsVariantHelper"							count="5,10"/>
+		<item name="ulmContainerLockersVariantHelper"				count="5,10"/>
+		<item name="ulmContainerMunitionsBoxVariantHelper"			count="5,10"/>
+		<item name="faucetBrass02"									count="5,10"/>
+		<item name="faucetBrass04"									count="5,10"/>
+		<item name="toiletsBlockVariantHelper"						count="5,10"/>
+		<item name="ulmBreakerDistributionBoxVariantHelper"			count="5,10"/>
+		<item name="couchUglySingleBlockVariantHelper"				count="5,10"/>
+		<item name="couchUglySmallBlockVariantHelper"				count="5,10"/>
+		<item name="couchUglyLargeBlockVariantHelper"				count="5,10"/>
+		<item name="sectionalLeatherCouchSofaBlockVariantHelper"	count="5,10"/>
+		<item name="sectionalPlaidCouchSofaBlockVariantHelper"		count="5,10"/>
+		<item name="couchModernBlockVariantHelper"					count="5,10"/>
+		<item name="pipeLargeBlockVariantHelper"					count="20,30"/>
+		<item name="pipeSmallBlockVariantHelper"					count="20,30"/>
+		<item name="ulmContainerShoppingCartVariantHelper"			count="5,10"/>
+		<item name="treeAzalea"										count="8,15"/></trader_item_group>
+
+	<trader_item_group name="groupLights">
+		<item name="meleeToolFlashlight02"					count="1"/>
+		<item name="ulmSpotlightScrapPlayer"				count="2,5"/>
+		<item name="spotlightPlayer"						count="2,5"/>
+		<item name="ulmPlantGrowLightPowered"				count="2,5"/>
+		<item name="lanternOldBlockVariantHelper"			count="2,5"/>
+		<item name="decoPumpkinJackOLantern"				count="2,5"/>
+		<item name="ulmLightDisplayXRayVariantHelper"		count="2,5"/>
+		<item name="ulmLightHoodRangeVariantHelper"			count="2,5"/>
+		<item name="ulmLightSconceVariantHelper"			count="2,5"/>
+		<item name="lanternDecorLightBlockVariantHelper"	count="2,5"/>
+		<item name="industrialLight01_player"				count="2,5"/>
+		<item name="industrialLight02_player"				count="2,5"/>
+		<item name="flashlightDecorVariantHelper_Player"	count="2,5"/>
+		<item name="ulmLightBarLongVariantHelper"			count="2,5"/>
+		<item name="ulmLightCandelabraPlayer"				count="2,5"/>
+		<item name="ulmLightCandelabraSmallPlayer"			count="2,5"/>
+		<item name="ulmLightCeiling01VariantHelper"			count="2,5"/>
+		<item name="ulmLightCeiling02VariantHelper"			count="2,5"/>
+		<item name="ulmLightCeiling02BrassVariantHelper"	count="2,5"/>
+		<item name="ulmLightCeiling04VariantHelper"			count="2,5"/>
+		<item name="ulmLightCeiling05Player"				count="2,5"/>
+		<item name="ulmLightCeiling05BrassPlayer"			count="2,5"/>
+		<item name="ulmLightCeiling07VariantHelper"			count="2,5"/>
+		<item name="ulmLightCeilingFanPlayer"				count="2,5"/>
+		<item name="ulmLightChandelierVariantHelper"		count="2,5"/>
+		<item name="ulmLightDeskLamp01Player"				count="2,5"/>
+		<item name="ulmLightDeskLamp02VariantHelper"		count="2,5"/>
+		<item name="ulmLightEndTablePlayer"					count="2,5"/>
+		<item name="ulmLightFluorescentPlayer"				count="2,5"/>
+		<item name="ulmLightFluorescentBayPlayer"			count="2,5"/>
+		<item name="ulmLightGooseneckVariantHelper"			count="2,5"/>
+		<item name="ulmLightIndustrialVariantHelper"		count="2,5"/>
+		<item name="ulmLightPanelLEDVariantHelper"			count="2,5"/>
+		<item name="ulmLightPorchVariantHelper"				count="2,5"/>
+		<item name="ulmLightRecessedVariantHelper"			count="2,5"/>
+		<item name="ulmLightSignExitVariantHelper"			count="2,5"/>
+		<item name="ulmLightTableLamp01VariantHelper"		count="2,5"/>
+		<item name="ulmLightWorkLampVariantHelper"			count="2,5"/>
+		<item name="ulmStreetLightVariantHelper"			count="2,5"/>
+		<item name="ulmLightTrackPlayer"					count="2,5"/>
+		<item name="ulmLightStreetLampClassicPlayer"		count="2,5"/></trader_item_group>
+
+	<trader_item_group name="groupTurrets">
+		<item name="autoTurret"								stage="trapsT1" count="1,2" prob="7"/>
+		<item name="shotgunTurret"							stage="trapsT2" count="1,2" prob="3"/>
+		<item name="ulmGatlingTurret"						stage="trapsT3" count="1,2" prob="1"/></trader_item_group>
+
+	<trader_item_group name="groupBladeTraps">
+		<item name="bladeTrap"								stage="trapsT1" count="1,3" prob="7"/>
+		<item name="ulmBladeTrap2"							stage="trapsT3" count="1,2" prob="3"/>
+		<item name="ulmBladeTrap3"							stage="trapsT5" count="1,2" prob="1"/></trader_item_group>
+
+	<trader_item_group name="groupFencePosts">
+		<item name="electricfencepost"						stage="trapsT1" count="1,3" prob="7"/>
+		<item name="ulmElectricFencePost2"					stage="trapsT3" count="1,2" prob="3"/>
+		<item name="ulmElectricFencePost3"					stage="trapsT5" count="1,2" prob="1"/></trader_item_group>
+
+	<trader_item_group name="groupSpikes">
+		<item name="trapSpikesWoodDmg0"						stage="trapsT1" count="5,10"/>
+		<item name="trapSpikesIronDmg0"						stage="trapsT2" count="5,10"/>
+		<item name="ulmTrapSpikesSteelDmg0"					stage="trapsT3" count="5,10"/>
+		<item name="ulmTrapSpikesPowered"					stage="trapsT4" count="1,3"/>
+		<item name="ulmTrapSpikesTitaniumDmg0"				stage="trapsT5" count="5,10"/></trader_item_group>
+
+	<trader_item_group name="groupMines">
+		<item name="mineCandyTin"							stage="trapsT1" count="1,6"/>
+		<item name="mineHubcap"								stage="trapsT1" count="1,50"/>
+		<item name="mineAirFilter"							stage="trapsT1" count="1,4"/>
+		<item name="mineCookingPot"							stage="trapsT1" count="1,4"/></trader_item_group>
+
+	<trader_item_group name="groupDartTrap">
+		<item name="ammoDartIron"							stage="trapsT1" count="15,70"/>
+		<item name="dartTrap"								stage="trapsT1" count="1,2"/></trader_item_group>
+
+	<trader_item_group name="groupFlamethrower">
+		<item name="ulmAmmoGasPropane"						stage="trapsT1" count="1"/>
+		<item name="ulmAmmoGasEmpty"						stage="trapsT1" count="1,5"/>
+		<item name="ulmTrapFlamethrowerPowered"				stage="trapsT1" count="1,2"/></trader_item_group>
+
+	<trader_item_group name="groupPoweredTraps">
+		<item group="groupTurrets"/>
+		<item group="groupBladeTraps"/>
+		<item group="groupFencePosts"/>
+		<item group="groupSpikes"/>
+		<item group="groupMines"/>
+		<item group="groupDartTrap"/>
+		<item group="groupFlamethrower"/></trader_item_group>
+
+	<trader_item_group name="groupTriggers">
+		<item name="tripwirepost"							stage="trapsT1" count="1,10"/>
+		<item name="pressureplate"							stage="trapsT1" count="1,20"/>
+		<item name="pressureplateLong"						stage="trapsT2" count="1,10"/>
+		<item name="motionsensor"							stage="trapsT3" count="1,5"/>
+		<item name="electrictimerrelay"						count="1,3"/>
+		<item name="electricwirerelay"						count="5,15"/>
+		<item name="speaker"								count="1,2"/>
+		<item name="switch"									count="3,9"/></trader_item_group>
+
+	<trader_item_group name="groupBatteries">
+		<item name="ulmCarBattery"							stage="electricT0" count="1,3" prob="7"/>
+		<item name="ulmGeneratorBatteryCar"					stage="electricT1" count="1,3" prob="5"/>
+		<item name="ulmGeneratorBatterySingle"				stage="electricT2" count="1,2" prob="3"/>
+		<item name="ulmGeneratorBatteryCluster"				stage="electricT4" count="1,2" prob="1"/></trader_item_group>
+
+	<trader_item_group name="groupGasolineGenerators">
+		<item name="ulmGeneratorGasoline_1"					stage="electricT0" count="1" prob="4.00"/>
+		<item name="ulmGeneratorGasoline_2"					stage="electricT1" count="1" prob="3.00"/>
+		<item name="ulmGeneratorGasoline_2b"				stage="electricT2" count="1" prob="2.50"/>
+		<item name="ulmGeneratorGasoline_3"					stage="electricT3" count="1" prob="2.00"/>
+		<item name="ulmGeneratorGasoline_4"					stage="electricT4" count="1" prob="1.75"/>
+		<item name="ulmGeneratorGasoline_5"					stage="electricT5" count="1" prob="1.50"/>
+		<item name="ulmGeneratorGasoline_6"					stage="electricT6" count="1" prob="1.25"/>
+		<item name="ulmGeneratorGasoline_7"					stage="electricT7" count="1" prob="1.00"/></trader_item_group>
+
+	<trader_item_group name="groupSolar">
+		<item name="solarCell"								stage="electricT0" count="1,6" prob="5"/>
+		<item name="ulmGeneratorSolarScrap"					stage="electricT2" count="1,3" prob="4"/>
+		<item name="ulmGeneratorSolarSmall"					stage="electricT3" count="1,2" prob="4"/>
+		<item name="ulmGeneratorSolarMedium"				stage="electricT4" count="1,2" prob="3"/>
+		<item name="ulmGeneratorSolarLarge"					stage="electricT5" count="1,2" prob="2"/>
+		<item name="ulmGeneratorSolarXL"					stage="electricT6" count="1,2" prob="1"/></trader_item_group>
+
+	<trader_item_group name="groupWindTurbine">
+		<item name="ulmElectricMotor"						stage="electricT2" count="1,3" prob="5"/>
+		<item name="ulmGeneratorWindSmall"					stage="electricT3" count="1,2" prob="4"/>
+		<item name="ulmGeneratorWindMedium"					stage="electricT4" count="1,2" prob="3"/>
+		<item name="ulmGeneratorWindLarge"					stage="electricT5" count="1,2" prob="2"/>
+		<item name="ulmGeneratorWindXL"						stage="electricT6" count="1,2" prob="1"/></trader_item_group>
+
+	<trader_item_group name="groupHydroponics">
+		<item name="ulmPlantGrowLightPowered"				stage="electricT4" count="1" prob="3"/>
+		<item name="ulmCollectorHydroponicPlanter"			stage="electricT3" count="1" prob="1"/></trader_item_group>
+
+	<trader_item_group name="groupPoweredDoors">
+		<item name="vaultHatch01_Powered"							count="1,3"/>
+		<item name="vaultDoor01_Powered"							count="1,3"/>
+		<item name="vaultDoor01Double_Powered"						count="1,3"/>
+		<item name="ulmDoorSciFi01Powered"							count="1,3"/>
+		<item name="ulmDoorSciFi02Powered"							count="1,3"/>
+		<item name="ulmDoorSciFi03Powered"							count="1,3"/>
+		<item name="ulmDoorSciFi04Powered"							count="1,3"/>
+		<item name="ironGarageDoor_PoweredBlockVariantHelper"		count="1,3"/>
+		<item name="woodenGarageDoor3x3_PoweredBlockVariantHelper"	count="1,3"/>
+		<item name="woodenGarageDoor4x3_PoweredBlockVariantHelper"	count="1,3"/>
+		<item name="woodenGarageDoor5x3_PoweredBlockVariantHelper"	count="1,3"/>
+		<item name="steelGarageDoor3x3_PoweredBlockVariantHelper"	count="1,3"/>
+		<item name="steelGarageDoor4x3_PoweredBlockVariantHelper"	count="1,3"/>
+		<item name="steelGarageDoor5x3_PoweredBlockVariantHelper"	count="1,3"/>
+		<item name="metalReinforcedWoodDrawBridgePowered"			count="1,3"/>
+		<item name="woodenGarageDoor3x3_PoweredBlue"				count="1,3"/></trader_item_group>
+
+	<trader_item_group name="groupElectrical">
+		<item group="groupElectricComponents" prob="5"/>
+		<item group="groupPoweredTraps"/>
+		<item group="groupPoweredDoors"/>
+		<item group="groupLights"/>
+		<item group="groupEngines"/>
+		<item group="groupBatteries"/>
+		<item group="groupPowerCells"/>
+		<item group="groupGasolineGenerators"/>
+		<item group="groupSolar"/>
+		<item group="groupWindTurbine"/>
+		<item group="groupHydroponics" prob="0.1"/>
+		<item group="groupTriggers"/></trader_item_group>
+
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+	<trader_item_group name="groupGeneral" count="1">
+		<item group="groupGunParts"							count="1" prob=".4"/>
+		<item group="groupBooksAll"							count="1,3"/>
+		<item group="groupAmmo"								count="1" prob="2"/>
+		<item group="groupSeeds"							count="1,4"/>
+		<item group="groupFoodCanned"						count="1,2"/>
+		<item group="groupFoodRaw"							count="2,5"/>
+		<item group="groupFoodPrepared"						count="1,2"/>
+		<item group="groupDrinks"							count="1"/>
+		<item group="groupResourcesBuilding"				count="1,3" prob=".8"/>
+		<item group="groupToolsAll"							count="1"	prob=".3"/>
+		<item group="groupMedicineAll"						count="1,2"/></trader_item_group>
+
+	<trader_item_group name="groupGeneralNoTools" count="1">
+		<item group="groupGunParts"							count="1"	prob=".4"/>
+		<item group="groupBooksAll"							count="1,3"/>
+		<item group="groupAmmo"								count="1" prob="2"/>
+		<item group="groupSeeds"							count="1,4"/>
+		<item group="groupFoodCanned"						count="1,2"/>
+		<item group="groupFoodRaw"							count="2,5"/>
+		<item group="groupFoodPrepared"						count="1,2"/>
+		<item group="groupDrinks"							count="1"/>
+		<item group="groupResourcesBuilding"				count="1,3" prob=".8"/>
+		<item group="groupMedicineAll"						count="1,2"/></trader_item_group>
+
+	<trader_item_group name="groupGeneralNoAmmo" count="1">
+		<item group="groupBooksAll"							count="1,3"/>
+		<item group="groupSeeds"							count="1,4"/>
+		<item group="groupFoodCanned"						count="1,2"/>
+		<item group="groupFoodRaw"							count="2,5"/>
+		<item group="groupFoodPrepared"						count="1,2"/>
+		<item group="groupDrinks"							count="1"/>
+		<item group="groupResourcesBuilding"				count="1,3" prob=".8"/>
+		<item group="groupToolsAll"							count="1"	prob=".3"/>
+		<item group="groupMedicineAll"						count="1,2"/></trader_item_group>
+
+</trader_item_groups>
+	
+	<trader_info info="Joel" id="1" reset_interval="4" open_time="4:05" close_time="21:55">
+		<trader_items count="all">
+			<item group="groupAmmo"					unique_only="true" count="2,3"/>
+			<item group="groupFood"					unique_only="true" count="3,6"/>
+			<item group="groupResourcesGeneral"		unique_only="true" count="15,25"/>
+			<item group="groupResourcesBuilding"	unique_only="true" count="6,15"/>
+			<item group="groupGeneralNoTools"		unique_only="true" count="6,14"/>
+			<item group="groupGunsAll"				unique_only="true" count="3,5"/>
+			<item group="groupGunParts"				unique_only="true" count="3,5"/>
+			<item group="groupVehicles"				unique_only="true" count="3,5"/>
+			<item group="groupModsAll"				unique_only="true" count="3,5"/>
+			<item group="groupModsArmor"			unique_only="true" count="3,5"/></trader_items></trader_info>
+
+	<trader_info info="Jen" id="2" reset_interval="4" open_time="4:05" close_time="21:55">
+		<trader_items count="all">
+			<item group="groupResourcesGeneral"		count="15,25"/>
+			<item group="groupResourcesBuilding"	count="6,10"/>
+			<item group="groupGeneralNoAmmo"		count="6,10"/>
+			<item group="groupFood"					count="3,5"/>
+			<item group="groupMedicineAll"			count="6,8"/>
+			<item group="groupMedicineRare"			count="3,5"/>
+			<item group="groupDeco"					count="4,8"/>
+			<item group="groupElectrical"			count="3,4"/>
+			<item group="groupToolsAll"				count="2,4"/>
+			<item group="groupArmorAll"				count="5,8" unique_only="true"/>
+			<item group="groupVehicles"				count="2,3"/></trader_items></trader_info>
+	
+	<trader_info info="Bob" id="6" reset_interval="4" open_time="4:05" close_time="21:55">
+		<trader_items count="all">
+			<item group="groupResourcesGeneral"		count="15,25"/>
+			<item group="groupResourcesBuilding"	count="6,10"/>
+			<item group="groupGeneralNoAmmo"		count="6,8"/>
+			<item group="groupFood"					count="3,5"/>
+			<item group="groupElectrical"			count="3,5"/>
+			<item group="groupToolsAll"				count="4,6"/>
+			<item group="groupMeleeAll"				count="2,3"/>
+			<item group="groupArmorAll"				count="5,10" unique_only="true"/>
+			<item group="groupDeco"					count="4,9"/>
+			<item group="groupVehicles"				count="4,6"/>
+			<item group="groupModsMelee"			count="4,6"/>
+			<item group="groupModsArmor"			count="4,6"/></trader_items></trader_info>
+
+	<trader_info info="Hugh" id="7" reset_interval="4" open_time="4:05" close_time="21:55">
+		<trader_items count="all">
+			<item group="groupResourcesGeneral"		count="15,25"/>
+			<item group="groupResourcesBuilding"	count="6,10"/>
+			<item group="groupGeneralNoAmmo"		count="6,10"/>
+			<item group="groupFood"					count="5,7"/>
+			<item group="groupDeco"					count="4,8"/>
+			<item group="groupMeleeAll"				count="4,6"/>
+			<item group="groupToolsAll"				count="3,5"/>
+			<item group="groupArmorAll"				count="6,12" unique_only="true"/>
+			<item group="groupElectrical"			count="4,6"/>
+			<item group="groupVehicles"				count="3,5"/>
+			<item group="groupModsMelee"			count="3,5"/>
+			<item group="groupModsArmor"			count="3,5"/></trader_items></trader_info>
+
+	<trader_info info="Rekt" id="8" reset_interval="4" open_time="4:05" close_time="21:55">
+		<trader_items count="all">
+			<item group="groupResourcesGeneral"		count="15,25"/>
+			<item group="groupAmmo"					count="4,8"/>
+			<item group="groupFood"					count="4,8"/>
+			<item group="groupToolsAll"				count="3,5"/>
+			<item group="groupMeleeAll"				count="3,5"/>
+			<item group="groupGunsAll"				count="3,5"/>
+			<item group="groupGunParts"				count="3,5"/>
+			<item group="groupArmorAll"				count="4,8" unique_only="true"/>
+			<item group="groupElectrical"			count="4,6"/>
+			<item group="groupVehicles"				count="3,5"/>
+			<item group="groupModsAll"				count="3,5"/>
+			<item group="groupModsArmor"			count="3,5" unique_only="true"/></trader_items></trader_info>
+	
+	<trader_info info="Ellen (General)" id="16" reset_interval="4" open_time="4:05" close_time="21:55">
+		<trader_items count="all">
+			<item group="groupResourcesGeneral"		count="15,25"/>
+			<item group="groupResourcesBuilding"	count="8,14"/>
+			<item group="groupGeneralNoAmmo"		count="6,10"/>
+			<item group="groupFood"					count="3,5"/>
+			<item group="groupMedicineAll"			count="3,5"/>
+			<item group="groupFoodCanned"			count="3,5"/>
+			<item group="groupToolsAll"				count="3,5"/>
+			<item group="groupVehicles"				count="2,4"/></trader_items></trader_info>
+	
+	<trader_info info="Maxton (Armor, Ammo, Guns)" id="17" reset_interval="4" open_time="4:05" close_time="21:55">
+		<trader_items count="all">
+			<item group="groupAmmo"					count="8,12" prob="2"/>
+			<item group="groupMeleeAll"				count="3,5"/>
+			<item group="groupGunsAll"				count="8,12"/>
+			<item group="groupGunParts"				count="6,10"/>
+			<item group="groupArmorAll"				count="8,12" unique_only="true"/>
+			<item group="groupModsAll"				count="4,6"/>
+			<item group="groupModsArmor"			count="4,6"/></trader_items></trader_info>
+	
+	<trader_info info="Ethan (Blacksmith, Armor, Melee)" id="18" reset_interval="4" open_time="4:05" close_time="21:55">
+		<trader_items count="all">
+			<item group="groupArmorAll"				count="15,25" unique_only="true"/>
+			<item group="groupMeleeAll"				count="8,12"/>
+			<item group="groupToolsAll"				count="3,5"/>
+			<item group="groupElectrical"			count="4,6"/>
+			<item group="groupDeco"					count="4,8"/></trader_items></trader_info>
+	
+	<trader_info info="Logan (Ammo, Guns)" id="19" reset_interval="4" open_time="4:05" close_time="21:55">
+		<trader_items count="all">
+			<item group="groupAmmo"					count="15,25" prob="2"/>
+			<item group="groupGunsAll"				count="8,12"/>
+			<item group="groupGunParts"				count="6,18"/>
+			<item group="groupModsGuns"				count="6,12"/></trader_items></trader_info>
+	
+	<trader_info info="Raiden (Ammo and More Guns)" id="20" reset_interval="4" open_time="4:05" close_time="21:55">
+		<trader_items count="all">
+			<item group="groupAmmo"					count="10,15" prob="2"/>
+			<item group="groupGunParts"				count="8,12"/>
+			<item group="groupGunsAll"				count="6,10"/>
+			<item group="groupGunsRare"				count="3,6"/>
+			<item group="groupModsGuns"				count="3,6"/></trader_items></trader_info>
+	
+	<trader_info info="Hagen (Armor, Ammo, Weapons, Mods)" id="21" reset_interval="4" open_time="4:05" close_time="21:55">
+		<trader_items count="all">
+			<item group="groupAmmo"					count="10,15" prob="2"/>
+			<item group="groupMeleeAll"				count="4,8"/>
+			<item group="groupGunsAll"				count="4,8"/>
+			<item group="groupGunParts"				count="4,8"/>
+			<item group="groupArmorAll"				count="8,12" unique_only="true"/>
+			<item group="groupModsAll"				count="4,8"/>
+			<item group="groupModsArmor"			count="4,8"/></trader_items></trader_info>
+	
+	<trader_info info="Ryan (Resources, Seeds, Deco Blocks)" id="22" reset_interval="4" open_time="4:05" close_time="21:55">
+		<trader_items count="all">
+			<item group="groupResourcesGeneral"		count="15,25"/>
+			<item group="groupGeneral"				count="6,12"/>
+			<item group="groupResourcesBuilding"	count="6,12"/>
+			<item group="groupSeeds"				count="3,6"/>
+			<item group="groupFoodCanned"			count="4,8"/>
+			<item group="groupDeco"					count="4,10"/></trader_items></trader_info>
+
+	<trader_info info="Vending Machine (Player)" id="3" reset_interval="-1" override_buy_markup="1.0" override_sell_markup="1.0" allow_sell="false" player_owned="true"/>
+
+	<trader_info info="Vending Machine (Drinks)" id="4" reset_interval="1" override_buy_markup="3" allow_sell="false" >
+		<trader_items>
+			<item group="groupFoodCandy"			count="3,10"/>
+			<item group="groupFoodCanned"			count="3,10" prob=".3"/>
+			<item group="groupDrinks"				count="3,10" prob=".3"/>
+		</trader_items>
+	</trader_info>
+
+	<trader_info info="Vending Machine (Food, Candy)" id="10" reset_interval="1" override_buy_markup="3" allow_sell="false" >
+		<trader_items>
+			<item group="groupFoodCandy"			count="3,10"/>
+			<item group="groupFoodCanned"			count="3,10" prob=".3"/>
+			<item group="groupDrinks"				count="3,10" prob=".3"/>
+		</trader_items>
+	</trader_info>
+
+	<!-- -->
+	<trader_info name="Vending Machine (Rented)" id="5" reset_interval="-1" override_buy_markup="1.0" override_sell_markup="1.0" allow_sell="false" rentable="true" rent_cost="2500" rent_time="30"/>
+	
+	<!-- Copy of trader Joel, but can be used for testing other item lists in a play test session -->
+	<trader_info name="Testing" id="9" reset_interval="3" open_time="4:05" close_time="21:55">
+		<trader_items>
+			<item group="groupFoodCandy"			count="3,10"/>
+			<item group="groupFoodCanned"			count="3,10" prob=".3"/>
+			<item group="groupDrinks"				count="3,10" prob=".3"/>
+		</trader_items>
+	</trader_info>
+
+</set>
+	
+</Subquake>

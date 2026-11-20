@@ -1,0 +1,525 @@
+<Subquake>
+
+<append xpath="/buffs">
+
+
+<!-- S H A R E D -->
+
+<buff name="buffOnViewChange" icon="symbol_candle" icon_color="0,0,255" hidden="true">
+	<stack_type value="replace"/>
+	<duration value=".02"/>
+	<effect_group name="UpdateFlashlights">
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$ulmBuffFlashlightInitialized" operation="set" value="0"/>
+	</effect_group>
+	<effect_group name="Update Vision Gear">
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffHeadlight_Update"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffCandlelight_Update"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffMinerLight_Update"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffNightVision_Update"/>
+	</effect_group></buff>
+
+<buff name="buffOnEquipmentChange" icon="symbol_candle" icon_color="0,0,255" hidden="true">
+	<stack_type value="replace"/>
+	<duration value=".02"/>
+	<!--
+		1 - Head
+		2 - Outfit
+		3 - Hands
+		4 - Boots
+		5 - Headlight
+		6 - Backpack
+		7 - Belt
+		8 - Accessory
+		9 - Eyes
+		10 - Face (Mask)
+	-->
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="_EquipmentSlotChanged"/>
+	<!--<triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="=========================== E Q U I P M E N T   C H A N G E"/>-->
+	</effect_group>
+	<effect_group name="Update Vision Gear when Helmet Changes">
+		<requirement name="CVarCompare" cvar="_EquipmentSlotChanged" operation="Equals" value="1"/><!-- Helmet -->
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffHeadlight_Main"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffCandlelight_Main"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffMinerLight_Main"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffNightVision_Main"/>
+	</effect_group>
+	<effect_group name="Update Vision Gear">
+		<requirements compare_type="or">
+			<requirement name="CVarCompare" cvar="_EquipmentSlotChanged" operation="Equals" value="1"/><!-- Helmet -->
+			<requirement name="CVarCompare" cvar="_EquipmentSlotChanged" operation="Equals" value="5"/><!-- Vision -->
+		</requirements>
+		<triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="=========================== Update Vision Gear"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffCandlelight_Update"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffHeadlight_Update"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffMinerLight_Update"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffNightVision_Update"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveCVar" cvar="_EquipmentSlotChanged"/>
+	</effect_group></buff>
+
+<!-- M I N E R   H E L M E T -->
+
+<buff name="buffMinerLight_Update" icon_color="0,0,255" hidden="true">
+	<stack_type value="replace"/>
+	<duration value=".02"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive,UndeadLegacy" parent="Head" transform="minerlight" active="false"/>
+	</effect_group>
+	<effect_group name="Valid Item">
+		<requirement name="EquipmentHasTags,UndeadLegacy" slot="Head" tags="minerhelmet"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffMinerLight_SelectView"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffMinerLight_Main"/>
+	</effect_group>
+	<effect_group name="Invalid Item">
+		<requirement name="!EquipmentHasTags,UndeadLegacy" slot="Head" tags="minerhelmet"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemovePart" buff="buffMinerLight_Main"/>
+	</effect_group></buff>
+
+<buff name="buffMinerLight_SelectView" icon_color="0,0,255" hidden="true">
+	<stack_type value="replace"/>
+	<duration value=".01"/>
+	<effect_group name="First Person View">
+		<requirement name="IsFPV"/>
+		<requirement name="EquipmentHasName,UndeadLegacy" slot="Head" id="armorMinerHelmet"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddPartFPV" part="CameraLight" prefab="#Mods/UndeadLegacy/Resources/Subquake_Items.ulm?Subquake_MiningHelmetLight_FPV" parentTransform="CameraNode" localPos="0,0.1,0" localRot="-90,180,0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="CameraLight" active="false"><requirement name="!HasBuff" buff="buffMinerLight_Active"/></triggered_effect>
+		<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="CameraLight" active="true"><requirement name="HasBuff" buff="buffMinerLight_Active"/></triggered_effect>
+	</effect_group>
+	<effect_group name="Third Person View With Attachments">
+		<requirement name="!IsFPV"/>
+		<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive,UndeadLegacy" parent="Head" transform="minerlight" active="false">
+			<requirement name="!HasBuff" buff="buffMinerLight_Active"/></triggered_effect>
+		<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive,UndeadLegacy" parent="Head" transform="minerlight" active="true">
+			<requirement name="HasBuff" buff="buffMinerLight_Active"/></triggered_effect>
+	</effect_group></buff>
+
+<buff name="buffMinerLight_Main" icon_color="0,255,0" hidden="true">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<update_rate value=".2"/>
+	<effect_group name="OnRemove - Cleanup">
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePart" part="CameraLight"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive,UndeadLegacy" parent="Head" transform="minerlight" active="false"/>
+	<!--<triggered_effect trigger="onSelfBuffRemove" action="SetPartActive" part="CameraLight" active="false"/>-->
+	</effect_group>
+	</buff>
+
+<buff name="buffMinerLight_Start" hidden="true">
+	<stack_type value="effect"/>
+	<duration value=".1"/>
+	<effect_group name="Check if have enough charges">
+		<requirement name="ULM_Compare,UndeadLegacy" meta_key="ChargesUsed" operation="LT" passive_effect="ChargesMax" target="self" slot="Head" tags="hasCharges"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffMinerLight_Start2"/>
+	</effect_group>
+	<effect_group name="Don't have charges">
+		<requirement name="ULM_Compare,UndeadLegacy" meta_key="ChargesUsed" operation="GTE" passive_effect="ChargesMax" target="self" slot="Head" tags="hasCharges"/>
+		<triggered_effect trigger="onSelfBuffFinish" silent_on_equip="true" action="PlaySound" target="self" sound="ulmErrorSmall" play_in_head="false"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="ULM_SetItemActive,UndeadLegacy" slot="Head" active="false"/>
+	</effect_group></buff>
+
+<buff name="buffMinerLight_Start2" hidden="true">
+	<stack_type value="effect"/>
+	<duration value=".1"/>
+	<effect_group name="First Person View">
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="CameraLight" active="@.IsFPV"/>
+	</effect_group>
+	<effect_group name="Third Person View with Attachments on Helmet">
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="minerlight" active="@!.IsFPV"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffFinish" silent_on_equip="true" action="PlaySound" target="self" sound="flashlight_toggle" play_in_head="false"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffMinerLight_Active"/>
+	</effect_group></buff>
+
+<buff name="buffMinerLight_Stop" hidden="true">
+	<stack_type value="effect"/>
+	<duration value=".1"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffFinish" silent_on_equip="true" action="PlaySound" target="self" sound="flashlight_toggle" play_in_head="false">
+			<requirement name="HasBuff" buff="buffMinerLight_Active"/></triggered_effect>
+		<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffMinerLight_Active"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="CameraLight" active="false"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="minerlight" active="false"/>
+	</effect_group></buff>
+
+<buff name="buffMinerLight_Active" name_key="ulmBuffHelmetLightActive" icon="symbol_mining_helmet" icon_color="255,255,255">
+	<stack_type value="effect"/>
+	<duration value="0"/>
+	<display_value value="ulmBatteryHelmetLight"/>
+	<display_value_key value="{0:0}%"/>
+	<effect_group>
+		<!-- 100 = 100%, duration = 30 min, ticks every 10 seconds = 180 ticks; 0.556 per tick to be subtracted -->
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$ulmBatteryHelmetLightTick" operation="set" value="0.556"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$ulmBatteryHelmetLightEfficiency" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$ulmBatteryHelmetLightTick" operation="multiply" value="@$ulmBatteryHelmetLightEfficiency"/>
+		
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="ulmBatteryHelmetLight" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ULM_Modify,UndeadLegacy" meta_key="ChargesUsed" tags="hasCharges" slot="Head" operation="add" value="@$ulmBatteryHelmetLightTick" cvar_out="ulmBatteryHelmetLightInternal"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ULM_Modify,UndeadLegacy" cvar="ulmBatteryHelmetLightInternal" operation="divide" value="ChargesMax" value_type="PassiveEffect"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="ulmBatteryHelmetLight" operation="subtract" value="@ulmBatteryHelmetLightInternal"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="ulmBatteryHelmetLight" operation="multiply" value="100"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffMinerLight_Stop">
+			<requirement name="ULM_Compare,UndeadLegacy" meta_key="ChargesUsed" operation="GT" tags="hasCharges" target="self" slot="Head" passive_effect="ChargesMax"/>
+		</triggered_effect>
+
+	</effect_group></buff>
+
+<!-- H E A D L I G H T -->
+
+<buff name="buffHeadlight_Update" icon_color="0,0,255" hidden="true">
+	<stack_type value="replace"/>
+	<duration value=".01"/>
+	<effect_group name="OnStart">
+		<requirement name="IsFPV"/>
+		<!--<triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="=========================== UPDATE = HEADLIGHT [A] Is FPV"/>-->
+		<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive,UndeadLegacy" parent="Head" transform="headlight/lightSource" active="false"/>
+		<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive,UndeadLegacy" parent="Head" transform="headlight" active="false"/>
+		<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="LightMesh" active="false"/>
+	</effect_group>
+	<effect_group name="OnStart">
+		<requirement name="!IsFPV"/>
+		<requirement name="!EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<!--<triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="=========================== UPDATE = HEADLIGHT [B] Not FPV, No Tags"/>-->
+		<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="LightMesh" active="true"/>
+	</effect_group>
+	<effect_group name="Valid Item">
+		<requirement name="EquipmentHasTags,UndeadLegacy" slot="BiomeBadge" tags="headlight"/>
+		<!--<triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="=========================== UPDATE = HEADLIGHT Valid Item"/>-->
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffHeadlight_SelectView"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffHeadlight_Main"/>
+	</effect_group>
+	<effect_group name="Invalid Item">
+		<requirement name="!EquipmentHasTags,UndeadLegacy" slot="BiomeBadge" tags="headlight"/>
+		<!--<triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="=========================== UPDATE = HEADLIGHT Invalid Item"/>-->
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffHeadlight_Main"/>
+	</effect_group></buff>
+
+<buff name="buffHeadlight_SelectView" icon_color="0,0,255" hidden="true">
+	<stack_type value="replace"/>
+	<duration value=".02"/>
+	<effect_group name="First Person View">
+		<requirement name="IsFPV"/>
+		<requirement name="EquipmentHasName,UndeadLegacy" slot="BiomeBadge" id="ulmArmorHelmetLight"/>
+		<!--<triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="=========================== SELECT VIEW = HEADLIGHT (FPV)"/>-->
+		<triggered_effect trigger="onSelfBuffFinish" action="AddPartFPV" part="CameraLight" prefab="#Mods/UndeadLegacy/Resources/Subquake_Items.ulm?Subquake_MiningHelmetLight_FPV" parentTransform="CameraNode" localPos="0,0.1,0" localRot="-90,180,0"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="CameraLight" active="false"><requirement name="!HasBuff" buff="buffHeadlight_Active"/></triggered_effect>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="CameraLight" active="true"><requirement name="HasBuff" buff="buffHeadlight_Active"/></triggered_effect>
+	</effect_group>
+	<effect_group name="Third Person View Default">
+		<requirement name="!IsFPV"/>
+		<requirement name="!EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<requirement name="EquipmentHasName,UndeadLegacy" slot="BiomeBadge" id="ulmArmorHelmetLight"/>
+		<!--<triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="=========================== SELECT VIEW = HEADLIGHT (TPV - DEFAULT)"/>-->
+		<triggered_effect trigger="onSelfBuffFinish" action="AddPartTPV" part="LightMesh" prefab="#Mods/UndeadLegacy/Resources/Subquake_Items.ulm?HelmetLight2Mesh_Subquake"  parentTransform="Spotlight" localPos="0, 0.028, 0.015" localRot="0,0,0"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="AddPartTPV" part="LightSource" prefab="#Mods/UndeadLegacy/Resources/Subquake_Items.ulm?HelmetLight2Light_Subquake" parentTransform="Spotlight" localPos="0, 0.028, 0.015" localRot="0,0,0"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="LightSource" active="false"><requirement name="!HasBuff" buff="buffHeadlight_Active"/></triggered_effect>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="LightSource" active="true"><requirement name="HasBuff" buff="buffHeadlight_Active"/></triggered_effect>
+	</effect_group>
+	<effect_group name="Third Person View With Attachments">
+		<requirement name="!IsFPV"/>
+		<requirement name="EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<requirement name="EquipmentHasName,UndeadLegacy" slot="BiomeBadge" id="ulmArmorHelmetLight"/>
+		<!--<triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="=========================== SELECT VIEW = HEADLIGHT (TPV - MODEL INCLUDED ON HELMET)"/>-->
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="headlight" active="true"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="headlight/lightSource" active="false">
+			<requirement name="!HasBuff" buff="buffHeadlight_Active"/></triggered_effect>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="headlight/lightSource" active="true">
+			<requirement name="HasBuff" buff="buffHeadlight_Active"/></triggered_effect>
+	</effect_group></buff>
+
+<buff name="buffHeadlight_Main" icon_color="0,255,0" hidden="true">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<update_rate value=".2"/>
+	<effect_group name="General">
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePreview,UndeadLegacy" part="DefaultHeadlight"/>
+	</effect_group>
+	<effect_group name="OnUpdate">
+		<requirement name="EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="SetActiveInPreview,UndeadLegacy" parent="Head" transform="headlight" active="false"/>
+	</effect_group>
+	<effect_group name="OnUpdate">
+		<requirement name="CVarCompare" cvar=".IsPreviewVision" operation="Equals" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffHeadlight_Preview"/>
+	</effect_group>
+	<effect_group name="OnRemove - Cleanup">
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePart" part="CameraLight"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePart" part="LightMesh"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePart" part="LightSource"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="SetPartActive" part="LightMesh" active="false"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive,UndeadLegacy" parent="Head" transform="headlight/lightSource" active="false"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive,UndeadLegacy" parent="Head" transform="headlight" active="false"/>
+	</effect_group>
+	</buff>
+
+<buff name="buffHeadlight_Preview" hidden="true">
+	<stack_type value="effect"/>
+	<duration value=".01"/>
+	<effect_group>
+		<requirement name="EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfBuffStart" action="SetActiveInPreview,UndeadLegacy" parent="Head" transform="headlight" active="true"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemovePreview,UndeadLegacy" part="DefaultHeadlight"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="!EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddPreview,UndeadLegacy" part="DefaultHeadlight" prefab="#Mods/UndeadLegacy/Resources/Subquake_Items.ulm?HelmetLight2Mesh_Subquake" parentTransform="Spotlight" localPos="0, 0.028, 0.015" localRot="0,0,0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="SetActiveInPreview,UndeadLegacy" parent="Head" transform="headlight" active="false"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveCVar" cvar=".IsPreviewVision"/>
+	</effect_group></buff>
+
+<buff name="buffHeadlight_Start" hidden="true">
+	<stack_type value="effect"/>
+	<duration value=".01"/>
+	<effect_group name="Check if have enough charges">
+		<requirement name="ULM_Compare,UndeadLegacy" meta_key="ChargesUsed" operation="LT" passive_effect="ChargesMax" target="self" slot="BiomeBadge" tags="hasCharges"/>
+	<!--<triggered_effect trigger="onSelfBuffFinish" action="LogMessage" message="=========================== buffHeadlight_Start"/>-->
+		<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffHeadlight_Start2"/>
+	</effect_group>
+	<effect_group name="Don't have charges">
+		<requirement name="ULM_Compare,UndeadLegacy" meta_key="ChargesUsed" operation="GTE" passive_effect="ChargesMax" target="self" slot="BiomeBadge" tags="hasCharges"/>
+		<triggered_effect trigger="onSelfBuffFinish" silent_on_equip="true" action="PlaySound" target="self" sound="ulmErrorSmall" play_in_head="false"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="ULM_SetItemActive,UndeadLegacy" slot="BiomeBadge" active="false"/>
+	</effect_group></buff>
+
+<buff name="buffHeadlight_Start2" hidden="true">
+	<stack_type value="effect"/>
+	<duration value=".01"/>
+	<effect_group>
+	<!--<triggered_effect trigger="onSelfBuffFinish" action="LogMessage" message="=========================== buffHeadlight_Start2"/>-->
+	</effect_group>
+	<effect_group name="First Person View">
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="CameraLight" active="@.IsFPV"/>
+	</effect_group>
+	<effect_group name="Third Person View with Attachments on Helmet">
+		<requirement name="EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="headlight" active="@!.IsFPV"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="headlight/lightSource" active="@!.IsFPV"/>
+	</effect_group>
+	<effect_group name="Third Person View without Attachments on Helmet">
+		<requirement name="!EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="LightSource" active="@!.IsFPV"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffFinish" silent_on_equip="true" action="PlaySound" target="self" sound="flashlight_toggle" play_in_head="false"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffHeadlight_Active"/>
+	</effect_group></buff>
+
+<buff name="buffHeadlight_Stop" hidden="true">
+	<stack_type value="effect"/>
+	<duration value=".01"/>
+	<effect_group>
+		<!--<triggered_effect trigger="onSelfBuffFinish" action="LogMessage" message="=========================== buffHeadlight_Stop"/>-->
+		<triggered_effect trigger="onSelfBuffFinish" silent_on_equip="true" action="PlaySound" target="self" sound="flashlight_toggle" play_in_head="false">
+			<requirement name="HasBuff" buff="buffHeadlight_Active"/></triggered_effect>
+		<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffHeadlight_Active"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="CameraLight" active="false"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="LightSource" active="false"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="headlight/lightSource" active="false">
+			<requirement name="EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		</triggered_effect>
+	</effect_group></buff>
+
+<buff name="buffHeadlight_Active" name_key="ulmBuffHelmetLightActive" icon="symbol_mining_helmet" icon_color="255,255,255">
+	<stack_type value="effect"/>
+	<duration value="0"/>
+	<display_value value="ulmBatteryHelmetLight"/>
+	<display_value_key value="{0:0}%"/>
+	<effect_group>
+		<!--<triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="=========================== buffHeadlight_Active"/> -->
+		<!-- 100 = 100%, duration = 30 min, ticks every 10 seconds = 180 ticks; 0.556 per tick to be subtracted -->
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$ulmBatteryHelmetLightTick" operation="set" value="0.556"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$ulmBatteryHelmetLightEfficiency" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$ulmBatteryHelmetLightTick" operation="multiply" value="@$ulmBatteryHelmetLightEfficiency"/>
+		
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="ulmBatteryHelmetLight" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ULM_Modify,UndeadLegacy" meta_key="ChargesUsed" tags="hasCharges" slot="BiomeBadge" operation="add" value="@$ulmBatteryHelmetLightTick" cvar_out="ulmBatteryHelmetLightInternal"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ULM_Modify,UndeadLegacy" cvar="ulmBatteryHelmetLightInternal" operation="divide" value="ChargesMax" value_type="PassiveEffect"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="ulmBatteryHelmetLight" operation="subtract" value="@ulmBatteryHelmetLightInternal"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="ulmBatteryHelmetLight" operation="multiply" value="100"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffHeadlight_Stop">
+			<requirement name="ULM_Compare,UndeadLegacy" meta_key="ChargesUsed" operation="GT" tags="hasCharges" target="self" slot="BiomeBadge" passive_effect="ChargesMax"/>
+		</triggered_effect>
+
+	</effect_group></buff>
+
+<!-- N I G H T   V I S I O N   G O G G L E S -->
+
+<buff name="buffNightvision_Update" icon="symbol_night_vision" icon_color="0,0,255" hidden="true">
+	<stack_type value="replace"/>
+	<duration value=".02"/>
+	<effect_group name="OnStart">
+		<requirement name="IsFPV"/>
+		<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive,UndeadLegacy" parent="Head" transform="nightvision/lightSource" active="false"/>
+		<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive,UndeadLegacy" parent="Head" transform="nightvision" active="false"/>
+	<!--<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="NightVisionMesh" active="false"/>-->
+	</effect_group>
+	<effect_group name="OnStart">
+		<requirement name="!IsFPV"/>
+		<requirement name="!EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="NightVisionMesh" active="true"/>
+	</effect_group>
+	<effect_group name="Valid Item">
+		<requirement name="EquipmentHasTags,UndeadLegacy" slot="BiomeBadge" tags="nightvision"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffNightvision_SelectView"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffNightvision_Main"/>
+	</effect_group>
+	<effect_group name="Invalid Item">
+		<requirement name="!EquipmentHasTags,UndeadLegacy" slot="BiomeBadge" tags="nightvision"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffNightvision_Main"/>
+	</effect_group></buff>
+
+<buff name="buffNightvision_SelectView" icon="symbol_night_vision" icon_color="0,0,255" hidden="true">
+	<stack_type value="replace"/>
+	<duration value=".02"/>
+	<effect_group name="Third Person View Default">
+		<requirement name="!IsFPV"/>
+		<requirement name="!EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<requirement name="EquipmentHasName,UndeadLegacy" slot="BiomeBadge" id="ulmArmorNightVision"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="AddPartTPV" part="NightVisionMesh" prefab="#Mods/UndeadLegacy/Resources/Subquake_Items.ulm?NVGMesh_Subquake_TPV"  parentTransform="Spotlight" localPos="0,0,0" localRot="0,0,0"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="AddPartTPV" part="LightSource" prefab="#Mods/UndeadLegacy/Resources/Subquake_Items.ulm?NVGLight_Subquake_TPV" parentTransform="Spotlight" localPos="0,0,0" localRot="0,0,0"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="LightSource" active="false"><requirement name="!HasBuff" buff="buffNightvision_Active"/></triggered_effect>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="LightSource" active="true"><requirement name="HasBuff" buff="buffNightvision_Active"/></triggered_effect>
+	</effect_group>
+	<effect_group name="Third Person View With Attachments">
+		<requirement name="!IsFPV"/>
+		<requirement name="EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<requirement name="EquipmentHasName,UndeadLegacy" slot="BiomeBadge" id="ulmArmorNightVision"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="nightvision" active="true"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="nightvision/lightSource" active="false">
+			<requirement name="!HasBuff" buff="buffNightvision_Active"/></triggered_effect>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="nightvision/lightSource" active="true">
+			<requirement name="HasBuff" buff="buffNightvision_Active"/></triggered_effect>
+	</effect_group>
+	<effect_group>
+		<requirement name="HasBuff" buff="buffNightvision_Active"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="HeadLightTPV" active="@!.IsFPV"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="HeadLightFPV" active="@.IsFPV"/>
+	</effect_group></buff>
+
+<buff name="buffNightvision_Main" icon="symbol_night_vision" icon_color="0,255,0" hidden="true">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<update_rate value=".2"/>
+	<effect_group name="General">
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePreview,UndeadLegacy" part="DefaultNightvision"/>
+	</effect_group>
+	<effect_group name="OnUpdate">
+		<requirement name="EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="SetActiveInPreview,UndeadLegacy" parent="Head" transform="nightvision" active="false"/>
+	</effect_group>
+	<effect_group name="OnUpdate">
+		<requirement name="CVarCompare" cvar=".IsPreviewVision" operation="Equals" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffNightvision_Preview"/>
+	</effect_group>
+	<effect_group name="OnRemove - Cleanup">
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePart" part="CameraLight"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePart" part="NightVisionMesh"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePart" part="LightSource"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="SetPartActive" part="NightVisionMesh" active="false"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive,UndeadLegacy" parent="Head" transform="nightvision/lightSource" active="false"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive,UndeadLegacy" parent="Head" transform="nightvision" active="false"/>
+	</effect_group></buff>
+
+<buff name="buffNightvision_Preview" hidden="true">
+	<stack_type value="effect"/>
+	<duration value=".02"/>
+	<effect_group>
+		<requirement name="EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfBuffStart" action="SetActiveInPreview,UndeadLegacy" parent="Head" transform="nightvision" active="true"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemovePreview,UndeadLegacy" part="DefaultNightvision"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="!EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddPreview,UndeadLegacy" part="DefaultNightvision" prefab="#Mods/UndeadLegacy/Resources/Subquake_Items.ulm?NVGMesh_Subquake_TPV" parentTransform="Spotlight" localPos="0,0,0" localRot="0,0,0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="SetActiveInPreview,UndeadLegacy" parent="Head" transform="nightvision" active="false"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveCVar" cvar=".IsPreviewVision"/>
+	</effect_group></buff>
+	
+<buff name="buffNightvision_Start" hidden="true">
+	<stack_type value="effect"/>
+	<duration value=".1"/>
+	<effect_group name="Check if have enough charges">
+		<requirement name="ULM_Compare,UndeadLegacy" meta_key="ChargesUsed" operation="LT" passive_effect="ChargesMax" target="self" slot="BiomeBadge" tags="hasCharges"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffNightvision_Start2"/>
+	</effect_group>
+	<effect_group name="Check if have enough charges">
+		<requirement name="ULM_Compare,UndeadLegacy" meta_key="ChargesUsed" operation="GTE" passive_effect="ChargesMax" target="self" slot="BiomeBadge" tags="hasCharges"/>
+		<triggered_effect trigger="onSelfBuffFinish" silent_on_equip="true" action="PlaySound" target="self" sound="ulmErrorSmall" play_in_head="false"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="ULM_SetItemActive,UndeadLegacy" slot="BiomeBadge" active="false"/>
+	</effect_group></buff>
+
+<buff name="buffNightvision_Start2" hidden="true">
+	<stack_type value="effect"/>
+	<duration value=".1"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="HeadLightTPV" active="@!.IsFPV"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="HeadLightFPV" active="@.IsFPV"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="ModifyScreenEffect" effect_name="NightVision" intensity="1" fade="0">
+			<requirement name="IsLocalPlayer"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="CameraLight" active="@.IsFPV"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="LightSource" active="@!.IsFPV">
+			<requirement name="!EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="nightvision/lightSource" active="@!.IsFPV">
+			<requirement name="EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffFinish" silent_on_equip="true" action="PlaySound" target="self" sound="flashlight_toggle" play_in_head="false"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffNightvision_Active"/>
+	</effect_group></buff>
+
+<buff name="buffNightvision_Stop" hidden="true">
+	<stack_type value="effect"/>
+	<duration value=".1"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffFinish" silent_on_equip="true" action="PlaySound" target="self" sound="flashlight_toggle" play_in_head="false">
+			<requirement name="HasBuff" buff="buffHeadlight_Active"/></triggered_effect>
+		<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffNightvision_Active"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="HeadLightTPV" active="false"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="HeadLightFPV" active="false"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="ModifyScreenEffect" effect_name="NightVision" intensity="0" fade="0">
+			<requirement name="IsLocalPlayer"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="CameraLight" active="false"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetPartActive" part="LightSource" active="false"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive,UndeadLegacy" parent="Head" transform="nightvision/lightSource" active="false">
+			<requirement name="EquipmentHasTags,UndeadLegacy" slot="Head" tags="attachmentsIncluded"/>
+		</triggered_effect>
+	</effect_group></buff>
+
+<buff name="buffNightvision_Active" name_key="ulmBuffNightvisionActive" icon="symbol_night_vision" icon_color="255,255,255">
+	<stack_type value="effect"/>
+	<duration value="0"/>
+	<display_value value="ulmBatteryHelmetLight"/>
+	<display_value_key value="{0:0}%"/>
+	<effect_group name="General">
+		<!-- 100 = 100%, duration = 30 min, ticks every 10 seconds = 180 ticks; 0.556 per tick to be subtracted -->
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$ulmBatteryHelmetLightTick" operation="set" value="0.556"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$ulmBatteryHelmetLightEfficiency" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$ulmBatteryHelmetLightTick" operation="multiply" value="@$ulmBatteryHelmetLightEfficiency"/>
+
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="ulmBatteryHelmetLight" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ULM_Modify,UndeadLegacy" meta_key="ChargesUsed" tags="hasCharges" slot="BiomeBadge" operation="add" value="@$ulmBatteryHelmetLightTick" cvar_out="ulmBatteryHelmetLightInternal"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ULM_Modify,UndeadLegacy" cvar="ulmBatteryHelmetLightInternal" operation="divide" value="ChargesMax" value_type="PassiveEffect"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="ulmBatteryHelmetLight" operation="subtract" value="@ulmBatteryHelmetLightInternal"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="ulmBatteryHelmetLight" operation="multiply" value="100"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffNightvision_Stop">
+			<requirement name="ULM_Compare,UndeadLegacy" meta_key="ChargesUsed" operation="GT" tags="hasCharges" target="self" slot="BiomeBadge" passive_effect="ChargesMax"/>
+		</triggered_effect>
+	</effect_group></buff>
+
+</append>
+
+<!--
+<set xpath="/buffs/buff[
+	@name='buffNightvision_SelectView'
+ or @name='buffNightvision_Start2']//triggered_effect[@transform='nightvision/lightSource']/@active">false</set>
+ -->
+
+</Subquake>

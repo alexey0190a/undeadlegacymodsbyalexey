@@ -1,0 +1,1214 @@
+<Subquake>
+	
+<!-- 
+
+Zombie Walk Types: 
+-1 Swim
+ 1 Fat, Moe, FemaleFat, FatHawaiian, FatCop
+ 2 Boe, LumberJack, Soldier, WightFeral, Mutated
+ 3 Arlene, Darlene, Screamer
+ 5 Marlene, Janitor
+ 4 Crawler, SteveCrawler
+ 5 Cripple, Joe, Yo
+ 6 Steve, Tom Clark, Utility Worker
+ 7 Default, Nurse, Business Man, Burnt, Lab, Biker, Hazmat, Snake, Trader
+ 8 Spider
+
+-->
+    
+<set xpath="//entity_class[@name='playerMale']//passive_effect[@name='CarryCapacity']/@value">300</set>
+<set xpath="//entity_class[@name='playerMale']//passive_effect[@name='BagSize']/@value">300</set>
+
+<set xpath="//entity_class[@name='zombieTemplateMale']/property[@name='AITask']/@value">
+	ULM_BreakBlock,UndeadLegacy|
+	DestroyArea|
+	Territorial|
+	ApproachDistraction|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	ApproachSpot|
+	Look|
+	Wander|</set>
+
+<set xpath="//entity_class[@name='zombieRancher']/property[@name='AITask']/@value">
+	ULM_BreakBlock,UndeadLegacy|
+	ApproachDistraction|
+	RangedAttackTarget itemType=1;cooldown=6;duration=7;minRange=4;maxRange=27|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachSpot|
+	Look|
+	Wander exePer=1;fade=.4;lookMin=.2;lookMax=.5|</set>
+
+<set xpath="//entity_class[@name='zombieChuck']/property[@name='AITask']/@value">
+	ULM_BreakBlock,UndeadLegacy|
+	ApproachDistraction|
+	RangedAttackTarget startAnimType=2;itemType=1;cooldown=4;duration=5;minRange=5;maxRange=40;sndStart=frostclawwarning;sndRelease=frostclawrelease|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachSpot|
+	Look|
+	Wander|</set>
+
+<set xpath="//entity_class[@name='zombieSpider']/property[@name='AITask']/@value">
+	Leap|
+	ULM_BreakBlock,UndeadLegacy|
+	DestroyArea|
+	Territorial|
+	ApproachDistraction|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachSpot|
+	Look|
+	Wander|</set>
+
+<set xpath="//entity_class[@name='zombieFatCop']/property[@name='AITask']/@value">
+	ULM_BreakBlock,UndeadLegacy|
+	ApproachDistraction|
+	RangedAttackTarget itemType=1;cooldown=4;duration=5|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachSpot|
+	Look|
+	Wander|</set>
+
+<set xpath="//entity_class[@name='zombieMutated']/property[@name='AITask']/@value">
+	ULM_BreakBlock,UndeadLegacy|
+	ApproachDistraction|
+	RangedAttackTarget itemType=1;cooldown=4;duration=3;minRange=1;maxRange=6;unreachableRange=18|
+	DestroyArea|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachSpot|
+	Look|
+	Wander|</set>
+
+<set xpath="//entity_class[@name='zombieDemolition']/property[@name='AITask']/@value">
+	ULM_BreakBlock,UndeadLegacy|
+	DestroyArea|
+	ApproachDistraction|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachSpot|
+	Look|
+	Wander|</set>
+
+<set xpath="//entity_class[@name='animalDireWolf'		]/property[@name='AITask']/@value">
+	ULM_BreakBlock,UndeadLegacy|
+	DestroyArea|
+	Territorial|
+	ApproachDistraction|
+	ApproachAndAttackTarget class=EntityPlayer,25,EntityBandit,20,EntityAnimalStag,30|
+	ApproachSpot|
+	Look|
+	Wander|</set>
+
+<set xpath="//entity_class[@name='animalTemplateHostile']/property[@name='AITask-1']/@value">ULM_BreakBlock,UndeadLegacy</set>
+
+<set xpath="//entity_class[@name='animalBear'			]/property[@name='AITask']/@value">
+	ULM_BreakBlock,UndeadLegacy|
+	DestroyArea|
+	Territorial|
+	ApproachAndAttackTarget class=EntityPlayer,25,EntityBandit,25,EntityAnimalStag,40,EntityZombie,30|
+	ApproachSpot|
+	Look|
+	Wander|</set>
+
+<set xpath="//entity_class[@name='animalZombieBear'		]/property[@name='AITask']/@value">
+	ULM_BreakBlock,UndeadLegacy|
+	DestroyArea|
+	Territorial|
+	ApproachDistraction|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityAnimalStag,40|
+	ApproachSpot|
+	Look|
+	Wander|
+</set>
+
+<set xpath="//entity_class[@name='animalWolf'			]/property[@name='AITask-1']/@value">ULM_BreakBlock,UndeadLegacy</set>
+<set xpath="//entity_class[@name='animalChickenHostile'	]/property[@name='AITask-1']/@value">ULM_BreakBlock,UndeadLegacy</set>
+<set xpath="//entity_class[@name='animalCoyote'			]/property[@name='AITask-1']/@value">ULM_BreakBlock,UndeadLegacy</set>
+<set xpath="//entity_class[@name='animalZombieDog'		]/property[@name='AITask-1']/@value">ULM_BreakBlock,UndeadLegacy</set>
+<set xpath="//entity_class[@name='animalSnake'			]/property[@name='AITask-1']/@value">ULM_BreakBlock,UndeadLegacy</set>
+<set xpath="//entity_class[@name='animalBossGrace'		]/property[@name='AITask-1']/@value">ULM_BreakBlock,UndeadLegacy</set>
+<set xpath="//entity_class[@name='animalMountainLion'	]/property[@name='AITask-2']/@value">ULM_BreakBlock,UndeadLegacy</set>
+
+<set xpath="//entity_class[@name='animalStag'			]/drop[@name='resourceLeather']/@name">ulmResourceHide</set>
+<set xpath="//entity_class[@name='animalDoe'			]/drop[@name='resourceLeather']/@name">ulmResourceHide</set>
+<set xpath="//entity_class[@name='animalRabbit'			]/drop[@name='resourceLeather']/@name">ulmResourceHide</set>
+<set xpath="//entity_class[@name='animalBear'			]/drop[@name='resourceLeather']/@name">ulmResourceHide</set>
+<set xpath="//entity_class[@name='animalBearSmall'		]/drop[@name='resourceLeather']/@name">ulmResourceHide</set>
+<set xpath="//entity_class[@name='animalZombieBear'		]/drop[@name='resourceLeather']/@name">ulmResourceHide</set>
+<set xpath="//entity_class[@name='animalWolf'			]/drop[@name='resourceLeather']/@name">ulmResourceHide</set>
+<set xpath="//entity_class[@name='animalDireWolf'		]/drop[@name='resourceLeather']/@name">ulmResourceHide</set>
+<set xpath="//entity_class[@name='animalCoyote'			]/drop[@name='resourceLeather']/@name">ulmResourceHide</set>
+<set xpath="//entity_class[@name='animalMountainLion'	]/drop[@name='resourceLeather']/@name">ulmResourceHide</set>
+<set xpath="//entity_class[@name='animalZombieDog'		]/drop[@name='resourceLeather']/@name">ulmResourceHide</set>
+<set xpath="//entity_class[@name='animalSnake'			]/drop[@name='resourceLeather']/@name">ulmResourceHide</set>
+<set xpath="//entity_class[@name='animalBoar'			]/drop[@name='resourceLeather']/@name">ulmResourceHide</set>
+<set xpath="//entity_class[@name='animalBossGrace'		]/drop[@name='resourceLeather']/@name">ulmResourceHide</set>
+
+<append xpath="//entity_class[@name='playerMale']/effect_group">
+	<passive_effect operation="base_set" name="StatWeightMax" value="100"/>
+	<passive_effect operation="base_set" name="StatWaterRate" value="0.01"/>
+	<passive_effect operation="base_set" name="StatFoodRate" value="0.01"/>
+	<passive_effect operation="base_set" name="StatFoodMax" value="100"/>
+	<passive_effect operation="base_set" name="StatFatMax" value="100"/>
+	<passive_effect operation="base_set" name="StatCarbsMax" value="100"/>
+	<passive_effect operation="base_set" name="StatProteinMax" value="100"/>
+	<passive_effect operation="base_set" name="StatVitaminsMax" value="100"/>
+	<passive_effect operation="base_set" name="StatAlcoholMax" value="100"/>
+	<passive_effect operation="base_set" name="StatWellnessMax" value="100"/>
+	<passive_effect operation="base_set" name="StatWellnessRate" value=".002"/>
+	<passive_effect operation="base_set" name="StatShieldMax" value="0"/>
+	<passive_effect operation="base_set" name="StatEnergyMax" value="0"/>
+	<passive_effect operation="base_set" name="StatOxygenMax" value="60"/>
+	<passive_effect operation="base_set" name="StatWaterMax" value="100"/>
+	<passive_effect operation="base_set" name="CraftingBroadcastRange" value="10.5"/>
+
+	<passive_effect operation="base_set" name="ResistCold" value="0"/>
+	<passive_effect operation="base_set" name="ResistDiseases" value="0"/>
+	<passive_effect operation="base_set" name="ResistElectric" value="0"/>
+	<passive_effect operation="base_set" name="ResistFallDamage" value="0"/>
+	<passive_effect operation="base_set" name="ResistHeat" value="0"/>
+	<passive_effect operation="base_set" name="ResistInfection" value="0"/>
+	<passive_effect operation="base_set" name="ResistPhysical" value="0"/>
+	<passive_effect operation="base_set" name="ResistRadiation" value="0"/>
+	<passive_effect operation="base_set" name="ResistToxic" value="0"/>
+    <!--<passive_effect operation="base_set" name="CraftingTier" value="0" tags="craftingTier0"/>-->
+	<passive_effect operation="base_set" name="LockPickTier" value="0"/>
+	<passive_effect operation="base_set" name="StaminaLoss" value="15" tags="doubleJump"/>
+	<passive_effect operation="base_set" name="HarvestChance" value="1" tags="cropHarvest,wildCropsHarvest"/>
+
+	<!-- Referenced in H_Crosshair.cs
+	<triggered_effect trigger="onSelfSecondaryActionStart" action="ModifyCVar" cvar=".secondaryActionActive" operation="set" value="1"/>
+	<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" cvar=".secondaryActionActive" operation="set" value="0"/>
+	-->
+	<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="ulmBuffTargetHit">
+		<requirement name="ItemHasTags" tags="ranged"/>
+	</triggered_effect>
+	<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$bonusSkillPointsMax" operation="set" value="50"/>
+	<triggered_effect trigger="onSelfEnteredGame" action="ULM_InitTextureFix,UndeadLegacy"/>
+	<triggered_effect trigger="onSelfEnteredGame" action="ULM_InitLodBiasFix,UndeadLegacy"/>
+	<triggered_effect trigger="onSelfEnteredGame" action="ULM_InitZombieRagePatch,UndeadLegacy"/>
+	<triggered_effect trigger="onSelfEnteredGame" action="ULM_InitPipCamera,UndeadLegacy" prefab="#Mods/UndeadLegacy/Resources/Subquake_Items.ulm?WeaponScopeCamera"/>
+	<triggered_effect trigger="onSelfEnteredGame" action="ULM_InitFloatingDamageNumbers,UndeadLegacy" prefab="#Mods/UndeadLegacy/Resources/Subquake_FloatingText.ulm?ULM_FloatingText" 
+					  color_default="255,255,255" color_misc="128,128,128" color_block="128,128,128" color_crit="255,106,0" color_bleed="255,0,0" color_shock="0,148,255" color_rad="255,160,0" color_outline="0,0,0,200"/>
+	
+	<!-- 
+	<triggered_effect trigger="onSelfEnteredGame" action="ULM_InitGunLaser,UndeadLegacy" prefab="#Mods/UndeadLegacy/Resources/Subquake_Items2.ulm?Subquake_GunLaser"/>
+	-->
+</append>
+<!--
+<append xpath="//entity_class[@name='playerMale']">
+	<effect_group>
+		<requirement name="HoldingItemHasTags" tags="updateAnimator"/>
+		<triggered_effect trigger="onSelfPrimaryActionStart" action="LogMessage" message="onSelfPrimaryActionStart"/>
+		<triggered_effect trigger="onSelfPrimaryActionStart" action="ULM_UpdateItemAnimator,UndeadLegacy" type="bool" name="IsUsing" value="true"/>
+		<triggered_effect trigger="onSelfPrimaryActionStart" action="ULM_UpdateItemAnimator,UndeadLegacy" type="trigger" name="WeaponFire"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ULM_UpdateItemAnimator,UndeadLegacy" type="trigger" name="Idle"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="LogMessage" message="onSelfPrimaryActionEnd"/>
+		
+		<triggered_effect trigger="onReloadStart" action="ULM_UpdateItemAnimator,UndeadLegacy" type="bool" name="IsUsing" value="true"/>
+		<triggered_effect trigger="onReloadStart" action="ULM_UpdateItemAnimator,UndeadLegacy" type="trigger" name="Reload"/>
+		<triggered_effect trigger="onReloadStop" action="ULM_UpdateItemAnimator,UndeadLegacy" type="bool" name="IsUsing" value="false"/>
+	</effect_group>
+</append>-->
+	
+<append xpath="//entity_class[@name='playerMale']">
+	<effect_group name="Stamina Modifier">
+		<requirement name="!EntityHasMovementTag" tags="idle"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value=".1" tags="running"/>
+	</effect_group>
+	<effect_group name="Addiional Cvar Checks">
+		<requirement name="CVarCompare" cvar="ulmConsumableCounter" operation="LT" value="1"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="ulmConsumableCounter" operation="set" value="1"/>
+	</effect_group>
+</append>
+
+<!--
+<append xpath="//entity_class[@name='playerMale']">
+	<effect_group name="Hit Counter">
+		<requirement name="EntityTagCompare" target="other" tags="human,zombie,bear,wolf,dog,coyote,mountainlion,deer,vulture"/>
+		<triggered_effect trigger="onOtherAttackedSelf" action="ModifyCVar" cvar="$selfHitCounter" operation="add" value="30"/>
+	</effect_group>
+</append>
+-->
+
+<set xpath="//entity_class[@name='playerMale']//passive_effect[@name='BagSize']/@value">300</set>
+<!--<set xpath="//entity_class[@name='playerMale']//passive_effect[@name='StaminaChangeOT' and @operation='base_set']/@value">12</set>-->
+	
+<append xpath="/entity_classes">
+	
+<entity_class name="ulmVehicleSUV02">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="Tags" value="vehicle"/>
+	<property name="Class" value="EntityVJeep"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_SUV_VL"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicle4x4Truck"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="29"/>
+	<property name="Explosion.RadiusBlocks" value="5"/>
+	<property name="Explosion.RadiusEntities" value="5"/>
+	<property name="Explosion.BlockDamage" value="100"/>
+	<property name="Explosion.EntityDamage" value="100"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="symbol_steering_wheel"/>
+    <property name="Consumables" value="ulmAmmoFuelGasoline,ulmAmmoFuelGasolineBarrel"/>
+	<property name="NavObject" value="car"/></entity_class>
+
+<entity_class name="ulmVehicleSUV02Police" extends="ulmVehicleSUV02">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_SUV_Police_VL"/>
+	</entity_class>
+
+<entity_class name="ulmVehicleSUV02Security" extends="ulmVehicleSUV02">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_SUV_Security_VL"/>
+	</entity_class>
+
+<entity_class name="ulmVehicleSedan03" extends="ulmVehicleSUV02">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Sedan_1_VL"/>
+	</entity_class>
+
+</append>
+	
+<append xpath="//entity_class[@name='vehicleBicycle']">
+	<property name="HideInSpawnMenu" value="true"/></append>
+	
+
+<append xpath="//entity_class[
+   @name='vehicleMinibike'
+or @name='vehicleMotorcycle'
+or @name='vehicleTruck4x4'
+or @name='vehicleGyrocopter']">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="Consumables" value="ulmAmmoFuelGasoline,ulmAmmoFuelGasolineBarrel"/></append>
+
+<append xpath="/entity_classes/entity_class[@name='zombieTemplateMale']">
+	<effect_group name="Additional Effects">
+		<!-- Change Walk Type -->
+		<triggered_effect trigger="onSelfFirstSpawn" action="ULM_SetRandomWalkType,UndeadLegacy" values="1,2,3,5,6,7"/>
+		<!-- Change Movement Speed +-10% -->
+		<triggered_effect trigger="onSelfFirstSpawn" action="ULM_RandomRoll,UndeadLegacy" cvar="zombieRandomMobility" min="-10" max="10"/>
+		<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="zombieRandomMobility" operation="divide" value="100"/>
+		<passive_effect name="Mobility" operation="perc_add" value="@zombieRandomMobility"/>
+	</effect_group>
+</append>
+
+
+<!--
+
+################################################## END OF CORE ##################################################
+
+-->
+
+<set xpath="//entity_class[@name='playerMale']//property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">ulmContainerBagStarter</set>
+<set xpath="//entity_class[@name='playerMale']//property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">ulmContainerBagStarter</set>
+<set xpath="//entity_class[@name='playerMale']//property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">ulmContainerBagStarter</set>
+    
+<!--
+<set xpath="//entity_class[@name='zombieTemplateMale']/property[@name='LootDropProb']/@value">0.1</set>
+<set xpath="//entity_class[@name='zombieWightFeral']/property[@name='LootDropProb']/@value">0.1</set>
+<set xpath="//entity_class[@name='zombieWightRadiated']/property[@name='LootDropProb']/@value">0.1</set>
+<set xpath="//entity_class[@name='zombieBoeFeral']/property[@name='LootDropProb']/@value">0.1</set>
+<set xpath="//entity_class[@name='zombieBoeRadiated']/property[@name='LootDropProb']/@value">0.1</set>    
+<set xpath="//entity_class[@name='zombieFemaleFatFeral']/property[@name='LootDropProb']/@value">0.1</set>    
+<set xpath="//entity_class[@name='zombieFemaleFatRadiated']/property[@name='LootDropProb']/@value">0.1</set>    
+<set xpath="//entity_class[@name='zombieJoeFeral']/property[@name='LootDropProb']/@value">0.1</set>    
+<set xpath="//entity_class[@name='zombieJoeRadiated']/property[@name='LootDropProb']/@value">0.1</set>    
+<set xpath="//entity_class[@name='zombieJanitorFeral']/property[@name='LootDropProb']/@value">0.1</set>    
+<set xpath="//entity_class[@name='zombieJanitorRadiated']/property[@name='LootDropProb']/@value">0.1</set>    
+<set xpath="//entity_class[@name='zombieMoeFeral']/property[@name='LootDropProb']/@value">0.1</set>    
+<set xpath="//entity_class[@name='zombieMoeRadiated']/property[@name='LootDropProb']/@value">0.1</set>    
+<set xpath="//entity_class[@name='zombieArleneFeral']/property[@name='LootDropProb']/@value">0.1</set>    
+<set xpath="//entity_class[@name='zombieArleneRadiated']/property[@name='LootDropProb']/@value">0.1</set>    
+<set xpath="//entity_class[@name='zombieLabFeral']/property[@name='LootDropProb']/@value">0.1</set>   
+<set xpath="//entity_class[@name='zombieLabRadiated']/property[@name='LootDropProb']/@value">0.1</set>   
+<set xpath="//entity_class[@name='zombieScreamerFeral']/property[@name='LootDropProb']/@value">0.1</set>  
+<set xpath="//entity_class[@name='zombieScreamerRadiated']/property[@name='LootDropProb']/@value">0.1</set>  
+<set xpath="//entity_class[@name='zombieDarleneFeral']/property[@name='LootDropProb']/@value">0.1</set>  
+<set xpath="//entity_class[@name='zombieDarleneRadiated']/property[@name='LootDropProb']/@value">0.1</set>  
+<set xpath="//entity_class[@name='zombieMarleneFeral']/property[@name='LootDropProb']/@value">0.1</set>  
+<set xpath="//entity_class[@name='zombieMarleneRadiated']/property[@name='LootDropProb']/@value">0.1</set>  
+<set xpath="//entity_class[@name='zombieYoFeral']/property[@name='LootDropProb']/@value">0.1</set>  
+<set xpath="//entity_class[@name='zombieYoRadiated']/property[@name='LootDropProb']/@value">0.1</set>  
+<set xpath="//entity_class[@name='zombieSteveFeral']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieSteveRadiated']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieSteveCrawlerFeral']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieBusinessManFeral']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieSnowFeral']/property[@name='LootDropProb']/@value">0.1</set>  
+<set xpath="//entity_class[@name='zombieSpiderFeral']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieSpiderRadiated']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieNurseFeral']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieFatHawaiian']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieFatCopFeral']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieFatCopRadiated']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieUtilityWorkerFeral']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieSoldierFeral']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieSoldierRadiated']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieSkateboarderFeral']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieSkateboarderRadiated']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieCheerleaderFeral']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieCheerleaderRadiated']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieOldTimerFeral']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieOldTimerRadiated']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieBikerFeral']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieBikerRadiated']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieFarmerFeral']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieStripperFeral']/property[@name='LootDropProb']/@value">0.1</set> 
+<set xpath="//entity_class[@name='zombieDemolition']/property[@name='LootDropProb']/@value">0.3</set>-->
+
+<set xpath="//entity_class[
+	@name='EntityLootContainerRegular'
+ or @name='EntityLootContainerNurse'
+ or @name='EntityLootContainerLab'
+ or @name='EntityLootContainerUtility'
+ or @name='EntityLootContainerSoldier'
+ or @name='EntityLootContainerThug']/property[@name='Mesh']/@value">#Mods/UndeadLegacy/Resources/Subquake_Core.ulm?Subquake_LootT1</set>
+<set xpath="//entity_class[
+	@name='EntityLootContainerStrong'
+ or @name='EntityLootContainerPlague']/property[@name='Mesh']/@value">#Mods/UndeadLegacy/Resources/Subquake_Core.ulm?Subquake_LootT2</set>
+<set xpath="//entity_class[@name='EntityLootContainerBoss']/property[@name='Mesh']/@value">#Mods/UndeadLegacy/Resources/Subquake_Core.ulm?Subquake_LootT3</set>
+
+<set xpath="//entity_class[
+	@name='EntityLootContainerRegular'
+ or @name='EntityLootContainerNurse'
+ or @name='EntityLootContainerLab'
+ or @name='EntityLootContainerUtility'
+ or @name='EntityLootContainerSoldier'
+ or @name='EntityLootContainerThug']/property[@name='TimeStayAfterDeath']/@value">7200</set>
+<set xpath="//entity_class[@name='EntityLootContainerStrong']/property[@name='TimeStayAfterDeath']/@value">7200</set>
+<set xpath="//entity_class[@name='EntityLootContainerBoss']/property[@name='TimeStayAfterDeath']/@value">7200</set>
+
+<!-- 
+	Health values				  UL2.6	    v2.4
+									ULM  Vanilla	Template Name
+
+	1 zombieSteveCrawler			100		 200	healthCrawler
+	2 zombieSteveCrawlerFeral		200		 300	healthCrawlerFeral
+	1 zombieScreamer				150		 200	healthScreamer
+	2 zombieScreamerFeral			300		 250	healthScreamerFeral
+	3 zombieScreamerRadiated		450		 500	healthScreamerRadiated
+	4 zombieScreamerCharged			  -		 700	healthScreamerCharged
+	1 zombieArlene					  -		 150	healthZombieTemplate
+	2 zombieArleneFeral				250		 500	healthSlimFeral
+	3 zombieArleneRadiated			500		 800	healthSlimRadiated
+	4 zombieArleneCharged			  -	    1000	healthSlimCharged
+	1 zombieLab						150		 200	healthNormal
+	2 zombieLabFeral				250		 550	healthNormalFeral
+	3 zombieLabRadiated				500		 900	healthNormalRadiated
+	4 zombieLabCharged				  -	    1100	healthNormalCharged
+	1 zombieDarlene					150		 200	healthNormal
+	2 zombieDarleneFeral			250		 550	healthNormalFeral
+	3 zombieDarleneRadiated			500		 900	healthNormalRadiated
+	4 zombieDarleneCharged			  -	    1100	healthNormalCharged
+	1 zombieMarlene					  -		 150	healthZombieTemplate
+	2 zombieMarleneFeral			250		 500	healthSlimFeral
+	3 zombieMarleneRadiated			500		 800	healthSlimRadiated
+	4 zombieMarleneCharged			  -		1000	healthSlimCharged
+	1 zombieNurse					  -		 150	healthZombieTemplate
+	2 zombieNurseFeral				250		 500	healthSlimFeral
+	3 zombieNurseRadiated			  -		 800	healthSlimRadiated
+	4 zombieNurseCharged			  -		1000	healthSlimCharged
+	1 zombiePartyGirl				  -		 150	healthZombieTemplate
+	2 zombiePartyGirlFeral			250		 500	healthSlimFeral
+	3 zombiePartyGirlRadiated		  -		 800	healthSlimRadiated
+	4 zombiePartyGirlCharged		  -		1000	healthSlimCharged
+	1 zombieBoe						200		 200	healthNormal
+	2 zombieBoeFeral				300		 550	healthNormalFeral
+	3 zombieBoeRadiated				600		 900	healthNormalRadiated
+	4 zombieBoeCharged				  -		1100	healthNormalCharged
+	1 zombieJoe						  -		 150	healthZombieTemplate
+	2 zombieJoeFeral				300		 500	healthSlimFeral
+	3 zombieJoeRadiated				600		 800	healthSlimRadiated
+	4 zombieJoeCharged				  -		1000	healthSlimCharged
+	1 zombieJanitor					200		 200	healthNormal
+	2 zombieJanitorFeral			300		 550	healthNormalFeral
+	3 zombieJanitorRadiated			600		 900	healthNormalRadiated
+	4 zombieJanitorCharged			  -		1100	healthNormalCharged
+	1 zombieYo						200		 200	healthNormal
+	2 zombieYoFeral					300		 550	healthNormalFeral
+	3 zombieYoRadiated				600		 900	healthNormalRadiated
+	4 zombieYoCharged				  -		1100	healthNormalCharged
+	1 zombieSteve					  -		 150	healthZombieTemplate
+	2 zombieSteveFeral				300		 500	healthSlimFeral
+	3 zombieSteveRadiated			600		 800	healthSlimRadiated
+	4 zombieSteveCharged			  -		1000	healthSlimCharged
+	1 zombieBusinessMan				  -		 150	healthZombieTemplate
+	2 zombieBusinessManFeral		300		 500	healthSlimFeral
+	3 zombieBusinessManRadiated		  -		 800	healthSlimRadiated
+	4 zombieBusinessManCharged		  -		1000	healthSlimCharged
+	1 zombieSpider					  -		 150	healthZombieTemplate
+	2 zombieSpiderFeral				300		 500	healthSlimFeral
+	3 zombieSpiderRadiated			600		 800	healthSlimRadiated
+	4 zombieSpiderCharged			  -		1000	healthSlimCharged
+	1 zombieUtilityWorker			200		 200	healthNormal
+	2 zombieUtilityWorkerFeral		300		 550	healthNormalFeral
+	3 zombieUtilityWorkerRadiated	  -		1100	healthUtilityWorkerRadiated
+	4 zombieUtilityWorkerCharged	  -		1300	healthUtilityWorkerCharged
+	1 zombieSoldier					250		 250	healthFit
+	2 zombieSoldierFeral			350		 800	healthFitFeral
+	3 zombieSoldierRadiated			700		1400	healthFitRadiated
+	5 zombieSoldierInfernal			  -		2200	healthFitInfernal
+	1 zombieSkateboarder			200		 250	healthFit
+	2 zombieSkateboarderFeral		300		 800	healthFitFeral
+	3 zombieSkateboarderRadiated	600		1400	healthFitRadiated
+	4 zombieSkateboarderCharged		  -		1600	healthFitCharged
+	5 zombieSkateboarderInfernal	  -		2200	healthFitInfernal
+	1 zombieMoe						300		 200	healthNormal
+	2 zombieMoeFeral				525		 550	healthNormalFeral
+	3 zombieMoeRadiated			   1000		 900	healthNormalRadiated
+	5 zombieMoeInfernal				  -		1700	healthNormalInfernal
+	1 zombieFatCop					350		 450	healthStrong
+	2 zombieFatCopFeral				700		 950	healthStrongFeral
+	3 zombieFatCopRadiated		   1250		1700	healthStrongRadiated
+	5 zombieFatCopInfernal			  -		2500	healthStrongInfernal
+	1 zombieFemaleFat				350		 450	healthStrong
+	2 zombieFemaleFatFeral			700		 950	healthStrongFeral
+	3 zombieFemaleFatRadiated	   1250		1700	healthStrongRadiated
+	5 zombieFemaleFatInfernal		  -		2500	healthStrongInfernal
+	1 zombieFatHawaiian				400		 450	healthStrong
+	2 zombieFatHawaiianFeral		800		 950	healthStrongFeral
+	3 zombieFatHawaiianRadiated		  -		1700	healthStrongRadiated
+	5 zombieFatHawaiianInfernal		  -		2500	healthStrongInfernal
+	1 zombieBiker					350		 600	healthSturdy
+	2 zombieBikerFeral				700		 900	healthSturdyFeral
+	3 zombieBikerRadiated		   1250		1600	healthSturdyRadiated
+	5 zombieBikerInfernal			  -		1800	healthSturdyCharged
+	1 zombieLumberjack				350		 450	healthStrong
+	2 zombieLumberjackFeral			650		 950	healthStrongFeral
+	3 zombieLumberjackRadiated		  -		1700	healthStrongRadiated
+	5 zombieLumberjackInfernal		  -		2500	healthStrongInfernal
+	2 zombieWightFeral				500		1200	healthWightFeral
+	3 zombieWightRadiated		   1000		2200	healthWightRadiated
+	4 zombieWightCharged			  -		2400	healthWightCharged
+	5 zombieWightInfernal			  -		3000	healthWightInfernal
+	1 zombieDemolition			   2000		1200	healthDemo
+	1 zombieMutated					500		 600	healthSturdy
+	2 zombieMutatedFeral			750		 900	healthSturdyFeral
+	3 zombieMutatedRadiated		   1500		1600	healthSturdyRadiated
+	4 zombieMutatedCharged			  -		1800	healthSturdyCharged
+	
+	Health values								  UL2.7	    Template Name
+	1 ulmZombieFirefighterRandomNormal			    300		n/a
+	2 ulmZombieFirefighterRandomFeral		  	    600		n/a
+	3 ulmZombieFirefighterRandomRadiated		    900		n/a
+	  ulmAnimalScorpionBlood				    600-800
+	  ulmAnimalScorpionScorched				    600-800
+	  ulmAnimalScorpionFrostbite			    600-800
+	  ulmAnimalScorpionRadiated				  1200-1400
+	  ulmAnimalScorpionRadiatedBoss			  2000-3000
+-->
+
+<set xpath="/entity_classes/replace_passive_effect/property[@name='healthDemo']/@value">2000</set>
+
+<!--<set xpath="/entity_classes/entity_class[@name='zombieMutatedRadiated']/effect_group[@name='Base Effects']/passive_effect[@name='HealthMax' and @operation='base_set']/@value">1500</set> -->
+<!--<set xpath="/entity_classes/entity_class[@name='zombieMutated'					]/property[@name='ExperienceGain']/@value">1500</set> -->
+
+<set xpath="/entity_classes/entity_class[@name='entityJunkDrone'				]/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">5000</set>
+
+<append xpath="/entity_classes/entity_class[@name='animalChicken']">
+	<property name="CanPickUp" value="true" param1="ulmResourceChicken"/>
+</append>
+
+<append xpath="/entity_classes">
+    
+<entity_class name="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="Tags" value="vehicle"/>
+	<property name="Class" value="EntityVJeep"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_DuneRunner_VL"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x20"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="29"/>
+	<property name="Explosion.RadiusBlocks" value="5"/>
+	<property name="Explosion.RadiusEntities" value="5"/>
+	<property name="Explosion.BlockDamage" value="100"/>
+	<property name="Explosion.EntityDamage" value="100"/>
+	<property name="ExperienceGain" value="0"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="symbol_steering_wheel"/>
+    <property name="Consumables" value="ulmAmmoFuelGasoline,ulmAmmoFuelGasolineBarrel"/>
+	<property name="NavObject" value="car"/>
+	<effect_group>
+		<passive_effect name="BagSize" operation="base_set" value="300"/>
+	</effect_group></entity_class>
+
+<entity_class name="ulmVehicleHumvee" extends="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x20"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Humvee_VL"/>
+	</entity_class>
+
+<entity_class name="ulmVehicleCoupe01" extends="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x14"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Coupe_A"/>
+	</entity_class>
+
+<entity_class name="ulmVehicleMinivan02" extends="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x20"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Minivan_1_VL"/>
+	</entity_class>
+
+<entity_class name="ulmVehicleMuscleCar01" extends="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x14"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Muscle_1_VL"/>
+	</entity_class>
+
+<entity_class name="ulmVehicleSedan04" extends="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x18"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Sedan_2_VL"/>
+	</entity_class>
+
+<entity_class name="ulmVehicleSedan04Police" extends="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x16"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Sedan_2_Police_VL"/>
+	</entity_class>
+
+<entity_class name="ulmVehicleSedan04Taxi" extends="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x16"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Sedan_2_Taxi_VL"/>
+	</entity_class>
+
+<entity_class name="ulmVehicleSedan05" extends="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x20"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Sedan_3_VL"/>
+	</entity_class>
+
+<entity_class name="ulmVehicleHelicopterDH" extends="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x20"/>
+	<property name="Class" value="EntityVGyroCopter"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Dekohawk_VL"/>
+	</entity_class>
+
+<entity_class name="ulmVehicleHelicopterRaven" extends="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x12"/>
+	<property name="Class" value="EntityVGyroCopter"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Raven_VL"/>
+	</entity_class>
+
+<entity_class name="ulmVehicleMineCart" extends="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x6"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Minecart_VL"/>
+	</entity_class>
+
+<entity_class name="ulmVehicleMiningDumpTruck" extends="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x27"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_MiningDumpTruck_VL"/>
+	</entity_class>
+
+<entity_class name="ulmVehicleMilitaryTruck" extends="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x27"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_MilitaryTruck_VL"/>
+	</entity_class>
+
+<entity_class name="ulmTwitchSupplyFuel" extends="twitch_crate_template"> 
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="Mesh" value="#Entities/LootContainers?crate_store_PassNGasPrefab"/>
+	<property name="LootListOnDeath" value="twitch_fuel1"/>
+</entity_class>
+
+<entity_class name="ulmVehiclePoliceCruiser" extends="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x14"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_PoliceCruiser_VL"/>
+	</entity_class>
+
+<entity_class name="ulmVehicleAmbulance02" extends="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x14"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Ambulance_VL"/>
+	</entity_class>
+
+<entity_class name="ulmVehicleBicycle1">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="Tags" value="vehicle"/>
+	<property name="Class" value="EntityBicycle"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Bicycle"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicleBicycle"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="25"/>
+	<property name="Explosion.RadiusBlocks" value="1"/>
+	<property name="Explosion.RadiusEntities" value="1"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_bicycle"/>
+	<property name="NavObject" value="bicycle" /></entity_class>
+
+<entity_class name="ulmVehicleMinibikeOld">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="Tags" value="vehicle"/>
+	<property name="Class" value="EntityDriveable"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Minibike"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicleMinibike"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="26"/>
+	<property name="Explosion.RadiusBlocks" value="3"/>
+	<property name="Explosion.RadiusEntities" value="3"/>
+	<property name="Explosion.BlockDamage" value="20"/>
+	<property name="Explosion.EntityDamage" value="20"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_minibike"/>
+	<property name="NavObject" value="minibike"/>
+	<property name="Consumables" value="ulmAmmoFuelGasoline,ulmAmmoFuelGasolineBarrel"/></entity_class>
+
+<entity_class name="ulmVehicleMotorcycle01">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="Class" value="EntityDriveable"/>
+	<property name="Tags" value="vehicle,usesGas,bikerSetBonus"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Motorcycle"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicleMotorcycle"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="27"/>
+	<property name="Explosion.RadiusBlocks" value="4"/>
+	<property name="Explosion.RadiusEntities" value="4"/>
+	<property name="Explosion.BlockDamage" value="50"/>
+	<property name="Explosion.EntityDamage" value="50"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_motorcycle"/>
+	<property name="NavObject" value="motorcycle"/>
+	<property name="Consumables" value="ulmAmmoFuelGasoline,ulmAmmoFuelGasolineBarrel"/></entity_class>
+
+<entity_class name="ulmVehicle4x4Classic">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="Class" value="EntityDriveable"/>
+	<property name="Tags" value="vehicle,usesGas"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_4x4Truck"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicle4x4Truck"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="29"/>
+	<property name="Explosion.RadiusBlocks" value="5"/>
+	<property name="Explosion.RadiusEntities" value="5"/>
+	<property name="Explosion.BlockDamage" value="100"/>
+	<property name="Explosion.EntityDamage" value="100"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_4x4"/>
+	<property name="NavObject" value="4x4"/>
+	<property name="Consumables" value="ulmAmmoFuelGasoline,ulmAmmoFuelGasolineBarrel"/></entity_class>
+
+<entity_class name="ulmVehicleGyrocopterBasic">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="Class" value="EntityVGyroCopter"/>
+	<property name="Tags" value="vehicle,usesGas"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Gyrocopter"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicleGyrocopter"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="28"/>
+	<property name="Explosion.RadiusBlocks" value="3"/>
+	<property name="Explosion.RadiusEntities" value="3"/>
+	<property name="Explosion.BlockDamage" value="30"/>
+	<property name="Explosion.EntityDamage" value="30"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_gyrocopter"/>
+	<property name="NavObject" value="gyrocopter"/>
+	<property name="Consumables" value="ulmAmmoFuelGasoline,ulmAmmoFuelGasolineBarrel"/></entity_class>
+
+<entity_class name="ulmVehicleMotorcycle03">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="Tags" value="vehicle"/>
+	<property name="Class" value="EntityDriveable"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Motorcycle2_VL"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x10"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="ExperienceGain" value="0"/>
+	<property name="Explosion.ParticleIndex" value="27"/>
+	<property name="Explosion.RadiusBlocks" value="4"/>
+	<property name="Explosion.RadiusEntities" value="4"/>
+	<property name="Explosion.BlockDamage" value="50"/>
+	<property name="Explosion.EntityDamage" value="50"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_motorcycle"/>
+	<property name="NavObject" value="motorcycle"/>
+    <property name="Consumables" value="ulmAmmoFuelGasoline,ulmAmmoFuelGasolineBarrel"/></entity_class>
+
+<entity_class name="ulmVehicleDirtBike01" extends="ulmVehicleMotorcycle03">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_DirtBike"/>
+	<property name="LootListAlive" value="vehiclePlayer6x10"/></entity_class>
+
+<entity_class name="ulmVehicleGokart01" extends="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x14"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_Gokart"/>
+	</entity_class>
+
+<entity_class name="ulmVehicleQuadBike01" extends="ulmVehicleDuneRunner">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="LootListAlive" value="vehiclePlayer6x14"/>
+	<property name="Prefab" value="#Mods/UndeadLegacy/Resources/Subquake_Vehicles.ulm?Subquake_QuadBike"/>
+	</entity_class>
+
+<entity_class name="npcTraderEllen" extends="npcTraderTemplate">
+	<property name="Class" value="EntityULM_Trader,UndeadLegacy"/>
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,npc,human,trader"/>
+	<property name="ModelType" value="ULM_Npc,UndeadLegacy"/>
+	<property name="AvatarController" value="ULM_AvatarNpcController,UndeadLegacy"/>
+	<property name="PhysicsBody" value="Trader"/>
+	<property name="NavObject" value="ulmQuestTrader"/>
+	<property name="NPCID" value="npcTraderEllen"/>
+	<property name="Mesh" value="#Mods/UndeadLegacy/Resources/Subquake_Entities.ulm?Ellen_Simple_Subquake"/>
+	<property name="RootObjectName" value="Reference"/>
+	<property name="HeadRotationType" value="yAxisUp"/>
+	<property name="DanceType" value="2"/>
+	<property name="LookAtAngle" value="70"/></entity_class>
+
+<entity_class name="npcTraderEllenTest" extends="npcTraderEllen">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="NavObject" value="ulmQuestTrader"/>
+	<property name="NPCID" value="npcTraderEllenTest"/>
+	<property name="Mesh" value="#Mods/UndeadLegacy/Resources/Subquake_Entities.ulm?Ellen_Simple_Subquake"/></entity_class>
+
+<entity_class name="npcTraderMaxton" extends="npcTraderEllen">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="NavObject" value="ulmVendor"/>
+	<property name="NPCID" value="npcTraderMaxton"/>
+	<property name="Mesh" value="#Mods/UndeadLegacy/Resources/Subquake_Entities.ulm?Maxton_Simple_Subquake"/>
+	<property name="RootObjectName" value="Reference"/>
+	<property name="HeadRotationType" value="yAxisUp"/></entity_class>
+
+<entity_class name="npcTraderEthan" extends="npcTraderMaxton">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="NPCID" value="npcTraderEthan"/>
+	<property name="AvatarController" value="ULM_AvatarEpicNpcController,UndeadLegacy"/>
+	<property name="Mesh" value="#Mods/UndeadLegacy/Resources/Subquake_Entities.ulm?Ethan_Simple_Subquake"/>
+	<property name="RootObjectName" value="root"/>
+	<property name="HeadRotationType" value="yAxisBack"/></entity_class>
+
+<entity_class name="npcTraderLogan" extends="npcTraderEthan">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="NPCID" value="npcTraderLogan"/>
+	<property name="PhysicsBody" value="Trader"/><!--<property name="PhysicsBody" value="EpicHumanoid"/>-->
+	<property name="AvatarController" value="ULM_AvatarEpicNpcController,UndeadLegacy"/>
+	<property name="Mesh" value="#Mods/UndeadLegacy/Resources/Subquake_Entities.ulm?SoldierMarine1_Simple_Subquake"/></entity_class>
+
+<entity_class name="npcTraderRaiden" extends="npcTraderEthan">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="NPCID" value="npcTraderRaiden"/>
+	<property name="PhysicsBody" value="Trader"/><!--<property name="PhysicsBody" value="EpicHumanoid"/>-->
+	<property name="AvatarController" value="ULM_AvatarEpicNpcController,UndeadLegacy"/>
+	<property name="Mesh" value="#Mods/UndeadLegacy/Resources/Subquake_Entities.ulm?SoldierMarine2_Simple_Subquake"/></entity_class>
+
+<entity_class name="npcTraderHagen" extends="npcTraderEthan">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="NPCID" value="npcTraderHagen"/>
+	<property name="PhysicsBody" value="Trader"/><!--<property name="PhysicsBody" value="EpicHumanoid"/>-->
+	<property name="AvatarController" value="ULM_AvatarEpicNpcController,UndeadLegacy"/>
+	<property name="Mesh" value="#Mods/UndeadLegacy/Resources/Subquake_Entities.ulm?MilitarySoldierVeteran2_Simple_Subquake"/></entity_class>
+
+<entity_class name="npcTraderRyan" extends="npcTraderEthan">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="NPCID" value="npcTraderRyan"/>
+	<property name="PhysicsBody" value="Trader"/><!--<property name="PhysicsBody" value="EpicHumanoid"/>-->
+	<property name="AvatarController" value="ULM_AvatarEpicNpcController,UndeadLegacy"/>
+	<property name="Mesh" value="#Mods/UndeadLegacy/Resources/Subquake_Entities.ulm?MilitaryRecruit_Simple_Subquake"/></entity_class>
+	
+<entity_class name="ulmAnimalScorpionBlood">
+	<property name="Tags"					value="entity,animal,hostile,zombie,scorpion,perkAT03"/>
+	<property name="EntityFlags"			value="animal"/>
+	<property name="Faction"				value="ulmAnimalsHostile"/>
+	<property name="Immunity"				value="sickness;disease;wellness"/>
+	<property name="Parent"					value="Animals"/>
+	<property name="ModelType"				value="Standard"/>
+	<property name="Prefab"					value="NPC"/>
+	<property name="Class"					value="EntityEnemyAnimal"/><!--<property name="Class" value="EntityEnemyAnimalAggressive,UndeadLegacy"/>-->
+	<property name="AvatarController"		value="ULM_AvatarAnimalController,UndeadLegacy"/>
+	<property name="RootMotion"				value="false"/>
+	<property name="HasRagdoll"				value="true"/>
+	<property name="HasDeathAnim"			value="true"/>
+	<property name="PhysicsBody"			value="Scorpion"/>
+	<property name="RagdollOnDeathChance"	value="0"/>
+	<property name="RotateToGround"			value="false"/>
+
+	<property name="SurfaceCategory"		value="organic"/>
+	<property name="ParticleOnDeath"		value="blood_death"/>
+
+	<property name="HandItem"				value="ulmMeleeAttackScorpion"/>
+	<property name="Mesh"					value="#Mods/UndeadLegacy/Resources/Subquake_Entities.ulm?Subquake_ScorpionBlood_Ragdoll"/>
+	<property name="MoveSpeed"				value=".25"/>
+	<property name="MoveSpeedAggro"			value="1.3,1.3"/> 
+	<property name="MoveSpeedRand"			value="-.2,.2"/>
+	<property name="MoveSpeedPanic"			value="1.3"/>
+	<property name="SwimSpeed"				value="1.2"/>
+	<property name="SwimStrokeRate"			value="1.1,1.5"/>
+	<property name="DeadBodyHitPoints"		value="300"/>
+	<property name="CanPickUp"				value="false"/>
+	<property name="Weight"					value="100"/>
+	<property name="Mass"					value="125"/>
+	<property name="ExperienceGain"			value="500"/>
+	<!--
+	<property name="CanClimbVertical" value="true"/>
+	<property name="JumpMaxDistance" value="7,9"/>
+	<property name="AITask-1" value="Leap"/>
+	-->
+	<property name="IsAnimalEntity"			value="true"/>
+	<property name="IsEnemyEntity"			value="true"/> 	
+	<property name="AITask-1"				value="ULM_BreakBlock,UndeadLegacy"/>
+	<property name="AITask-2"				value="Territorial"/>
+	<property name="AITask-3"				value="ApproachDistraction"/>
+	<property name="AITask-4"				value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityNPC,0,EntityPlayer,0,EntityNPC,0,EntityBandit,0,EntityAnimalRabbit,8"/>
+	<property name="AITask-5"				value="ApproachSpot"/>
+	<property name="AITask-6"				value="Look"/>
+	<property name="AITask-7"				value="Wander"/>
+	<property name="AITask-8"				value=""/>
+	<property name="AITarget-1"				value="SetAsTargetIfHurt"/>
+	<property name="AITarget-2"				value="BlockingTargetTask"/> 
+	<property name="AITarget-3"				value="SetNearestEntityAsTarget" data="class=EntityPlayer,20,15,EntityNPC,20,15,EntityNPC,20,15,EntityBandit,20,15,EntityZombie,20,15,EntityAnimalRabbit,0,18"/>
+	<property name="AITarget-4"				value=""/>
+	<property name="AIGroupCircle"			value="1"/>
+	<property name="AINoiseSeekDist"		value="3"/>
+	<property name="AIPathCostScale"		value=".4,.6"/>
+	<property name="AIFeralSense"			value="1.2"/>
+
+	<property name="NavObject"				value="animaltracking_scorpion"/>
+	<property name="TrackerIcon"			value="symbol_scorpion"/>
+	<property name="MapIcon"				value="symbol_scorpion"/>
+	<property name="CompassIcon"			value="ui_game_symbol_enemy_dot"/>
+	<property name="CompassUpIcon"			value="ui_game_symbol_enemy_dot_up"/>
+	<property name="CompassDownIcon"		value="ui_game_symbol_enemy_dot_down"/>
+
+	<property name="SoundRandom"			value="ulmAnimalScorpion_Random"/>
+	<property name="SoundAlert"				value="ulmAnimalScorpion_Alert"/>
+	<property name="SoundHurt"				value="ulmAnimalScorpion_Hurt"/>
+	<property name="SoundDeath"				value="ulmAnimalScorpion_Death"/>
+	<property name="SoundAttack"			value="ulmAnimalScorpion_Attack"/>
+	<property name="SoundSense"				value="ulmAnimalScorpion_Sense"/>
+	<property name="SoundGiveUp"			value="ulmAnimalScorpion_Roam"/>
+	
+	<property name="LookAtAngle"						value="0"/>
+	<property name="MaxViewAngle"						value="360"/>
+	<property name="SightRange"							value="50"/>
+	<property name="SightLightThreshold"				value="-2,150"/>
+	<property name="SleeperSightToWakeMin"				value="-40,5"/>
+	<property name="SleeperSightToWakeMax"				value="340,480"/>
+	<property name="SleeperSenseSightDetectionMin"		value="-10,0"/>
+	<property name="SleeperSenseSightDetectionMax"		value="200,300"/>
+	<property name="SleeperNoiseToSense"				value="3,8"/>
+	<property name="SleeperNoiseToWake"					value="9,12"/>
+	<property name="SleeperSmellSenseThreshold"			value="20,50"/>
+	<property name="SleeperNoiseToSenseSoundChance"		value=".5"/>
+	<property name="MaxTurnSpeed"						value="280"/>
+	<property name="AttackTimeoutDay"					value="1.5"/>
+	<property name="AttackTimeoutNight"					value="1.4"/>
+	<property name="CanClimbLadders"					value="false"/>
+	<property name="TimeStayAfterDeath"					value="300"/>
+
+	<property name="DismemberTag_L_HeadGore"			value="Prefabs/HeadGore" data ="rot=90,0,0"/>
+	<property name="DismemberTag_L_LeftUpperLegGore"	value="Prefabs/UpperLegGore"/>
+	<property name="DismemberTag_L_LeftLowerLegGore"	value="Prefabs/UpperLegGore"/>
+	<property name="DismemberTag_L_RightUpperLegGore"	value="Prefabs/UpperLegGore"/>
+	<property name="DismemberTag_L_RightLowerLegGore"	value="Prefabs/UpperLegGore"/>
+	<property name="DismemberTag_L_LeftUpperArmGore"	value="Prefabs/UpperArmGore"/>
+	<property name="DismemberTag_L_LeftLowerArmGore"	value="Prefabs/UpperArmGore"/>
+	<property name="DismemberTag_L_RightUpperArmGore"	value="Prefabs/UpperArmGore"/>
+	<property name="DismemberTag_L_RightLowerArmGore"	value="Prefabs/UpperArmGore"/>
+
+	<drop event="Harvest" name="foodRawMeat"			count="0"	tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRawMeat"			count="3,6"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="ulmResourceChitin"		count="3,5"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="ulmResourceMandibles"	count="1,2"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="ulmResourceVenomSack"	count="1,2"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourceAnimalFat"		count="3,5"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourceBone"			count="1"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourceBone"			count="1"	tag="allToolsHarvest"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect operation="base_set" name="DistractionResistance"	value="0,0"/>
+		<passive_effect operation="base_set" name="PhysicalDamageResist"	value="20"/>
+		<passive_effect operation="base_set" name="HealthMax"				value="600,800"/>
+		<passive_effect operation="base_set" name="BuffResistance"			value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+		<triggered_effect trigger="onSelfFirstSpawn" target="self" action="AddBuff" buff="buffEntitySpawnHeal"/>
+	<!--<triggered_effect trigger="onSelfFirstSpawn" target="self" action="AddBuff" buff="ulmBuffDebugAnimator"/>-->
+	</effect_group>
+</entity_class>
+	
+<entity_class name="ulmAnimalScorpionScorched" extends="ulmAnimalScorpionBlood">
+	<property name="Mesh" value="#Mods/UndeadLegacy/Resources/Subquake_Entities.ulm?Subquake_ScorpionScorched_Ragdoll"/>
+	<drop event="Harvest" name="foodRawMeat"			count="0"	tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRawMeat"			count="3,6"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="ulmResourceChitin"		count="3,5"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="ulmResourceMandibles"	count="1,2"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="ulmResourceVenomSack"	count="1,2"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourceAnimalFat"		count="3,5"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourceBone"			count="1"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourceBone"			count="1"	tag="allToolsHarvest"/>
+	<effect_group name="Base Effects">
+		<passive_effect operation="base_set" name="DistractionResistance"	value="0,0"/>
+		<passive_effect operation="base_set" name="PhysicalDamageResist"	value="20"/>
+		<passive_effect operation="base_set" name="HealthMax"				value="600,800"/>
+		<passive_effect operation="base_set" name="BuffResistance"			value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+		<triggered_effect trigger="onSelfFirstSpawn" target="self" action="AddBuff" buff="buffEntitySpawnHeal"/>
+	</effect_group>
+</entity_class>
+
+<entity_class name="ulmAnimalScorpionFrostbite" extends="ulmAnimalScorpionBlood">
+	<property name="Mesh" value="#Mods/UndeadLegacy/Resources/Subquake_Entities.ulm?Subquake_ScorpionFrostbite_Ragdoll"/>
+	<drop event="Harvest" name="foodRawMeat"			count="0"	tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRawMeat"			count="3,6"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="ulmResourceChitin"		count="3,5"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="ulmResourceMandibles"	count="1,2"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="ulmResourceVenomSack"	count="1,2"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourceAnimalFat"		count="3,5"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourceBone"			count="1"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourceBone"			count="1"	tag="allToolsHarvest"/>
+	<effect_group name="Base Effects">
+		<passive_effect operation="base_set" name="DistractionResistance"	value="0,0"/>
+		<passive_effect operation="base_set" name="PhysicalDamageResist"	value="20"/>
+		<passive_effect operation="base_set" name="HealthMax"				value="600,800"/>
+		<passive_effect operation="base_set" name="BuffResistance"			value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+		<triggered_effect trigger="onSelfFirstSpawn" target="self" action="AddBuff" buff="buffEntitySpawnHeal"/>
+	</effect_group>
+</entity_class>
+
+<entity_class name="ulmAnimalScorpionRadiated" extends="ulmAnimalScorpionBlood">
+	<property name="Mesh" value="#Mods/UndeadLegacy/Resources/Subquake_Entities.ulm?Subquake_ScorpionRadiated_Ragdoll"/>
+	<drop event="Harvest" name="foodRawMeat"			count="0"	tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRawMeat"			count="3,6"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="ulmResourceChitin"		count="3,5"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="ulmResourceMandibles"	count="1,2"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="ulmResourceVenomSack"	count="1,2"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourceAnimalFat"		count="3,5"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourceBone"			count="1"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourceBone"			count="1"	tag="allToolsHarvest"/>
+	<effect_group name="Base Effects">
+		<passive_effect operation="base_set" name="DistractionResistance"	value="0,0"/>
+		<passive_effect operation="base_set" name="PhysicalDamageResist"	value="30"/>
+		<passive_effect operation="base_set" name="HealthMax"				value="1200,1400"/>
+		<passive_effect operation="base_set" name="BuffResistance"			value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+		<triggered_effect trigger="onSelfFirstSpawn"	target="self"	action="AddBuff"	buff="buffEntitySpawnHeal"/>
+		<triggered_effect trigger="onOtherDamagedSelf"	target="self"	action="AddBuff"	buff="buffRadiatedRegen"/>
+		<triggered_effect trigger="onOtherDamagedSelf"	target="self"	action="ModifyCVar" cvar="RadiatedRegenAmount" operation="set" value="6"/>
+	</effect_group>
+</entity_class>
+
+<entity_class name="ulmAnimalScorpionRadiatedBoss" extends="ulmAnimalScorpionBlood">
+	<property name="HandItem" value="ulmMeleeAttackScorpionBoss"/>
+	<property name="AITask-3" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=5"/>
+	<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityNPC,0,EntityPlayer,0,EntityNPC,0,EntityBandit,0,EntityAnimalRabbit,8"/>
+	<property name="AITask-5" value="ApproachSpot"/>
+	<property name="AITask-6" value="Look"/>
+	<property name="AITask-7" value="Wander"/>
+	<property name="AITask-8" value=""/>
+	<property name="DeadBodyHitPoints" value="600"/>
+	<property name="ExperienceGain" value="2000"/>
+	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+	<property name="LootDropProb" value=".4"/>
+	<property name="Mass" value="200"/>
+	<property name="Mesh" value="#Mods/UndeadLegacy/Resources/Subquake_Entities.ulm?Subquake_ScorpionRadiatedBoss_Ragdoll"/>
+	<drop event="Harvest" name="foodRawMeat"			count="0"		tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRawMeat"			count="6,12"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="ulmResourceChitin"		count="5,10"	tag="butcherHarvest"/>
+	<drop event="Harvest" name="ulmResourceMandibles"	count="2,4"		tag="butcherHarvest"/>
+	<drop event="Harvest" name="ulmResourceVenomSack"	count="2,4"		tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourceAnimalFat"		count="3,5"		tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourceBone"			count="1"		tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourceBone"			count="1"		tag="allToolsHarvest"/>
+	<effect_group name="Base Effects">
+		<passive_effect operation="base_set" name="DistractionResistance"	value="0,0"/>
+		<passive_effect operation="base_set" name="PhysicalDamageResist"	value="45"/>
+		<passive_effect operation="base_set" name="HealthMax"				value="2000,3000"/>
+		<passive_effect operation="base_set" name="BuffResistance"			value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+		<triggered_effect trigger="onSelfFirstSpawn"	target="self"	action="AddBuff"	buff="buffEntitySpawnHeal"/>
+		<triggered_effect trigger="onOtherDamagedSelf"	target="self"	action="AddBuff"	buff="buffRadiatedRegen"/>
+		<triggered_effect trigger="onOtherDamagedSelf"	target="self"	action="ModifyCVar" cvar="RadiatedRegenAmount" operation="set" value="12"/>
+		<triggered_effect trigger="onSelfFirstSpawn"	target="self"	action="ModifyCVar" cvar="EntityBoss" operation="set" value="1"/>
+	</effect_group>
+</entity_class>
+<!--
+<entity_class name="ulmZombieFirefighter1" extends="zombieSoldier">
+
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,zombie,walker"/>
+	<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
+	<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
+	<property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+	<property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
+	<property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
+	<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="WalkType" value="2"/>
+	<property name="Mass" value="190"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="AIPathCostScale" value=".35, .55"/>
+
+	<property name="Mesh" value="#Mods/UndeadLegacy/Resources/ZombieFirefighter.ulm?Subquake_ZombieFirefighter1NoHelmet"/>
+	<property name="LookAtAngle" value="70"/>
+	<property name="RootObjectName" value="root"/>
+	<property name="PhysicsBody" value="EpicHumanoid"/>
+	<property name="HeadRotationType" value="Firefighter"/>
+	<property name="AvatarController" value="ULM_AvatarZombieController,UndeadLegacy"/>
+
+	<property name="MoveSpeedAggro" value="0.3, 1.35"/>
+	<property name="HandItem" value="meleeHandZombieWorker"/>
+	<property name="ExperienceGain" value="750"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="300"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+		<passive_effect name="BuffResistance" operation="base_set" value="100" tags="buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov"/>
+	</effect_group>
+
+</entity_class>-->
+
+<entity_class name="ulmZombieFirefighter" extends="zombieTemplateMale">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,zombie,walker"/>
+	<property name="Class" value="EntityULM_ZombieFirefighter,UndeadLegacy"/>
+	<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
+	<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
+	<property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+	<property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
+	<property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
+	<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
+	<!-- <property name="SoundAlert" value="demolitionzalert"/> -->
+	
+  <!-- Dismemberment
+	<property name="DismemberTag_L_HeadGore" value="Prefabs/HeadGore"/>
+    <property name="DismemberTag_L_LeftUpperLegGore" value="Prefabs/UpperLegGore"/>
+    <property name="DismemberTag_L_LeftLowerLegGore" value="Prefabs/LowerLegGore"/>
+    <property name="DismemberTag_L_RightUpperLegGore" value="Prefabs/UpperLegGore"/>
+    <property name="DismemberTag_L_RightLowerLegGore" value="Prefabs/LowerLegGore"/>
+    <property name="DismemberTag_L_LeftUpperArmGore" value="Prefabs/UpperArmGore"/>
+    <property name="DismemberTag_L_LeftLowerArmGore" value="Prefabs/LowerArmGore"/>
+    <property name="DismemberTag_L_RightUpperArmGore" value="Prefabs/UpperArmGore"/>
+    <property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/LowerArmGore"/> -->
+
+	<property name="ModelType" value="Standard"/>
+	<property name="WalkType" value="2"/>
+	<property name="Mass" value="190"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="AIPathCostScale" value=".35, .55"/>
+
+	<property name="Mesh" value="#Mods/UndeadLegacy/Resources/Subquake_Zombies.ulm?ZombieFirefighter_Subquake"/>
+	<property name="Mass" value="300"/>
+
+	<property name="AITask" value="
+	ULM_BreakBlock,UndeadLegacy|
+	DestroyArea|
+	ApproachDistraction|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachSpot|
+	Look|
+	Wander|
+	"/>
+
+	<property name="Explosion.ParticleIndex" value="2"/>
+	<property name="Explosion.RadiusBlocks" value="5"/>
+	<property name="Explosion.RadiusEntities" value="6"/>
+	<property name="Explosion.BlockDamage" value="5000"/>
+	<property name="Explosion.EntityDamage" value="800"/>
+	<property name="Explosion.DamageBonus.earth" value=".1"/>
+	<property name="ExplodeDelay" value="3"/>
+	<property name="ExplodeHealthThreshold" value="0"/> <!-- Disable Health explosion -->
+	<property name="SoundExplodeWarn" value="zombiemale2alert"/>
+	<property name="TriggerSoundExplode" value="ulmAirCompressorLeaking"/>
+	<property name="TriggerSoundHit" value="twitch_bucket_hit"/>
+	<property name="TriggerHealth" value="10"/>
+	<property name="TriggerRagdollDuration" value="3.5"/>
+	<property name="TriggerRagdollForce" value="1500"/>
+	<property name="SpawnChanceTank" value=".3"/>
+	<property name="SpawnChanceHelmet" value=".5"/>
+	<property name="SelectedSkin" value="Random"/>
+
+
+	<property name="LookAtAngle" value="70"/>
+	<property name="RootObjectName" value="root"/>
+	<property name="PhysicsBody" value="EpicHumanoid"/>
+	<property name="HeadRotationType" value="Firefighter"/>
+	<property name="AvatarController" value="ULM_AvatarZombieController,UndeadLegacy"/>
+<!--<property name="AvatarController" value="AvatarZombieController"/>-->
+
+	<!-- Gameplay zombieSoldier -->
+	<property name="MoveSpeedAggro" value="0.3, 1.35"/> <!-- fit, regular -->
+	<property name="HandItem" value="meleeHandZombieWorker"/>
+	<property name="ExperienceGain" value="750"/><!-- XP strong -->
+
+	<effect_group name="Base Effects">
+		<!--<triggered_effect trigger="onSelfFirstSpawn" action="ULM_SetRandomEntityAliveModel,UndeadLegacy" main_body="LOD0_Normal" detonator_chance=".25"/>-->
+		<passive_effect name="HealthMax" operation="base_set" value="300"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+		<!--<passive_effect name="BuffResistance" operation="base_set" value="100" tags="buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov"/>-->
+	</effect_group>
+
+</entity_class>
+
+<entity_class name="ulmZombieFirefighterFeral" extends="ulmZombieFirefighter">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,zombie,walker,feral"/>
+	<property name="Mesh" value="#Mods/UndeadLegacy/Resources/Subquake_Zombies.ulm?ZombieFirefighter_Subquake"/>
+	<effect_group name="Base Effects">
+		<!--<triggered_effect trigger="onSelfFirstSpawn" action="ULM_SetRandomEntityAliveModel,UndeadLegacy" main_body="LOD0_Feral"/>-->
+		<passive_effect name="HealthMax" operation="base_set" value="600"/>
+	</effect_group>
+</entity_class>
+
+<entity_class name="ulmZombieFirefighterRadiated" extends="ulmZombieFirefighter">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+	<property name="Mesh" value="#Mods/UndeadLegacy/Resources/Subquake_Zombies.ulm?ZombieFirefighter_Subquake"/>
+	<effect_group name="Base Effects">
+	<!--<triggered_effect trigger="onSelfFirstSpawn" action="ULM_SetRandomEntityAliveModel,UndeadLegacy" main_body="LOD0_Radiated"/>-->
+		<passive_effect name="HealthMax" operation="base_set" value="900"/>
+	</effect_group>
+</entity_class>
+
+</append>
+
+<!--
+<setattribute xpath="//entity_class[@name='animalBear']/property[@value='SetAsTargetIfHurt']" name="data">class=EntityPlayer,EntityNPC,EntityEnemyAnimal,EntityEnemyAnimalAggressive</setattribute>
+<set xpath="//entity_class[@name='animalBear']/property[@value='SetAsTargetIfHurt']/@value">ULM_SetAsTargetIfHurt,UndeadLegacy</set>
+
+<append xpath="//entity_class[@name='animalBear']/property[@value='ApproachAndAttackTarget']/@data">,EntityEnemyAnimalAggressive,0</append>
+<set xpath="//entity_class[@name='animalBear']/property[@value='ApproachAndAttackTarget']/@value">ULM_ApproachAndAttackTarget,UndeadLegacy</set>
+
+<append xpath="//entity_class[@name='animalBear']/property[@value='SetNearestEntityAsTarget']/@data">,EntityEnemyAnimalAggressive,0,0</append>
+<set xpath="//entity_class[@name='animalBear']/property[@value='SetNearestEntityAsTarget']/@value">ULM_SetNearestEntityAsTarget,UndeadLegacy</set>-->
+
+    
+</Subquake>

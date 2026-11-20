@@ -1,0 +1,1960 @@
+<Subquake>
+
+<set xpath="/progression">
+
+<level max_level="300" exp_to_level="18473" experience_multiplier="1.0404983" skill_points_per_level="1" clamp_exp_cost_at_level="60"/>
+
+<attributes min_level="0" max_level="10" base_skill_point_cost="1" cost_multiplier_per_level="1">
+
+<attribute name="attPerception" name_key="attPerceptionName" desc_key="attPerceptionDesc" icon="symbol_perception"><effect_group/></attribute>
+<attribute name="attStrength" name_key="attStrengthName" desc_key="attStrengthDesc" icon="ui_game_symbol_muscle"><effect_group/></attribute>
+<attribute name="attAgility" name_key="attAgilityName" desc_key="attAgilityDesc" icon="ui_game_symbol_agility"><effect_group/></attribute>
+<attribute name="attFortitude" name_key="attFortitudeName" desc_key="attFortitudeDesc" icon="symbol_fortitude"><effect_group/></attribute>
+<attribute name="attIntellect" name_key="attIntellectName" desc_key="attIntellectDesc" icon="symbol_intellect"><effect_group/></attribute>
+	
+<attribute name="attSkillTree"		name_key="null"																		   min_level="0" max_level="0" base_skill_point_cost="0"/>
+<attribute name="attActionSkills"	name_key="attActionSkills"	desc_key="attActionSkillsDesc"	icon="ui_game_symbol_book" min_level="0" max_level="0" base_skill_point_cost="0"/>
+<attribute name="attBooks"			name_key="attBooks"			desc_key="attBooks"				icon="ui_game_symbol_book" min_level="0" max_level="0" base_skill_point_cost="0"/>
+
+
+</attributes>
+
+<skills min_level="1" max_level="1">
+	<skill parent="attSkillTree"	name="skillTreeFiller"				name_key="null"								desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+
+	<skill parent="attPerception"	name="skillPerceptionCombat"		name_key="skillCombatPerksName"				desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attPerception"	name="skillPerceptionGeneral"		name_key="skillPerceptionGeneralName"		desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attPerception"	name="skillPerceptionScavenging"	name_key="skillPerceptionScavengingName"	desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attPerception"	name="skillPerceptionFiller"		name_key="null"								desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+
+	<skill parent="attStrength"		name="skillStrengthCombat"			name_key="skillCombatPerksName"				desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attStrength"		name="skillStrengthGeneral"			name_key="skillStrengthGeneralName"			desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attStrength"		name="skillStrengthConstruction"	name_key="skillStrengthConstructionName"	desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attStrength"		name="skillStrengthFiller"			name_key="null"								desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+
+	<skill parent="attAgility"		name="skillAgilityCombat"			name_key="skillCombatPerksName"				desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attAgility"		name="skillAgilityAthletics"		name_key="skillAgilityAthleticsName"		desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attAgility"		name="skillAgilityStealth"			name_key="skillAgilityStealthName"			desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attAgility"		name="skillAgilityFiller"			name_key="null"								desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+
+	<skill parent="attFortitude"	name="skillFortitudeCombat"			name_key="skillCombatPerksName"				desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attFortitude"	name="skillFortitudeSurvival"		name_key="skillFortitudeSurvivalName"		desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attFortitude"	name="skillFortitudeRecovery"		name_key="skillFortitudeRecoveryName"		desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attFortitude"	name="skillFortitudeFiller"			name_key="null"								desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+
+	<skill parent="attIntellect"	name="skillIntellectCombat"			name_key="skillCombatPerksName"				desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attIntellect"	name="skillIntellectInfluence"		name_key="skillIntellectInfluenceName"		desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attIntellect"	name="skillIntellectUtility"		name_key="ulmSkillUtilityName"				desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attIntellect"	name="skillIntellectFiller"			name_key="null"								desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+
+	<book_group parent="attBooks"	name="skillArtOfMining"				name_key="perkArtOfMining0Name"				desc_key="uiNull"	icon="symbol_skill_art_of_mining"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillAutoWeapons"				name_key="perkAutoWeapons0Name"				desc_key="uiNull"	icon="symbol_skill_auto_weapons"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillBatterUp"				name_key="perkBatterUp0Name"				desc_key="uiNull"	icon="symbol_skill_batter_up"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillBarBrawling"				name_key="perkBarBrawling0Name"				desc_key="uiNull"	icon="symbol_skill_bar_brawling"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillFiremansAlmanac"			name_key="perkFiremansAlmanac0Name"			desc_key="uiNull"	icon="symbol_skill_firemans_almanac"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillGreatHeist"				name_key="perkGreatHeist0Name"				desc_key="uiNull"	icon="symbol_skill_great_heist"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillHuntingJournal"			name_key="perkHuntingJournal0Name"			desc_key="uiNull"	icon="symbol_skill_hunting_journal"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillLuckyLooter"				name_key="perkLuckyLooter0Name"				desc_key="uiNull"	icon="symbol_skill_lucky_looter"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillEnforcer"				name_key="perkEnforcer0Name"				desc_key="uiNull"	icon="symbol_skill_enforcer"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillNightStalker"			name_key="perkNightStalker0Name"			desc_key="uiNull"	icon="symbol_skill_night_stalker"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillPistolPete"				name_key="perkPistolPete0Name"				desc_key="uiNull"	icon="symbol_skill_pistol_pete"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillArchery"					name_key="perkRangers0Name"					desc_key="uiNull"	icon="symbol_skill_archery"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillShotguns"				name_key="perkShotgunMessiah0Name"			desc_key="uiNull"	icon="symbol_skill_shotguns"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillSledgeSaga"				name_key="perkSledgeSaga0Name"				desc_key="uiNull"	icon="symbol_skill_sledge"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillSniper"					name_key="perkSniper0Name"					desc_key="uiNull"	icon="symbol_skill_sniper"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillSpearHunter"				name_key="perkSpearHunter0Name"				desc_key="uiNull"	icon="symbol_skill_spear_hunter"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillUrbanCombat"				name_key="perkUrbanCombat0Name"				desc_key="uiNull"	icon="symbol_skill_urban_combat"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillTechJunkie"				name_key="perkTechJunkie0Name"				desc_key="uiNull"	icon="symbol_skill_tech_junkie"><effect_group/></book_group>
+	<book_group parent="attBooks"	name="skillWasteTreasures"			name_key="perkWasteTreasures0Name"			desc_key="uiNull"	icon="symbol_skill_waste_treasures"><effect_group/></book_group>
+	
+	<skill parent="attActionSkills" name="actionSkillPerception"		name_key="ulmSkillPerception"				desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attActionSkills" name="actionSkillPerceptionFiller"	name_key="null"								desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attActionSkills" name="actionSkillStrength"			name_key="ulmSkillStrength"					desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attActionSkills" name="actionSkillStrengthFiller"	name_key="null"								desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attActionSkills" name="actionSkillDexterity"			name_key="ulmSkillDexterity"				desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attActionSkills" name="actionSkillDexterityFiller"	name_key="null"								desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attActionSkills" name="actionSkillFortitude"			name_key="ulmSkillFortitude"				desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attActionSkills" name="actionSkillFortitudeFiller"	name_key="null"								desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+	<skill parent="attActionSkills" name="actionSkillIntellect"			name_key="ulmSkillIntellect"				desc_key="uiNull"	icon="ui_empty"><effect_group/></skill>
+
+</skills>
+
+<perks min_level="0" max_level="5" base_skill_point_cost="1" cost_multiplier_per_level="1" max_level_ratio_to_parent="5">
+
+<perk name="perkDeadEye" parent="skillPerceptionCombat" name_key="perkDeadEyeName" desc_key="perkDeadEyeDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkArchery" parent="skillPerceptionCombat" name_key="perkArcheryName" desc_key="perkArcheryDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkJavelinMaster" parent="skillPerceptionCombat" name_key="perkPolearms" desc_key="perkPolearmsDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkPenetrator" parent="skillPerceptionCombat" name_key="perkPenetratorName" desc_key="perkPenetratorDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkAnimalTracker" parent="skillPerceptionGeneral" name_key="perkAnimalTrackerName" desc_key="perkAnimalTrackerDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkTheHuntsman" parent="skillPerceptionGeneral" name_key="perkTheHuntsmanName" desc_key="perkTheHuntsmanDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkLivingOffTheLand" parent="skillPerceptionScavenging" name_key="perkLivingOffTheLandName" desc_key="perkLivingOffTheLandDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkLuckyLooter" parent="skillPerceptionScavenging" name_key="perkLuckyLooterName" desc_key="perkLuckyLooterDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkTreasureHunter" parent="skillPerceptionScavenging" name_key="perkTreasureHunterName" desc_key="perkTreasureHunterDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkMachineGunner" parent="skillStrengthCombat" name_key="perkMachineGunnerName" desc_key="perkMachineGunnerDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkPummelPete" parent="skillStrengthCombat" name_key="perkPummelPeteName" desc_key="perkPummelPeteDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkSkullCrusher" parent="skillStrengthCombat" name_key="perkSkullCrusherName" desc_key="perkSkullCrusherDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkSexualTrex" parent="skillStrengthCombat" name_key="perkSexualTrexName" desc_key="perkSexualTrexDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkHeavyArmor" parent="skillStrengthGeneral" name_key="perkHeavyArmorName" desc_key="perkHeavyArmorDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkPackMule" parent="skillStrengthGeneral" name_key="perkPackMuleName" desc_key="perkPackMuleDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkMiner69r" parent="skillStrengthConstruction" name_key="perkMiner69rName" desc_key="perkMiner69rDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkMotherLode" parent="skillStrengthConstruction" name_key="perkMotherLodeName" desc_key="perkMotherLodeDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkGunslinger" parent="skillAgilityCombat" max_level="5" name_key="perkGunslingerName" desc_key="perkGunslingerDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkDeepCuts" parent="skillAgilityCombat" name_key="perkDeepCutsName" desc_key="perkDeepCutsDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkRunAndGun" parent="skillAgilityCombat" name_key="perkRunAndGunName" desc_key="perkRunandGunDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkFlurryOfBlows" parent="skillAgilityCombat" name_key="perkFlurryOfBlowsName" desc_key="perkFlurryOfBlowsDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkLightArmor" parent="skillAgilityAthletics" name_key="perkLightArmorName" desc_key="perkLightArmorDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkRuleOneCardio" parent="skillAgilityAthletics" name_key="perkRuleOneCardioName" desc_key="perkRuleOneCardioDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkParkour" parent="skillAgilityAthletics" name_key="perkParkourName" desc_key="perkParkourDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkHiddenStrike" parent="skillAgilityStealth" name_key="perkHiddenStrikeName" desc_key="perkHiddenStrikeDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkFromTheShadows" parent="skillAgilityStealth" name_key="perkFromTheShadowsName" desc_key="perkFromTheShadowsDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkBoomstick" parent="skillFortitudeCombat" name_key="perkBoomstickName" desc_key="perkBoomstickDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkBrawler" parent="skillFortitudeCombat" name_key="perkBrawlerName" desc_key="perkBrawlerDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkPainTolerance" parent="skillFortitudeCombat" name_key="perkPainToleranceName" desc_key="perkPainToleranceDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="ulmPerkGiftOfLife" parent="skillFortitudeSurvival" name_key="ulmPerkGiftOfLifeName" desc_key="ulmPerkGiftOfLifeDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkInfiltrator" parent="skillFortitudeSurvival" name_key="perkInfiltratorName" desc_key="perkInfiltratorDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkWellInsulated" parent="skillFortitudeSurvival" name_key="perkWellInsulatedName" desc_key="perkWellInsulatedDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkSlowMetabolism" parent="skillFortitudeSurvival" name_key="perkSlowMetabolismName" desc_key="perkSlowMetabolismDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="ulmPerkMithridatism" parent="skillFortitudeSurvival" name_key="ulmPerkMithridatism" desc_key="ulmPerkMithridatismDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkHealingFactor" parent="skillFortitudeRecovery" name_key="perkHealingFactorName" desc_key="perkHealingFactorDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkPhysician" parent="skillFortitudeRecovery" name_key="perkPhysicianName" desc_key="perkPhysicianDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="ulmPerkSubmachineGuns" parent="skillIntellectCombat" name_key="ulmPerkSubmachineGunsName" desc_key="ulmPerkSubmachineGunsDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkDemolitionsExpert" parent="skillIntellectCombat" name_key="perkDemolitionsExpertName" desc_key="perkDemolitionsExpertDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkElectrocutioner" parent="skillIntellectCombat" name_key="perkElectrocutioner" desc_key="perkElectrocutionerDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkTurrets" parent="skillIntellectCombat" name_key="perkTurretsName" desc_key="perkTurretsDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkSalvageOperations" parent="skillIntellectUtility" name_key="perkSalvageOperationsName" desc_key="perkSalvageOperationsDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkLockPicking" parent="skillIntellectUtility" name_key="perkLockPickingName" desc_key="perkLockPickingDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="ulmPerkDroneSpecialist" parent="skillIntellectUtility" name_key="ulmPerkDroneSpecialistName" desc_key="ulmPerkDroneSpecialistDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkBetterBarter" parent="skillIntellectInfluence" name_key="perkBetterBarterName" desc_key="perkBetterBarterDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkDaringAdventurer" parent="skillIntellectInfluence" name_key="perkDaringAdventurerName" desc_key="perkDaringAdventurerDesc" icon="ui_empty"><effect_group/></perk>
+<perk name="perkCharismaticNature" parent="skillIntellectInfluence" name_key="perkCharismaticNatureName" desc_key="perkCharismaticNatureDesc" icon="ui_empty"><effect_group/></perk>
+
+<!--
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+                C O L L E C T I B L E   B O O K S / M A G A Z I N E S
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+-->
+	
+<book name="perkFiremansAlmanacHeat" parent="skillFiremansAlmanac" max_level="1" base_skill_point_cost="0" desc_key="ulmBookFiremansAlmanac1Desc">
+	<effect_group>
+		<passive_effect name="EntityDamage" operation="base_add" level="1" value="2" tags="axe"/>
+	</effect_group></book>
+<book name="perkFiremansAlmanacAxes" parent="skillFiremansAlmanac" max_level="1" base_skill_point_cost="0" desc_key="ulmBookFiremansAlmanac2Desc">
+	<effect_group>
+		<!-- DOES NOTHING -->
+	</effect_group></book>
+<book name="perkFiremansAlmanacSpeed" parent="skillFiremansAlmanac" max_level="1" base_skill_point_cost="0" desc_key="ulmBookFiremansAlmanac3Desc">
+	<effect_group>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" level="1" value=".05" tags="axe"/>
+	</effect_group></book>
+<book name="perkFiremansAlmanacMolotov" parent="skillFiremansAlmanac" max_level="1" base_skill_point_cost="0" desc_key="ulmBookFiremansAlmanac4Desc">
+	<effect_group> 
+		<!-- effect is on thrownAmmoMolotovCocktail -->
+	</effect_group></book>
+<book name="perkFiremansAlmanacPrevention" parent="skillFiremansAlmanac" max_level="1" base_skill_point_cost="0" desc_key="ulmBookFiremansAlmanac5Desc">
+	<effect_group>
+		<passive_effect name="BuffResistance" operation="base_add" level="1" value="0.25" tags="buffBurningMolotov,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack"/>
+	</effect_group></book>
+<book name="perkFiremansAlmanacHarvest" parent="skillFiremansAlmanac" max_level="1" base_skill_point_cost="0" desc_key="ulmBookFiremansAlmanac6Desc">
+	<effect_group>
+		<passive_effect name="BlockDamage" operation="perc_add" level="1" value="0.1" tags="coalBurnedDmg"/>
+	</effect_group></book>
+<book name="perkFiremansAlmanacEquipment" parent="skillFiremansAlmanac" max_level="1" base_skill_point_cost="0" desc_key="ulmBookFiremansAlmanac7Desc">
+	<effect_group>
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" level="1" value="-.25" tags="vehicle"/>
+	</effect_group></book>
+<book name="perkFiremansAlmanacComplete" parent="skillFiremansAlmanac" max_level="1" base_skill_point_cost="0" desc_key="ulmBookFiremansAlmanacCompleteDesc">
+	<effect_group>
+		<requirement name="InBiome" biome="8"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" level="1" value="0.2" tags="running"/>
+		<passive_effect name="StatWeightMax" operation="base_add" level="1" value="50"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="InBiome" biome="9"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" level="1" value="0.2" tags="running"/>
+		<passive_effect name="StatWeightMax" operation="base_add" level="1" value="50"/>
+	</effect_group></book>
+
+<!-- NightStalker = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkNightStalkerStealthDamage" parent="skillNightStalker" max_level="1" base_skill_point_cost="0" desc_key="ulmBookNightStalker1Desc">
+	<effect_group>
+		<requirement name="IsNight"/>
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="_notAlerted" operation="Equals" value="1" target="other"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1"/>
+	</effect_group>
+</book>
+
+<book name="perkNightStalkerSilentNight" parent="skillNightStalker" max_level="1" base_skill_point_cost="0" desc_key="ulmBookNightStalker2Desc">
+	<effect_group>
+		<requirement name="IsNight"/>
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+			<passive_effect name="LightMultiplier" operation="perc_add" level="1" value="-.05"/>
+			<passive_effect name="NoiseMultiplier" operation="perc_add" level="1" value="-.05"/>
+	</effect_group>
+</book>
+
+<book name="perkNightStalkerBlades" parent="skillNightStalker" max_level="1" base_skill_point_cost="0" desc_key="ulmBookNightStalker3Desc">
+	<effect_group>
+		<requirement name="IsNight"/>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1" tags="perkDeepCuts"/>
+	</effect_group>
+</book>
+
+<book name="perkNightStalkerThiefAdrenaline" parent="skillNightStalker" max_level="1" base_skill_point_cost="0" desc_key="ulmBookNightStalker4Desc">
+	<effect_group>
+		<requirement name="ProgressionLevel" progression_name="perkNightStalkerThiefAdrenaline" operation="Equals" value="1"/>
+		<requirement name="IsNight"/>
+		<passive_effect name="StatWeightMax" operation="base_add" value="50"/>
+	</effect_group>
+</book>
+
+<book name="perkNightStalkerArchery" parent="skillNightStalker" max_level="1" base_skill_point_cost="0" desc_key="ulmBookNightStalker5Desc">
+	<effect_group>
+		<requirement name="IsNight"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1" tags="bow,crossbow"/>
+	</effect_group>
+</book>
+
+<book name="perkNightStalkerTwilightThief" parent="skillNightStalker" max_level="1" base_skill_point_cost="0" desc_key="ulmBookNightStalker6Desc">
+	<effect_group>
+		<requirement name="IsNight"/>
+		<passive_effect name="PlayerExpGain" operation="perc_add" level="1" value=".05" tags="Kill"/>
+	</effect_group>
+</book>
+
+<book name="perkNightStalkerSlumberParty" parent="skillNightStalker" max_level="1" base_skill_point_cost="0" desc_key="ulmBookNightStalker7Desc">
+	<effect_group>
+		<requirement name="IsNight"/>
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		<requirement name="IsSleeping" target="other"/>
+		<requirement name="CVarCompare" cvar="_notAlerted" operation="Equals" value="1" target="other"/>
+			<passive_effect name="DamageBonus" operation="base_add" level="1" value=".5"/> <!--For UI-->
+			<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".5"/>
+	</effect_group>
+</book>
+
+<book name="perkNightStalkerComplete" parent="skillNightStalker" max_level="1" base_skill_point_cost="0" desc_key="perkNightStalkerCompleteDesc" long_desc_key="perkNightStalkerCompleteLongDesc">
+	<effect_group>
+		<requirement name="IsNight"/>
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1" value="2" tags="knife"/>
+	</effect_group>
+</book>
+
+<!-- LuckyLooter = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkLuckyLooterDukes" parent="skillLuckyLooter" max_level="1" base_skill_point_cost="0" desc_key="ulmBookLuckyLooter1Desc">
+	<effect_group>
+		<passive_effect name="LootQuantity" operation="perc_add" level="1" value=".2" tags="dukes"/>
+	</effect_group>
+</book>
+<book name="perkLuckyLooterAmmunition" parent="skillLuckyLooter" max_level="1" base_skill_point_cost="0" desc_key="ulmBookLuckyLooter2Desc">
+	<effect_group>
+		<passive_effect name="LootQuantity" operation="perc_add" level="1" value=".2" tags="ammo"/>
+	</effect_group>
+</book>
+<book name="perkLuckyLooterBrass" parent="skillLuckyLooter" max_level="1" base_skill_point_cost="0" desc_key="ulmBookLuckyLooter3Desc">
+	<effect_group>
+		<passive_effect name="LootQuantity" operation="perc_add" level="1" value=".2" tags="brass"/>
+	</effect_group>
+</book>
+<book name="perkLuckyLooterLead" parent="skillLuckyLooter" max_level="1" base_skill_point_cost="0" desc_key="ulmBookLuckyLooter4Desc">
+	<effect_group>
+		<passive_effect name="LootQuantity" operation="perc_add" level="1" value=".2" tags="lead"/>
+	</effect_group>
+</book>
+<book name="perkLuckyLooterBooks" parent="skillLuckyLooter" max_level="1" base_skill_point_cost="0" desc_key="ulmBookLuckyLooter5Desc">
+	<effect_group>
+		<passive_effect name="LootQuantity" operation="perc_add" level="1" value=".2" tags="junk"/>
+	</effect_group>
+</book>
+<book name="perkLuckyLooterFood" parent="skillLuckyLooter" max_level="1" base_skill_point_cost="0" desc_key="ulmBookLuckyLooter6Desc">
+	<effect_group>
+		<passive_effect name="LootQuantity" operation="perc_add" level="1" value=".2" tags="food"/>
+	</effect_group>
+</book>
+<book name="perkLuckyLooterMedical" parent="skillLuckyLooter" max_level="1" base_skill_point_cost="0" desc_key="ulmBookLuckyLooter7Desc">
+	<effect_group>
+		<passive_effect name="LootQuantity" operation="perc_add" level="1" value=".2" tags="medical"/>
+	</effect_group>
+</book>
+<book name="perkLuckyLooterComplete" parent="skillLuckyLooter" max_level="1" base_skill_point_cost="0" desc_key="ulmBookLuckyLooterCompleteDesc">
+	<effect_group>
+		<passive_effect name="LootDropProb" operation="perc_add" level="1" value=".2"/>
+	</effect_group>
+</book>
+
+<!-- Enforcer = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkEnforcerDamage" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" desc_key="ulmBookEnforcer1Desc">
+	<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1" tags="perkEnforcer"/>
+	</effect_group>
+</book>
+<book name="perkEnforcerApparel" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" desc_key="ulmBookEnforcer2Desc">
+	<effect_group>
+		<!-- effect is on armorEnforcerOutfit -->
+	</effect_group>
+</book>
+<book name="perkEnforcerPunks" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" desc_key="ulmBookEnforcer3Desc">
+	<effect_group>
+		<requirement name="RoundsInMagazine" operation="LTE" value="0"/>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1" value="1" tags="perkEnforcer"/>
+	</effect_group>
+</book>
+<book name="perkEnforcerIntimidation" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" desc_key="ulmBookEnforcer4Desc">
+	<effect_group>
+		<requirement name="HoldingItemHasTags" tags="perkEnforcer"/>
+		<passive_effect name="BarteringBuying" operation="base_add" level="1" value=".05"/>
+		<passive_effect name="BarteringSelling" operation="base_add" level="1" value=".05"/>
+	</effect_group>
+</book>
+<book name="perkEnforcerAPAmmo" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" desc_key="ulmBookEnforcer5Desc">
+	<effect_group>
+		<!-- effect is on ammo44MagnumBulletAP -->
+	</effect_group>
+</book>
+<book name="perkEnforcerHPAmmo" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" desc_key="ulmBookEnforcer6Desc">
+	<effect_group>
+		<!-- effect is on ammo44MagnumBulletHP -->
+	</effect_group>
+</book>
+<book name="perkEnforcerCriminalPursuit" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" desc_key="ulmBookEnforcer7Desc">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="perkEnforcer"/>
+		<requirement name="ProgressionLevel" progression_name="perkEnforcerCriminalPursuit" operation="Equals" value="1"/>
+		<triggered_effect trigger="onCombatEntered" action="AddBuff" buff="buffEnforcerCriminalPursuit"/>
+	</effect_group>
+</book>
+<book name="perkEnforcerComplete" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" desc_key="ulmBookEnforcerCompleteDesc">
+	<effect_group>
+	</effect_group>
+</book>
+
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkBatterUpBigHits" parent="skillBatterUp" max_level="1" base_skill_point_cost="0" desc_key="ulmBookBatterUp1Desc">
+	<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1" tags="club"/>
+	</effect_group>
+</book>
+<book name="perkBatterUpStealingBases" parent="skillBatterUp" max_level="1" base_skill_point_cost="0" desc_key="ulmBookBatterUp2Desc">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="club"/>
+		<requirement name="ProgressionLevel" progression_name="perkBatterUpStealingBases" operation="Equals" value="1"/>
+		<triggered_effect trigger="onCombatEntered" action="AddBuff" buff="buffBatterupStealingBases"/>
+	</effect_group>
+</book>
+<book name="perkBatterUpSlowPitch" parent="skillBatterUp" max_level="1" base_skill_point_cost="0" desc_key="ulmBookBatterUp3Desc">
+	<effect_group>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffBatterUpSlowDown">
+			<requirement name="ItemHasTags" tags="club"/>
+			<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
+			<requirement name="ProgressionLevel" progression_name="perkBatterUpSlowPitch" operation="Equals" value="1"/>
+		</triggered_effect>
+	</effect_group>
+</book>
+<book name="perkBatterUpKnockdown" parent="skillBatterUp" max_level="1" base_skill_point_cost="0" desc_key="ulmBookBatterUp4Desc">
+	<effect_group>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+			<requirement name="ItemHasTags" tags="club"/>
+			<requirement name="ProgressionLevel" progression_name="perkBatterUpKnockdown" operation="Equals" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="5"/>
+		</triggered_effect>
+	</effect_group>
+</book>
+<book name="perkBatterUpMaintenance" parent="skillBatterUp" max_level="1" base_skill_point_cost="0" desc_key="ulmBookBatterUp5Desc">
+	<effect_group>
+		<passive_effect name="DegradationPerUse" operation="perc_add" level="1" value="-.2" tags="club"/>
+	</effect_group>
+</book>
+<book name="perkBatterUpFoulBalls" parent="skillBatterUp" max_level="1" base_skill_point_cost="0" desc_key="ulmBookBatterUp6Desc">
+	<effect_group>
+		<triggered_effect trigger="onSelfSecondaryActionRayHit" action="Ragdoll" target="other" duration="2.5" force="350">
+			<requirement name="ItemHasTags" tags="perkPummelPete"/>
+			<requirement name="ProgressionLevel" progression_name="perkBatterUpFoulBalls" operation="Equals" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+		</triggered_effect>
+	</effect_group>
+</book>
+<book name="perkBatterUpMetalChain" parent="skillBatterUp" max_level="1" base_skill_point_cost="0" desc_key="ulmBookBatterUp7Desc">
+	<effect_group>
+		<!-- Effect handled on the modMeleeClubMetalChain mod itself -->
+	</effect_group>
+</book>
+<book name="perkBatterUpComplete" parent="skillBatterUp" max_level="1" base_skill_point_cost="0" desc_key="ulmBookBatterUpCompleteDesc">
+	<effect_group>
+		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="25">
+			<requirement name="ProgressionLevel" progression_name="perkBatterUpComplete" operation="Equals" value="1"/>
+			<requirement name="ItemHasTags" tags="club"/>
+			<requirement name="IsSecondaryAttack"/>
+		</triggered_effect>
+	</effect_group>
+</book>
+
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkGreatHeistSafes" parent="skillGreatHeist" max_level="1" base_skill_point_cost="0" desc_key="ulmBookGreatHeist1Desc">
+	<effect_group>
+		<passive_effect name="BlockDamage" operation="perc_add" level="1" value=".1" tags="safes"/>
+	</effect_group>
+</book>
+<book name="perkGreatHeistGems" parent="skillGreatHeist" max_level="1" base_skill_point_cost="0" desc_key="ulmBookGreatHeist2Desc">
+	<effect_group>
+		<passive_effect name="LootQuantity" operation="perc_add" level="1" value=".2" tags="gems"/>
+	</effect_group>
+</book>
+<book name="perkGreatHeistGoldRush" parent="skillGreatHeist" max_level="1" base_skill_point_cost="0" desc_key="ulmBookGreatHeist3Desc">
+	<effect_group>
+		<passive_effect name="LootQuantity" operation="perc_add" level="1" value=".1" tags="dukes"/>
+		<passive_effect name="LootQuantity" operation="perc_add" level="1" value=".1" tags="money"/>
+	</effect_group>
+</book>
+<book name="perkGreatHeistClaimed" parent="skillGreatHeist" max_level="1" base_skill_point_cost="0" desc_key="ulmBookGreatHeist4Desc">
+	<effect_group>
+		<passive_effect name="LandClaimDamageModifier" operation="perc_subtract" level="1" value="0.2" />
+	</effect_group>
+</book>
+<book name="perkGreatHeistAdrenalineFall" parent="skillGreatHeist" max_level="1" base_skill_point_cost="0" desc_key="ulmBookGreatHeist5Desc">
+	<effect_group>
+		<!-- effect is in  buffPlayerFallingDamage -->
+	</effect_group>
+</book>
+<book name="perkGreatHeistSprintSneak" parent="skillGreatHeist" max_level="1" base_skill_point_cost="0" desc_key="ulmBookGreatHeist6Desc">
+	<effect_group>
+		<!-- effect is in  entityclasses.xml -->
+	</effect_group>
+</book>
+<book name="perkGreatHeistMotionDetection" parent="skillGreatHeist" max_level="1" base_skill_point_cost="0" desc_key="ulmBookGreatHeist7Desc">
+	<effect_group>
+		<passive_effect name="TurretWakeUp" operation="base_set" level="1" value="3"/>
+	</effect_group>
+</book>
+<book name="perkGreatHeistComplete" parent="skillGreatHeist" max_level="1" base_skill_point_cost="0" desc_key="ulmBookGreatHeistCompleteDesc">
+	<effect_group>
+		<passive_effect name="LockPickTier" operation="base_add" level="1" value="25"/>
+		<passive_effect name="LockPickDurability" operation="perc_add" level="1" value=".25"/>
+	</effect_group>
+</book>
+
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkWasteTreasuresHoney" parent="skillWasteTreasures" max_level="1" base_skill_point_cost="0" desc_key="ulmBookWasteTreasures1Desc">
+	<effect_group>
+			<passive_effect name="HarvestCount" operation="base_set" level="1" value="1" tags="WasteTreasuresHoneyHarvest"/>
+	</effect_group>
+</book>
+<book name="perkWasteTreasuresCoffins" parent="skillWasteTreasures" max_level="1" base_skill_point_cost="0" desc_key="ulmBookWasteTreasures2Desc">
+	<effect_group>
+		<passive_effect name="HarvestCount" operation="base_set" level="1" value="1" tags="WasteTreasuresCoffinHarvest"/>
+	</effect_group>
+</book>
+<book name="perkWasteTreasuresAcid" parent="skillWasteTreasures" max_level="1" base_skill_point_cost="0" desc_key="ulmBookWasteTreasures3Desc">
+	<effect_group>
+		<passive_effect name="HarvestCount" operation="base_set" level="1" value="1" tags="WasteTreasuresAcidHarvest"/>
+	</effect_group>
+</book>
+<book name="perkWasteTreasuresWater" parent="skillWasteTreasures" max_level="1" base_skill_point_cost="0" desc_key="ulmBookWasteTreasures4Desc">
+	<effect_group>
+		<!-- DOES NOTHING -->
+	</effect_group>
+</book>
+<book name="perkWasteTreasuresDoors" parent="skillWasteTreasures" max_level="1" base_skill_point_cost="0" desc_key="ulmBookWasteTreasures5Desc">
+	<effect_group>
+		<passive_effect name="HarvestCount" operation="base_set" level="1" value="1" tags="WasteTreasuresDoorHarvest"/>
+	</effect_group>
+</book>
+<book name="perkWasteTreasuresCloth" parent="skillWasteTreasures" max_level="1" base_skill_point_cost="0" desc_key="ulmBookWasteTreasures6Desc">
+	<effect_group>
+		<passive_effect name="CraftingTier" operation="base_add" level="0,1" value="0,1" tags="perkWasteTreasuresCloth"/>
+	</effect_group>
+</book>
+<book name="perkWasteTreasuresSinks" parent="skillWasteTreasures" max_level="1" base_skill_point_cost="0" desc_key="ulmBookWasteTreasures7Desc">
+	<effect_group>
+		<passive_effect name="HarvestCount" operation="base_set" level="1" value="1" tags="WasteTreasuresSinkHarvest"/>
+	</effect_group>
+</book>
+<book name="perkWasteTreasuresComplete" parent="skillWasteTreasures" max_level="1" base_skill_point_cost="0" desc_key="ulmBookWasteTreasuresCompleteDesc">
+	<effect_group>
+		<passive_effect name="LootQuantity" operation="perc_add" level="1" value=".1" tags="dukes"/>
+		<passive_effect name="LootQuantity" operation="perc_add" level="1" value=".1" tags="money"/>
+	</effect_group>
+</book>
+
+<!-- HuntingJournal = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkHuntingJournalBears" parent="skillHuntingJournal" max_level="1" base_skill_point_cost="0" desc_key="ulmBookHuntingJournal1Desc">
+	<effect_group>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1">
+			<requirement name="EntityTagCompare" target="other" tags="bear"/>
+		</passive_effect>
+	</effect_group>
+</book>
+<book name="perkHuntingJournalWolves" parent="skillHuntingJournal" max_level="1" base_skill_point_cost="0" desc_key="ulmBookHuntingJournal2Desc">
+	<effect_group>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1">
+			<requirement name="EntityTagCompare" target="other" tags="wolf,coyote"/>
+		</passive_effect>
+	</effect_group>
+</book>
+<book name="perkHuntingJournalCoyotes" parent="skillHuntingJournal" max_level="1" base_skill_point_cost="0" desc_key="ulmBookHuntingJournal3Desc">
+	<effect_group>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1">
+			<requirement name="EntityTagCompare" target="other" tags="scorpion"/>
+		</passive_effect>
+	</effect_group>
+</book>
+<book name="perkHuntingJournalMountainLions" parent="skillHuntingJournal" max_level="1" base_skill_point_cost="0" desc_key="ulmBookHuntingJournal4Desc">
+	<effect_group>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1">
+			<requirement name="EntityTagCompare" target="other" tags="mountainlion"/>
+		</passive_effect>
+	</effect_group>
+</book>
+<book name="perkHuntingJournalDeer" parent="skillHuntingJournal" max_level="1" base_skill_point_cost="0" desc_key="ulmBookHuntingJournal5Desc">
+	<effect_group>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1">
+			<requirement name="EntityTagCompare" target="other" tags="deer,boar"/>
+		</passive_effect>
+	</effect_group>
+</book>
+<book name="perkHuntingJournalVultures" parent="skillHuntingJournal" max_level="1" base_skill_point_cost="0" desc_key="ulmBookHuntingJournal6Desc">
+	<effect_group>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1">
+			<requirement name="EntityTagCompare" target="other" tags="dog,vulture"/>
+		</passive_effect>
+	</effect_group>
+</book>
+<book name="perkHuntingJournalSelfDefense" parent="skillHuntingJournal" max_level="1" base_skill_point_cost="0" desc_key="ulmBookHuntingJournal7Desc">
+	<effect_group>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1">
+			<requirement name="EntityTagCompare" target="other" tags="human,zombie"/>
+			<requirement name="!EntityTagCompare" target="other" tags="bear,wolf,dog,coyote,mountainlion,deer,vulture,scorpion"/>
+		</passive_effect>
+	</effect_group>
+</book>
+<book name="perkHuntingJournalComplete" parent="skillHuntingJournal" max_level="1" base_skill_point_cost="0" desc_key="ulmBookHuntingJournalCompleteDesc">
+	<effect_group>
+		<passive_effect name="HarvestCount" operation="perc_add" level="1" value=".2" tags="butcherHarvest"/>
+	</effect_group>
+</book>
+
+<!-- ArtOfMining = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkArtOfMiningLuckyStrike" parent="skillArtOfMining" max_level="1" base_skill_point_cost="0" desc_key="ulmBookArtOfMining1Desc">
+	<effect_group>
+		<passive_effect name="HarvestCount" operation="base_set" level="1" value="1" tags="artOfMiningLuckyStrikeHarvest"/>
+	</effect_group>
+</book>
+<book name="perkArtOfMiningDiamondTools" parent="skillArtOfMining" max_level="1" base_skill_point_cost="0" desc_key="ulmBookArtOfMining2Desc">
+	<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1" tags="miningTool"/>
+	</effect_group>
+</book>
+<book name="perkArtOfMiningCoffee" parent="skillArtOfMining" max_level="1" base_skill_point_cost="0" desc_key="ulmBookArtOfMining3Desc">
+	<effect_group>
+		<requirement name="HasBuff" buff="buffCoffee"/>
+		<requirement name="ItemHasTags" tags="miningTool"/>
+			<passive_effect name="HarvestCount" operation="perc_add" level="1" value=".2" tags="oreHarvest"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="HasBuff" buff="buffBlackStrapCoffee"/>
+		<requirement name="ItemHasTags" tags="miningTool"/>
+			<passive_effect name="HarvestCount" operation="perc_add" level="1" value=".2" tags="oreHarvest"/>
+	</effect_group>
+</book>
+<book name="perkArtOfMiningBlackStrap" parent="skillArtOfMining" max_level="1" base_skill_point_cost="0" desc_key="ulmBookArtOfMining4Desc">
+	<effect_group>
+		<!-- Coffee effect lasts twice as long - managed on the items themselves -->
+	</effect_group>
+</book>
+<book name="perkArtOfMiningPallets" parent="skillArtOfMining" max_level="1" base_skill_point_cost="0" desc_key="ulmBookArtOfMining5Desc">
+	<effect_group>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ulmBackpackMiner"/>
+	</effect_group>
+</book>
+<book name="perkArtOfMiningAvalanche" parent="skillArtOfMining" max_level="1" base_skill_point_cost="0" desc_key="ulmBookArtOfMining6Desc">
+	<effect_group>
+		<passive_effect name="FallingBlockDamage" operation="perc_add" level="1" value="-.5" />
+	</effect_group>
+</book>
+<book name="perkArtOfMiningDamage" parent="skillArtOfMining" max_level="1" base_skill_point_cost="0" desc_key="ulmBookArtOfMining7Desc">
+	<effect_group>
+			<passive_effect name="BlockDamage" operation="perc_add" level="1" value=".1" tags="miningTool"/>
+	</effect_group>
+</book>
+<book name="perkArtOfMiningComplete" parent="skillArtOfMining" max_level="1" base_skill_point_cost="0" desc_key="ulmBookArtOfMiningCompleteDesc">
+	<effect_group>
+		<passive_effect name="HarvestCount" operation="perc_add" level="1" value=".2" tags="oreHarvest"/>
+	</effect_group>
+</book>
+
+<!-- Rangers = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkRangersArrowRecovery" parent="skillArchery" max_level="1" base_skill_point_cost="0" desc_key="ulmBookRangers1Desc">
+	<effect_group>
+		<passive_effect name="ProjectileStickChance" operation="perc_add" level="1" value=".25"/>
+	</effect_group>
+</book>
+<book name="perkRangersExplodingBolts" parent="skillArchery" max_level="1" base_skill_point_cost="0" desc_key="ulmBookRangers2Desc">
+	<effect_group>
+		<!-- effect is on ammoArrowExploding and ammoCrossbowBoltExploding -->
+	</effect_group>
+</book>
+<book name="perkRangersCripplingShot" parent="skillArchery" max_level="1" base_skill_point_cost="0" desc_key="ulmBookRangers3Desc">
+	<effect_group>
+		<!-- perkRangersCripplingShot, Shots to the leg with arrows slow your opponent -->
+		<requirement name="ItemHasTags" tags="archery"/>
+		<requirement name="ProgressionLevel" progression_name="perkRangersCripplingShot" operation="Equals" value="1"/>
+		<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
+			<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffInjuryCrippled01"/>
+	</effect_group>
+</book>
+<book name="perkRangersAPAmmo" parent="skillArchery" max_level="1" base_skill_point_cost="0" desc_key="ulmBookRangers4Desc">
+	<effect_group>
+		<!-- effect is on ammoArrowSteelAP and ammoCrossbowBoltSteelAP -->
+	</effect_group>
+</book>
+<book name="perkRangersFlamingArrows" parent="skillArchery" max_level="1" base_skill_point_cost="0" desc_key="ulmBookRangers5Desc">
+	<effect_group>
+		<!-- effect is on ammoArrowFlaming and ammoCrossbowBoltFlaming -->
+	</effect_group>
+</book>
+<book name="perkRangersForestGuide" parent="skillArchery" max_level="1" base_skill_point_cost="0" desc_key="ulmBookRangers6Desc">
+	<effect_group>
+			<passive_effect name="DegradationPerUse" operation="perc_add" level="1" value="-.2" tags="bow,crossbow"/>
+	</effect_group>
+</book>
+<book name="perkRangersKnockdown" parent="skillArchery" max_level="1" base_skill_point_cost="0" desc_key="ulmBookRangers7Desc">
+	<effect_group>
+	<!-- perkRangersKnockdown, Successful sneak attacks with arrows have a 20% greater chance of knocking down the target -->
+		<requirement name="ItemHasTags" tags="archery"/>
+		<requirement name="ProgressionLevel" progression_name="perkRangersKnockdown" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="_notAlerted" operation="Equals" value="1" target="other"/>
+		<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+			<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffInjuryKnockdown01"/>
+	</effect_group>
+</book>
+<book name="perkRangersComplete" parent="skillArchery" max_level="1" base_skill_point_cost="0" desc_key="ulmBookRangersCompleteDesc">
+	<effect_group>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1" tags="archery"/>
+	</effect_group>
+</book>
+
+<!-- PistolPete = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkPistolPeteTakeAim" parent="skillPistolPete" max_level="1" base_skill_point_cost="0" desc_key="ulmBookPistolPete1Desc">
+	<effect_group>
+		<requirement name="HasBuff" buff="buffHoldBreathAiming01"/>
+		<passive_effect name="MaxRange" operation="perc_add" level="1" value=".2" tags="pistol"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" level="1" value=".2" tags="pistol"/>
+	</effect_group>
+</book>
+<book name="perkPistolPeteSwissKnees" parent="skillPistolPete" max_level="1" base_skill_point_cost="0" desc_key="ulmBookPistolPete2Desc">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="9mmGun"/>
+		<requirement name="ProgressionLevel" progression_name="perkPistolPeteSwissKnees" operation="Equals" value="1"/>
+		<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker" buff="buffPistolPeteSwissKnees"/>
+	</effect_group>
+</book>
+<book name="perkPistolPeteSteadyHand" parent="skillPistolPete" max_level="1" base_skill_point_cost="0" desc_key="ulmBookPistolPete3Desc">
+	<effect_group>
+			<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" level="1" value="-.1" tags="pistol"/>
+	</effect_group>
+</book>
+<book name="perkPistolPeteMaintenance" parent="skillPistolPete" max_level="1" base_skill_point_cost="0" desc_key="ulmBookPistolPete4Desc">
+	<effect_group>
+			<passive_effect name="DegradationPerUse" operation="perc_add" level="1" value="-.2" tags="pistol"/>
+	</effect_group>
+</book>
+<book name="perkPistolPeteHPAmmo" parent="skillPistolPete" max_level="1" base_skill_point_cost="0" desc_key="ulmBookPistolPete5Desc">
+	<effect_group>
+		<!-- effect is on ammo9mmBulletHP -->
+	</effect_group>
+</book>
+<book name="perkPistolPeteAPAmmo" parent="skillPistolPete" max_level="1" base_skill_point_cost="0" desc_key="ulmBookPistolPete6Desc">
+	<effect_group>
+		<!-- effect is on ammo9mmBulletAP -->
+	</effect_group>
+</book>
+<book name="perkPistolPeteDamage" parent="skillPistolPete" max_level="1" base_skill_point_cost="0" desc_key="ulmBookPistolPete7Desc">
+	<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1" tags="pistol"/>
+	</effect_group>
+</book>
+<book name="perkPistolPeteComplete" parent="skillPistolPete" max_level="1" base_skill_point_cost="0" desc_key="ulmBookPistolPeteCompleteDesc">
+	<effect_group>
+		<passive_effect name="TargetArmor" operation="perc_add" level="1" value="-.2">
+			<requirement name="ItemHasTags" tags="pistol"/>
+			<requirement name="TargetRange" target="other" operation="LTE" value="3"/>
+		</passive_effect>
+	</effect_group>
+	<effect_group>
+		<requirement name="ProgressionLevel" progression_name="perkPistolPeteComplete" operation="Equals" value="1"/>
+		<requirement name="ItemHasTags" tags="9mmGun"/>
+		<requirement name="TargetRange" target="other" operation="LTE" value="3"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1">
+				<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="1" target="other"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+	</effect_group>
+</book>
+
+<!-- ShotgunMessiah = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkShotgunMessiahDamage" parent="skillShotguns" max_level="1" base_skill_point_cost="0" desc_key="ulmBookShotgunMessiah1Desc">
+	<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1" tags="shotgun"/>
+	</effect_group>
+</book>
+<book name="perkShotgunMessiahBreachingSlugs" parent="skillShotguns" max_level="1" base_skill_point_cost="0" desc_key="ulmBookShotgunMessiah2Desc">
+	<effect_group>
+		<!-- effect is on ammoShotgunSlug -->
+	</effect_group>
+</book>
+<book name="perkShotgunMessiahLimbShot" parent="skillShotguns" max_level="1" base_skill_point_cost="0" desc_key="ulmBookShotgunMessiah3Desc">
+	<effect_group>
+		<passive_effect name="DismemberChance" operation="base_add" level="1" value=".2">
+			<requirement name="ItemHasTags" tags="shotgun"/>
+			<requirement name="TargetRange" target="other" operation="LTE" value="3"/>
+		</passive_effect>
+	</effect_group>
+</book>
+<book name="perkShotgunMessiahSlugs" parent="skillShotguns" max_level="1" base_skill_point_cost="0" desc_key="ulmBookShotgunMessiah4Desc">
+	<effect_group>
+		<!-- effect is on ammoShotgunSlug -->
+	</effect_group>
+</book>
+<book name="perkShotgunMessiahMaintenance" parent="skillShotguns" max_level="1" base_skill_point_cost="0" desc_key="ulmBookShotgunMessiah5Desc">
+	<effect_group>
+		<passive_effect name="DegradationPerUse" operation="perc_add" level="1" value="-.2" tags="shotgun"/>
+	</effect_group>
+</book>
+<book name="perkShotgunMessiahMagazine" parent="skillShotguns" max_level="1" base_skill_point_cost="0" desc_key="ulmBookShotgunMessiah6Desc">
+	<effect_group>
+		<!-- DOES NOTHING -->
+	</effect_group>
+</book>
+<book name="perkShotgunMessiahPartyStarter" parent="skillShotguns" max_level="1" base_skill_point_cost="0" desc_key="ulmBookShotgunMessiah7Desc">
+	<effect_group>
+		<requirement name="StatComparePercCurrentToMax" target="other" stat="Health" operation="GTE" value="1"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".2" tags="shotgun"/>
+	</effect_group>
+</book>
+<book name="perkShotgunMessiahComplete" parent="skillShotguns" max_level="1" base_skill_point_cost="0" desc_key="ulmBookShotgunMessiahCompleteDesc">
+	<effect_group>
+		<passive_effect operation="base_add" name="MaxRange"			level="1" value="2" tags="shotgun"/>
+		<passive_effect operation="base_add" name="DamageFalloffRange"	level="1" value="2" tags="shotgun"/>
+	</effect_group>
+</book>
+
+<!-- Sniper = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkSniperDamage" parent="skillSniper" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSniper1Desc">
+	<effect_group>
+		<!-- effect is on the scopes -->
+	</effect_group>
+</book>
+<book name="perkSniperCripplingShot" parent="skillSniper" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSniper2Desc">
+	<effect_group>
+		<requirement name="ProgressionLevel" progression_name="perkSniperCripplingShot" operation="Equals" value="1"/>
+		<requirement name="ItemHasTags" tags="sniperRifle"/>
+		<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
+			<passive_effect name="DismemberChance" operation="base_add" level="1" value=".15"/>
+
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker" buff="buffInjuryCrippled01">
+				<requirement name="!EntityTagCompare" target="other" tags="feral,radiated"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker" buff="buffInjuryCrippled01">
+				<requirement name="EntityTagCompare" target="other" tags="feral"/>
+				<requirement name="!EntityTagCompare" target="other" tags="radiated"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="80"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker" buff="buffInjuryCrippled01">
+				<requirement name="EntityTagCompare" target="other" tags="radiated"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
+			</triggered_effect>
+	</effect_group>
+</book>
+<book name="perkSniperHeadShot" parent="skillSniper" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSniper3Desc">
+	<effect_group>
+		<requirement name="ProgressionLevel" progression_name="perkSniperHeadShot" operation="Equals" value="1"/>
+		<requirement name="ItemHasTags" tags="sniperRifle"/>
+		<requirement name="HitLocation" body_parts="Head"/>
+			<passive_effect name="DismemberChance" operation="base_add" level="1" value=".15"/>
+
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker" buff="buffInjuryStunned02">
+				<requirement name="!EntityTagCompare" target="other" tags="feral,radiated"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker" buff="buffInjuryStunned02">
+				<requirement name="EntityTagCompare" target="other" tags="feral"/>
+				<requirement name="!EntityTagCompare" target="other" tags="radiated"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker" buff="buffInjuryStunned01">
+				<requirement name="EntityTagCompare" target="other" tags="radiated"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+			</triggered_effect>
+	</effect_group>
+</book>
+<book name="perkSniperReload" parent="skillSniper" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSniper4Desc">
+	<effect_group>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1" value="0.1" tags="sniperRifle"/>
+	</effect_group>
+</book>
+<book name="perkSniperControlledBreathing" parent="skillSniper" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSniper5Desc">
+	<effect_group>
+		<!-- effect is in buffHoldBreathAiming01 -->
+	</effect_group>
+</book>
+<book name="perkSniperAPAmmo" parent="skillSniper" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSniper6Desc">
+	<effect_group>
+		<!-- effect is on ulmAmmo792mmRoundAP -->
+	</effect_group>
+</book>
+<book name="perkSniperHPAmmo" parent="skillSniper" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSniper7Desc">
+	<effect_group>
+		<!-- effect is on ulmAmmo792mmRoundHP -->
+	</effect_group>
+</book>
+<book name="perkSniperComplete" parent="skillSniper" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSniperCompleteDesc">
+	<effect_group>
+		<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1" tags="sniperRifle"/>
+	</effect_group>
+</book>
+
+<!-- AutoWeapons = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkAutoWeaponsDamage" parent="skillAutoWeapons" max_level="1" base_skill_point_cost="0" desc_key="ulmBookAutoWeapons1Desc">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="machineGun"/>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1"/>
+	</effect_group>
+</book>
+<book name="perkAutoWeaponsUncontrolledBurst" parent="skillAutoWeapons" max_level="1" base_skill_point_cost="0" desc_key="ulmBookAutoWeapons2Desc">
+	<effect_group>
+		<requirement name="ProgressionLevel" progression_name="perkAutoWeaponsUncontrolledBurst" operation="Equals" value="1"/>
+		<requirement name="ItemHasTags" tags="machineGun"/>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar=".AutoWeaponsUBCount" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfRangedBurstShotStart" action="ModifyCVar" cvar=".AutoWeaponsUBCount" operation="add" value="1"/>
+
+			<triggered_effect trigger="onSelfRangedBurstShotStart" action="ModifyCVar" cvar=".AutoWeaponsUBEffect" operation="set" value=".01"/>
+
+			<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar=".AutoWeaponsUBCount" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfPrimaryActionRayMiss" action="ModifyCVar" cvar=".AutoWeaponsUBCount" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfRangedBurstShotStart" action="ModifyCVar" cvar=".AutoWeaponsUBCount" operation="set" value="0">
+				<requirement name="RoundsInMagazine" operation="LT" value="1"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfRangedBurstShotStart" action="ModifyCVar" cvar=".AutoWeaponsUBEffect" operation="multiply" value="@.AutoWeaponsUBCount"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1" value="@.AutoWeaponsUBEffect"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".AutoWeaponsUBCount" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".AutoWeaponsUBEffect" operation="set" value="0"/>
+	</effect_group>
+</book>
+<book name="perkAutoWeaponsMaintenance" parent="skillAutoWeapons" max_level="1" base_skill_point_cost="0" desc_key="ulmBookAutoWeapons3Desc">
+	<effect_group>
+		<passive_effect name="DegradationPerUse" operation="perc_add" level="1" value="-.2" tags="machineGun"/>
+	</effect_group>
+</book>
+<book name="perkAutoWeaponsDrumMag" parent="skillAutoWeapons" max_level="1" base_skill_point_cost="0" desc_key="ulmBookAutoWeapons4Desc">
+	<effect_group>
+		<requirement name="ItemHasTags" tags="drumMagazine"/>
+		<requirement name="CVarCompare" cvar="$selfEquippedDrumMagazineExtender" operation="GT" value="0"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1" value=".15"/>
+	</effect_group>
+</book>
+<book name="perkAutoWeaponsRecoil" parent="skillAutoWeapons" max_level="1" base_skill_point_cost="0" desc_key="ulmBookAutoWeapons5Desc">
+	<effect_group>
+		<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar=".AutoWeaponsRecoilCount" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfRangedBurstShotStart" action="ModifyCVar" cvar=".AutoWeaponsRecoilCount" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".AutoWeaponsRecoilCount" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfRangedBurstShotStart" action="ModifyCVar" cvar=".AutoWeaponsRecoilCount" operation="set" value="0">
+			<requirement name="RoundsInMagazine" operation="LT" value="1"/>
+		</triggered_effect>
+	</effect_group>
+
+	<effect_group>
+		<requirement name="ProgressionLevel" progression_name="perkAutoWeaponsRecoil" operation="Equals" value="1"/>
+		<requirement name="ItemHasTags" tags="machineGun"/>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar=".AutoWeaponsRecoilCount" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".AutoWeaponsRecoilCount" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfRangedBurstShotStart" action="ModifyCVar" cvar=".AutoWeaponsRecoilCount" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfRangedBurstShotStart" action="ModifyCVar" cvar=".AutoWeaponsRecoilCount" operation="set" value="0">
+				<requirement name="RoundsInMagazine" operation="LT" value="1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfRangedBurstShotStart" action="ModifyCVar" cvar=".AutoWeaponsRecoilEffect" operation="set" value="-.015"/>
+			<triggered_effect trigger="onSelfRangedBurstShotStart" action="ModifyCVar" cvar=".AutoWeaponsRecoilEffect" operation="multiply" value="@.AutoWeaponsRecoilCount"/>
+
+			<triggered_effect trigger="onSelfRangedBurstShotStart" action="ModifyCVar" cvar=".AutoWeaponsRecoilEffect" operation="set" value="-.5">
+				<requirement name="CVarCompare" cvar=".AutoWeaponsRecoilEffect" operation="LT" value="-.5"/>
+			</triggered_effect>
+
+			<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" level="1" value="@.AutoWeaponsRecoilEffect"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".AutoWeaponsRecoilCount" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".AutoWeaponsRecoilEffect" operation="set" value="0"/>
+	</effect_group>
+</book>
+<book name="perkAutoWeaponsRagdoll" parent="skillAutoWeapons" max_level="1" base_skill_point_cost="0" desc_key="ulmBookAutoWeapons6Desc">
+	<effect_group>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker" buff="buffAutoWeaponsRagdoll">
+			<requirement name="ItemHasTags" tags="machineGun"/>
+			<requirement name="ProgressionLevel" progression_name="perkAutoWeaponsRagdoll" operation="Equals" value="1"/>
+		</triggered_effect>
+	</effect_group>
+</book>
+<book name="perkAutoWeaponsMachineGuns" parent="skillAutoWeapons" max_level="1" base_skill_point_cost="0" desc_key="ulmBookAutoWeapons7Desc">
+	<effect_group>
+			<requirement name="ProgressionLevel" progression_name="perkAutoWeaponsMachineGuns" operation="Equals" value="1"/>
+			<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="-.2" tags="machineGun"/>
+	</effect_group>
+</book>
+<book name="perkAutoWeaponsComplete" parent="skillAutoWeapons" max_level="1" base_skill_point_cost="0" desc_key="ulmBookAutoWeaponsCompleteDesc">
+	<effect_group>
+		<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffAutoWeaponsComplete">
+			<requirement name="ItemHasTags" tags="machineGun"/>
+			<requirement name="ProgressionLevel" progression_name="perkAutoWeaponsComplete" operation="Equals" value="1"/>
+		</triggered_effect>
+	</effect_group>
+</book>
+
+<!-- UrbanCombat = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkUrbanCombatLanding" parent="skillUrbanCombat" max_level="1" base_skill_point_cost="0" desc_key="ulmBookUrbanCombat1Desc">
+	<effect_group>
+		<!-- effect is on modArmorStealthBoots -->
+	</effect_group>
+</book>
+<book name="perkUrbanCombatCigar" parent="skillUrbanCombat" max_level="1" base_skill_point_cost="0" desc_key="ulmBookUrbanCombat2Desc">
+	<effect_group>
+		<passive_effect name="BarteringBuying" operation="base_add" level="1" value=".05"/>
+		<passive_effect name="BarteringSelling" operation="base_add" level="1" value=".05"/>
+	</effect_group>
+</book>
+<book name="perkUrbanCombatSneaking" parent="skillUrbanCombat" max_level="1" base_skill_point_cost="0" desc_key="ulmBookUrbanCombat3Desc">
+	<effect_group>
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+			<passive_effect name="SilenceBlockSteps" operation="base_set" level="1" value="1" tags="trashPile"/>
+	</effect_group>
+</book>
+<book name="perkUrbanCombatJumping" parent="skillUrbanCombat" max_level="1" base_skill_point_cost="0" desc_key="ulmBookUrbanCombat4Desc">
+	<effect_group>
+		<!-- landing effect is in buffPlayerFallingDamage, Landing Sound stealth book -->
+		<!-- jumping effect is in entityclasses.xml -->
+	</effect_group>
+</book>
+<book name="perkUrbanCombatLandMines" parent="skillUrbanCombat" max_level="1" base_skill_point_cost="0" desc_key="ulmBookUrbanCombat5Desc">
+	<effect_group>
+		<passive_effect name="LandMineTriggerDelay" operation="base_add" level="1" value="2"/>
+	</effect_group>
+</book>
+<book name="perkUrbanCombatAdrenalineRush" parent="skillUrbanCombat" max_level="1" base_skill_point_cost="0" desc_key="ulmBookUrbanCombat6Desc">
+	<effect_group>
+		<requirement name="ProgressionLevel" progression_name="perkUrbanCombatAdrenalineRush" operation="Equals" value="1"/>
+			<triggered_effect trigger="onCombatEntered" action="AddBuff" buff="buffUrbanCombatAdrenalineRush"/>
+	</effect_group>
+</book>
+<book name="perkUrbanCombatRoomClearing" parent="skillUrbanCombat" max_level="1" base_skill_point_cost="0" desc_key="ulmBookUrbanCombat7Desc">
+	<effect_group>
+		<requirement name="IsIndoors"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1"/>
+			<passive_effect name="GeneralDamageResist" operation="base_add" value=".05"/>
+	</effect_group>
+</book>
+<book name="perkUrbanCombatComplete" parent="skillUrbanCombat" max_level="1" base_skill_point_cost="0" desc_key="ulmBookUrbanCombatCompleteDesc">
+	<effect_group>
+		<!-- effect is in modGunSoundSuppressorSilencer -->
+	</effect_group>
+</book>
+
+<!-- TechJunkie = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkTechJunkie1Damage" parent="skillTechJunkie" max_level="1" base_skill_point_cost="0" desc_key="ulmBookTechJunkie1Desc">
+	<effect_group name="held and deployed">
+		<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1" tags="perkTurrets,deployed"/>
+	</effect_group>
+</book>
+<book name="perkTechJunkie2Maintenance" parent="skillTechJunkie" max_level="1" base_skill_point_cost="0" desc_key="ulmBookTechJunkie2Desc">
+	<effect_group>
+		<passive_effect name="DegradationPerUse" operation="perc_add" level="1" value="-.2" tags="perkTurrets"/>
+	</effect_group>
+</book>
+<book name="perkTechJunkie3APAmmo" parent="skillTechJunkie" max_level="1" base_skill_point_cost="0" desc_key="ulmBookTechJunkie3Desc">
+	<effect_group>
+		<!-- effect is on ammoJunkTurretAP -->
+	</effect_group>
+</book>
+<book name="perkTechJunkie4Shells" parent="skillTechJunkie" max_level="1" base_skill_point_cost="0" desc_key="ulmBookTechJunkie4Desc">
+	<effect_group>
+		<!-- effect is on ammoJunkTurretShell -->
+	</effect_group>
+</book>
+<book name="perkTechJunkie5Repulsor" parent="skillTechJunkie" max_level="1" base_skill_point_cost="0" desc_key="ulmBookTechJunkie5Desc">
+	<effect_group>
+		<!-- effect is on modMeleeStunBatonRepulsor -->
+	</effect_group>
+</book>
+<book name="perkTechJunkie6BatonCharge" parent="skillTechJunkie" max_level="1" base_skill_point_cost="0" desc_key="ulmBookTechJunkie6Desc">
+	<effect_group>
+		<!-- Power attacks charge stun batons faster. Effect is on meleeWpnBatonT2StunBaton -->
+	</effect_group>
+</book>
+<book name="perkTechJunkie7Hydraulics" parent="skillTechJunkie" max_level="1" base_skill_point_cost="0" desc_key="ulmBookTechJunkie7Desc">
+	<effect_group>
+		<passive_effect name="RoundsPerMinute" operation="perc_add" level="1" value=".033" tags="turretMelee"/>
+		<passive_effect name="RoundsPerMinute" operation="perc_add" level="1" value=".033" tags="turretMelee,deployed"/>
+		<passive_effect name="RoundsPerMinute" operation="perc_add" level="1" value=".1" tags="turretRanged"/>
+		<passive_effect name="RoundsPerMinute" operation="perc_add" level="1" value=".1" tags="turretRanged,deployed"/>
+	</effect_group>
+</book>
+<book name="perkTechJunkie8Complete" parent="skillTechJunkie" max_level="1" base_skill_point_cost="0" desc_key="ulmBookTechJunkieCompleteDesc">
+	<effect_group>
+		<passive_effect name="RoundsPerMinute" operation="perc_add" level="1" value=".1" tags="perkTurrets,deployed"/>
+	</effect_group>
+</book>
+
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkBarBrawling1BasicMoves" parent="skillBarBrawling" max_level="1" base_skill_point_cost="0" desc_key="ulmBookBarBrawling1Desc">
+	<!-- Do 10% more damage with fists, leather, brass and spiked knuckle weapons. -->
+	<effect_group>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1" tags="knuckles"/>
+	</effect_group>
+</book>
+<book name="perkBarBrawling2DropABomb" parent="skillBarBrawling" max_level="1" base_skill_point_cost="0" desc_key="ulmBookBarBrawling2Desc">
+	<!-- Sprinting power attacks have a high chance of knocking down your opponent. -->
+	<effect_group>
+		<requirement name="ProgressionLevel" progression_name="perkBarBrawling2DropABomb" operation="Equals" value="1"/>
+		<requirement name="ItemHasTags" tags="knuckles"/>
+		<requirement name="EntityHasMovementTag" tags="running"/>
+		<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01"/>
+	</effect_group>
+</book>
+<book name="perkBarBrawling3KillerInstinct" parent="skillBarBrawling" max_level="1" base_skill_point_cost="0" desc_key="ulmBookBarBrawling3Desc">
+	<!-- Killer Instinct: Gain 10% damage with each kill, up to 30%. Lasts for 20 seconds. -->
+	<effect_group>
+		<requirement name="ItemHasTags" tags="knuckles"/>
+		<requirement name="ProgressionLevel" progression_name="perkBarBrawling3KillerInstinct" operation="Equals" value="1"/>
+			<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffBarBrawling3KillerInstinct"/>
+	</effect_group>
+</book>
+<book name="perkBarBrawling4FinishingMoves" parent="skillBarBrawling" max_level="1" base_skill_point_cost="0" desc_key="ulmBookBarBrawling4Desc">
+	<!-- Do 20% extra damage to knocked down and stunned opponents. -->
+	<effect_group>
+		<requirement name="CVarCompare" cvar="_stunned" operation="Equals" value="1" target="other"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".2" tags="knuckles,perkBrawler"/>
+	</effect_group>
+</book>
+<book name="perkBarBrawling5AdrenalineHealing" parent="skillBarBrawling" max_level="1" base_skill_point_cost="0" desc_key="ulmBookBarBrawling5Desc">
+	<!-- When in combat health recovers 1 hit point with each punch. -->
+	<effect_group>
+		<requirement name="ItemHasTags" tags="knuckles"/>
+		<requirement name="ProgressionLevel" progression_name="perkBarBrawling5AdrenalineHealing" operation="Equals" value="1"/>
+		<requirement name="EntityTagCompare" target="other" tags="zombie,animal"/>
+		<requirement name="IsAlive" target="other"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyStats" stat="Health" operation="add" value="1"/>
+	</effect_group>
+</book>
+<book name="perkBarBrawling6RageMode" parent="skillBarBrawling" max_level="1" base_skill_point_cost="0" desc_key="ulmBookBarBrawling6Desc">
+	<!-- After getting hit attacks with fists are 25% faster & increase movement speed by 10%. -->
+	<effect_group>
+		<requirement name="ItemHasTags" tags="knuckles"/>
+		<requirement name="ProgressionLevel" progression_name="perkBarBrawling6RageMode" operation="Equals" value="1"/>
+			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" buff="buffBarBrawling6RageMode"/>
+	</effect_group>
+</book>
+<book name="perkBarBrawling7BoozedUp" parent="skillBarBrawling" max_level="1" base_skill_point_cost="0" desc_key="ulmBookBarBrawling7Desc">
+	<effect_group>
+		<!-- Drinking beer no longer blurs your vision and your buzz lasts twice as long.
+		Effect is in buffBeer. -->
+	</effect_group>
+</book>
+<book name="perkBarBrawling8Complete" parent="skillBarBrawling" max_level="1" base_skill_point_cost="0" desc_key="ulmBookBarBrawlingCompleteDesc">
+<!-- 7th Curse: Unleash your inner chi with this ancient martial arts technique. The 7th unarmed strike landed in a short time does 300% damage. -->
+	<effect_group>
+		<requirement name="ItemHasTags" tags="knuckles"/>
+		<requirement name="ProgressionLevel" progression_name="perkBarBrawling8Complete" operation="Equals" value="1"/>
+		<requirement name="NotHasBuff" buff="buffPerkBarBrawling8CompleteBonus"/>
+		<requirement name="IsAlive" target="other"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar=".BarBrawling8CompleteCombo" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffPerkBarBrawling8Complete"/>
+	</effect_group>
+</book>
+
+<!-- SpearHunter = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkSpearHunter1Damage" parent="skillSpearHunter" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSpearHunter1Desc">
+	<!-- Do 10% more damage with spears. -->
+	<effect_group>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1" tags="polearm"/>
+	</effect_group>
+</book>
+<book name="perkSpearHunter2Maintenance" parent="skillSpearHunter" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSpearHunter2Desc">
+	<!-- Spears degrade 50% slower. -->
+	<effect_group>
+		<passive_effect name="DegradationPerUse" operation="perc_add" level="1" value="-.2" tags="polearm"/>
+	</effect_group>
+</book>
+<book name="perkSpearHunter3Bleed" parent="skillSpearHunter" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSpearHunter3Desc">
+	<effect_group>
+		<requirement name="IsSecondaryAttack"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="-.15" tags="polearm"/>
+	</effect_group>
+</book>
+<book name="perkSpearHunter4KillMove" parent="skillSpearHunter" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSpearHunter4Desc">
+	<effect_group>
+		<passive_effect operation="perc_add" name="TargetArmor" value="-.05" tags="polearm"/>
+	</effect_group>
+</book>
+<book name="perkSpearHunter5RapidStrike" parent="skillSpearHunter" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSpearHunter5Desc">
+	<effect_group>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" level="1" value=".1" tags="polearm"/>
+	</effect_group>
+</book>
+<book name="perkSpearHunter6PenetratingShaft" parent="skillSpearHunter" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSpearHunter6Desc">
+	<effect_group>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned03"><!-- slows target for 8 seconds -->
+			<requirement name="ItemHasTags" tags="polearm"/>
+			<requirement name="ProgressionLevel" progression_name="perkSpearHunter6PuncturedLung" operation="Equals" value="1"/>
+			<requirement name="HitLocation" body_parts="Torso"/>
+			<requirement name="IsSecondaryAttack"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+		</triggered_effect>
+	</effect_group>
+</book>
+<book name="perkSpearHunter7QuickStrike" parent="skillSpearHunter" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSpearHunter7Desc">
+	<!-- Hits scored in quick succession do 10% more damage per hit up to 30%. -->
+	<effect_group>
+		<requirement name="ItemHasTags" tags="polearm"/>
+		<requirement name="ProgressionLevel" progression_name="perkSpearHunter7QuickStrike" operation="Equals" value="1"/>
+		<requirement name="IsAlive" target="other"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffSpearHunter7QuickStrike"/>
+	</effect_group>
+</book>
+<book name="perkSpearHunter8Complete" parent="skillSpearHunter" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSpearHunterCompleteDesc">
+	<effect_group>
+		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="30">
+			<requirement name="ProgressionLevel" progression_name="perkSpearHunter8Complete" operation="Equals" value="1"/>
+			<requirement name="ItemHasTags" tags="polearm"/>
+		</triggered_effect>
+	</effect_group>
+</book>
+
+<!-- SledgeSaga = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+<book name="perkSledgeSagaKnockdown" parent="skillSledgeSaga" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSledgeSaga1Desc">
+	<effect_group>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+			<requirement name="ItemHasTags" tags="sledge"/>
+			<requirement name="ProgressionLevel" progression_name="perkSledgeSagaKnockdown" operation="Equals" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+		</triggered_effect>
+	</effect_group>
+</book>
+<book name="perkSledgeSagaDegradation" parent="skillSledgeSaga" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSledgeSaga2Desc">
+	<effect_group>
+		<passive_effect name="DegradationPerUse" operation="perc_add" level="1" value="-.2" tags="sledge"/>
+	</effect_group>
+</book>
+<book name="perkSledgeSagaCrippledMorale" parent="skillSledgeSaga" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSledgeSaga3Desc">
+	<effect_group>
+		<requirement name="ProgressionLevel" progression_name="perkSledgeSagaCrippledMorale" operation="Equals" value="1"/>
+		<requirement name="ItemHasTags" tags="sledge"/>
+		<requirement name="!IsAttachedToEntity"/>
+		<requirement name="CompareItemMetaFloat" operation="Equals" value="1" key="sledge2ndHit"/>
+			<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffSledgeSaga3CrippledMorale"></triggered_effect>
+	</effect_group>
+</book>
+<book name="perkSledgeSagaPulverizingFinishers" parent="skillSledgeSaga" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSledgeSaga4Desc">
+	<effect_group>
+		<passive_effect name="EntityDamage" operation="perc_add" value=".20" tags="sledge">
+			<requirement name="ProgressionLevel" progression_name="perkSledgeSagaPulverizingFinishers" operation="Equals" value="1"/>
+			<requirement name="StatComparePercCurrentToMax" stat="health" operation="LTE" value=".3" target="other"/>
+		</passive_effect>
+	</effect_group>
+</book>
+<book name="perkSledgeSagaSavageReaper" parent="skillSledgeSaga" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSledgeSaga5Desc">
+	<effect_group>
+		<passive_effect name="PlayerExpGain" operation="perc_add" level="1" value=".2" tags="Kill">
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="ItemHasTags" tags="perkSkullCrusher"/>
+		</passive_effect>
+	</effect_group>
+</book>
+<book name="perkSledgeSagaConcussiveStrike" parent="skillSledgeSaga" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSledgeSaga6Desc">
+	<effect_group>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryUnconscious">
+			<requirement name="ItemHasTags" tags="perkSkullCrusher"/>
+			<requirement name="ProgressionLevel" progression_name="perkSledgeSagaConcussiveStrike" operation="Equals" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+		</triggered_effect>
+	</effect_group>
+</book>
+<book name="perkSledgeSagaArmorCrusher" parent="skillSledgeSaga" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSledgeSaga7Desc">
+	<effect_group>
+		<passive_effect name="TargetArmor" operation="perc_add" level="1" value="-.25">
+			<requirement name="ItemHasTags" tags="perkSkullCrusher"/>
+		</passive_effect>
+	</effect_group>
+</book>
+<book name="perkSledgeSagaComplete" parent="skillSledgeSaga" max_level="1" base_skill_point_cost="0" desc_key="ulmBookSledgeSagaCompleteDesc">
+	<effect_group>
+		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="40">
+			<requirement name="ProgressionLevel" progression_name="perkSledgeSagaComplete" operation="Equals" value="1"/>
+			<requirement name="ItemHasTags" tags="perkSkullCrusher"/>
+			<requirement name="IsSecondaryAttack"/>
+		</triggered_effect>
+	</effect_group>
+</book>
+	
+<!-- Action Skills -->
+	
+<perk name="actionPerkSniperRifles" name_key="actionPerkSniperRifles" parent="actionSkillPerception" icon="symbol_sniper_rifle" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="ItemHasTags" tags="sniperRifle"/>
+		<passive_effect level="1,100"	operation="perc_add" name="EntityDamage"				value=".0025,.25"/>
+		<passive_effect level="1,100"	operation="perc_add" name="WeaponHandling"				value=".0025,.25"/>
+		<passive_effect level="1,100"	operation="perc_add" name="ReloadSpeedMultiplier"		value=".001,.1"/>
+		<passive_effect level="1,100"	operation="perc_add" name="DamageModifier"				value=".005,.5" tags="head"/>
+		<passive_effect level="1,100"	operation="base_add" name="DismemberChance"				value=".0025,.25"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkSniperRiflesNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkSniperRiflesNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="sniperRifle"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkSniperRifles" attribute="Perception" add_xp="8"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkSniperRifles" attribute="Perception" add_xp="2">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+	</effect_group></perk>
+	
+<perk name="actionPerkArchery" name_key="actionPerkArchery" parent="actionSkillPerception" icon="symbol_archery" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="ItemHasTags" tags="archery"/>
+		<passive_effect name="BlockDamage" operation="perc_add" level="1,100" value=".0025,.25"/>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1,100" value=".0025,.25"/>
+		<passive_effect name="WeaponHandling" operation="perc_add" level="1,100" value=".0025,.25"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,100" value=".005,.25"/>
+		<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,100" value=".005,.25" tags="bowDrawPenalty"/>
+		<passive_effect name="DismemberChance" operation="base_add" level="1,100" value=".0025,.25"/>
+		<passive_effect name="DamageModifier" operation="perc_add" level="1,100" value=".005,.5" tags="head"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkArcheryNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkArcheryNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="archery"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkArchery" attribute="Perception" add_xp="12"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkArchery" attribute="Perception" add_xp="4">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+	</effect_group></perk>
+	
+<perk name="actionPerkSpears" name_key="actionPerkSpears" parent="actionSkillPerception" icon="symbol_spear" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="ItemHasTags" tags="polearm"/>
+		<passive_effect name="BlockDamage" operation="perc_add" level="1,100" value=".005,.25" tags="polearm"/>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1,100" value=".005,.25" tags="polearm"/>
+		<passive_effect name="DismemberChance" operation="base_add" level="1,100" value=".0025,.25"/>
+		<passive_effect name="DamageModifier" operation="perc_add" level="1,100" value=".005,.5" tags="head"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkSpearsNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkSpearsNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="polearm"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkSpears" attribute="Perception" add_xp="8"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkSpears" attribute="Perception" add_xp="2">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+	</effect_group></perk>
+	
+<perk name="actionPerkLooting" name_key="actionPerkLooting" parent="actionSkillPerception" icon="symbol_scavenger" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<passive_effect name="LootStage" operation="perc_add" level="1,100" value=".005,.25"/>
+		<passive_effect name="ScavengingTime" operation="perc_subtract" level="1,100" value=".005,.5"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkLootingNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkLootingNext"/>
+		</triggered_effect>
+	</effect_group></perk>
+	
+<perk name="actionPerkButcher" name_key="actionPerkButcher" parent="actionSkillPerception" icon="symbol_butcher" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<passive_effect name="HarvestCount" operation="perc_add" level="1,100" value=".005,.5" tags="butcherHarvest"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkButcherNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkButcherNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="toolButcher"/>
+		<requirement name="!EntityTagCompare" target="other" tags="feral,human,npc,player,radiated,turret,vehicle,walker,zombie"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkButcher" attribute="Perception" add_xp="10">
+			<requirement name="!IsAlive" target="other"/>
+		</triggered_effect>
+	</effect_group></perk>
+	
+<perk name="actionPerkStrength" name_key="actionPerkStrength" parent="actionSkillStrength" icon="ui_game_symbol_muscle" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<passive_effect name="StatWeightMax" operation="base_add" level="1,100" value="1,100"/>
+        <triggered_effect trigger="onPerkLevelChanged" action="ULM_RecalculatePlayerWeight,UndeadLegacy" target="self"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkStrengthNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkStrengthNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group>
+        <requirement name="CVarCompare" cvar="ulmStatEncumbered" operation="GT" value="1"/>
+		<requirement name="CVarCompare" cvar="_running" operation="Equals" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="actionPerkStrength" operation="LT" value="100"/>
+		<triggered_effect trigger="onSelfProgressionUpdate" cvar=".actionPerkStrengthExp" action="ModifyCVar" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfProgressionUpdate" cvar=".actionPerkStrengthExp" action="ModifyCVar" operation="multiply" value="@ulmStatEncumbered">
+			<requirement name="CVarCompare" cvar="ulmStatEncumbered" operation="LTE" value="2"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" cvar=".actionPerkStrengthExp" action="ModifyCVar" operation="multiply" value="2">
+			<requirement name="CVarCompare" cvar="ulmStatEncumbered" operation="GT" value="2"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkStrength" attribute="Strength" add_xp="@.actionPerkStrengthExp"/>
+	</effect_group>
+	<effect_group>
+        <requirement name="CVarCompare" cvar="ulmStatEncumbered" operation="GT" value="1"/>
+		<requirement name="CVarCompare" cvar="_walking" operation="Equals" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="actionPerkStrength" operation="LT" value="100"/>
+		<triggered_effect trigger="onSelfProgressionUpdate" cvar=".actionPerkStrengthExp" action="ModifyCVar" operation="set" value="0.5"/>
+		<triggered_effect trigger="onSelfProgressionUpdate" cvar=".actionPerkStrengthExp" action="ModifyCVar" operation="multiply" value="@ulmStatEncumbered">
+			<requirement name="CVarCompare" cvar="ulmStatEncumbered" operation="LTE" value="2"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" cvar=".actionPerkStrengthExp" action="ModifyCVar" operation="multiply" value="2">
+			<requirement name="CVarCompare" cvar="ulmStatEncumbered" operation="GT" value="2"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkStrength" attribute="Strength" add_xp="@.actionPerkStrengthExp"/>
+	</effect_group>
+	<!--
+	<effect_group>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="CVarLogValue" cvar="ulmStatEncumbered"/>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="CVarLogValue" cvar=".actionPerkStrengthExp"/>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="CVarLogValue" cvar="$actionPerkStrengthExp"/>
+	</effect_group>--></perk>
+
+<perk name="actionPerkAssaultRifles" name_key="actionPerkAssaultRifles" parent="actionSkillStrength" icon="symbol_machine_gun" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="ItemHasTags" tags="machineGun"/>
+		<passive_effect level="1,100"	operation="perc_add" name="DamageModifier"				value=".005,0.5" tags="head"/>
+		<passive_effect level="1,100"	operation="base_add" name="DismemberChance"				value=".0025,.25"/>
+		<passive_effect level="1,100"	operation="perc_add" name="BlockDamage"					value=".0025,.25"/>
+		<passive_effect level="1,100"	operation="perc_add" name="EntityDamage"				value=".0025,.25"/>
+		<passive_effect level="1,100"	operation="perc_add" name="WeaponHandling"				value=".0025,.25"/>
+		<passive_effect level="1,100"	operation="perc_add" name="RoundsPerMinute"				value=".001,.1"/>
+		<passive_effect level="1,100"	operation="perc_add" name="ReloadSpeedMultiplier"		value=".0025,.25"/>
+		<passive_effect level="1,100"	operation="perc_add" name="KickDegreesVerticalMin"		value="-.0001,-.01"/>
+		<passive_effect level="1,100"	operation="perc_add" name="KickDegreesVerticalMax"		value="-.0005,-.05"/>
+		<passive_effect level="1,100"	operation="perc_add" name="KickDegreesHorizontalMin"	value="-.0001,-.01"/>
+		<passive_effect level="1,100"	operation="perc_add" name="KickDegreesHorizontalMax"	value="-.0005,-.05"/>
+		<passive_effect level="1,100"	operation="perc_add" name="IncrementalSpreadMultiplier" value="-.0005,-.05"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkAssaultRiflesNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkAssaultRiflesNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="machineGun"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkAssaultRifles" attribute="Strength" add_xp="4"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkAssaultRifles" attribute="Strength" add_xp="1">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+	</effect_group></perk>
+	
+<perk name="actionPerkClubs" name_key="actionPerkClubs" parent="actionSkillStrength" icon="symbol_club" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="ItemHasTags" tags="club"/>
+		<passive_effect name="DamageModifier" operation="perc_add" level="1,100" value="0.005,0.5" tags="head"/>
+		<passive_effect name="DismemberChance" operation="base_add" level="1,100" value=".0025,.25"/>
+		<passive_effect name="BlockDamage" operation="perc_add" level="1,100" value=".0025,.25"/>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1,100" value=".0025,.25"/>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1,100" value=".005,.5">
+			<requirement name="CVarCompare" cvar="_stunned" operation="Equals" value="1" target="other"/>
+		</passive_effect>
+		<!--
+		<passive_effect name="StaminaLoss" operation="perc_add" level="1,100" value="-.002,-.2"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" level="1,100" value="-.002,-.2" tags="secondary"/>
+		-->
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkClubsNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkClubsNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="club"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkClubs" attribute="Strength" add_xp="8"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkClubs" attribute="Strength" add_xp="2">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+	</effect_group></perk>
+
+<perk name="actionPerkSledgehammers" name_key="actionPerkSledgehammers" parent="actionSkillStrength" icon="symbol_sledgehammer" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="ItemHasTags" tags="sledge"/>
+		<passive_effect name="DamageModifier" operation="perc_add" level="1,100" value="0.005,0.5" tags="head"/>
+		<passive_effect name="DismemberChance" operation="base_add" level="1,100" value=".0025,.25"/>
+		<passive_effect name="BlockDamage" operation="perc_add" level="1,100" value=".0025,.25"/>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1,100" value=".0025,.25"/>
+		<!--
+		<passive_effect name="StaminaLoss" operation="perc_add" level="1,100" value="-.002,-.2"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" level="1,100" value="-.002,-.2" tags="secondary"/>
+		-->
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkSledgehammersNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkSledgehammersNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="sledge"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkSledgehammers" attribute="Strength" add_xp="8"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkSledgehammers" attribute="Strength" add_xp="2">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+	</effect_group></perk>
+
+<perk name="actionPerkAxes" name_key="actionPerkAxes" parent="actionSkillStrength" icon="symbol_axe" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="ItemHasTags" tags="toolAxe"/>
+		<passive_effect name="BlockDamage" operation="perc_add" level="1,100" value=".005,.5"/>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1,100" value=".005,.5"/>
+		<passive_effect name="HarvestCount" operation="perc_add" level="1,100" value=".005,.5"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkAxesNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkAxesNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="toolAxe"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkAxes" attribute="Strength" add_xp="4"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkAxes" attribute="Strength" add_xp="1">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfDestroyedBlock" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkAxes" attribute="Strength" add_xp="2"/>
+		<triggered_effect trigger="onSelfDamagedBlock" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkAxes" attribute="Strength" add_xp="1"/>
+	</effect_group></perk>
+
+<perk name="actionPerkShovels" name_key="actionPerkShovels" parent="actionSkillStrength" icon="symbol_shovel" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="ItemHasTags" tags="shovel"/>
+		<passive_effect name="BlockDamage" operation="perc_add" level="1,100" value=".005,.5"/>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1,100" value=".005,.5"/>
+		<passive_effect name="HarvestCount" operation="perc_add" level="1,100" value=".005,.5"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkShovelsNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkShovelsNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="shovel"/>
+		<triggered_effect trigger="onSelfDestroyedBlock" cvar=".actionPerkShovelsExp" action="ModifyCVar" operation="set" value="4"/>
+		<triggered_effect trigger="onSelfDestroyedBlock" cvar=".actionPerkShovelsExp" action="ModifyCVar" operation="multiply" value="@.shovelToolMultiplier"/>
+		<triggered_effect trigger="onSelfDestroyedBlock" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkShovels" attribute="Strength" add_xp="@.actionPerkShovelsExp"/>
+		<triggered_effect trigger="onSelfDamagedBlock" cvar=".actionPerkShovelsExp" action="ModifyCVar" operation="set" value="2"/>
+		<triggered_effect trigger="onSelfDamagedBlock" cvar=".actionPerkShovelsExp" action="ModifyCVar" operation="multiply" value="@.shovelToolMultiplier"/>
+		<triggered_effect trigger="onSelfDamagedBlock" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkShovels" attribute="Strength" add_xp="@.actionPerkShovelsExp"/>
+	</effect_group></perk>
+
+<perk name="actionPerkMining" name_key="actionPerkMining" parent="actionSkillStrength" icon="symbol_pickaxe" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="ItemHasTags" tags="miningTool"/>
+		<passive_effect name="BlockDamage" operation="perc_add" level="1,100" value=".005,.5"/>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1,100" value=".005,.5"/>
+		<passive_effect name="HarvestCount" operation="perc_add" level="1,100" value=".005,.5"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkMiningNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkMiningNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="miningTool"/>
+		<triggered_effect trigger="onSelfDestroyedBlock" cvar=".actionPerkMiningExp" action="ModifyCVar" operation="set" value="4"/>
+		<triggered_effect trigger="onSelfDestroyedBlock" cvar=".actionPerkMiningExp" action="ModifyCVar" operation="multiply" value="@.miningToolMultiplier"/>
+		<triggered_effect trigger="onSelfDestroyedBlock" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkMining" attribute="Strength" add_xp="@.actionPerkMiningExp"/>
+		<triggered_effect trigger="onSelfDamagedBlock" cvar=".actionPerkMiningExp" action="ModifyCVar" operation="set" value="2"/>
+		<triggered_effect trigger="onSelfDamagedBlock" cvar=".actionPerkMiningExp" action="ModifyCVar" operation="multiply" value="@.miningToolMultiplier"/>
+		<triggered_effect trigger="onSelfDamagedBlock" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkMining" attribute="Strength" add_xp="@.actionPerkMiningExp"/>
+	</effect_group></perk>
+
+<perk name="actionPerkShotguns" name_key="actionPerkShotguns" parent="actionSkillFortitude" icon="symbol_shotgun" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="ItemHasTags" tags="shotgun"/>
+		<passive_effect level="1,100" operation="perc_add" name="BlockDamage"			value=".0025,.25"/>
+		<passive_effect level="1,100" operation="perc_add" name="EntityDamage"			value=".0025,.25"/>
+		<passive_effect level="1,100" operation="perc_add" name="RoundsPerMinute"		value=".0025,.25"/>
+        <passive_effect level="1,100" operation="base_add" name="DismemberChance"		value=".0025,.25"/>
+		<passive_effect level="1,100" operation="perc_add" name="ReloadSpeedMultiplier"	value=".001,.1"/>
+        <passive_effect level="1,100" operation="perc_add" name="DamageModifier"		value=".005,.5" tags="head"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkShotgunsNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkShotgunsNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="shotgun"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkShotguns" attribute="Fortitude" add_xp="6"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkShotguns" attribute="Fortitude" add_xp=".5">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+	</effect_group></perk>
+
+<perk name="actionPerkBrawler" name_key="actionPerkBrawler" parent="actionSkillFortitude" icon="symbol_knuckles" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="ItemHasTags" tags="knuckles,perkBrawler"/>
+		<passive_effect level="1,100" operation="perc_add" name="BlockDamage"			value=".0025,.25"/>
+		<passive_effect level="1,100" operation="perc_add" name="EntityDamage"			value=".0025,.25"/>
+        <passive_effect level="1,100" operation="base_add" name="DismemberChance"		value=".0025,.25"/>
+        <passive_effect level="1,100" operation="perc_add" name="DamageModifier"		value=".005,.5" tags="head"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkBrawlerNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkBrawlerNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="knuckles,perkBrawler"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkBrawler" attribute="Fortitude" add_xp="8"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkBrawler" attribute="Fortitude" add_xp="2">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+	</effect_group></perk>
+
+<perk name="actionPerkResistHeat" name_key="actionPerkResistHeat" parent="actionSkillFortitude" icon="symbol_heat" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<passive_effect name="ResistHeat" operation="base_add" level="1,100" value=".025,2.5"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkResistHeatNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkResistHeatNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="!HasBuff" buff="buffCampfireAOE"/>
+		<requirement name="CVarCompare" cvar="ulmTempFeelsLike" operation="GT" value="30"/>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkResistHeat" attribute="Fortitude" add_xp=".1"/>
+	</effect_group></perk>
+	
+<perk name="actionPerkResistCold" name_key="actionPerkResistCold" parent="actionSkillFortitude" icon="symbol_cold" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<passive_effect name="ResistCold" operation="base_add" level="1,100" value=".025,2.5"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkResistColdNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkResistColdNext"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkResistColdInit" operation="set" value="1"/>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="!HasBuff" buff="buffCampfireAOE"/>
+		<requirement name="CVarCompare" cvar="$actionPerkResistColdInit" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="ulmTempFeelsLike" operation="LT" value="10"/>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkResistCold" attribute="Fortitude" add_xp=".1"/>
+	</effect_group></perk>
+
+<perk name="actionPerkResistPain" name_key="actionPerkResistPain" parent="actionSkillFortitude" icon="ui_game_symbol_boxer" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<passive_effect name="GeneralDamageResist" operation="base_add" level="1,100" value=".05,.2"/>
+		<passive_effect name="BuffResistance" operation="base_add" level="1,100" value=".005,.5" tags="buffInjuryStunned01,buffInjuryStunned02"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkResistPainNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkResistPainNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="StatCompareCurrent" stat="Health" operation="GT" value="1"/>
+		<requirement name="EntityTagCompare" target="other" tags="player,zombie,animal"/>
+		<triggered_effect trigger="onOtherAttackedSelf" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkResistPain" attribute="Fortitude" add_xp="6.25"/>
+	</effect_group></perk>
+
+<perk name="actionPerkHealing" name_key="actionPerkHealing" parent="actionSkillFortitude" icon="symbol_healer" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkHealingNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkHealingNext"/>
+		</triggered_effect>
+	</effect_group></perk>
+
+<perk name="actionPerkHandguns" name_key="actionPerkHandguns" parent="actionSkillDexterity" icon="symbol_pistol" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="ItemHasTags" tags="pistol"/>
+        <passive_effect level="1,100" operation="perc_add" name="DamageModifier"				value=".005,.5" tags="head"/>
+        <passive_effect level="1,100" operation="base_add" name="DismemberChance"				value=".0025,.25"/>
+		<passive_effect level="1,100" operation="perc_add" name="BlockDamage"					value=".0025,.25"/>
+		<passive_effect level="1,100" operation="perc_add" name="EntityDamage"					value=".0025,.25"/>
+		<passive_effect level="1,100" operation="perc_add" name="RoundsPerMinute"				value=".0025,.25"/>
+		<passive_effect level="1,100" operation="perc_add" name="IncrementalSpreadMultiplier"	value="-.0025,-.25"/>
+		<passive_effect level="1,100" operation="perc_add" name="ReloadSpeedMultiplier"			value=".001,.1"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkHandgunsNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkHandgunsNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="pistol"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkHandguns" attribute="Dexterity" add_xp="7"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkHandguns" attribute="Dexterity" add_xp="1">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+	</effect_group></perk>
+
+<perk name="actionPerkBlades" name_key="actionPerkBlades" parent="actionSkillDexterity" icon="symbol_blades" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="ItemHasTags" tags="blade"/>
+		<passive_effect name="DamageModifier" operation="perc_add" level="1,100" value="0.005,0.5" tags="head"/>
+		<passive_effect name="DismemberChance" operation="base_add" level="1,100" value=".0025,.25"/>
+		<passive_effect name="BlockDamage" operation="perc_add" level="1,100" value=".0025,.25"/>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1,100" value=".0025,.25"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkBladesNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkBladesNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="blade"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkBlades" attribute="Dexterity" add_xp="8"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkBlades" attribute="Dexterity" add_xp="2">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+	</effect_group></perk>
+
+<perk name="actionPerkAthletics" name_key="actionPerkAthletics" parent="actionSkillDexterity" icon="symbol_cardio" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<passive_effect name="StaminaMax" operation="perc_add" value=".0025,.25" level="1,100"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value=".0025,.25" level="1,100" tags="running"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkAthleticsNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkAthleticsNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Walking and !Sneaking">
+		<requirement name="CVarCompare" cvar="_walking" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="_running" operation="Equals" value="0"/>
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="0"/>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkAthletics" attribute="Dexterity" add_xp=".1"/>
+		<!--
+		<triggered_effect trigger="onSelfProgressionUpdate" action="CVarLogValue" cvar=".actionPerkAthleticsExp"/>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="CVarLogValue" cvar="$actionPerkAthleticsExp"/>
+		-->
+	</effect_group>
+	<effect_group name="Running and !Sneaking">
+		<requirement name="CVarCompare" cvar="_running" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="0"/>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkAthletics" attribute="Dexterity" add_xp=".2"/>
+		<!--
+		<triggered_effect trigger="onSelfProgressionUpdate" action="CVarLogValue" cvar=".actionPerkAthleticsExp"/>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="CVarLogValue" cvar="$actionPerkAthleticsExp"/>
+		-->
+	</effect_group></perk>
+	
+<perk name="actionPerkSneaking" name_key="actionPerkSneaking" parent="actionSkillDexterity" icon="symbol_sneaking" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		<passive_effect name="CrouchSpeed" operation="perc_add" level="1,100" value=".0025,.25"/>
+		<passive_effect name="LightMultiplier" operation="perc_add" level="1,100" value="-.0025,-.25"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" level="1,100" value="-.0025,-.25"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkSneakingNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkSneakingNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Walking and Sneaking">
+		<requirement name="CVarCompare" cvar="_walking" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="_running" operation="Equals" value="0"/>
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkSneaking" attribute="Dexterity" add_xp=".75"/>
+		<!--
+		<triggered_effect trigger="onSelfProgressionUpdate" action="CVarLogValue" cvar=".actionPerkSneakingExp"/>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="CVarLogValue" cvar="$actionPerkSneakingExp"/>
+		-->
+	</effect_group>
+	<effect_group name="Running and Sneaking">
+		<requirement name="CVarCompare" cvar="_running" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkSneaking" attribute="Dexterity" add_xp=".5"/>
+		<!--
+		<triggered_effect trigger="onSelfProgressionUpdate" action="CVarLogValue" cvar=".actionPerkSneakingExp"/>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="CVarLogValue" cvar="$actionPerkSneakingExp"/>
+		-->
+	</effect_group></perk>
+
+<perk name="actionPerkAssasin" name_key="actionPerkAssasin" parent="actionSkillDexterity" icon="symbol_ninja" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+		<requirement name="!ItemHasTags" tags="sledge"/>
+        <passive_effect level="1,100" operation="base_add" name="DamageBonus"				value=".01,1"/><!--For UI-->
+        <passive_effect level="1,100" operation="perc_add" name="EntityDamage"				value=".01,1"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkAssasinNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkAssasinNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+		<requirement name="!ItemHasTags" tags="sledge"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkAssasin" attribute="Dexterity" add_xp="20"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkAssasin" attribute="Dexterity" add_xp="8">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+	</effect_group></perk>
+
+<perk name="actionPerkSubmachineGuns" name_key="actionPerkSubmachineGuns" parent="actionSkillIntellect" icon="symbol_smg" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="ItemHasTags" tags="submachine"/>
+        <passive_effect level="1,100" operation="perc_add" name="DamageModifier"				value=".005,.5" tags="head"/>
+		<passive_effect level="1,100" operation="perc_add" name="BlockDamage"					value=".0025,.25"/>
+		<passive_effect level="1,100" operation="perc_add" name="EntityDamage"					value=".0025,.25"/>
+		<passive_effect level="1,100" operation="perc_add" name="IncrementalSpreadMultiplier"	value="-.0025,-.25"/>
+        <passive_effect level="1,100" operation="base_add" name="DismemberChance"				value=".002,.20"/>
+		<passive_effect level="1,100" operation="perc_add" name="ReloadSpeedMultiplier"			value=".001,.1"/>
+		<!--
+		<passive_effect level="1,100" operation="perc_add" name="RoundsPerMinute"				value=".0025,.25"/>-->
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkSubmachineGunsNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkSubmachineGunsNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="submachine"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkSubmachineGuns" attribute="Dexterity" add_xp="7"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkSubmachineGuns" attribute="Dexterity" add_xp="1">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+	</effect_group></perk>
+<!--
+<perk name="actionPerkExplosives" name_key="actionPerkExplosives" parent="actionSkillIntellect" icon="symbol_rocket_launcher" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="ItemHasTags" tags="explosive"/>
+        <passive_effect level="1,100" operation="base_add" name="DismemberChance"				value=".0025,.25"/>
+		<passive_effect level="1,100" operation="perc_add" name="BlockDamage"					value=".005,.5"/>
+		<passive_effect level="1,100" operation="perc_add" name="EntityDamage"					value=".005,.5"/>
+		<passive_effect level="1,100" operation="perc_add" name="WeaponHandling"				value=".0025,.25"/>
+		<passive_effect level="1,100" operation="perc_add" name="ReloadSpeedMultiplier"			value=".001,.1"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkExplosivesNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkExplosivesNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="explosive"/>
+		<requirement name="ProgressionLevel" progression_name="actionPerkExplosives" operation="LT" value="100"/>
+		<triggered_effect trigger="onSelfExplosionAttackedOther" cvar=".actionPerkExplosivesExp" action="ModifyCVar" operation="set" value="2"/>
+		<triggered_effect trigger="onSelfExplosionAttackedOther" cvar=".actionPerkExplosivesExp" action="ModifyCVar" operation="multiply" value="@.attIntellectExpBonus"/>
+		<triggered_effect trigger="onSelfExplosionAttackedOther" cvar="$actionPerkExplosivesExp" action="ModifyCVar" operation="add" value="@.actionPerkExplosivesExp">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfExplosionDamagedOther" cvar=".actionPerkExplosivesExp" action="ModifyCVar" operation="set" value="2"/>
+		<triggered_effect trigger="onSelfExplosionDamagedOther" cvar=".actionPerkExplosivesExp" action="ModifyCVar" operation="multiply" value="@.attIntellectExpBonus"/>
+		<triggered_effect trigger="onSelfExplosionDamagedOther" cvar="$actionPerkExplosivesExp" action="ModifyCVar" operation="add" value="@.actionPerkExplosivesExp">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" cvar=".actionPerkExplosivesExp" action="ModifyCVar" operation="set" value="2"/>
+		<triggered_effect trigger="onSelfDamagedOther" cvar=".actionPerkExplosivesExp" action="ModifyCVar" operation="multiply" value="@.attIntellectExpBonus"/>
+		<triggered_effect trigger="onSelfDamagedOther" cvar="$actionPerkExplosivesExp" action="ModifyCVar" operation="add" value="@.actionPerkExplosivesExp">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="actionPerkExplosivesModify">
+			<requirement name="CVarCompare" cvar="$actionPerkExplosivesExp" operation="GTE" value="@$actionPerkExplosivesNext"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfExplosionDamagedOther" action="AddBuff" buff="actionPerkExplosivesModify">
+			<requirement name="CVarCompare" cvar="$actionPerkExplosivesExp" operation="GTE" value="@$actionPerkExplosivesNext"/>
+		</triggered_effect>
+	</effect_group></perk>
+-->
+
+<perk name="actionPerkShockers" name_key="actionPerkShockers" parent="actionSkillIntellect" icon="symbol_stun_baton" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="ItemHasTags" tags="perkElectrocutioner"/>
+		<passive_effect name="DamageModifier" operation="perc_add" level="1,100" value="0.005,0.5" tags="head"/>
+		<passive_effect name="DismemberChance" operation="base_add" level="1,100" value=".0025,.25"/>
+		<passive_effect name="BlockDamage" operation="perc_add" level="1,100" value=".0025,.25"/>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1,100" value=".0025,.25"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkShockersNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkShockersNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="perkElectrocutioner"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkShockers" attribute="Intellect" add_xp="8"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkShockers" attribute="Intellect" add_xp="2">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+	</effect_group></perk>
+<!--
+<perk name="actionPerkTurrets" name_key="actionPerkTurrets" parent="actionSkillIntellect" icon="symbol_turret" max_level="100" base_skill_point_cost="0">
+	<effect_group>
+		<passive_effect level="1,100" operation="base_add" name="ElectricalTrapXP"				value=".0025,.25"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="ItemHasTags" tags="perkTurrets"/>
+        <passive_effect level="1,100" operation="perc_add" name="DamageModifier"				value=".005,.5" tags="head"/>
+        <passive_effect level="1,100" operation="base_add" name="DismemberChance"				value=".0025,.25"/>
+		<passive_effect level="1,100" operation="perc_add" name="BlockDamage"					value=".0025,.25"/>
+		<passive_effect level="1,100" operation="perc_add" name="EntityDamage"					value=".0025,.25"/>
+		<passive_effect level="1,100" operation="perc_add" name="ReloadSpeedMultiplier"			value=".0025,.25"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="ItemHasTags" tags="turretRanged"/>
+		<passive_effect level="1,100" operation="perc_add" name="RoundsPerMinute"				value=".0025,.25"/>
+		<passive_effect level="1,100" operation="perc_add" name="MagazineSize"					value=".0025,.25"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkTurretsNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkTurretsNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="perkTurrets"/>
+		<requirement name="ProgressionLevel" progression_name="actionPerkTurrets" operation="LT" value="100"/>
+		<triggered_effect trigger="onSelfKilledOther" cvar=".actionPerkTurretsExp" action="ModifyCVar" operation="set" value="7"/>
+		<triggered_effect trigger="onSelfKilledOther" cvar=".actionPerkTurretsExp" action="ModifyCVar" operation="multiply" value="@.attIntellectExpBonus"/>
+		<triggered_effect trigger="onSelfKilledOther" cvar="$actionPerkTurretsExp" action="ModifyCVar" operation="add" value="@.actionPerkTurretsExp"/>
+		<triggered_effect trigger="onSelfDamagedOther" cvar=".actionPerkTurretsExp" action="ModifyCVar" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfDamagedOther" cvar=".actionPerkTurretsExp" action="ModifyCVar" operation="multiply" value="@.attIntellectExpBonus"/>
+		<triggered_effect trigger="onSelfDamagedOther" cvar="$actionPerkTurretsExp" action="ModifyCVar" operation="add" value="@.actionPerkTurretsExp">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="actionPerkTurretsModify">
+			<requirement name="CVarCompare" cvar="$actionPerkTurretsExp" operation="GTE" value="@$actionPerkTurretsNext"/>
+		</triggered_effect>
+	</effect_group></perk>
+-->
+
+<perk name="actionPerkTrading" name_key="actionPerkTrading" parent="actionSkillIntellect" icon="ui_game_symbol_barter" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkTradingNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkTradingNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Perk Bonus">
+		<passive_effect name="BarteringSelling" operation="base_add" level="1,100" value=".0025,.25"/>
+		<passive_effect name="SecretStash" operation="base_add" level="20,39" value="10"/>
+		<passive_effect name="SecretStash" operation="base_add" level="40,59" value="20"/>
+		<passive_effect name="SecretStash" operation="base_add" level="60,79" value="30"/>
+		<passive_effect name="SecretStash" operation="base_add" level="80,99" value="40"/>
+		<passive_effect name="SecretStash" operation="base_add" level="100" value="50"/>
+	</effect_group></perk>
+
+<perk name="actionPerkQuesting" name_key="actionPerkQuesting" parent="actionSkillIntellect" icon="ui_game_symbol_adventure" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkQuestingNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkQuestingNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Perk Bonus">
+		<passive_effect name="QuestBonusItemReward" operation="perc_add" level="1,100" value=".0025,.25"/><!-- More Dukes -->
+		<passive_effect name="QuestRewardOptionCount" operation="base_add" level="60,100" value="1"/><!-- +1 Reward Option -->
+		<passive_effect name="QuestRewardChoiceCount" operation="base_add" level="80,100" value="1"/><!-- +1 Reward Choice -->
+	</effect_group></perk>
+
+<perk name="actionPerkSalvaging" name_key="actionPerkSalvaging" parent="actionSkillIntellect" icon="symbol_wrench" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Perk Bonus">
+		<requirement name="ItemHasTags" tags="salvageTool"/>
+		<passive_effect name="BlockDamage" operation="perc_add" level="1,100" value=".005,.5"/>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1,100" value=".005,.5"/>
+		<passive_effect name="HarvestCount" operation="perc_add" level="1,100" value=".005,.5" tags="salvageTool,salvageHarvest"/>
+	</effect_group>
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkSalvagingNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkSalvagingNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Level Up">
+		<requirement name="ItemHasTags" tags="salvageTool"/>
+		<triggered_effect trigger="onSelfKilledOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkSalvaging" attribute="Intellect" add_xp="5"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkSalvaging" attribute="Intellect" add_xp="1">
+			<requirement name="IsAlive" target="other"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHarvestBlock" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkSalvaging" attribute="Intellect" add_xp="4"/>
+		<triggered_effect trigger="onSelfDamagedBlock" action="ULM_SkillUp,UndeadLegacy" skill="actionPerkSalvaging" attribute="Intellect" add_xp="1"/>
+	</effect_group></perk>
+	
+<perk name="actionPerkLockPicking" name_key="actionPerkLockPicking" parent="actionSkillIntellect" icon="symbol_lockpick" max_level="100" base_skill_point_cost="0">
+	<effect_group name="Initialize">
+		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$actionPerkLockPickingNext" operation="set" value="100">
+			<requirement name="CVarCompare" operation="LT" value="1" cvar="$actionPerkLockPickingNext"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group name="Perk Bonus">
+		<passive_effect name="LockPickTier" operation="base_add" level="1,100" value="1,100"/>
+		<passive_effect name="LockPickDurability" operation="perc_add" level="1,100" value=".01,1"/>
+	</effect_group></perk>
+	
+<!-- Filler Perks and Action Skills For UI -->
+
+<perk name="perkMasterChef"					parent="skillPerceptionFiller"			name_key="null"><effect_group/></perk>
+<perk name="perkAdvancedEngineering"		parent="skillStrengthFiller"			name_key="null"><effect_group/></perk>
+<perk name="perkGreaseMonkey"				parent="skillStrengthFiller"			name_key="null"><effect_group/></perk>
+<perk name="perkAgilityFiller1"				parent="skillAgilityFiller"				name_key="null"><effect_group/></perk>
+<perk name="perkIntellectFiller1"			parent="skillIntellectFiller"			name_key="null"><effect_group/></perk>
+<perk name="perkIntellectFiller2"			parent="skillIntellectFiller"			name_key="null"><effect_group/></perk>
+	
+<perk name="actionPerkPerceptionFiller1"	parent="actionSkillPerceptionFiller"	name_key="null"><effect_group/></perk>
+<perk name="actionPerkPerceptionFiller2"	parent="actionSkillPerceptionFiller"	name_key="null"><effect_group/></perk>
+<perk name="actionPerkPerceptionFiller3"	parent="actionSkillPerceptionFiller"	name_key="null"><effect_group/></perk>
+<perk name="actionPerkPerceptionFiller4"	parent="actionSkillPerceptionFiller"	name_key="null"><effect_group/></perk>
+<perk name="actionPerkPerceptionFiller5"	parent="actionSkillPerceptionFiller"	name_key="null"><effect_group/></perk>
+<perk name="actionPerkPerceptionFiller6"	parent="actionSkillPerceptionFiller"	name_key="null"><effect_group/></perk>
+<perk name="actionPerkStrengthFiller1"		parent="actionSkillStrengthFiller"		name_key="null"><effect_group/></perk>
+<perk name="actionPerkStrengthFiller2"		parent="actionSkillStrengthFiller"		name_key="null"><effect_group/></perk>
+<perk name="actionPerkStrengthFiller3"		parent="actionSkillStrengthFiller"		name_key="null"><effect_group/></perk>
+<perk name="actionPerkStrengthFiller4"		parent="actionSkillStrengthFiller"		name_key="null"><effect_group/></perk>
+<perk name="actionPerkFortitudeFiller1"		parent="actionSkillFortitudeFiller"		name_key="null"><effect_group/></perk>
+<perk name="actionPerkFortitudeFiller2"		parent="actionSkillFortitudeFiller"		name_key="null"><effect_group/></perk>
+<perk name="actionPerkFortitudeFiller3"		parent="actionSkillFortitudeFiller"		name_key="null"><effect_group/></perk>
+<perk name="actionPerkFortitudeFiller4"		parent="actionSkillFortitudeFiller"		name_key="null"><effect_group/></perk>
+<perk name="actionPerkFortitudeFiller5"		parent="actionSkillFortitudeFiller"		name_key="null"><effect_group/></perk>
+<perk name="actionPerkAgilityFiller1"		parent="actionSkillDexterityFiller"		name_key="null"><effect_group/></perk>
+<perk name="actionPerkAgilityFiller2"		parent="actionSkillDexterityFiller"		name_key="null"><effect_group/></perk>
+<perk name="actionPerkAgilityFiller3"		parent="actionSkillDexterityFiller"		name_key="null"><effect_group/></perk>
+<perk name="actionPerkAgilityFiller4"		parent="actionSkillDexterityFiller"		name_key="null"><effect_group/></perk>
+<perk name="actionPerkAgilityFiller5"		parent="actionSkillDexterityFiller"		name_key="null"><effect_group/></perk>
+<perk name="actionPerkAgilityFiller6"		parent="actionSkillDexterityFiller"		name_key="null"><effect_group/></perk>
+
+</perks>
+
+</set>
+</Subquake>

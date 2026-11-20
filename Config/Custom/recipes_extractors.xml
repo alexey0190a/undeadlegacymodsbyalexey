@@ -1,0 +1,104 @@
+<Subquake>
+    
+<append xpath="/recipes">
+
+<extractor name="ore">
+	<output name="ulmResourceOreIron"				prob="30"/>
+	<output name="ulmResourceOreCopper"				prob="10"/>
+	<output name="ulmResourceOreZinc"				prob="10"/>
+	<output name="ulmResourceOreLead"				prob="10"/>
+	<output name="resourceSilverNugget"				prob="3"/>
+	<output name="resourceGoldNugget"				prob="2"/>
+	<output name="resourceRawDiamond"				prob="1"/></extractor>
+
+<extractor name="ore_forest">
+	<output name="ulmResourceOreIron"				prob="30"/>
+	<output name="ulmResourceOreCopper"				prob="10"/>
+	<output name="ulmResourceOreZinc"				prob="10"/>
+	<output name="ulmResourceOreLead"				prob="10"/>
+	<output name="resourceSilverNugget"				prob="2"/>
+	<output name="resourceGoldNugget"				prob="2"/>
+	<output name="resourceRawDiamond"				prob="1"/></extractor>
+
+<extractor name="ore_burnt">
+	<output name="ulmResourceOreIron"				prob="15"/>
+	<output name="ulmResourceOreCopper"				prob="15"/>
+	<output name="ulmResourceOreZinc"				prob="15"/>
+	<output name="ulmResourceOreSulfur"				prob="10"/>
+	<output name="ulmResourceOrePotassiumNitrate"	prob="10"/>
+	<output name="resourceCoal"						prob="10"/>
+	<output name="resourceSilverNugget"				prob="2"/>
+	<output name="resourceGoldNugget"				prob="2"/>
+	<output name="resourceRawDiamond"				prob="1"/></extractor>
+
+<extractor name="ore_desert">
+	<output name="ulmResourceOreIron"				prob="15"/>
+	<output name="ulmResourceOreCopper"				prob="15"/>
+	<output name="ulmResourceOreZinc"				prob="15"/>
+	<output name="ulmResourceOreSulfur"				prob="10"/>
+	<output name="ulmResourceOrePotassiumNitrate"	prob="10"/>
+	<output name="resourceCoal"						prob="10"/>
+	<output name="resourceSilverNugget"				prob="2"/>
+	<output name="resourceGoldNugget"				prob="2"/>
+	<output name="resourceRawDiamond"				prob="1"/></extractor>
+
+<extractor name="ore_snow">
+	<output name="ulmResourceOreIron"				prob="15"/>
+	<output name="ulmResourceOreCopper"				prob="15"/>
+	<output name="ulmResourceOreZinc"				prob="15"/>
+	<output name="ulmResourceOreLead"				prob="10"/>
+	<output name="resourceSilverNugget"				prob="2"/>
+	<output name="resourceGoldNugget"				prob="2"/>
+	<output name="resourceRawDiamond"				prob="1"/></extractor>
+
+<extractor name="ore_wasteland">
+	<output name="ulmResourceOreIron"				prob="30"/>
+	<output name="ulmResourceOreCopper"				prob="30"/>
+	<output name="ulmResourceOreZinc"				prob="30"/>
+	<output name="ulmResourceOreSulfur"				prob="20"/>
+	<output name="ulmResourceOrePotassiumNitrate"	prob="20"/>
+	<output name="resourceCoal"						prob="20"/>
+	<output name="ulmResourceOreTitanium"			prob="20"/>
+	<output name="resourceSilverNugget"				prob="5"/>
+	<output name="resourceGoldNugget"				prob="5"/>
+	<output name="resourceRawDiamond"				prob="3"/></extractor>
+
+<extractor name="oil">
+	<output name="resourceOilShale"					count="1" prob="4"/>
+	<output name="resourceCrushedSand"				count="1" prob="1"/></extractor>
+
+<extractor name="oil_forest">
+	<output name="resourceOilShale"					count="1" prob="4"/>
+	<output name="resourceCrushedSand"				count="1" prob="1"/></extractor>
+
+<extractor name="oil_burnt">
+	<output name="resourceOilShale"					count="1" prob="5"/>
+	<output name="resourceCrushedSand"				count="1" prob="1"/></extractor>
+
+<extractor name="oil_desert">
+	<output name="resourceOilShale"					count="2" prob="5"/>
+	<output name="resourceCrushedSand"				count="1" prob="1"/></extractor>
+
+<extractor name="oil_snow">
+	<output name="resourceOilShale"					count="1" prob="10"/>
+	<output name="resourceSnowBall"					count="1" prob="3"/>
+	<output name="resourceCrushedSand"				count="1" prob="1"/></extractor>
+
+<extractor name="oil_wasteland">
+	<output name="resourceOilShale"					count="1" prob="6"/>
+	<output name="resourceCrushedSand"				count="1" prob="1"/></extractor>
+
+<extractor name="plant">
+	<output name="resourceYuccaFibers"				count="10" prob="1"/></extractor>
+
+<extractor name="chickenCoop">
+	<ingredient tag="seed"							count="5"/>
+	<output name="foodEgg"							count="1,3"	prob="1"/></extractor>
+
+<extractor name="apiary">
+	<ingredient tag="flower"						count="5"/>
+	<output name="ulmResourceHoney"					count="1,3"	prob="1"/></extractor>
+
+</append>
+
+</Subquake>

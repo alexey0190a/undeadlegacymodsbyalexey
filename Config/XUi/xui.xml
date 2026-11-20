@@ -1,0 +1,567 @@
+<Subquake>
+<remove xpath="//window_group[@name='powerspotlight']"/>
+<remove xpath="//window_group[@name='junkDrone']"/>
+<remove xpath="//window_group[@name='skills']"/>
+<set xpath="/xui/ruleset[@name='default']/@scale">1.05</set>
+
+<set xpath="//window_group[@name='radial']/@controller">ULM_Radial,UndeadLegacy</set>
+
+<set xpath="//window_group[@name='backpack']">
+	<window name="itemInfoPanel"/>
+	<window name="emptyInfoPanel"/>
+	<window name="windowBackpack"/></set>	
+
+<set xpath="//window_group[@name='assemble']">
+	<window name="headerEmpty"/>
+	<window name="windowAssemble"/></set>
+
+<set xpath="//window_group[@name='character']">
+	<window name="headerCharacter"/>
+	<window name="CharacterFrameWindow"/>
+	<window name="buffInfoPanel"/></set>	
+
+<set xpath="//window_group[@name='compass']">
+	<window name="windowCompass"/>
+    <window name="onScreenIcons"/></set>
+
+<set xpath="//window_group[@name='crafting']">
+	<window name="windowCraftingList"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueueBackpack"/>
+	<window name="headerCrafting"/></set>
+
+<set xpath="//window_group[@name='creative']">
+	<window name="headerCreative"/>
+	<window name="windowCreativeNew"/></set>
+		
+<set xpath="//window_group[@name='ingameMenu']">
+	<window name="ingameMenu"/></set>
+    
+<set xpath="//window_group[@name='looting']">
+	<window name="headerEmpty"/>
+	<window name="windowLooting"/></set>
+
+<!--
+<set xpath="//window_group[@name='players']">
+	<window name="headerPlayer"/>
+	<window name="players"/></set>-->
+
+<set xpath="//window_group[@name='powercamera']">
+	<window name="windowPowerCameraHeader"/>
+	<window name="windowPowerCameraControl"/></set>
+
+<set xpath="//window_group[@name='powerrangedtrap']">
+	<window name="headerTurret"/>
+	<window name="windowPowerCameraControlPreview"/>
+	<window name="windowPowerRangedTrapOptions"/>
+	<window name="windowPowerTrapSlots"/></set>
+
+<set xpath="//window_group[@name='powersource']">
+	<window name="windowPowerSourceGenerator"/>
+	<window name="windowPowerSourceStats"/>
+	<window name="windowPowerSourceSlots"/></set>
+    
+<set xpath="//window_group[@name='powertrigger']">
+	<window name="headerTrigger"/>
+	<window name="windowPowerCameraControlPreview"/>
+	<window name="windowPowerTriggerOptions"/></set>
+
+<set xpath="//window_group[@name='shapes']">
+	<window name="windowShapeSelector"/>
+	<window name="headerEmpty"/></set>
+	
+<set xpath="//window_group[@name='materials']">
+	<window name="windowTextureSelector"/>
+	<window name="headerEmpty"/>
+</set>
+	
+<set xpath="//window_group[@name='toolbelt']">
+	<window name="ulmPIPScopeGuide" anchor="CenterCenter"/>
+	<window name="ulmInteractionPrompt"/>
+	<window name="windowDebugUndeadLegacy" anchor="LeftBottom"/>
+	<window name="ulmMessageCopyToClipboard" anchor="CenterBottom"/>
+	<window name="windowToolbeltTooltip" anchor="CenterBottom"/>
+	<window name="windowFocusedTarget" anchor="CenterCenter"/>
+	<!--<window name="windowBlockHealth" anchor="CenterCenter"/>-->
+	<!--<window name="windowStealth" anchor="CenterBottom"/>-->
+	<window name="windowTacticalHud" anchor="CenterCenter"/>
+	<window name="windowWireTool" anchor="CenterBottom"/>
+	<window name="windowToolbelt" anchor="CenterBottom"/>
+	<window name="windowHudRight" anchor="RightBottom"/>
+	<window name="windowHudRightVehicle" anchor="RightBottom"/>
+	<window name="windowHudLeft" anchor="LeftBottom"/>
+	<window name="windowHudRightTop" anchor="RightTop"/>
+	<window name="windowGroupBars" anchor="LeftTop"/>
+	<!--
+	<window name="windowFloatingDamageNumbers" anchor="CenterCenter"/>
+	<window name="windowQuestTracker" anchor="RightTop"/>
+	<window name="windowGroupBars" anchor="LeftTop"/>
+	<window name="ulm_hud_vehicle" anchor="LeftBottom"/>
+	<window name="ulm_hud_debug" anchor="LeftBottom"/>--></set>
+		
+<append xpath="//window_group[@name='toolTip']">
+	<window name="windowXUIObjectTooltip"/></append>
+
+<set xpath="//window_group[@name='trader']">
+	<window name="headerEmpty"/>
+	<window name="windowTrader"/>
+	<window name="serviceInfoPanel"/></set>
+
+<set xpath="//window_group[@name='vehicle']">
+	<window name="headerEmpty"/>
+	<window name="windowVehicle"/></set>
+    
+<set xpath="//window_group[@name='vehicleStorage']">
+	<window name="headerEmpty"/>
+	<window name="windowVehicleStorage"/></set>
+		
+<set xpath="//window_group[@name='windowpaging']">
+	<window name="windowPagingHeader"/></set>
+		
+<set xpath="//window_group[@name='workstation_forge']">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingForge"/>
+	<window name="windowCraftingFuel"/>
+	<window name="windowCraftingListForge"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></set>
+		
+<set xpath="//window_group[@name='workstation_workbench']">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></set>				
+		
+<set xpath="//window_group[@name='workstation_cementMixer']">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></set>
+		
+<set xpath="//window_group[@name='workstation_campfire']">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingFuel"/>
+	<window name="windowCraftingToolsCampfire"/>
+	<window name="windowCraftingListWithFuel"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></set>
+		
+<append xpath="/xui/ruleset[@name='default']">
+		
+<window_group name="journal" controller="XUiC_JournalWindowGroup,UndeadLegacy">
+	<window name="windowJournalList" />
+	<window name="windowJournalEntryDescription" />
+</window_group>
+		
+<window_group name="powercamera2" controller="XUiC_ULP_PowerCameraWindowGroup,UndeadLegacy" actionSet="controller" close_compass_on_open="true">
+	<window name="windowPowerCameraHeader"/>
+	<window name="windowPowerCameraControl2"/>
+</window_group>
+	
+<window_group name="powertrigger2" controller="XUiC_ULP_PowerTriggerWindowGroup,UndeadLegacy" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="windowPowerTriggerOptions2" />
+	<window name="windowPowerCameraControlPreview2"/>
+	<window name="windowNonPagingHeader"/>
+</window_group>
+
+<window_group name="windowPlayerLightProperties">
+	<window name="windowPlayerLightProperties"/>
+</window_group>
+<window_group name="windowLockPicking">
+  <window name="windowLockPicking"/>
+</window_group>
+<window_group name="dummyWindow">
+	<window name="dummyWindow"/>
+</window_group>
+<window_group name="powerspotlight" controller="XUiC_ULP_PowerSpotlightWindowGroup,UndeadLegacy" actionSet="controller" close_compass_on_open="true">
+	<window name="windowSpotlightCamera"/>
+</window_group>
+
+<window_group name="windowBlockUpgrading" close_compass_on_open="true">
+	<window name="headerEmpty"/>
+	<window name="windowBlockUpgrading"/>
+</window_group>
+
+<window_group name="windowHazardTrap" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="headerEmpty"/>
+	<window name="windowHazardTrap"/>
+</window_group>
+
+<window_group name="windowRecycler" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="headerEmpty"/>
+	<window name="windowRecycler"/>
+</window_group>
+
+<window_group name="windowChargingStationInteract" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="headerEmpty"/>
+	<window name="windowChargingStationInteract"/>
+</window_group>
+
+<window_group name="windowStoreSimilarInteract">
+	<window name="windowStoreSimilarInteract"/>
+</window_group>
+
+<window_group name="windowExtractorOil" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="headerEmpty"/>
+	<window name="windowExtractorOil"/>
+</window_group>
+
+<window_group name="windowExtractorOre" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="headerEmpty"/>
+	<window name="windowExtractorOre"/>
+</window_group>
+
+<window_group name="windowResourceGenerator" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="headerEmpty"/>
+	<window name="windowResourceGenerator"/>
+</window_group>
+
+<window_group name="windowHydroponicPlanter" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="headerEmpty"/>
+	<window name="windowHydroponicPlanter"/>
+</window_group>
+
+<window_group name="windowResearch" open_backpack_on_open="false" close_compass_on_open="true">
+	<window name="windowResearch"/>
+</window_group>
+
+<window_group name="windowResearchSelection" open_backpack_on_open="false" close_compass_on_open="true">
+	<window name="windowResearchSelection"/>
+</window_group>
+
+<window_group name="skills" open_backpack_on_open="false" close_compass_on_open="true">
+	<window name="windowSkillTree"/>
+</window_group>
+
+<window_group name="skillsOldWindow" controller="XUiC_SkillWindowGroup">
+	<window name="windowSkillList"/>
+	<window name="windowSkillAttributeInfo"/>
+	<window name="windowSkillSkillInfo"/>
+	<window name="windowSkillPerkInfo"/>
+	<window name="windowSkillBookInfo"/>
+	<window name="windowSkillCraftingInfo"/>
+</window_group>
+
+<window_group name="windowModificationStation" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderModificationStation"/>
+	<window name="windowModificationStation"/>
+</window_group>
+
+<window_group name="windowRepairStationTrader" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="headerEmpty"/>
+	<window name="windowRepairStationTrader"/>
+</window_group>
+	
+<window_group name="signedDoorEditText">
+	<window name="signedDoorEditText"/>
+</window_group>
+
+<window_group name="signedDoorProperties">
+  <window name="signedDoorProperties"/>
+</window_group>
+
+<window_group name="junkDrone" controller="XUiC_ULM_DroneWindowGroup,UndeadLegacy" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="headerEmpty"/>
+	<window name="windowAssembleDrone"/>
+</window_group>
+	
+<window_group name="ulmMessageWindow">
+	<window name="ulmMessageWindow"/>
+</window_group>
+	
+<window_group name="actionSkills">
+	<window name="windowActionSkills"/>
+	<window name="windowSkillPerkInfo"/>
+	<window name="windowSkillBookInfo"/>
+</window_group>
+	
+<window_group name="collectibles">
+	<window name="windowCollectibles"/>
+	<window name="windowSkillPerkInfo"/>
+	<window name="windowSkillBookInfo"/>
+</window_group>
+
+<window_group name="powersource2" controller="XUiC_ULP_PowerSourceWindowGroup,UndeadLegacy" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="headerEmpty"/>
+	<window name="windowPowerSourceStatsNew"/>
+	<window name="windowPowerSourceSlotsNew"/>
+</window_group>
+
+<window_group name="powertrigger2" controller="XUiC_ULP_PowerTriggerWindowGroup,UndeadLegacy" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="headerTrigger"/>
+	<window name="windowPowerNewCameraControl"/>
+	<window name="windowPowerNewTriggerOptions"/>
+</window_group>
+
+<window_group name="powerrangedtrap2" controller="XUiC_ULP_PowerRangedTrapWindowGroup,UndeadLegacy" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="headerTurret"/>
+	<window name="windowPowerNewCameraControl"/>
+	<window name="windowPowerNewTrapOptions"/>
+	<window name="windowPowerNewTrapSlots"/>
+</window_group>
+    
+<window_group name="ulmStationBallistics_1" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+    
+<window_group name="ulmStationBallistics_2" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+    
+<window_group name="ulmStationArtisan_1" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+    
+<window_group name="ulmStationArtisan_2" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+
+<window_group name="ulmStationDisassembly_1" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+    
+<window_group name="ulmStationEvent_1" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+
+<window_group name="ulmStationForge_1" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+
+<window_group name="ulmStationForge_2" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+
+<window_group name="ulmStationForge_3" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+		
+<window_group name="ulmStationKiln_1" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingKiln"/>
+	<window name="windowCraftingFuel"/>
+	<window name="windowCraftingListWithFuel"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+		
+<window_group name="ulmStationFurnace_1" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingFurnace"/>
+	<window name="windowCraftingFuel"/>
+	<window name="windowCraftingListWithFuel"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+		
+<window_group name="ulmStationFurnace_2" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingFurnace"/>
+	<window name="windowCraftingFuel"/>
+	<window name="windowCraftingListWithFuel"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+		
+<window_group name="ulmStationFurnace_3" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingFurnace"/>
+	<window name="windowCraftingFuel"/>
+	<window name="windowCraftingListWithFuel"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+		
+<window_group name="ulmStationCarpenter_1" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+		
+<window_group name="ulmStationCarpenter_2" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+		
+<window_group name="ulmStationCarpenter_3" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+
+<window_group name="ulmStationMechanic_1" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+
+<window_group name="ulmStationMechanic_2" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+
+<window_group name="ulmStationMechanic_3" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+
+<window_group name="ulmStationMortarAndPestle_1" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+	
+<window_group name="ulmStationResearch_1" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+
+<window_group name="ulmStationResearch_2" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+
+<window_group name="ulmStationResearch_3" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+    
+<window_group name="ulmStationTailor_1" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+    
+<window_group name="ulmStationTailor_2" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingListWorkbench"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+
+<window_group name="ulmStationChemistry_1" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingFuel"/>
+	<window name="windowCraftingListWithFuel"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+
+<window_group name="ulmStationChemistry_2" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingFuel"/>
+	<window name="windowCraftingListWithFuel"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+
+<window_group name="ulmStationChemistry_3" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowCraftingFuel"/>
+	<window name="windowCraftingListWithFuel"/>
+	<window name="windowCraftingInfo"/>
+	<window name="windowCraftingQueue"/>
+	<window name="windowCraftingOutput"/></window_group>
+
+<window_group name="ulmStationStoveRetroPowered" controller="XUiC_ULM_PoweredStationWindowGroup,UndeadLegacy" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowPoweredCraftingTools"/>
+	<window name="windowPoweredCraftingList"/>
+	<window name="windowPoweredCraftingInfo"/>
+	<window name="windowPoweredCraftingQueue"/>
+	<window name="windowPoweredCraftingOutput"/>
+	<window name="windowPoweredCraftingToggleForTools"/></window_group>
+
+<window_group name="ulmStationCementMixerPowered" controller="XUiC_ULM_PoweredStationWindowGroup,UndeadLegacy" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowPoweredCraftingListNoTools"/>
+	<window name="windowPoweredCraftingInfo"/>
+	<window name="windowPoweredCraftingQueue"/>
+	<window name="windowPoweredCraftingOutput"/>
+	<window name="windowPoweredCraftingToggle"/></window_group>
+	
+<window_group name="ulmStationCircularSawPowered" controller="XUiC_ULM_PoweredStationWindowGroup,UndeadLegacy" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowPoweredCraftingListNoTools"/>
+	<window name="windowPoweredCraftingInfo"/>
+	<window name="windowPoweredCraftingQueue"/>
+	<window name="windowPoweredCraftingOutput"/>
+	<window name="windowPoweredCraftingToggle"/></window_group>
+
+<window_group name="ulmStationDataResequencerPowered" controller="XUiC_ULM_PoweredStationWindowGroup,UndeadLegacy" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowPoweredCraftingList"/>
+	<window name="windowPoweredCraftingInfo"/>
+	<window name="windowPoweredCraftingQueue"/>
+	<window name="windowPoweredCraftingOutput"/>
+	<window name="windowPoweredCraftingToggle"/></window_group>
+		
+<window_group name="ulmStationFurnace_2Powered" controller="XUiC_ULM_PoweredStationWindowGroup,UndeadLegacy" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowPoweredCraftingFurnace"/>
+	<window name="windowPoweredCraftingList"/>
+	<window name="windowPoweredCraftingInfo"/>
+	<window name="windowPoweredCraftingQueue"/>
+	<window name="windowPoweredCraftingOutput"/>
+	<window name="windowPoweredCraftingToggleForTools"/></window_group>
+		
+<window_group name="ulmStationFurnace_3Powered" controller="XUiC_ULM_PoweredStationWindowGroup,UndeadLegacy" open_backpack_on_open="true" close_compass_on_open="true">
+	<window name="ulmHeaderWorkstation"/>
+	<window name="windowPoweredCraftingBlastFurnace"/>
+	<window name="windowPoweredCraftingList"/>
+	<window name="windowPoweredCraftingInfo"/>
+	<window name="windowPoweredCraftingQueue"/>
+	<window name="windowPoweredCraftingOutput"/>
+	<window name="windowPoweredCraftingToggleForTools"/></window_group>
+
+</append>
+	
+</Subquake>

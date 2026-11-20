@@ -1,0 +1,154 @@
+<Subquake>
+
+<set xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']">
+		animalCoyote, 20
+		ulmAnimalScorpionScorched, 10
+		ulmAnimalScorpionBlood, 10
+		animalZombieVulture, 10
+		animalSnake, 10
+		none, 40</set>
+		
+<set xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesertNight']">
+		animalBoar, 5
+		animalWolf, 10
+		ulmAnimalScorpionScorched, 10
+		ulmAnimalScorpionBlood, 10
+		animalMountainLion, 5
+		none, 60</set>
+
+<set xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']">
+		animalMountainLion, 15
+		ulmAnimalScorpionFrostbite, 15
+		animalWolf, 5
+		animalDireWolf, 5
+		animalBear, 5
+		animalBearSmall, 5
+		none, 50</set>
+
+<set xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnowNight']">
+		animalDireWolf, 5
+		ulmAnimalScorpionFrostbite, 10
+		animalZombieDog, 5
+		none, 70</set>
+
+<set xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForestAny']">
+		ulmAnimalScorpionBlood, 10
+		animalZombieDog, 9
+		animalZombieBear, 3
+		animalDireWolf, 3
+		animalSnake, 5
+		animalBoar, 5
+		none, 65</set>
+
+<set xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForestNight']">
+		ulmAnimalScorpionBlood, 10
+		animalZombieVulture, 10
+		animalCoyote, 5
+		animalBoar, 5
+		none, 70</set>
+
+<set xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']">
+		ulmAnimalScorpionRadiatedBoss, 15
+		ulmAnimalScorpionRadiated, 15
+		ulmAnimalScorpionBlood, 12
+		animalZombieVulture, 12
+		animalZombieDog, 12
+		animalZombieBear, 12
+		animalDireWolf, 12
+		animalSnake, 5
+		none, 5</set>
+		
+<set xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWastelandNight']">
+		animalDireWolf, 15
+		ulmAnimalScorpionRadiatedBoss, 15
+		ulmAnimalScorpionRadiated, 10
+		ulmAnimalScorpionBlood, 10
+		animalZombieBear, 10
+		none, 40</set>
+
+<append xpath="/entitygroups">
+
+<entitygroup name="ulmAnimalScorpionGroup">
+		ulmAnimalScorpionBlood, 30
+		ulmAnimalScorpionScorched, 20
+		ulmAnimalScorpionFrostbite, 10
+	</entitygroup>
+
+<entitygroup name="ulmAnimalScorpionScorched">ulmAnimalScorpionScorched</entitygroup>
+
+<entitygroup name="ulmAnimalScorpionFrostbite">ulmAnimalScorpionFrostbite</entitygroup>
+
+<entitygroup name="ulmAnimalScorpionBlood">ulmAnimalScorpionBlood</entitygroup>
+
+<entitygroup name="ulmAnimalScorpionRadiated">ulmAnimalScorpionRadiated</entitygroup>
+
+<entitygroup name="ulmAnimalScorpionRadiatedBoss">ulmAnimalScorpionRadiatedBoss</entitygroup>
+
+<entitygroup name="ulmZombieFirefighter">ulmZombieFirefighter</entitygroup>
+<entitygroup name="ulmZombieFirefighterFeral">ulmZombieFirefighterFeral</entitygroup>
+<entitygroup name="ulmZombieFirefighterRadiated">ulmZombieFirefighterRadiated</entitygroup>
+
+<entitygroup name="ulmZombieFirefighters_0001">
+		ulmZombieFirefighter, .9
+		ulmZombieFirefighterFeral, .09
+		ulmZombieFirefighterRadiated, .01</entitygroup>
+<entitygroup name="ulmZombieFirefighters_0025">
+		ulmZombieFirefighter, .8
+		ulmZombieFirefighterFeral, .15
+		ulmZombieFirefighterRadiated, .05</entitygroup>
+<entitygroup name="ulmZombieFirefighters_0050">
+		ulmZombieFirefighter, .75
+		ulmZombieFirefighterFeral, .18
+		ulmZombieFirefighterRadiated, .07</entitygroup>
+<entitygroup name="ulmZombieFirefighters_0075">
+		ulmZombieFirefighter, .70
+		ulmZombieFirefighterFeral, .20
+		ulmZombieFirefighterRadiated, .10</entitygroup>
+<entitygroup name="ulmZombieFirefighters_0100">
+		ulmZombieFirefighter, .60
+		ulmZombieFirefighterFeral, .25
+		ulmZombieFirefighterRadiated, .15</entitygroup>
+<entitygroup name="ulmZombieFirefighters_0150">
+		ulmZombieFirefighter, .50
+		ulmZombieFirefighterFeral, .30
+		ulmZombieFirefighterRadiated, .20</entitygroup>
+<entitygroup name="ulmZombieFirefighters_0200">
+		ulmZombieFirefighter, .40
+		ulmZombieFirefighterFeral, .35
+		ulmZombieFirefighterRadiated, .25</entitygroup>
+<entitygroup name="ulmZombieFirefighters_0300">
+		ulmZombieFirefighter, .30
+		ulmZombieFirefighterFeral, .40
+		ulmZombieFirefighterRadiated, .30</entitygroup>
+<entitygroup name="ulmZombieFirefighters_0400">
+		ulmZombieFirefighter, .20
+		ulmZombieFirefighterFeral, .40
+		ulmZombieFirefighterRadiated, .40</entitygroup>
+<entitygroup name="ulmZombieFirefighters_0500">
+		ulmZombieFirefighter, .10
+		ulmZombieFirefighterFeral, .50
+		ulmZombieFirefighterRadiated, .40</entitygroup>
+<entitygroup name="ulmZombieFirefighters_0600">
+		ulmZombieFirefighter, .05
+		ulmZombieFirefighterFeral, .50
+		ulmZombieFirefighterRadiated, .45</entitygroup>
+<entitygroup name="ulmZombieFirefighters_0700">
+		ulmZombieFirefighter, .01
+		ulmZombieFirefighterFeral, .50
+		ulmZombieFirefighterRadiated, .49</entitygroup>
+<entitygroup name="ulmZombieFirefighters_0800">
+		ulmZombieFirefighter, .01
+		ulmZombieFirefighterFeral, .40
+		ulmZombieFirefighterRadiated, .59</entitygroup>
+<entitygroup name="ulmZombieFirefighters_0900">
+		ulmZombieFirefighter, .01
+		ulmZombieFirefighterFeral, .30
+		ulmZombieFirefighterRadiated, .69</entitygroup>
+<entitygroup name="ulmZombieFirefighters_1000">
+		ulmZombieFirefighter, .01
+		ulmZombieFirefighterFeral, .20
+		ulmZombieFirefighterRadiated, .79</entitygroup>
+
+</append>
+
+</Subquake>

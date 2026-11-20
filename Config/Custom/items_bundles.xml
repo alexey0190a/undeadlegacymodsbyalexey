@@ -1,0 +1,1022 @@
+<Subquake>
+
+<set xpath="/items/item[@name='questRewardBundleMaster']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="matIron"/><property name="Weight" value="0"/>
+	<property name="SellableToTrader" value="false"/><property name="CarryWeight" value="5"/>
+	<property name="SoundPickup" value="questbundle_grab"/>
+	<property name="SoundPlace" value="questbundle_place"/>
+	<property class="Action0">
+		<property name="Class" value="OpenBundle"/>
+		<property name="Delay" value="0"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardPipePistolBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateRevolver"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunHandgunT0PipePistol,ammo9mmBulletBall"/>
+		<property name="Create_item_count" value="1,20"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardPipeShotgunBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateShotgun"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunShotgunT0PipeShotgun,ammoShotgunShell"/>
+		<property name="Create_item_count" value="1,20"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardPipeRifleBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateSniperRifle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunRifleT0PipeRifle,ulmAmmo792mmRoundST"/>
+		<property name="Create_item_count" value="1,20"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardPipeMachineGunBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateAssaultRifle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunMGT0PipeMachineGun,ulmAmmo556mmRoundST"/>
+		<property name="Create_item_count" value="1,20"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardPipeBatonBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateBaton"/>
+	<property class="Action0">
+		<property name="Create_item" value="meleeWpnBatonT0PipeBaton,resourceRepairKit,medicalFirstAidBandage"/>
+		<property name="Create_item_count" value="1,1,3"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardSteelKnuckleCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateKnuckles"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceForgedSteel,resourceDuctTape,resourceLeather,resourceCloth"/>
+		<property name="Create_item_count" value="2-5,1-2,2-3,1-3"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardMacheteCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateMachete"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceForgedSteel,resourceDuctTape,resourceLeather,ulmResourceHandleWood"/>
+		<property name="Create_item_count" value="2-5,1-2,2-3,1"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardSteelClubCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateBaseballBat"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceForgedSteel,resourceDuctTape,resourceLeather,ulmResourceHandleWood"/>
+		<property name="Create_item_count" value="2-5,1-2,2-3,1"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardSteelSledgehammerCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateSledgehammer"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceForgedSteel,resourceDuctTape,resourceLeather,ulmResourceHandleWood"/>
+		<property name="Create_item_count" value="5-10,2-3,3-5,1"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardBowCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateBow"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunBowT1WoodenBowParts,resourceLeather,resourceGlue,resourceDuctTape,ulmResourceRope,ammoArrowIron"/>
+		<property name="Create_item_count" value="2-3,1-5,1-2,1-3,1,20-50"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardSteelSpearCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateSpear"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceForgedSteel,resourceDuctTape,resourceLeather,ulmResourceHandleWood"/>
+		<property name="Create_item_count" value="2-7,1-3,1-3,1"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardHandgunCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateHandgun"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunHandgunT1PistolParts,resourceForgedIron,ulmResourceNutsAndBolts,resourceSpring,resourceScrapPolymers,resourceDuctTape,ammo9mmBulletBall"/>
+		<property name="Create_item_count" value="1-5,1-10,1-30,1-2,1-5,1-2,20-50"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardShotgunCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateShotgun"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunShotgunT1DoubleBarrelParts,resourceForgedIron,ulmResourceNutsAndBolts,resourceSpring,resourceScrapPolymers,resourceDuctTape,ammoShotgunShell"/>
+		<property name="Create_item_count" value="1-5,1-10,1-30,1-2,1-10,1-2,20-50"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardRifleCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateSniperRifle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunRifleT1HuntingRifleParts,resourceForgedIron,ulmResourceNutsAndBolts,resourceSpring,resourceScrapPolymers,resourceDuctTape,ulmAmmo792mmRoundST"/>
+		<property name="Create_item_count" value="1-5,1-10,1-30,1-2,1-10,1-2,20-50"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardMachineGunCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateAssaultRifle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunMGT1AK47Parts,resourceForgedIron,ulmResourceNutsAndBolts,resourceSpring,resourceScrapPolymers,resourceDuctTape,ammo762mmBulletBall"/>
+		<property name="Create_item_count" value="1-4,1-10,1-30,1-2,1-10,1-2,20-50"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardRocketLauncherCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateRocketLauncher"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunExplosivesT3RocketLauncherParts,resourceForgedSteel,ulmResourceNutsAndBolts,resourceElectricParts,resourceSpring,resourceDuctTape,ammoRocketFrag"/>
+		<property name="Create_item_count" value="1-5,1-20,1-30,1-5,1-3,1-3,15-30"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardBatonCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateStunBaton"/>
+	<property class="Action0">
+		<property name="Create_item" value="meleeWpnBatonT2StunBatonParts,resourceForgedIron,ulmResourceNutsAndBolts,resourceDuctTape,resourceElectricParts,ulmResourceElectronicCopperCoil,ulmResourceElectronicCircuitboard,ulmResourceScrapWires,ulmResourceElectronicSwitch"/>
+		<property name="Create_item_count" value="1-2,1-5,1-20,1-3,1,1-2,1,1-2,1"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardRoboticsCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateTurret"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunBotRoboticsParts,resourceForgedIron,ulmResourceNutsAndBolts,ulmResourceGears,ulmResourceBallBearings,resourceMechanicalParts,resourceSpring,resourceScrapPolymers,motionsensor,ulmResourceElectronicCircuitboard,ulmResourceScrapWires,resourceOil,ammoJunkTurretRegular"/>
+		<property name="Create_item_count" value="1-5,1-10,5-30,1-20,1-6,1-5,1-6,1-8,1,1-2,1-6,1-5,25-50"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardSteelToolsCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateMechanic"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceForgedSteel,resourceLeather,resourceDuctTape,ulmResourceHandleWood"/>
+		<property name="Create_item_count" value="1-10,1-5,1-3,1"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardMotorToolsCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateMechanic"/>
+	<property class="Action0">
+		<property name="Create_item" value="meleeToolAxeT3ChainsawParts,resourceForgedSteel,resourceMechanicalParts,ulmResourceNutsAndBolts"/>
+		<property name="Create_item_count" value="1-5,1-10,1-5,1-20"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardLegendarySteelKnuckleCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateKnuckles"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceLegendaryParts,resourceForgedSteel,resourceDuctTape,resourceLeather,resourceCloth"/>
+		<property name="Create_item_count" value="1,2-5,1-2,2-3,1-3"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardLegendaryMacheteCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateMachete"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceLegendaryParts,resourceLeather,resourceDuctTape,resourceForgedSteel,ulmResourceHandleWood"/>
+		<property name="Create_item_count" value="1,1-3,1-3,1-10,1"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardLegendarySteelClubCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateBaseballBat"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceLegendaryParts,resourceLeather,resourceDuctTape,resourceForgedSteel,ulmResourceHandleWood"/>
+		<property name="Create_item_count" value="1,1-3,1-3,1-10,1"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardLegendarySteelSledgehammerCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateSledgehammer"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceLegendaryParts,resourceForgedSteel,resourceDuctTape,resourceLeather,ulmResourceHandleWood"/>
+		<property name="Create_item_count" value="1,5-10,2-3,3-5,1"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardLegendaryBowCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateBow"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceLegendaryParts,gunBowT1WoodenBowParts,resourceLeather,resourceGlue,resourceDuctTape,ulmResourceRope,ammoArrowIron"/>
+		<property name="Create_item_count" value="1,2-3,1-5,1-2,1-3,1,20-50"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardLegendarySteelSpearCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateSpear"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceLegendaryParts,resourceForgedSteel,resourceDuctTape,resourceLeather,ulmResourceHandleWood"/>
+		<property name="Create_item_count" value="1,2-7,1-3,1-3,1"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardLegendaryHandgunCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateHandgun"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceLegendaryParts,gunHandgunT1PistolParts,resourceForgedIron,ulmResourceNutsAndBolts,resourceSpring,resourceScrapPolymers,resourceDuctTape,ammo9mmBulletBall"/>
+		<property name="Create_item_count" value="1,1-5,1-10,1-30,1-2,1-5,1-2,20-50"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardLegendaryShotgunCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateShotgun"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceLegendaryParts,gunShotgunT1DoubleBarrelParts,resourceForgedIron,ulmResourceNutsAndBolts,resourceSpring,resourceScrapPolymers,resourceDuctTape,ammoShotgunShell"/>
+		<property name="Create_item_count" value="1,1-5,1-10,1-30,1-2,1-10,1-2,20-50"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardLegendaryRifleCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateSniperRifle"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceLegendaryParts,gunRifleT1HuntingRifleParts,resourceForgedIron,ulmResourceNutsAndBolts,resourceSpring,resourceScrapPolymers,resourceDuctTape,ulmAmmo792mmRoundST"/>
+		<property name="Create_item_count" value="1,1-5,1-10,1-30,1-2,1-10,1-2,20-50"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardLegendaryMachineGunCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateAssaultRifle"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceLegendaryParts,gunMGT1AK47Parts,resourceForgedIron,ulmResourceNutsAndBolts,resourceSpring,resourceScrapPolymers,resourceDuctTape,ammo762mmBulletBall"/>
+		<property name="Create_item_count" value="1,1-4,1-10,1-30,1-2,1-10,1-2,20-50"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardLegendaryRocketLauncherCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateRocketLauncher"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceLegendaryParts,gunExplosivesT3RocketLauncherParts,resourceForgedSteel,ulmResourceNutsAndBolts,resourceElectricParts,resourceSpring,resourceDuctTape,ammoRocketFrag"/>
+		<property name="Create_item_count" value="1,1-5,1-20,1-30,1-5,1-3,1-3,15-30"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardLegendaryBatonCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateStunBaton"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceLegendaryParts,meleeWpnBatonT2StunBatonParts,resourceForgedIron,ulmResourceNutsAndBolts,resourceDuctTape,resourceElectricParts,ulmResourceElectronicCopperCoil,ulmResourceElectronicCircuitboard,ulmResourceScrapWires,ulmResourceElectronicSwitch"/>
+		<property name="Create_item_count" value="1,1-2,1-5,1-20,1-3,1,1-2,1,1-2,1"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardLegendaryRoboticsCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateTurret"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceLegendaryParts,gunBotRoboticsParts,resourceForgedIron,ulmResourceNutsAndBolts,ulmResourceGears,ulmResourceBallBearings,resourceMechanicalParts,resourceSpring,resourceScrapPolymers,motionsensor,ulmResourceElectronicCircuitboard,ulmResourceScrapWires,resourceOil,ammoJunkTurretRegular"/>
+		<property name="Create_item_count" value="1,1-5,1-10,5-30,1-20,1-6,1-5,1-6,1-8,1,1-2,1-6,1-5,25-50"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardLegendarySteelToolsCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateMechanic"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceLegendaryParts,resourceForgedSteel,resourceLeather,resourceDuctTape,ulmResourceHandleWood"/>
+		<property name="Create_item_count" value="1,1-10,1-5,1-3,1"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardLegendaryMotorToolsCraftingBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateMechanic"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceLegendaryParts,meleeToolAxeT3ChainsawParts,resourceForgedSteel,resourceMechanicalParts,ulmResourceNutsAndBolts"/>
+		<property name="Create_item_count" value="1,1-5,1-10,1-5,1-20"/>
+	</property></set>
+
+
+<set xpath="/items/item[@name='questRewardAmmoCraftingBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateAmmo"/>
+	<property class="Action0">
+		<property name="Class" value="OpenBundle"/>
+		<property name="Delay" value="0"/>
+		<property name="Create_item" value="resourceGunPowder,resourceBuckshot,resourceBulletTip,resourceBulletCasing,resourcePaper"/>
+		<property name="Create_item_count" value="100,100,100,100,100"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardFarmT1Bundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateFarming"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardFarmBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="farmPlotBlockVariantHelper"/>
+		<property name="Create_item_count" value="3"/>
+		<property name="Random_item" value="plantedMushroom1,plantedYucca1,plantedCotton1,plantedGoldenrod1,plantedChrysanthemum1,plantedCoffee1"/>
+		<property name="Random_item_count" value="1,1,1"/>
+		<property name="Random_count" value="3"/>
+		<property name="Unique_random_only" value="true"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardFarmT2Bundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateFarming"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardFarmBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="farmPlotBlockVariantHelper"/>
+		<property name="Create_item_count" value="3"/>
+		<property name="Random_item" value="plantedPotato1,plantedCorn1,plantedAloe1,plantedBlueberry1"/>
+		<property name="Random_item_count" value="1,1,1"/>
+		<property name="Random_count" value="3"/>
+		<property name="Unique_random_only" value="true"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardFarmT3Bundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateFarming"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardFarmBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="farmPlotBlockVariantHelper"/>
+		<property name="Create_item_count" value="3"/>
+		<property name="Random_item" value="plantedPumpkin1,plantedHop1,plantedGraceCorn1"/>
+		<property name="Random_item_count" value="1,1,1"/>
+		<property name="Random_count" value="3"/>
+		<property name="Unique_random_only" value="true"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardVehiclePartsBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateCar"/>
+	<property class="Action0">	
+		<property name="Class" value="OpenLootBundle"/>
+		<property name="Delay" value="0"/>
+		<property name="Sound_start" value="questbundle_grab"/>
+		<property name="LootList" value="bundleVehicleParts"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT0HandgunBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateRevolver"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardRangedWeaponBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunHandgunT0PipePistol,ammo9mmBulletBall"/>
+		<property name="Create_item_count" value="1-20,30"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT0RifleBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateSniperRifle"/>
+	<property name="Extends" value="questRewardT0HandgunBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunRifleT0PipeRifle,ulmAmmo792mmRoundST"/>
+		<property name="Create_item_count" value="1-20,20"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT0ShotgunBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateShotgun"/>
+	<property name="Extends" value="questRewardT0HandgunBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunShotgunT0PipeShotgun,ammoShotgunShell"/>
+		<property name="Create_item_count" value="1-20,20"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardT0MachineGunBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateAssaultRifle"/>
+	<property name="Extends" value="questRewardT0HandgunBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunMGT0PipeMachineGun,ulmAmmo556mmRoundST"/>
+		<property name="Create_item_count" value="1-20,60"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT1HandgunBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateHandgun"/>
+	<property name="Extends" value="questRewardT0HandgunBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunHandgunT1Pistol,ammo9mmBulletBall"/>
+		<property name="Create_item_count" value="1-20,30"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT1ShotgunBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateShotgun"/>
+	<property name="Extends" value="questRewardT0HandgunBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunShotgunT1DoubleBarrel,ammoShotgunShell"/>
+		<property name="Create_item_count" value="1-20,20"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT1RifleBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateSniperRifle"/>
+	<property name="Extends" value="questRewardT0HandgunBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunRifleT1HuntingRifle,ulmAmmo792mmRoundST"/>
+		<property name="Create_item_count" value="1-20,20"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT1MachineGunBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateAssaultRifle"/>
+	<property name="Extends" value="questRewardT0HandgunBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunMGT1AK47,ammo762mmBulletBall"/>
+		<property name="Create_item_count" value="1-20,30"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT2HandgunBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateRevolver"/>
+	<property name="Extends" value="questRewardT0HandgunBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunHandgunT2Magnum44,ammo44MagnumBulletBall"/>
+		<property name="Create_item_count" value="1-20,20"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT2ShotgunBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateShotgun"/>
+	<property name="Extends" value="questRewardT0HandgunBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunShotgunT2PumpShotgun,ammoShotgunShell"/>
+		<property name="Create_item_count" value="1-20,20"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT2RifleBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateSniperRifle"/>
+	<property name="Extends" value="questRewardT0HandgunBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunRifleT2LeverActionRifle,ulmAmmo792mmRoundST"/>
+		<property name="Create_item_count" value="1-20,20"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT2MachineGunBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateAssaultRifle"/>
+	<property name="Extends" value="questRewardT0HandgunBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunMGT2TacticalAR,ammo762mmBulletBall"/>
+		<property name="Create_item_count" value="1-20,30"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT3HandgunBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateHandgun"/>
+	<property name="Extends" value="questRewardT0HandgunBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunHandgunT3DesertVulture,ammo44MagnumBulletBall"/>
+		<property name="Create_item_count" value="1-20,100"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT3SMGBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateSMG"/>
+	<property name="Extends" value="questRewardT0HandgunBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunHandgunT3SMG5,ulmAmmo10mmRoundST"/>
+		<property name="Create_item_count" value="1-20,60"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardT3ShotgunBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateShotgun"/>
+	<property name="Extends" value="questRewardT0HandgunBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunShotgunT3AutoShotgun,ammoShotgunShell"/>
+		<property name="Create_item_count" value="1-20,20"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT3RifleBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateSniperRifle"/>
+	<property name="Extends" value="questRewardT0HandgunBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunRifleT3SniperRifle,ulmAmmo792mmRoundST"/>
+		<property name="Create_item_count" value="1-20,20"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT3MachineGunBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateAssaultRifle"/>
+	<property name="Extends" value="questRewardT0HandgunBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="gunMGT3M60,ammo762mmBulletBall"/>
+		<property name="Create_item_count" value="1-20,30"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT3HandgunLegendaryBundle']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="questRewardBundleMaster"/></set>
+
+<set xpath="/items/item[@name='questRewardT3SMGLegendaryBundle']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="questRewardBundleMaster"/></set>
+
+<set xpath="/items/item[@name='questRewardT3ShotgunLegendaryBundle']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="questRewardBundleMaster"/></set>
+
+<set xpath="/items/item[@name='questRewardT3RifleLegendaryBundle']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="questRewardBundleMaster"/></set>
+
+<set xpath="/items/item[@name='questRewardT3MachineGunLegendaryBundle']">
+	<property name="CreativeMode" value="None"/>
+	<property name="Extends" value="questRewardBundleMaster"/></set>
+
+<!--
+<set xpath="/items/item[@name='questRewardMiningHelmetBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateLightBulb"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardMiningHelmetBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="armorMiningHelmet,modArmorHelmetLight"/>
+		<property name="Create_item_count" value="1-20,1"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT0LightArmorBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateArmorLight"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardArmorBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceCloth"/>
+		<property name="Create_item_count" value="5"/>
+		<property name="Random_item" value="armorClothHat,armorClothGloves,armorClothJacket,armorClothPants,armorClothBoots"/>
+		<property name="Random_item_count" value="11-30,11-30,11-30,11-30,11-30"/>
+		<property name="Random_count" value="2"/>
+		<property name="Unique_random_only" value="true"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT0LightArmorBonusBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT0LightArmorBundle"/>
+	<property name="DescriptionKey" value="questRewardBonusArmorBundleDesc"/>
+	<property class="Action0">
+		<property name="Random_item_count" value="21-40,21-40,21-40,21-40,21-40"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT0HeavyArmorBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateArmorHeavy"/>
+	<property name="Extends" value="questRewardT0LightArmorBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceRepairKit"/>
+		<property name="Create_item_count" value="1"/>
+		<property name="Random_item" value="armorScrapHelmet,armorScrapGloves,armorScrapChest,armorScrapLegs,armorScrapBoots"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT0HeavyArmorBonusBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT0HeavyArmorBundle"/>
+	<property name="DescriptionKey" value="questRewardBonusArmorBundleDesc"/>
+	<property class="Action0">
+		<property name="Random_item_count" value="21-40,21-40,21-40,21-40,21-40"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT1LightArmorBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateArmorMedium"/>
+	<property name="Extends" value="questRewardT0HeavyArmorBundle"/>
+	<property class="Action0">
+		<property name="Random_item" value="armorLeatherHood,armorLeatherGloves,armorLeatherChest,armorLeatherPants,armorLeatherBoots"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT1LightArmorBonusBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT1LightArmorBundle"/>
+	<property name="DescriptionKey" value="questRewardBonusArmorBundleDesc"/>
+	<property class="Action0">
+		<property name="Random_item_count" value="21-40,21-40,21-40,21-40,21-40"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardT1HeavyArmorBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT0HeavyArmorBundle"/>
+	<property class="Action0">
+		<property name="Random_item" value="armorIronHelmet,armorIronGloves,armorIronChest,armorIronLegs,armorIronBoots"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT1HeavyArmorBonusBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT1HeavyArmorBundle"/>
+	<property name="DescriptionKey" value="questRewardBonusArmorBundleDesc"/>
+	<property class="Action0">
+		<property name="Random_item_count" value="21-40,21-40,21-40,21-40,21-40"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT2LightArmorBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT1LightArmorBundle"/>
+	<property class="Action0">
+		<property name="Random_item" value="armorMilitaryHelmet,armorMilitaryGloves,armorMilitaryVest,armorMilitaryLegs,armorMilitaryBoots"/>
+		<property name="Random_item_count" value="21-40,21-40,21-40,21-40,21-40"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT2LightArmorBonusBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT2LightArmorBundle"/>
+	<property name="DescriptionKey" value="questRewardBonusArmorBundleDesc"/>
+	<property class="Action0">
+		<property name="Random_item_count" value="21-40,21-40,21-40,21-40,21-40"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT2HeavyArmorBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT0HeavyArmorBundle"/>
+	<property class="Action0">
+		<property name="Random_item" value="armorSteelHelmet,armorSteelGloves,armorSteelChest,armorSteelLegs,armorSteelBoots"/>
+		<property name="Random_item_count" value="21-40,21-40,21-40,21-40,21-40"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT2HeavyArmorBonusBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT2HeavyArmorBundle"/>
+	<property name="DescriptionKey" value="questRewardBonusArmorBundleDesc"/>
+	<property class="Action0">
+		<property name="Random_item_count" value="21-40,21-40,21-40,21-40,21-40"/>
+	</property></set>-->
+
+<set xpath="/items/item[@name='questRewardT1BookBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateSchematics"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardBookBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourcePaper"/>
+		<property name="Create_item_count" value="0"/>
+		<property name="Random_item" value="bookRangersArrowRecovery,bookRangersCripplingShot,bookRangersKnockdown,bookRangersFlamingArrows,bookRangersAPAmmo,bookRangersExplodingBolts,bookRangersForestGuide,bookSpearHunter1Damage,bookSpearHunter2Maintenance,bookSpearHunter3SteelSpears,bookSpearHunter4StrongArm,bookSpearHunter5RapidStrike,bookSpearHunter6PuncturedLung,bookSpearHunter7QuickStrike,bookHuntingJournalBears,bookHuntingJournalCoyotes,bookHuntingJournalDeer,bookHuntingJournalMountainLions,bookHuntingJournalVultures,bookHuntingJournalWolves,bookHuntingJournalSelfDefense,bookArtOfMiningLuckyStrike,bookArtOfMiningDiamondTools,bookArtOfMiningCoffee,bookArtOfMiningBlackStrap,bookArtOfMiningPallets,bookArtOfMiningAvalanche,bookArtOfMiningLantern,bookBatterUpBaseballBats,bookBatterUpBigHits,bookBatterUpGear,bookBatterUpKnockdown,bookBatterUpSlowPitch,bookBatterUpMaintenance,bookBatterUpMetalChain,bookNeedleAndThreadDesertWear,bookNeedleAndThreadDusters,bookNeedleAndThreadFootwear,bookNeedleAndThreadLegwear,bookNeedleAndThreadPockets,bookNeedleAndThreadPufferCoats,bookNeedleAndThreadWinterWear,bookPistolPeteAPAmmo,bookPistolPeteDamage,bookPistolPeteHPAmmo,bookPistolPeteMaintenance,bookPistolPeteSteadyHand,bookPistolPeteSwissKnees,bookPistolPeteTakeAim,bookWasteTreasuresAcid,bookWasteTreasuresCloth,bookWasteTreasuresCoffins,bookWasteTreasuresDoors,bookWasteTreasuresHoney,bookWasteTreasuresSinks,bookWasteTreasuresWater,bookUrbanCombatAdrenalineRush,bookUrbanCombatCigar,bookUrbanCombatRoomClearing,bookUrbanCombatJumping,bookUrbanCombatLandMines,bookUrbanCombatLanding,bookUrbanCombatSneaking,bookNightStalkerArchery,bookNightStalkerBlades,bookNightStalkerSilentNight,bookNightStalkerSlumberParty,bookNightStalkerStealthDamage,bookNightStalkerThiefAdrenaline,bookNightStalkerTwilightThief,bookFiremansAlmanacSpeed,bookFiremansAlmanacAxes,bookFiremansAlmanacEquipment,bookFiremansAlmanacPrevention,bookFiremansAlmanacHarvest,bookFiremansAlmanacHeat,bookFiremansAlmanacMolotov,bookBarBrawling1BasicMoves,bookBarBrawling2DropABomb,bookBarBrawling3KillerInstinct,bookBarBrawling4FinishingMoves,bookBarBrawling5AdrenalineHealing,bookBarBrawling6RageMode,bookBarBrawling7BoozedUp,bookLuckyLooterAmmunition,bookLuckyLooterBooks,bookLuckyLooterBrass,bookLuckyLooterDukes,bookLuckyLooterFood,bookLuckyLooterLead,bookLuckyLooterMedical,bookEnforcerAPAmmo,bookEnforcerApparel,bookEnforcerCriminalPursuit,bookEnforcerHPAmmo,bookEnforcerDamage,bookEnforcerIntimidation,bookEnforcerPunks,bookShotgunMessiahBreachingSlugs,bookShotgunMessiahDamage,bookShotgunMessiahLimbShot,bookShotgunMessiahMaintenance,bookShotgunMessiahMagazine,bookShotgunMessiahPartyStarter,bookShotgunMessiahSlugs,bookGreatHeistAdrenalineFall,bookGreatHeistTimedCharge,bookGreatHeistClaimed,bookGreatHeistGems,bookGreatHeistMotionDetection,bookGreatHeistSafes,bookGreatHeistSprintSneak,bookSniperAPAmmo,bookSniperControlledBreathing,bookSniperCripplingShot,bookSniperDamage,bookSniperHeadShot,bookSniperReload,bookSniperHPAmmo,bookAutoWeaponsDamage,bookAutoWeaponsRagdoll,bookAutoWeaponsMaintenance,bookAutoWeaponsRecoil,bookAutoWeaponsDrumMag,bookAutoWeaponsUncontrolledBurst,bookAutoWeaponsMachineGuns,bookTechJunkie1Damage,bookTechJunkie2Maintenance,bookTechJunkie3APAmmo,bookTechJunkie4Shells,bookTechJunkie5Repulsor,bookTechJunkie6BatonCharge,bookTechJunkie7Hydraulics"/>
+		<property name="Random_item_count" value="1,1,1"/>
+		<property name="Random_count" value="3"/>
+		<property name="Unique_random_only" value="true"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardT2BookBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT1BookBundle"/>
+	<property class="Action0">
+		<property name="Random_item_count" value="1,1,1,1"/>
+		<property name="Random_count" value="4"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT3BookBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT1BookBundle"/>
+	<property class="Action0">
+		<property name="Random_item_count" value="1,1,1,1,1"/>
+		<property name="Random_count" value="5"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT4BookBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT1BookBundle"/>
+	<property class="Action0">
+		<property name="Random_item_count" value="1,1,1,1,1,1"/>
+		<property name="Random_count" value="6"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT5BookBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT1BookBundle"/>
+	<property class="Action0">
+		<property name="Random_item_count" value="1,1,1,1,1,1,1"/>
+		<property name="Random_count" value="7"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardT1SkillMagazineBundle']">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="ulmCrateSchematics"/>
+	<property class="Action0">
+		<property name="Class" value="OpenLootBundle"/>
+		<property name="Delay" value="0"/>
+		<property name="Sound_start" value="close_garbage"/>
+		<property name="LootList" value="bundleBooksResearch"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT1TrapsBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateTraps"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardT1TrapsBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourcePaper"/>
+		<property name="Create_item_count" value="0"/>
+		<property name="Random_item" value="trapSpikesWoodDmg0,barbedFence,mineCandyTin,mineCookingPot"/>
+		<property name="Random_item_count" value="4,4,4,4"/>
+		<property name="Random_count" value="3"/>
+		<property name="Unique_random_only" value="true"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT2TrapsBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT1TrapsBundle"/>
+	<property name="DescriptionKey" value="questRewardT2TrapsBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="trapSpikesIronDmg0,barbedFence,mineHubcap,mineAirFilter"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardDartTrapBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateTraps"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardActiveTrapsBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="dartTrap,switch"/>
+		<property name="Create_item_count" value="2,1"/>
+		<property name="Random_item" value="ammoDartIron,ammoDartIron,ammoDartIron,ammoDartIron,ammoDartIron,ammoDartIron"/>
+		<property name="Random_item_count" value="25,50,75,100,125,150"/>
+		<property name="Random_count" value="3"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardBladeTrapBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateTraps"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardActiveTrapsBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="bladeTrap,switch"/>
+		<property name="Create_item_count" value="2,1"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardShotgunTurretBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateTraps"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardActiveTrapsBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="shotgunTurret"/>
+		<property name="Create_item_count" value="1"/>
+		<property name="Random_item" value="ammoShotgunShell,ammoShotgunShell,ammoShotgunShell,ammoShotgunShell,ammoShotgunShell,ammoShotgunShell"/>
+		<property name="Random_item_count" value="25,50,75,100,125,150"/>
+		<property name="Random_count" value="3"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardAutoTurretBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardShotgunTurretBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="autoTurret"/>
+		<property name="Random_item" value="ulmAmmo10mmRoundST,ulmAmmo10mmRoundST,ulmAmmo10mmRoundST,ulmAmmo10mmRoundST,ulmAmmo10mmRoundST,ulmAmmo10mmRoundST"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardSecuritySystemBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateCamera"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardSecuritySystemBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="speaker,motionsensor,tripwirepost"/>
+		<property name="Create_item_count" value="1,1,1"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardGeneratorBankBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateGenerator"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardElectricalPowerBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="ulmGeneratorGasoline_1,ulmAmmoFuelGasoline"/>
+		<property name="Create_item_count" value="1,1"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardBatteryBankBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateBattery"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardElectricalPowerBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="ulmGeneratorBatteryCar,ulmCarBattery"/>
+		<property name="Create_item_count" value="1-2,1-4"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardSolarBankBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ulmCrateSolar"/>
+	<property name="Extends" value="questRewardBatteryBankBundle"/>
+	<property class="Action0">
+		<property name="Create_item" value="ulmGeneratorSolarScrap,solarCell"/>
+		<property name="Create_item_count" value="1-2,2-5"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT1MeleeModsBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateModsMelee"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardMeleeModsBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourcePaper"/>
+		<property name="Create_item_count" value="0"/>
+		<property name="Random_item" value="modMeleeGraveDigger,modMeleeSerratedBlade,modMeleeStructuralBrace,modMeleeWeightedHead,modMeleeWoodSplitter"/>
+		<property name="Random_item_count" value="1,1,1,1,1,1,1,1,1,1"/>
+		<property name="Random_count" value="3"/>
+		<property name="Unique_random_only" value="true"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT2MeleeModsBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT1MeleeModsBundle"/>
+	<property class="Action0">
+		<property name="Random_item" value="modMeleeClubBarbedWire,modMeleeFortifyingGrip,modMeleeBunkerBuster,modMeleeStructuralBrace,modMeleeWeightedHead"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT3MeleeModsBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT1MeleeModsBundle"/>
+	<property class="Action0">
+		<property name="Random_item" value="modMeleeClubMetalSpikes,modMeleeClubMetalChain,modMeleeErgonomicGrip,modMeleeTemperedBlade,modMeleeIronBreaker"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardT1RangedModsBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateModsRanged"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardRangedModsBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourcePaper"/>
+		<property name="Create_item_count" value="0"/>
+		<property name="Random_item" value="modGunBipod,modGunChoke,modGunDuckbill,modGunFlashlight,modGunForegrip,modGunMagazineExtender,modGunMeleeTheHunter,modGunMuzzleBrake,modGunScopeSmall,modGunTriggerGroupSemi,modShotgunSawedOffBarrel"/>
+		<property name="Random_item_count" value="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"/>
+		<property name="Random_count" value="3"/>
+		<property name="Unique_random_only" value="true"/>
+	</property></set>
+	
+<set xpath="/items/item[@name='questRewardT2RangedModsBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateModsRanged"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardRangedModsBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourcePaper"/>
+		<property name="Create_item_count" value="0"/>
+		<property name="Random_item" value="modGunBarrelExtender,modGunCrippleEm,modGunBowArrowRest,modGunLaserSight,modGunReflexSight,modGunRetractingStock,modGunScopeMedium,modGunSoundSuppressorSilencer,modGunTriggerGroupBurst3,modGunShotgunTubeExtenderMagazine"/>
+		<property name="Random_item_count" value="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"/>
+		<property name="Random_count" value="3"/>
+		<property name="Unique_random_only" value="true"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT3RangedModsBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateModsRanged"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardRangedModsBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourcePaper"/>
+		<property name="Create_item_count" value="0"/>
+		<property name="Random_item" value="modGunBowPolymerString,modGunScopeLarge,modGunTriggerGroupAutomatic,modGunDrumMagazineExtender"/>
+		<property name="Random_item_count" value="1,1,1,1,1,1,1"/>
+		<property name="Random_count" value="3"/>
+		<property name="Unique_random_only" value="true"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT2FoodBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateFood"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardFoodBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourcePaper"/>
+		<property name="Create_item_count" value="0"/>
+		<property name="Random_item" value="foodVegetableStew,foodMeatStew,foodBlueberryPie,foodSteakAndPotato,foodPumpkinPie,foodPumpkinCheesecake,foodPumpkinBread"/>
+		<property name="Random_item_count" value="2,2,2,2,2,2,2"/>
+		<property name="Random_count" value="2"/>
+		<property name="Unique_random_only" value="true"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT3FoodBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT2FoodBundle"/>
+	<property class="Action0">
+		<property name="Random_item" value="foodShamChowder,foodHoboStew,foodChiliDog,foodFishTacos"/>
+		<property name="Random_item_count" value="2,2,2,2"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardT4FoodBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Extends" value="questRewardT2FoodBundle"/>
+	<property class="Action0">
+		<property name="Random_item" value="foodGumboStew,foodShepardsPie,foodSpaghetti,foodTunaFishGravyToast"/>
+		<property name="Random_item_count" value="2,2,2,2"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardMinibikePartsBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateMinibike"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardVechileBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourcePaper"/>
+		<property name="Create_item_count" value="0"/>
+		<property name="Random_item" value="ulmSmallEngine,ulmCarBattery,vehicleMinibikeChassis,vehicleMinibikeHandlebars,ulmResourceMinibikeWheel"/>
+		<property name="Random_item_count" value="1,1,1,1,1,1,1,1"/>
+		<property name="Random_count" value="3"/>
+		<property name="Unique_random_only" value="true"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardMotorcyclePartsBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateMotorcycle"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardVechileBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourcePaper"/>
+		<property name="Create_item_count" value="0"/>
+		<property name="Random_item" value="ulmMotorcycleEngine,ulmCarBattery,vehicleMotorcycleChassis,vehicleMotorcycleHandlebars,ulmResourceMotorcycleWheel"/>
+		<property name="Random_item_count" value="1,1,1,1,1,1,1,1,1"/>
+		<property name="Random_count" value="3"/>
+		<property name="Unique_random_only" value="true"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questReward4x4PartsBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateCar"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardVechileBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourcePaper"/>
+		<property name="Create_item_count" value="0"/>
+		<property name="Random_item" value="ulmCarEngine,ulmCarBattery,resourceHeadlight,resourceForgedSteel,ulmResourceCarWheel"/>
+		<property name="Random_item_count" value="1,1,2,25,1,1,1"/>
+		<property name="Random_count" value="3"/>
+		<property name="Unique_random_only" value="true"/>
+	</property></set>
+
+<set xpath="/items/item[@name='questRewardGyrocopterPartsBundle']">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateGyroCopter"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardVechileBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourcePaper"/>
+		<property name="Create_item_count" value="0"/>
+		<property name="Random_item" value="ulmGyrocopterEngine,ulmCarBattery,vehicleGyroCopterChassis,vehicleGyroCopterAccessories,ulmResourceGyrocopterWheel"/>
+		<property name="Random_item_count" value="1,1,1,1,1,1,1,1"/>
+		<property name="Random_count" value="3"/>
+		<property name="Unique_random_only" value="true"/>
+	</property></set>
+	
+<append xpath="/items">
+
+<item name="ulmQuestRewardBicyclePartsBundle">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateBicycle"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardVechileBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourcePaper"/>
+		<property name="Create_item_count" value="0"/>
+		<property name="Random_item" value="vehicleBicycleChassis,vehicleBicycleHandlebars,ulmResourceBicycleWheel"/>
+		<property name="Random_item_count" value="1,1,1,1,1,1"/>
+		<property name="Random_count" value="3"/>
+		<property name="Unique_random_only" value="true"/>
+	</property></item>
+
+<item name="ulmQuestRewardTruckPartsBundle">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Group" value="Bundles,Resources"/>
+	<property name="CustomIcon" value="ulmCrateTruck"/>
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="DescriptionKey" value="questRewardVechileBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourcePaper"/>
+		<property name="Create_item_count" value="0"/>
+		<property name="Random_item" value="ulmTruckEngine,ulmCarBattery,resourceHeadlight,ulmResourceTruckWheel,resourceForgedSteel"/>
+		<property name="Random_item_count" value="1,1,4,1,1,50"/>
+		<property name="Random_count" value="3"/>
+		<property name="Unique_random_only" value="true"/>
+	</property></item>
+
+</append>
+
+</Subquake>
