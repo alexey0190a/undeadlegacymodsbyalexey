@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+    <set xpath="//crafting_category_list[@display_type='ulmStationDataResequencerPowered']/crafting_category[@display_name='groupResearch'][@name='*']/@name">!Books,Resources</set>
+    <append xpath="//crafting_category_list[@display_type='ulmStationDataResequencerPowered']">
+        <crafting_category icon="ui_game_symbol_book" display_name="groupULMagazineCraftingCollectibleBooks" name="Books"/>
+    </append>
+</configs>

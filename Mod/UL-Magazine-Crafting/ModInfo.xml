@@ -2,7 +2,7 @@
 <xml>
     <Name value="ZZ_UL_Magazine_Crafting"/>
     <DisplayName value="UL Magazine Crafting"/>
-    <Description value="Adds one collectible book recipe for Undead Legacy 2.7.40."/>
+    <Description value="Craft all 133 collectible books at the Data Resequencer in Undead Legacy 2.7.40."/>
     <Author value="alexey0190a"/>
-    <Version value="0.1.0"/>
+    <Version value="1.0.0"/>
 </xml>
